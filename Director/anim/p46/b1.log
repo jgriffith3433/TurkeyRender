@@ -1,0 +1,13 @@
+[Error] Action caused undo stack overflow. Some undo information may have been lost.
+{
+ "tracks": 392,
+ "ops": 3866,
+ "actors": 1865,
+ "shots": 116,
+ "warnings": [
+  "person: no clip 'IdleBreatheHandsOnHead' on it or in the project. Find it with mv find, then mv pull",
+  "person: no clip 'RunFastForwardUnarmed' on it or in the project. Find it with mv find, then mv pull"
+ ]
+}
+build 144s
+frames 199s

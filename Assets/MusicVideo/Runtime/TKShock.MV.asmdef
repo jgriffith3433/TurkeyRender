@@ -1,0 +1,6 @@
+{
+  "name": "TKShock.MV",
+  "rootNamespace": "TKShock.MV",
+  "references": ["Unity.Timeline", "Unity.Cinemachine", "Unity.Splines", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime", "Unity.TextMeshPro"],
+  "autoReferenced": true
+}

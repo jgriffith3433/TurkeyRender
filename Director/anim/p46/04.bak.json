@@ -1,0 +1,251 @@
+{
+  // Bars 41-58. Feathers, then pulled in. Long composed shots. The song never changes, scene time does.
+  // The set: a feather mountain with its summit at (0, 0, -1), and under it the TV lying face up as the neck of an hourglass, rim at y=-30.
+  // He kneels at the summit facing south (-z). The moon is high in the west, behind his right shoulder.
+  // BLOCK: p5_mountain and p6_* are stand-ins until the FX agent's mountain, streams, feathering and stretch land.
+  "actors": {
+    "p5_mountain": { "model": "none", "mountain": { "radius": 60, "height": 30, "seed": 5, "cards": 80000, "holeW": 8, "holeH": 6 }, "pos": [0, 0, -1], "from": "40:1", "until": "54:1" },
+    "p5_focus": { "model": "prim:cube", "pos": [0, 0.5, -1], "scale": 0.001, "color": "#000000" },
+    "p6_aim": { "model": "prim:cube", "pos": [0.2, -32.9, -6.0], "scale": 0.001, "color": "#000000" },
+
+    // The TV, face up. A well: bezel on top at y=-30, the picture 5 m down, so he can hang inside it with the picture under him.
+    "p6_screen": { "model": "prim:cube", "pos": [0, -35, -1], "rot": [90, 0, 0], "scale": 1, "color": "#050505", "from": "51:1", "until": "59:1",
+      "tv": { "screenPos": [0, 0, -0.51], "size": [16, 12], "spill": 60, "glow": 12, "range": 60, "glowRange": 30, "angle": 140, "suck": false, "share": "tv1" } },
+    "p6_rim_s": { "model": "prim:cube", "pos": [0, -32.5, -8.5], "scale": [22, 5, 3], "color": "#3a3530", "texture": "Assets/P6Type/p6_wall.png", "tile": [6, 2], "smooth": 0.35, "from": "51:1", "until": "59:1" },
+    "p6_rim_n": { "model": "prim:cube", "pos": [0, -32.5, 6.5], "scale": [22, 5, 3], "color": "#3a3530", "texture": "Assets/P6Type/p6_wall.png", "tile": [6, 2], "smooth": 0.35, "from": "51:1", "until": "59:1" },
+    "p6_rim_w": { "model": "prim:cube", "pos": [-9.5, -32.5, -1], "scale": [3, 5, 12], "color": "#3a3530", "texture": "Assets/P6Type/p6_wall.png", "tile": [6, 2], "smooth": 0.35, "from": "51:1", "until": "59:1" },
+    "p6_rim_e": { "model": "prim:cube", "pos": [9.5, -32.5, -1], "scale": [3, 5, 12], "color": "#3a3530", "texture": "Assets/P6Type/p6_wall.png", "tile": [6, 2], "smooth": 0.35, "from": "51:1", "until": "59:1" },
+    // The set's own power light, on the bezel beside him.
+    "p6_led": { "model": "prim:sphere", "pos": [1.5, -29.98, -8.6], "scale": [0.16, 0.06, 0.16], "color": "#200000", "emission": "#ff1208", "from": "51:1", "until": "59:1" },
+
+    // Hundreds of the corner camera's light, a dome of them all round the dark. Two layers, so they open in waves.
+    "p6_red1": { "model": "prim:sphere", "pos": [0, -22, -1], "color": "#200000", "emission": "#ff1208", "from": "54:1", "until": "59:1", "crowd": { "count": 260, "shape": "dome", "radius": 44, "modelScale": 0.5, "scaleVar": 0.4, "seed": 1 } },
+    "p6_red2": { "model": "prim:sphere", "pos": [0, -22, -1], "color": "#200000", "emission": "#ff1208", "from": "54:1", "until": "59:1", "crowd": { "count": 300, "shape": "dome", "radius": 30, "modelScale": 0.36, "scaleVar": 0.4, "seed": 2 } }
+  },
+  "lights": {
+    "p5_moon": { "type": "directional", "rot": [62, 60, 0], "color": "#c8d4ff", "intensity": 0, "shadows": true },
+    "p5_shaft": { "type": "spot", "pos": [1, 26, -3], "rot": [85, 0, 0], "angle": 24, "range": 44, "color": "#ffc070", "intensity": 0, "shadows": true },
+    "p5_bounce": { "type": "point", "pos": [0.3, 0.15, -2.6], "color": "#c8d4f0", "intensity": 0, "range": 7 },
+    "p6_red": { "type": "directional", "rot": [52, 28, 0], "color": "#ff3a20", "intensity": 0, "shadows": true },
+    "p6_up": { "type": "point", "pos": [0.6, -33.6, -5.2], "color": "#dfeaff", "intensity": 0, "range": 9 },
+    "p6_glow": { "type": "point", "pos": [0, -29, -3.5], "color": "#dfeaff", "intensity": 0, "range": 16 },
+    "p5_rise": { "type": "point", "pos": [0, -4, -1], "color": "#cfe6ff", "intensity": 0, "range": 40 }
+  },
+  "cues": [
+    // ---- 41:1 contact. Everything of the old world goes.
+    { "at": "41:1", "do": "hide", "on": ["room_floor", "room_ceiling", "wall_n1", "wall_n2", "wall_s1", "wall_s2", "wall_w1", "wall_w2", "wall_e1", "wall_e2", "carpet1", "cabinet", "sofa", "table", "shelf1", "remote", "tv1", "cctv_base", "cctv_head", "cctv", "cctv_lens", "cctv_led", "p3_paper1", "p3_paper2", "p3_paper3"], "for": "18bars" },
+    { "at": "41:1", "tv": "tv1", "bright": 0, "feed": 0 },
+    { "at": "41:1", "speed": 0.7, "for": "0.1b" },
+    { "at": "41:1.1", "speed": 0.22, "for": "2.4b", "ease": "out" },
+    { "at": "42:1", "speed": 0.2, "for": "2b" },
+    { "at": "41:1", "grade": { "toon": 0, "ink": 0, "poster": 0, "kaleido": 0, "halftone": 0, "hatch": 0, "neon": 0, "duo": 0, "tear": 0, "invert": 0, "rgb": 0, "suck": 0, "twist": 0, "wave": 0, "scan": 0, "saturation": -18, "contrast": 14, "bloom": 0.7, "threshold": 0.95, "grain": 0.22, "swirl": 0, "chroma": 0.04, "exposure": 0, "vignette": 0.36, "bars": 0.8 } },
+    { "at": "41:1", "pulse": { "flash": 0.9, "exposure": 1.2 }, "for": "0.75b", "flashColor": "#ffffff", "sharp": 3 },
+    { "at": "41:1", "sky": { "top": "#03050f", "mid": "#141d3c", "bottom": "#2a3a60", "ambient": "#7080b8", "fog": "#1c2748", "density": 0.008 } },
+    { "at": "41:1", "light": "void_key", "intensity": 2.4, "color": "#c8d4ff" },
+    { "at": "41:1", "light": "void_rim", "intensity": 0 },
+    { "at": "41:1", "light": "p5_moon", "intensity": 0 },
+    { "at": "41:1", "light": "p5_bounce", "intensity": 3 },
+    { "at": "49:1", "light": "p5_bounce", "intensity": 0, "for": "1bar" },
+
+    { "at": "41:1", "sfx": "impact_big", "volume": 0.9 },
+    { "at": "41:1", "sfx": "feather_whoosh", "volume": 0.7 },
+    { "at": "41:1", "fx": "crown", "pos": [0, 0.3, -1], "height": 20, "radius": 11, "count": 3500, "floor": -1, "for": "60s" },
+
+    // ---- "I go to the eyes": his eye, close, opening in the falling feathers.
+    { "at": 113.0, "do": "eyesee", "on": "eyeball", "from": "person.head", "to": [0, 8, -4] },
+    { "at": 113.0, "do": "face", "on": "eyeball", "blink": 1, "pupil": 0.4, "for": "0.01b" },
+    { "at": 113.2, "do": "face", "on": "eyeball", "blink": 0, "wide": 1, "for": "0.75b", "ease": "out" },
+    { "at": 113.0, "shot": { "name": "I go to the eyes", "pos": [-60, 0.02, 3.4], "move": [-60, 0, 2.9], "rot": [0, 180, 0], "fov": 30, "focus": "eyeball", "aperture": 32, "ease": "out" } },
+
+    // ---- "What do you mean?" He surfaces, gasping, in one slow pull-back. Feathers rain past.
+
+    // ---- 44:1 one feather. One long move from the hand, round the arm, up to his neck and face. The feathers are the event.
+    { "at": "44:1", "speed": 0.4, "for": "2b" },
+    { "at": "44:1.5", "do": "feather", "on": "person", "count": 1, "from": "LeftHand,RightHand", "for": "1.5b", "ease": "out" },
+    { "at": "45:1.06", "do": "feather", "on": "person", "count": 2, "from": "LeftHand,RightHand", "for": "0.2b" },
+    { "at": "45:1.45", "do": "feather", "on": "person", "count": 3, "from": "LeftHand,RightHand", "for": "0.2b" },
+    { "at": "45:1.77", "do": "feather", "on": "person", "count": 5, "from": "LeftHand,RightHand", "for": "0.2b" },
+    { "at": "45:1.97", "do": "feather", "on": "person", "count": 8, "from": "LeftHand,RightHand", "for": "0.2b" },
+    { "at": "45:2.2", "do": "feather", "on": "person", "count": 13, "from": "LeftHand,RightHand", "for": "0.2b" },
+    { "at": "45:2.51", "do": "feather", "on": "person", "count": 21, "from": "LeftHand,RightHand", "for": "0.2b" },
+    { "at": "45:3", "do": "feather", "on": "person", "amount": 0.08, "from": "LeftHand,RightHand", "for": "2bars", "ease": "in" },
+    { "at": "47:1", "do": "feather", "on": "person", "amount": 0.75, "from": "LeftHand,RightHand", "for": "6b", "ease": "inout" },
+
+    // ---- 47 he goes down on hands and knees, 48 the retch. One low shot, closing on his mouth.
+    { "at": "47:1", "speed": 1, "for": "1b" },
+    { "at": "48:3.5", "fx": "stream", "on": "person.mouth", "rate": 500, "life": 1.2, "spread": 0.1, "for": "1.5s" },
+    { "at": "48:3.5", "sfx": "feather_whoosh", "volume": 0.8 },
+    { "at": "47:1", "for": "2bars", "grade": { "saturation": -30, "contrast": 18 }, "ease": "in" },
+
+    // ---- 49 instead of falling, lifted. One long rising spiral, 13 beats, that ends above him looking down: the mountain is draining.
+    { "at": "49:1", "speed": 0.45, "for": "2b" },
+    { "at": "49:1", "do": "set", "on": "p5_focus", "pos": [0, 0.8, -1] },
+    { "at": "49:1", "do": "move", "on": "person", "pos": [0, 10.5, -1], "for": "13b" },
+    { "at": "49:1", "do": "move", "on": "p5_focus", "pos": [0, 11.3, -1], "for": "13b" },
+    { "at": "51:1", "do": "move", "on": "p5_focus", "pos": [0, -22, -1], "for": "5b" },
+    { "at": "49:1", "do": "rotate", "on": "person", "rot": [-20, 640, 12], "for": "13b" },
+    { "at": "49:1", "do": "anim", "on": "person", "clip": "FallingUnarmed", "for": "4bars", "speed": 0.5, "blend": 0.6 },
+    { "at": "49:1", "do": "face", "on": "person", "jawOpen": 0.2, "fear": 0, "for": "2b" },
+    { "at": "49:1", "sky": { "top": "#ffcf80", "mid": "#a05a30", "bottom": "#0a0a18", "ambient": "#8a7060", "fog": "#7a4a30", "density": 0.006 }, "for": "2bars" },
+    { "at": "49:1", "light": "p5_shaft", "intensity": 120, "for": "1bar" },
+    { "at": "49:1", "light": "void_key", "intensity": 3.4, "color": "#ffc070", "for": "1bar" },
+    { "at": "49:1", "for": "2b", "grade": { "saturation": 14, "bars": 0, "bloom": 0.9 } },
+    { "at": "49:1", "fx": "embers", "pos": [0, 6, -1], "rate": 60, "color": "#ffc070", "for": "9s" },
+    { "at": "49:1", "shot": { "name": "swept up", "dolly": [[0, 0.6, -4.6], [-2.46, 1.7, -2.89], [-2.61, 2.9, -0.3], [-0.92, 4.2, 1.22], [1.15, 5.5, 0.99], [2.38, 7, -0.69], [1.91, 8.6, -2.91], [-0.4, 10.4, -3.6], [-1.6, 12.6, -2.6], [-0.9, 14.6, -1.6], [0.5, 16.4, -1.4]], "look": "p5_focus", "fov": 44, "focus": "person.chest", "aperture": 4 } },
+
+    // ---- 51 the summit sinks, light comes up from the middle.
+    { "at": "51:1", "sfx": "feather_whoosh", "volume": 0.5 },
+    { "at": "51:1", "do": "drain", "on": "p5_mountain", "to": 1, "for": "8b", "ease": "linear" },
+    { "at": "51:1", "tv": "p6_screen", "bright": 2, "static": 1, "for": "1b" },
+    { "at": "51:1", "light": "p5_rise", "intensity": 300, "for": "2bars", "ease": "in" },
+    { "at": "51:1", "light": "p5_shaft", "intensity": 0, "for": "1bar" },
+
+
+    // ---- 52:1.5 anticipation: he feels it, arches, arms come up. 52:2 he drops back, the picture coming up under him.
+    { "at": "52:1", "speed": 1, "for": "4b" },
+    { "at": "52:1", "do": "anim", "on": "person", "clip": "Falling", "for": "2bars", "blend": 0.4 },
+    { "at": "52:1.3", "do": "pose", "on": "person", "bones": { "chest": [-28, 0, 0], "hips": [-14, 0, 0], "head": [-22, 0, 0], "leftUpperArm": [-30, 0, 30], "rightUpperArm": [-30, 0, -30] }, "for": "0.7b", "ease": "out" },
+    { "at": "52:2", "do": "rotate", "on": "person", "rot": [-70, 700, 0], "for": "1b" },
+    { "at": "52:2", "do": "move", "on": "person", "pos": [0, -29.9, -8.7], "for": "3b", "ease": "in" },
+    { "at": "52:1", "sky": { "top": "#000000", "mid": "#300606", "bottom": "#800c06", "ambient": "#402020", "fog": "#200404", "density": 0.006 }, "for": "2bars" },
+    { "at": "52:1", "light": "void_key", "intensity": 0.5, "color": "#ff5030", "for": "2bars" },
+    { "at": "52:2", "shot": { "name": "he falls back", "follow": "person", "offset": [1.6, 4.2, -2.2], "followDamping": [0.15, 0.15, 0.15], "look": "person.chest", "fov": 46, "fovTo": 58, "handheld": 0.5, "dutch": 8 } },
+    // Feathers go in stages, a stream off him as he falls, the rest as the pull comes on. Clean of them by 54 so his body can act.
+    { "at": "52:2", "do": "feather", "on": "person", "strip": 0.4, "to": [0, -35, -1], "for": "3b", "ease": "in" },
+    { "at": "53:1", "do": "feather", "on": "person", "strip": 1, "to": [0, -35, -1], "for": "3.5b", "ease": "in" },
+    { "at": "52:1", "fx": "stream", "pos": [24, -6, -1], "to": [0, -34, -1], "rate": 400, "life": 2.5, "swirl": 1.5, "spread": 3, "for": "4.5s" },
+    { "at": "52:1", "fx": "stream", "pos": [-20, -5, 14], "to": [0, -34, -1], "rate": 400, "life": 2.5, "swirl": 1.5, "spread": 3, "for": "4.5s" },
+    { "at": "52:1", "fx": "stream", "pos": [-12, -5, -22], "to": [0, -34, -1], "rate": 400, "life": 2.5, "swirl": 1.5, "spread": 3, "for": "4.5s" },
+    { "at": "52:1", "tv": "p6_screen", "bright": 1.5, "static": 1, "for": "1b" },
+    { "at": "52:1", "light": "p6_red", "intensity": 1.3, "for": "1bar" },
+    { "at": "52:1", "light": "p6_glow", "intensity": 90, "for": "1bar" },
+
+    // ---- 53:1 he hits the bezel: heavy landing, compress, recover. The snare roll is the pull coming on. High three-quarter: him on the dark bezel, the whole lit picture beyond.
+    { "at": "53:1", "do": "set", "on": "person", "pos": [0, -30, -8.7], "rot": [0, 180, 0] },
+    { "at": "53:1", "do": "pose", "on": "person", "bones": { "chest": [0, 0, 0], "hips": [0, 0, 0], "head": [0, 0, 0], "leftUpperArm": [0, 0, 0], "rightUpperArm": [0, 0, 0] }, "for": "0.1b" },
+    { "at": "53:1", "do": "anim", "on": "person", "clip": "LandingHeavy", "once": 1, "for": "2.5b", "speed": 0.9, "blend": 0.03 },
+    { "at": "53:1", "do": "gaze", "on": "person", "to": [0, -29.2, -13], "for": "0.5b" },
+    { "at": "53:1", "do": "face", "on": "person", "jawOpen": 0.6, "fear": 0.7, "eyesWide": 0.8, "for": "0.3b" },
+    { "at": "53:1", "sfx": "impact_big", "volume": 0.8 },
+    { "at": "53:1", "pulse": { "exposure": 0.5, "shake": 0.25 }, "for": "0.75b", "sharp": 3 },
+    { "at": "53:1", "do": "set", "on": "p5_focus", "pos": [0.1, -29.6, -7.6] },
+    { "at": "53:1.5", "fx": "stream", "on": "person.chest", "to": [0, -35, -1], "dir": [0, -0.5, 1], "rate": 500, "life": 0.9, "spread": 0.3, "size": 0.1, "swirl": 0.4, "for": "7b" },
+    { "at": "53:1.5", "fx": "stream", "on": "person.lefthand", "to": [0, -35, -1], "dir": [0, -0.5, 1], "rate": 200, "life": 0.9, "spread": 0.15, "size": 0.09, "for": "7b" },
+    { "at": "53:1.5", "fx": "stream", "on": "person.hand", "to": [0, -35, -1], "dir": [0, -0.5, 1], "rate": 200, "life": 0.9, "spread": 0.15, "size": 0.09, "for": "7b" },
+    { "at": "53:3.5", "do": "anim", "on": "person", "clip": "PushCubeIdle1", "for": "2bars", "blend": 0.35 },
+    { "at": "53:3.5", "do": "pose", "on": "person", "bones": { "chest": [16, 0, 0], "head": [-18, 0, 0] }, "for": "1.5b", "ease": "inout" },
+    { "at": "53:1", "shot": { "name": "the bezel, the picture beyond him", "pos": [2.0, -24.4, -12.6], "move": [1.5, -25.4, -11.9], "look": "p5_focus", "fov": 30, "handheld": 0.3, "ease": "out" } },
+
+    // ---- 54 his feet go. Braced, leaning right into it, and every kick drags him back a step with his soles flat on the bezel, sparks at the heels.
+    { "at": "54:1", "do": "slide", "on": "person", "to": [0, -30, -7.3], "hits": "kick", "for": "3.1b", "jerk": 0.09, "sfx": "wood_scrape", "sfxVolume": 0.6 },
+    { "do": "keys", "on": "person", "at": "54:1", "release": "0.3b", "keys": [
+      { "t": "0.03b", "bones": { "chest": [24, 0, 0], "hips": [8, 0, 0], "head": [-28, 0, 0] } },
+      { "t": "0.2b", "bones": { "chest": [4, 0, 0], "hips": [-6, 0, 0], "head": [-8, 0, 0], "leftUpperArm": [0, 0, 24], "rightUpperArm": [0, 0, -24] }, "ease": "out" },
+      { "t": "0.52b", "bones": { "chest": [28, 0, 0], "hips": [10, 0, 0], "head": [-30, 0, 0] }, "flat": 1 },
+      { "t": "0.7b", "bones": { "chest": [6, 0, 0], "hips": [-6, 0, 0], "head": [-10, 0, 0], "leftUpperArm": [0, 0, 28], "rightUpperArm": [0, 0, -28] }, "ease": "out" },
+      { "t": "1.4b", "bones": { "chest": [34, 0, 0], "hips": [14, 0, 0], "head": [-34, 0, 0] }, "hold": "0.5b" },
+      { "t": "2.2b", "bones": { "chest": [2, 0, 0], "hips": [-8, 0, 0], "head": [-6, 0, 0], "leftUpperArm": [0, 0, 34], "rightUpperArm": [0, 0, -34] }, "ease": "out" },
+      { "t": "2.53b", "bones": { "chest": [26, 0, 0], "hips": [8, 0, 0], "head": [-24, 0, 0] } },
+      { "t": "2.72b", "bones": { "chest": [-6, 0, 0], "hips": [-10, 0, 0], "head": [-4, 0, 0], "leftUpperArm": [-20, 0, 40], "rightUpperArm": [-20, 0, -40] }, "ease": "out" }
+    ] },
+    { "at": "54:1", "do": "face", "on": "person", "jawOpen": 0.75, "fear": 1, "eyesWide": 1, "for": "0.5b" },
+    { "at": "54:1", "onsets": "kick", "until": "54:4", "fx": "sparks", "on": "person.foot", "for": "0.4b" },
+    { "at": "54:1", "shot": { "name": "feet sliding", "pos": [2.5, -27.5, -10.4], "move": [2.2, -27.7, -9.4], "look": "person.hips", "fov": 42, "handheld": 0.25, "dutch": 6, "ease": "linear" } },
+    { "at": "54:1", "do": "pop", "on": "p6_red1", "for": "1b", "stagger": 0.004, "jitter": 0.1 },
+    { "at": "54:2", "do": "pop", "on": "p6_red2", "for": "1b", "stagger": 0.003, "jitter": 0.1 },
+    { "at": "54:1", "sky": { "top": "#000000", "mid": "#000000", "bottom": "#000000", "ambient": "#180808", "fog": "#000000", "density": 0.001 }, "for": "1b" },
+    { "at": "54:1", "light": "void_key", "intensity": 0, "for": "1b" },
+    { "at": "54:1", "light": "p5_rise", "intensity": 0, "for": "1b" },
+    { "at": "54:1", "for": "1b", "grade": { "saturation": 10, "contrast": 20, "bloom": 0.9, "threshold": 0.9, "vignette": 0.34 } },
+    // 54:3 panic: he scrabbles, running on the spot, still going back. 54:4 the heel finds no edge, arms fly, he goes over backwards.
+    { "at": "54:3", "do": "anim", "on": "person", "clip": "PushCube1", "for": "1b", "speed": 2.2, "blend": 0.12 },
+    { "at": "54:3", "shot": { "name": "the edge", "pos": [2.3, -28.9, -7.2], "move": [2.15, -29.0, -7.0], "look": "person.hips", "fov": 48, "handheld": 0.4, "dutch": 10 } },
+    { "at": "54:4.03", "do": "anim", "on": "person", "clip": "GetHitFrontHeavyCombat", "once": 1, "for": "1b", "blend": 0.08 },
+    { "at": "54:4.03", "do": "pose", "on": "person", "bones": { "chest": [-20, 0, 0], "hips": [0, 0, 0], "head": [18, 0, 0], "leftUpperArm": [-50, 0, 40], "rightUpperArm": [-50, 0, -40] }, "for": "0.3b", "ease": "out" },
+    { "at": "54:4.03", "do": "rotate", "on": "person", "rot": [-62, 180, 0], "for": "0.95b", "ease": "in" },
+    { "at": "54:4.03", "do": "move", "on": "person", "pos": [0, -31.5, -6.75], "for": "0.95b", "ease": "in" },
+    { "at": "54:4.03", "do": "face", "on": "person", "jawOpen": 1, "fear": 1, "for": "0.2b" },
+    { "at": "54:4.03", "sfx": "feather_whoosh", "volume": 0.7 },
+
+    // ---- 55:1 silence. He has the edge. One long take: all of him hanging in the shaft of light, then in and over the rim to his hands. Fingers go one at a time on the hits.
+    { "at": "55:1", "speed": 1, "for": "0.1b" },
+    { "at": "55:1", "do": "set", "on": "person", "pos": [0, -31.32, -6.75], "rot": [14, 180, 0] },
+    { "at": "55:1", "do": "pose", "on": "person", "bones": { "chest": [0, 0, 0], "head": [0, 0, 0], "leftUpperArm": [0, 0, 0], "rightUpperArm": [0, 0, 0] }, "for": "0.01b" },
+    { "at": "55:1", "do": "move", "on": "person", "pos": [0, -31.64, -6.75], "for": "1.2b", "ease": "back" },
+    { "at": "55:1", "do": "rotate", "on": "person", "rot": [0, 180, 0], "for": "2.5b", "ease": "elastic" },
+    { "at": "55:1", "do": "anim", "on": "person", "clip": "Idle1SurprisedB", "for": "3bars", "speed": 0, "blend": 0 },
+    { "at": "55:1", "do": "pose", "on": "person", "bones": { "leftUpperLeg": [14, 0, 0], "leftLowerLeg": [-26, 0, 0], "rightUpperLeg": [-6, 0, 0], "rightLowerLeg": [-8, 0, 0], "leftFoot": [22, 0, 0], "rightFoot": [28, 0, 0] }, "for": "0.01b" },
+    { "at": "55:1", "do": "reach", "on": "person", "hand": "left", "to": [0.3, -29.93, -7.03], "handRot": [0, 90, 0], "for": "0.05b" },
+    { "at": "55:1", "do": "reach", "on": "person", "hand": "right", "to": [-0.3, -29.93, -7.03], "handRot": [0, -90, 0], "for": "0.05b" },
+    { "at": "55:1", "do": "fingers", "on": "person", "hand": "left", "curl": 0.45, "for": "0.1b" },
+    { "at": "55:1", "do": "fingers", "on": "person", "hand": "right", "curl": 0.45, "for": "0.1b" },
+    { "at": "55:1", "do": "gaze", "on": "person", "to": [0, -29, -7], "for": "1b" },
+    { "at": "55:1", "do": "face", "on": "person", "jawOpen": 0.3, "fear": 0.9, "for": "1b" },
+    { "at": "55:1", "sfx": "remote_thunk", "volume": 0.9 },
+    { "at": "55:1", "tv": "p6_screen", "bright": 2, "static": 1 },
+    { "at": "55:1", "light": "p6_up", "intensity": 40 },
+    // 55:3 the heave: dip, chin up to the rim, nothing left, sink back further than he started. 56:1 he looks down.
+    { "at": "55:2.6", "do": "move", "on": "person", "pos": [0, -31.7, -6.75], "for": "0.4b", "ease": "inout" },
+    { "at": "55:2.6", "do": "pose", "on": "person", "bones": { "hips": [-10, 0, 0], "chest": [10, 0, 0], "leftUpperLeg": [-6, 0, 0], "rightUpperLeg": [-14, 0, 0], "leftLowerLeg": [-40, 0, 0], "rightLowerLeg": [-50, 0, 0] }, "for": "0.4b", "ease": "inout" },
+    { "at": "55:3", "do": "move", "on": "person", "pos": [0, -31.3, -6.75], "for": "1b", "ease": "out" },
+    { "at": "55:3", "do": "pose", "on": "person", "bones": { "hips": [8, 0, 0], "chest": [-8, 0, 0], "head": [-20, 0, 0], "leftUpperLeg": [44, 0, 0], "rightUpperLeg": [18, 0, 0], "leftLowerLeg": [-70, 0, 0], "rightLowerLeg": [-24, 0, 0] }, "for": "1b", "ease": "out" },
+    { "at": "55:3", "do": "face", "on": "person", "jawOpen": 0.8, "fear": 1, "for": "0.5b" },
+    { "at": "55:4", "onsets": "all", "until": "56:1", "do": "shake", "on": "person", "amount": 0.012, "for": "0.2b", "speed": 30, "decay": 1 },
+    { "at": "56:1", "do": "move", "on": "person", "pos": [0, -31.67, -6.75], "for": "0.7b", "ease": "back" },
+    { "at": "56:1", "do": "pose", "on": "person", "bones": { "hips": [0, 0, 0], "chest": [0, 0, 0], "head": [0, 0, 0], "leftUpperLeg": [14, 0, 0], "rightUpperLeg": [-6, 0, 0], "leftLowerLeg": [-26, 0, 0], "rightLowerLeg": [-8, 0, 0] }, "for": "1.2b", "ease": "back" },
+    { "at": "56:1.4", "do": "gaze", "on": "person", "to": [1.2, -35, -4], "for": "0.8b", "ease": "inout" },
+    { "at": "56:1.4", "do": "face", "on": "person", "jawOpen": 0.4, "fear": 1, "eyesWide": 1, "for": "0.5b" },
+    { "at": "55:1", "do": "set", "on": "p5_focus", "pos": [0.1, -30.85, -6.7] },
+    { "at": "55:2", "do": "move", "on": "p5_focus", "pos": [0.1, -30.3, -6.8], "for": "6b", "ease": "inout" },
+    { "at": "55:1", "shot": { "name": "the long hold", "pos": [2.5, -29.7, -4.3], "move": [1.75, -29.95, -5.2], "look": "p5_focus", "fov": 52, "fovTo": 38, "fovFor": "8b", "fovEase": "inout", "ease": "inout" } },
+    { "at": "56:2.2", "shot": { "name": "the fingers", "pos": [0.95, -29.22, -8.0], "move": [0.85, -29.3, -7.82], "look": "person.lefthand", "fov": 27, "focus": "person.lefthand", "aperture": 5.6, "ease": "linear" } },
+    { "at": "56:2.48", "do": "fingers", "on": "person", "hand": "left", "finger": "pinky", "curl": 0, "for": "0.25b", "ease": "out", "sfx": "frame_tick" },
+    { "at": "56:2.97", "do": "fingers", "on": "person", "hand": "left", "finger": "ring", "curl": 0, "for": "0.25b", "ease": "out", "sfx": "frame_tick" },
+    { "at": "56:3.47", "do": "fingers", "on": "person", "hand": "left", "finger": "middle", "curl": 0, "for": "0.25b", "ease": "out", "sfx": "frame_tick" },
+    { "at": "56:3.96", "do": "fingers", "on": "person", "hand": "left", "finger": "index", "curl": 0, "for": "0.25b", "ease": "out", "sfx": "frame_tick" },
+    { "at": "56:2.48", "onsets": "snare", "until": "56:4.2", "do": "shake", "on": "person", "amount": 0.02, "for": "0.2b", "speed": 26, "decay": 1 },
+    { "at": "56:4.47", "do": "reach", "on": "person", "hand": "left", "to": [0.6, -31.2, -6.1], "for": "0.5b", "ease": "out" },
+    { "at": "56:4.47", "do": "move", "on": "person", "pos": [-0.2, -31.7, -6.75], "for": "0.6b", "ease": "back" },
+    { "at": "56:4.47", "do": "rotate", "on": "person", "rot": [0, 180, -11], "for": "0.6b", "ease": "back" },
+    { "at": "56:4.47", "do": "face", "on": "person", "jawOpen": 1, "fear": 1, "eyesWide": 1, "for": "0.2b" },
+    { "at": "56:4.47", "pulse": { "exposure": 0.4, "shake": 0.2 }, "for": "0.5b", "sharp": 3 },
+    { "at": "56:4.47", "sfx": "remote_thunk", "volume": 0.7 },
+
+    // ---- 57:1 the drop. Big and side on: feet first, he is drawn out across the frame into the picture, limb by limb, thinning into lines.
+    { "at": "57:1", "speed": 1, "for": "0.25b" },
+    { "at": "57:1", "do": "stretch", "on": "person", "to": [0.8, -35, -3.2], "amount": 0.74, "for": "4.5b", "ease": "linear", "order": "feet,legs,hips,chest,arms,head,hand", "span": 0.15, "thin": 0.25, "lines": 46, "glow": "#d8e8ff", "sfx": "glass_stretch", "sfxVolume": 0.8 },
+    { "at": "58:1.75", "do": "stretch", "on": "person", "to": [0.8, -35, -3.2], "amount": 1, "for": "0.74b", "ease": "in", "order": "feet,legs,hips,chest,arms,head,hand", "span": 0.15, "thin": 0.25, "lines": 46, "glow": "#d8e8ff" },
+    { "at": "57:1", "tv": "p6_screen", "bright": 3.5, "for": "4b", "ease": "in" },
+    { "at": "57:1", "pulse": { "exposure": 0.6, "rgb": 0.4, "shake": 0.2 }, "for": "1b", "sharp": 3 },
+    { "at": "57:1", "grade": { "scan": 0.12, "rgb": 0.12, "chroma": 0.3, "bloom": 1, "threshold": 0.95 } },
+    { "at": "57:1", "onsets": "kick", "until": "58:4.4", "pulse": { "exposure": 0.25, "zoom": -0.03, "rgb": 0.25 }, "for": "0.5b" },
+    { "at": "57:1", "do": "set", "on": "p6_aim", "pos": [0.2, -31.0, -6.4] },
+    { "at": "57:1", "shot": { "name": "he goes", "pos": [2.1, -30.5, -4.8], "move": [1.75, -30.8, -4.65], "look": "p6_aim", "fov": 54, "handheld": 0.4, "ease": "in" } },
+    { "at": "57:3.75", "shot": { "name": "his face last, then his hand", "pos": [1.0, -31.05, -5.5], "move": [0.7, -30.75, -5.85], "look": "person.head", "fov": 40, "handheld": 0.5 } },
+    { "at": "58:1", "do": "set", "on": "p6_aim", "pos": [-0.3, -29.97, -7.05] },
+    { "at": "58:1.5", "do": "fingers", "on": "person", "hand": "right", "curl": 0, "for": "0.5b", "ease": "out" },
+    { "at": "58:2.49", "do": "hide", "on": "person", "for": "2b" },
+
+    // ---- 58:2.49 straight down the shaft: the rim goes past the lens, the picture fills the frame, and the channel tunes in.
+    { "at": "58:4", "tv": "tv1", "show": "news", "flip": 0 },
+    { "at": "58:2.49", "tv": "p6_screen", "bright": 2.2, "static": 1, "for": "0.3b" },
+    { "at": "58:4", "tv": "p6_screen", "bright": 2, "feed": 1, "static": 0.1, "for": "0.3b" },
+    { "at": "58:2.49", "grade": { "scan": 0.1, "rgb": 0.1, "chroma": 0.1, "bloom": 0.6, "threshold": 1.1, "exposure": 0, "bars": 0 } },
+    { "at": "58:2.49", "light": "p6_glow", "intensity": 0 },
+    { "at": "58:2.49", "shot": { "name": "down the shaft", "pos": [0, -23, -1], "move": [0, -34.6, -1], "rot": [90, 0, 0], "fov": 74, "ease": "in" } },
+    { "at": "58:2.49", "sfx": "feather_whoosh", "volume": 0.6 },
+    { "at": "58:2.49", "fx": "stream", "pos": [0, -24, -1], "to": [0, -35, -1], "rate": 500, "life": 0.7, "spread": 5, "swirl": 2, "for": "2b" },
+    { "at": "58:3.7", "for": "0.15b", "grade": { "snow": 1 } },
+    { "at": "58:4", "for": "0.2b", "grade": { "snow": 0 } },
+
+    // ---- Lyrics, designed type on overlay PNGs (tools/p6_type.py). The canvas goes through depth of field, so no focus on any shot under them.
+    { "at": 148.4, "gfx": "image", "path": "Assets/P6Type/a1.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 1.98, "in": 0.3, "out": 0.1 },
+    { "at": 150.38, "gfx": "image", "path": "Assets/P6Type/a2.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 1.12, "in": 0.05, "out": 0.1 },
+    { "at": 151.5, "gfx": "image", "path": "Assets/P6Type/a3.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 0.98, "in": 0.03, "out": 0.25 },
+    { "at": 153.92, "gfx": "image", "path": "Assets/P6Type/b1.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 1.96, "in": 0.05, "out": 0.05 },
+    { "at": 155.88, "gfx": "image", "path": "Assets/P6Type/b2.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 0.8, "in": 0.02, "out": 0.02 },
+    { "at": 156.68, "gfx": "image", "path": "Assets/P6Type/b3.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 0.34, "in": 0.02, "out": 0.02 },
+    { "at": 157.02, "gfx": "image", "path": "Assets/P6Type/b4.png", "pos": [0.5, 0.5, 0], "size": [1920, 1080, 0], "for": 1.0, "in": 0.02, "out": 0.1 }
+  ],
+  "macros": {}
+}

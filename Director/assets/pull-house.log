@@ -1,0 +1,32 @@
+{
+ "package": "Atmospheric House Modular",
+ "written": 105,
+ "matched": 16,
+ "roots": [
+  "Assets/AtmosphericHouse/Animators",
+  "Assets/AtmosphericHouse/BuiltIn_RP",
+  "Assets/AtmosphericHouse/Colliders",
+  "Assets/AtmosphericHouse/Materials",
+  "Assets/AtmosphericHouse/Meshes",
+  "Assets/AtmosphericHouse/Prefabs",
+  "Assets/AtmosphericHouse/Textures"
+ ],
+ "main": [
+  "Assets/AtmosphericHouse/Prefabs/Building/WallIn_A_3x_door.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Building/Floor_6x6.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Furniture/Table_coffee.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Furniture/Side_table_D.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Furniture/Sofa_3seat.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Electronics/TV_off.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Building/WallIn_A_3x_window.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Carpets/Carpet_persian_A.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Electronics/Tv_remote.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Furniture/Shelf_standing.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Lamps/Lamp_table_shade.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Furniture/Cabinet_D.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Building/WallIn_A_3x.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Building/Ceiling_6x6.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Electronics/TV_on.prefab",
+  "Assets/AtmosphericHouse/Prefabs/Props/Curtains/Curtains_long_doublewindow.prefab"
+ ]
+}

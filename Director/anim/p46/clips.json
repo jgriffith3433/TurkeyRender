@@ -1,0 +1,6 @@
+{"on":"person","from":0,"to":8,"every":12,"cols":8,"view":"side","cues":[
+{"at":0,"do":"anim","on":"person","clip":"mx_falling_idle","blend":0},
+{"at":2,"do":"anim","on":"person","clip":"FallingUnarmed","blend":0},
+{"at":4,"do":"anim","on":"person","clip":"mx_hanging_idle","blend":0},
+{"at":6,"do":"anim","on":"person","clip":"Falling","blend":0}
+]}

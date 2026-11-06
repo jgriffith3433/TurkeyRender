@@ -1,0 +1,1135 @@
+{
+"cues": [
+{
+"at": "114.260s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.277,
+"for": "0.067s"
+},
+{
+"at": "114.327s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.334,
+"for": "0.067s"
+},
+{
+"at": "114.393s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.241,
+"for": "0.067s"
+},
+{
+"at": "114.460s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.18,
+"for": "0.067s"
+},
+{
+"at": "114.527s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.17,
+"for": "0.067s"
+},
+{
+"at": "114.593s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.141,
+"for": "0.067s"
+},
+{
+"at": "114.660s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.118,
+"for": "0.067s"
+},
+{
+"at": "114.727s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.232,
+"for": "0.067s"
+},
+{
+"at": "114.793s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.318,
+"for": "0.067s"
+},
+{
+"at": "114.860s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.281,
+"for": "0.067s"
+},
+{
+"at": "114.927s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.341,
+"for": "0.067s"
+},
+{
+"at": "114.993s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.417,
+"for": "0.067s"
+},
+{
+"at": "115.060s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.417,
+"for": "0.067s"
+},
+{
+"at": "115.127s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.434,
+"for": "0.067s"
+},
+{
+"at": "115.193s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.48,
+"for": "0.067s"
+},
+{
+"at": "115.260s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.478,
+"for": "0.067s"
+},
+{
+"at": "115.327s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.442,
+"for": "0.067s"
+},
+{
+"at": "115.393s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.443,
+"for": "0.067s"
+},
+{
+"at": "115.460s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.483,
+"for": "0.067s"
+},
+{
+"at": "115.527s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.494,
+"for": "0.067s"
+},
+{
+"at": "115.600s",
+"do": "face",
+"on": "person",
+"jawOpen": 0,
+"for": "0.12s",
+"ease": "out"
+},
+{
+"at": "116.120s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.14,
+"for": "0.067s"
+},
+{
+"at": "116.187s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.278,
+"for": "0.067s"
+},
+{
+"at": "116.253s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.332,
+"for": "0.067s"
+},
+{
+"at": "116.320s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.352,
+"for": "0.067s"
+},
+{
+"at": "116.387s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.324,
+"for": "0.067s"
+},
+{
+"at": "116.453s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.271,
+"for": "0.067s"
+},
+{
+"at": "116.520s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.351,
+"for": "0.067s"
+},
+{
+"at": "116.587s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.431,
+"for": "0.067s"
+},
+{
+"at": "116.653s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.479,
+"for": "0.067s"
+},
+{
+"at": "116.720s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.478,
+"for": "0.067s"
+},
+{
+"at": "116.787s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.491,
+"for": "0.067s"
+},
+{
+"at": "116.853s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.475,
+"for": "0.067s"
+},
+{
+"at": "116.900s",
+"do": "face",
+"on": "person",
+"jawOpen": 0,
+"for": "0.12s",
+"ease": "out"
+},
+{
+"at": "148.400s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "148.467s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "148.533s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "148.600s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "148.667s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.044,
+"for": "0.067s"
+},
+{
+"at": "148.733s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.013,
+"for": "0.067s"
+},
+{
+"at": "148.800s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.004,
+"for": "0.067s"
+},
+{
+"at": "148.867s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.001,
+"for": "0.067s"
+},
+{
+"at": "148.933s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.103,
+"for": "0.067s"
+},
+{
+"at": "149.000s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.134,
+"for": "0.067s"
+},
+{
+"at": "149.067s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.04,
+"for": "0.067s"
+},
+{
+"at": "149.133s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.012,
+"for": "0.067s"
+},
+{
+"at": "149.200s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.06,
+"for": "0.067s"
+},
+{
+"at": "149.267s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.171,
+"for": "0.067s"
+},
+{
+"at": "149.333s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.27,
+"for": "0.067s"
+},
+{
+"at": "149.400s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.317,
+"for": "0.067s"
+},
+{
+"at": "149.467s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.374,
+"for": "0.067s"
+},
+{
+"at": "149.533s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.422,
+"for": "0.067s"
+},
+{
+"at": "149.600s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.412,
+"for": "0.067s"
+},
+{
+"at": "149.667s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.316,
+"for": "0.067s"
+},
+{
+"at": "149.733s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.195,
+"for": "0.067s"
+},
+{
+"at": "149.800s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.299,
+"for": "0.067s"
+},
+{
+"at": "149.867s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.371,
+"for": "0.067s"
+},
+{
+"at": "149.933s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.367,
+"for": "0.067s"
+},
+{
+"at": "150.000s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.332,
+"for": "0.067s"
+},
+{
+"at": "150.067s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.326,
+"for": "0.067s"
+},
+{
+"at": "150.133s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.35,
+"for": "0.067s"
+},
+{
+"at": "150.200s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.369,
+"for": "0.067s"
+},
+{
+"at": "150.267s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.362,
+"for": "0.067s"
+},
+{
+"at": "150.333s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.303,
+"for": "0.067s"
+},
+{
+"at": "150.400s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.214,
+"for": "0.067s"
+},
+{
+"at": "150.467s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.157,
+"for": "0.067s"
+},
+{
+"at": "150.533s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.096,
+"for": "0.067s"
+},
+{
+"at": "150.600s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.102,
+"for": "0.067s"
+},
+{
+"at": "150.667s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.326,
+"for": "0.067s"
+},
+{
+"at": "150.733s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.283,
+"for": "0.067s"
+},
+{
+"at": "150.800s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.293,
+"for": "0.067s"
+},
+{
+"at": "150.867s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.394,
+"for": "0.067s"
+},
+{
+"at": "150.933s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.45,
+"for": "0.067s"
+},
+{
+"at": "151.000s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.367,
+"for": "0.067s"
+},
+{
+"at": "151.067s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.27,
+"for": "0.067s"
+},
+{
+"at": "151.133s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.289,
+"for": "0.067s"
+},
+{
+"at": "151.200s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.428,
+"for": "0.067s"
+},
+{
+"at": "151.267s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.478,
+"for": "0.067s"
+},
+{
+"at": "151.333s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.467,
+"for": "0.067s"
+},
+{
+"at": "151.400s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.375,
+"for": "0.067s"
+},
+{
+"at": "151.467s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.251,
+"for": "0.067s"
+},
+{
+"at": "151.533s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.265,
+"for": "0.067s"
+},
+{
+"at": "151.600s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.223,
+"for": "0.067s"
+},
+{
+"at": "151.667s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.246,
+"for": "0.067s"
+},
+{
+"at": "151.733s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.306,
+"for": "0.067s"
+},
+{
+"at": "151.800s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.37,
+"for": "0.067s"
+},
+{
+"at": "151.867s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.442,
+"for": "0.067s"
+},
+{
+"at": "151.933s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.402,
+"for": "0.067s"
+},
+{
+"at": "152.000s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.384,
+"for": "0.067s"
+},
+{
+"at": "152.067s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.454,
+"for": "0.067s"
+},
+{
+"at": "152.133s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.486,
+"for": "0.067s"
+},
+{
+"at": "152.200s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.496,
+"for": "0.067s"
+},
+{
+"at": "152.267s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.499,
+"for": "0.067s"
+},
+{
+"at": "152.333s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.463,
+"for": "0.067s"
+},
+{
+"at": "152.400s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.448,
+"for": "0.067s"
+},
+{
+"at": "152.467s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.484,
+"for": "0.067s"
+},
+{
+"at": "152.500s",
+"do": "face",
+"on": "person",
+"jawOpen": 0,
+"for": "0.12s",
+"ease": "out"
+},
+{
+"at": "153.920s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "153.987s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.053s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.120s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.187s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.253s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.320s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.387s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.453s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.520s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.587s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.653s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.720s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.0,
+"for": "0.067s"
+},
+{
+"at": "154.787s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.068,
+"for": "0.067s"
+},
+{
+"at": "154.853s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.172,
+"for": "0.067s"
+},
+{
+"at": "154.920s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.191,
+"for": "0.067s"
+},
+{
+"at": "154.987s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.235,
+"for": "0.067s"
+},
+{
+"at": "155.053s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.348,
+"for": "0.067s"
+},
+{
+"at": "155.120s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.356,
+"for": "0.067s"
+},
+{
+"at": "155.187s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.344,
+"for": "0.067s"
+},
+{
+"at": "155.253s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.261,
+"for": "0.067s"
+},
+{
+"at": "155.320s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.428,
+"for": "0.067s"
+},
+{
+"at": "155.387s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.478,
+"for": "0.067s"
+},
+{
+"at": "155.453s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.378,
+"for": "0.067s"
+},
+{
+"at": "155.520s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.309,
+"for": "0.067s"
+},
+{
+"at": "155.587s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.251,
+"for": "0.067s"
+},
+{
+"at": "155.653s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.288,
+"for": "0.067s"
+},
+{
+"at": "155.720s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.375,
+"for": "0.067s"
+},
+{
+"at": "155.787s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.428,
+"for": "0.067s"
+},
+{
+"at": "155.853s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.376,
+"for": "0.067s"
+},
+{
+"at": "155.920s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.259,
+"for": "0.067s"
+},
+{
+"at": "155.987s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.157,
+"for": "0.067s"
+},
+{
+"at": "156.053s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.108,
+"for": "0.067s"
+},
+{
+"at": "156.120s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.206,
+"for": "0.067s"
+},
+{
+"at": "156.187s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.412,
+"for": "0.067s"
+},
+{
+"at": "156.253s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.388,
+"for": "0.067s"
+},
+{
+"at": "156.320s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.245,
+"for": "0.067s"
+},
+{
+"at": "156.387s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.371,
+"for": "0.067s"
+},
+{
+"at": "156.453s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.461,
+"for": "0.067s"
+},
+{
+"at": "156.520s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.455,
+"for": "0.067s"
+},
+{
+"at": "156.587s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.384,
+"for": "0.067s"
+},
+{
+"at": "156.653s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.437,
+"for": "0.067s"
+},
+{
+"at": "156.720s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.481,
+"for": "0.067s"
+},
+{
+"at": "156.787s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.494,
+"for": "0.067s"
+},
+{
+"at": "156.853s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.416,
+"for": "0.067s"
+},
+{
+"at": "156.920s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.369,
+"for": "0.067s"
+},
+{
+"at": "156.987s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.221,
+"for": "0.067s"
+},
+{
+"at": "157.053s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.196,
+"for": "0.067s"
+},
+{
+"at": "157.120s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.257,
+"for": "0.067s"
+},
+{
+"at": "157.187s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.344,
+"for": "0.067s"
+},
+{
+"at": "157.253s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.416,
+"for": "0.067s"
+},
+{
+"at": "157.320s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.347,
+"for": "0.067s"
+},
+{
+"at": "157.387s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.156,
+"for": "0.067s"
+},
+{
+"at": "157.453s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.083,
+"for": "0.067s"
+},
+{
+"at": "157.520s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.115,
+"for": "0.067s"
+},
+{
+"at": "157.587s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.141,
+"for": "0.067s"
+},
+{
+"at": "157.653s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.152,
+"for": "0.067s"
+},
+{
+"at": "157.720s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.133,
+"for": "0.067s"
+},
+{
+"at": "157.787s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.182,
+"for": "0.067s"
+},
+{
+"at": "157.853s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.169,
+"for": "0.067s"
+},
+{
+"at": "157.920s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.051,
+"for": "0.067s"
+},
+{
+"at": "157.987s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.015,
+"for": "0.067s"
+},
+{
+"at": "158.053s",
+"do": "face",
+"on": "person",
+"jawOpen": 0.004,
+"for": "0.067s"
+},
+{
+"at": "158.100s",
+"do": "face",
+"on": "person",
+"jawOpen": 0,
+"for": "0.12s",
+"ease": "out"
+}
+]
+}

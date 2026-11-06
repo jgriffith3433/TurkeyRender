@@ -1,0 +1,27 @@
+{
+  // Named poses for `keys` and `pose`. "from":"Clip@seconds" (or "Clip@40%") takes that frame of any clip in the project, whole body.
+  // "bones" adds degrees on top, in his own frame (x tips toward his front, y turns to his right, z rolls toward his left).
+  // "hips":[x,y,z] moves the hips in metres, "pose":"other" builds on another pose. Add to it freely.
+  "stand": { "from": "IdleBreathe@0" },
+  "crouch": { "from": "CrouchIdleBreathe1Unarmed@0" },
+  "kneel": { "from": "IdleKneelInjuredA@0" },
+  "kneel_slump": { "from": "IdleKneelInjuredC@0" },
+  "kneel_hands_up": { "from": "IdleKneelHandsUp@0" },
+  "sit": { "from": "IdleSit14@0" },
+  "sit_floor": { "from": "IdleSitInjuredA@0" },
+  "lay": { "from": "IdleLayDownCampfire@0" },
+  "dead_back": { "from": "DeadBack@0" },
+  "hands_up": { "from": "IdleBreatheHandsUp@0" },
+  "cower": { "from": "ScaredHostage@0.5" },
+  "stunned": { "from": "Stunned@0.5" },
+  "hit_front": { "from": "GetHitFrontHeavyCombat@0.25" },
+  "yell": { "from": "Idle1Yell@1" },
+  "surprised": { "from": "Idle1SurprisedA@0.5" },
+  "wow": { "from": "Idle1Wow@0.8" },
+  "land_low": { "from": "LandingHeavy@0.5" },
+  "crawl": { "from": "CrawlZombie@0.3" },
+  "fall_air": { "from": "Falling@0.3" },
+  "recoil": { "pose": "stand", "bones": { "chest": [-16, 0, 0], "head": [-14, 0, 0], "leftUpperArm": [0, 0, 28], "rightUpperArm": [0, 0, -28] }, "hips": [0, -0.03, -0.1] },
+  "lean_in": { "pose": "stand", "bones": { "spine": [12, 0, 0], "chest": [14, 0, 0], "head": [-8, 0, 0] }, "hips": [0, -0.02, 0.06] },
+  "slump": { "pose": "stand", "bones": { "spine": [14, 0, 0], "chest": [16, 0, 0], "neck": [12, 0, 0], "head": [14, 0, 0], "leftUpperArm": [14, 0, 0], "rightUpperArm": [14, 0, 0] }, "hips": [0, -0.05, -0.03] }
+}

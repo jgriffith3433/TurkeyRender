@@ -1,0 +1,44 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Oo]utput/
+*.csproj
+*.sln
+*.pidb
+*.user
+*.userprefs
+.vs/
+.idea/
+
+# Generated and bulky Director files
+/Director/output/
+/Director/captures/
+/Director/stems/
+/Director/ai_footage/
+/Director/acts_ai/
+/Director/acts_v1/
+/Director/review/sheets/
+/Director/assets/previews/
+/Director/gen/
+/Director/staging/
+/Director/inbox/
+/Director/outbox/
+/Director/heartbeat.json
+/Director/compile-errors.txt
+/Director/*.log
+
+# Secrets, never commit
+.env
+*.pem
+*.key
+gh.txt
+client.json
+
+# Rebuilt from the score by `node Director/mv.mjs build`
+/Assets/Scenes/MusicVideo.unity
+/Assets/MusicVideo/Generated/
+/Assets/MusicVideo/Generated.meta

@@ -1,0 +1,21 @@
+[Error] Action caused undo stack overflow. Some undo information may have been lost.
+{
+ "tracks": 392,
+ "ops": 3907,
+ "actors": 1866,
+ "shots": 116,
+ "warnings": [],
+ "took": {
+  "read": 431,
+  "openScene": 234,
+  "stage": 50,
+  "actors": 3107,
+  "shows": 2,
+  "cues": 23866,
+  "saveAssets": 11,
+  "graph": 962,
+  "ragdolls": 2933,
+  "saveScene": 0,
+  "finish": 97
+ }
+}

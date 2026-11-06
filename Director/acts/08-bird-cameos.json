@@ -1,0 +1,148 @@
+{
+ "actors": {
+  "bc_pic": {
+   "model": "prim:quad",
+   "parent": "p1_pic",
+   "pos": [
+    0,
+    0,
+    -0.03
+   ],
+   "scale": [
+    0.3,
+    0.38,
+    1
+   ],
+   "texture": "Assets/Shows/bc_frame.png",
+   "unlit": 0.5
+  },
+  "bc_shelf": {
+   "model": "turkey_white_hero",
+   "pos": [
+    -2.3,
+    0.62,
+    2.2
+   ],
+   "rot": [
+    0,
+    180,
+    0
+   ],
+   "scale": 0.35,
+   "from": "1:1",
+   "until": "4:1",
+   "emission": "#7a8aa8"
+  },
+  "bc_shelf_tie": {
+   "model": "prim:cube",
+   "parent": "bc_shelf.neck3",
+   "pos": [
+    0,
+    -0.0031818181818181815,
+    0.015909090909090907
+   ],
+   "scale": [
+    0.0175,
+    0.0573,
+    0.0048
+   ],
+   "color": "#d4141c",
+   "from": "1:1",
+   "until": "4:1"
+  },
+  "bc_sky": {
+   "model": "turkey_white_hero",
+   "pos": [
+    616,
+    2.52,
+    5.1
+   ],
+   "rot": [
+    0,
+    180,
+    0
+   ],
+   "scale": 0.5,
+   "from": "66:1",
+   "until": "67:1",
+   "emission": "#b0b0c0"
+  },
+  "bc_sky_tie": {
+   "model": "prim:cube",
+   "parent": "bc_sky.neck3",
+   "pos": [
+    0,
+    -0.004545454545454545,
+    0.022727272727272728
+   ],
+   "scale": [
+    0.025,
+    0.0818,
+    0.0068
+   ],
+   "color": "#d4141c",
+   "from": "66:1",
+   "until": "67:1"
+  },
+  "bc_cal": {
+   "model": "prim:quad",
+   "pos": [
+    322.2,
+    2.75,
+    3.43
+   ],
+   "scale": [
+    0.7,
+    0.86,
+    1
+   ],
+   "texture": "Assets/Shows/bc_calendar.png",
+   "unlit": 0.4,
+   "from": "61:1",
+   "until": "62:1"
+  }
+ },
+ "lights": {
+  "bc_shelf": {
+   "type": "point",
+   "pos": [
+    -2.15,
+    0.8,
+    1.9
+   ],
+   "color": "#9fb4d8",
+   "intensity": 0,
+   "range": 0.8
+  }
+ },
+ "cues": [
+  {
+   "at": "1:1",
+   "light": "bc_shelf",
+   "intensity": 0.07
+  },
+  {
+   "at": "4:1",
+   "light": "bc_shelf",
+   "intensity": 0
+  },
+  {
+   "at": 0,
+   "do": "hide",
+   "on": "bc_pic",
+   "for": "0.01b"
+  },
+  {
+   "at": "18:1",
+   "do": "show",
+   "on": "bc_pic",
+   "for": "0.01b"
+  },
+  {
+   "at": "19:1",
+   "do": "hide",
+   "on": "bc_pic",
+   "for": "0.01b"
+  }
+ ]
+}

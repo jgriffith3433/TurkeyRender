@@ -1,0 +1,373 @@
+{
+  // Parts 1-2, bars 1-24: "He watches", "It wakes up". A small, tense, funny story, told in long shots with acting in them.
+  // He surfs past little shows, stops on a man on a sofa, the man is him a beat late, the corner camera is already turning, the remote is dead,
+  // the room starts to react, and it ends on his eye and three TVs.
+  // Rules: the TV is the only light. No full view of his face until 14:1 ("rise"). Cuts land on the kick grid (x.46 in bars 4-12).
+  // The man on the TV is a real second person in a twin set at x=40, doing the same macro one beat later. The feed camera films him, so nothing is state: it scrubs.
+  // The man on the sofa and the turkey in the snow are shows too, so they cut in like any channel.
+  "shows": {
+    "p1_self": { "set": "p1_double", "pos": [0.3, 1.62, -2.0], "rot": [10, -11, 0], "fov": 46 },
+    "p1_turkey": { "set": "p1_tkbg", "pos": [0, -0.017, -90], "rot": [0, 0, 0], "fov": 34 }
+  },
+  "actors": {
+    // The twin set the feed films for bars 7-13.
+    "p1_double": { "model": "person", "pos": [40, 0.02, -0.8], "from": "6:1", "until": "14:1", "material": "Assets/MusicVideo/Person/Person.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "p1_dremote": { "model": "remote", "pos": [40, 0.62, -0.5], "from": "6:1", "until": "14:1" },
+
+    // The turkey in the snow: a black bird in front of a lit sheet, far from everything.
+    "p1_tkbg": { "model": "prim:cube", "pos": [80, 1.5, 6], "scale": [24, 12, 0.1], "color": "#000000", "emission": "#3c444c", "from": "17:1", "until": "24:1" },
+    "p1_tk": { "model": "turkey_white_hero", "pos": [76.6, 0, 2], "rot": [0, 90, 0], "scale": 1.2, "from": "17:1", "until": "24:1" },
+    // The tie bird (STORYBOARD, The nemesis). Dark against the sheet, but the tie glows through the snow.
+    "p1_tktie": { "model": "Assets/MusicVideo/Props/tie.obj", "material": "Assets/MusicVideo/Props/tie_glow.mat", "pos": [76.6, 1, 2], "scale": 0.2, "from": "17:1", "until": "24:1" },
+
+    // Stand-ins until the real props are in 01-room.
+    "p1_glass": { "model": "glass_prop", "keep": ["glass"], "pos": [-0.28, 0.432, 0.62] },
+    "p1_water": { "model": "glass_prop", "keep": ["water"], "pivot": "water", "pos": [-0.28, 0.52, 0.62], "scale": [0.84, 1, 0.84] },
+    "p1_frame": { "model": "frame_prop", "pos": [-1.35, 2.0, 2.8], "scale": [1.1, 1.1, 1.1] },
+    "p1_pic": { "model": "none", "pos": [-1.35, 1.72, 2.78] },
+    "p1_lamp": { "model": "lamp_prop", "pos": [1.5, 0, -1.1], "scale": [1.9, 1.9, 1.9] },
+    "p1_curtains": { "model": "none", "pos": [-2.9, 0, -1.5] },
+    "p1_curtains2": { "model": "none", "pos": [-2.9, 0, -1.0] },
+
+    // The eye is a set of its own, far from the room: one huge real eyeball with lids. Its reflection is a real camera at his head.
+    "eyeball": { "model": "none", "eye": { "from": "person.head", "to": "tv1.screen", "skin": "#b27a60", "iris": "#2b5566" }, "pos": [-60, 0, 0] }
+  },
+  "lights": {
+    "eye_key": { "type": "spot", "pos": [-60, 0.6, 4.5], "rot": [188, 0, 0], "angle": 60, "range": 12, "color": "#a8d0ff", "intensity": 0 },
+    "p1_dfill": { "type": "point", "pos": [40, 1.2, 1.2], "color": "#9ab8ff", "intensity": 2.2, "range": 5 },
+    "p1_dback": { "type": "point", "pos": [40.5, 2.3, -2.0], "color": "#8ce8ff", "intensity": 1.4, "range": 4 },
+    "p1_ffill": { "type": "point", "pos": [-1.2, 1.45, 2.1], "color": "#8ce8ff", "intensity": 0, "range": 1.8 },
+    "p1_halo": { "type": "point", "pos": [-0.2, 1.3, 2.75], "color": "#8ce8ff", "intensity": 0, "range": 3.4 },
+    "p1_hfill": { "type": "point", "pos": [-0.4, 1.25, -0.3], "color": "#8ce8ff", "intensity": 0, "range": 0.9 },
+    "p1_halo2": { "type": "point", "pos": [-1.5, 1.8, 2.6], "color": "#8ce8ff", "intensity": 0, "range": 2.4 },
+    "p1_cfill": { "type": "point", "pos": [-2.3, 1.7, -0.7], "color": "#8ce8ff", "intensity": 0, "range": 2.8 },
+    "p1_lampl": { "type": "point", "pos": [1.5, 0.98, -1.1], "color": "#ffb070", "intensity": 0, "range": 3.2 },
+    // The TV side of him in the throw, so the arm reads from the three-quarter camera.
+    "p1_tfill": { "type": "point", "pos": [-1.0, 1.5, 0.4], "color": "#8ce8ff", "intensity": 0, "range": 2.6 }
+  },
+  "cues": [
+    { "at": 0, "do": "anim", "on": ["person", "p1_double"], "clip": "IdleSit14", "for": "25bars" },
+    // He is alive from the first frame: head and arms lag what the body does. Director/anim/p1-3.md is the shot list.
+    { "at": 0, "do": "overlap", "on": ["person", "p1_double"], "amount": 0.8, "for": "0.1s" },
+
+    // The film look, from frame one: real black, real grain.
+    { "at": 0, "sky": { "top": "#000000", "mid": "#000000", "bottom": "#000000", "ambient": "#0a0d12", "fog": "#000000", "density": 0 } },
+    { "at": 0, "grade": { "exposure": 0.75, "grain": 0.3, "vignette": 0.42, "contrast": 24, "saturation": -24, "bloom": 0.4, "threshold": 1.1, "chroma": 0.1 } },
+
+    // ---- THE TV. Snow, cold, breathing, nearly nothing, then the channels. The shows have colour in the picture; the room stays cold until bar 14 (COLOR_SCRIPT).
+    { "at": 0, "tv": "tv1", "bright": 0.1, "static": 1, "tint": "#8ce8ff", "feed": 0 },
+    // Her room is the twin set; she isn't in it until bar 69.
+    { "at": 0, "do": "hide", "on": "person2" },
+    { "at": "25:1", "do": "show", "on": "person2" },
+    { "at": "1:1", "tv": "tv1", "bright": 0.26, "for": "3bars", "ease": "in" },
+    // Part 7 lights its sets for bars 3-9 and a directional reaches this room. Nature isn't one of the four shows he passes.
+    { "at": "3:1.01", "light": "nature_sun", "intensity": 0 },
+    { "at": "1:1", "light": "p1_halo", "intensity": 0.35, "for": "4bars", "ease": "in" },
+    { "at": "7:1.45", "light": "p1_halo", "intensity": 0.8, "for": "6b", "ease": "inout" },
+    { "at": "8:1", "light": "p1_halo2", "intensity": 0.5, "for": "1bar", "ease": "inout" },
+    { "at": "11:1", "light": "p1_halo2", "intensity": 0, "for": "1b" },
+    { "at": "14:1", "light": "p1_halo", "intensity": 0.3, "for": "0.5b" },
+    { "at": "21:4.5", "light": "p1_halo", "intensity": 0, "for": "2b" },
+    { "at": "12:1", "light": "p1_hfill", "intensity": 0.4, "for": "0.4b" },
+    { "at": "13:1", "light": "p1_hfill", "intensity": 0, "for": "0.05b" },
+    { "at": 0, "tvreact": "tv1", "band": "other", "floor": 0.7, "gain": 1.2, "until": "4:4.47" },
+    { "at": 0, "tvchange": "tv1", "keep": 1, "every": "1.5b", "until": "4:4.47", "min": 0.8, "max": 1.15 },
+
+    // The red dot. It's there from the start, top right of the dark. Nobody mentions it.
+    { "at": "1:1", "strobe": "red", "every": "2b", "low": 0.25, "high": 2.4, "sharp": 2.5, "until": "11:1" },
+
+    // ---- 1-3. The silhouette. One long push across the back of the sofa. His head is an edge, the arm comes up at bar 3.
+    { "at": 0, "shot": { "name": "the silhouette", "pos": [-0.62, 1.34, -2.85], "move": [-0.36, 1.3, -1.75], "look": "tv1.screen", "focus": "tv1.screen", "aperture": 16, "fov": 38, "ease": "linear", "handheld": 0.08 } },
+
+    // The remote lies on his left thigh, his hand beside it. Arm moves are mocap on a layer (J, 2026-11-05: reach only for real contact): he looks down, the hand closes on it, and he brings it up the way a man checks his watch.
+    { "at": 0, "do": "set", "on": "remote", "pos": [-0.2, 0.66, -0.5], "rot": [0, -20, 0] },
+    { "at": "2:4", "do": "pose", "on": "person", "bones": { "head": [16, -12, 0], "neck": [6, -4, 0] }, "for": "1b", "ease": "inout" },
+    { "at": "2:4.5", "do": "pose", "on": "person", "bones": { "chest": [7, -10, 0], "spine": [4, -4, 0] }, "for": "1.2b", "ease": "inout" },
+    { "at": "3:1", "do": "reach", "on": "person", "hand": "left", "to": "remote", "offset": [0, 0.07, -0.06], "for": "1b", "ease": "inout" },
+    { "at": "3:1.7", "macro": "grip", "who": "person" },
+    { "at": "3:2", "do": "attach", "on": "remote", "to": "person.leftHand", "pos": [-0.005, 0.075, -0.028], "rot": [35, 90, -90], "blend": "0.12s" },
+    { "at": "3:2", "do": "reach", "on": "person", "hand": "left", "weight": 0, "for": "1.4b", "ease": "inout" },
+    { "at": "3:2", "do": "layer", "on": "person", "clip": "IdleSit13CheckTime", "mask": "leftArm", "start": 0.98, "stop": 1.0, "once": 1, "blend": "1b" },
+    { "at": "3:2.2", "do": "pose", "on": "person", "bones": { "chest": [0, 0, 0], "spine": [0, 0, 0] }, "for": "2b", "ease": "inout", "overshoot": 0.1, "settle": "0.5s" },
+    { "at": "3:2.7", "do": "pose", "on": "person", "bones": { "head": [0, 0, 0], "neck": [0, 0, 0] }, "for": "2b", "ease": "inout", "overshoot": 0.1, "settle": "0.5s" },
+    // The man on the TV has the same remote in the same hand.
+    { "at": "6:1", "do": "attach", "on": "p1_dremote", "to": "p1_double.leftHand", "pos": [-0.005, 0.075, -0.028], "rot": [35, 90, -90] },
+    { "at": "6:1", "macro": "grip", "who": "p1_double" },
+    { "at": "6:1", "do": "layer", "on": "p1_double", "clip": "IdleSit13CheckTime", "mask": "leftArm", "start": 0.98, "stop": 1.0, "once": 1, "blend": 0 },
+
+    // ---- Bar 4. The arm is up, the thumb finds the button, still in the silhouette.
+    { "at": "4:3", "do": "fingers", "on": "person", "hand": "left", "finger": "thumb", "curl": 0.3, "for": "1.4b", "ease": "inout" },
+
+    // ---- 4:4.47 to 7. CLICK. Over the shoulder, TV big. Four shows, one click each on the strong notes. He's bored, the cooking show gets a lean.
+    { "at": "4:4.47", "shot": { "name": "channels", "pos": [-0.46, 1.27, -1.5], "move": [-0.38, 1.25, -1.2], "look": "tv1.screen", "fov": 25, "ease": "linear", "handheld": 0.06, "aperture": 8, "focus": "tv1.screen" } },
+    { "at": "4:4.47", "macro": "channel", "show": "news", "color": "#8ce8ff", "lvl": 0.34 },
+    { "at": "5:2.44", "macro": "channel", "show": "weather", "color": "#8ce8ff", "lvl": 0.34 },
+    { "at": "5:4.47", "macro": "channel", "show": "cooking", "color": "#8ce8ff", "lvl": 0.34 },
+    { "at": "6:3.46", "macro": "channel", "show": "gameshow", "color": "#8ce8ff", "lvl": 0.34 },
+    { "at": "5:1", "do": "pose", "on": "person", "bone": "head", "rot": [0, 0, 6], "for": "2b", "ease": "inout" },
+    { "at": "6:1.45", "do": "pose", "on": "person", "bone": "chest", "rot": [9, 0, 0], "for": "1.5b", "ease": "inout" },
+    { "at": "6:1.45", "do": "pose", "on": "person", "bone": "head", "rot": [-4, 0, 0], "for": "1.5b", "ease": "inout" },
+    { "at": "6:3.1", "do": "pose", "on": "person", "bone": "chest", "rot": [0, 0, 0], "for": "1b", "ease": "inout" },
+    { "at": "6:3.1", "do": "pose", "on": "person", "bone": "head", "rot": [0, 0, 0], "for": "1b", "ease": "inout" },
+
+    // ---- 7:1.45. He stops. The picture fills the frame: a dark room, a man on a sofa. We pull back out of the screen, over his shoulder: it's this room.
+    { "at": "7:1.45", "macro": "channel", "show": "p1_self", "color": "#8ce8ff", "lvl": 0.28 },
+    { "at": "7:1.45", "tv": "tv1", "static": 0.06, "for": "0.1b" },
+    { "at": "7:1.45", "shot": { "name": "pull back out of the picture", "dolly": [[0.0, 1.05, 1.74], [0.08, 1.2, 0.7], [0.36, 1.38, -0.5], [0.36, 1.38, -2.4]], "look": "tv1.screen", "screen": [0.12, 0.02], "fov": 25, "ease": "inout" } },
+    { "at": "6:1", "tv": "tv2", "feed": 0, "static": 1, "bright": 0.2 },
+    { "at": "25:1", "tv": "tv2", "feed": 1, "static": 0.03, "bright": 1.1 },
+    { "at": "7:1.45", "do": "pose", "on": "person", "bones": { "chest": [-5, 0, 0], "head": [5, 0, 0] }, "for": "0.4b", "ease": "out", "overshoot": 0.15, "settle": "0.4s" },
+
+    // ---- 9-10. THE COPY. Tilt in the pull-back, then a hard cut: long lens over his right shoulder, the screen fills the frame, his real hand a black shape beside it, and the man on the screen framed on his hand.
+    // He lifts a hand, an unsure hello, mocap (IdleSit13GreetA). One beat later the screen does. He tries again, quicker. The screen does, and when he takes his hand down the screen's stays up. That's the turn to the corner.
+    { "at": "8:1.46", "macro": "tilt", "who": "person" },
+    { "at": "8:2.46", "macro": "tilt", "who": "p1_double" },
+    { "at": "9:1.46", "shot": { "name": "the copy", "pos": [0.32, 1.62, -2.75], "move": [0.32, 1.6, -2.62], "rot": [9.1, -3.4, 0], "fov": 15.9, "ease": "linear", "handheld": 0.03, "focus": "tv1.screen", "aperture": 16 } },
+    { "at": "9:1.46", "do": "set", "on": "showcam_p1_self", "pos": [0.3, 1.35, -0.75], "rot": [11.9, 0, 0] },
+    { "at": "9:1.46", "do": "fov", "on": "showcam_p1_self", "to": 26, "for": "0.01b" },
+    { "at": "11:1.46", "do": "set", "on": "showcam_p1_self", "pos": [0.3, 1.62, -2.0], "rot": [10, -11, 0] },
+    { "at": "11:1.46", "do": "fov", "on": "showcam_p1_self", "to": 46, "for": "0.01b" },
+    { "at": "9:1.46", "macro": "hello", "who": "person" },
+    { "at": "9:2.46", "macro": "hello", "who": "p1_double" },
+    { "at": "10:1.45", "macro": "hello2", "who": "person" },
+    { "at": "10:2.46", "do": "layer", "on": "p1_double", "clip": "IdleSit13GreetA", "mask": "rightArm,spine", "start": 0.35, "speed": 0.9, "stop": 1.0, "once": 1, "blend": "0.25s" },
+    { "at": "9:2.0", "do": "pose", "on": "person", "bones": { "head": [3, 12, 0], "neck": [1, 5, 0] }, "for": "0.7b", "ease": "inout", "overshoot": 0.08, "settle": "0.3s" },
+    { "at": "9:3.3", "do": "blink", "on": "person", "for": "0.14s" },
+    { "at": "9:3.4", "do": "pose", "on": "person", "bones": { "head": [0, 0, 0], "neck": [0, 0, 0] }, "for": "0.6b", "ease": "inout" },
+    { "at": "10:4.46", "do": "pose", "on": "person", "bones": { "chest": [-4, 0, 0], "spine": [-2, 0, 0], "head": [3, 0, 0] }, "for": "0.5b", "ease": "out", "overshoot": 0.12, "settle": "0.4s" },
+
+    // ---- 10:4.46 to 12. He turns to the corner. It's already turning to him. Foreground his head, black. Hold on the lens.
+    { "at": "11:1.46", "do": "gaze", "on": "person", "to": "cctv", "for": "1.5b", "ease": "inout" },
+    { "at": "12:1", "do": "gaze", "on": "p1_double", "to": [42.35, 2.71, 2.35], "for": "1b", "ease": "inout" },
+    { "at": "11:1.46", "shot": { "name": "the corner", "pos": [-0.25, 1.0, -1.6], "move": [-0.22, 0.98, -1.48], "look": "cctv", "screen": [0.22, 0.14], "fov": 24, "focus": "cctv", "aperture": 8, "ease": "linear", "handheld": 0.05 } },
+    { "at": 0, "do": "set", "on": "cctv_head", "rot": [-30, 95, 0] },
+    { "at": "11:1", "do": "rotate", "on": "cctv_head", "rot": [-27, 37, 0], "for": "3.4b", "ease": "inout", "sfx": "camera_servo", "sfxVolume": 0.9 },
+    { "at": "11:1", "light": "red", "intensity": 0.35, "for": "2b", "ease": "in" },
+    { "at": "11:3.46", "light": "red", "intensity": 0.6, "for": "1b", "ease": "out" },
+    { "at": "12:2", "light": "red", "intensity": 0.25, "for": "1bar", "ease": "inout" },
+    { "at": "14:1", "strobe": "red", "every": "2b", "low": 0.15, "high": 0.7, "sharp": 2.5, "until": "25:1" },
+
+    // ---- Bar 12, "don't be dream, don't be free". Clicks. Nothing. Clicks. Nothing. He hits it. Power. Power. The picture gets brighter.
+    { "at": "12:3", "shot": { "name": "dead remote", "pos": [-0.62, 1.12, -0.26], "look": "remote", "fov": 24, "focus": "remote", "aperture": 4, "handheld": 0.4 } },
+    { "at": "11:4.47", "do": "gaze", "on": "person", "to": "tv1.screen", "for": "0.9b", "ease": "out" },
+    { "at": "12:2.2", "do": "pose", "on": "person", "bone": "leftLowerArm", "rot": [0, -100, 0], "space": "local", "for": "0.6b", "ease": "inout" },
+    { "at": "12:4.05", "do": "pose", "on": "person", "bone": "leftLowerArm", "rot": [0, 0, 0], "space": "local", "for": "0.2b", "ease": "inout" },
+    { "at": "12:1.46", "macro": "jab", "snd": "remote_thunk", "a": 9 },
+    { "at": "12:2.46", "macro": "jab", "snd": "remote_thunk", "a": 12 },
+    { "at": "12:3.2", "macro": "jab", "snd": "remote_thunk", "a": 14 },
+    { "at": "12:3.45", "macro": "jab", "snd": "remote_thunk", "a": 18 },
+    { "at": "12:3.7", "macro": "jab", "snd": "tv_power_thump", "a": 24 },
+    { "at": "12:4.5", "do": "gaze", "on": ["person", "p1_double"], "weight": 0, "for": "0.5b", "ease": "inout" },
+    { "at": "12:3.45", "tv": "tv1", "bright": 0.4, "for": "1.5b", "ease": "in" },
+    { "at": "12:1.46", "onsets": "kick", "until": "13:1", "tvflash": "tv1", "every": "1b", "amount": 0.5, "low": 1, "sharp": 4, "for": "0.4b" },
+
+    // ---- Bar 13, "I'm alive". He throws it. It bounces off the glass. On the screen: the back of his own head, coming closer. He half gets up, and sinks.
+    // J at 0:33: the old grenade clip was right-handed over a sitting body, while the remote is in his left hand. So it's keyed, on the hand that holds it: right hand shoves the seat, he half rises, the left arm cocks with the remote lit beside his head, and flicks overhand. The arm trails the body (successive), so the hand comes through at 13:1.15, where the remote leaves it. The jump has to start after the detach, or the detach pins it.
+    { "at": "12:4.1", "shot": { "name": "thrown", "pos": [-1.75, 1.24, -1.5], "move": [-1.68, 1.22, -1.42], "rot": [1.0, 43.8, 0], "focus": "person.chest", "aperture": 11, "fov": 44, "handheld": 0.25 } },
+    { "at": "12:4.1", "light": "p1_tfill", "intensity": 0.9, "for": "0.1b" },
+    { "at": "12:4.1", "do": "glow", "on": "remote", "color": "#8ce8ff", "power": 10, "for": "3.3b", "ease": "expo" },
+    { "at": "12:4", "do": "plant", "on": "person", "foot": "both", "for": "4.6b", "release": "0.3s" },
+    { "at": "12:4.1", "do": "reach", "on": "person", "hand": "right", "to": [0.36, 0.74, -0.66], "for": "0.4b", "ease": "out" },
+    { "at": "12:4", "do": "keys", "on": "person", "successive": true, "keys": [
+      { "t": 0 },
+      { "t": "0.6b", "bones": { "spine": [-3, -6, 0], "chest": [-5, -14, 0], "head": [6, 10, 0], "leftUpperArm": [-118, 0, -10], "leftLowerArm": [100, 0, 0] }, "root": { "pos": [0, 0.1, 0.07] }, "ease": "out", "flat": 1, "hold": "0.15b" },
+      { "t": "0.98b", "bones": { "spine": [8, 6, 0], "chest": [12, 12, 0], "head": [-8, 0, 0], "leftUpperArm": [-105, 0, 0], "leftLowerArm": [0, 0, 0] }, "root": { "pos": [0, 0.14, 0.14] }, "ease": "in" },
+      { "t": "1.4b", "bones": { "spine": [12, 6, 0], "chest": [15, 12, 0], "head": [-8, 0, 0], "leftUpperArm": [-35, 0, 0], "leftLowerArm": [-15, 0, 0] }, "root": { "pos": [0, 0.15, 0.15] }, "ease": "out" },
+      { "t": "2.4b", "bones": { "spine": [12, 0, 0], "chest": [14, 2, 0], "head": [-10, 0, 0], "leftUpperArm": [-10, 0, 0], "leftLowerArm": [0, 0, 0] }, "root": { "pos": [0, 0.15, 0.15] } },
+      { "t": "3.2b", "bones": { "spine": [10, -4, 0], "chest": [12, -4, 0], "head": [-8, 0, 0], "leftUpperArm": [0, 0, 0] }, "root": { "pos": [0, 0.15, 0.14] } },
+      { "t": "4.45b", "bones": { "spine": [0, 0, 0], "chest": [0, 0, 0], "head": [0, 0, 0] }, "root": { "pos": [0, 0, 0] }, "ease": "inout" }
+    ], "release": "0.3s" },
+    { "at": "13:1.15", "do": "fingers", "on": "person", "hand": "left", "curl": 0.1, "for": "0.06b", "ease": "out" },
+    { "at": "13:1.15", "do": "detach", "on": "remote" },
+    { "at": "13:1.16", "do": "jump", "on": "remote", "pos": [0.05, 1.05, 2.2], "height": 0.3, "for": "0.49b", "ease": "linear" },
+    { "at": "13:1.65", "do": "jump", "on": "remote", "pos": [0.42, 0.05, 1.05], "height": 0.25, "for": "0.75b", "ease": "linear" },
+    { "at": "13:2.4", "do": "jump", "on": "remote", "pos": [0.52, 0.05, 0.86], "height": 0.05, "for": "0.25b", "ease": "linear" },
+    { "at": "13:1.65", "tvflash": "tv1", "amount": 1, "low": 1, "sharp": 5, "for": "0.6b", "sfx": "static_burst" },
+    { "at": "13:3.4", "do": "glow", "on": "remote", "color": "#000000", "power": 0, "for": "0.5b" },
+    { "at": "13:3", "light": "p1_tfill", "intensity": 0, "for": "1b", "ease": "inout" },
+    { "at": "13:1.5", "do": "fov", "on": "showcam_p1_self", "to": 9, "for": "2.8b", "ease": "in" },
+    { "at": "13:1.5", "do": "rotate", "on": "showcam_p1_self", "rot": [19, -11, 0], "for": "2.8b", "ease": "inout" },
+    { "at": "13:1.5", "tv": "tv1", "bright": 0.55, "for": "2.8b", "ease": "in" },
+    { "at": "13:3.2", "do": "reach", "on": "person", "hand": "right", "weight": 0, "for": "1.3b", "ease": "inout" },
+    { "at": "13:3.45", "do": "pose", "on": "person", "bones": { "head": [6, -46, 0], "neck": [2, -16, 0], "chest": [0, -10, 0] }, "for": "1.2b", "ease": "inout" },
+    { "at": "13:1", "onsets": "kick", "until": "13:4", "pulse": { "zoom": -0.03 }, "for": "0.4b" },
+
+    // ---- 14:1, "rise". The TV lets go of the picture and starts to play him. His face comes round into the light. The first time we see it, and we stay.
+    { "at": "14:1", "tv": "tv1", "show": null, "bright": 0.85, "static": 0, "feed": 0, "tint": "#ffffff", "for": "0.1b" },
+    { "at": "14:1", "tvreact": "tv1", "band": "drums", "floor": 0.8, "gain": 1.6, "until": "22:1" },
+    { "at": "14:1", "tvchange": "tv1", "every": "2b", "until": "18:1", "min": 0.8, "max": 1.3 },
+    { "at": "14:1", "macro": "colours" },
+    { "at": "14:1", "grade": { "exposure": 0.4, "saturation": 0, "grain": 0.3, "contrast": 24 } },
+    { "at": "14:1", "for": "8bars", "grade": { "contrast": 36, "saturation": 14, "grain": 0.4, "chroma": 0.2 }, "ease": "in" },
+    { "at": "14:1", "pulse": { "exposure": 0.2 }, "for": "1b", "sharp": 3 },
+    { "at": "14:1", "shot": { "name": "the face", "pos": [0.04, 1.24, 0.42], "move": [0.02, 1.25, 0.02], "look": "person.head", "lookOffset": [0, 0.07, 0], "fov": 22, "focus": "person.head", "aperture": 5.6, "ease": "linear" } },
+    { "at": "14:1", "do": "pose", "on": "person", "bones": { "head": [0, 0, 0], "neck": [0, 0, 0], "chest": [0, 0, 0] }, "for": "4.5b", "ease": "inout", "overshoot": 0.06, "settle": "0.6s" },
+    // Face acting, bars 14-24: he goes from blank, to noticing, to frightened, and the eyes lead each change.
+    { "at": "14:3", "do": "blink", "on": "person", "for": "0.2s" },
+    { "at": "15:1", "do": "face", "on": "person", "eyesWide": 0.18, "for": "3b", "ease": "inout" },
+    { "at": "15:3.5", "do": "blink", "on": "person", "for": "0.18s" },
+    { "at": "16:1", "do": "face", "on": "person", "eyesWide": 0.35, "fear": 0.12, "for": "2b", "ease": "inout" },
+    { "at": "17:3.45", "do": "blink", "on": "person", "for": "0.16s" },
+    { "at": "17:3.6", "do": "face", "on": "person", "eyesWide": 0.5, "fear": 0.2, "for": "1b", "ease": "out" },
+    { "at": "18:4.47", "do": "blink", "on": "person", "for": "0.14s" },
+    { "at": "19:4.46", "do": "face", "on": "person", "eyesWide": 0.7, "fear": 0.32, "jawOpen": 0, "smile": 0, "for": "0.75b", "ease": "out" },
+    { "at": "20:3.52", "do": "blink", "on": "person", "for": "0.12s" },
+    { "at": "21:4.5", "do": "face", "on": "person", "eyesWide": 0.85, "fear": 0.4, "jawOpen": 0, "smile": 0, "for": "2.5b", "ease": "in" },
+    { "at": "24:3", "do": "face", "on": "person", "eyesWide": 1, "fear": 0.75, "jawOpen": 0.35, "for": "0.5b", "ease": "out" },
+    // Small life in the long close-up: he settles, swallows, double-blinks, the head creeps forward as he starts to look properly. In the push, he stops blinking and the head goes still with a slow tip back.
+    { "at": "15:2", "do": "pose", "on": "person", "bones": { "head": [3, 4, -2], "neck": [2, 0, 0] }, "for": "2b", "ease": "inout" },
+    { "at": "16:1", "do": "pose", "on": "person", "bones": { "head": [5, -2, 1], "neck": [5, 0, 0], "chest": [4, 0, 0] }, "for": "2.5b", "ease": "inout" },
+    { "at": "16:2.2", "do": "blink", "on": "person", "for": "0.14s" },
+    { "at": "16:2.6", "do": "blink", "on": "person", "for": "0.12s" },
+    { "at": "21:4.5", "do": "pose", "on": "person", "bones": { "head": [-4, 0, 0], "neck": [-2, 0, 0], "chest": [-3, 0, 0] }, "for": "4b", "ease": "inout" },
+    { "at": "14:4.51", "pulse": { "exposure": 0.15 }, "for": "0.5b", "sharp": 3 },
+    { "at": "15:4.5", "pulse": { "exposure": 0.15 }, "for": "0.5b", "sharp": 3 },
+
+    // ---- 16:3.49 to 21. The room wakes. One thing at a time, each a beat of its own, each with him reacting.
+    // The glass: water shivers on the kicks.
+    { "at": "16:3.49", "shot": { "name": "the glass, and him behind it", "pos": [-0.08, 0.66, 1.5], "move": [-0.1, 0.65, 1.42], "look": "p1_water", "screen": [-0.14, -0.1], "fov": 22, "focus": "p1_water", "aperture": 4, "ease": "linear" } },
+    { "at": "16:3.49", "onsets": "kick", "until": "17:4", "do": "shake", "on": ["p1_water", "p1_glass"], "amount": 0.0025, "speed": 50, "for": "0.3b", "decay": 1 },
+    { "at": "17:1.45", "do": "shake", "on": "p1_glass", "amount": 0.004, "speed": 40, "for": "0.5b", "decay": 1, "sfx": "glass_ring", "sfxVolume": 0.7 },
+
+    // He's seen it. His eyes go down. Same shot, the focus pulls to him.
+    { "at": "17:3.45", "shot": { "name": "the glass, focus on him", "pos": [-0.1, 0.65, 1.42], "look": "p1_water", "screen": [-0.14, -0.1], "fov": 22, "focus": "person.head", "aperture": 4 } },
+    { "at": "17:3.45", "do": "pose", "on": "person", "bones": { "head": [13, -6, 0], "neck": [7, -3, 0] }, "for": "1b", "ease": "inout", "overshoot": 0.08, "settle": "0.4s" },
+
+    // The picture on the wall ticks crooked.
+    { "at": "18:1.47", "shot": { "name": "the frame", "pos": [-1.0, 1.62, 1.1], "look": "p1_frame", "fov": 22, "focus": "p1_frame", "aperture": 5.6, "handheld": 0.08 } },
+    { "at": "18:1.47", "light": "p1_ffill", "intensity": 0.5 },
+    { "at": "18:4.47", "light": "p1_ffill", "intensity": 0 },
+    { "at": "18:1.47", "macro": "tick", "z": 1.5 },
+    { "at": "18:2.46", "macro": "tick", "z": 3.0 },
+    { "at": "18:3.46", "macro": "tick", "z": 4.5 },
+    { "at": "18:3.99", "macro": "tick", "z": 8 },
+    { "at": "18:4.25", "macro": "tick", "z": 14 },
+
+    // The curtains breathe toward the TV. The wide: he's small on the sofa. In the TV, behind everything, something walks.
+    { "at": "18:4.47", "shot": { "name": "the room breathes", "pos": [1.9, 1.5, -2.6], "move": [1.6, 1.42, -2.2], "look": "person.chest", "focus": "person.chest", "aperture": 16, "screen": [-0.04, 0.04], "fov": 50, "ease": "linear", "handheld": 0.08 } },
+    { "at": "18:4.47", "do": "sway", "on": ["p1_curtains", "p1_curtains2"], "axis": [1, 0, 0], "amount": 9, "every": "4b", "for": "2bars", "fade": 0.4 },
+    { "at": "18:4.47", "light": "p1_cfill", "intensity": 0.5, "for": "1b", "ease": "inout" },
+    { "at": "20:3.52", "light": "p1_cfill", "intensity": 0, "for": "0.5b" },
+    { "at": "18:4.47", "do": "pose", "on": "person", "bones": { "head": [0, -32, 0], "neck": [0, -14, 0], "chest": [0, -10, 0], "spine": [0, -5, 0] }, "for": "1.5b", "ease": "inout", "anticipate": 0.1, "overshoot": 0.08, "settle": "0.5s" },
+
+    // The lamp flickers on the roll, in the same wide. He flinches.
+    
+    { "at": "19:4.46", "do": "pose", "on": "person", "bones": { "head": [-6, 24, 0], "neck": [0, 10, 0], "chest": [-7, 7, 0], "spine": [-3, 3, 0] }, "for": "0.5b", "ease": "out", "overshoot": 0.2, "settle": "0.5s" },
+    { "at": "19:4.46", "strobe": "p1_lampl", "every": "0.5b", "low": 0, "high": 1.6, "sharp": 6, "until": "20:3.5" },
+
+    // Dust, low along the carpet, all of it going one way. At the end of the shot, the screen.
+    { "at": "20:3.52", "shot": { "name": "dust, then the screen", "pos": [-1.05, 0.16, -0.2], "move": [-0.1, 0.92, 1.25], "look": "tv1.screen", "focus": "tv1.screen", "aperture": 16, "fov": 34, "ease": "inout", "handheld": 0.05 } },
+    { "at": "20:3.52", "fx": "dust", "pos": [0, 0.6, 0.5], "for": "2bars" },
+    { "at": "20:3.52", "do": "pose", "on": "person", "bones": { "head": [0, 0, 0], "neck": [0, 0, 0], "chest": [0, 0, 0], "spine": [0, 0, 0] }, "for": "1.2b", "ease": "inout" },
+
+    // The TV goes to snow. A shape walks through it, stops, and looks out.
+    { "at": "18:1", "tv": "tv1", "show": "p1_turkey", "static": 0.5, "tint": "#a0e4ff", "for": "0.1b" },
+    { "at": "18:1", "onsets": "snare", "until": "22:1", "tvflash": "tv1", "every": "0.5b", "amount": 0.7, "low": 0.8, "sharp": 3, "for": "0.3b" },
+    { "at": "17:1", "do": "attach", "on": "p1_tktie", "to": "p1_tk.neck3", "pos": [0, -0.02, 0.1], "rot": [0, 0, 0] },
+    { "at": "18:1", "do": "anim", "on": "p1_tk", "clip": "walk", "for": "3bars", "beats": 2 },
+    { "at": "18:1", "do": "move", "on": "p1_tk", "pos": [79.4, 0, 2], "for": "3.25bars", "ease": "linear" },
+    { "at": "21:1.45", "do": "rotate", "on": "p1_tk", "rot": [0, 180, 0], "for": "0.8b", "ease": "inout" },
+    { "at": "21:1.45", "do": "anim", "on": "p1_tk", "clip": "idle", "blend": "0.3s" },
+    { "at": "21:4.5", "tvflash": "tv1", "amount": 1, "low": 1, "sharp": 4, "for": "0.5b" },
+
+    // ---- Bar 22. The music falls away. Slow push into his eye, starting from his whole face. It ends wall to wall.
+    { "at": "21:4.5", "shot": { "name": "the push", "pos": [0.03, 1.27, 0.0], "move": [0.04, 1.31, -0.38], "look": "person.head", "lookOffset": [0.041, 0.105, 0.08], "fov": 22, "focus": "person.head", "aperture": 8, "ease": "in" } },
+    { "at": "22:1", "tv": "tv1", "bright": 0.6, "for": "1b" },
+    { "at": "22:1", "grade": { "contrast": 28, "saturation": 6, "grain": 0.3, "chroma": 0.15 }, "for": "1bar", "ease": "out" },
+
+    // ---- 22:3. Into the eye set.
+    { "at": "22:3", "light": "eye_key", "intensity": 9 },
+    { "at": "22:3", "shot": { "name": "the eye", "pos": [-60, 0.08, 4.3], "move": [-60, 0, 2.6], "rot": [0, 180, 0], "fov": 30, "ease": "in", "focus": "eyeball", "aperture": 32 } },
+    { "at": "22:3", "grade": { "vignette": 0.5, "saturation": 10, "contrast": 26, "bloom": 0.5, "threshold": 1.2, "chroma": 0.2 } },
+
+    // Bar 23. Jolted: the pupil snaps wide, the frame hits.
+    { "at": "22:3", "do": "face", "on": "eyeball", "wide": 0, "squint": 0.25, "pupil": 0.27, "for": "0.01b" },
+    { "at": "22:4", "do": "face", "on": "eyeball", "squint": 0.6, "for": "0.75b", "ease": "inout" },
+    { "at": "23:1", "do": "face", "on": "eyeball", "wide": 1, "squint": 0, "pupil": 0.62, "for": "0.25b", "ease": "expo" },
+    { "at": "23:1", "pulse": { "flash": 0.6, "zoom": -0.18, "shake": 0.25, "chroma": 1, "rgb": 1.4 }, "for": "1b", "sharp": 3 },
+    { "at": "23:3", "for": "2b", "grade": { "rgb": 0.5 }, "ease": "in" },
+
+    // ---- Bar 24. What he sees: one TV becomes three. Everything leans. He presses back into the sofa, gripping it.
+    { "at": "24:1", "grade": { "exposure": 0, "vignette": 0.3, "bloom": 0.45, "threshold": 1.4, "saturation": 30, "contrast": 26, "rgb": 0 } },
+    { "at": "24:1", "pulse": { "flash": 0.7, "rgb": 2 }, "for": "1b" },
+    { "at": "24:1", "shot": { "name": "three screens", "pos": [0.02, 1.2, -0.25], "move": [0.02, 1.18, 0.35], "look": "tv1.screen", "focus": "tv1.screen", "aperture": 16, "fov": 52, "ease": "in", "handheld": 0.12 } },
+    { "at": "24:3", "shot": { "name": "lit by all three", "pos": [0.02, 1.27, 0.2], "move": [0.02, 1.27, 0.02], "look": "person.head", "lookOffset": [0, 0.07, 0], "fov": 24, "handheld": 0.3, "ease": "in" } },
+    { "at": "24:4", "shot": { "name": "the three, about to slam", "pos": [0, 1.16, 0.2], "look": "tv1.screen", "fov": 52 } },
+    { "at": "24:1", "tv": "tv1", "show": null, "mask": "#00ff30", "feed": 0, "static": 0, "bright": 0.8, "for": "0.5b" },
+    { "at": 0, "tv": "tv_r", "mask": "#ff0000", "bright": 0 },
+    { "at": 0, "tv": "tv_b", "mask": "#0030ff", "bright": 0 },
+    { "at": "24:1", "tv": "tv_r", "bright": 0.8 },
+    { "at": "24:1", "tv": "tv_b", "bright": 0.8 },
+    { "at": "24:1", "tvchange": "tv1", "every": "0.5b", "until": "25:1", "min": 0.7, "max": 1.5 },
+    { "at": "24:1", "tvchange": "tv_r", "every": "0.5b", "until": "25:1", "min": 0.7, "max": 1.5 },
+    { "at": "24:1", "tvchange": "tv_b", "every": "0.5b", "until": "25:1", "min": 0.7, "max": 1.5 },
+    { "at": "24:1", "do": "move", "on": "tv_r", "pos": [-1.5, 0.06, 0], "rel": 1, "for": "2b", "ease": "back" },
+    { "at": "24:1", "do": "move", "on": "tv_b", "pos": [1.5, 0.06, 0], "rel": 1, "for": "2b", "ease": "back" },
+    // J: they slam back together on the breakdown.
+    { "at": "24:3.95", "do": "move", "on": "tv_r", "pos": [1.5, -0.06, 0], "rel": 1, "for": "0.56b", "ease": "in" },
+    { "at": "24:3.95", "do": "move", "on": "tv_b", "pos": [-1.5, -0.06, 0], "rel": 1, "for": "0.56b", "ease": "in", "sfx": "impact_big", "sfxAt": "+0.56b", "sfxVolume": 0.8 },
+    { "at": "24:1", "for": "4b", "grade": { "suck": 0.25, "suckRadius": 7, "twist": 0.35, "rgb": 0.4, "swirl": 0.5 }, "ease": "in" },
+    { "at": "24:2", "do": "rotate", "on": "p1_lamp", "rot": [6, 0, -9], "for": "3b", "ease": "in" },
+    { "at": "24:2", "do": "rotate", "on": "p1_frame", "rot": [0, 0, 22], "for": "3b", "ease": "in" },
+    // He presses back into the sofa, both hands dug into the seat.
+    { "at": "24:1.3", "do": "pose", "on": "person", "bones": { "chest": [-8, 0, 0], "spine": [-4, 0, 0], "head": [6, 0, 0] }, "for": "2b", "ease": "inout" },
+    { "at": "24:1.3", "do": "reach", "on": "person", "hand": "left", "to": [-0.4, 0.72, -0.72], "hint": [-0.8, 0.9, -1.0], "for": "1.2b", "ease": "inout" },
+    { "at": "24:1.5", "do": "reach", "on": "person", "hand": "right", "to": [0.4, 0.72, -0.72], "hint": [0.8, 0.9, -1.0], "for": "1.2b", "ease": "inout" },
+    { "at": "24:2.4", "do": "fingers", "on": "person", "hand": "left", "curl": 0.85, "for": "0.3b", "ease": "out" },
+    { "at": "24:2.6", "do": "fingers", "on": "person", "hand": "right", "curl": 0.85, "for": "0.3b", "ease": "out" },
+    { "at": "24:4.5", "do": "pose", "on": "person", "bones": { "chest": [0, 0, 0], "spine": [0, 0, 0], "head": [0, 0, 0] }, "for": "0.45b", "ease": "inout" },
+
+    // Part 3 relies on the feed camera being where the room put it.
+    { "at": "25:1", "do": "set", "on": "feedcam", "pos": [2.55, 2.5, 2.45], "rot": [26, 222, 0] }
+  ],
+  "macros": {
+    // Bars 14-18, the colours the TV plays on his face, every two beats. Blue to teal to violet to magenta and back; no red.
+    "colours": [
+      { "at": "+0.02b", "tv": "tv1", "tint": "#8ce8ff", "for": "0.02b" }, { "at": "+2b", "tv": "tv1", "tint": "#7cd0ff", "for": "0.05b" }, { "at": "+4b", "tv": "tv1", "tint": "#66f0e0", "for": "0.05b" },
+      { "at": "+6b", "tv": "tv1", "tint": "#9ad0ff", "for": "0.05b" }, { "at": "+8b", "tv": "tv1", "tint": "#c8a0ff", "for": "0.05b" },
+      { "at": "+10b", "tv": "tv1", "tint": "#60d8ff", "for": "0.05b" }, { "at": "+12b", "tv": "tv1", "tint": "#90ffd8", "for": "0.05b" },
+      { "at": "+14b", "tv": "tv1", "tint": "#e090ff", "for": "0.05b" }, { "at": "+16b", "tv": "tv1", "tint": "#88c8ff", "for": "0.05b" }
+    ],
+    // One press of the remote: the hand dips, the picture cuts on the frame, the room changes colour.
+    "click": [
+      { "do": "fingers", "on": "person", "hand": "left", "finger": "thumb", "curl": 0.5, "for": "0.08b", "ease": "out", "sfx": "$snd" },
+      { "do": "pose", "on": "person", "bone": "leftHand", "rot": [14, 0, 0], "for": "0.08b", "ease": "out" },
+      { "at": "+0.08b", "do": "fingers", "on": "person", "hand": "left", "finger": "thumb", "curl": 0.3, "for": "0.3b", "ease": "out" },
+      { "at": "+0.08b", "do": "pose", "on": "person", "bone": "leftHand", "rot": [0, 0, 0], "for": "0.3b", "ease": "out" }
+    ],
+    "channel": [
+      { "macro": "click", "snd": "tv_click" },
+      { "tv": "tv1", "show": "$show", "static": 0, "tint": "$color", "bright": "$lvl", "for": "0.05b" },
+      { "tvflash": "tv1", "amount": 0.6, "low": 1, "sharp": 5, "for": "0.5b" }
+    ],
+    // The gag has to read at speed from behind, on a small screen: big shapes, a hard stop.
+    "tilt": [
+      { "do": "pose", "on": "$who", "bones": { "head": [4, 0, -19], "neck": [0, 0, -6], "chest": [7, 0, -3] }, "for": "0.8b", "ease": "inout", "overshoot": 0.12, "settle": "0.4s" },
+      { "at": "+2.2b", "do": "pose", "on": "$who", "bones": { "head": [0, 0, 0], "neck": [0, 0, 0], "chest": [0, 0, 0] }, "for": "0.8b", "ease": "inout" }
+    ],
+    // The hand around the remote: four fingers wrapped under it, each a little tighter toward the little finger, thumb on top.
+    "grip": [
+      { "do": "fingers", "on": "$who", "hand": "left", "finger": "index", "curl": 0.62, "for": "0.3b", "ease": "out" },
+      { "do": "fingers", "on": "$who", "hand": "left", "finger": "middle", "curl": 0.68, "for": "0.3b", "ease": "out" },
+      { "do": "fingers", "on": "$who", "hand": "left", "finger": "ring", "curl": 0.72, "for": "0.3b", "ease": "out" },
+      { "do": "fingers", "on": "$who", "hand": "left", "finger": "pinky", "curl": 0.76, "for": "0.3b", "ease": "out" },
+      { "do": "fingers", "on": "$who", "hand": "left", "finger": "thumb", "curl": 0.3, "for": "0.3b", "ease": "out" }
+    ],
+    "hello": [
+      { "do": "layer", "on": "$who", "clip": "IdleSit13GreetA", "mask": "rightArm,spine", "start": 0.3, "speed": 0.5, "stop": 1.62, "once": 1, "for": "3.6b", "blend": "0.4b" }
+    ],
+    "hello2": [
+      { "do": "layer", "on": "$who", "clip": "IdleSit13GreetA", "mask": "rightArm,spine", "start": 0.35, "speed": 0.9, "stop": 1.62, "once": 1, "for": "2.3b", "blend": "0.25s" }
+    ],
+    "jab": [
+      { "do": "fingers", "on": "person", "hand": "left", "finger": "thumb", "curl": 0.5, "for": "0.08b", "ease": "out", "sfx": "$snd" },
+      { "do": "pose", "on": "person", "bones": { "leftHand": [18, 0, 0], "leftUpperArm": ["$a", 0, 0] }, "for": "0.07b", "ease": "out" },
+      { "at": "+0.09b", "do": "fingers", "on": "person", "hand": "left", "finger": "thumb", "curl": 0.3, "for": "0.25b", "ease": "out" },
+      { "at": "+0.09b", "do": "pose", "on": "person", "bones": { "leftHand": [0, 0, 0], "leftUpperArm": [0, 0, 0] }, "for": "0.22b", "ease": "out" }
+    ],
+    "tick": [
+      { "do": "rotate", "on": "p1_frame", "rot": [0, 0, "$z"], "for": "0.1b", "ease": "back", "sfx": "frame_tick" },
+      { "do": "rotate", "on": "p1_pic", "rot": [0, 0, "$z"], "for": "0.1b", "ease": "back" }
+    ]
+  }
+}

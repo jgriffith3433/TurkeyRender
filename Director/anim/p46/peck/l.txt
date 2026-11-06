@@ -1,0 +1,16 @@
+file 'f_0097.500.png'
+duration 1
+file 'f_0097.693.png'
+duration 1
+file 'f_0097.886.png'
+duration 1
+file 'f_0098.079.png'
+duration 1
+file 'f_0098.271.png'
+duration 1
+file 'f_0098.464.png'
+duration 1
+file 'f_0098.657.png'
+duration 1
+file 'f_0098.850.png'
+duration 1

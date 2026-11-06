@@ -1,0 +1,557 @@
+[
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\static_burst.mp3",
+    "t": 30.449999809265137,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 11.118830137252807,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 12.477600021362306,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 13.877300252914427,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 15.939399986267091,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 17.312050437927244,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\camera_servo.mp3",
+    "t": 28.035999298095703,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 31.111939697265626,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 31.801399497985841,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 32.311999511718753,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 32.484499168396,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_power_thump.mp3",
+    "t": 32.656998825073245,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\static_burst.mp3",
+    "t": 34.001500511169432,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\glass_ring.mp3",
+    "t": 44.898500633239749,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 47.670829734802247,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 48.353400421142574,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 49.043401107788078,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 49.409100379943844,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 49.588250160217285,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 66.318900222778325,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_power_thump.mp3",
+    "t": 66.318900222778325,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 68.00844,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\static_burst.mp3",
+    "t": 69.8983024597168,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 70.449,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 71.308,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 71.831,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 72.69,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 73.213,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 74.072,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 74.582,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\glass_ring.mp3",
+    "t": 73.208499908447266,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 75.442,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 75.964,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 76.835,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 77.346,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\glass_stretch.mp3",
+    "t": 78.201598052978511,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_1.mp3",
+    "t": 79.415500640869141,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_2.mp3",
+    "t": 81.484500885009766,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_3.mp3",
+    "t": 81.8290023803711,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_flock.mp3",
+    "t": 81.8290023803711,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_flock.mp3",
+    "t": 85.622501373291016,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\static_burst.mp3",
+    "t": 88.97,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\camera_servo.mp3",
+    "t": 88.97,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 93.381,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_1.mp3",
+    "t": 95.278,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_3.mp3",
+    "t": 96.14,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_2.mp3",
+    "t": 96.657,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_3.mp3",
+    "t": 97.519,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_2.mp3",
+    "t": 98.036,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 99.18,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_2.mp3",
+    "t": 102.539,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_1.mp3",
+    "t": 103.554,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 107.175,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 107.175,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 108.554,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 108.554,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 109.933,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 91.112,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 91.112,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 146.657,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 153.19,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 153.53,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 153.88,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 154.22,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 149.556,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\glass_stretch.mp3",
+    "t": 154.933,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 127.05,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 110.79499816894531,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 110.79499816894531,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 131.82899475097656,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 138.38099670410156,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 143.89799499511719,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 148.74669799804687,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 149.41600036621094,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\remote_thunk.mp3",
+    "t": 154.56729736328126,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 158.71909790039064,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_1.mp3",
+    "t": 161.34669799804689,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 162.34649658203125,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 165.10549926757813,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 164.65699768066406,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 165.31244964599611,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 167.86374664306641,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 170.62249755859375,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 172.51899719238281,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_flock.mp3",
+    "t": 174.65699768066406,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 175.27749633789063,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 175.48419494628908,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 175.62199401855469,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_3.mp3",
+    "t": 181.65674591064453,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 159.9324951171875,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 162.69149780273438,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 165.45024871826172,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 168.20849609375,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 170.96724700927734,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 173.72549438476563,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 176.4844970703125,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 179.24324798583984,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 182.09119567871093,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 182.60869750976562,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 183.12619934082031,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 183.64306671142577,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 184.85019836425781,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 185.10549926757813,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 187.00199890136719,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 191.31174468994141,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 192.69149780273438,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 194.07049560546875,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 194.58799743652344,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\camera_servo.mp3",
+    "t": 197.34649658203125,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\tv_click.mp3",
+    "t": 200.3,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\channel_flip.mp3",
+    "t": 200.36,
+    "volume": 0.25
+  }
+]

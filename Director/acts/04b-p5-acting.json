@@ -1,0 +1,2056 @@
+{
+ "actors": {
+  "p5_tiebird": {
+   "model": "turkey_white_hero",
+   "pos": [
+    -1.5,
+    -0.19,
+    0.4
+   ],
+   "rot": [
+    0,
+    133,
+    0
+   ],
+   "scale": 1.2,
+   "from": "41:1",
+   "until": "49:1"
+  },
+  "p5_tiebird_tie": {
+   "model": "prim:cube",
+   "scale": [
+    0.08,
+    0.24,
+    0.03
+   ],
+   "color": "#d4141c",
+   "smooth": 0.5,
+   "from": "41:1",
+   "until": "49:1"
+  },
+  "p5r_face": {
+   "model": "none",
+   "pos": [
+    -0.18,
+    0.56,
+    -1.18
+   ]
+  },
+  "p5r_aim": {
+   "model": "none",
+   "pos": [
+    -0.05,
+    0.1,
+    -1.12
+   ]
+  },
+  "p5r_bird": {
+   "model": "none",
+   "pos": [
+    0.6,
+    0.84,
+    -2.58
+   ]
+  },
+  "p5r_birdhead": {
+   "model": "none",
+   "pos": [
+    0.56,
+    1,
+    -2.6
+   ]
+  },
+  "p5r_birdeyes": {
+   "model": "none",
+   "pos": [
+    0.53,
+    1.01,
+    -2.6
+   ]
+  },
+  "p5r_down": {
+   "model": "none",
+   "pos": [
+    -0.18,
+    0.47,
+    -1.18
+   ]
+  },
+  "p5r_eyes": {
+   "model": "none",
+   "pos": [
+    -0.17,
+    0.58,
+    -1.27
+   ]
+  },
+  "p5r_refl": {
+   "model": "none",
+   "pos": [
+    0.2,
+    0.82,
+    -1.85
+   ]
+  },
+  "p5r_tie": {
+   "model": "Assets/MusicVideo/Props/tie.obj",
+   "material": "Assets/MusicVideo/Props/tie.mat",
+   "pos": [
+    0.55,
+    0.8,
+    -2.57
+   ],
+   "rot": [
+    -22,
+    332,
+    0
+   ],
+   "scale": 0.42,
+   "from": 118.3,
+   "until": "47:1"
+  },
+  "p5r_hand": {
+   "model": "none",
+   "pos": [
+    0.21,
+    0.05,
+    -1.5
+   ]
+  },
+  "p5r_lens": {
+   "model": "none",
+   "pos": [
+    0.05,
+    0.44,
+    -2
+   ]
+  },
+  "p5r_l1": {
+   "model": "none",
+   "pos": [
+    -1.5,
+    0.3,
+    -1.8
+   ]
+  },
+  "p5r_l2": {
+   "model": "none",
+   "pos": [
+    -0.3,
+    1.15,
+    -2.6
+   ]
+  }
+ },
+ "lights": {
+  "p5r_key": {
+   "type": "point",
+   "pos": [
+    -0.75,
+    0.95,
+    -2.15
+   ],
+   "color": "#dfe6ff",
+   "intensity": 0,
+   "range": 3
+  },
+  "p5r_birdkey": {
+   "type": "point",
+   "pos": [
+    0.1,
+    1.6,
+    -1.7
+   ],
+   "color": "#c8d4ff",
+   "intensity": 0,
+   "range": 3
+  }
+ },
+ "cues": [
+  {
+   "at": "41:1",
+   "do": "overlap",
+   "on": "person",
+   "amount": 1,
+   "for": "0.1s"
+  },
+  {
+   "at": "41:1",
+   "do": "set",
+   "on": "person",
+   "pos": [
+    0,
+    -0.05,
+    -1
+   ],
+   "rot": [
+    -78,
+    190,
+    8
+   ]
+  },
+  {
+   "at": "41:1.05",
+   "do": "ragdoll",
+   "on": "person",
+   "for": "2.2s",
+   "impulse": [
+    0.5,
+    -14,
+    0.3
+   ],
+   "hit": "hips",
+   "spin": [
+    40,
+    0,
+    90
+   ],
+   "gravity": [
+    0,
+    -9,
+    0
+   ],
+   "drag": 3.2,
+   "floor": -2.1,
+   "stiff": 0.9,
+   "seed": 4,
+   "blendIn": "0.03s"
+  },
+  {
+   "at": "41:1",
+   "do": "dent",
+   "on": "p5_mountain",
+   "to": 1,
+   "x": 0,
+   "z": 0,
+   "radius": 2,
+   "depth": 1.6,
+   "for": "0.45b",
+   "ease": "out"
+  },
+  {
+   "at": "41:3",
+   "do": "dent",
+   "on": "p5_mountain",
+   "to": 0.26,
+   "x": 0,
+   "z": 0,
+   "radius": 2,
+   "depth": 1.6,
+   "for": "3b",
+   "ease": "inout"
+  },
+  {
+   "at": "41:1",
+   "light": "p5_bounce",
+   "intensity": 0.5
+  },
+  {
+   "at": "41:1",
+   "do": "set",
+   "on": "p5_focus",
+   "pos": [
+    0.5,
+    0,
+    -0.9
+   ]
+  },
+  {
+   "at": "41:1",
+   "shot": {
+    "name": "the hit",
+    "pos": [
+     2.4,
+     2.5,
+     -4.6
+    ],
+    "move": [
+     2.2,
+     2.2,
+     -4.2
+    ],
+    "look": "p5_focus",
+    "fov": 30,
+    "focus": "p5_focus",
+    "aperture": 8,
+    "handheld": 0.3,
+    "ease": "out"
+   }
+  },
+  {
+   "at": "41:3",
+   "do": "set",
+   "on": "p5_focus",
+   "pos": [
+    0,
+    0.5,
+    -1
+   ]
+  },
+  {
+   "at": "41:3",
+   "shot": {
+    "name": "the crown",
+    "pos": [
+     7.5,
+     -2,
+     -9.5
+    ],
+    "move": [
+     6.8,
+     -1.6,
+     -8.6
+    ],
+    "look": "p5_focus",
+    "lookOffset": [
+     0,
+     3,
+     0
+    ],
+    "fov": 48,
+    "focus": "p5_focus",
+    "aperture": 16
+   }
+  },
+  {
+   "at": 113.72,
+   "do": "face",
+   "on": "eyeball",
+   "lookX": 0.35,
+   "lookY": 0.15,
+   "for": "0.1b"
+  },
+  {
+   "at": 113.98,
+   "do": "face",
+   "on": "eyeball",
+   "lookX": -0.25,
+   "lookY": 0.05,
+   "pupil": 0.3,
+   "for": "0.1b"
+  },
+  {
+   "at": "46:4.75",
+   "do": "plant",
+   "on": "person",
+   "hand": "left",
+   "to": [
+    0.22,
+    -0.42,
+    -1.78
+   ],
+   "blend": "0.12s",
+   "follow": 0,
+   "freeWrist": 1
+  },
+  {
+   "at": "46:4.75",
+   "do": "plant",
+   "on": "person",
+   "hand": "right",
+   "to": [
+    -0.22,
+    -0.42,
+    -1.78
+   ],
+   "blend": "0.12s",
+   "follow": 0,
+   "freeWrist": 1
+  },
+  {
+   "at": "47:1",
+   "fx": "feathers",
+   "pos": [
+    0.22,
+    -0.42,
+    -1.78
+   ],
+   "count": 13,
+   "speed": 2.2,
+   "color": "#cfd6ea",
+   "color2": "#ffffff",
+   "scale": 0.4,
+   "for": "3s"
+  },
+  {
+   "at": "47:1",
+   "fx": "feathers",
+   "pos": [
+    -0.22,
+    -0.42,
+    -1.78
+   ],
+   "count": 13,
+   "speed": 2.2,
+   "color": "#cfd6ea",
+   "color2": "#ffffff",
+   "scale": 0.4,
+   "for": "3s"
+  },
+  {
+   "at": "47:1",
+   "do": "fingers",
+   "on": "person",
+   "hand": "left",
+   "curl": 0.5,
+   "for": "0.15b"
+  },
+  {
+   "at": "47:1",
+   "do": "fingers",
+   "on": "person",
+   "hand": "right",
+   "curl": 0.5,
+   "for": "0.15b"
+  },
+  {
+   "do": "keys",
+   "on": "person",
+   "at": "46:4.6",
+   "overshoot": 0.14,
+   "settle": "0.3s",
+   "successive": true,
+   "release": "1b",
+   "keys": [
+    {
+     "t": "47:1",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "chest": [
+       4,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.14,
+      0.05
+     ]
+    },
+    {
+     "t": "47:2",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "chest": [
+       -4,
+       0,
+       0
+      ],
+      "head": [
+       4,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.16,
+      -0.06
+     ]
+    },
+    {
+     "t": "47:2.6",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       8,
+       0,
+       0
+      ],
+      "spine": [
+       -8,
+       0,
+       0
+      ],
+      "chest": [
+       -12,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.14,
+      -0.13
+     ],
+     "ease": "inout"
+    },
+    {
+     "t": "47:3",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -14,
+       0,
+       0
+      ],
+      "spine": [
+       12,
+       0,
+       0
+      ],
+      "chest": [
+       12,
+       0,
+       0
+      ],
+      "neck": [
+       8,
+       0,
+       0
+      ],
+      "head": [
+       18,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.14,
+      0.04
+     ]
+    },
+    {
+     "t": "47:3.7",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -8,
+       0,
+       0
+      ],
+      "spine": [
+       8,
+       0,
+       0
+      ],
+      "chest": [
+       8,
+       0,
+       0
+      ],
+      "neck": [
+       6,
+       0,
+       0
+      ],
+      "head": [
+       14,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.1,
+      0.03
+     ]
+    },
+    {
+     "t": "47:4.4",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       6,
+       0,
+       0
+      ],
+      "spine": [
+       -6,
+       0,
+       0
+      ],
+      "chest": [
+       -8,
+       0,
+       0
+      ],
+      "head": [
+       2,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0,
+      -0.09
+     ]
+    },
+    {
+     "t": "48:1",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -18,
+       0,
+       0
+      ],
+      "spine": [
+       14,
+       4,
+       0
+      ],
+      "chest": [
+       14,
+       6,
+       0
+      ],
+      "neck": [
+       8,
+       0,
+       0
+      ],
+      "head": [
+       20,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.17,
+      0.05
+     ]
+    },
+    {
+     "t": "48:1.8",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -4,
+       0,
+       0
+      ],
+      "spine": [
+       6,
+       0,
+       0
+      ],
+      "chest": [
+       6,
+       0,
+       0
+      ],
+      "neck": [
+       4,
+       0,
+       0
+      ],
+      "head": [
+       16,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.02,
+      0.02
+     ]
+    },
+    {
+     "t": "48:2.8",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       10,
+       0,
+       0
+      ],
+      "spine": [
+       -10,
+       0,
+       0
+      ],
+      "chest": [
+       -14,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.05,
+      -0.14
+     ],
+     "ease": "inout"
+    },
+    {
+     "t": "48:3.5",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -22,
+       0,
+       0
+      ],
+      "spine": [
+       16,
+       0,
+       0
+      ],
+      "chest": [
+       16,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.2,
+      0.08
+     ]
+    },
+    {
+     "t": "48:4.1",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -14,
+       0,
+       0
+      ],
+      "spine": [
+       12,
+       0,
+       0
+      ],
+      "chest": [
+       10,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.13,
+      0.06
+     ]
+    },
+    {
+     "t": "48:4.5",
+     "from": "FeastZombieB@1.4",
+     "bones": {
+      "hips": [
+       -18,
+       0,
+       0
+      ],
+      "spine": [
+       14,
+       0,
+       0
+      ],
+      "chest": [
+       12,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     },
+     "hips": [
+      0,
+      0.17,
+      0.07
+     ]
+    }
+   ]
+  },
+  {
+   "at": "46:4.8",
+   "do": "face",
+   "on": "person",
+   "for": "0.2b",
+   "jawOpen": 0.3,
+   "blink": 1,
+   "eyesWide": 0
+  },
+  {
+   "at": "47:2",
+   "do": "face",
+   "on": "person",
+   "for": "0.3b",
+   "jawOpen": 0.3,
+   "blink": 0,
+   "eyesWide": 0.4
+  },
+  {
+   "at": "47:2.6",
+   "do": "face",
+   "on": "person",
+   "for": "0.3b",
+   "jawOpen": 0.2,
+   "eyesWide": 0.8
+  },
+  {
+   "at": "47:3",
+   "do": "face",
+   "on": "person",
+   "for": "0.15b",
+   "jawOpen": 0.3,
+   "blink": 0.9,
+   "eyesWide": 0
+  },
+  {
+   "at": "47:4.3",
+   "do": "face",
+   "on": "person",
+   "for": "0.3b",
+   "jawOpen": 0.3,
+   "blink": 0.2
+  },
+  {
+   "at": "48:1",
+   "do": "face",
+   "on": "person",
+   "for": "0.15b",
+   "jawOpen": 0.3,
+   "blink": 1
+  },
+  {
+   "at": "48:1.8",
+   "do": "face",
+   "on": "person",
+   "for": "0.3b",
+   "jawOpen": 0.3,
+   "blink": 0.3,
+   "eyesWide": 0.5
+  },
+  {
+   "at": "48:2.8",
+   "do": "face",
+   "on": "person",
+   "for": "0.4b",
+   "jawOpen": 0.3,
+   "blink": 0,
+   "eyesWide": 1
+  },
+  {
+   "at": "48:3.5",
+   "do": "face",
+   "on": "person",
+   "for": "0.2b",
+   "jawOpen": 0.5,
+   "eyesWide": 1,
+   "blink": 0
+  },
+  {
+   "at": "48:4.6",
+   "do": "plant",
+   "on": "person",
+   "hand": "left",
+   "weight": 0,
+   "for": "0.8b"
+  },
+  {
+   "at": "48:4.6",
+   "do": "plant",
+   "on": "person",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.8b"
+  },
+  {
+   "at": "46:4",
+   "light": "p5_bounce",
+   "intensity": 0.8,
+   "for": "1b"
+  },
+  {
+   "at": "47:1",
+   "shot": {
+    "name": "overwhelmed",
+    "pos": [
+     1.2,
+     0.5,
+     -3.3
+    ],
+    "move": [
+     0.5,
+     0.2,
+     -2.75
+    ],
+    "look": "person.head",
+    "fov": 28,
+    "focus": "person.head",
+    "aperture": 4,
+    "handheld": 0.5,
+    "ease": "in"
+   }
+  },
+  {
+   "at": "41:1",
+   "do": "set",
+   "on": "p5_tiebird",
+   "pos": [
+    -1.5,
+    -0.19,
+    0.4
+   ],
+   "rot": [
+    0,
+    133,
+    0
+   ]
+  },
+  {
+   "at": "41:1",
+   "do": "anim",
+   "on": "p5_tiebird",
+   "clip": "idle",
+   "speed": 0.6
+  },
+  {
+   "at": "41:1",
+   "do": "attach",
+   "on": "p5_tiebird_tie",
+   "to": "p5_tiebird.neck3",
+   "pos": [
+    0,
+    -0.02,
+    0.1
+   ],
+   "rot": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "at": "47:1",
+   "do": "set",
+   "on": "p5_tiebird",
+   "pos": [
+    -1.5,
+    -0.19,
+    0.4
+   ],
+   "rot": [
+    0,
+    133,
+    0
+   ]
+  },
+  {
+   "at": "48:3",
+   "shot": {
+    "name": "the pour",
+    "pos": [
+     0.6,
+     0.14,
+     -3.05
+    ],
+    "move": [
+     0.46,
+     0.12,
+     -2.9
+    ],
+    "look": "person.head",
+    "lookOffset": [
+     0,
+     -0.08,
+     0
+    ],
+    "fov": 44,
+    "focus": "person.head",
+    "aperture": 5,
+    "handheld": 0.5,
+    "ease": "in"
+   }
+  },
+  {
+   "on": "person",
+   "at": 113.5,
+   "do": "overlap",
+   "amount": 0.4,
+   "head": 0,
+   "for": "0.1s"
+  },
+  {
+   "on": "person",
+   "at": "47:1",
+   "do": "overlap",
+   "amount": 1,
+   "head": 1,
+   "for": "0.3s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "set",
+   "pos": [
+    0,
+    -0.56,
+    -1
+   ],
+   "rot": [
+    0,
+    190,
+    0
+   ]
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "anim",
+   "clip": "IdleKneelInjuredA",
+   "speed": 0.6,
+   "blend": 0
+  },
+  {
+   "on": "person",
+   "at": 113.5,
+   "do": "overlap",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "pose",
+   "bones": {
+    "spine": [
+     -14,
+     0,
+     0
+    ],
+    "chest": [
+     -16,
+     0,
+     0
+    ]
+   },
+   "for": "0.05s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "pose",
+   "bones": {
+    "neck": [
+     -6,
+     0,
+     4
+    ],
+    "head": [
+     -12,
+     0,
+     11
+    ]
+   },
+   "for": "0.05s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "reach",
+   "hand": "left",
+   "to": [
+    0.2,
+    0.03,
+    -1.48
+   ],
+   "for": "0.05s",
+   "hint": [
+    0.8,
+    0.25,
+    -1
+   ]
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "reach",
+   "hand": "right",
+   "to": [
+    -0.3,
+    -0.2,
+    -1.26
+   ],
+   "for": "0.05s",
+   "hint": [
+    -0.8,
+    0.2,
+    -1.1
+   ]
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "gaze",
+   "to": "p5r_lens",
+   "limit": 45,
+   "for": "0.05s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "fingers",
+   "hand": "left",
+   "curl": 0.08,
+   "for": "0.1s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "fingers",
+   "hand": "right",
+   "curl": 0.3,
+   "for": "0.1s"
+  },
+  {
+   "on": "person",
+   "at": "42:1",
+   "do": "face",
+   "for": "0.1s",
+   "fear": 0,
+   "eyesWide": 0.2,
+   "blink": 0,
+   "smile": 0
+  },
+  {
+   "on": "person",
+   "at": 114,
+   "do": "keys",
+   "blend": "0.1s",
+   "keys": [
+    {
+     "t": 0,
+     "bones": {
+      "chest": [
+       0,
+       0,
+       0
+      ],
+      "spine": [
+       0,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 1.1,
+     "bones": {
+      "chest": [
+       -3.2,
+       0,
+       0
+      ],
+      "spine": [
+       -1,
+       0,
+       0
+      ],
+      "neck": [
+       1.5,
+       0,
+       0
+      ],
+      "head": [
+       2.5,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 2.5,
+     "bones": {
+      "chest": [
+       0,
+       0,
+       0
+      ],
+      "spine": [
+       0,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 3.7,
+     "bones": {
+      "chest": [
+       -3.2,
+       0,
+       0
+      ],
+      "spine": [
+       -1,
+       0,
+       0
+      ],
+      "neck": [
+       1.5,
+       0,
+       0
+      ],
+      "head": [
+       2.5,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 5.1,
+     "bones": {
+      "chest": [
+       0,
+       0,
+       0
+      ],
+      "spine": [
+       0,
+       0,
+       0
+      ],
+      "neck": [
+       0,
+       0,
+       0
+      ],
+      "head": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 6.2,
+     "bones": {
+      "chest": [
+       -2.8800000000000003,
+       0,
+       0
+      ],
+      "spine": [
+       -0.9,
+       0,
+       0
+      ],
+      "neck": [
+       1.35,
+       0,
+       0
+      ],
+      "head": [
+       2.25,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 7.1,
+     "bones": {
+      "chest": [
+       -0.48,
+       0,
+       0
+      ],
+      "spine": [
+       -0.15,
+       0,
+       0
+      ],
+      "neck": [
+       0.22499999999999998,
+       0,
+       0
+      ],
+      "head": [
+       0.375,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 7.58,
+     "bones": {
+      "chest": [
+       -3.2,
+       0,
+       0
+      ],
+      "spine": [
+       -1,
+       0,
+       0
+      ],
+      "neck": [
+       1.5,
+       0,
+       0
+      ],
+      "head": [
+       2.5,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 13.03,
+     "bones": {
+      "chest": [
+       -3.2,
+       0,
+       0
+      ],
+      "spine": [
+       -1,
+       0,
+       0
+      ],
+      "neck": [
+       1.5,
+       0,
+       0
+      ],
+      "head": [
+       2.5,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.2s"
+  },
+  {
+   "at": 114.26,
+   "shot": {
+    "handheld": 0,
+    "ease": "inout",
+    "name": "what do you mean",
+    "pos": [
+     0.02,
+     0.46,
+     -2.1
+    ],
+    "move": [
+     0.01,
+     0.45,
+     -1.92
+    ],
+    "look": "p5r_face",
+    "fov": 30,
+    "focus": "person.head",
+    "aperture": 4
+   }
+  },
+  {
+   "on": "person",
+   "at": 115.6,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "on": "person",
+   "at": 115.66,
+   "do": "gaze",
+   "to": "p5r_l1",
+   "limit": 45,
+   "for": "1.15s",
+   "ease": "inout"
+  },
+  {
+   "on": "person",
+   "at": 115.7,
+   "do": "face",
+   "for": "0.6s",
+   "eyesWide": 0.1
+  },
+  {
+   "at": 117,
+   "shot": {
+    "handheld": 0,
+    "ease": "inout",
+    "name": "lost",
+    "pos": [
+     -3.45,
+     0.98,
+     -3.45
+    ],
+    "move": [
+     -3.2,
+     0.9,
+     -3.3
+    ],
+    "look": "p5r_aim",
+    "fov": 22,
+    "focus": "person.head",
+    "aperture": 5.6
+   }
+  },
+  {
+   "on": "person",
+   "at": 116.85,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "on": "person",
+   "at": 116.92,
+   "do": "gaze",
+   "to": "p5r_l2",
+   "limit": 45,
+   "for": "1.5s",
+   "ease": "inout"
+  },
+  {
+   "on": "p5_tiebird",
+   "at": "42:1",
+   "do": "set",
+   "pos": [
+    0.75,
+    -0.1,
+    -2.85
+   ],
+   "rot": [
+    0,
+    332,
+    0
+   ]
+  },
+  {
+   "on": "p5_tiebird",
+   "at": "42:1",
+   "do": "scale",
+   "to": 2,
+   "for": "0.01s"
+  },
+  {
+   "on": "p5_tiebird",
+   "at": "42:1",
+   "do": "anim",
+   "clip": "idle",
+   "speed": 0,
+   "blend": 0
+  },
+  {
+   "at": 118.38,
+   "shot": {
+    "handheld": 0,
+    "ease": "inout",
+    "name": "the bird",
+    "pos": [
+     -0.02,
+     0.1,
+     -1.55
+    ],
+    "move": [
+     0.04,
+     0.14,
+     -1.65
+    ],
+    "look": "p5r_bird",
+    "fov": 33,
+    "focus": "p5_tiebird.head",
+    "aperture": 4
+   }
+  },
+  {
+   "at": 119.76,
+   "shot": {
+    "handheld": 0,
+    "ease": "linear",
+    "name": "it dawns",
+    "pos": [
+     0.11,
+     0.6,
+     -1.93
+    ],
+    "move": [
+     0.03,
+     0.566,
+     -1.76
+    ],
+    "look": "p5r_face",
+    "fov": 24,
+    "focus": "person.head",
+    "aperture": 5.6
+   }
+  },
+  {
+   "on": "person",
+   "at": 119.85,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "on": "person",
+   "at": 119.9,
+   "do": "gaze",
+   "to": "p5_tiebird.head",
+   "limit": 48,
+   "for": "1.3s",
+   "ease": "inout"
+  },
+  {
+   "on": "person",
+   "at": 120.3,
+   "do": "face",
+   "for": "1.2s",
+   "eyesWide": 0.75,
+   "fear": 0.06
+  },
+  {
+   "on": "person",
+   "at": 121.72,
+   "do": "blink",
+   "for": "0.42s"
+  },
+  {
+   "at": 122.18,
+   "shot": {
+    "handheld": 0,
+    "ease": "inout",
+    "name": "the tilt",
+    "pos": [
+     0.14,
+     0.8,
+     -1.95
+    ],
+    "move": [
+     0.17,
+     0.81,
+     -2
+    ],
+    "look": "p5r_birdhead",
+    "fov": 24,
+    "focus": "p5_tiebird.head",
+    "aperture": 5.6
+   }
+  },
+  {
+   "on": "p5_tiebird",
+   "at": 122.3,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.8,
+     "ease": "inout",
+     "bones": {
+      "neck4": [
+       0,
+       0,
+       8
+      ],
+      "head": [
+       0,
+       0,
+       22
+      ]
+     }
+    },
+    {
+     "t": 4.7,
+     "bones": {
+      "neck4": [
+       0,
+       0,
+       8
+      ],
+      "head": [
+       0,
+       0,
+       22
+      ]
+     }
+    }
+   ],
+   "release": "0.2s"
+  },
+  {
+   "at": 123.21,
+   "shot": {
+    "handheld": 0,
+    "ease": "linear",
+    "name": "the feather",
+    "pos": [
+     0.44,
+     0.24,
+     -1.8
+    ],
+    "move": [
+     0.425,
+     0.22,
+     -1.77
+    ],
+    "look": "p5r_hand",
+    "fov": 24,
+    "focus": "p5r_hand",
+    "aperture": 5.6
+   }
+  },
+  {
+   "on": "first_feather",
+   "at": 123,
+   "do": "set",
+   "pos": [
+    0.27,
+    0.32,
+    -1.53
+   ],
+   "rot": [
+    -20,
+    0,
+    60
+   ]
+  },
+  {
+   "on": "first_feather",
+   "at": 123.2,
+   "do": "move",
+   "pos": [
+    0.17,
+    0.22,
+    -1.51
+   ],
+   "for": "0.45s",
+   "ease": "inout"
+  },
+  {
+   "on": "first_feather",
+   "at": 123.2,
+   "do": "rotate",
+   "rot": [
+    -50,
+    0,
+    10
+   ],
+   "for": "0.45s",
+   "ease": "inout"
+  },
+  {
+   "on": "first_feather",
+   "at": 123.65,
+   "do": "move",
+   "pos": [
+    0.23,
+    0.14,
+    -1.5
+   ],
+   "for": "0.35s",
+   "ease": "inout"
+  },
+  {
+   "on": "first_feather",
+   "at": 123.65,
+   "do": "rotate",
+   "rot": [
+    -60,
+    0,
+    55
+   ],
+   "for": "0.35s",
+   "ease": "inout"
+  },
+  {
+   "on": "first_feather",
+   "at": 124,
+   "do": "move",
+   "pos": [
+    0.22,
+    0.025,
+    -1.5
+   ],
+   "for": "0.32s",
+   "ease": "out"
+  },
+  {
+   "on": "first_feather",
+   "at": 124,
+   "do": "rotate",
+   "rot": [
+    -82,
+    10,
+    30
+   ],
+   "for": "0.32s",
+   "ease": "out"
+  },
+  {
+   "at": 124.59,
+   "shot": {
+    "handheld": 0,
+    "ease": "linear",
+    "name": "down and up",
+    "pos": [
+     0.24,
+     0.52,
+     -1.72
+    ],
+    "move": [
+     0.22,
+     0.5,
+     -1.66
+    ],
+    "look": "person.head",
+    "fov": 24,
+    "focus": "person.head",
+    "aperture": 5.6
+   }
+  },
+  {
+   "on": "person",
+   "at": 124.66,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "on": "person",
+   "at": 124.7,
+   "do": "gaze",
+   "to": "p5r_hand",
+   "limit": 50,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "on": "person",
+   "at": 124.7,
+   "do": "face",
+   "for": "0.5s",
+   "blink": 0.3
+  },
+  {
+   "on": "person",
+   "at": 125.42,
+   "do": "face",
+   "for": "0.25s",
+   "blink": 0
+  },
+  {
+   "on": "person",
+   "at": 125.45,
+   "do": "gaze",
+   "to": "p5_tiebird.head",
+   "limit": 48,
+   "for": "0.75s",
+   "ease": "inout"
+  },
+  {
+   "on": "person",
+   "at": 125.5,
+   "do": "face",
+   "for": "0.4s",
+   "eyesWide": 1,
+   "fear": 0.1
+  },
+  {
+   "at": 125.97,
+   "shot": {
+    "handheld": 0,
+    "ease": "linear",
+    "name": "bird closer",
+    "pos": [
+     0.34,
+     0.98,
+     -2.2
+    ],
+    "move": [
+     0.355,
+     0.985,
+     -2.235
+    ],
+    "look": "p5r_birdeyes",
+    "fov": 24,
+    "focus": "p5_tiebird.head",
+    "aperture": 5.6
+   }
+  },
+  {
+   "at": 126.35,
+   "shot": {
+    "handheld": 0,
+    "ease": "linear",
+    "name": "his eyes",
+    "pos": [
+     0.02,
+     0.57,
+     -1.6
+    ],
+    "move": [
+     -0.005,
+     0.56,
+     -1.55
+    ],
+    "look": "p5r_eyes",
+    "fov": 24,
+    "focus": "person.head",
+    "aperture": 16
+   }
+  },
+  {
+   "at": 127.05,
+   "shot": {
+    "handheld": 0,
+    "ease": "inout",
+    "name": "the arm",
+    "pos": [
+     1.15,
+     0.6,
+     -1.85
+    ],
+    "move": [
+     1.1,
+     0.55,
+     -1.8
+    ],
+    "look": "p5r_aim",
+    "fov": 30,
+    "focus": "p5r_aim",
+    "aperture": 4
+   }
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "gaze",
+   "to": [
+    0,
+    0,
+    0
+   ],
+   "weight": 0,
+   "for": "0.2s"
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "reach",
+   "hand": "left",
+   "to": [
+    0,
+    0,
+    0
+   ],
+   "weight": 0,
+   "for": "0.12s"
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "reach",
+   "hand": "right",
+   "to": [
+    0,
+    0,
+    0
+   ],
+   "weight": 0,
+   "for": "0.12s"
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "pose",
+   "bones": {
+    "spine": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "neck": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.22s",
+   "ease": "out"
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "move",
+   "pos": [
+    0,
+    -0.46,
+    -1.18
+   ],
+   "for": "0.3s",
+   "ease": "in"
+  },
+  {
+   "at": 127.05,
+   "fx": "feathers",
+   "on": "person.leftLowerArm",
+   "count": 40,
+   "speed": 5,
+   "color": "#cfd6ea",
+   "color2": "#ffffff",
+   "scale": 0.4,
+   "for": "3s",
+   "sfx": "feather_whoosh",
+   "sfxVolume": 0.8
+  },
+  {
+   "at": 127.08,
+   "fx": "feathers",
+   "on": "person.lefthand",
+   "count": 24,
+   "speed": 6,
+   "color": "#cfd6ea",
+   "color2": "#ffffff",
+   "scale": 0.4,
+   "for": "3s"
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "fingers",
+   "hand": "left",
+   "curl": 0.6,
+   "for": "0.1s"
+  },
+  {
+   "on": "person",
+   "at": 127.05,
+   "do": "face",
+   "for": "0.1s",
+   "fear": 0.7,
+   "jawOpen": 0.15
+  },
+  {
+   "on": "p5_tiebird_tie",
+   "at": "42:1",
+   "do": "hide"
+  },
+  {
+   "on": "p5_tiebird_tie",
+   "at": "47:1",
+   "do": "show"
+  },
+  {
+   "on": "p5_tiebird",
+   "at": "47:1",
+   "do": "scale",
+   "to": 1.2,
+   "for": "0.01s"
+  },
+  {
+   "on": "p5_tiebird",
+   "at": "47:1",
+   "do": "anim",
+   "clip": "idle",
+   "speed": 0.6,
+   "blend": 0
+  },
+  {
+   "at": "42:1",
+   "light": "p5r_key",
+   "intensity": 1.1
+  },
+  {
+   "at": "42:1",
+   "light": "p5r_birdkey",
+   "intensity": 0.5
+  },
+  {
+   "at": "47:1",
+   "light": "p5r_key",
+   "intensity": 0
+  },
+  {
+   "at": "47:1",
+   "light": "p5r_birdkey",
+   "intensity": 0
+  }
+ ],
+ "macros": {}
+}

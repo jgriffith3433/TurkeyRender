@@ -1,0 +1,209 @@
+{
+ "style": "cinematic film still, 35mm anamorphic lens, night, deep crushed blacks, practical light only, heavy film grain, photorealistic, widescreen composition, shallow depth of field, no text, no watermark",
+ "room": "a small dark suburban living room with grey walls and white wood wainscoting, a dark fabric sofa, a persian carpet, a flat screen TV on a low wooden table",
+ "shots": [
+  {
+   "id": "a1_remote",
+   "kind": "person",
+   "still": "Extreme close-up of this man's hand resting on the arm of a sofa holding a TV remote in a pitch dark room, flickering cold TV light on his knuckles",
+   "move": "His thumb slowly presses a button on the remote, the cold light flickers across his hand",
+   "frames": 49
+  },
+  {
+   "id": "a2_redlight",
+   "kind": "world",
+   "still": "A small white security camera mounted in the dark ceiling corner of a living room, its tiny red recording light glowing, lens catching a reflection, faint red glow on the wall, macro detail, ominous",
+   "move": "The security camera slowly turns its lens toward us with a small mechanical motion, the red light pulses once",
+   "frames": 49
+  },
+  {
+   "id": "a3_cctv",
+   "kind": "person",
+   "still": "Black and white security camera footage from a high ceiling corner, wide fisheye view of this man sitting alone on a sofa in a dark living room facing a glowing TV, grainy low resolution CCTV",
+   "move": "Grainy CCTV footage, the man sits perfectly still, the TV light flickers across the room",
+   "frames": 49
+  },
+  {
+   "id": "a4_over",
+   "kind": "person",
+   "still": "Over the shoulder shot from behind this man's head and shoulder, out of focus in the foreground, sitting in the dark watching a bright TV showing white static that lights the room",
+   "move": "Slow push in past his shoulder toward the TV, the static flickers, the light pulses",
+   "frames": 65
+  },
+  {
+   "id": "a5_static",
+   "kind": "world",
+   "still": "Extreme macro photograph of an old CRT television screen showing fine analog white noise snow, thousands of tiny glowing phosphor dots, curved glass with a faint reflection of a dark room, subtle colour fringing, hypnotic",
+   "move": "The analog snow flickers violently, a dark horizontal band rolls slowly up the screen",
+   "frames": 49
+  },
+  {
+   "id": "b1_blast",
+   "kind": "world",
+   "still": "A television on a low table in a pitch dark living room, its screen erupting with a solid column of blinding white light that floods out toward the camera, glass cracking in spider webs across the screen, dust suspended in the beam, volumetric light, overexposed core, no fire, no flames",
+   "move": "The screen cracks and blinding white light floods out and swallows the room, rushing at the camera",
+   "frames": 33
+  },
+  {
+   "id": "b2_thrown",
+   "kind": "person",
+   "still": "This man thrown backward off a sofa by a blast of blinding white light, arm raised to shield his face, mouth open screaming, hair blown back, silhouette edge-lit by the light, dust flying",
+   "move": "He is hurled backward through the air in slow motion, his arm shielding his eyes, dust and debris rushing past him",
+   "frames": 49
+  },
+  {
+   "id": "b3_claw",
+   "kind": "person",
+   "still": "Close-up of this man's hands clawing desperately at a persian carpet, fingers digging in, being dragged toward a blinding light behind the camera, carpet fibres tearing, knuckles white",
+   "move": "His fingers drag across the carpet, leaving tracks, he is being pulled backward by an unseen force",
+   "frames": 49
+  },
+  {
+   "id": "b4_run",
+   "kind": "person",
+   "still": "This man sprinting straight at the camera down a dark hallway in a panic, a blinding white light behind him, the walls bending and stretching toward the light behind him, his t-shirt pulled backward by wind, terrified face",
+   "move": "He runs desperately toward the camera but makes no progress, the hallway stretches away behind him, wind tearing at his clothes",
+   "frames": 49
+  },
+  {
+   "id": "b5_feet",
+   "kind": "person",
+   "still": "Low angle close-up of this man's bare feet sliding backward across a wooden floor, toes gripping, the floorboards warping and bending, blinding light ahead",
+   "move": "His feet scramble and slide backward across the floorboards, which ripple and warp",
+   "frames": 33
+  },
+  {
+   "id": "b6_furniture",
+   "kind": "world",
+   "still": "Wide shot of a living room being violently torn apart by a force pulling everything toward a blinding white television, the sofa airborne and spinning, the coffee table tumbling, books and picture frames streaming through the air in long lines, carpet ripping up from the floor, walls and ceiling physically bending inward like a funnel, motion blur, chaos",
+   "move": "Everything in the room streams and spirals violently into the white screen, the walls curling inward",
+   "frames": 49
+  },
+  {
+   "id": "c1_beak",
+   "kind": "world",
+   "still": "Close-up, a furious wild turkey's head and long neck smashing out through the glass of a television screen toward the camera, the glass stretching and shattering around it, beak wide open, red wattle swinging, shards and feathers exploding outward, the screen still glowing white behind it",
+   "move": "The turkey lunges out through the shattering screen at the camera, beak open, shards flying",
+   "frames": 49
+  },
+  {
+   "id": "c2_flood",
+   "kind": "world",
+   "still": "Low wide angle at floor level, a chaotic stampede of dozens of wild turkeys charging straight at the camera through a dark living room, wings thrashing, beaks open, bodies piled on top of each other, feathers and dust filling the air, blinding light behind them, extreme motion, terrifying",
+   "move": "The stampede of turkeys charges straight into the camera, wings thrashing, feathers flying everywhere",
+   "frames": 49
+  },
+  {
+   "id": "c3_look",
+   "kind": "person",
+   "still": "This man looking back over his shoulder in pure terror, running, feathers flying past his face, a red light on one side of his face and white light on the other",
+   "move": "He looks back over his shoulder, his eyes go wide, feathers whip past his face",
+   "frames": 49
+  },
+  {
+   "id": "c4_stampede",
+   "kind": "person",
+   "still": "Low wide shot from behind, this man sprinting away down a dark warped corridor with the walls bending, a huge wave of wild turkeys right behind him filling the whole corridor, wings spread, feathers in the air, red light ahead",
+   "move": "The wave of turkeys surges forward after the running man, wings thrashing, the corridor twisting",
+   "frames": 49
+  },
+  {
+   "id": "c5_turkeyeye",
+   "kind": "world",
+   "still": "Extreme macro close-up of a wild turkey's eye, amber iris with a bright rectangular TV screen reflected in the wet black pupil, wrinkled blue red skin around it, feathers, razor sharp detail",
+   "move": "The turkey's eye blinks once and the pupil snaps wide, the reflected TV flickers",
+   "frames": 49
+  },
+  {
+   "id": "d1_void",
+   "kind": "person",
+   "still": "This man falling through an endless red void, arms and legs spread, hundreds of wild turkeys falling around him at different distances like rain, feathers swirling, a tiny blinding white rectangle far below",
+   "move": "He tumbles slowly through the red void as turkeys rain past him, feathers swirling",
+   "frames": 49
+  },
+  {
+   "id": "d2_whirl",
+   "kind": "world",
+   "still": "A vast whirlpool of hundreds of wild turkeys spiralling down toward a tiny blinding white TV screen, seen from above, a galaxy of birds and feathers against black, epic scale",
+   "move": "The spiral of turkeys rotates and drains down into the white screen",
+   "frames": 49
+  },
+  {
+   "id": "d3_hang",
+   "kind": "person",
+   "still": "This man floating horizontally in dark blue space, limp, hair and t-shirt drifting as if underwater, dozens of real wild turkeys frozen in mid-air around him with fanned tails and spread wings, feathers hanging motionless, silent, surreal, deep blue light",
+   "move": "Everything drifts in extreme slow motion as if underwater, feathers turning slowly, his hair floating",
+   "frames": 65
+  },
+  {
+   "id": "e1_lift",
+   "kind": "person",
+   "still": "This man being lifted into the air by an invisible force, body arched backward, arms hanging limp, head rolled back, eyes closed, glowing light beneath him, feathers rising around him, like a religious painting",
+   "move": "His body rises slowly upward, arched and limp, the camera circling around him as feathers rise",
+   "frames": 65
+  },
+  {
+   "id": "e2_above",
+   "kind": "world",
+   "still": "Looking straight down from high above at a ruined living room collapsing into a blazing TV screen in the centre of the floor, furniture and walls bending into it, like a black hole",
+   "move": "The whole room slowly collapses and spirals into the glowing screen at the centre",
+   "frames": 49
+  },
+  {
+   "id": "f1_wall",
+   "kind": "person",
+   "still": "A towering wall of hundreds of old TVs stacked in darkness, every single screen showing this man's face staring out, cold blue light, red light on a security camera among them",
+   "move": "The screens flicker in sequence, the faces on them all turn to look at the camera at once",
+   "frames": 49
+  },
+  {
+   "id": "f2_static",
+   "kind": "person",
+   "still": "Close-up of this man's hand reaching out toward the camera, his fingertips dissolving into TV static and scan lines, colour pixels peeling off his skin, cold light",
+   "move": "The static spreads up his fingers and hand, his skin breaking into pixels",
+   "frames": 49
+  },
+  {
+   "id": "f3_glass",
+   "kind": "person",
+   "still": "Extreme close-up side profile of this man's face an inch from the glass of a blazing TV screen, face lit pure white, eyes wide, his breath fogging the glass, hair being pulled toward the screen, the screen fills the right half of the frame",
+   "move": "He is dragged slowly closer, his hair pulled toward the glass, his breath fogging it",
+   "frames": 49
+  },
+  {
+   "id": "g1_dissolve",
+   "kind": "person",
+   "still": "This man's body dissolving into thousands of glowing scan lines and pixels being sucked into a TV screen, his face still visible, stretching toward the screen, mouth open in a scream",
+   "move": "His body stretches and tears apart into streams of pixels flowing into the screen",
+   "frames": 33
+  },
+  {
+   "id": "g2_inside",
+   "kind": "person",
+   "still": "View from inside a TV looking out through the glass at a dark room, this man's palms and face pressed against the inside of the screen, distorted by the glass, scan lines across him, screaming silently",
+   "move": "He pounds his palms against the inside of the glass, the picture rolling and tearing around him",
+   "frames": 49
+  },
+  {
+   "id": "g3_lines",
+   "kind": "person",
+   "still": "This man's face made entirely of horizontal glowing TV scan lines on a black background, like an old CRT, ghostly, eyes wide, colour fringing",
+   "move": "The scan lines ripple through his face, the image rolling and warping, his eyes staring",
+   "frames": 49
+  },
+  {
+   "id": "g4_channel",
+   "kind": "person",
+   "still": "A grid of nine old CRT televisions stacked in the dark, every screen showing this same man in a different live broadcast, a news desk, a weather map, an infomercial, a talk show, all live action, all staring out at the camera, static between them, retro broadcast colour, no cartoons",
+   "move": "The channels flicker and flip rapidly, static rolling across the screens",
+   "frames": 33
+  },
+  {
+   "id": "h1_next",
+   "kind": "person2",
+   "still": "A different person seen from behind, a woman with long hair sitting alone in a pitch dark room on a sofa, a bright TV ahead of her, pure silhouette, the screen shows a small man's face",
+   "move": "She sits perfectly still, the TV light flickers around her silhouette",
+   "frames": 65
+  }
+ ]
+}

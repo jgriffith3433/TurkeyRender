@@ -1,0 +1,32 @@
+{
+  // Extra VFX for the TV pulling him in, bars 52-58. It builds in stages, so each stage is stronger than the last,
+  // and it stays out of the silent hold (bar 55) until the fingers start to go.
+  "cues": [
+    { "at": "52:1", "grade": { "suckAt": [0, -35, -1] } },
+
+    // The world starts to lean toward the picture.
+    { "at": "52:1", "for": "4bars", "ease": "in", "grade": { "suck": 0.22, "suckRadius": 30, "twist": 0.08 } },
+    { "at": "53:1", "onsets": "kick", "until": "54:4", "pulse": { "chroma": 0.5, "radial": 0.12 }, "for": "0.5b", "sharp": 3 },
+
+    // Static and light pour out of the screen and get dragged back in.
+    { "at": "53:1", "fx": "stream", "pos": [7, -33, -9], "to": [0, -35, -1], "rate": 260, "life": 1.1, "swirl": 2.5, "spread": 1.2, "size": 0.05, "for": "3bars" },
+    { "at": "53:1", "fx": "stream", "pos": [-7, -33, 7], "to": [0, -35, -1], "rate": 260, "life": 1.1, "swirl": 2.5, "spread": 1.2, "size": 0.05, "for": "3bars" },
+
+    // Each kick in bar 54 cracks out of the TV.
+    { "at": "54:1", "onsets": "kick", "until": "54:4", "fx": "shockwave", "pos": [0, -34.8, -1] },
+    { "at": "54:1", "onsets": "kick", "until": "54:4", "pulse": { "rgb": 0.3, "exposure": 0.2 }, "for": "0.4b", "sharp": 3 },
+    { "at": "54:1", "onsets": "kick", "until": "54:4", "fx": "sparks", "pos": [0, -30, -8.6] },
+
+    // The hold: almost nothing, just a slow lean and sparks off the rim by his hands.
+    { "at": "55:1", "for": "0.1b", "grade": { "suck": 0, "twist": 0 } },
+    { "at": "56:4.47", "fx": "shockwave", "pos": [0, -55.4, -1] },
+
+    // He goes. Everything pulls, then the picture swallows the light.
+    // World warp stays off from 55:1: it pulls him, the hand and the rim out from the framed shots in the deep well.
+    { "at": "57:1", "for": "1.5bars", "ease": "in", "grade": { "radial": 0.04 } },
+    { "at": "57:1", "fx": "shockwave", "pos": [0, -55.4, -1] },
+    { "at": "57:1", "fx": "stream", "on": "person.chest", "to": [0.3, -56, -2.6], "rate": 700, "life": 0.5, "spread": 0.4, "size": 0.04, "for": "1.5bars" },
+    { "at": "57:1", "onsets": "kick", "until": "58:2", "pulse": { "chroma": 0.5 }, "for": "0.5b", "sharp": 3 },
+    { "at": "58:2.2", "for": "0.25b", "ease": "out", "grade": { "suck": 0, "twist": 0, "radial": 0 } }
+  ]
+}

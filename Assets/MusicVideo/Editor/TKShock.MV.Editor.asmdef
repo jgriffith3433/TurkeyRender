@@ -1,0 +1,7 @@
+{
+  "name": "TKShock.MV.Editor",
+  "rootNamespace": "TKShock.MV.EditorTools",
+  "references": ["TKShock.MV", "Unity.Timeline", "Unity.Timeline.Editor", "Unity.Cinemachine", "Unity.Splines", "Unity.Mathematics", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime", "Unity.TextMeshPro"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

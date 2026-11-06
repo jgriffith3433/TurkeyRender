@@ -1,0 +1,1490 @@
+{
+ "actors": {
+  "p5_mountain": {
+   "model": "none",
+   "mountain": {
+    "radius": 60,
+    "height": 30,
+    "seed": 5,
+    "cards": 80000,
+    "holeW": 8,
+    "holeH": 6
+   },
+   "pos": [
+    0,
+    0,
+    -1
+   ],
+   "from": "40:1",
+   "until": "54:1"
+  },
+  "p5_focus": {
+   "model": "prim:cube",
+   "pos": [
+    0,
+    0.5,
+    -1
+   ],
+   "scale": 0.001,
+   "color": "#000000"
+  },
+  "p6_aim": {
+   "model": "prim:cube",
+   "pos": [
+    0.2,
+    -32.9,
+    -6
+   ],
+   "scale": 0.001,
+   "color": "#000000"
+  },
+  "p6_screen": {
+   "model": "prim:cube",
+   "pos": [
+    0,
+    -35,
+    -1
+   ],
+   "rot": [
+    90,
+    0,
+    0
+   ],
+   "scale": 1,
+   "color": "#050505",
+   "from": "51:1",
+   "until": "59:1",
+   "tv": {
+    "screenPos": [
+     0,
+     0,
+     -0.51
+    ],
+    "size": [
+     16,
+     12
+    ],
+    "spill": 60,
+    "glow": 12,
+    "range": 60,
+    "glowRange": 30,
+    "angle": 140,
+    "suck": false,
+    "share": "tv1"
+   }
+  },
+  "p6_rim_s": {
+   "model": "prim:cube",
+   "pos": [
+    0,
+    -32.5,
+    -8.5
+   ],
+   "scale": [
+    22,
+    5,
+    3
+   ],
+   "color": "#3a3530",
+   "texture": "Assets/P6Type/p6_wall.png",
+   "tile": [
+    6,
+    2
+   ],
+   "smooth": 0.35,
+   "from": "51:1",
+   "until": "59:1"
+  },
+  "p6_rim_n": {
+   "model": "prim:cube",
+   "pos": [
+    0,
+    -32.5,
+    6.5
+   ],
+   "scale": [
+    22,
+    5,
+    3
+   ],
+   "color": "#3a3530",
+   "texture": "Assets/P6Type/p6_wall.png",
+   "tile": [
+    6,
+    2
+   ],
+   "smooth": 0.35,
+   "from": "51:1",
+   "until": "59:1"
+  },
+  "p6_rim_w": {
+   "model": "prim:cube",
+   "pos": [
+    -9.5,
+    -32.5,
+    -1
+   ],
+   "scale": [
+    3,
+    5,
+    12
+   ],
+   "color": "#3a3530",
+   "texture": "Assets/P6Type/p6_wall.png",
+   "tile": [
+    6,
+    2
+   ],
+   "smooth": 0.35,
+   "from": "51:1",
+   "until": "59:1"
+  },
+  "p6_rim_e": {
+   "model": "prim:cube",
+   "pos": [
+    9.5,
+    -32.5,
+    -1
+   ],
+   "scale": [
+    3,
+    5,
+    12
+   ],
+   "color": "#3a3530",
+   "texture": "Assets/P6Type/p6_wall.png",
+   "tile": [
+    6,
+    2
+   ],
+   "smooth": 0.35,
+   "from": "51:1",
+   "until": "59:1"
+  },
+  "p6_led": {
+   "model": "prim:sphere",
+   "pos": [
+    1.5,
+    -29.98,
+    -8.6
+   ],
+   "scale": [
+    0.16,
+    0.06,
+    0.16
+   ],
+   "color": "#200000",
+   "emission": "#ff1208",
+   "from": "51:1",
+   "until": "59:1"
+  },
+  "p6_red1": {
+   "model": "prim:sphere",
+   "pos": [
+    0,
+    -22,
+    -1
+   ],
+   "color": "#200000",
+   "emission": "#ff1208",
+   "from": "54:1",
+   "until": "59:1",
+   "crowd": {
+    "count": 260,
+    "shape": "dome",
+    "radius": 44,
+    "modelScale": 0.5,
+    "scaleVar": 0.4,
+    "seed": 1
+   }
+  },
+  "p6_red2": {
+   "model": "prim:sphere",
+   "pos": [
+    0,
+    -22,
+    -1
+   ],
+   "color": "#200000",
+   "emission": "#ff1208",
+   "from": "54:1",
+   "until": "59:1",
+   "crowd": {
+    "count": 300,
+    "shape": "dome",
+    "radius": 30,
+    "modelScale": 0.36,
+    "scaleVar": 0.4,
+    "seed": 2
+   }
+  }
+ },
+ "lights": {
+  "p5_moon": {
+   "type": "directional",
+   "rot": [
+    62,
+    60,
+    0
+   ],
+   "color": "#c8d4ff",
+   "intensity": 0,
+   "shadows": true
+  },
+  "p5_shaft": {
+   "type": "spot",
+   "pos": [
+    1,
+    26,
+    -3
+   ],
+   "rot": [
+    85,
+    0,
+    0
+   ],
+   "angle": 24,
+   "range": 44,
+   "color": "#ffc070",
+   "intensity": 0,
+   "shadows": true
+  },
+  "p5_bounce": {
+   "type": "point",
+   "pos": [
+    0.3,
+    0.15,
+    -2.6
+   ],
+   "color": "#c8d4f0",
+   "intensity": 0,
+   "range": 7
+  },
+  "p6_red": {
+   "type": "directional",
+   "rot": [
+    52,
+    28,
+    0
+   ],
+   "color": "#ff3a20",
+   "intensity": 0,
+   "shadows": true
+  },
+  "p6_up": {
+   "type": "point",
+   "pos": [
+    0.6,
+    -33.6,
+    -5.2
+   ],
+   "color": "#dfeaff",
+   "intensity": 0,
+   "range": 9
+  },
+  "p6_glow": {
+   "type": "point",
+   "pos": [
+    0,
+    -29,
+    -3.5
+   ],
+   "color": "#dfeaff",
+   "intensity": 0,
+   "range": 16
+  },
+  "p5_gold": {
+   "type": "directional",
+   "rot": [
+    28,
+    200,
+    0
+   ],
+   "color": "#ffc890",
+   "intensity": 0
+  },
+  "p5_rise": {
+   "type": "point",
+   "pos": [
+    0,
+    -4,
+    -1
+   ],
+   "color": "#cfe6ff",
+   "intensity": 0,
+   "range": 40
+  }
+ },
+ "cues": [
+  {
+   "at": "41:1",
+   "do": "hide",
+   "on": [
+    "room_floor",
+    "room_ceiling",
+    "wall_n1",
+    "wall_n2",
+    "wall_s1",
+    "wall_s2",
+    "wall_w1",
+    "wall_w2",
+    "wall_e1",
+    "wall_e2",
+    "carpet1",
+    "cabinet",
+    "sofa",
+    "table",
+    "shelf1",
+    "remote",
+    "tv1",
+    "cctv_base",
+    "cctv_head",
+    "cctv",
+    "cctv_lens",
+    "cctv_led",
+    "p3_paper1",
+    "p3_paper2",
+    "p3_paper3"
+   ],
+   "for": "18bars"
+  },
+  {
+   "at": "41:1",
+   "tv": "tv1",
+   "bright": 0,
+   "feed": 0
+  },
+  {
+   "at": "41:1",
+   "speed": 0.7,
+   "for": "0.1b"
+  },
+  {
+   "at": "41:1.1",
+   "speed": 0.22,
+   "for": "2.4b",
+   "ease": "out"
+  },
+  {
+   "at": "42:1",
+   "speed": 0.2,
+   "for": "2b"
+  },
+  {
+   "at": "41:1",
+   "grade": {
+    "toon": 0,
+    "ink": 0,
+    "poster": 0,
+    "kaleido": 0,
+    "halftone": 0,
+    "hatch": 0,
+    "neon": 0,
+    "duo": 0,
+    "tear": 0,
+    "invert": 0,
+    "rgb": 0,
+    "suck": 0,
+    "twist": 0,
+    "wave": 0,
+    "scan": 0,
+    "saturation": -18,
+    "contrast": 14,
+    "bloom": 0.7,
+    "threshold": 0.95,
+    "grain": 0.22,
+    "swirl": 0,
+    "chroma": 0.04,
+    "exposure": 0,
+    "vignette": 0.36,
+    "bars": 0.8
+   }
+  },
+  {
+   "at": "41:1",
+   "pulse": {
+    "flash": 0.9,
+    "exposure": 1.2
+   },
+   "for": "0.75b",
+   "flashColor": "#ffffff",
+   "sharp": 3
+  },
+  {
+   "at": "41:1",
+   "sky": {
+    "top": "#03050f",
+    "mid": "#141d3c",
+    "bottom": "#2a3a60",
+    "ambient": "#7080b8",
+    "fog": "#1c2748",
+    "density": 0.008
+   }
+  },
+  {
+   "at": "41:1",
+   "light": "void_key",
+   "intensity": 2.4,
+   "color": "#c8d4ff"
+  },
+  {
+   "at": "41:1",
+   "light": "void_rim",
+   "intensity": 0
+  },
+  {
+   "at": "41:1",
+   "light": "p5_moon",
+   "intensity": 0
+  },
+  {
+   "at": "41:1",
+   "light": "p5_bounce",
+   "intensity": 3
+  },
+  {
+   "at": "49:1",
+   "light": "p5_bounce",
+   "intensity": 0,
+   "for": "1bar"
+  },
+  {
+   "at": "41:1",
+   "sfx": "impact_big",
+   "volume": 0.9
+  },
+  {
+   "at": "41:1",
+   "sfx": "feather_whoosh",
+   "volume": 0.7
+  },
+  {
+   "at": "41:1",
+   "fx": "crown",
+   "pos": [
+    0,
+    0.3,
+    -1
+   ],
+   "height": 20,
+   "radius": 11,
+   "count": 3500,
+   "floor": -1,
+   "for": "60s"
+  },
+  {
+   "at": 113,
+   "do": "eyesee",
+   "on": "eyeball",
+   "from": "person.head",
+   "to": [
+    0,
+    8,
+    -4
+   ]
+  },
+  {
+   "at": 113,
+   "do": "face",
+   "on": "eyeball",
+   "blink": 1,
+   "pupil": 0.4,
+   "for": "0.01b"
+  },
+  {
+   "at": 113.2,
+   "do": "face",
+   "on": "eyeball",
+   "blink": 0,
+   "wide": 1,
+   "for": "0.75b",
+   "ease": "out"
+  },
+  {
+   "at": 113,
+   "shot": {
+    "name": "I go to the eyes",
+    "pos": [
+     -60,
+     0.02,
+     3.4
+    ],
+    "move": [
+     -60,
+     0,
+     2.9
+    ],
+    "rot": [
+     0,
+     180,
+     0
+    ],
+    "fov": 30,
+    "focus": "eyeball",
+    "aperture": 32,
+    "ease": "out"
+   }
+  },
+  {
+   "at": "44:1",
+   "speed": 0.4,
+   "for": "2b"
+  },
+  {
+   "at": 127.05,
+   "do": "feather",
+   "on": "person",
+   "from": "LeftHand,RightHand",
+   "for": "0.12s",
+   "color": "#cfd6ea",
+   "color2": "#ffffff",
+   "size": 1.5,
+   "lay": 0.5,
+   "amount": 0.08
+  },
+  {
+   "at": "47:1",
+   "do": "feather",
+   "on": "person",
+   "amount": 0.09,
+   "from": "LeftHand,RightHand",
+   "for": "6b",
+   "ease": "inout"
+  },
+  {
+   "at": "49:1",
+   "do": "feather",
+   "on": "person",
+   "amount": 0.13,
+   "from": "LeftHand,RightHand",
+   "for": "6b",
+   "ease": "inout"
+  },
+  {
+   "at": "47:1",
+   "speed": 1,
+   "for": "1b"
+  },
+  {
+   "at": "48:3.5",
+   "fx": "stream",
+   "on": "person.mouth",
+   "rate": 500,
+   "life": 1.5, "to": [-0.8, -0.25, -2.7], "dir": [-0.6, 0.25, -0.8], "push": 0.5,
+   "spread": 0.1,
+   "size": 0.09,
+   "color": "#f4f6ff",
+   "color2": "#ffffff",
+   "for": "1.5s"
+  },
+  {
+   "at": "48:3.5",
+   "sfx": "feather_whoosh",
+   "volume": 0.8
+  },
+  {
+   "at": "47:1",
+   "for": "2bars",
+   "grade": {
+    "saturation": -30,
+    "contrast": 18
+   },
+   "ease": "in"
+  },
+  {
+   "at": "49:1",
+   "speed": 0.45,
+   "for": "2b"
+  },
+  {
+   "at": "49:1",
+   "do": "set",
+   "on": "p5_focus",
+   "pos": [
+    0,
+    0.8,
+    -1
+   ]
+  },
+  {
+   "at": "49:1",
+   "do": "move",
+   "on": "person",
+   "pos": [
+    0,
+    10.5,
+    -1
+   ],
+   "for": "13b"
+  },
+  {
+   "at": "49:1",
+   "do": "move",
+   "on": "p5_focus",
+   "pos": [
+    0,
+    11.3,
+    -1
+   ],
+   "for": "13b"
+  },
+  {
+   "at": "51:1",
+   "do": "move",
+   "on": "p5_focus",
+   "pos": [
+    0,
+    -22,
+    -1
+   ],
+   "for": "5b"
+  },
+  {
+   "at": "49:1",
+   "do": "rotate",
+   "on": "person",
+   "rot": [
+    -20,
+    640,
+    12
+   ],
+   "for": "13b"
+  },
+  {
+   "at": "49:1",
+   "do": "anim",
+   "on": "person",
+   "clip": "mx_falling_idle",
+   "for": "4bars",
+   "speed": 0.6,
+   "blend": 0.6
+  },
+  {
+   "at": "49:1",
+   "do": "face",
+   "on": "person",
+   "jawOpen": 0.2,
+   "fear": 0,
+   "for": "2b"
+  },
+  {
+   "at": "49:1",
+   "sky": {
+    "top": "#ffd890",
+    "mid": "#c87438",
+    "bottom": "#3a2018",
+    "ambient": "#b09070",
+    "fog": "#a06034",
+    "density": 0.006
+   },
+   "for": "3b"
+  },
+  {
+   "at": "49:1",
+   "light": "p5_gold",
+   "intensity": 3.2,
+   "for": "1b"
+  },
+  {
+   "at": "52:1",
+   "light": "p5_gold",
+   "intensity": 0,
+   "for": "1b"
+  },
+  {
+   "at": "49:1",
+   "for": "3b",
+   "grade": {
+    "dutch": 13
+   },
+   "ease": "inout"
+  },
+  {
+   "at": "50:1",
+   "for": "4b",
+   "grade": {
+    "dutch": -15
+   },
+   "ease": "inout"
+  },
+  {
+   "at": "51:1",
+   "for": "3b",
+   "grade": {
+    "dutch": 0
+   },
+   "ease": "inout"
+  },
+  {
+   "at": "49:1",
+   "light": "p5_shaft",
+   "intensity": 120,
+   "for": "1bar"
+  },
+  {
+   "at": "49:1",
+   "light": "void_key",
+   "intensity": 3.4,
+   "color": "#ffc070",
+   "for": "1bar"
+  },
+  {
+   "at": "49:1",
+   "for": "2b",
+   "grade": {
+    "saturation": 14,
+    "bars": 0,
+    "bloom": 0.9
+   }
+  },
+  {
+   "at": "49:1",
+   "fx": "embers",
+   "pos": [
+    0,
+    6,
+    -1
+   ],
+   "rate": 60,
+   "color": "#ffc070",
+   "for": "9s"
+  },
+  {
+   "at": "49:1",
+   "shot": {
+    "name": "swept up",
+    "dolly": [
+     [
+      0.5,
+      0.3,
+      -2.9
+     ],
+     [
+      -1.5,
+      0.5,
+      -2.5
+     ],
+     [
+      -2.1,
+      1.3,
+      -0.5
+     ],
+     [
+      -0.8,
+      2.3,
+      1.1
+     ],
+     [
+      1.3,
+      3.2,
+      0.5
+     ],
+     [
+      2.2,
+      4.4,
+      -1.6
+     ],
+     [
+      0.9,
+      6,
+      -3.2
+     ],
+     [
+      -1.3,
+      8.2,
+      -3
+     ],
+     [
+      -2,
+      11.2,
+      -1.8
+     ],
+     [
+      -1,
+      14.2,
+      -1.2
+     ],
+     [
+      0.5,
+      16.4,
+      -1.4
+     ]
+    ],
+    "look": "p5_focus",
+    "fov": 42,
+    "focus": "person.chest",
+    "aperture": 4
+   }
+  },
+  {
+   "at": "51:1",
+   "sfx": "feather_whoosh",
+   "volume": 0.5
+  },
+  {
+   "at": "51:1",
+   "do": "drain",
+   "on": "p5_mountain",
+   "to": 1,
+   "for": "8b",
+   "ease": "linear"
+  },
+  {
+   "at": "51:1",
+   "tv": "p6_screen",
+   "bright": 2,
+   "static": 1,
+   "for": "1b"
+  },
+  {
+   "at": "51:1",
+   "light": "p5_rise",
+   "intensity": 300,
+   "for": "2bars",
+   "ease": "in"
+  },
+  {
+   "at": "51:1",
+   "light": "p5_shaft",
+   "intensity": 0,
+   "for": "1bar"
+  },
+  {
+   "at": "52:1",
+   "speed": 1,
+   "for": "4b"
+  },
+  {
+   "at": "52:1",
+   "sky": {
+    "top": "#000000",
+    "mid": "#300606",
+    "bottom": "#800c06",
+    "ambient": "#402020",
+    "fog": "#200404",
+    "density": 0.006
+   },
+   "for": "2bars"
+  },
+  {
+   "at": "52:1",
+   "light": "void_key",
+   "intensity": 0.5,
+   "color": "#ff5030",
+   "for": "2bars"
+  },
+  {
+   "at": "52:2",
+   "shot": {
+    "name": "he falls back",
+    "follow": "person",
+    "offset": [
+     1.6,
+     4.2,
+     -2.2
+    ],
+    "followDamping": [
+     0.15,
+     0.15,
+     0.15
+    ],
+    "look": "person.chest",
+    "fov": 46,
+    "fovTo": 58,
+    "handheld": 0.5,
+    "dutch": 8
+   }
+  },
+  {
+   "at": "52:2",
+   "do": "feather",
+   "on": "person",
+   "strip": 0.4,
+   "to": [
+    0,
+    -35,
+    -1
+   ],
+   "for": "3b",
+   "ease": "in"
+  },
+  {
+   "at": "53:1",
+   "do": "feather",
+   "on": "person",
+   "strip": 1,
+   "to": [
+    0,
+    -35,
+    -1
+   ],
+   "for": "3.5b",
+   "ease": "in"
+  },
+  {
+   "at": "52:1",
+   "fx": "stream",
+   "pos": [
+    24,
+    -6,
+    -1
+   ],
+   "to": [
+    0,
+    -34,
+    -1
+   ],
+   "rate": 400,
+   "life": 2.5,
+   "swirl": 1.5,
+   "spread": 3,
+   "for": "4.5s"
+  },
+  {
+   "at": "52:1",
+   "fx": "stream",
+   "pos": [
+    -20,
+    -5,
+    14
+   ],
+   "to": [
+    0,
+    -34,
+    -1
+   ],
+   "rate": 400,
+   "life": 2.5,
+   "swirl": 1.5,
+   "spread": 3,
+   "for": "4.5s"
+  },
+  {
+   "at": "52:1",
+   "fx": "stream",
+   "pos": [
+    -12,
+    -5,
+    -22
+   ],
+   "to": [
+    0,
+    -34,
+    -1
+   ],
+   "rate": 400,
+   "life": 2.5,
+   "swirl": 1.5,
+   "spread": 3,
+   "for": "4.5s"
+  },
+  {
+   "at": "52:1",
+   "tv": "p6_screen",
+   "bright": 1.5,
+   "static": 1,
+   "for": "1b"
+  },
+  {
+   "at": "52:1",
+   "light": "p6_red",
+   "intensity": 1.3,
+   "for": "1bar"
+  },
+  {
+   "at": "52:1",
+   "light": "p6_glow",
+   "intensity": 90,
+   "for": "1bar"
+  },
+  {
+   "at": "53:1",
+   "sfx": "impact_big",
+   "volume": 0.8
+  },
+  {
+   "at": "53:1",
+   "pulse": {
+    "exposure": 0.5,
+    "shake": 0.25
+   },
+   "for": "0.75b",
+   "sharp": 3
+  },
+  {
+   "at": "53:1.5",
+   "fx": "stream",
+   "on": "person.chest",
+   "to": [
+    0,
+    -35,
+    -1
+   ],
+   "dir": [
+    0,
+    -0.5,
+    1
+   ],
+   "rate": 500,
+   "life": 0.9,
+   "spread": 0.3,
+   "size": 0.1,
+   "swirl": 0.4,
+   "for": "7b"
+  },
+  {
+   "at": "53:1.5",
+   "fx": "stream",
+   "on": "person.lefthand",
+   "to": [
+    0,
+    -35,
+    -1
+   ],
+   "dir": [
+    0,
+    -0.5,
+    1
+   ],
+   "rate": 200,
+   "life": 0.9,
+   "spread": 0.15,
+   "size": 0.09,
+   "for": "7b"
+  },
+  {
+   "at": "53:1.5",
+   "fx": "stream",
+   "on": "person.hand",
+   "to": [
+    0,
+    -35,
+    -1
+   ],
+   "dir": [
+    0,
+    -0.5,
+    1
+   ],
+   "rate": 200,
+   "life": 0.9,
+   "spread": 0.15,
+   "size": 0.09,
+   "for": "7b"
+  },
+  {
+   "at": "53:1",
+   "shot": {
+    "name": "the bezel, the picture beyond him",
+    "pos": [
+     2,
+     -24.4,
+     -12.6
+    ],
+    "move": [
+     1.5,
+     -25.4,
+     -11.9
+    ],
+    "look": "p5_focus",
+    "fov": 30,
+    "handheld": 0.3,
+    "ease": "out"
+   }
+  },
+  {
+   "at": "54:1",
+   "onsets": "kick",
+   "until": "54:4",
+   "fx": "sparks",
+   "on": "person.foot",
+   "for": "0.4b"
+  },
+  {
+   "at": "54:1",
+   "shot": {
+    "name": "feet sliding",
+    "pos": [
+     2,
+     -28.7,
+     -10.4
+    ],
+    "move": [
+     1.8,
+     -28.8,
+     -9.3
+    ],
+    "look": "person.hips",
+    "fov": 40,
+    "focus": "person.hips",
+    "aperture": 16,
+    "handheld": 0.25,
+    "dutch": 6,
+    "ease": "linear"
+   }
+  },
+  {
+   "at": "54:1",
+   "do": "pop",
+   "on": "p6_red1",
+   "for": "1b",
+   "stagger": 0.004,
+   "jitter": 0.1
+  },
+  {
+   "at": "54:2",
+   "do": "pop",
+   "on": "p6_red2",
+   "for": "1b",
+   "stagger": 0.003,
+   "jitter": 0.1
+  },
+  {
+   "at": "54:1",
+   "sky": {
+    "top": "#000000",
+    "mid": "#000000",
+    "bottom": "#000000",
+    "ambient": "#180808",
+    "fog": "#000000",
+    "density": 0.001
+   },
+   "for": "1b"
+  },
+  {
+   "at": "54:1",
+   "light": "void_key",
+   "intensity": 0,
+   "for": "1b"
+  },
+  {
+   "at": "54:1",
+   "light": "p5_rise",
+   "intensity": 0,
+   "for": "1b"
+  },
+  {
+   "at": "54:1",
+   "for": "1b",
+   "grade": {
+    "saturation": 10,
+    "contrast": 20,
+    "bloom": 0.9,
+    "threshold": 0.9,
+    "vignette": 0.34
+   }
+  },
+  {
+   "at": "54:3",
+   "shot": {
+    "name": "the edge",
+    "pos": [
+     2.3,
+     -28.9,
+     -7.2
+    ],
+    "move": [
+     2.15,
+     -29,
+     -7
+    ],
+    "look": "person.hips",
+    "fov": 48,
+    "handheld": 0.4,
+    "dutch": 10
+   }
+  },
+  {
+   "at": "54:4.03",
+   "sfx": "feather_whoosh",
+   "volume": 0.7
+  },
+  {
+   "at": "55:1",
+   "speed": 1,
+   "for": "0.1b"
+  },
+  {
+   "at": "55:1",
+   "sfx": "remote_thunk",
+   "volume": 0.9
+  },
+  {
+   "at": "55:1",
+   "tv": "p6_screen",
+   "bright": 2,
+   "static": 1
+  },
+  {
+   "at": "55:1",
+   "light": "p6_up",
+   "intensity": 40
+  },
+  {
+   "at": "56:4.47",
+   "pulse": {
+    "exposure": 0.4,
+    "shake": 0.2
+   },
+   "for": "0.5b",
+   "sharp": 3
+  },
+  {
+   "at": "56:4.47",
+   "sfx": "remote_thunk",
+   "volume": 0.7
+  },
+  {
+   "at": "57:1",
+   "speed": 1,
+   "for": "0.25b"
+  },
+  {
+   "at": "57:1",
+   "tv": "p6_screen",
+   "bright": 3.5,
+   "for": "4b",
+   "ease": "in"
+  },
+  {
+   "at": "57:1",
+   "pulse": {
+    "exposure": 0.6,
+    "rgb": 0.4,
+    "shake": 0.2
+   },
+   "for": "1b",
+   "sharp": 3
+  },
+  {
+   "at": "57:1",
+   "grade": {
+    "scan": 0.12,
+    "rgb": 0.12,
+    "chroma": 0.3,
+    "bloom": 1,
+    "threshold": 0.95
+   }
+  },
+  {
+   "at": "57:1",
+   "onsets": "kick",
+   "until": "58:4.4",
+   "pulse": {
+    "exposure": 0.25,
+    "zoom": -0.03,
+    "rgb": 0.25
+   },
+   "for": "0.5b"
+  },
+  {
+   "at": "58:2.49",
+   "do": "hide",
+   "on": "person",
+   "for": "2b"
+  },
+  {
+   "at": "58:4",
+   "tv": "tv1",
+   "show": "news",
+   "flip": 0
+  },
+  {
+   "at": "58:2.49",
+   "tv": "p6_screen",
+   "bright": 2.2,
+   "static": 1,
+   "for": "0.3b"
+  },
+  {
+   "at": "58:4",
+   "tv": "p6_screen",
+   "bright": 2,
+   "feed": 1,
+   "static": 0.1,
+   "for": "0.3b"
+  },
+  {
+   "at": "58:2.49",
+   "grade": {
+    "scan": 0.1,
+    "rgb": 0.1,
+    "chroma": 0.1,
+    "bloom": 0.6,
+    "threshold": 1.1,
+    "exposure": 0,
+    "bars": 0
+   }
+  },
+  {
+   "at": "58:2.49",
+   "light": "p6_glow",
+   "intensity": 0
+  },
+  {
+   "at": "58:2.49",
+   "sfx": "feather_whoosh",
+   "volume": 0.6
+  },
+  {
+   "at": "58:2.49",
+   "fx": "stream",
+   "pos": [
+    0,
+    -34,
+    -1
+   ],
+   "to": [
+    0,
+    -56,
+    -1
+   ],
+   "rate": 500,
+   "life": 0.7,
+   "spread": 5,
+   "swirl": 2,
+   "for": "2b"
+  },
+  {
+   "at": "58:3.7",
+   "for": "0.15b",
+   "grade": {
+    "snow": 1
+   }
+  },
+  {
+   "at": "58:4",
+   "for": "0.2b",
+   "grade": {
+    "snow": 0
+   }
+  },
+  {
+   "at": 148.4,
+   "gfx": "image",
+   "path": "Assets/P6Type/a1.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 1.98,
+   "in": 0.3,
+   "out": 0.1
+  },
+  {
+   "at": 150.38,
+   "gfx": "image",
+   "path": "Assets/P6Type/a2.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 1.12,
+   "in": 0.05,
+   "out": 0.1
+  },
+  {
+   "at": 151.5,
+   "gfx": "image",
+   "path": "Assets/P6Type/a3.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 0.98,
+   "in": 0.03,
+   "out": 0.25
+  },
+  {
+   "at": 153.92,
+   "gfx": "image",
+   "path": "Assets/P6Type/b1.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 1.96,
+   "in": 0.05,
+   "out": 0.05
+  },
+  {
+   "at": 155.88,
+   "gfx": "image",
+   "path": "Assets/P6Type/b2.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 0.8,
+   "in": 0.02,
+   "out": 0.02
+  },
+  {
+   "at": 156.68,
+   "gfx": "image",
+   "path": "Assets/P6Type/b3.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 0.34,
+   "in": 0.02,
+   "out": 0.02
+  },
+  {
+   "at": 157.02,
+   "gfx": "image",
+   "path": "Assets/P6Type/b4.png",
+   "pos": [
+    0.5,
+    0.5,
+    0
+   ],
+   "size": [
+    1920,
+    1080,
+    0
+   ],
+   "for": 1,
+   "in": 0.02,
+   "out": 0.1
+  }
+ ],
+ "macros": {}
+}

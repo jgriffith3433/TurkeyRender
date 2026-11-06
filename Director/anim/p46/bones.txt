@@ -1,0 +1,4 @@
+ "person.Head": "0.02 -30.02 -6.92",
+ "person.Hips": "0.01 -30.60 -6.75",
+ "person.LeftHand": "0.42 -29.98 -7.21",
+ "person.RightHand": "-0.43 -29.99 -7.21",

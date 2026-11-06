@@ -1,0 +1,9 @@
+{
+  "actors": {
+    "first_feather": { "model": "Assets/MusicVideo/Props/feather.obj", "pos": [0.3, 1.6, -1.4], "rot": [-20, 0, 40], "scale": [0.07, 0.09, 0.07], "color": "#ffffff", "emission": "#a8b0c0", "smooth": 0.2, "from": 123, "until": 127.06 }
+  },
+  "cues": [
+    { "at": 0, "do": "overlap", "on": "person", "amount": 1, "for": "0.1s" },
+    { "at": 0, "do": "overlap", "on": "person2", "amount": 0.7, "for": "0.1s" }
+  ]
+}

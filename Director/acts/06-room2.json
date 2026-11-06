@@ -1,0 +1,284 @@
+{
+ "actors": {
+  "room_floor_2": {
+   "model": "floor",
+   "pos": [
+    43,
+    0,
+    -3
+   ]
+  },
+  "room_ceiling_2": {
+   "model": "ceiling",
+   "pos": [
+    43,
+    3,
+    -3
+   ]
+  },
+  "wall_n1_2": {
+   "model": "wall",
+   "pos": [
+    37,
+    0,
+    3
+   ],
+   "rot": [
+    0,
+    180,
+    0
+   ]
+  },
+  "wall_n2_2": {
+   "model": "wall",
+   "pos": [
+    40,
+    0,
+    3
+   ],
+   "rot": [
+    0,
+    180,
+    0
+   ]
+  },
+  "wall_s1_2": {
+   "model": "wall",
+   "pos": [
+    40,
+    0,
+    -3
+   ]
+  },
+  "wall_s2_2": {
+   "model": "wall_door",
+   "pos": [
+    43,
+    0,
+    -3
+   ]
+  },
+  "wall_w1_2": {
+   "model": "wall_window",
+   "pos": [
+    37,
+    0,
+    -3
+   ],
+   "rot": [
+    0,
+    90,
+    0
+   ]
+  },
+  "wall_w2_2": {
+   "model": "wall",
+   "pos": [
+    37,
+    0,
+    0
+   ],
+   "rot": [
+    0,
+    90,
+    0
+   ]
+  },
+  "wall_e1_2": {
+   "model": "wall",
+   "pos": [
+    43,
+    0,
+    0
+   ],
+   "rot": [
+    0,
+    270,
+    0
+   ]
+  },
+  "wall_e2_2": {
+   "model": "wall",
+   "pos": [
+    43,
+    0,
+    3
+   ],
+   "rot": [
+    0,
+    270,
+    0
+   ]
+  },
+  "carpet1_2": {
+   "model": "carpet",
+   "pos": [
+    40,
+    0.01,
+    -0.3
+   ]
+  },
+  "cabinet_2": {
+   "model": "tv_stand",
+   "pos": [
+    40,
+    0,
+    2.55
+   ]
+  },
+  "sofa_2": {
+   "model": "sofa",
+   "pos": [
+    40,
+    0,
+    -0.9
+   ],
+   "rot": [
+    0,
+    0,
+    0
+   ]
+  },
+  "table_2": {
+   "model": "coffee_table",
+   "pos": [
+    40,
+    0,
+    0.75
+   ]
+  },
+  "shelf1_2": {
+   "model": "shelf",
+   "pos": [
+    37.7,
+    0,
+    2.4
+   ]
+  },
+  "remote_2": {
+   "model": "remote",
+   "pos": [
+    40.17,
+    0.62,
+    -0.5
+   ],
+   "rot": [
+    0,
+    30,
+    0
+   ]
+  },
+  "tv2": {
+   "model": "tv",
+   "pos": [
+    40,
+    0.62,
+    2.55
+   ],
+   "rot": [
+    0,
+    0,
+    0
+   ],
+   "tv": {
+    "spill": 5,
+    "glow": 1.2,
+    "range": 12,
+    "suck": false,
+    "share": "tv1"
+   }
+  },
+  "person2": {
+   "model": "person2",
+   "material": "Assets/MusicVideo/Person2/Person.mat",
+   "material2": "Assets/MusicVideo/Person2/Head.mat",
+   "pos": [
+    40,
+    0.02,
+    -0.8
+   ],
+   "rot": [
+    0,
+    0,
+    0
+   ],
+   },
+  "cctv_base_2": {
+   "model": "camera",
+   "keep": [
+    "bracket"
+   ],
+   "pos": [
+    42.35,
+    3.0,
+    2.35
+   ]
+  },
+  "cctv_head_2": {
+   "model": "camera",
+   "keep": [
+    "head"
+   ],
+   "pivot": "head",
+   "pos": [
+    42.35,
+    2.803,
+    2.35
+   ],
+   "rot": [
+    -26,
+    45,
+    0
+   ]
+  },
+  "cctv_2": {
+   "model": "none",
+   "parent": "cctv_head_2.lens",
+   "pos": [
+    0,
+    0,
+    0
+   ]
+  },
+  "cctv_lens_2": {
+   "model": "none",
+   "parent": "cctv_head_2.lens",
+   "pos": [
+    0,
+    0,
+    0
+   ]
+  },
+  "cctv_led_2": {
+   "model": "none",
+   "parent": "cctv_head_2.led",
+   "pos": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "lights": {
+  "red2": {
+   "type": "point",
+   "pos": [
+    42.5,
+    2.58,
+    2.36
+   ],
+   "color": "#ff1010",
+   "intensity": 0.05,
+   "range": 1.8
+  }
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "on": "person2",
+   "clip": "IdleSit14",
+   "for": "80bars"
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "b1_blast": {
+  "still": "00c573a9f9",
+  "asset": "a_db87151ceee6f13c"
+ },
+ "a2_redlight": {
+  "still": "1118caa30d",
+  "asset": "a_afc35e3a93892519",
+  "motion": "ffcb719c51"
+ },
+ "a5_static": {
+  "still": "a3e04fd5e1",
+  "asset": "a_592a95612fe3517a"
+ },
+ "a3_cctv": {
+  "still": "0fcbafc667",
+  "asset": "a_24d1e7664040d744",
+  "motion": "cc64ec7d11"
+ },
+ "a4_over": {
+  "still": "a7fc371dc8",
+  "asset": "a_0787b215092caf4e",
+  "motion": "e039ba748d"
+ },
+ "b2_thrown": {
+  "still": "9e19dbdcc8",
+  "asset": "a_1a0eff13cbc7ac8e",
+  "motion": "d27579f444"
+ },
+ "b3_claw": {
+  "still": "1fd006bb7b",
+  "asset": "a_e1fefc48e44de854",
+  "motion": "8ab1500393"
+ },
+ "b4_run": {
+  "still": "3a549e1819",
+  "asset": "a_f35febb7708f8781",
+  "motion": "ade2b93f33"
+ },
+ "b5_feet": {
+  "still": "6795b16ef8",
+  "asset": "a_02f18f305e7dad59",
+  "motion": "5d698f8f77"
+ },
+ "a1_remote": {
+  "still": "ed11dd74cd",
+  "asset": "a_62ab25e4fea881d9",
+  "motion": "62f28ced6e"
+ },
+ "b6_furniture": {
+  "still": "fc2e1de2ac",
+  "asset": "a_387999aab9f2efce"
+ },
+ "c2_flood": {
+  "still": "f8913d0bfd",
+  "asset": "a_9b4722b3b185e6de"
+ },
+ "c1_beak": {
+  "still": "3942b60a02",
+  "asset": "a_817af5254e3d7d44"
+ },
+ "c3_look": {
+  "still": "d1202b79e3",
+  "asset": "a_48233ad54e7736cc",
+  "motion": "875e23e281"
+ },
+ "c4_stampede": {
+  "still": "58b73bd488",
+  "asset": "a_e56bb0f01f3fa198"
+ },
+ "c5_turkeyeye": {
+  "still": "60388d0a52",
+  "asset": "a_d22bba5eb83ef352",
+  "motion": "f037f2e129"
+ },
+ "d2_whirl": {
+  "still": "6d9167b3c0",
+  "asset": "a_ab2e15d01cfa5c29",
+  "motion": "ed41f48d6c"
+ },
+ "d1_void": {
+  "still": "afb0d4c077",
+  "asset": "a_0390556805767938",
+  "motion": "b28d973d03"
+ },
+ "d3_hang": {
+  "still": "20cfed4ecf",
+  "asset": "a_23922d3f74e37c91"
+ },
+ "e2_above": {
+  "still": "a26a498d16",
+  "asset": "a_89031ae8626b34da",
+  "motion": "50644ac41c"
+ },
+ "e1_lift": {
+  "still": "c1fcd7c814",
+  "asset": "a_1c583f35670a846d",
+  "motion": "5670b26aa9"
+ },
+ "f1_wall": {
+  "still": "6a1f296d32",
+  "asset": "a_dc1430f84838256b",
+  "motion": "51e433c0ca"
+ },
+ "f2_static": {
+  "still": "0b0f2a64f2",
+  "asset": "a_0e1557ed296c6a46",
+  "motion": "747fb86ac5"
+ },
+ "f3_glass": {
+  "still": "9ee0ef2b8f",
+  "asset": "a_280c3f004d38c048"
+ },
+ "g1_dissolve": {
+  "still": "f8b8284306",
+  "asset": "a_e45f6b88e0e03392",
+  "motion": "0a0ec907e7"
+ },
+ "g2_inside": {
+  "still": "6f7326e965",
+  "asset": "a_9efb101498919076",
+  "motion": "be870b8cfa"
+ },
+ "g3_lines": {
+  "still": "8e96d4f964",
+  "asset": "a_b16baafcb34960ff",
+  "motion": "e5a5973be6"
+ },
+ "g4_channel": {
+  "still": "6a58e15840",
+  "asset": "a_93c50998e703a42c"
+ },
+ "h1_next": {
+  "still": "ecd99ecc11",
+  "asset": "a_d131061061c54b37",
+  "motion": "5222960203"
+ }
+}

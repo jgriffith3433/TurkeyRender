@@ -1,0 +1,9 @@
+[
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0102.500.png",
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0107.600.png",
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0108.500.png",
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0150.400.png",
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0151.300.png",
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0153.600.png",
+ "C:\\Projects\\TKShock\\Director\\captures\\f_0147.200.png"
+]

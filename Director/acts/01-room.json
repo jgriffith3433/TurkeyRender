@@ -1,0 +1,45 @@
+{
+  // The room. 6m x 6m, TV on the north wall (+z) looking south, sofa facing it.
+  "actors": {
+    "room_floor": { "model": "floor", "pos": [3, 0, -3] },
+    "room_ceiling": { "model": "ceiling", "pos": [3, 3, -3] },
+    "wall_n1": { "model": "wall", "pos": [-3, 0, 3], "rot": [0, 180, 0] },
+    "wall_n2": { "model": "wall", "pos": [0, 0, 3], "rot": [0, 180, 0] },
+    "wall_s1": { "model": "wall", "pos": [0, 0, -3] },
+    "wall_s2": { "model": "wall_door", "pos": [3, 0, -3] },
+    "wall_w1": { "model": "wall", "pos": [-3, 0, -3], "rot": [0, 90, 0] },
+    "wall_w2": { "model": "wall", "pos": [-3, 0, 0], "rot": [0, 90, 0] },
+    "wall_e1": { "model": "wall", "pos": [3, 0, 0], "rot": [0, 270, 0] },
+    "wall_e2": { "model": "wall", "pos": [3, 0, 3], "rot": [0, 270, 0] },
+    "carpet1": { "model": "carpet", "pos": [0, 0.01, -0.3] },
+    "cabinet": { "model": "tv_stand", "pos": [0, 0, 2.55] },
+    "sofa": { "model": "sofa", "pos": [0, 0, -0.9], "rot": [0, 0, 0] },
+    "table": { "model": "coffee_table", "pos": [0, 0, 0.75] },
+    "shelf1": { "model": "shelf", "pos": [-2.3, 0, 2.4] },
+    "remote": { "model": "remote", "pos": [0.17, 0.62, -0.5], "rot": [0, 30, 0] },
+
+    // The TV. A second and third appear for the R, G, B split.
+    "tv1": { "model": "tv", "pos": [0, 0.62, 2.55], "rot": [0, 0, 0],
+      "tv": { "spill": 5, "glow": 1.2, "range": 12,
+              "feed": { "pos": [2.55, 2.5, 2.45], "rot": [26, 222, 0], "fov": 74 } } },
+    "tv_r": { "model": "tv", "pos": [0, 0.62, 2.55], "from": "24:1", "until": "25:1",
+      "tv": { "spill": 4, "glow": 1, "range": 10, "suck": false } },
+    "tv_b": { "model": "tv", "pos": [0, 0.62, 2.55], "from": "24:1", "until": "25:1",
+      "tv": { "spill": 4, "glow": 1, "range": 10, "suck": false } },
+
+    "person": { "model": "person", "pos": [0, 0.02, -0.8], "rot": [0, 0, 0], "material": "Assets/MusicVideo/Person/Person.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+
+    // The corner camera with its red light.
+    "cctv_base": { "model": "camera", "keep": ["bracket"], "pos": [2.35, 3.0, 2.35] },
+    "cctv_head": { "model": "camera", "keep": ["head"], "pivot": "head", "pos": [2.35, 2.803, 2.35], "rot": [-26, 45, 0] },
+    "cctv": { "model": "none", "parent": "cctv_head.lens", "pos": [0, 0, 0] },
+    "cctv_lens": { "model": "none", "parent": "cctv_head.lens", "pos": [0, 0, 0] },
+    "cctv_led": { "model": "none", "parent": "cctv_head.led", "pos": [0, 0, 0] }
+  },
+  "lights": {
+    "red": { "type": "point", "pos": [2.5, 2.58, 2.36], "color": "#ff1010", "intensity": 0.05, "range": 1.8 },
+    "cctv_fill": { "type": "point", "pos": [1.9, 2.3, 1.9], "color": "#7088ff", "intensity": 0.0, "range": 1.6 }
+  },
+  "cues": [
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  // Test set: moves the stock library doesn't cover well. Add to this list; a clip that exists is skipped.
+  "panic_stumble_back": { "prompt": "a man stumbles backward in panic, arms flailing for balance, nearly falls, catches himself", "seconds": 3 },
+  "scramble_floor": { "prompt": "a man on the floor scrambles backward on his hands and heels in terror", "seconds": 3 },
+  "dragged_gripping": { "prompt": "a man lying on his front is dragged forward by his arms, legs trailing, struggling and kicking", "seconds": 3 },
+  "falling_flail": { "prompt": "a man falling through the air, arms and legs flailing wildly, body twisting", "seconds": 3, "inPlace": true },
+  "gasp_surface": { "prompt": "a man bursts up from under a pile, gasping for air, chest heaving, shoving things off himself", "seconds": 3 },
+  "retch_kneel": { "prompt": "a man on hands and knees retches, back arching, heaving forward, one hand to his stomach", "seconds": 3 }
+}

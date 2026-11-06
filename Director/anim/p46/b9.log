@@ -1,0 +1,7 @@
+[Error] Action caused undo stack overflow. Some undo information may have been lost.
+{
+ "tracks": 392,
+ "ops": 3907,
+ "actors": 1866,
+ "shots": 116,
+all 61s
