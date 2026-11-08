@@ -1,0 +1,22 @@
+{
+ "id": "both",
+ "f0": 345,
+ "f1": 428,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 11.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "be2feb42a1688b01",
+ "summary": "The strip is clean: a static camera and a standing figure at the right edge with only slight drift, and no pops, flicker or clipping visible.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3545,
+  "out": 118
+ },
+ "cost": 0.0083
+}

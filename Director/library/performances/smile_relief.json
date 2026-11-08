@@ -1,0 +1,95 @@
+{
+ "name": "smile_relief",
+ "about": "The hero smile. Mouth shut, it starts small and grows slowly in three steps, head level, eyes soft, two slow blinks, a breath let go. `amount` 0.3 to 0.4 stays shut and warm; with soft lids on top, 0.42 already parts the lips in a close-up. `pitch` and `roll` level the head on whatever pose is under it.",
+ "entry": "any",
+ "exit": "any",
+ "length": "5s",
+ "min": "3.5s",
+ "params": {
+  "amount": 0.36,
+  "pitch": 0,
+  "roll": 0
+ },
+ "cues": [
+  {
+   "at": 0.1,
+   "do": "face",
+   "blink": 0.1,
+   "for": "0.9s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "pose",
+   "bones": {
+    "head": [
+     "$pitch",
+     0,
+     "$roll"
+    ]
+   },
+   "for": "1.2s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "perform",
+   "name": "micro_life",
+   "for": "$for",
+   "amt": 5,
+   "soft": 0
+  },
+  {
+   "at": 0.2,
+   "do": "face",
+   "smile": "=amount*0.3",
+   "for": "1.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.7,
+   "do": "blink",
+   "for": "0.36s"
+  },
+  {
+   "at": 1.7,
+   "do": "face",
+   "smile": "=amount*0.65",
+   "for": "1.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.6,
+   "do": "pose",
+   "bones": {
+    "chest": [
+     2,
+     0,
+     0
+    ],
+    "leftShoulder": [
+     0,
+     0,
+     3
+    ],
+    "rightShoulder": [
+     0,
+     0,
+     -3
+    ]
+   },
+   "for": "1.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 3,
+   "do": "face",
+   "smile": "$amount",
+   "for": "1.6s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.2
+ }
+}

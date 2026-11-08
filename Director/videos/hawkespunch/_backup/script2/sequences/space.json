@@ -1,0 +1,5 @@
+{
+  // Space: the set's own sun (space_sun), the play grade. Alone and quiet cards move the mood themselves.
+  "set": "space",
+  "mood": "hp_space_play"
+}

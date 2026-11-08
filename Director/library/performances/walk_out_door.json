@@ -1,0 +1,170 @@
+{
+ "name": "walk_out_door",
+ "about": "First steps out: unsure pace, chin up, eyes going left, then right, taking it in. Follow with step_stop. The distance is rounded so the walk ends with the left foot just landed ahead, the default stand's stance, so step_stop slides nothing.",
+ "entry": "stand",
+ "exit": "walking_stopped",
+ "length": "4s",
+ "min": "2.6s",
+ "params": {
+  "dist": 0,
+  "pace": 0.55,
+  "stride": 0.66,
+  "clip": "Walk4"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.4,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "walk",
+   "clip": "$clip",
+   "to": [
+    0,
+    0,
+    "=stride*(Convert(IIF(dist>0,dist,for*pace)/stride-0.95,'System.Int32')+0.95)"
+   ],
+   "rel": 2,
+   "for": "$for",
+   "stride": "$stride",
+   "soft": 0.7,
+   "softOut": 0.9,
+   "blend": "0.4s",
+   "face": 0
+  },
+  {
+   "at": 0.5,
+   "do": "gaze",
+   "toRel": [
+    -2.4,
+    2.2,
+    3
+   ],
+   "for": "0.8s",
+   "ease": "inout",
+   "limit": 24
+  },
+  {
+   "at": 0.55,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": "=for*0.52",
+   "do": "gaze",
+   "toRel": [
+    2.4,
+    2.6,
+    3
+   ],
+   "for": "0.9s",
+   "ease": "inout",
+   "limit": 26
+  },
+  {
+   "at": "=for*0.54",
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": "=for-0.7",
+   "do": "gaze",
+   "weight": 0,
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.35",
+   "do": "overlap",
+   "amount": 0,
+   "for": "0.5s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "legs": 0,
+   "for": "0.35s",
+   "ease": "inout",
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     19
+    ],
+    "rightUpperArm": [
+     0,
+     0,
+     -19
+    ],
+    "leftLowerArm": [
+     4,
+     0,
+     -14
+    ],
+    "rightLowerArm": [
+     4,
+     0,
+     14
+    ],
+    "leftHand": [
+     6,
+     18,
+     18
+    ],
+    "rightHand": [
+     6,
+     -18,
+     -18
+    ]
+   }
+  },
+  {
+   "at": "=for-0.05",
+   "do": "stance",
+   "legs": 1,
+   "for": "0.7s",
+   "ease": "inout",
+   "bones": {
+    "leftUpperArm": [
+     -3,
+     0,
+     15
+    ],
+    "rightUpperArm": [
+     -3,
+     0,
+     -15
+    ],
+    "leftLowerArm": [
+     12,
+     0,
+     -20
+    ],
+    "rightLowerArm": [
+     12,
+     0,
+     20
+    ],
+    "leftHand": [
+     6,
+     18,
+     18
+    ],
+    "rightHand": [
+     6,
+     -18,
+     -18
+    ]
+   }
+  }
+ ],
+ "test": {
+  "then": [
+   "step_stop"
+  ],
+  "tail": 0.6
+ }
+}

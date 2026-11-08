@@ -1,0 +1,12 @@
+{
+  // The clinic: flat, pale green and white, a little too bright. A high ambient from every side so there is almost no dark side, a soft key straight down from the
+  // fluorescent panels (a directional, shadows soft and faint, through the ceiling which is a shell; the key is kept under the shadowless fill so a shadow is a tint, not a hole), a cool fill from the window side, and two point lights in the panels
+  // over the bed and over the desk so the paper and the laminate have a hot spot. No rim: nothing glamorous. The window quad glows pale blue.
+  "sky": { "top": "#dbe6df", "mid": "#eaf0ea", "bottom": "#d2dbd4", "ambient": "#ccd6ce", "ambientTop": "#dde4de", "ambientBottom": "#aeb8b0", "fog": "#eaf0ea", "density": 0 },
+  "lights": {
+    "key": { "type": "directional", "pos": [0.6, 9, 1.8], "aim": "subject", "color": "#f2fbf4", "intensity": 0.45, "shadows": true },
+    "fill": { "type": "directional", "pos": [-4, 3, 7], "aim": "subject", "color": "#dfeef4", "intensity": 0.6 },
+    "practical": { "type": "point", "pos": [-0.6, 2.55, 0.8], "color": "#f6fff8", "intensity": 1.6, "range": 5 },
+    "rim": { "type": "point", "pos": [1.2, 2.55, -1.0], "color": "#f6fff8", "intensity": 1.4, "range": 5 }
+  }
+}

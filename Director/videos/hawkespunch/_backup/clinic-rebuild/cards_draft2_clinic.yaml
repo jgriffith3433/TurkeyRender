@@ -1,0 +1,180 @@
+# Hawkes Punch draft 2 (SCRIPT.md): the clinic shots that are new in draft 2. The rest of the clinic is clinic.yaml and symptoms.yaml.
+
+# ---- 1. the waiting room
+- id: s1_wide
+  idea: establishing, a pale green waiting room, a turkey in a nurse's cap typing, a red HAWKES PUNCH poster on the wall, him in a waiting chair
+  feel: a normal clinic, almost
+  cast: {nurse: reception_counter clip:idle, person: {at: waiting_seat, clip: mx_sitting_hands_thighs, blend: 0}}
+  camera: {preset: spot, from: cam_reception, on: cam_reception_aim, lens: 30}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+
+- id: s1_him
+  idea: he sits, a little green, his head bobbing to a beat only he can hear
+  feel: he hears music no one else can
+  cast: {person: {at: waiting_seat, clip: mx_sitting_hands_thighs, blend: 0}, nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_waiting, on: person, lens: 75}
+  shot: {look: null, lookOffset: null, screen: null, rot: [1.2, 75.6, 0], fov: 22, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.2s, do: layer, on: person, clip: mx_nod, mask: head, start: 0.4, weight: 1, for: 3.6s, blend: 0.2s}
+    - {at: 0, do: face, on: person, fear: 0.08, smile: 0.15, for: 0}
+
+- id: s1_poster
+  idea: insert, the poster, HAWKES PUNCH. Ask your doctor.
+  feel: the product, planted
+  tags: [insert]
+  cast: {}
+  camera: {preset: spot, from: cam_poster, on: poster, lens: 50}
+  shot: {pos: [699.2, 1.8, 2.4], fov: 34, screen: [0, 0.3], deadzone: false}
+
+- id: s1_gobble
+  idea: the turkey nurse turns to him; Gobble. (his turn)
+  feel: next
+  cast: {nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_nurse_cu, on: nurse, lens: 32}
+  raw:
+    - {at: 0.1s, do: rotate, on: nurse, rot: [0, 150, 0], for: 0.45s, ease: inout}
+
+- id: s1_go_unused
+  idea: he looks up and stands to go in; cut on the movement
+  feel: here we go
+  cast: {person: {at: waiting_seat, clip: mx_sit_to_stand_pump, blend: 0, args: {once: 1}}}
+  camera: {preset: spot, from: cam_waiting, on: person, lens: 60}
+  shot: {look: null, lookOffset: null, screen: null, rot: [-2, 75.6, 0], fov: 30, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+
+# ---- 2. the gloves, held: we see them, he doesn't
+- id: s2_gloves
+  idea: insert, held, the framed red boxing gloves on her wall and the plaque, GOLDEN GLOVES CHAMPION
+  feel: the bomb under the table
+  tags: [insert]
+  cast: {}
+  camera: {preset: spot, from: cam_bed_front, on: desk, lens: 50}
+  shot: {pos: [701.95, 1.7, 3.55], look: gloves_frame, rot: null, fov: 52, deadzone: false, push: 0}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.1s, sfx: Assets/MusicVideo/Sfx/punch/still_tone.mp3, volume: 0.15}
+
+# ---- 3. the prescription (d_can, d_take, l_line, l_react, l_mouth are in clinic.yaml)
+- id: s3_can
+  idea: insert, the can in his hands, HAWKES PUNCH, one a day until it stops
+  feel: the cure
+  tags: [insert]
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.rightHand, lens: 85}
+  shot: {pos: [700.85, 1.15, 2.85], look: can, rot: null, fov: 24, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+
+- id: s3_no
+  idea: she lets the question sit; then: No.
+  feel: the pause before the punchline
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: doctor.head, lens: 60}
+  shot: {pos: [701.15, 1.58, 3.62], look: doctor.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: face, on: doctor, smile: 0, blink: 0, for: 0}
+    - {at: 0.6s, do: blink, on: doctor, for: 0.2s}
+
+- id: s3_look
+  idea: she stands square to him and glances at the gloves on the wall
+  feel: oh, she means it
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_punch, on: cam_punch_aim, lens: 30}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.5s, do: gaze, on: doctor, to: gloves_frame, limit: 45, for: 0.4s, ease: inout}
+    - {at: 1.5s, do: gaze, on: doctor, to: person.head, limit: 45, for: 0.35s, ease: inout}
+
+- id: s3_ohno
+  idea: he follows her look to the gloves, and back to her: Oh no.
+  feel: he gets it
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 55}
+  shot: {pos: [701.3, 1.45, 3.05], look: person.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.15s, do: gaze, on: person, to: gloves_frame, limit: 40, for: 0.35s, ease: inout}
+    - {at: 0.7s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0.3s, ease: inout}
+    - {at: 0.75s, do: face, on: person, eyesWide: 0.6, fear: 0.35, smile: 0, for: 0.25s}
+
+# ---- 4. the turkey, under the crash
+- id: p_turkey
+  idea: reception: the turkey looks up at the rattling ceiling, looks back down at her screen, and types
+  feel: not her problem
+  cast: {nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_nurse_cu, on: nurse, lens: 32}
+  raw:
+    - {at: 0, pulse: {shake: 0.25}, for: 0.4s}
+    - {at: 0.2s, do: pose, on: nurse, bone: head, rot: [-40, 0, 0], for: 0.3s, ease: out}
+    - {at: 1.5s, do: pose, on: nurse, bone: head, rot: [0, 0, 0], for: 0.35s, ease: inout}
+
+# ---- 10. the next day
+- id: b_next
+  idea: a card, THE NEXT DAY
+  feel: oh no, again
+  tags: [dark]
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0, do: show, on: window_boards}
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, curl: 0.42, for: 0}
+    - {at: 0, gfx: image, path: Assets/Videos/hawkespunch/Props/next_day.png, pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 1.55s}   # sound pass 2026-11-08: a hard cut into the room
+
+- id: b_room
+  idea: the same room, the next day; he sits on the bed, she writes at her desk without looking up: Any symptoms?
+  feel: routine
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+
+- id: b_him
+  idea: dreamy, eyes drifting up: Well, I met someone, and he- and her fist comes in from off screen
+  feel: here it comes again
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs, blend: 0}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 55}
+  shot: {pos: [700.95, 1.42, 2.7], look: person.head, rot: null, fov: 34, screen: [0.12, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.25s, do: gaze, on: person, toRel: [-1.2, 2.4, 3], limit: 40, for: 0.8s, ease: inout}
+    - {at: 0.3s, do: face, on: person, smile: 0.55, fear: 0, for: 0.9s, ease: inout}
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    # her Golden Glove comes in from frame left and lands on "he-"
+    - {at: 2.05s, do: show, on: glove}
+    - {at: 2.05s, do: set, on: glove, pos: [699.85, 1.52, 3.35], rot: [0, 90, 0]}
+    - {at: 2.06s, do: move, on: glove, pos: [700.5, 1.52, 3.62], for: 0.3s, ease: in}
+    - {at: end, do: hide, on: glove}
+    - {at: 2.38s, fx: impact, on: person.head, size: 0.35, count: 6, flash: 0.2, shake: 0.5, color: "#ffcc70"}
+
+- id: b_turkey
+  idea: the next day, the turkey at reception, typing; Gobble.
+  feel: same as ever
+  cast: {nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_nurse_cu, on: nurse, lens: 32}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0.15s, do: rotate, on: nurse, rot: [0, 150, 0], for: 0.4s, ease: inout}
+
+- id: b_end
+  idea: the end card, HAWKES PUNCH, Every day until the symptoms go away.
+  feel: the ad, and the story
+  tags: [dark]
+  cast: {}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0, gfx: image, path: Assets/Videos/hawkespunch/Props/end_card2.png, pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 3.05s}   # held to the cut, then b_can
+

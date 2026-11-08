@@ -1,0 +1,144 @@
+{
+ "name": "mx_writing_seated",
+ "fps": 30,
+ "frames": 152,
+ "seconds": 5.03,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 1,
+  "flatness": 0.71,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 2,
+  "holdMedianS": 3.93,
+  "fastRunMedianS": null,
+  "dynRange": 1.92,
+  "handPeak": 0.31,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.28,
+  "lagMedianFrames": 2,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 0.84,
+  "plantedFrac": 0.99,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": null,
+  "deadJoints": 7,
+  "deadJointNames": [
+   "Hips",
+   "Spine",
+   "Chest",
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperLeg",
+   "RightUpperLeg"
+  ],
+  "readability": 0.62,
+  "twinnedFrac": 1,
+  "curlMedian": 20.33,
+  "spreadMedian": 23.83,
+  "fannedFrac": 0,
+  "bowMedian": 46.53,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 8.15,
+  "armOmegaP95": 24.61,
+  "legOmegaP95": 12.34,
+  "spineOmegaP50": 2.63,
+  "spineOmegaP95": 12.49,
+  "headOmegaP50": 7.33,
+  "headOmegaP95": 17.6,
+  "armAccP95": 382.77,
+  "spineAccP95": 316,
+  "handSpeedP50": 0.02,
+  "handSpeedP95": 0.08,
+  "spineToArm": 0.32,
+  "energyCV": 0.34,
+  "moveRate": 0.2
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": 3.3,
+   "note": "speed shape 0.71 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "2 holds (median 3.93 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 1 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 5.03 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.5,
+   "note": "10 key poses, readability 0.62 (best of front, side, three-quarter), 100% twinned"
+  },
+  "hands": {
+   "score": 8,
+   "note": "head bowed 100% of the time"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "the head hangs 47 deg forward of the chest"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "the head hangs 47 deg forward of the chest",
+   "also": []
+  }
+ ],
+ "total": 8.4,
+ "verdict": "passable, weak on ease and hands (8.4/10)"
+}

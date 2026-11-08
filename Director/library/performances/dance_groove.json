@@ -1,0 +1,17 @@
+{
+ "name": "dance_groove",
+ "about": "The verse groove: 2000s pop side-to-side, mocap (Mixamo Hip Hop Side To Side), stepping on the beat with soft hands and arms held in. Warped to the song's beats. Loops; keep `for` under 11 s or cut, the clip wraps there. `out` 1 settles back to the stand at the end.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "6.857s",
+ "min": "1.71s",
+ "params": { "blend": 0.3, "start": 7.2, "out": 1, "warp": "beat" },
+ "cues": [
+  { "at": 0, "do": "stance", "arms": 1, "legs": 0, "bones": { "leftUpperArm": [0, 0, 9], "rightUpperArm": [0, 0, -9] }, "for": 0.4, "ease": "inout" },
+  { "at": 0, "do": "anim", "clip": "mx_hh_side_to_side", "start": "$start", "speed": 1.167, "warpTo": "$warp", "blend": "$blend", "for": "$for" },
+  { "at": 0, "do": "fingers", "hand": "left", "set": 0.35, "for": 0.3 },
+  { "at": 0, "do": "fingers", "hand": "right", "set": 0.35, "for": 0.3 },
+  { "at": "=for-0.5", "do": "perform", "name": "stand", "blend": 0.5, "settle": 0.5, "if": "$out" }
+ ],
+ "test": { "tail": 0.6 }
+}

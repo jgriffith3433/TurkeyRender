@@ -1,0 +1,59 @@
+{
+ "video": "greener",
+ "label": "note-n20",
+ "render": "C:\\Projects\\TKShock\\Director\\videos\\greener\\shots\\007-weakness.mp4",
+ "when": "2026-11-07T19:39:05.499Z",
+ "frames": 138,
+ "fps": 30,
+ "a": [],
+ "b": [],
+ "c": [],
+ "likely": [],
+ "cost": 0.021,
+ "spikes": 0,
+ "cuts": 2,
+ "shots": [
+  {
+   "id": "sparrow_away",
+   "from": 0,
+   "to": 1,
+   "strips": [],
+   "summary": "too short to read",
+   "faults": [],
+   "reused": false,
+   "cost": 0
+  },
+  {
+   "id": "weakness",
+   "from": 1,
+   "to": 3.566666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 1,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip looks clean: the framing holds steady, the head turns gradually from 1.06 to 1.23, and I can't point to any pop, clip or render flicker.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0127
+  },
+  {
+   "id": "happens",
+   "from": 3.566666666666667,
+   "to": 4.6,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 3.567,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut at 3.60 lands cleanly on a settled close-up with only a slight head drift afterwards, so I found no pops, render faults or other problems.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0084
+  }
+ ]
+}

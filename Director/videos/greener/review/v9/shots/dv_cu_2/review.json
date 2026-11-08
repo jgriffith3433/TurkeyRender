@@ -1,0 +1,53 @@
+{
+ "id": "dv_cu_2",
+ "f0": 2561,
+ "f1": 2612,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 85.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 86.6,
+   "why": "one patch jumps (cell 67.6, x2.1)",
+   "file": "spike-02598.jpg"
+  }
+ ],
+ "hash": "bbc61651cc1821c1",
+ "summary": "The frame crops him at the nose or mouth in every tile, so his eyes are never visible, and his right arm snaps from hanging to a bent hand-on-hip pose around 86.6 s.",
+ "faults": [
+  {
+   "t": 86.6,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "His right arm (viewer right) hangs straight down at 86.59, then at 86.63 the elbow is bent and the hand is at the hip. The pose changes in one frame, with no in-between, which matches the measured spike.",
+   "fix": "Add 2-3 in-between frames or smooth the arm keys so the elbow bends over several frames."
+  },
+  {
+   "t": 85.37,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The frame cuts him off at the nose or mouth in every tile, so his eyes and upper face are never seen. For a shot meant to show 'he means this' down the lens, the eyes are what matter.",
+   "fix": "Tilt the camera up or lower it so the eyes and brow are in frame."
+  },
+  {
+   "t": 85.53,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Just after the cut, the torso and background shift position between 85.49 and 85.56. The raised hand and shoulder slide, and the turkey drops lower in frame, so the shot does not settle at once.",
+   "fix": "Hold the first pose for the opening frames, or start the shot after the settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4964,
+  "out": 1141
+ },
+ "cost": 0.0213
+}

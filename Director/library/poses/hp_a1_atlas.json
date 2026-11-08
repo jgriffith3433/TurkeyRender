@@ -1,0 +1,214 @@
+{
+  // Hawkes Punch, hero moment 5a (the Atlas wind-up), SPACE-EPIC e7_atlas / e7_what: the DOUBLE (zg_neutral_a). Seeded: dip from mx_lift_heavy@1.2, overhead arms from hanging_idle@1.0.
+
+ "name": "hp_a1_atlas",
+ "about": "Atlas lift: a crouch-curl gather (knees to the chest, torso over them, arms wrapped under, rolled into a ball), then the strongman overhead hold (elbows bent, palms up and flat, shoulders shrugged, head forward, wide bent power stance) with a tremble; the DOUBLE on zg_neutral_a.",
+ "seed": {
+  "clip": "zg_neutral_a",
+  "t": 0
+ },
+ "length": 4.0,
+ "poses": {
+  "float": {
+   "from": {
+    "clip": "zg_neutral_a",
+    "t": 0
+   }
+  },
+  "dip": {
+   "from": "float",
+   "muscles": {
+    "Left Upper Leg Front-Back": -0.85,
+    "Right Upper Leg Front-Back": -0.8,
+    "Left Lower Leg Stretch": -0.35,
+    "Right Lower Leg Stretch": -0.3,
+    "Left Upper Leg In-Out": 0.12,
+    "Right Upper Leg In-Out": 0.12,
+    "Left Foot Up-Down": 0.55,
+    "Right Foot Up-Down": 0.55,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Spine Front-Back": -0.5,
+    "Chest Front-Back": -0.35,
+    "UpperChest Front-Back": -0.2,
+    "Neck Nod Down-Up": -0.35,
+    "Head Nod Down-Up": -0.2,
+    "Left Arm Down-Up": -0.6,
+    "Right Arm Down-Up": -0.6,
+    "Left Arm Front-Back": -0.45,
+    "Right Arm Front-Back": -0.45,
+    "Left Forearm Stretch": 0.1,
+    "Right Forearm Stretch": 0.1,
+    "Left Hand Down-Up": 0.3,
+    "Right Hand Down-Up": 0.3
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.2,
+     "spread": 0.4
+    }
+   },
+   "root": {
+    "rot": [
+     35,
+     0,
+     0
+    ]
+   }
+  },
+  "overhead": {
+   "from": "float",
+   "muscles": {
+    "Left Arm Down-Up": 0.72,
+    "Right Arm Down-Up": 0.72,
+    "Left Arm Front-Back": 0.12,
+    "Right Arm Front-Back": 0.12,
+    "Left Forearm Stretch": 0.2,
+    "Right Forearm Stretch": 0.2,
+    "Left Arm Twist In-Out": 0.15,
+    "Right Arm Twist In-Out": 0.15,
+    "Left Hand Down-Up": 0.85,
+    "Right Hand Down-Up": 0.85,
+    "Left Shoulder Down-Up": 0.7,
+    "Right Shoulder Down-Up": 0.7,
+    "Spine Front-Back": -0.05,
+    "Chest Front-Back": -0.05,
+    "Neck Nod Down-Up": -0.12,
+    "Head Nod Down-Up": -0.05,
+    "Left Upper Leg Front-Back": -0.35,
+    "Right Upper Leg Front-Back": -0.3,
+    "Left Upper Leg In-Out": 0.5,
+    "Right Upper Leg In-Out": 0.5,
+    "Left Lower Leg Stretch": 0.2,
+    "Right Lower Leg Stretch": 0.25,
+    "Left Upper Leg Twist In-Out": 0.35,
+    "Right Upper Leg Twist In-Out": 0.35,
+    "Left Foot Up-Down": 0.45,
+    "Right Foot Up-Down": 0.45,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.2,
+     "spread": 0.6
+    }
+   }
+  },
+  "overhead_t": {
+   "from": "overhead",
+   "add": {
+    "Left Forearm Stretch": 0.025,
+    "Right Forearm Stretch": -0.025,
+    "Left Arm Down-Up": -0.01,
+    "Right Arm Down-Up": 0.01
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "float",
+   "hold": "6f"
+  },
+  {
+   "t": "12f",
+   "pose": "dip",
+   "interp": "ease",
+   "step": 2,
+   "hold": "4f"
+  },
+  {
+   "t": "28f",
+   "pose": "overhead",
+   "interp": "overshoot",
+   "overshoot": 0.08,
+   "settle": 0.3,
+   "step": 2
+  },
+  {
+   "t": "40f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "44f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "48f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "52f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "56f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "60f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "64f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "68f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "72f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "76f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "80f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "84f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "88f",
+   "pose": "overhead_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "92f",
+   "pose": "overhead",
+   "interp": "linear",
+   "step": 2
+  }
+ ]
+}

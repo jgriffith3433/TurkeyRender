@@ -1,0 +1,83 @@
+{
+ "id": "s_flick",
+ "f0": 2760,
+ "f1": 2817,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 92,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 93.2,
+   "why": "one patch jumps (cell 104.4, x3)",
+   "file": "spike-02796.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 93.533,
+   "why": "one patch jumps (cell 100.6, x2.6)",
+   "file": "spike-02806.jpg"
+  }
+ ],
+ "hash": "ebf91e7a693a7e64",
+ "summary": "The shot has a real pop at 93.2-93.26 where the black-shirt character teleports up and out of frame, plus a stiff, nearly static hold before the bolt with no anticipation and a body that flies off rigidly.",
+ "faults": [
+  {
+   "t": 93.23,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Black-shirt character jumps from beside the red character at 93.19 to above and behind him at 93.23, then to the top edge at 93.26 with legs cut off. The red character also snaps from upright to tilted forward. No in-between motion, so it reads as a teleport.",
+   "fix": "Add in-between frames or ease the launch over 4-6 frames. Keep the black-shirt character's path continuous."
+  },
+  {
+   "t": 93.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "Black-shirt character is cropped by the top edge at 93.26 and 93.39, with only dark legs visible. The key action of the bolt is lost.",
+   "fix": "Reframe or retime so the bolting character stays in frame, or cut once he has left."
+  },
+  {
+   "t": 93.29,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "The red character goes from upright at 93.19 to a horizontal, rigid body by 93.29. He then floats stiffly with no overshoot or settle. At 93.33-93.39 the body is a flat plank with arms hanging.",
+   "fix": "Add anticipation and a bend, with limbs trailing the torso, before the horizontal drift."
+  },
+  {
+   "t": 92.03,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "certain",
+   "what": "The two characters stand nearly frozen face to face for the first 6 frames of the shot. There is no nose flick, no anticipation and no readable head or eye change. The idea 'he flicks his nose' is not visible.",
+   "fix": "Animate the nose flick with a hand raised to the face and a head reaction, then the anticipation crouch."
+  },
+  {
+   "t": 93.49,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The red character's body overlaps the dark blue asteroid mass in the foreground, and his legs merge into it. At 93.53-93.73 he drifts inside the rock silhouette, so it reads as clipping.",
+   "fix": "Move him in front of or clear of the asteroid, or put the rock behind him in depth."
+  },
+  {
+   "t": 93.49,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The sudden change to a rotated, tumbling view with a huge dark rock hides the subject. The red shirt is the only readable part against the dark shapes.",
+   "fix": "Lighten the foreground rock or rim-light the character so the silhouette reads."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6365,
+  "out": 954
+ },
+ "cost": 0.0223
+}

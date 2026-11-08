@@ -1,0 +1,32 @@
+{
+ "name": "sit_grass_look_up",
+ "about": "Sitting on the ground, tips his head back to the sky and takes it in.",
+ "entry": "sit_ground",
+ "exit": "sit_ground",
+ "length": "4s",
+ "min": "2.5s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleLookUpSitOnTheGroundHostage",
+   "blend": "0.6s"
+  },
+  {
+   "at": 0.1,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": 2.2,
+   "do": "blink",
+   "for": "0.25s"
+  }
+ ],
+ "test": {
+  "first": [
+   "sit_on_grass"
+  ],
+  "tail": 0.4
+ }
+}

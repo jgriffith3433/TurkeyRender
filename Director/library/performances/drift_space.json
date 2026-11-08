@@ -1,0 +1,164 @@
+{
+ "name": "drift_space",
+ "about": "Alone in space: Falling at a quarter speed with the limbs loose on overlap, a slow tumble of `rate` degrees a second about his side axis (and a third of that about his length), no ground. The face is calm and lost: slow blinks, lips a little apart, the eyes wander off and back. Ends flying.",
+ "entry": "fly",
+ "exit": "fly",
+ "length": "6s",
+ "min": "2s",
+ "params": {
+  "rate": 18
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "Falling",
+   "speed": 0.22,
+   "blend": "0.8s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 1,
+   "arms": 1,
+   "hands": 1,
+   "head": 0.8,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0,
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ],
+      "rot": [
+       0,
+       0,
+       0
+      ]
+     },
+     "bones": {}
+    },
+    {
+     "t": "=for*0.5",
+     "ease": "linear",
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ],
+      "rot": [
+       "=rate*for*0.5",
+       "=rate*for*0.15",
+       0
+      ]
+     },
+     "bones": {}
+    },
+    {
+     "t": "$for",
+     "ease": "linear",
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ],
+      "rot": [
+       "=rate*for",
+       "=rate*for*0.3",
+       0
+      ]
+     },
+     "bones": {}
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": "0.6s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.6s"
+  },
+  {
+   "at": 0.2,
+   "do": "face",
+   "jawOpen": 0.12,
+   "blink": 0.15,
+   "eyesWide": 0,
+   "for": "0.8s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.4,
+   "do": "blink",
+   "for": "0.3s"
+  },
+  {
+   "at": 2.1,
+   "do": "eyes",
+   "yaw": -8,
+   "pitch": 3,
+   "for": "0.1s",
+   "ease": "out"
+  },
+  {
+   "at": 3,
+   "do": "eyes",
+   "yaw": 0,
+   "pitch": 0,
+   "for": "0.12s",
+   "ease": "out"
+  },
+  {
+   "at": 3.9,
+   "do": "blink",
+   "for": "0.32s"
+  },
+  {
+   "at": 4.6,
+   "do": "eyes",
+   "yaw": 6,
+   "pitch": -4,
+   "for": "0.1s"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "punched_away",
+    "for": "2.2s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

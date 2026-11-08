@@ -16,7 +16,9 @@ namespace TKShock.MV
 
     public static class InsertCache
     {
-        static readonly string Root = Path.GetFullPath(Path.Combine(Application.dataPath, "..", "Director", "inserts"));
+        static string Root = Path.GetFullPath(Path.Combine(Application.dataPath, "..", "Director", "inserts"));
+        /// <summary>Each video has its own footage folder.</summary>
+        public static void Use(string folder) { folder = Path.GetFullPath(folder); if (folder == Root) return; Root = folder; Forget(); }
         static readonly Dictionary<string, int> Counts = new Dictionary<string, int>();
         static readonly Dictionary<string, Texture2D> Live = new Dictionary<string, Texture2D>();
         static readonly Queue<string> Order = new Queue<string>();

@@ -1,0 +1,271 @@
+{
+ "version": 1,
+ "entries": {
+  "f6dfcca0b0c26a23": {
+   "id": "alone",
+   "f0": 0,
+   "f1": 97,
+   "faults": [],
+   "summary": "The spike is a fade-up from black (0.43 to 0.46) at the start of the shot, which is a cut and not a fault. The held pose after it is steady with no pops.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "f0fdf2e87f6f02bf": {
+   "id": "his_face",
+   "f0": 97,
+   "f1": 138,
+   "faults": [],
+   "summary": "The strip is clean: the camera is static, the shoulder and chair hold steady across all eight tiles with only slight drift, and I see no pops, flicker or clipping.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "0374ba9854f8c9f8": {
+   "id": "door_opens",
+   "f0": 138,
+   "f1": 180,
+   "faults": [],
+   "summary": "The strip is clean: the camera is locked, the figure stands almost still with no pops or flicker, though the hold is stiff.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "b567f4dfff98ef83": {
+   "id": "she_comes",
+   "f0": 180,
+   "f1": 262,
+   "faults": [],
+   "summary": "Clean cut strip: the framing, the seated man and the couch hold steady across all eight frames, with no pops, flicker or contact faults.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "44eab1e676307aac": {
+   "id": "over_him",
+   "f0": 262,
+   "f1": 304,
+   "faults": [
+    {
+     "t": 8.8,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The first frames of the shot are not yet the shot. At 8.76 both hands are raised by the chin. They sweep outward at 8.80 and 8.83, then drop to the hanging pose at 8.86. Both arms move a large distance per frame for about 4 frames before settling at 8.90.",
+     "fix": "Start the shot on the settled hanging pose, or trim the first ~5 frames so the arm travel is not on screen after the cut."
+    },
+    {
+     "t": 8.93,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is 'she looks down at him', but from 8.76 to 9.00 the head stays level and faces the camera with no downward tilt or eye lead. The held pose has both arms hanging almost symmetrically, so it reads as neutral and blank rather than judging.",
+     "fix": "Tilt the head and chin down toward him, add an eye lead, and break the arm symmetry, for example with one hand lifted or one shoulder dropped."
+    }
+   ],
+   "summary": "The shot opens with the arms still travelling from a raised pose to hanging between 8.76 and 8.86, so the cut tweens, and the held pose then reads as a blank, level stare rather than looking down at him.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "4384094927075c0c": {
+   "id": "over_her",
+   "f0": 304,
+   "f1": 345,
+   "faults": [
+    {
+     "t": 10.3,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "From 10.16 to 10.40 the head, eyes and expression barely change. He holds a flat stare with a stiff torso and no visible look-up beat or anticipation, so the 'finally looks up' idea doesn't read yet.",
+     "fix": "Add a small head tilt and eye lead, or a blink, in the first few frames of the shot. This sets up the look-up."
+    }
+   ],
+   "summary": "The cut strip is clean, with no pops, flicker or clipping, but the seated figure is almost frozen and shows no sign yet of \"he finally looks up\".",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "5d5b1e09b631c874": {
+   "id": "both",
+   "f0": 345,
+   "f1": 428,
+   "faults": [],
+   "summary": "The strip is clean: a static camera and a standing figure at the right edge with only slight drift, and no pops, flicker or clipping visible.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "a2f47e37366d4f07": {
+   "id": "hero",
+   "f0": 428,
+   "f1": 510,
+   "faults": [
+    {
+     "t": 14.26,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The figure's head is cut off by the top of the frame in the opening tiles (14.26 to 14.36) and only just peeks in at the bottom of the frame in the later tiles. The hero's face is never readable, which defeats the power idea.",
+     "fix": "Tilt the camera up or lower the framing so the head and face sit fully inside the frame with some headroom."
+    },
+    {
+     "t": 14.33,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The figure stands in a stiff, near-symmetrical pose with both arms hanging straight and both fists clenched at the same height. There is no clear line of action and no power attitude, and the silhouette is dark against a dark wall.",
+     "fix": "Give her an asymmetrical power pose, such as a weight shift, one hand on the hip, or a chest-up stance. Add rim light so the silhouette separates from the wall."
+    },
+    {
+     "t": 14.43,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "Across all 8 tiles the body barely changes. There is no breath, no hip shift and no settle after the cut, so she reads as a frozen model rather than a character taking the room.",
+     "fix": "Add a subtle weight shift or breathing, or a small hip-led move in the first half second."
+    },
+    {
+     "t": 14.3,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The coffee table cuts across her legs and the low camera angle hides her feet. Her contact with the floor can't be seen, and the table competes with her for attention.",
+     "fix": "Move the camera or the table so her feet and legs are visible, or raise the camera slightly."
+    }
+   ],
+   "summary": "The strip is stable with no pops, flicker or camera movement, but the figure is cropped at the head and stands in a stiff, symmetrical, motionless pose that doesn't read as \"she owns the room\".",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "e36948e0b932c9ae": {
+   "id": "cold_top",
+   "f0": 510,
+   "f1": 593,
+   "faults": [
+    {
+     "t": 17.03,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The seated figure is upright and symmetrical, with both arms hanging at his sides and both legs straight down. It reads as a stiff, twinned pose with no clear line of action. He also looks perched on the sofa rather than sunk into the cushion.",
+     "fix": "Tilt the head or shoulders, offset one arm or knee, and add a slight slump into the seat so the silhouette has one clear line."
+    }
+   ],
+   "summary": "The cut is clean and the camera is locked with no pops or flicker. The seated figure is nearly frozen and stiffly symmetrical across 17.03 to 17.23, but that is too short a window to judge hold or motion.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "6635a7ffc3de891d": {
+   "id": "out",
+   "f0": 593,
+   "f1": 677,
+   "faults": [],
+   "summary": "The strip is clean: the figure holds nearly the same pose in every frame with no pops, flicker or camera movement, though it is very dark.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "c0930edec518f9e2": {
+   "id": "walk",
+   "f0": 677,
+   "f1": 759,
+   "faults": [
+    {
+     "t": 22.63,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Between 22.56 and 22.66 the near arm goes from hanging at the side to raised and extended in about 4 frames, and the torso shifts at the same time. This is the start of the shot, so it looks like the cut tweening into the pose rather than a motion that starts already underway.",
+     "fix": "Start the shot with the arm already in or close to the raised pose, or trim the first 5 frames of the clip."
+    },
+    {
+     "t": 22.73,
+     "sev": "A",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "From 22.70 to 22.83 the upper arm and forearm lie across the head and face, like a dab. The face is hidden and the silhouette is a muddle of arm and head. The hand held out the other side is stiff and doesn't move between frames.",
+     "fix": "Lift the elbow and open the arm away from the head, or replace the pose with a clear walk swing so the face and silhouette read."
+    },
+    {
+     "t": 22.76,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is 'she leaves him behind', but the body is hunched with arms raised in a zombie or dab shape and the legs are crouched. It doesn't read as walking away, and the held pose is nearly frozen across 22.70 to 22.83.",
+     "fix": "Use a upright walking-away pose with a natural arm swing and hips leading, and keep any hold brief."
+    }
+   ],
+   "summary": "The arm snaps from hanging to raised in about 4 frames right after the cut, and from 22.70 the forearm sits across the face and stays there, which doesn't read as walking away.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "6db1b620be00a9af": {
+   "id": "lamp",
+   "f0": 759,
+   "f1": 6126,
+   "faults": [
+    {
+     "t": 25.36,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Right arm swings from raised near the face (25.29) to extended out (25.33) to hanging low with fist by hip (25.39) in about 3 frames. It reads as the cut tweening or a snap into pose, not a settled first frame.",
+     "fix": "Start the shot already in the hanging pose, or trim the first 6 frames of the mocap so the arm drop happens before the cut."
+    },
+    {
+     "t": 25.43,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "After the fast drop the arms stop almost dead by 25.46–25.53 with no overshoot or settle. The pose snaps and then freezes.",
+     "fix": "Add a small overshoot and ease into the hanging pose."
+    },
+    {
+     "t": 28.06,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "At 28.03 the scene goes dark. At 28.06 the background jumps to a flat orange-purple gradient and the figure becomes a near-black silhouette. The wall, floor and pillar vanish. This is a one-frame hard swap with no transition, matching the x34 difference spike.",
+     "fix": "If it is not an intended lighting cut, fix the light or background swap so it fades or cuts cleanly. If intended, make it a real cut with a consistent setup."
+    },
+    {
+     "t": 28.09,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 28.06 to 28.23 the silhouette is nearly static with arms hanging in a stiff, symmetrical pose and a blank, dead hold. No weight shift or breathing reads.",
+     "fix": "Add a subtle weight shift, breath or head move during the hold."
+    }
+   ],
+   "summary": "Arm whips fast through the cut-in frames with an abrupt snap, and the shot has a hard lighting pop at 28.06; the rest is steady.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof1",
+   "when": "2026-11-08T00:58:34.464Z"
+  },
+  "53318009ed2295d0": {
+   "id": "cold_top",
+   "f0": 510,
+   "f1": 593,
+   "faults": [],
+   "summary": "Clean cut strip: the new shot is stable from its first frame, with no pops, flicker or camera movement across 17.03 to 17.23.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof2",
+   "when": "2026-11-08T01:03:41.816Z"
+  },
+  "aa7988e3c5efadef": {
+   "id": "out",
+   "f0": 593,
+   "f1": 677,
+   "faults": [],
+   "summary": "The strip shows an almost static dark figure standing in the same pose across all frames with no camera movement, pops, or flicker; no faults are visible at this crop.",
+   "model": "claude-sonnet-5-5",
+   "label": "proof2",
+   "when": "2026-11-08T01:03:41.816Z"
+  }
+ }
+}

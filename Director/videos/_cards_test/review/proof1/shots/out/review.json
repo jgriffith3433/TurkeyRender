@@ -1,0 +1,22 @@
+{
+ "id": "out",
+ "f0": 593,
+ "f1": 677,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 19.767,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "564c57d09bb06f0a",
+ "summary": "The strip is clean: the figure holds nearly the same pose in every frame with no pops, flicker or camera movement, though it is very dark.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3549,
+  "out": 118
+ },
+ "cost": 0.0083
+}

@@ -1,0 +1,130 @@
+{
+ "name": "mx_sit_still",
+ "fps": 30,
+ "frames": 91,
+ "seconds": 3,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 0,
+  "flatness": null,
+  "abruptFrac": null,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 3,
+  "fastRunMedianS": null,
+  "dynRange": 1.38,
+  "handPeak": null,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.18,
+  "lagMedianFrames": 0,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 0.37,
+  "plantedFrac": 0.99,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": null,
+  "deadJoints": 11,
+  "deadJointNames": [
+   "Hips",
+   "Spine",
+   "Chest",
+   "Neck",
+   "Head",
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperArm",
+   "RightUpperArm",
+   "LeftUpperLeg",
+   "RightUpperLeg"
+  ],
+  "readability": 0.62,
+  "twinnedFrac": 1,
+  "curlMedian": 3.84,
+  "spreadMedian": 6.38,
+  "fannedFrac": 0,
+  "bowMedian": 1.3,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 1.73,
+  "armOmegaP95": 12.28,
+  "legOmegaP95": 13.56,
+  "spineOmegaP50": 0,
+  "spineOmegaP95": 12.97,
+  "headOmegaP50": 2.27,
+  "headOmegaP95": 12.9,
+  "armAccP95": 325.02,
+  "spineAccP95": 303.62,
+  "handSpeedP50": 0,
+  "handSpeedP95": 0.02,
+  "spineToArm": 0,
+  "energyCV": 0.24,
+  "moveRate": 0
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 3 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 0 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 3 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.5,
+   "note": "6 key poses, readability 0.62 (best of front, side, three-quarter), 100% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 4 deg, spread 6 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [],
+ "worst": [],
+ "total": 9.8,
+ "verdict": "reads as human (9.8/10)"
+}

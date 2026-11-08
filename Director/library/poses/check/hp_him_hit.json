@@ -1,0 +1,317 @@
+{
+  "clip": "hp_him_hit",
+  "length": 5.0,
+  "derived": {
+    "clip": "hp_him_hit",
+    "file": "Assets/MusicVideo/Motion/Keyed/hp_him_hit.anim",
+    "length": 5.0,
+    "loop": false,
+    "keys": 4,
+    "samples": 217,
+    "stepped": 10,
+    "additive": false,
+    "seed": "mx_sit_still__clean",
+    "humanScale": 1.0403,
+    "warnings": []
+  },
+  "contact": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_him_hit.png",
+  "keys": [
+    {
+      "key": "sit",
+      "t": 0.0,
+      "interp": "ease",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 85.9,
+            "hipAbd": 69.7,
+            "knee": 53.8,
+            "anklePF": 30.1,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": -0.6,
+            "shAbd": 31.1,
+            "elbow": 65.8
+          },
+          "fingerCurl": 22.2
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 86.4,
+            "hipAbd": 63.2,
+            "knee": 54.3,
+            "anklePF": 30.6,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 3.0,
+            "shAbd": 19.3,
+            "elbow": 58.9
+          },
+          "fingerCurl": 17.9
+        },
+        "neckFlex": 0.0,
+        "waistFlex": 8.1,
+        "torsoFromVertical": 4.4,
+        "headPitchWorld": -0.9
+      }
+    },
+    {
+      "key": "snap",
+      "t": 2.792,
+      "interp": "step",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 85.9,
+            "hipAbd": 69.7,
+            "knee": 53.8,
+            "anklePF": 30.1,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": -0.7,
+            "shAbd": 31.1,
+            "elbow": 65.9
+          },
+          "fingerCurl": 22.3
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 86.4,
+            "hipAbd": 63.2,
+            "knee": 54.3,
+            "anklePF": 30.6,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 3.0,
+            "shAbd": 19.3,
+            "elbow": 58.9
+          },
+          "fingerCurl": 17.9
+        },
+        "neckFlex": -57.3,
+        "waistFlex": -26.1,
+        "torsoFromVertical": 9.8,
+        "headPitchWorld": 65.1
+      }
+    },
+    {
+      "key": "snap_far",
+      "t": 3.042,
+      "interp": "out",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 85.9,
+            "hipAbd": 69.7,
+            "knee": 53.8,
+            "anklePF": 30.1,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": -0.8,
+            "shAbd": 31.2,
+            "elbow": 66.1
+          },
+          "fingerCurl": 22.1
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 86.4,
+            "hipAbd": 63.0,
+            "knee": 54.3,
+            "anklePF": 30.6,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 2.9,
+            "shAbd": 19.3,
+            "elbow": 59.0
+          },
+          "fingerCurl": 18.0
+        },
+        "neckFlex": -51.8,
+        "waistFlex": -23.2,
+        "torsoFromVertical": 9.3,
+        "headPitchWorld": 58.6
+      }
+    },
+    {
+      "key": "launch",
+      "t": 3.458,
+      "interp": "out on 2s",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 77.1,
+            "hipAbd": 44.6,
+            "knee": 23.7,
+            "anklePF": 26.2,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 84.0,
+            "shAbd": 76.1,
+            "elbow": 40.8
+          },
+          "fingerCurl": 5.8
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 68.6,
+            "hipAbd": 23.9,
+            "knee": 27.0,
+            "anklePF": 26.4,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 78.3,
+            "shAbd": 74.4,
+            "elbow": 36.2
+          },
+          "fingerCurl": 5.2
+        },
+        "neckFlex": -18.4,
+        "waistFlex": -11.6,
+        "torsoFromVertical": 38.1,
+        "headPitchWorld": 57.6
+      }
+    }
+  ],
+  "muscles": [
+    {
+      "name": "sit",
+      "t": 0.0,
+      "interp": "ease",
+      "hold": 2.5,
+      "step": 0,
+      "show": 0.0,
+      "muscles": {}
+    },
+    {
+      "name": "snap",
+      "t": 2.7917,
+      "interp": "step",
+      "hold": 0.0,
+      "step": 0,
+      "show": 2.7917,
+      "muscles": {
+        "Spine Front-Back": 0.38,
+        "Chest Front-Back": 0.476,
+        "Neck Nod Down-Up": 0.6,
+        "Neck Turn Left-Right": 0.15,
+        "Head Nod Down-Up": 0.902,
+        "Head Tilt Left-Right": 0.504,
+        "Head Turn Left-Right": 0.25,
+        "Right Thumb 2 Stretched": -0.093
+      }
+    },
+    {
+      "name": "snap_far",
+      "t": 3.0417,
+      "interp": "out",
+      "hold": 0.25,
+      "step": 0,
+      "show": 3.0417,
+      "muscles": {
+        "Spine Front-Back": 0.384,
+        "Chest Front-Back": 0.4,
+        "Neck Nod Down-Up": 0.496,
+        "Neck Turn Left-Right": 0.2,
+        "Head Nod Down-Up": 0.846,
+        "Head Tilt Left-Right": 0.402,
+        "Head Turn Left-Right": 0.302,
+        "Left Shoulder Front-Back": -0.253,
+        "Left Ring Spread": -0.021,
+        "Right Thumb 2 Stretched": -0.095
+      }
+    },
+    {
+      "name": "launch",
+      "t": 3.4583,
+      "interp": "out",
+      "hold": 1.2,
+      "step": 2,
+      "show": 3.4583,
+      "muscles": {
+        "Spine Front-Back": 0.25,
+        "Chest Front-Back": 0.2,
+        "Neck Nod Down-Up": 0.2,
+        "Head Nod Down-Up": 0.15,
+        "Head Tilt Left-Right": 0.402,
+        "Left Upper Leg Front-Back": -0.55,
+        "Left Lower Leg Stretch": 0.75,
+        "Left Foot Up-Down": 0.6,
+        "Right Upper Leg Front-Back": -0.45,
+        "Right Lower Leg Stretch": 0.7,
+        "Right Foot Up-Down": 0.6,
+        "Left Shoulder Front-Back": -0.253,
+        "Left Arm Down-Up": 0.35,
+        "Left Arm Front-Back": -0.5,
+        "Left Forearm Stretch": 0.6,
+        "Right Arm Down-Up": 0.4,
+        "Right Arm Front-Back": -0.45,
+        "Right Forearm Stretch": 0.65,
+        "Left Thumb 1 Stretched": 0.8,
+        "Left Thumb Spread": 0.6,
+        "Left Thumb 2 Stretched": 0.8,
+        "Left Thumb 3 Stretched": 0.8,
+        "Left Index 1 Stretched": 0.8,
+        "Left Index Spread": 0.6,
+        "Left Index 2 Stretched": 0.8,
+        "Left Index 3 Stretched": 0.8,
+        "Left Middle 1 Stretched": 0.8,
+        "Left Middle Spread": 0.6,
+        "Left Middle 2 Stretched": 0.8,
+        "Left Middle 3 Stretched": 0.8,
+        "Left Ring 1 Stretched": 0.8,
+        "Left Ring Spread": 0.6,
+        "Left Ring 2 Stretched": 0.8,
+        "Left Ring 3 Stretched": 0.8,
+        "Left Little 1 Stretched": 0.8,
+        "Left Little Spread": 0.6,
+        "Left Little 2 Stretched": 0.8,
+        "Left Little 3 Stretched": 0.8,
+        "Right Thumb 1 Stretched": 0.8,
+        "Right Thumb Spread": 0.6,
+        "Right Thumb 2 Stretched": 0.8,
+        "Right Thumb 3 Stretched": 0.8,
+        "Right Index 1 Stretched": 0.8,
+        "Right Index Spread": 0.6,
+        "Right Index 2 Stretched": 0.8,
+        "Right Index 3 Stretched": 0.8,
+        "Right Middle 1 Stretched": 0.8,
+        "Right Middle Spread": 0.6,
+        "Right Middle 2 Stretched": 0.8,
+        "Right Middle 3 Stretched": 0.8,
+        "Right Ring 1 Stretched": 0.8,
+        "Right Ring Spread": 0.6,
+        "Right Ring 2 Stretched": 0.8,
+        "Right Ring 3 Stretched": 0.8,
+        "Right Little 1 Stretched": 0.8,
+        "Right Little Spread": 0.6,
+        "Right Little 2 Stretched": 0.8,
+        "Right Little 3 Stretched": 0.8
+      }
+    }
+  ],
+  "playback": {
+    "mp4": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_him_hit.mp4",
+    "fps": 24.0,
+    "frames": 120,
+    "worstBoneStepDeg": 74.3,
+    "worstBone": "LeftUpperArm",
+    "worstAt": 3.375,
+    "toeAngleRange": [
+      0.0,
+      0.0
+    ],
+    "neckFlexRange": [
+      -57.3,
+      0.0
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+ "name": "g_bow",
+ "about": "A quick formal bow from the waist, hands at the sides, from mx_bow_formal (0.3-1.8 s). Legs stay as they are.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.5s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_bow_formal",
+  "mask": "upper",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.3,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

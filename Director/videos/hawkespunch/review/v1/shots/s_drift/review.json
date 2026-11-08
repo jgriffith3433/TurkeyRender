@@ -1,0 +1,39 @@
+{
+ "id": "s_drift",
+ "f0": 2496,
+ "f1": 2534,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 83.2,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "def98dcfb1d4db54",
+ "summary": "No pops, flicker or camera moves in the strip, but the near-black body sits on the dark blue Earth and is hard to read, and he looks stiff and barely tumbles.",
+ "faults": [
+  {
+   "t": 83.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The torso and legs are almost black against the dark blue Earth. Only the hands and forearms read, so the line of action is lost. The arms are spread wide and nearly symmetrical, which looks stiff.",
+   "fix": "Rim-light the body or shift the Earth so he sits against the lighter space background. Break the arm symmetry."
+  },
+  {
+   "t": 83.39,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Across 83.23 to 83.46 the pose hardly changes. The idea is loose, slow tumbling, but he reads as a rigid cutout pasted on the planet with no rotation or limb drift.",
+   "fix": "Add a slow roll and a slight offset in the arms and legs so he visibly tumbles."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3585,
+  "out": 783
+ },
+ "cost": 0.015
+}

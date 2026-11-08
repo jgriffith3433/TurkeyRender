@@ -1,0 +1,41 @@
+{
+ "op": "insert",
+ "video": "hawkespunch",
+ "at": "end",
+ "length": "5b",
+ "beat": 318,
+ "beats": 5,
+ "T": 200.161,
+ "seconds": 3.145,
+ "ibi": 0.629,
+ "bar": "80:3",
+ "files": {
+  "song.json": {
+   "beats": "318 -> 323",
+   "duration": "200.187 -> 203.332"
+  }
+ },
+ "warnings": [
+  "acts/70-lines.json is made by tools/punch_lines.mjs from lines.json: both are moved, so running the tool again gives the same times",
+  "bass.wav is 180.02 s, shorter than the point: nothing to splice",
+  "drums.wav is 180.02 s, shorter than the point: nothing to splice",
+  "other.wav is 180.02 s, shorter than the point: nothing to splice",
+  "vocals.wav is 180.02 s, shorter than the point: nothing to splice"
+ ],
+ "blockers": [],
+ "audio": [
+  "Assets/Videos/hawkespunch/Song/audio.mp3",
+  "Director/videos/hawkespunch/audio.mp3",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/bass.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/drums.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/other.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/vocals.wav"
+ ],
+ "proof": {
+  "cards": 73,
+  "checked": 73,
+  "bad": []
+ },
+ "map": "t >= 200.161 s -> t + 3.145 s; beat >= 318 -> beat + 5",
+ "backup": "videos/hawkespunch/_backup/insert-80_3-5b-2026-11-08T01-09-59"
+}

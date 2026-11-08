@@ -1,0 +1,111 @@
+# Hawkes Punch, the commercial: 2000s daytime TV folding out of the stars. Commercial origin is [900,0,0]. Marks: library/sets/commercial.json.
+# He is on stool_l, the other on stool_r; both pitch to the lens. Lower thirds and the side-effects ticker are gfx cues. The announcer is acts/70-lines.json (156.6-170 s).
+
+- id: tv_fold
+  idea: the set folds up out of the stars around them, piece by piece on the fill, and lands on the chorus
+  feel: ta-da
+  mood: tv_cheese
+  cast: {person: {at: stool_l, perform: sit_stool_pitch, args: {can: commercial_can_a, me: person, cam: [-0.6, 1.3, 4.9]}}, other: {at: stool_r, perform: sit_stool_pitch, args: {can: commercial_can_b, me: other, cam: [0.6, 1.3, 4.9]}}}
+  camera: {preset: spot, from: fold_cam, on: fold_aim, lens: 28}
+  raw:
+    - {at: 0, sky: {top: "#03040a", mid: "#04050c", bottom: "#020309", stars: 1, ambient: "#1a1424", density: 0}, for: 0}
+    - {at: 0.75s, sky: {top: "#ffd9ec", mid: "#fff2f7", bottom: "#e9d6ff", stars: 0, ambient: "#b9a7b6", density: 0}, for: 0.4s}
+    - {at: 0, do: pop, on: commercial_floor, for: 0.4b}
+    - {at: 0, do: pop, on: commercial_floor_edge, for: 0.4b}
+    - {at: 0.05s, do: fold, on: [commercial_backdrop_c, commercial_backdrop_l, commercial_backdrop_r, commercial_flat_pink, commercial_flat_blue, commercial_flat_yellow, commercial_sign, commercial_stool_l, commercial_stool_r, commercial_can_table, commercial_can_big, commercial_light_fl, commercial_light_fr, commercial_light_bl, commercial_light_br, commercial_boom, commercial_tv_cam_a, commercial_tv_cam_b], pivot: [0, 0, 0], axis: [1, 0, 0], angle: -90, for: 0.45s, stagger: 0.04s, ease: back, sfx: wood_scrape, sfxVolume: 0.5}
+
+- id: tv_wide
+  idea: the whole set: pastel, the sign, two stools, a giant can, and the two of them smiling at us; a lower third
+  feel: cheesy, bright
+  cast: {person: {at: stool_l, perform: sit_stool_pitch}, other: {at: stool_r, perform: sit_stool_pitch}}
+  camera: {preset: spot, from: lens_wide, on: set_aim, lens: 28}
+  raw:
+    - {at: 0.3b, gfx: lower, title: "HAWKES PUNCH", sub: "Ask your doctor", color: "#ff2a6a", for: 3.4b}
+
+- id: tv_him
+  idea: he pitches it to the lens, can up, the big smile, "swallow the sky"
+  feel: morning show
+  cast: {person: {at: stool_l, perform: sit_stool_pitch}, other: {at: stool_r, perform: sit_stool_pitch}}
+  camera: {preset: spot, from: lens_cu_l, on: person, lens: 50}
+  raw:
+    - {at: 0.2b, gfx: lower, title: "HIM", sub: "Patient. 1 of a healthy amount", color: "#ff2a6a", for: 3.5b}
+
+- id: tv_other
+  idea: the other one points right down the lens: "you're just one in a healthy amount"
+  feel: you
+  cast: {person: {at: stool_l, perform: sit_stool_pitch}, other: {at: stool_r, perform: point_at_lens, args: {hold: 1.0, cam: [0, 1.35, 1.9]}}}
+  camera: {preset: spot, from: lens_cu_r, on: other, lens: 50}
+  raw:
+    - {at: 0.2b, gfx: lower, title: "ALSO HIM", sub: "Also a patient", color: "#ff2a6a", for: 3.5b}
+
+- id: tv_can
+  idea: the giant can, turning slowly, lit like a car
+  feel: product
+  mood: tv_hot
+  cast: {person: {at: stool_l, perform: sit_stool_pitch}, other: {at: stool_r, perform: sit_stool_pitch}}
+  camera: {preset: spot, from: lens_can, on: can_aim, lens: 35}
+  raw:
+    - {at: 0, do: rotate, on: commercial_can_big, rot: [0, -20, 0], for: 0}
+    - {at: 0.01s, do: rotate, on: commercial_can_big, rot: [0, 30, 0], for: 2b, ease: linear}
+    - {at: 0.3b, gfx: bug, text: "HAWKES PUNCH", box: "#ff2a6a", for: 40b}
+
+- id: tv_both
+  idea: "here comes the floor": both drink, heads back, three swallows, ahh
+  feel: refreshing
+  cast: {person: {at: stool_l, perform: drink_can, args: {can: commercial_can_a, me: person, cam: [-0.6, 1.3, 4.9]}}, other: {at: stool_r, perform: drink_can, args: {can: commercial_can_b, me: other, cam: [0.6, 1.3, 4.9]}}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 35}
+
+- id: tv_thumbs
+  idea: "you asked for more": two thumbs up to the lens, two winks
+  feel: sold
+  cast: {person: {at: stool_l, perform: thumbs_up, args: {hold: 1.2, cam: [-0.6, 1.3, 4.9]}}, other: {at: stool_r, perform: thumbs_up, args: {hold: 1.2, cam: [0.6, 1.3, 4.9]}}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 40}
+  raw:
+    - {at: 0.2b, gfx: phone, text: "IS IT RIGHT FOR YOU?", color: "#ffd000", for: 3.6b}
+
+- id: tv_ticker
+  idea: the announcer reads the small print while a side-effects ticker scrolls too fast to read; they nod along
+  feel: legally required
+  cast: {person: {at: stool_l, perform: sit_stool_pitch, args: {can: commercial_can_a, me: person, cam: [-0.6, 1.3, 4.9]}}, other: {at: stool_r, perform: sit_stool_pitch, args: {can: commercial_can_b, me: other, cam: [0.6, 1.3, 4.9]}}}
+  camera: {preset: spot, from: lens_b, on: set_aim, lens: 38, push: 0.12}
+  raw:
+    - {at: 0.5b, gfx: ticker, label: "IMPORTANT", text: "SIDE EFFECTS MAY INCLUDE SUDDEN FLIGHT, A SECOND YOU, MILD PLANET THROWING, FOREHEAD CONTACT AND BEING ONE OF A HEALTHY AMOUNT OF PEOPLE. HAWKES PUNCH IS NOT FOR EVERYONE. IT IS FOR EVERYONE LIKE YOU. DO NOT TAKE HAWKES PUNCH IF YOU ARE ALLERGIC TO HAWKES PUNCH. ASK YOUR DOCTOR.", speed: 520, color: "#ff2a6a", for: 21b}
+    - {at: 2b, do: perform, on: other, name: g_nod, for: 1.4s}
+    - {at: 4b, do: perform, on: person, name: g_nod, for: 1.4s}
+
+- id: tv_ahh
+  idea: "say ahh": he does, to the lens
+  feel: open wide
+  cast: {person: {at: stool_l, perform: tongue_out, args: {to: [0, 1.4, 1.9], open: 0.85}}, other: {at: stool_r, perform: sit_stool_pitch}}
+  camera: {preset: spot, from: lens_cu_l, on: person, lens: 55}
+
+- id: tv_ahh2
+  idea: "say ahh": the other, wider
+  feel: wider
+  cast: {person: {at: stool_l, perform: sit_stool_pitch, args: {can: commercial_can_a, me: person, cam: [-0.6, 1.3, 4.9]}}, other: {at: stool_r, perform: tongue_out, args: {to: [0, 1.4, 1.9], open: 0.95}}}
+  camera: {preset: spot, from: lens_cu_r, on: other, lens: 55}
+
+- id: tv_ahh3
+  idea: both, together, to the main lens
+  feel: say ahh
+  cast: {person: {at: stool_l, perform: tongue_out, args: {to: [-0.5, 1.35, 4.9], open: 0.9}}, other: {at: stool_r, perform: sit_stool_pitch, args: {can: commercial_can_b, me: other, cam: [0.6, 1.3, 4.9]}}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 40}
+  raw:
+    - {at: 0.05s, do: perform, on: other, name: tongue_out, to: [0.5, 1.35, 4.9], open: 0.9, for: 1.8s}
+
+- id: tv_sign
+  idea: the crane looks down over the sign and the giant can; the two of them hold the smile
+  feel: the end of the ad
+  mood: tv_hot
+  cast: {person: {at: stool_l, perform: sit_stool_pitch, args: {can: commercial_can_a, me: person, cam: [-0.6, 1.3, 4.9]}}, other: {at: stool_r, perform: sit_stool_pitch, args: {can: commercial_can_b, me: other, cam: [0.6, 1.3, 4.9]}}}
+  camera: {preset: spot, from: lens_crane, on: sign, lens: 30}
+
+- id: tv_hold
+  idea: wide again, the smiles held too long, two thumbs up on the last fill
+  feel: still smiling
+  cast: {person: {at: stool_l, perform: sit_stool_pitch}, other: {at: stool_r, perform: sit_stool_pitch}}
+  camera: {preset: spot, from: lens_wide, on: set_aim, lens: 28}
+  raw:
+    - {at: 0.2b, gfx: phone, text: "ASK YOUR DOCTOR", color: "#ffd000", for: 2.8b}
+    - {at: 1b, do: perform, on: person, name: thumbs_up, hold: 2, cam: [-0.6, 1.3, 4.9]}
+    - {at: 1.2b, do: perform, on: other, name: thumbs_up, hold: 2, cam: [0.6, 1.3, 4.9]}

@@ -1,0 +1,172 @@
+- id: door_opens
+  idea: the back door swings open on a dark house, and for a moment nobody comes
+  feel: is anyone in there
+  camera: {preset: spot, from: door_cam, on: door_aim, lens: 40}
+  raw:
+    - {at: 0, do: attach, on: backyard_door_leaf, to: backyard_door_hinge, pos: [0.52, 0, 0], rot: [0, 0, 0]}
+    - {at: 1b, do: rotate, on: backyard_door_hinge, rot: [0, 100, 0], for: 2.5b, ease: inout, sfx: wood_scrape, sfxVolume: 0.25}
+
+- id: in_doorway
+  idea: he edges out of the dark onto the porch
+  feel: a man who has not been outside in a long time
+  cast: {person: {at: doorway, to: porch, perform: walk_out_door, face: 180}}
+  camera: {preset: medium, on: person, frame: 2.3, angle: 6}
+
+- id: sun_blink
+  idea: the sun hits his eyes and he squints, half hurt, half curious
+  feel: light he had forgotten
+  cast: {person: {at: porch, perform: squint_at_sun}}
+  camera: close-up person
+  raw:
+    - {at: 2.6b, do: perform, on: person, name: micro_life, amt: 5, soft: 0, for: 3.3s}
+  events:
+    - {on: 0.01b, grade: {exposure: 1.35, bloom: 1.2}, for: 0.1s}
+    - {on: 0.2b, grade: {exposure: 0.55, bloom: 0.6}, for: 3b, ease: out}
+
+- id: the_yard
+  idea: what he sees, a green empty yard in soft morning light
+  feel: the size of the world
+  camera: {preset: spot, from: door_eye, on: yard_view, lens: 32}
+
+- id: first_step
+  idea: one foot goes down onto the grass, tentative
+  feel: testing the ice
+  cast: {person: {at: step_off, to: yard_a, perform: walk_out_door, face: 153}}
+  camera: {preset: spot, from: foot_cam, on: person.foot, lens: 85}
+
+- id: sparrow
+  idea: a tiny bird on the rail sings once
+  feel: harmless
+  cast: {sparrow: {at: rail}}
+  camera: {preset: close-up, on: rail, dist: 1.25, height: 1.55, screen: [-0.1, -0.2]}
+  raw:
+    - {at: 0.3b, do: hop, on: sparrow, height: 0.015, for: 0.2b}
+    - {at: 1.2b, do: hop, on: sparrow, height: 0.012, for: 0.2b}
+    - {at: 0.3b, sfx: "Assets/Procedural Worlds/Ambient Sounds/Audio/Sounds/Birds/sfx-birds-sparrow_0-2.wav", volume: 0.9}
+
+- id: flinch_bird
+  idea: he jumps at a bird song
+  feel: funny, a little sad
+  cast: {person: {at: yard_a, perform: flinch_small, args: {side: -1}}}
+  camera: medium person
+  events:
+    - {on: 1.2b, who: person, do: gaze, to: [301.2, 1.6, 3.55], for: 0.5s, ease: inout, limit: 38}
+    - {on: 2.4b, who: person, do: gaze, weight: 0, for: 0.35s, ease: inout}
+
+- id: check_behind
+  idea: he checks over his shoulder at the door, nobody there
+  feel: the fear he carried out with him
+  cast: {person: {perform: look_over_shoulder, args: {side: 1}}}
+  camera: {preset: medium, on: person, side: left}
+
+- id: cross_wide
+  idea: he is small on a big lawn, picking his way across
+  feel: careful, exposed
+  cast: {person: {to: yard_b, perform: walk_out_door}}
+  camera: {preset: spot, from: corner_cam, on: person, lens: 32}
+
+- id: sprinkler_on
+  idea: the sprinkler head starts ticking by itself, tsk tsk tsk
+  feel: an ambush by a garden tool
+  camera: {preset: medium, on: sprinkler_head, dist: 1.5, height: 0.42, screen: [0.12, 0.05]}
+  raw:
+    - {at: 0.5b, sfx: Assets/Videos/touchgrass/Sfx/sprinkler.wav, volume: 0.7}
+    - {at: 0.5b, do: rotate, on: sprinkler_head, rot: [0, 180, 0], for: 0.12b}
+    - {at: 1b, do: rotate, on: sprinkler_head, rot: [0, 166, 0], for: 0.12b}
+    - {at: 1.5b, do: rotate, on: sprinkler_head, rot: [0, 152, 0], for: 0.12b}
+    - {at: 2b, do: rotate, on: sprinkler_head, rot: [0, 138, 0], for: 0.12b}
+    - {at: 2.5b, do: rotate, on: sprinkler_head, rot: [0, 124, 0], for: 0.12b}
+    - {at: 3b, do: rotate, on: sprinkler_head, rot: [0, 110, 0], for: 0.12b}
+    - {at: 3.5b, do: rotate, on: sprinkler_head, rot: [0, 96, 0], for: 0.12b}
+    - {at: 4b, do: rotate, on: sprinkler_head, rot: [0, 82, 0], for: 0.12b}
+    - {at: 4.5b, do: rotate, on: sprinkler_head, rot: [0, 68, 0], for: 0.12b}
+    - {at: 0.5b, fx: stream, pos: [303.050, 0.32, 1.200], to: [2.00, 0, 0.90], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 1b, fx: stream, pos: [303.054, 0.32, 1.236], to: [1.95, 0, 1.18], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 1.5b, fx: stream, pos: [303.068, 0.32, 1.270], to: [1.90, 0, 1.46], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 2b, fx: stream, pos: [303.089, 0.32, 1.300], to: [1.85, 0, 1.74], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 2.5b, fx: stream, pos: [303.116, 0.32, 1.324], to: [1.80, 0, 2.02], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 3b, fx: stream, pos: [303.149, 0.32, 1.341], to: [1.75, 0, 2.30], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 3.5b, fx: stream, pos: [303.184, 0.32, 1.349], to: [1.70, 0, 2.58], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 4b, fx: stream, pos: [303.221, 0.32, 1.349], to: [1.65, 0, 2.86], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+    - {at: 4.5b, fx: stream, pos: [303.256, 0.32, 1.339], to: [1.60, 0, 3.14], dir: [-0.5, 0.8, 0.1], push: 0.8, rate: 6000, life: 0.8, spread: 0.12, swirl: 0, drag: 0.4, size: 0.01, color: "#f2f9ff", color2: "#bcdcf6", for: 0.2b}
+
+- id: flinch_water
+  idea: he flinches again, then almost laughs at himself
+  feel: oh, come on
+  cast: {person: {at: yard_b, perform: flinch_small, args: {side: 1}}}
+  camera: close-up person
+  events:
+    - {on: 1.3b, who: person, do: eyes, yaw: 7, pitch: -2, for: 0.07s}
+    - {on: 2.1b, who: person, do: eyes, yaw: 0, pitch: 0, for: 0.09s}
+
+- id: go_on
+  idea: he goes on, a little straighter, still glancing back
+  feel: nerve coming back
+  cast: {person: {to: stop, perform: walk_out_door, face: 153}}
+  camera: tracking person
+
+- id: stop_breathe
+  idea: he stops in the middle of the lawn and takes one full breath
+  feel: stillness, the first real breath in years
+  cast: {person: {at: stop, perform: step_stop}}
+  camera: medium person
+  events:
+    - {on: 2b, who: person, do: perform, name: breathe_deep, for: 3.9s}
+
+- id: kneels
+  idea: he folds down to one knee, slowly, looking at the grass
+  feel: reverence, a bit silly
+  cast: {person: {at: stop, perform: kneel_down}}
+  camera: {preset: medium, on: person, frame: 1.7}
+
+- id: hand
+  idea: his fingers go down into the grass
+  feel: the world is real, it touches back
+  cast: {person: {at: kneel, perform: touch_grass, args: {hold: 2.6, smile: 0, down: 0.045, reachFor: 0.9, open: 0.1, rise: 4.9}}}
+  camera: {preset: spot, from: hand_cam, on: hand_spot, lens: 85}
+  shot: {focus: person.rightHand, aperture: 2.8}
+  events:
+    - {on: 4b, who: person, do: fingers, hand: right, set: 0.2, for: 1b, ease: inout}
+    - {on: 5.5b, who: person, do: fingers, hand: right, set: 0.08, for: 1b, ease: inout}
+
+- id: smile
+  idea: for the first time, he smiles
+  feel: relief, the whole film lands here
+  cast: {person: {at: kneel, perform: touch_grass, args: {hold: 2.6, smile: 0, down: 0.045, reachFor: 0.9, open: 0.1, rise: 4.9}}}
+  camera: {preset: close-up, on: person, push: 0.12, height: 1.31}
+  mood: warm
+  events:
+    - {on: 0.01b, who: person, do: layer, clip: IdleBreathe, additive: 1, mask: upper, weight: 1, blend: 0.4s}
+    - {on: 2b, who: person, do: perform, name: smile_relief, pitch: -11, for: 5s}
+    - {on: 0.5b, who: person, do: pose, bones: {neck: [-6, 0, 0], chest: [-9, 0, 0], spine: [-6, 0, 0]}, for: 2.5b, ease: inout}
+
+- id: lies_back
+  idea: he lets himself fall back onto the lawn
+  feel: giving up, the good kind
+  cast: {person: {at: sit, perform: lie_back, args: {blend: 0}}}
+  camera: {preset: wide, on: person, frame: 2.2, height: 0.8}
+
+- id: sky
+  idea: clouds drift, nothing is asking anything of him
+  feel: nothing to do
+  camera: {preset: spot, from: cloud_cam, on: cloud_aim, lens: 24}
+
+- id: clouds_face
+  idea: he watches the clouds from flat on his back, still smiling
+  feel: peace
+  cast: {person: {at: lie, perform: look_at_clouds}}
+  camera: {preset: spot, from: face_cam, on: lie_head, lens: 72, screen: [0, 0.02]}
+  shot: {focus: person.head, aperture: 4}
+  events:
+    - {on: 0.01b, who: person, do: layer, clip: IdleBreathe, additive: 1, mask: upper, weight: 1, blend: 0.4s}
+    - {on: 0.1b, who: person, do: perform, name: micro_life, amt: 6, soft: 0, for: 4s}
+
+- id: watching
+  idea: far across the field on the fence, a tiny turkey in a red tie is watching him
+  feel: oh no, and he does not know
+  cast: {person: {at: lie, perform: look_at_clouds}, tie_bird: {at: fence_perch, clip: idle}, bird_tie: {at: fence_perch}}
+  camera: {preset: spot, from: field_cam, on: field_aim, lens: 32}
+  use: {rack_focus: {from: person.chest, to: tie_bird, at: 2.5b, for: 2b, aperture: 1.4}}
+  raw:
+    - {at: 6.5b, do: rotate, on: tie_bird, rot: [0, 45, 0], for: 0.5b, ease: inout}
+    - {at: 0.01b, do: attach, on: bird_tie, to: tie_bird.neck3, pos: [0, 0.015, 0.03], rot: [0, 0, 0]}

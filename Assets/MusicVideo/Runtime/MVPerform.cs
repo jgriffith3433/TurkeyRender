@@ -63,8 +63,13 @@ namespace TKShock.MV
         {
             double len = clip.length, local;
             float cycle = op.a.F("beats"), speed = op.a.F("speed", 1);
-            if (cycle > 0) local = (Song.BeatAt(op.start + tl) - Song.BeatAt(op.start)) / cycle * len; else local = tl * speed;
-            local += op.a.F("offset") * len + op.a.F("start");
+            var warp = WarpOf(op);
+            if (warp != null) local = warp.Eval(tl);
+            else
+            {
+                if (cycle > 0) local = (Song.BeatAt(op.start + tl) - Song.BeatAt(op.start)) / cycle * len; else local = tl * speed;
+                local += op.a.F("offset") * len + op.a.F("start");
+            }
             if (op.a.F("once") > 0) local = Math.Min(local, op.a.Has("stop") ? op.a.F("stop") : len);
             return local;
         }
@@ -75,7 +80,7 @@ namespace TKShock.MV
             if (_rootCut.TryGetValue(op.index, out var c)) return c;
             c = double.MaxValue;
             foreach (var o in Ops)
-                if (o.start > op.start && (o.kind == "anim" || o.kind == "walk") && o.a.F("each") <= 0) { c = o.ws - op.ws + o.a.F("blend", .2f) * .5f; break; }
+                if (o.start > op.start && (o.kind == "anim" || o.kind == "walk" || o.kind == "rootanim" || o.kind == "rootwalk") && o.a.F("each") <= 0) { c = o.ws - op.ws + o.a.F("blend", .2f) * .5f; break; }
             return _rootCut[op.index] = c;
         }
 
@@ -416,8 +421,12 @@ namespace TKShock.MV
             for (int i = 0; i < n; i++) _rig[i].GetLocalPositionAndRotation(out _bp[i], out _bq[i]);
             _frame++;
             float tau = (float)tl, w = 1;
-            if (ks.blend > 0) w = Ease.Apply("inout", tau / ks.blend);
-            if (tl > ks.relStart) w *= 1 - Ease.Apply("inout", (float)((tl - ks.relStart) / ks.relLen));
+            if (Inert(op)) { if (Past(tl, ks.relStart)) return; }
+            else
+            {
+                if (ks.blend > 0) w = Ease.Apply("inout", tau / ks.blend);
+                if (tl > ks.relStart) w *= 1 - Ease.Apply("inout", (float)((tl - ks.relStart) / ks.relLen));
+            }
             if (w <= 0) return;
             if (_segs.Length < _clsStep.Length) _segs = new Seg[_clsStep.Length];
             int lo = nk, hi = 0;

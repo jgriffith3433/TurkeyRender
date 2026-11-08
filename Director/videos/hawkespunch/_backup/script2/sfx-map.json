@@ -1,0 +1,792 @@
+[
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 17.77400016784668,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\chair_creak_a.mp3",
+    "t": 20.390011869430541,
+    "volume": 0.25
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\pen_scratch_a.mp3",
+    "t": 26.092720797157288,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\pen_scratch_a.mp3",
+    "t": 38.993030129623413,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\pen_scratch_a.mp3",
+    "t": 46.931760051345826,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\pen_scratch_a.mp3",
+    "t": 50.67802194213867,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 73.119003295898438,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\glass_ring.mp3",
+    "t": 73.119003295898438,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\frame_tick.mp3",
+    "t": 92.485990414428713,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 103.05440063476563,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\turkey_gobble_2.mp3",
+    "t": 107.33160095214843,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 109.2379820678711,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\couch_slam.mp3",
+    "t": 118.21130218505859,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\feather_whoosh.mp3",
+    "t": 129.36296749267578,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\wood_scrape.mp3",
+    "t": 159.95801008605957,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\pen_scratch_a.mp3",
+    "t": 168.91301873779295,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\impact_big.mp3",
+    "t": 197.64500427246094,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\symptoms\\doctor_ask.mp3",
+    "t": 20.54,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\symptoms\\him_symptoms_tight.mp3",
+    "t": 22.866,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\symptoms\\doctor_space_ghost.mp3",
+    "t": 45.133,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\symptoms\\him_space_ghost.mp3",
+    "t": 47.526,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\doctor_rx_a.mp3",
+    "t": 55.125,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\doctor_line_a.mp3",
+    "t": 63.315,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_scream_flight_cut.mp3",
+    "t": 80.4,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_silence.mp3",
+    "t": 84.6,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_more_music.mp3",
+    "t": 86.5,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_out_here.mp3",
+    "t": 88.45,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_space_ghost_q.mp3",
+    "t": 90.1,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_boop.mp3",
+    "t": 92.45,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_youre_it.mp3",
+    "t": 93.6,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_my_face.mp3",
+    "t": 94.3,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_yeehaw.mp3",
+    "t": 96.6,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_no_youre_it.mp3",
+    "t": 102.25,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_peekaboo.mp3",
+    "t": 104.95,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_boo.mp3",
+    "t": 107.0,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_shriek.mp3",
+    "t": 107.33,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_that_worked.mp3",
+    "t": 110.6,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_all_you_got.mp3",
+    "t": 114.5,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_right_in_mars.mp3",
+    "t": 118.45,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_thats_earth.mp3",
+    "t": 121.3,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_i_know.mp3",
+    "t": 123.75,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_sorry_everybody.mp3",
+    "t": 125.95,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_nobody_saw.mp3",
+    "t": 127.6,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_okay_jupiter.mp3",
+    "t": 129.0,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_swallow_planet.mp3",
+    "t": 138.7,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_are_you_ghost.mp3",
+    "t": 144.2,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_im_you.mp3",
+    "t": 146.95,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_you_have_face.mp3",
+    "t": 149.3,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_two_of_you.mp3",
+    "t": 152.3,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_right_for_me.mp3",
+    "t": 155.4,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_everyone_like_you.mp3",
+    "t": 156.9,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_thats_me.mp3",
+    "t": 158.9,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_tv_hi.mp3",
+    "t": 161.7,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_tv_music.mp3",
+    "t": 164.1,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_love_space.mp3",
+    "t": 166.3,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\doc_testimonial.mp3",
+    "t": 168.6,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\ann_name.mp3",
+    "t": 171.45,
+    "volume": 0.95
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_tv_fist.mp3",
+    "t": 176.4,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\dbl_good_fist.mp3",
+    "t": 178.7,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\ann_side_effects.mp3",
+    "t": 180.1,
+    "volume": 0.95
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\ann_ask.mp3",
+    "t": 191.2,
+    "volume": 0.95
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\doc_any_symptoms.mp3",
+    "t": 194.2,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lines2\\him_button_cut.mp3",
+    "t": 195.5,
+    "volume": 1.0
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\bed_clinic_long.mp3",
+    "t": 0.0,
+    "volume": 0.1
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\door_a.mp3",
+    "t": 0.25,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\chair_creak_a.mp3",
+    "t": 2.761,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\cough_a.mp3",
+    "t": 4.081,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\nurse_gobble_a.mp3",
+    "t": 6.14,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\paper_crinkle.mp3",
+    "t": 7.762,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\paper_crinkle_2.mp3",
+    "t": 10.328,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\stethoscope_a.mp3",
+    "t": 12.978,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\knee_tap_2.mp3",
+    "t": 17.895,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\pen_scratch_a.mp3",
+    "t": 50.667,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\can_slide_a.mp3",
+    "t": 56.26,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\can_clink.mp3",
+    "t": 59.117,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\chair_creak_a.mp3",
+    "t": 60.592,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\still_tone.mp3",
+    "t": 60.642,
+    "volume": 0.18
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\still_tone.mp3",
+    "t": 69.996,
+    "volume": 0.28
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\windup_a.mp3",
+    "t": 70.42,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\punch_impact_2.mp3",
+    "t": 73.121,
+    "volume": 0.42
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\bed_sky_cut.mp3",
+    "t": 73.126,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\punch_impact.mp3",
+    "t": 73.131,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\glass_shatter.mp3",
+    "t": 73.141,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\roof_crash.mp3",
+    "t": 73.153,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\glass_shatter_2.mp3",
+    "t": 73.749,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\rise_whoosh.mp3",
+    "t": 74.428,
+    "volume": 0.75
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh.mp3",
+    "t": 77.678,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\sonic_boom_cut.mp3",
+    "t": 80.726,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\bed_space_cut.mp3",
+    "t": 88.2,
+    "volume": 0.2
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\shoulder_tap_a.mp3",
+    "t": 90.131,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\shoulder_tap_a.mp3",
+    "t": 90.301,
+    "volume": 0.9
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh_2.mp3",
+    "t": 92.275,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip.mp3",
+    "t": 92.444,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\nose_boing_a.mp3",
+    "t": 92.488,
+    "volume": 0.25
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip_2.mp3",
+    "t": 93.389,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh.mp3",
+    "t": 94.962,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\satellite_beeps.mp3",
+    "t": 95.812,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing_2.mp3",
+    "t": 98.327,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip.mp3",
+    "t": 99.727,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\windup_a.mp3",
+    "t": 100.407,
+    "volume": 0.35
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\kick_thud_a.mp3",
+    "t": 103.057,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\spin_top.mp3",
+    "t": 103.157,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip_2.mp3",
+    "t": 104.238,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip.mp3",
+    "t": 105.088,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\comet_fizz.mp3",
+    "t": 105.925,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\jump_scare_a.mp3",
+    "t": 107.3,
+    "volume": 0.65
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lasso_whirl.mp3",
+    "t": 108.74,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing.mp3",
+    "t": 109.976,
+    "volume": 0.65
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lasso_whirl.mp3",
+    "t": 110.24,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\rope_snap_a.mp3",
+    "t": 110.49,
+    "volume": 0.75
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing_2.mp3",
+    "t": 112.156,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh.mp3",
+    "t": 112.456,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh_2.mp3",
+    "t": 114.587,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_impact.mp3",
+    "t": 114.686,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\oof_a.mp3",
+    "t": 114.736,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing.mp3",
+    "t": 114.883,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip_2.mp3",
+    "t": 115.188,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_impact_2.mp3",
+    "t": 118.215,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\oof_b.mp3",
+    "t": 118.275,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\kick_thud_b.mp3",
+    "t": 120.919,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\careful_setdown.mp3",
+    "t": 123.485,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lasso_whirl.mp3",
+    "t": 128.866,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing.mp3",
+    "t": 130.102,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\lasso_whirl.mp3",
+    "t": 130.366,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\rope_snap_b.mp3",
+    "t": 130.616,
+    "volume": 0.85
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh_2.mp3",
+    "t": 131.884,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing_2.mp3",
+    "t": 132.283,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_impact.mp3",
+    "t": 134.783,
+    "volume": 0.8
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\oof_a.mp3",
+    "t": 134.833,
+    "volume": 0.75
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_zip.mp3",
+    "t": 136.963,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_swing_2.mp3",
+    "t": 137.323,
+    "volume": 0.65
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\windup_a.mp3",
+    "t": 137.816,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\planet_impact.mp3",
+    "t": 139.213,
+    "volume": 0.7
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\kick_thud_a.mp3",
+    "t": 139.429,
+    "volume": 0.4
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\fly_whoosh.mp3",
+    "t": 140.445,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\heavy_breathing.mp3",
+    "t": 141.345,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\heavy_breathing.mp3",
+    "t": 144.16,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\panel_clack.mp3",
+    "t": 159.933,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\panel_clack_2.mp3",
+    "t": 160.213,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\bed_studio.mp3",
+    "t": 160.525,
+    "volume": 0.16
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\panel_clack.mp3",
+    "t": 160.563,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\tv_jingle.mp3",
+    "t": 161.171,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\applause.mp3",
+    "t": 161.221,
+    "volume": 0.3
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\can_psst_a.mp3",
+    "t": 172.542,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\gulp_a.mp3",
+    "t": 173.493,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\gulp_b.mp3",
+    "t": 173.893,
+    "volume": 0.5
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\gulp_a.mp3",
+    "t": 174.292,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\ahh_a.mp3",
+    "t": 174.792,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\ahh_b.mp3",
+    "t": 174.942,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\ding_a.mp3",
+    "t": 176.3,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\applause.mp3",
+    "t": 176.35,
+    "volume": 0.11
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\tv_jingle_tag.mp3",
+    "t": 191.36,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\applause_tag.mp3",
+    "t": 193.0,
+    "volume": 0.11
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\ding_a.mp3",
+    "t": 193.3,
+    "volume": 0.45
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\bed_clinic_button_long.mp3",
+    "t": 193.867,
+    "volume": 0.1
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\punch_impact_2.mp3",
+    "t": 197.65,
+    "volume": 0.6
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\can_roll.mp3",
+    "t": 199.6,
+    "volume": 0.55
+  },
+  {
+    "path": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Sfx\\punch\\tiny_clink_a.mp3",
+    "t": 201.3,
+    "volume": 0.4
+  }
+]

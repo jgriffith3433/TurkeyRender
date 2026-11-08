@@ -1,0 +1,37 @@
+{
+ "clip": "mx_charleston",
+ "seconds": 10,
+ "popCount": 204,
+ "pops": [
+  "0.067s LeftToes kink 0.179 m",
+  "0.100s LeftToes kink 0.187 m",
+  "0.133s LeftLowerLeg kink 0.180 m",
+  "0.167s LeftToes kink 0.227 m",
+  "0.200s LeftToes kink 0.424 m",
+  "0.233s LeftToes kink 0.287 m"
+ ],
+ "feet": [
+  "left foot on floor moved 2.398 m, worst step 0.077 m at 5.77s",
+  "right foot on floor moved 2.701 m, worst step 0.073 m at 4.63s"
+ ],
+ "hipsTop": 1.16031647,
+ "hipsLow": 0.7973328,
+ "hipsTravel": "(-0.85, -0.05, -0.37)",
+ "limits": {
+  "LeftFoot": 70.6,
+  "LeftLowerLeg": 33.7,
+  "RightLowerLeg": 17,
+  "groundHipsCm": 14.1,
+  "Head": 6.3,
+  "Spine": 0.6,
+  "LeftLowerArm": 0.2
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_charleston was rejected by admission: joint limits moved LeftFoot 94.5 deg; foot slide 4.35 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_charleston_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_charleston_three.mp4"
+ ]
+}

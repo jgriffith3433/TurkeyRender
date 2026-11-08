@@ -1,0 +1,16 @@
+{
+  // A tape someone found: 4:3 inside the frame, soft luma, chroma smeared sideways, tracking, a head-switch band, a date in the corner.
+  "about": "Home camcorder, 1994. Handheld, wide, on-camera light. The tape is the character.",
+  "light": "overcast",
+  "grade": {
+    "exposure": 0.18, "contrast": 8, "saturation": -14, "hue": -3, "vignette": 0.26, "grain": 0.2, "bloom": 0.55, "threshold": 0.85, "chroma": 0.3, "distort": -0.12,
+    "vhs": 1, "aspect": 1.3333, "lift": 0.045, "pixel": 3
+  },
+  "sky": { "top": "#8e9aa8", "mid": "#c6c9c6", "bottom": "#8a8a7a" },
+  "lens": { "close-up": 35, "medium": 28, "wide": 18, "aperture": 22, "handheld": 1.6 },
+  "cues": [
+    { "at": 0, "for": 7200, "text": "PLAY", "style": "fade", "size": 44, "pos": [0.2, 0.86, 0], "color": "#f4f4f4", "in": 0, "out": 0 },
+    { "at": 0, "for": 7200, "text": "JUN 14 1994  4:12 PM", "style": "fade", "size": 40, "pos": [0.68, 0.12, 0], "color": "#f4f4f4", "in": 0, "out": 0 }
+  ],
+  "type": { "color": "#f4f4f4", "style": "fade", "size": 44, "pos": [0.5, 0.2, 0], "caps": 1, "in": 0, "out": 0 }
+}

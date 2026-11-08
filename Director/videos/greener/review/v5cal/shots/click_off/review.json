@@ -1,0 +1,22 @@
+{
+ "id": "click_off",
+ "f0": 4619,
+ "f1": 4643,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 153.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "2e13cf2856672e34",
+ "summary": "The strip is a clean, very dark ghost-in-glass cut with a steady pointing hand and no visible pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3570,
+  "out": 119
+ },
+ "cost": 0.0083
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Room</title>
+<link rel="stylesheet" href="/room.css">
+</head>
+<body>
+<header class="top">
+  <h1>Review Room</h1>
+  <label id="videoPick" hidden>Video <select id="video"></select></label>
+  <label>Version <select id="verA"></select></label>
+  <label>Compare with <select id="verB"><option value="">Nothing</option></select></label>
+  <span id="fresh" hidden><span id="freshText"></span> <button id="freshGo" type="button">Watch it</button></span>
+</header>
+
+<p id="status" class="status" aria-live="off">Loading</p>
+<details id="final" class="final" hidden>
+  <summary><span id="finalLine"></span> <button id="finalGo" type="button">Final render</button></summary>
+  <table><thead><tr><th>Shot</th><th>Frames</th><th>Render</th><th>Why</th></tr></thead><tbody id="finalRows"></tbody></table>
+</details>
+
+<main class="room">
+  <section class="watch" aria-label="Player">
+    <div id="stage" class="stage">
+      <figure>
+        <video id="a" preload="auto" playsinline></video>
+        <figcaption id="capA" hidden></figcaption>
+      </figure>
+      <figure id="figB" hidden>
+        <video id="b" preload="auto" playsinline muted></video>
+        <figcaption id="capB"></figcaption>
+      </figure>
+      <p id="empty" class="empty" hidden>No render yet. It will appear here as soon as one finishes.</p>
+    </div>
+
+    <div class="transport">
+      <button id="play" type="button">Play</button>
+      <button id="back" type="button" aria-label="Back one frame">&larr; Frame</button>
+      <button id="fwd" type="button" aria-label="Forward one frame">Frame &rarr;</button>
+      <button id="note" type="button" class="primary">New note (N)</button>
+      <button id="mute" type="button">Mute</button>
+      <output id="clock" class="clock"></output>
+    </div>
+    <p id="where" class="where"></p>
+
+    <div class="tlhead">
+      <span class="keys">Space play &middot; &larr; &rarr; frame &middot; Shift+&larr; &rarr; beat &middot; [ ] shot &middot; J K L &middot; N note</span>
+      <label>Zoom <select id="zoom"><option value="1">Whole video</option><option value="3">3x</option><option value="8">8x</option><option value="20">20x</option></select></label>
+    </div>
+    <div id="tlScroll" class="tlscroll">
+      <div id="tl" class="tl" role="slider" tabindex="0" aria-label="Timeline: click to leave a note, drag to scrub" aria-valuemin="0" aria-valuenow="0">
+        <div id="rowSections" class="row sections"></div>
+        <div id="rowShots" class="row shots"></div>
+        <div id="rowBars" class="row bars"></div>
+        <div id="rowPins" class="row pins"></div>
+        <div id="head" class="playhead"></div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="side" aria-label="Notes">
+    <form id="draft" class="draft" hidden>
+      <h2>Note at <span id="draftAt"></span></h2>
+      <p id="draftInfo" class="muted"></p>
+      <img id="draftFrame" alt="The frame this note is about">
+      <label for="draftText">What should change?</label>
+      <textarea id="draftText" rows="3"></textarea>
+      <div id="draftImages" class="pasted"></div>
+      <p class="muted">Paste an image to attach it. Enter saves and keeps playing. Shift+Enter for a new line. Esc cancels.</p>
+      <div class="row-buttons">
+        <button type="submit" class="primary">Save note</button>
+        <button type="button" id="draftCancel">Cancel</button>
+      </div>
+    </form>
+
+    <div class="tabs" role="group" aria-label="Show notes">
+      <button type="button" data-filter="open">Open <span></span></button>
+      <button type="button" data-filter="qa" title="What automatic QA and the 30 fps review sent back">QA <span></span></button>
+      <button type="button" data-filter="fixed">Fixed <span></span></button>
+      <button type="button" data-filter="approved">Approved <span></span></button>
+      <button type="button" data-filter="all">All <span></span></button>
+    </div>
+    <p id="noNotes" class="muted" hidden></p>
+    <ol id="notes" class="notes"></ol>
+  </aside>
+</main>
+<script src="/room.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  // A printed page: flat bands of colour, thick ink, halftone in the shadows, paper under everything.
+  "about": "Comic book. Punchy, loud, funny. Keep shapes big.",
+  "light": "portrait_window",
+  "grade": {
+    "exposure": 0.65, "contrast": 22, "saturation": 42, "hue": 0, "vignette": 0, "grain": 0, "bloom": 0, "threshold": 1.5, "chroma": 0,
+    "toon": 1, "ink": 1, "inkWidth": 3, "poster": 7, "halftone": 0.32, "paper": 0.7, "motionblur": 0
+  },
+  "sky": { "top": "#2aa8e0", "mid": "#a8e4f0", "bottom": "#ffd24a", "clouds": 0.5, "cloudScale": 0.45, "cloudColor": "#ffffff", "cloudShade": "#ffffff", "cloudSpeed": 0.004 },
+  "lens": { "close-up": 40, "medium": 32, "wide": 21, "aperture": 22 },
+  "type": { "color": "#ffe600", "style": "slam", "size": 130, "pos": [0.5, 0.82, 0], "caps": 1, "tilt": -5 }
+}

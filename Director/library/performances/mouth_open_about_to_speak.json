@@ -1,0 +1,128 @@
+{
+ "name": "mouth_open_about_to_speak",
+ "about": "A breath in, the chest lifts, the brows go up, the jaw drops a little and the right hand starts to rise with a point half-formed: the word that never comes. It freezes there; whatever cuts in next takes over. Seated or standing.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.6s",
+ "min": "0.9s",
+ "params": {
+  "to": [
+   0,
+   1.35,
+   1.1
+  ]
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": "$to",
+   "for": "0.3s",
+   "ease": "out"
+  },
+  {
+   "at": 0.05,
+   "do": "face",
+   "eyesWide": 0.4,
+   "fear": 0.2,
+   "for": "0.25s",
+   "ease": "out"
+  },
+  {
+   "at": 0.1,
+   "do": "pose",
+   "bones": {
+    "chest": [
+     -4,
+     0,
+     0
+    ],
+    "neck": [
+     -2,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ],
+    "leftShoulder": [
+     0,
+     0,
+     -4
+    ],
+    "rightShoulder": [
+     0,
+     0,
+     4
+    ]
+   },
+   "for": "0.45s",
+   "ease": "out"
+  },
+  {
+   "at": 0.18,
+   "do": "face",
+   "jawOpen": 0.32,
+   "for": "0.3s",
+   "ease": "out"
+  },
+  {
+   "at": 0.2,
+   "do": "pose",
+   "bones": {
+    "rightUpperArm": [
+     -22,
+     0,
+     -6
+    ],
+    "rightLowerArm": [
+     -48,
+     0,
+     0
+    ],
+    "rightHand": [
+     0,
+     0,
+     -10
+    ]
+   },
+   "for": "0.55s",
+   "ease": "out",
+   "overshoot": 0.08,
+   "settle": "0.3s"
+  },
+  {
+   "at": 0.25,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.5,
+   "for": "0.4s"
+  },
+  {
+   "at": 0.3,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.12,
+   "for": "0.35s"
+  },
+  {
+   "at": 0.9,
+   "do": "eyes",
+   "yaw": 2,
+   "pitch": 1,
+   "for": "0.07s"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "sit_idle",
+    "for": "1s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

@@ -1,0 +1,84 @@
+{
+  // Hawkes Punch P2: the cartoon sneak, in the air.
+
+ "name": "hp_p2_sneak",
+ "about": "P2 sneak float (m7_hide): body pitched forward, shoulders hunched, arms forward and bent with hands drooping, pointed feet, a slow 2 s sneak cycle on 3s; HIM.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 2.0,
+ "loop": true,
+ "poses": {
+  "a": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   },
+   "muscles": {
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Front-Back": -0.45,
+    "Right Upper Leg Front-Back": 0.1,
+    "Left Lower Leg Stretch": 0.1,
+    "Right Lower Leg Stretch": 0.5,
+    "Left Shoulder Down-Up": 0.4,
+    "Right Shoulder Down-Up": 0.4,
+    "Left Arm Down-Up": 0.1,
+    "Right Arm Down-Up": 0.1,
+    "Left Arm Front-Back": -0.45,
+    "Right Arm Front-Back": -0.45,
+    "Left Forearm Stretch": -0.2,
+    "Right Forearm Stretch": -0.2,
+    "Left Hand Down-Up": -0.5,
+    "Right Hand Down-Up": -0.5,
+    "Neck Nod Down-Up": 0.3
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.3,
+     "spread": 0.3
+    }
+   },
+   "root": {
+    "rot": [
+     30,
+     0,
+     0
+    ]
+   }
+  },
+  "b": {
+   "from": "a",
+   "muscles": {
+    "Left Upper Leg Front-Back": 0.1,
+    "Right Upper Leg Front-Back": -0.45,
+    "Left Lower Leg Stretch": 0.5,
+    "Right Lower Leg Stretch": 0.1,
+    "Left Arm Front-Back": -0.5,
+    "Right Arm Front-Back": -0.4
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "a",
+   "step": 3
+  },
+  {
+   "t": 1.0,
+   "pose": "b",
+   "interp": "ease",
+   "step": 3
+  },
+  {
+   "t": 2.0,
+   "pose": "a",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

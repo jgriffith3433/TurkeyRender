@@ -1,0 +1,31 @@
+{
+ "clip": "mx_stairs_up",
+ "seconds": 1.467,
+ "popCount": 5,
+ "pops": [
+  "0.233s RightLowerLeg kink 0.091 m",
+  "0.267s RightLowerLeg kink 0.124 m",
+  "0.400s RightLowerLeg kink 0.124 m",
+  "0.433s RightLowerLeg kink 0.126 m",
+  "0.500s RightToes kink 0.085 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.000 m, worst step 0.000 m at 0.00s",
+  "right foot on floor moved 0.141 m, worst step 0.026 m at 0.43s"
+ ],
+ "hipsTop": 1.46603644,
+ "hipsLow": 0.8950391,
+ "hipsTravel": "(0.00, 0.57, 0.56)",
+ "limits": {
+  "LeftFoot": 26.5,
+  "RightLowerLeg": 24.6,
+  "groundHipsCm": 14,
+  "LeftLowerLeg": 13.1
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_stairs_up_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_stairs_up_three.mp4"
+ ]
+}

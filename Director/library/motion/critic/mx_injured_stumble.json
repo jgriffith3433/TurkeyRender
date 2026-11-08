@@ -1,0 +1,398 @@
+{
+ "name": "mx_injured_stumble",
+ "fps": 30,
+ "frames": 154,
+ "seconds": 5.1,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.22,
+  "straightFrac": 0,
+  "moves": 17,
+  "flatness": 0.57,
+  "abruptFrac": 0.33,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 0.27,
+  "fastRunMedianS": 0.13,
+  "dynRange": 1.97,
+  "handPeak": 3.03,
+  "bigMoves": 12,
+  "anticipFrac": 0.58,
+  "overshootFrac": 0.58,
+  "coherence": 0.5,
+  "lagMedianFrames": 2,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 71.94,
+  "plantedFrac": 0.04,
+  "zgSpeedChanges": null,
+  "snapsPer10": 39.22,
+  "fingerSnapsPer10": 62.75,
+  "frozenFrac": 0.05,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.82,
+  "twinnedFrac": 0.1,
+  "curlMedian": 34.36,
+  "spreadMedian": 30.17,
+  "fannedFrac": 0.08,
+  "bowMedian": 4.7,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 80.98,
+  "armOmegaP95": 241.37,
+  "legOmegaP95": 154.06,
+  "spineOmegaP50": 21.06,
+  "spineOmegaP95": 75.87,
+  "headOmegaP50": 42.11,
+  "headOmegaP95": 199.78,
+  "armAccP95": 2334.34,
+  "spineAccP95": 556.97,
+  "handSpeedP50": 0.85,
+  "handSpeedP95": 2.34,
+  "spineToArm": 0.26,
+  "energyCV": 0.59,
+  "moveRate": 0.78
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.22 over 14 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 8.3,
+   "note": "speed shape 0.57 (bell 0.6, constant 1.0), 33% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 0.27 s), 0% of frames dead still, fast parts median 0.13 s"
+  },
+  "anticipation": {
+   "score": 10,
+   "note": "12 big moves: 7 with anticipation, 7 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 7.8,
+   "note": "parts' speed profiles agree 0.5 (1 = everything moves as one); typical lag between parts 2 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 72 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "20 body snaps or pops, 32 finger snaps in 5.1 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "5% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 9.9,
+   "note": "10 key poses, readability 0.82 (best of front, side, three-quarter), 10% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 34 deg, spread 30 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.87,
+   "f": 26,
+   "kind": "snap",
+   "part": "RightUpperLeg",
+   "sev": 1,
+   "what": "RightUpperLeg jumps 19 deg in one frame"
+  },
+  {
+   "t": 0.83,
+   "f": 25,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 1,
+   "what": "RightLowerLeg jumps 20 deg in one frame"
+  },
+  {
+   "t": 0.83,
+   "f": 25,
+   "kind": "snap",
+   "part": "RightFoot",
+   "sev": 0.97,
+   "what": "RightFoot jumps 16 deg in one frame"
+  },
+  {
+   "t": 1.53,
+   "f": 46,
+   "kind": "snap",
+   "part": "RightFoot",
+   "sev": 0.94,
+   "what": "RightFoot jumps 15 deg in one frame"
+  },
+  {
+   "t": 0.97,
+   "f": 29,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 0.93,
+   "what": "RightLowerLeg jumps 14 deg in one frame"
+  },
+  {
+   "t": 1.57,
+   "f": 47,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 0.9,
+   "what": "RightLowerLeg jumps 12 deg in one frame"
+  },
+  {
+   "t": 1.07,
+   "f": 32,
+   "kind": "snap",
+   "part": "LeftUpperArm",
+   "sev": 0.9,
+   "what": "LeftUpperArm jumps 12 deg in one frame"
+  },
+  {
+   "t": 0.7,
+   "f": 21,
+   "kind": "snap",
+   "part": "LeftLowerArm",
+   "sev": 0.88,
+   "what": "LeftLowerArm jumps 11 deg in one frame"
+  },
+  {
+   "t": 1.7,
+   "f": 51,
+   "kind": "snap",
+   "part": "RightLowerArm",
+   "sev": 0.87,
+   "what": "RightLowerArm jumps 10 deg in one frame"
+  },
+  {
+   "t": 1.33,
+   "f": 40,
+   "kind": "snap",
+   "part": "LeftFoot",
+   "sev": 0.86,
+   "what": "LeftFoot jumps 10 deg in one frame"
+  },
+  {
+   "t": 0.87,
+   "f": 26,
+   "kind": "snap",
+   "part": "Head",
+   "sev": 0.86,
+   "what": "Head jumps 9 deg in one frame"
+  },
+  {
+   "t": 3.5,
+   "f": 105,
+   "kind": "snap",
+   "part": "LeftUpperArm",
+   "sev": 0.86,
+   "what": "LeftUpperArm jumps 9 deg in one frame"
+  },
+  {
+   "t": 2.03,
+   "f": 61,
+   "kind": "snap",
+   "part": "LeftFoot",
+   "sev": 0.85,
+   "what": "LeftFoot jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.8,
+   "f": 54,
+   "kind": "snap",
+   "part": "RightUpperArm",
+   "sev": 0.85,
+   "what": "RightUpperArm jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.13,
+   "f": 34,
+   "kind": "snap",
+   "part": "LeftLowerArm",
+   "sev": 0.85,
+   "what": "LeftLowerArm jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.83,
+   "f": 25,
+   "kind": "snap",
+   "part": "RightLowerArm",
+   "sev": 0.85,
+   "what": "RightLowerArm jumps 9 deg in one frame"
+  },
+  {
+   "t": 2.3,
+   "f": 69,
+   "kind": "snap",
+   "part": "Head",
+   "sev": 0.84,
+   "what": "Head jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.13,
+   "f": 34,
+   "kind": "snap",
+   "part": "RightLowerArm",
+   "sev": 0.84,
+   "what": "RightLowerArm jumps 8 deg in one frame"
+  },
+  {
+   "t": 0.77,
+   "f": 23,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.84,
+   "what": "LeftHand jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.33,
+   "f": 40,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.83,
+   "what": "LeftHand jumps 8 deg in one frame"
+  },
+  {
+   "t": 2.5,
+   "f": 75,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.66,
+   "what": "Head travels 41 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 2.33,
+   "f": 70,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.6,
+   "what": "RightFoot starts at 62% of its peak speed in one frame"
+  },
+  {
+   "t": 3.17,
+   "f": 95,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.54,
+   "what": "RightFoot starts at 96% of its peak speed in one frame"
+  },
+  {
+   "t": 3.4,
+   "f": 102,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.54,
+   "what": "RightFoot stops dead from 73% of its peak"
+  },
+  {
+   "t": 3.93,
+   "f": 118,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.51,
+   "what": "LeftHand starts at 69% of its peak speed in one frame"
+  },
+  {
+   "t": 4.2,
+   "f": 126,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.51,
+   "what": "LeftHand stops dead from 68% of its peak"
+  },
+  {
+   "t": 3.73,
+   "f": 112,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.5,
+   "what": "LeftFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 3.33,
+   "f": 100,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.48,
+   "what": "LeftFoot starts at 65% of its peak speed in one frame"
+  },
+  {
+   "t": 3.47,
+   "f": 104,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.48,
+   "what": "LeftFoot stops dead from 63% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.87,
+   "f": 26,
+   "kind": "snap",
+   "part": "RightUpperLeg",
+   "sev": 1,
+   "what": "RightUpperLeg jumps 19 deg in one frame",
+   "also": [
+    "snap"
+   ]
+  },
+  {
+   "t": 1.53,
+   "f": 46,
+   "kind": "snap",
+   "part": "RightFoot",
+   "sev": 0.94,
+   "what": "RightFoot jumps 15 deg in one frame",
+   "also": [
+    "snap"
+   ]
+  },
+  {
+   "t": 3.5,
+   "f": 105,
+   "kind": "snap",
+   "part": "LeftUpperArm",
+   "sev": 0.86,
+   "what": "LeftUpperArm jumps 9 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 2.03,
+   "f": 61,
+   "kind": "snap",
+   "part": "LeftFoot",
+   "sev": 0.85,
+   "what": "LeftFoot jumps 9 deg in one frame",
+   "also": [
+    "snap"
+   ]
+  },
+  {
+   "t": 1.13,
+   "f": 34,
+   "kind": "snap",
+   "part": "LeftLowerArm",
+   "sev": 0.85,
+   "what": "LeftLowerArm jumps 9 deg in one frame",
+   "also": []
+  }
+ ],
+ "total": 8.6,
+ "verdict": "reads as human (8.6/10)"
+}

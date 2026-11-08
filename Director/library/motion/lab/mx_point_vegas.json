@@ -1,0 +1,30 @@
+{
+ "clip": "mx_point_vegas",
+ "seconds": 2.067,
+ "popCount": 4,
+ "pops": [
+  "0.167s RightLowerLeg kink 0.111 m",
+  "0.200s RightLowerLeg kink 0.143 m",
+  "0.500s LeftHandIndex3 kink 0.102 m",
+  "0.533s LeftHandIndex3 kink 0.105 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.771 m, worst step 0.050 m at 1.23s",
+  "right foot on floor moved 0.541 m, worst step 0.033 m at 0.30s"
+ ],
+ "hipsTop": 0.912730038,
+ "hipsLow": 0.8133884,
+ "hipsTravel": "(0.01, 0.00, -0.03)",
+ "limits": {
+  "RightLowerArm": 7.2,
+  "groundHipsCm": 4.1
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_point_vegas was rejected by admission: foot slide 3.58 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_point_vegas_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_point_vegas_three.mp4"
+ ]
+}

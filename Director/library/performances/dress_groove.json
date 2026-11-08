@@ -1,0 +1,60 @@
+{
+ "name": "dress_groove",
+ "about": "He sings on a stand with a small groove: the hip-hop step mocap on the beat, elbows at the waist, one hip dropped, soft hands. For sung standing shots that must not freeze. Any length.",
+ "entry": "any",
+ "exit": "stand",
+ "length": "3.43s",
+ "min": "0.86s",
+ "params": {
+  "blend": 0.25
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": 0.3,
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.55,
+    6
+   ],
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.22,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.22,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "mx_hh_step",
+   "start": 0.33,
+   "stop": 2.87,
+   "speed": 1.48,
+   "warpTo": "beat",
+   "maxRate": 1.3,
+   "blend": "$blend",
+   "for": "$for"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

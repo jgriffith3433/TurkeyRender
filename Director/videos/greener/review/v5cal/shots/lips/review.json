@@ -1,0 +1,67 @@
+{
+ "id": "lips",
+ "f0": 426,
+ "f1": 478,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 14.2,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 14.5,
+   "why": "one patch jumps (cell 113.9, x5.2)",
+   "file": "spike-00435.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 15.467,
+   "why": "one patch jumps (cell 126.7, x8.7)",
+   "file": "spike-00464.jpg"
+  }
+ ],
+ "hash": "601608be661b6e8a",
+ "summary": "The raise to the lips reads, but the hand is a loose spread claw rather than one clear finger, and the drop at about 15.5 s snaps out of frame, so the return beat is lost.",
+ "faults": [
+  {
+   "t": 14.63,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The 'one finger up' gesture doesn't read. Across 14.53-14.70 the hand is a loose, curled claw with several fingers splayed, not a single index finger raised. The pose is muddy at the lips, and the hand sits mostly in front of the mouth and chin rather than touching the lips.",
+   "fix": "Pose the hand with the index extended and the other fingers curled. Place the fingertip on the lips and hold it for a beat."
+  },
+  {
+   "t": 14.66,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The lips beat has no clear hold. From 14.60 to 14.70 the hand and forearm keep drifting and rotating slightly, so the 'for a beat' pose looks mushy.",
+   "fix": "Freeze the arm and finger on the lips pose for about 6-8 frames, with only a small settle."
+  },
+  {
+   "t": 14.5,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The arm goes from hanging at the hip (14.43-14.46) to chest height (14.50) and up near the face (14.56) in about 10 frames. It has no anticipation, so the hand seems to be pulled up.",
+   "fix": "Add a small dip or wind-up before the lift. Ease the arm into the lips pose with a slight overshoot."
+  },
+  {
+   "t": 15.5,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "At 15.46 the hand is still at the bottom edge of the frame. By 15.50 the whole arm has dropped and the hand is gone. The return happens in about one frame, so it reads as a snap rather than a move back. The arm then sits stiff and static through 15.70.",
+   "fix": "Spread the drop over 4-6 frames with an ease-out and a small settle. Keep the hand in frame, or add a secondary motion at the end."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6383,
+  "out": 1622
+ },
+ "cost": 0.029
+}

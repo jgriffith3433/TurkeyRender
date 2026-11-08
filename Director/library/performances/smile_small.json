@@ -1,0 +1,81 @@
+{
+ "name": "smile_small",
+ "about": "The eyes go first, then the mouth: a small, private smile. It stays until hold ends.",
+ "entry": "any",
+ "exit": "any",
+ "length": "2.6s",
+ "min": "1.6s",
+ "params": {
+  "amount": 0.7,
+  "hold": 0
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": 0.15,
+   "do": "face",
+   "smile": "=amount*0.4",
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.5,
+   "do": "face",
+   "smile": "$amount",
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.2,
+   "do": "pose",
+   "bones": {
+    "head": [
+     2,
+     0,
+     3
+    ],
+    "neck": [
+     1,
+     0,
+     1
+    ]
+   },
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.7",
+   "do": "pose",
+   "bones": {
+    "head": [
+     0,
+     0,
+     0
+    ],
+    "neck": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.7s",
+   "ease": "inout",
+   "if": "=1-hold"
+  },
+  {
+   "at": "=for-0.6",
+   "do": "face",
+   "smile": 0.1,
+   "for": "0.6s",
+   "ease": "inout",
+   "if": "=1-hold"
+  }
+ ],
+ "test": {
+  "tail": 0.8
+ }
+}

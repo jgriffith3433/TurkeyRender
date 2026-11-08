@@ -1,0 +1,196 @@
+{
+ "name": "sit_stool_pitch",
+ "about": "The pitch, seated on a stool to the lens: IdleSit13Explain gestures with the right hand while the left holds the can up at the chest (the can `can` is attached to the left hand on the first frame, the cup grip; `me` is the actor), a big cheesy smile, brows up, eyes on the lens (`cam`, a point in his own frame), a head tilt and a nod on the way. Seat about 0.45 m. Starts on a cut. Ends seated with the can.",
+ "entry": "sit_chair",
+ "exit": "sit_chair_can",
+ "length": "6s",
+ "min": "2s",
+ "params": {
+  "can": "can",
+  "me": "person",
+  "cam": [
+   0,
+   1.25,
+   3.2
+  ]
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleSit13Explain",
+   "blend": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "attach",
+   "on": "$can",
+   "to": "$me.leftHand",
+   "pos": [
+    -0.004,
+    0.072,
+    -0.05
+   ],
+   "rot": [
+    0,
+    0,
+    -90
+   ],
+   "blend": 0
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "finger": "thumb",
+   "set": 0.5,
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "finger": "index",
+   "set": 0.5,
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "finger": "middle",
+   "set": 0.56,
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "finger": "ring",
+   "set": 0.6,
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "finger": "pinky",
+   "set": 0.66,
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "reach",
+   "hand": "left",
+   "toRel": [
+    -0.2,
+    0.98,
+    0.3
+   ],
+   "for": "0.2s",
+   "ease": "hand"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": "$cam",
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "smile": 0.8,
+   "eyesWide": 0.3,
+   "fear": 0.12,
+   "for": "0.3s",
+   "ease": "out"
+  },
+  {
+   "at": 1.9,
+   "do": "pose",
+   "bones": {
+    "head": [
+     0,
+     0,
+     9
+    ]
+   },
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 3.2,
+   "do": "pose",
+   "bones": {
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 4.3,
+   "do": "pose",
+   "bones": {
+    "head": [
+     8,
+     0,
+     0
+    ]
+   },
+   "for": "0.18s",
+   "ease": "out"
+  },
+  {
+   "at": 4.55,
+   "do": "pose",
+   "bones": {
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.4,
+   "do": "blink",
+   "for": "0.18s"
+  },
+  {
+   "at": 3.9,
+   "do": "blink",
+   "for": "0.18s"
+  },
+  {
+   "at": 5.2,
+   "do": "face",
+   "smile": 0.95,
+   "eyesWide": 0.4,
+   "for": "0.3s",
+   "ease": "out"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "sit_idle",
+    "for": "1s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

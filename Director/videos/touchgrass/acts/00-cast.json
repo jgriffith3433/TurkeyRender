@@ -1,0 +1,16 @@
+{
+  // Who can be cast. Where they stand and whether they show comes from the cards. Same man as TK Shock, same materials.
+  "actors": {
+    "person": { "model": "person", "material": "Assets/MusicVideo/Person/Person.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    // No small bird in the library or the Asset Store downloads: a 15 cm bird made by numbers (Props/sparrow.obj).
+    "sparrow": { "model": "Assets/Videos/touchgrass/Props/sparrow.obj", "material": "Assets/Videos/touchgrass/Props/sparrow.mat" },
+    "sprinkler_head": { "model": "Assets/Videos/touchgrass/Props/sprinkler.obj", "material": "Assets/Videos/touchgrass/Props/sprinkler.mat" },
+    // The tie bird from the TV fiasco. He has followed him home.
+    "tie_bird": { "model": "turkey_white_hero", "scale": 1.0 },
+    "bird_tie": { "model": "Assets/MusicVideo/Props/tie.obj", "material": "Assets/MusicVideo/Props/tie.mat", "scale": 0.36 }
+  },
+  "cues": [
+    // The rebuilt default: arms close, hands relaxed, weight on one leg. It is a stance, so it holds under everything until a performance turns it off.
+    { "at": 0, "do": "perform", "on": "person", "name": "stand", "blend": 0, "settle": 0.01 }
+  ]
+}

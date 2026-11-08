@@ -1,0 +1,384 @@
+{
+ "name": "ride_satellite",
+ "about": "Astride a satellite like a bronco: the sit clip with the knees wide, the left hand gripping ahead (`grip`, a point in his own frame), the right arm up and whooping (Cheer2 over the right arm), the body bouncing on the ride every third of a second, mouth open, big smile. The satellite and its travel are the card's: attach him to it. Ends riding.",
+ "entry": "any",
+ "exit": "ride",
+ "length": "4s",
+ "min": "1.5s",
+ "params": {
+  "grip": [
+   -0.12,
+   0.78,
+   0.38
+  ]
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleSit14",
+   "blend": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.25,
+     "ease": "inout",
+     "hold": "=for-0.3",
+     "bones": {
+      "leftUpperLeg": [
+       0,
+       0,
+       24
+      ],
+      "rightUpperLeg": [
+       0,
+       0,
+       -24
+      ],
+      "leftLowerLeg": [
+       0,
+       0,
+       -8
+      ],
+      "rightLowerLeg": [
+       0,
+       0,
+       8
+      ],
+      "spine": [
+       -6,
+       0,
+       0
+      ],
+      "chest": [
+       -6,
+       0,
+       0
+      ],
+      "head": [
+       -8,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.4s"
+  },
+  {
+   "at": 0.1,
+   "do": "reach",
+   "hand": "left",
+   "toRel": "$grip",
+   "for": "0.4s",
+   "ease": "hand"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.85,
+   "for": "0.3s"
+  },
+  {
+   "at": 0.3,
+   "do": "layer",
+   "clip": "Cheer2",
+   "mask": "rightArm",
+   "weight": 1,
+   "speed": 1.2,
+   "for": "=for-0.6",
+   "blend": "0.35s"
+  },
+  {
+   "at": 0.3,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.2,
+   "for": "0.3s"
+  },
+  {
+   "at": 0.4,
+   "do": "pose",
+   "hips": [
+    0,
+    -0.012,
+    0
+   ],
+   "bones": {
+    "chest": [
+     2,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.76,
+   "do": "pose",
+   "hips": [
+    0,
+    0.03,
+    0
+   ],
+   "bones": {
+    "chest": [
+     -2,
+     0,
+     0
+    ],
+    "head": [
+     3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.12,
+   "do": "pose",
+   "hips": [
+    0,
+    -0.012,
+    0
+   ],
+   "bones": {
+    "chest": [
+     2,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.48,
+   "do": "pose",
+   "hips": [
+    0,
+    0.03,
+    0
+   ],
+   "bones": {
+    "chest": [
+     -2,
+     0,
+     0
+    ],
+    "head": [
+     3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.84,
+   "do": "pose",
+   "hips": [
+    0,
+    -0.012,
+    0
+   ],
+   "bones": {
+    "chest": [
+     2,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.2,
+   "do": "pose",
+   "hips": [
+    0,
+    0.03,
+    0
+   ],
+   "bones": {
+    "chest": [
+     -2,
+     0,
+     0
+    ],
+    "head": [
+     3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.56,
+   "do": "pose",
+   "hips": [
+    0,
+    -0.012,
+    0
+   ],
+   "bones": {
+    "chest": [
+     2,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.92,
+   "do": "pose",
+   "hips": [
+    0,
+    0.03,
+    0
+   ],
+   "bones": {
+    "chest": [
+     -2,
+     0,
+     0
+    ],
+    "head": [
+     3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 3.28,
+   "do": "pose",
+   "hips": [
+    0,
+    -0.012,
+    0
+   ],
+   "bones": {
+    "chest": [
+     2,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 3.64,
+   "do": "pose",
+   "hips": [
+    0,
+    0.03,
+    0
+   ],
+   "bones": {
+    "chest": [
+     -2,
+     0,
+     0
+    ],
+    "head": [
+     3,
+     0,
+     0
+    ]
+   },
+   "for": "0.324s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.2,
+   "do": "face",
+   "smile": 0.9,
+   "jawOpen": 0.45,
+   "eyesWide": 0.4,
+   "for": "0.3s",
+   "ease": "out"
+  },
+  {
+   "at": 1.5,
+   "do": "blink",
+   "for": "0.16s"
+  },
+  {
+   "at": 3.1,
+   "do": "blink",
+   "for": "0.16s"
+  },
+  {
+   "at": 2.2,
+   "do": "face",
+   "jawOpen": 0.2,
+   "smile": 1,
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.9,
+   "do": "face",
+   "jawOpen": 0.5,
+   "for": "0.2s",
+   "ease": "out"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

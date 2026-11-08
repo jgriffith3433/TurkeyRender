@@ -1,0 +1,188 @@
+{
+ "name": "dress_lift_stairs",
+ "about": "Going down the grand stair with the skirt lifted, chin up, not looking at the steps: one tread a beat, four treads in eight beats, a step every two beats, each foot pinned to its tread by `plant`. Only for the card descend: the plants are world positions on the hall stair, from stair_go to stair_mid.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "3.429s",
+ "min": "1.7s",
+ "params": {
+  "to": [
+   0,
+   0,
+   0
+  ],
+  "dist": 0,
+  "clip": "Walk4",
+  "stride": 1.03
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "IdleBreathe",
+   "mask": "arms",
+   "weight": 1,
+   "for": "$for",
+   "blend": "0.25s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "legs": 0,
+   "arms": 1,
+   "bones": {
+    "leftUpperArm": [
+     4,
+     0,
+     8
+    ],
+    "rightUpperArm": [
+     4,
+     0,
+     -8
+    ],
+    "leftLowerArm": [
+     -38,
+     0,
+     -14
+    ],
+    "rightLowerArm": [
+     -38,
+     0,
+     14
+    ],
+    "leftHand": [
+     8,
+     0,
+     6
+    ],
+    "rightHand": [
+     8,
+     0,
+     -6
+    ]
+   },
+   "for": 0,
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.45,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.45,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0,
+    2,
+    6
+   ],
+   "for": 0
+  },
+  {
+   "at": 0,
+   "do": "walk",
+   "clip": "$clip",
+   "to": "$to",
+   "for": "$for",
+   "stride": "$stride",
+   "blend": 0.1
+  },
+  {
+   "at": 0,
+   "do": "plant",
+   "foot": "left",
+   "pos": [
+    400.11,
+    4.286,
+    21.067
+   ],
+   "for": 0.08
+  },
+  {
+   "at": 1.533,
+   "do": "plant",
+   "foot": "left",
+   "weight": 0,
+   "for": 0.08
+  },
+  {
+   "at": 0,
+   "do": "plant",
+   "foot": "right",
+   "pos": [
+    399.89,
+    4.286,
+    21.067
+   ],
+   "for": 0.08
+  },
+  {
+   "at": 0.7,
+   "do": "plant",
+   "foot": "right",
+   "weight": 0,
+   "for": 0.08
+  },
+  {
+   "at": 0.893,
+   "do": "plant",
+   "foot": "right",
+   "pos": [
+    399.89,
+    4.095,
+    20.749
+   ],
+   "for": 0.08
+  },
+  {
+   "at": 2.4,
+   "do": "plant",
+   "foot": "right",
+   "weight": 0,
+   "for": 0.08
+  },
+  {
+   "at": 1.793,
+   "do": "plant",
+   "foot": "left",
+   "pos": [
+    400.11,
+    3.904,
+    20.431
+   ],
+   "for": 0.08
+  },
+  {
+   "at": 2.593,
+   "do": "plant",
+   "foot": "right",
+   "pos": [
+    399.89,
+    3.713,
+    20.113
+   ],
+   "for": 0.08
+  },
+  {
+   "at": "=for-0.05",
+   "do": "plant",
+   "foot": "both",
+   "weight": 0,
+   "for": 0.1
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

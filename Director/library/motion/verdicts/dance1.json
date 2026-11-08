@@ -1,0 +1,352 @@
+{
+ "mx_african_rainbow": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture",
+   "point",
+   "wave"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a loose, big-armed afro groove in place, a full body bounce with one arm swept overhead (0.4-0.6 s, 2.1-2.5 s, 4.1-4.6 s) and a deep forward fold with arms dangling (0.8-1.6 s, 2.6-3.1 s); weak at: close-ups of the hands (fingers frozen flat and straight the whole clip, no finger motion) and anything calm; needs: relaxed grip; the 70 deg knee-backward measure does not show as a flip in view (legs read straight/locked on the toe steps)",
+  "watched": "strip 0-7.3 s, hands burst 0-1 s, own full-body bursts 1.0-1.5 s and 4.4-4.9 s"
+ },
+ "mx_bboy_pose_to_idle": {
+  "grade": "C",
+  "uses": [
+   "transition"
+  ],
+  "weak": [
+   "pose",
+   "dance",
+   "stand-idle"
+  ],
+  "needs": [
+   "start at 0.55 s"
+  ],
+  "line": "good for: getting up off the floor from all fours to standing (0.55-1.6 s), then a plain stand looking up (1.7-2.3 s); weak at: the bboy freeze itself: 0-0.45 s his head and chest are under the lawn with only the legs above it, and the clip drifts 0.47 m; needs: start at 0.55 s, never show 0-0.45 s",
+  "watched": "strip 0-2.8 s, own full-body burst 0-0.5 s"
+ },
+ "mx_belly_dance": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a feminine/comic belly dance with both arms held overhead, wrists bent, hips swaying (preview window 10.9-12.5 s clip), a slow turn showing his back (13.6-14.4 s), hands near the hips with a hip shimmy (15.3-16.5 s), arms flung up and wide (16.9-18.9 s) which also works as a hands-up pose; weak at: anything masculine or grounded, and talk (arms up the whole time); needs: nothing (clean clip plays; source slid 35 cm/s)",
+  "watched": "strip 10.9-18.9 s (busiest 8 s), hands burst 1 s"
+ },
+ "mx_body_wave": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "gesture",
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: an arm wave across the shoulders (0-1.2 s, 3.4-4.6 s) and a chest-led body roll seen in profile (2.0-3.2 s, 5.6-6.4 s), a smooth slow beat filler; weak at: front-on cameras (he turns to profile for the roll) and hand close-ups (fingers frozen flat, no finger motion); needs: relaxed grip; knee-backward measure (30 deg) not visible, legs stay straight",
+  "watched": "strip 0-7.1 s"
+ },
+ "mx_boogaloo": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a wide-legged boogaloo with knee rolls and loose arms facing front (2.3-6.3 s), a hand flick out to the side at 2.6 s; weak at: 6.7-9.5 s where he turns his back to camera and walks it round, and front cameras late in the clip; needs: pick 2.3-6.3 s (start/stop) for a front shot",
+  "watched": "strip 2.3-10.3 s, hands burst 1 s around 2.6 s"
+ },
+ "mx_charleston": {
+  "grade": "C",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "walk",
+   "kick"
+  ],
+  "needs": [],
+  "line": "good for: a frantic, comic charleston with kicks, only in a wide shot; weak at: everything close: the source was the noisiest in the group (1719 snaps, the clean clip plays), at 11.0-11.8 s he leans far back off balance on one straight leg like he is falling while kicking the other leg back, at 8.6-8.9 s both feet hover off the lawn, the head swings far (yaw -53..40); needs: if used, a wide and a short window (8.4-10.4 s)",
+  "watched": "strip 8.4-16.4 s, hands burst 1 s, own full-body bursts 8.6-9.1 s and 11.0-11.5 s"
+ },
+ "mx_hh_arm_wave": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "wave"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a clean hip hop arm wave through both arms across the shoulders, feet planted, facing front (whole loop, wave peaks 0.3-0.8 s and 2.4-2.8 s), a big readable 'wave' moment in a dance; weak at: talk (arms out the whole time) and finger close-ups (fingers frozen flat, no finger motion); needs: relaxed grip, light (0.2) so the wave still reads through the hand",
+  "watched": "strip 0-5.2 s"
+ },
+ "mx_hh_arms": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "gesture"
+  ],
+  "weak": [],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: hip hop arm choreography with real gestures: palm framing the face then crossing the chest (2.0-2.7 s), arms up and around the head (3.0-4.5 s), hand to the chin/mouth while turning away (6.9-7.5 s, fingertips come near the nose: not for a face close-up), a sweep across the chest out to an open-palm presenting arm at the side (9.0-9.9 s, good as 'over there'/'this'); weak at: face close-up 6.9-7.5 s; needs: relaxed grip (flat, slightly spread hands through the presenting moves)",
+  "watched": "strip 1.9-9.9 s, hands burst 9-10 s, own bursts 2.1-2.6 s and 6.9-7.9 s (right camera)"
+ },
+ "mx_hh_booty_step": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "gesture",
+   "listen",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a playful hip hop step with clear acting beats: both arms up overhead pumping (0.2-1.0 s), a hand cupped beside the head like 'I can't hear you' (1.4-2.4 s), hand on hip with the other hand up, stepping (2.6-4.0 s, a sassy pose), arms out to finish (4.4-4.9 s); feet stay in place; weak at: talk (hands busy the whole clip); needs: nothing (one-frame knee-backward measure not seen)",
+  "watched": "strip 0-4.9 s"
+ },
+ "mx_hh_listening": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "listen",
+   "gesture"
+  ],
+  "weak": [],
+  "needs": [],
+  "line": "good for: a groove with real acting: hand flat on his chest ('me', 10.3-11.0 s), arms opening out, then a hand raised and cupped up beside his head, the 'listen / I can't hear you' gesture (12.9-13.8 s), then a loose low groove with hands at the waist (14.5-18.3 s); weak at: nothing obvious; needs: nothing. Same file as mx_hh_listening_2 (byte-identical preview and measures): use this one",
+  "watched": "strip 10.3-18.3 s, own burst 12.8-13.8 s (right camera)"
+ },
+ "mx_hh_listening_2": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "listen",
+   "gesture"
+  ],
+  "weak": [],
+  "needs": [],
+  "line": "good for: exactly what mx_hh_listening is (the FBX is the same size and the preview is byte-identical: a duplicate import), hand to chest 10.3-11.0 s, cupped listen hand 12.9-13.8 s; weak at: nothing new; needs: nothing, but prefer mx_hh_listening so the catalog has one name",
+  "watched": "strip 10.3-18.3 s (md5 identical to mx_hh_listening), own burst on mx_hh_listening 12.8-13.8 s"
+ },
+ "mx_hh_quake": {
+  "grade": "C",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "stand-idle",
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a wide, very low squatting 'quake' bounce with floppy arms, comic only, in a wide; weak at: anything with the face: a big head throw back to the sky (about 4.2-5.0 s) and a forearm swept across the top of the head (7.6-7.9 s), and the knees-out squat the whole clip reads strained; needs: if used, a wide and the window 1.0-4.0 s",
+  "watched": "strip 1.0-9.0 s, own full-body burst 7.5-8.5 s"
+ },
+ "mx_hh_raise_roof": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "gesture"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: raise the roof: two-handed pumps up (0.2-1.7 s) and both open hands up wide, a celebrate / 'hands up' (1.8-4.1 s, cleanest front-on); weak at: a face close-up 0.6-1.5 s where his right palm pushes up across his forehead and covers the face on each pump; needs: for a close-up, start at 1.8 s",
+  "watched": "strip 0-4.1 s, own burst 0.6-1.6 s (right camera)"
+ },
+ "mx_hh_robot": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "stop at 3.0 s"
+  ],
+  "line": "good for: robot arm hits from a guard, one hand up by the face and the forearm swept across the chest, facing front (1.8-3.0 s); weak at: 3.0-6.6 s where he folds into a forward hunch with dangling arms (lean 40 deg) that reads like a slump, not a robot, and the back half turns away; needs: stop at 3.0 s (or mask: arms over another groove)",
+  "watched": "strip 1.8-9.8 s"
+ },
+ "mx_hh_running_man": {
+  "grade": "A",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "run",
+   "walk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a clean running man in place: knee up with forearms level, slide back, every ~0.6 s (knee peak 1.57 s), facing three-quarter front, loops; weak at: an actual run or walk (no travel) and hand close-ups (fingers frozen straight, no finger motion); needs: relaxed grip; the 84 deg knee-backward measure is not visible, the standing leg reads straight",
+  "watched": "strip 0-4.7 s, own full-body burst 1.3-1.8 s"
+ },
+ "mx_hh_shimmy": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a loose shoulder shimmy with arms out to the sides (0.9-2.5 s, 3.3-6.5 s), and both arms thrown up wide in a celebrate (7.2-7.9 s); weak at: a face close-up 2.5-3.1 s where his right hand sweeps across in front of his face with the fingers splayed stiff; needs: relaxed grip (fingers splay on the sweeps)",
+  "watched": "strip 0.9-8.9 s, own burst 2.5-3.5 s (right camera)"
+ },
+ "mx_hh_side_to_side": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "stand-idle"
+  ],
+  "weak": [],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a mellow side-to-side hip hop groove, feet light, arms swinging loose with a hand brushing the chest (3.6-4.0 s, 9.6-10.0 s), an easy background groove or a vibing stand while the song plays, head moves with it; weak at: big hits (it stays small); needs: relaxed grip (left hand fans open about a third of the time)",
+  "watched": "strip 0-8.0 s, hands burst 1 s around 4.6 s"
+ },
+ "mx_hh_step": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "laugh"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a small step in place with one hand resting on his belly, and a slow head roll down then all the way back to the sky (1.9-2.6 s, again 4.4-5.2 s and 7.2-7.8 s), a cocky groove; weak at: talk and laugh (the head-back reads like a laugh but the mouth and body do not sell it), and hand close-ups (fingers frozen, no finger motion); needs: relaxed grip",
+  "watched": "strip 0-7.8 s, own burst 1.9-2.9 s (right camera)"
+ },
+ "mx_hh_timid": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "stand-idle"
+  ],
+  "weak": [
+   "gesture",
+   "talk"
+  ],
+  "needs": [
+   "mask: lower"
+  ],
+  "line": "good for: a small shy bounce in the knees (the whole clip, 2.5-10.5 s), as a lower-body layer under a gesture or a quiet verse; weak at: anything above the waist: the arms hang held out stiffly away from the body like a penguin the whole clip and nothing happens with them; needs: mask: lower (put another clip on the upper body)",
+  "watched": "strip 2.5-10.5 s"
+ },
+ "mx_hh_tut": {
+  "grade": "C",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "gesture"
+  ],
+  "needs": [],
+  "line": "good for: a tutting-style arm routine in a wide; a fingers 'frame' around the face at about 2.6-2.9 s is the one cute moment; weak at: 2.3-2.6 s his right forearm sweeps across his eyes and lies on his forehead, and 3.9-5.5 s he works with his back to camera; needs: if used, a wide and start after 2.9 s or before 2.2 s",
+  "watched": "strip 0.3-8.3 s, own burst 2.2-3.2 s (right camera)"
+ },
+ "mx_hh_twirl": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "point"
+  ],
+  "needs": [],
+  "line": "good for: arm waves and both arms reaching forward and up in turn, mostly in profile (7.1-12.5 s), then a spin round past his back (12.7-13.5 s) to front with arms out (13.5-15.1 s); weak at: a front camera before 12.5 s (he is side-on), and as a point (the reaches are open-handed and both-armed); needs: a side camera, or start at 13.5 s for front",
+  "watched": "strip 7.1-15.1 s"
+ },
+ "mx_hh_wave_1": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "gesture"
+  ],
+  "weak": [
+   "point"
+  ],
+  "needs": [
+   "stop at 8.1 s"
+  ],
+  "line": "good for: an arm wave and chest-hand groove facing front (4.9-6.5 s), and an arm pushed out straight to the side with an open palm then drawn back (7.2-8.0 s, reads as 'that way' / a push, not a point); weak at: 9.3-10.1 s a forward fold with head down (lean 40 deg) and the back half turning to profile; needs: stop at 8.1 s",
+  "watched": "strip 4.9-12.9 s, own burst 7.2-8.2 s (right camera)"
+ },
+ "mx_house_2": {
+  "grade": "C",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "gesture",
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: house footwork, knees driving, in a wide; weak at: 11.4-15.3 s mostly with his back to camera and hunched, the head turning up to 103 deg off the chest, and 15.5-15.8 s his left hand comes up and the fingers press into his nose (the 2 hand-to-face frames); needs: relaxed grip (fingers fan open about a third of the time); avoid 15.4-15.9 s in any shot that sees the face",
+  "watched": "strip 11.0-19.0 s, own burst 15.4-16.4 s (right camera)"
+ },
+ "mx_house_3": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: big energetic house: deep lunges side to side with arms slicing across the body, facing front (5.7-13.7 s), the most energy in the group, a drop or chorus in a wide or medium; weak at: a face close-up 8.4-8.9 s where his forearm sweeps across his eyes, and the deep lean (65 deg) reads as a fold in a close-up; the hands come very close to the belly on the crossing sweeps (3 hand-in-body frames, around 8.9 s); needs: relaxed grip (claw-spread hands on the sweeps)",
+  "watched": "strip 5.7-13.7 s, own bursts 6.3-7.3 s and 8.5-9.5 s (right camera)"
+ },
+ "mx_house_4": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "mask: lower"
+  ],
+  "line": "good for: quick house footwork with knee lifts in place (7.3-12.0 s), as legs under a tighter upper body; weak at: the upper body: hunched over with the head down much of the time (lean 37 deg), turned toward profile, and at 13.3-14.1 s an arm swings over his head across the face; needs: mask: lower",
+  "watched": "strip 7.3-15.3 s"
+ }
+}

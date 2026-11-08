@@ -1,0 +1,32 @@
+{
+ "name": "g_nod",
+ "about": "A slow nod, chin up then down, from mx_nod (0.4-1.8 s).",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.4s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_nod",
+  "mask": "head",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.4,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

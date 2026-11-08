@@ -1,0 +1,9 @@
+{
+  // The rooms of the estate, lit like a stage: a hard warm key high from camera right that casts real shadows on the floor (ceilings and walls are "shell" in the set, so it comes straight through), a soft fill close to the lens that opens the face and puts a catch-light in the eyes, a hot cool rim from behind that catches hair and shoulders. Ambient stays low so every room has a dark side. The painted floors are tinted down in their materials so the key can't blow them out.
+  "sky": { "top": "#c5ecfb", "mid": "#ffeef2", "bottom": "#ffe7ee", "ambient": "#6e6468", "ambientTop": "#80767c", "ambientBottom": "#8a6e74", "fog": "#ffeef2", "density": 0.0002 },
+  "lights": {
+    "key": { "type": "directional", "pos": [12, 15, 1], "aim": "subject", "color": "#fff0dc", "intensity": 1.45, "shadows": true },
+    "fill": { "type": "directional", "pos": [-3.5, 4, 0], "aim": "subject", "color": "#ffe8e0", "intensity": 0.52 },
+    "rim": { "type": "directional", "pos": [-6, 5, 26], "aim": "subject", "color": "#dfe9ff", "intensity": 1.4 }
+  }
+}

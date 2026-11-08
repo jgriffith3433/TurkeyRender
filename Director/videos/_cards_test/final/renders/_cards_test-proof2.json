@@ -1,0 +1,85 @@
+{
+ "file": "videos/_cards_test/output/_cards_test-proof2.mp4",
+ "fps": 30,
+ "when": "2026-11-08T01:03:23.450Z",
+ "segments": [
+  {
+   "id": "head",
+   "f0": 0,
+   "f1": 14,
+   "hash": "ab3af21714487bdb"
+  },
+  {
+   "id": "alone",
+   "f0": 14,
+   "f1": 97,
+   "hash": "eecf0b401ed0e36f"
+  },
+  {
+   "id": "his_face",
+   "f0": 97,
+   "f1": 138,
+   "hash": "97b05d6207d61840"
+  },
+  {
+   "id": "door_opens",
+   "f0": 138,
+   "f1": 180,
+   "hash": "4fc1f86e588c3128"
+  },
+  {
+   "id": "she_comes",
+   "f0": 180,
+   "f1": 262,
+   "hash": "02bf2b90b39e4aff"
+  },
+  {
+   "id": "over_him",
+   "f0": 262,
+   "f1": 304,
+   "hash": "2f2beb1c0fbe64ff"
+  },
+  {
+   "id": "over_her",
+   "f0": 304,
+   "f1": 345,
+   "hash": "13b3a39dca39aed2"
+  },
+  {
+   "id": "both",
+   "f0": 345,
+   "f1": 428,
+   "hash": "87a01c6583e51213"
+  },
+  {
+   "id": "hero",
+   "f0": 428,
+   "f1": 511,
+   "hash": "b92a040cb52b0aa4"
+  },
+  {
+   "id": "cold_top",
+   "f0": 511,
+   "f1": 593,
+   "hash": "6af36cf45db050dd"
+  },
+  {
+   "id": "out",
+   "f0": 593,
+   "f1": 676,
+   "hash": "4267bce8c25dfaf1"
+  },
+  {
+   "id": "walk",
+   "f0": 676,
+   "f1": 759,
+   "hash": "6486aae34428803f"
+  },
+  {
+   "id": "lamp",
+   "f0": 759,
+   "f1": 6126,
+   "hash": "74bc5bd5312f3163"
+  }
+ ]
+}

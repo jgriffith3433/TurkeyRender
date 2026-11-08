@@ -1,0 +1,32 @@
+{
+ "version": 1,
+ "stages": {
+  "board": {
+   "status": "fail",
+   "key": "1a52dbaea674fd1d",
+   "took": 0.04,
+   "problems": [
+    {
+     "what": "shots[46] (a05): \"lens\" is 0",
+     "fix": "A focal length in mm (24 wide, 35, 50, 85 close, 100+ ecu)",
+     "file": "videos/hawkespunch/storyboard/shots.json",
+     "field": "shots[46] (a05).lens"
+    },
+    {
+     "what": "shots[47] (a06): \"lens\" is 0",
+     "fix": "A focal length in mm (24 wide, 35, 50, 85 close, 100+ ecu)",
+     "file": "videos/hawkespunch/storyboard/shots.json",
+     "field": "shots[47] (a06).lens"
+    }
+   ],
+   "stats": {
+    "shots": 53,
+    "seconds": 204.25,
+    "avg": 3.85,
+    "bursts": 0,
+    "calmShare": 0.82
+   },
+   "at": "2026-11-08T19:24:05.391Z"
+  }
+ }
+}

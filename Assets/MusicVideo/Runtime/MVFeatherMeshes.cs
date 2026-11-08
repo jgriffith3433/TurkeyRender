@@ -42,7 +42,7 @@ namespace TKShock.MV
 
         public static Mesh New(string name)
         {
-            return new Mesh { name = name, hideFlags = HideFlags.HideAndDontSave, indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
+            return new Mesh { name = MVGen.Name(name), hideFlags = HideFlags.HideAndDontSave, indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
         }
 
         static readonly Dictionary<string, Mesh> Cache = new Dictionary<string, Mesh>();

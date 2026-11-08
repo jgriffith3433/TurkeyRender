@@ -1,0 +1,149 @@
+{
+ "name": "touch_grass",
+ "about": "On one knee, leans out and lays his right hand on the grass, holds it there, comes back to the kneel. Held poses from a kneeling mocap clip. `hold` adds seconds with the hand down, so the hand can stay through a cut; `smile` 0 leaves the face alone, for a smile that belongs to the next shot `down` is the hand height above the mark, `reachFor` how long the hand takes to arrive, `open` how far the fingers curl while down (0 flat, 1 fist), `rise` when he is back up.",
+ "entry": "kneel",
+ "exit": "kneel",
+ "length": "4.2s",
+ "min": "3.9s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0.25,
+    0,
+    0.8
+   ],
+   "for": "0.5s",
+   "head": 0,
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleKneelCampfire",
+   "blend": "0.3s"
+  },
+  {
+   "at": 0.25,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": 0.1,
+   "do": "keys",
+   "successive": true,
+   "anticipate": 0.08,
+   "keys": [
+    {
+     "t": 1.15,
+     "from": "MatchesLightCampfire@4.19",
+     "ease": "inout",
+     "overshoot": 0.04,
+     "settle": "0.3s",
+     "hold": "=1.2+hold",
+     "bones": {
+      "spine": [
+       6,
+       0,
+       0
+      ],
+      "chest": [
+       10,
+       0,
+       0
+      ],
+      "head": [
+       -12,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=rise+hold",
+     "from": "IdleKneelCampfire@0.5",
+     "ease": "inout"
+    }
+   ],
+   "release": "0.4s"
+  },
+  {
+   "at": 1.6,
+   "do": "face",
+   "smile": "$smile",
+   "for": "0.9s",
+   "ease": "inout",
+   "if": "$smile"
+  },
+  {
+   "at": "=2.1+hold",
+   "do": "blink",
+   "for": "0.25s"
+  },
+  {
+   "at": "=3.0+hold",
+   "do": "gaze",
+   "weight": 0,
+   "for": "0.8s",
+   "ease": "inout"
+  },
+  {
+   "at": "=rise+hold",
+   "do": "face",
+   "smile": 0.2,
+   "for": "0.6s",
+   "if": "$smile"
+  },
+  {
+   "at": 0.75,
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.17,
+    "$down",
+    0.8
+   ],
+   "for": "$reachFor",
+   "ease": "inout"
+  },
+  {
+   "at": "=2.5+hold",
+   "do": "reach",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.8,
+   "do": "fingers",
+   "hand": "right",
+   "set": "$open",
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=2.4+hold",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": "0.6s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   "kneel_down"
+  ],
+  "tail": 0.6
+ },
+ "params": {
+  "hold": 0,
+  "smile": 0.45,
+  "down": 0.07,
+  "reachFor": 0.55,
+  "rise": 3.5,
+  "open": 0.1
+ }
+}

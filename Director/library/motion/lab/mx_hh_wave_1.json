@@ -1,0 +1,38 @@
+{
+ "clip": "mx_hh_wave_1",
+ "seconds": 12,
+ "popCount": 18,
+ "pops": [
+  "1.367s RightHandMiddle3 kink 0.084 m",
+  "1.500s RightHandIndex3 kink 0.099 m",
+  "1.533s RightHandIndex3 kink 0.165 m",
+  "1.567s RightHandIndex3 kink 0.131 m",
+  "5.567s LeftHandMiddle3 kink 0.098 m",
+  "5.600s LeftHandPinky3 kink 0.113 m"
+ ],
+ "feet": [
+  "left foot on floor moved 4.646 m, worst step 0.086 m at 10.80s",
+  "right foot on floor moved 4.775 m, worst step 0.077 m at 10.73s"
+ ],
+ "hipsTop": 0.9233651,
+ "hipsLow": 0.827634454,
+ "hipsTravel": "(-0.39, -0.02, 0.12)",
+ "limits": {
+  "RightLowerArm": 27.5,
+  "LeftLowerLeg": 17.9,
+  "groundHipsCm": 6.7,
+  "Head": 4.1,
+  "RightLowerLeg": 1.8,
+  "Spine": 0.7,
+  "LeftLowerArm": 0.3,
+  "Chest": 0.2
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_hh_wave_1 was rejected by admission: foot slide 4.59 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_wave_1_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_wave_1_three.mp4"
+ ]
+}

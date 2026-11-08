@@ -1,0 +1,54 @@
+[
+ {
+  "id": "windup",
+  "idea": "he winds up and holds the cocked pose, trembling, lines gathering on the fist, then strikes in three frames",
+  "feel": "power gathering, then a snap",
+  "take": null,
+  "at": "1:1",
+  "end": "1:4.4817",
+  "t": 0.165,
+  "tEnd": 2.355,
+  "set": "fx_void",
+  "seq": "void",
+  "note": null
+ },
+ {
+  "id": "hit",
+  "idea": "contact; the frame goes two-tone, everything holds as the boulder shakes, then it bursts, the ring tears out and the camera takes the blow",
+  "feel": "the hit lands in silence and then everything goes",
+  "take": null,
+  "at": "1:4.4817",
+  "end": "2:4.3148",
+  "t": 2.355,
+  "tEnd": 4.765,
+  "set": "fx_void",
+  "seq": "void",
+  "note": null
+ },
+ {
+  "id": "wide",
+  "idea": "the wide: a tiny man, a ring still spreading, the ice drifting out and the dust hanging",
+  "feel": "scale; it was a lot",
+  "take": null,
+  "at": "2:4.3148",
+  "end": "3:4.7663",
+  "t": 4.765,
+  "tEnd": 7.565,
+  "set": "fx_void",
+  "seq": "void",
+  "note": null
+ },
+ {
+  "id": "deadpan",
+  "idea": "his face, flat and lit from the front, nothing on it at all",
+  "feel": "deadpan",
+  "take": null,
+  "at": "3:4.7663",
+  "end": "4:4.8998",
+  "t": 7.565,
+  "tEnd": 10.165,
+  "set": "fx_void",
+  "seq": "void",
+  "note": null
+ }
+]

@@ -1,0 +1,40 @@
+{
+ "clip": "mx_bboy_pose_to_idle",
+ "seconds": 2.4330000000000003,
+ "popCount": 20,
+ "pops": [
+  "0.700s LeftToes kink 0.113 m",
+  "0.733s RightToes kink 0.082 m",
+  "0.867s RightToes kink 0.192 m",
+  "0.900s LeftToes kink 0.162 m",
+  "0.933s LeftToes kink 0.168 m",
+  "0.967s LeftToes kink 0.149 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.178 m, worst step 0.038 m at 1.37s",
+  "right foot on floor moved 0.250 m, worst step 0.035 m at 0.97s"
+ ],
+ "hipsTop": 1.29374611,
+ "hipsLow": 0.6108544,
+ "hipsTravel": "(0.65, 0.65, -0.24)",
+ "limits": {
+  "RightFoot": 52.2,
+  "LeftFoot": 49.4,
+  "LeftLowerLeg": 16.3,
+  "groundHipsCm": 14.1,
+  "LeftLowerArm": 12.2,
+  "RightLowerLeg": 5.6,
+  "RightShoulder": 5.1,
+  "Chest": 4.5,
+  "Spine": 3.6,
+  "Head": 1.2
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_bboy_pose_to_idle was rejected by admission: joint limits moved RightFoot 52.6 deg"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_bboy_pose_to_idle_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_bboy_pose_to_idle_three.mp4"
+ ]
+}

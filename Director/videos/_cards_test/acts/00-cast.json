@@ -1,0 +1,10 @@
+{
+  // Who can be cast. Where they stand and whether they show comes from the cards.
+  "actors": {
+    "person": { "model": "person", "material": "Assets/MusicVideo/Person/Person.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "her": { "model": "person2" }
+  },
+  "cues": [
+    { "at": 0, "do": "face", "on": "her", "blink": 0, "smile": 0, "jawOpen": 0, "fear": 0, "eyesWide": 0, "for": "0.01b" }
+  ]
+}

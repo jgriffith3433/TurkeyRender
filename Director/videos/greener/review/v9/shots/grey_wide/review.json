@@ -1,0 +1,22 @@
+{
+ "id": "grey_wide",
+ "f0": 3179,
+ "f1": 3255,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 105.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a4c2b01d3ce99234",
+ "summary": "The strip is clean: a static camera and a smooth white-to-scene fade, with the man's walk and the crate steady from tile to tile and no pops, flicker or clipping that I can see.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3591,
+  "out": 424
+ },
+ "cost": 0.0114
+}

@@ -1,0 +1,31 @@
+{
+ "id": "tv_ticker",
+ "f0": 5401,
+ "f1": 5685,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 180.033,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "cc25b5573674d1aa",
+ "summary": "The cut is clean with a static camera and no flicker or snapping, though the announcer's near arm moves quickly between 180.13 and 180.19 and the seated figure on the left is frozen.",
+ "faults": [
+  {
+   "t": 180.16,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The announcer's near hand goes from a mid-chest gesture at 180.13 to raised at the shoulder at 180.19 in about three frames. It reads as a quick snap rather than a eased move. The seated figure on the left stays almost rigid with legs wide and no weight shift.",
+   "fix": "Add one or two in-between frames or an ease on the arm raise. Give the left figure a small nod or weight shift."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3578,
+  "out": 944
+ },
+ "cost": 0.0166
+}

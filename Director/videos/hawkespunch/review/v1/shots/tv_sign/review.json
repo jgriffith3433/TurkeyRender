@@ -1,0 +1,22 @@
+{
+ "id": "tv_sign",
+ "f0": 5741,
+ "f1": 5798,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 191.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "8ed923461b95c178",
+ "summary": "The cut strip is clean: the camera and sign stay still, the can and the two small figures barely move, and I can't point to a pop, flicker or clip in any tile.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3576,
+  "out": 126
+ },
+ "cost": 0.0084
+}

@@ -1,0 +1,27 @@
+{
+ "id": "head",
+ "hash": "66b9daa149ec7fa4",
+ "w": 1280,
+ "h": 720,
+ "fps": 30,
+ "f0": 0,
+ "f1": 15,
+ "parts": {
+  "engine": "0a66f22144601a04",
+  "songData": "2141f0b75cbc5e1d",
+  "songAudio": "3649997:1794010259393",
+  "poses": "2a882b20e25a9be3",
+  "grips": "8ecf5ff005fc5408",
+  "stage": "9e0e67a8350f1f45",
+  "shows": "74234e98afe7498f",
+  "videoFiles": "Props:88475ad826796b7c",
+  "frame": "1280x720@30 final",
+  "frames": "0-15",
+  "actor aim_fwd": "cafdb9a453ad9b2b",
+  "actor aim_mid": "beca8968bd7e11eb",
+  "actor aim_stage": "018dbe72488865c3",
+  "actor lawn_chair": "95f78ccf946e2c03",
+  "actor person": "b7788dd0645cdf8b"
+ },
+ "rendered": "2026-11-07T07:16:40.337Z"
+}

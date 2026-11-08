@@ -1,0 +1,127 @@
+{
+  // Hawkes Punch H1: the boulder hop on the ring, on 2s except the push.
+
+ "name": "hp_h1_hop",
+ "about": "H1 boulder hop (s6_hop): crouch on the boulder, push off, float with the drawing held up, tuck to land; HIM on zg_neutral_b. Loops for a second hop.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 2.25,
+ "loop": true,
+ "poses": {
+  "crouch": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   },
+   "muscles": {
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Front-Back": -0.9,
+    "Right Upper Leg Front-Back": -0.85,
+    "Left Lower Leg Stretch": -0.45,
+    "Right Lower Leg Stretch": -0.4,
+    "Spine Front-Back": -0.35,
+    "Neck Nod Down-Up": 0.15,
+    "Right Arm Down-Up": 0.55,
+    "Right Arm Front-Back": -0.35,
+    "Right Forearm Stretch": 0.6
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.4
+    },
+    "right": {
+     "curl": 0.55
+    }
+   },
+   "root": {
+    "rot": [
+     30,
+     0,
+     0
+    ]
+   }
+  },
+  "push": {
+   "from": "crouch",
+   "muscles": {
+    "Left Upper Leg Front-Back": 0.25,
+    "Right Upper Leg Front-Back": 0.3,
+    "Left Lower Leg Stretch": 0.95,
+    "Right Lower Leg Stretch": 0.95,
+    "Left Foot Up-Down": 0.9,
+    "Right Foot Up-Down": 0.9,
+    "Spine Front-Back": 0.1
+   },
+   "root": {
+    "rot": [
+     20,
+     0,
+     0
+    ]
+   }
+  },
+  "float": {
+   "from": "crouch",
+   "muscles": {
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Front-Back": 0.15,
+    "Right Upper Leg Front-Back": -0.05,
+    "Left Lower Leg Stretch": 0.6,
+    "Right Lower Leg Stretch": 0.4,
+    "Spine Front-Back": 0.05,
+    "Right Arm Down-Up": 0.75,
+    "Right Forearm Stretch": 0.75,
+    "Left Arm Down-Up": 0.2,
+    "Left Arm Front-Back": 0.3,
+    "Left Forearm Stretch": 0.6,
+    "Neck Nod Down-Up": 0.2
+   },
+   "root": {
+    "rot": [
+     10,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "crouch",
+   "hold": "6f"
+  },
+  {
+   "t": "9f",
+   "pose": "push",
+   "interp": "linear"
+  },
+  {
+   "t": "15f",
+   "pose": "float",
+   "interp": "overshoot",
+   "overshoot": 0.08,
+   "settle": 0.3,
+   "step": 2,
+   "hold": "24f"
+  },
+  {
+   "t": "48f",
+   "pose": "crouch",
+   "interp": "ease",
+   "step": 2
+  },
+  {
+   "t": "54f",
+   "pose": "crouch"
+  }
+ ]
+}

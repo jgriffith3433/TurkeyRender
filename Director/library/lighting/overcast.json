@@ -1,0 +1,11 @@
+{
+  // A white sky: light from everywhere, soft shadows, flat and honest.
+  "sky": { "top": "#b4bcc6", "mid": "#d8dadc", "bottom": "#70705e", "ambient": "#8a8c8e", "ambientTop": "#c4c9d0", "ambientBottom": "#62624e", "fog": "#d8dadc", "density": 0.006, "clouds": 0.95, "cloudColor": "#e6e7e8", "cloudShade": "#a2a7ae", "cloudScale": 0.6 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [-2, 8, 2], "aim": "subject", "color": "#e8ecf2", "intensity": 0.5, "shadows": true },
+    "key": { "type": "point", "at": "window", "offset": [0, 0.8, 0], "pos": [-1.6, 2.6, 1.6], "color": "#eef1f6", "intensity": 6, "range": 9 },
+    "fill": { "type": "point", "pos": [1.8, 2, 1.2], "color": "#e4e6ea", "intensity": 3, "range": 8 },
+    "rim": { "type": "point", "pos": [0.5, 2.4, -2.2], "color": "#e8ecf2", "intensity": 2, "range": 6 },
+    "practical": { "type": "point", "at": "practical", "pos": [-1.6, 0.9, -1.4], "color": "#ffd0a0", "intensity": 0.4, "range": 3 }
+  }
+}

@@ -1,0 +1,21 @@
+{
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.152 m, worst step 0.049 m at 4.20s",
+  "right foot on floor moved 0.143 m, worst step 0.024 m at 4.80s"
+ ],
+ "hipsTop": 0.928632855,
+ "hipsLow": 0.8924968,
+ "hipsMaxSpeed": 0.15838033,
+ "hipsTravel": "(-0.03, -0.03, 0.04)",
+ "limits": {},
+ "reverse": 0,
+ "fresh": 0.000273570331,
+ "frames": 27,
+ "warnings": [
+  "person: clip Walk6 was rejected by admission: foot slide 3.82 cm/frame"
+ ],
+ "from": 4.1,
+ "to": 6.7
+}

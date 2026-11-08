@@ -1,0 +1,22 @@
+{
+ "id": "irresponsible",
+ "f0": 735,
+ "f1": 812,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 24.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "3c9715f4acb556e2",
+ "summary": "The strip is clean: the camera and body drift smoothly across all 8 frames with no pop, flicker or clipping that I can point to.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3585,
+  "out": 633
+ },
+ "cost": 0.0135
+}

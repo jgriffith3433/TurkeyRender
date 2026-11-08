@@ -1,0 +1,5 @@
+{
+  // The clinic is the base look; the space and commercial sections move it with their moods (library/moods.json space_*, tv_*).
+  "inherit": "clinic-fluorescent",
+  "format": "music-video"
+}

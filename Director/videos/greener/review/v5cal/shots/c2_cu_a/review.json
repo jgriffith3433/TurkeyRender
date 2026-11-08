@@ -1,0 +1,89 @@
+{
+ "id": "c2_cu_a",
+ "f0": 3693,
+ "f1": 3745,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 123.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 123.267,
+   "why": "one patch jumps (cell 114.1, x1.9)",
+   "file": "spike-03698.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 123.933,
+   "why": "one patch jumps (cell 185.8, x3.1)",
+   "file": "spike-03718.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 124.367,
+   "why": "one patch jumps (cell 143.4, x1.8)",
+   "file": "spike-03731.jpg"
+  }
+ ],
+ "hash": "c7cf0e0c3ecfb3c8",
+ "summary": "The tight push-in turns into a wide low-angle shot with a second figure, and the ceiling flickers. There are also a head/arm snap and unlit confetti.",
+ "faults": [
+  {
+   "t": 123.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 123.33 and 123.36 the head turns hard to profile and the torso shifts in one frame. The pointing arm vanishes. This reads as pose snapping with no anticipation.",
+   "fix": "Add 2-3 in-between frames on the head turn and arm drop, or ease the rotation."
+  },
+  {
+   "t": 123.39,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 123.33 and 123.39 the camera and background jump. The stairs, pillar and turkeys reposition, and the view drops lower and closer to the face within about two frames.",
+   "fix": "Smooth the camera move over more frames."
+  },
+  {
+   "t": 123.92,
+   "sev": "A",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The framing jumps from a tight close-up at 123.49 to a full-body wide low-angle with a second figure at 123.92. The brief says tight and pushing in, but this is a different shot. The ceiling takes up the top of the frame.",
+   "fix": "End this shot at the close-up and make the wide its own shot, or keep the push-in continuous."
+  },
+  {
+   "t": 123.96,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling at the top of the frame flickers between 123.92 and 124.16. A brown polygon appears and disappears, changing shape and tint (brown at 123.96-124.12, pale at 124.16). It covers a big part of the frame.",
+   "fix": "Fix the ceiling mesh culling and near clip, and lock the ceiling material."
+  },
+  {
+   "t": 124.06,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Confetti from the gift box is flat, unshaded coloured squares. They grow fast and cross the second figure from 124.02 to 124.16, and cover more of the frame at 124.36-124.5.",
+   "fix": "Light or soft-shade the particles, fade them out and reduce density near the dancers."
+  },
+  {
+   "t": 124.49,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The ceiling changes between brown and pale sky and chandelier across 124.36-124.59. The camera tilts and the ceiling texture swaps.",
+   "fix": "Keep the ceiling material consistent."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 9975,
+  "out": 2012
+ },
+ "cost": 0.0401
+}

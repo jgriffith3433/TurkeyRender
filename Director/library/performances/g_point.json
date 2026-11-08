@@ -1,0 +1,62 @@
+{
+ "name": "g_point",
+ "about": "A bent-arm point at the lens, right hand, from mx_point_bent (0.4-2.3 s): the hand comes up on a bent elbow, aims and holds, then drops. Index finger out.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.9s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_point_bent",
+  "mask": "rightArm",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.4,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  },
+  {
+   "at": 0.15,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.85,
+   "for": 0.15
+  },
+  {
+   "at": 0.15,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.03,
+   "for": 0.15
+  },
+  {
+   "at": "=for-0.35",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": 0.3
+  },
+  {
+   "at": "=for-0.35",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.3,
+   "for": 0.3
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

@@ -1,0 +1,14 @@
+{
+  // Sell the film without telling it: three acts of rising pace, then black, then the title.
+  "about": "A 90 second trailer.",
+  "aspect": [239, 100], "render": [1920, 804], "fps": 24, "length": 90,
+  "pacing": { "avgSeconds": [1.2, 3.5], "maxSeconds": 8, "shots": [35, 70] },
+  "beats": [
+    { "part": "world", "seconds": 20, "job": "the ordinary world, quiet, one line" },
+    { "part": "problem", "seconds": 25, "job": "what breaks it, pace picking up" },
+    { "part": "escalation", "seconds": 28, "job": "montage on the music, cuts on hits" },
+    { "part": "silence", "seconds": 5, "job": "black, one beat of nothing" },
+    { "part": "button", "seconds": 7, "job": "the best joke or scare" },
+    { "part": "title", "seconds": 5, "job": "title and date" }
+  ]
+}

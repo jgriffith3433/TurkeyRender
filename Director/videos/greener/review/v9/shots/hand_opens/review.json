@@ -1,0 +1,22 @@
+{
+ "id": "hand_opens",
+ "f0": 4181,
+ "f1": 4284,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 139.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a86305150dcd17c7",
+ "summary": "The strip is clean: the cut at 139.43 to 139.46 lands straight on the held pose, with the fist and grass blade steady and no pops, flicker or clipping across the frames.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3580,
+  "out": 680
+ },
+ "cost": 0.014
+}

@@ -1,0 +1,69 @@
+{
+ "id": "w_gut",
+ "f0": 3553,
+ "f1": 3628,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 118.433,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 120.633,
+   "why": "one patch jumps (cell 78.5, x8.4)",
+   "file": "spike-03619.jpg"
+  }
+ ],
+ "hash": "3f23925e75a3db6f",
+ "summary": "The cut strip shows the man's pose and the debris burst holding steady, but the Mars sphere clips through his torso and, at 120.63, a red-clothed figure pops in. His hands stay inside Mars with no wrap, and his pose is stiff and doesn't read as winded.",
+ "faults": [
+  {
+   "t": 120.63,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "A red-shirted figure with black trousers appears at the left edge, overlapping Mars, in a single frame. At 120.59 there is only a blue figure. The new figure holds for the rest of the strip with no transition.",
+   "fix": "Fade or animate the red figure in over several frames, or place it offscreen before this moment."
+  },
+  {
+   "t": 120.66,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The man's hands and forearms sink into the Mars surface, which clips through them. Skin-coloured arms vanish into the sphere with no wrap or grip. At 120.73-120.83 the arm is buried in the sphere edge.",
+   "fix": "Move the hands to the sphere surface and wrap the fingers, or pull Mars back out of the arms."
+  },
+  {
+   "t": 118.53,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The flat white cut face of the Mars sphere sits against his chest and belly. Mars and his torso overlap, so it reads as passing through him rather than hitting him.",
+   "fix": "Offset Mars so it only touches his torso, or add a body-fold reaction at the impact."
+  },
+  {
+   "t": 118.46,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Through the whole burst (118.46-118.69) he stands upright and stiff in profile, with no fold, hunch or recoil. This doesn't show winded or folded over round Mars.",
+   "fix": "Add a quick fold at the spine and a head drop on impact, with a short settle after."
+  },
+  {
+   "t": 120.59,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Through 120.59-120.83 he is nearly frozen upright, with arms barely moving and no anticipation. There is no visible reaching toward the next world coming down.",
+   "fix": "Add a lean and a hand reach toward the incoming world, plus breathing motion."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4990,
+  "out": 810
+ },
+ "cost": 0.0181
+}

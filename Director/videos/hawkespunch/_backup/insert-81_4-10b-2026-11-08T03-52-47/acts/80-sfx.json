@@ -1,0 +1,59 @@
+// Hawkes Punch draft 2: room tone everywhere except scene 5 (the only true silence), and the hits, from script2.py. Beds are trimmed copies in Sfx/punch/script2/ so each cuts dead on its cut.
+{
+ "cues": [
+  {"at":"0.000s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_clinic_long_0.mp3","volume":0.1}, // clinic hum: waiting room and exam
+  {"at":"0.250s","sfx":"Assets/MusicVideo/Sfx/punch/door_a.mp3","volume":0.3}, // s1_wide
+  {"at":"3.600s","sfx":"Assets/MusicVideo/Sfx/punch/chair_creak_a.mp3","volume":0.3}, // s1_him
+  {"at":"8.850s","sfx":"Assets/MusicVideo/Sfx/punch/nurse_gobble_a.mp3","volume":0.5}, // s1_gobble
+  {"at":"10.350s","sfx":"Assets/MusicVideo/Sfx/punch/chair_creak_a.mp3","volume":0.35}, // s1_go
+  {"at":"11.600s","sfx":"Assets/MusicVideo/Sfx/punch/door_a.mp3","volume":0.35}, // s1_go
+  {"at":"69.489s","sfx":"Assets/MusicVideo/Sfx/punch/windup_a.mp3","volume":0.45}, // l_mouth
+  {"at":"70.989s","sfx":"Assets/MusicVideo/Sfx/punch/punch_impact_2.mp3","volume":0.5}, // p_face
+  {"at":"70.999s","sfx":"Assets/MusicVideo/Sfx/punch/punch_impact.mp3","volume":0.4}, // p_face
+  {"at":"71.239s","sfx":"Assets/MusicVideo/Sfx/punch/roof_crash.mp3","volume":0.45}, // p_face
+  {"at":"71.989s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_sky_1.mp3","volume":0.5}, // wind up through the sky, cut dead at the playground
+  {"at":"72.089s","sfx":"Assets/MusicVideo/Sfx/punch/rise_whoosh.mp3","volume":0.7}, // p_glass
+  {"at":"73.639s","sfx":"Assets/MusicVideo/Sfx/punch/roof_crash.mp3","volume":0.25}, // p_turkey
+  {"at":"75.489s","sfx":"Assets/MusicVideo/Sfx/punch/panel_clack.mp3","volume":0.3}, // p_turkey
+  {"at":"75.739s","sfx":"Assets/MusicVideo/Sfx/punch/panel_clack_2.mp3","volume":0.3}, // p_turkey
+  {"at":"75.989s","sfx":"Assets/MusicVideo/Sfx/punch/panel_clack.mp3","volume":0.3}, // p_turkey
+  {"at":"76.889s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.35}, // p_travel
+  {"at":"93.889s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_space_2.mp3","volume":0.13}, // space room tone, from the search to the fold (scene 5 is the only silence)
+  {"at":"101.539s","sfx":"Assets/MusicVideo/Sfx/punch/shoulder_tap_a.mp3","volume":0.6}, // s6_tap
+  {"at":"104.389s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.2}, // s6_turn
+  {"at":"106.709s","sfx":"Assets/MusicVideo/Sfx/punch/nose_boing_a.mp3","volume":0.6}, // s6_boop
+  {"at":"109.989s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip.mp3","volume":0.45}, // s7_zip
+  {"at":"112.089s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.4}, // s7_push
+  {"at":"114.189s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.4}, // s7_chase
+  {"at":"114.989s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip_2.mp3","volume":0.35}, // s7_chase
+  {"at":"119.189s","sfx":"Assets/MusicVideo/Sfx/punch/jump_scare_a.mp3","volume":0.5}, // s7_boo
+  {"at":"122.489s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.35}, // s7_kick
+  {"at":"123.289s","sfx":"Assets/MusicVideo/Sfx/punch/kick_thud_a.mp3","volume":0.6}, // s7_kick
+  {"at":"123.339s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.4}, // s7_kick
+  {"at":"126.389s","sfx":"Assets/MusicVideo/Sfx/punch/kick_thud_b.mp3","volume":0.4}, // s7_grab
+  {"at":"129.739s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.45}, // s7_throw
+  {"at":"130.209s","sfx":"Assets/MusicVideo/Sfx/punch/planet_impact_2.mp3","volume":0.7}, // s7_throw
+  {"at":"130.259s","sfx":"Assets/MusicVideo/Sfx/punch/oof_b.mp3","volume":0.6}, // s7_throw
+  {"at":"143.489s","sfx":"Assets/MusicVideo/Sfx/punch/careful_setdown.mp3","volume":0.5}, // s7_place
+  {"at":"147.089s","sfx":"Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3","volume":0.3}, // s8_two
+  {"at":"163.889s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_studio_3.mp3","volume":0.12}, // studio room tone
+  {"at":"164.639s","sfx":"Assets/MusicVideo/Sfx/punch/tv_jingle.mp3","volume":0.5}, // tv_fold
+  {"at":"164.689s","sfx":"Assets/MusicVideo/Sfx/punch/applause.mp3","volume":0.12}, // tv_fold
+  {"at":"174.239s","sfx":"Assets/MusicVideo/Sfx/punch/can_psst_a.mp3","volume":0.55}, // tv_both
+  {"at":"175.039s","sfx":"Assets/MusicVideo/Sfx/punch/gulp_a.mp3","volume":0.5}, // tv_both
+  {"at":"175.439s","sfx":"Assets/MusicVideo/Sfx/punch/gulp_b.mp3","volume":0.5}, // tv_both
+  {"at":"175.839s","sfx":"Assets/MusicVideo/Sfx/punch/gulp_a.mp3","volume":0.45}, // tv_both
+  {"at":"176.289s","sfx":"Assets/MusicVideo/Sfx/punch/ahh_a.mp3","volume":0.55}, // tv_both
+  {"at":"176.439s","sfx":"Assets/MusicVideo/Sfx/punch/ahh_b.mp3","volume":0.45}, // tv_both
+  {"at":"176.839s","sfx":"Assets/MusicVideo/Sfx/punch/ding_a.mp3","volume":0.5}, // tv_thumbs
+  {"at":"176.889s","sfx":"Assets/MusicVideo/Sfx/punch/applause.mp3","volume":0.11}, // tv_thumbs
+  {"at":"191.189s","sfx":"Assets/MusicVideo/Sfx/punch/tv_jingle_tag.mp3","volume":0.45}, // tv_end
+  {"at":"194.689s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_clinic_long_4.mp3","volume":0.1}, // the clinic again
+  {"at":"199.339s","sfx":"Assets/MusicVideo/Sfx/punch/punch_impact_2.mp3","volume":0.6}, // b_play
+  {"at":"199.339s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_space_5.mp3","volume":0.12}, // space again
+  {"at":"199.389s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.4}, // b_play
+  {"at":"205.839s","sfx":"Assets/MusicVideo/Sfx/punch/script2/bed_clinic_long_6.mp3","volume":0.08}, // room tone under the can
+  {"at":"205.889s","sfx":"Assets/MusicVideo/Sfx/punch/can_roll.mp3","volume":0.55}, // b_can
+  {"at":"207.589s","sfx":"Assets/MusicVideo/Sfx/punch/tiny_clink_a.mp3","volume":0.4} // b_can
+ ]
+}

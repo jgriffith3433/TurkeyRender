@@ -1,0 +1,446 @@
+{
+ "name": "fly_fast",
+ "about": "The superman with life in it: arms over the head (mx_hanging_idle's frame), legs together, the head up, and a slow wobble through the whole body every half second (the keys alternate sides, successive so the hips lead), fists, eyes narrowed into the wind with a small grin. The card pitches him level; no ground. Any length.",
+ "entry": "fly",
+ "exit": "fly",
+ "length": "4s",
+ "min": "1s",
+ "params": {
+  "amp": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.5,
+   "arms": 0.6,
+   "hands": 1,
+   "head": 0.5,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "keys",
+   "successive": 0.03,
+   "keys": [
+    {
+     "t": 0,
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       0,
+       0
+      ],
+      "chest": [
+       -6,
+       0,
+       0
+      ],
+      "spine": [
+       -4,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 0.3,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       -3,
+       0
+      ],
+      "chest": [
+       "=-6+-3",
+       0,
+       -2
+      ],
+      "spine": [
+       -4,
+       0,
+       2
+      ],
+      "leftUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 0.81,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       3,
+       0
+      ],
+      "chest": [
+       "=-6+3",
+       0,
+       2
+      ],
+      "spine": [
+       -4,
+       0,
+       -2
+      ],
+      "leftUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 1.33,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       -3,
+       0
+      ],
+      "chest": [
+       "=-6+-3",
+       0,
+       -2
+      ],
+      "spine": [
+       -4,
+       0,
+       2
+      ],
+      "leftUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 1.84,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       3,
+       0
+      ],
+      "chest": [
+       "=-6+3",
+       0,
+       2
+      ],
+      "spine": [
+       -4,
+       0,
+       -2
+      ],
+      "leftUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 2.36,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       -3,
+       0
+      ],
+      "chest": [
+       "=-6+-3",
+       0,
+       -2
+      ],
+      "spine": [
+       -4,
+       0,
+       2
+      ],
+      "leftUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 2.87,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       3,
+       0
+      ],
+      "chest": [
+       "=-6+3",
+       0,
+       2
+      ],
+      "spine": [
+       -4,
+       0,
+       -2
+      ],
+      "leftUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 3.39,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       -3,
+       0
+      ],
+      "chest": [
+       "=-6+-3",
+       0,
+       -2
+      ],
+      "spine": [
+       -4,
+       0,
+       2
+      ],
+      "leftUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 3.9,
+     "ease": "inout",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       3,
+       0
+      ],
+      "chest": [
+       "=-6+3",
+       0,
+       2
+      ],
+      "spine": [
+       -4,
+       0,
+       -2
+      ],
+      "leftUpperLeg": [
+       3,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       -3,
+       0,
+       0
+      ],
+      "leftLowerArm": [
+       -6,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -6,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.9,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.9,
+   "for": "0.3s"
+  },
+  {
+   "at": 0.1,
+   "do": "face",
+   "blink": 0.3,
+   "smile": 0.4,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.7,
+   "do": "blink",
+   "for": "0.16s"
+  },
+  {
+   "at": 3.3,
+   "do": "blink",
+   "for": "0.16s"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "bolt_away"
+   }
+  ],
+  "tail": 0.3
+ }
+}

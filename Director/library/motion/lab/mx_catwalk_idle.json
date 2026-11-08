@@ -1,0 +1,26 @@
+{
+ "clip": "mx_catwalk_idle",
+ "seconds": 10,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.121 m, worst step 0.001 m at 2.43s",
+  "right foot on floor moved 0.115 m, worst step 0.001 m at 4.03s"
+ ],
+ "hipsTop": 0.914619,
+ "hipsLow": 0.9134992,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "LeftLowerLeg": 12.6,
+  "RightLowerLeg": 6.9,
+  "groundHipsCm": 4.9,
+  "RightFoot": 3.9,
+  "LeftFoot": 2
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_catwalk_idle_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_catwalk_idle_three.mp4"
+ ]
+}

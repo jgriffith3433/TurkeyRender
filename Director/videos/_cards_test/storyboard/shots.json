@@ -1,0 +1,141 @@
+{
+ "about": "A test board for the pipeline (mv make). Not a video for J. Times follow cards.map.json at 30 fps.",
+ "fps": 30,
+ "shots": [
+  {
+   "id": "alone",
+   "size": "WIDE",
+   "lens": 24,
+   "frames": 83,
+   "reg": "deadpan",
+   "move": "none",
+   "action": "He sits alone on the sofa, the TV on, nothing else moving.",
+   "line": "",
+   "change": "The place and the man: alone with a TV.",
+   "hero": true
+  },
+  {
+   "id": "his_face",
+   "size": "CU",
+   "lens": 85,
+   "frames": 41,
+   "reg": "deadpan",
+   "move": "none",
+   "action": "His face, lit by the TV. Nothing on it reaches him.",
+   "line": "",
+   "change": "Plant: he feels nothing."
+  },
+  {
+   "id": "door_opens",
+   "size": "MEDIUM",
+   "lens": 50,
+   "frames": 41,
+   "reg": "deadpan",
+   "move": "none",
+   "action": "The door opens behind him; a woman stands in it.",
+   "line": "",
+   "change": "Turn: someone has come in."
+  },
+  {
+   "id": "she_comes",
+   "size": "MEDIUM",
+   "lens": 35,
+   "frames": 83,
+   "reg": "plain",
+   "move": "none",
+   "action": "She walks in past him and stops by the TV, looking at him.",
+   "line": "",
+   "change": "She owns the room; he still does not look up.",
+   "hero": true
+  },
+  {
+   "id": "over_him",
+   "size": "OTS",
+   "lens": 50,
+   "frames": 41,
+   "reg": "plain",
+   "move": "none",
+   "action": "Over his shoulder: she looks down at him.",
+   "line": "",
+   "change": "She is judging him."
+  },
+  {
+   "id": "over_her",
+   "size": "OTS",
+   "lens": 50,
+   "frames": 41,
+   "reg": "plain",
+   "move": "none",
+   "action": "Over her shoulder: he finally looks up at her.",
+   "line": "",
+   "change": "Turn: he sees her."
+  },
+  {
+   "id": "both",
+   "size": "TWO-SHOT",
+   "lens": 35,
+   "frames": 83,
+   "reg": "plain",
+   "move": "none",
+   "action": "The two of them in the room, saying nothing.",
+   "line": "",
+   "change": "They share the room and nothing else."
+  },
+  {
+   "id": "hero",
+   "size": "MEDIUM",
+   "lens": 50,
+   "frames": 83,
+   "reg": "plain",
+   "move": "none",
+   "action": "She stands by the TV, unmoving, owning the room.",
+   "line": "",
+   "change": "She has won without a word.",
+   "hero": true
+  },
+  {
+   "id": "cold_top",
+   "size": "WIDE",
+   "lens": 24,
+   "frames": 83,
+   "reg": "cold",
+   "move": "none",
+   "action": "From above: he is small on the sofa, she is gone from frame.",
+   "line": "",
+   "change": "He is what is left."
+  },
+  {
+   "id": "out",
+   "size": "WIDE",
+   "lens": 24,
+   "frames": 83,
+   "reg": "plain",
+   "move": "none",
+   "action": "Outside, the street. She takes one breath.",
+   "line": "",
+   "change": "New place: she is outside."
+  },
+  {
+   "id": "walk",
+   "size": "WIDE",
+   "lens": 35,
+   "frames": 83,
+   "reg": "plain",
+   "move": "none",
+   "action": "She walks away down the street.",
+   "line": "",
+   "change": "She leaves him behind."
+  },
+  {
+   "id": "lamp",
+   "size": "MEDIUM",
+   "lens": 50,
+   "frames": 83,
+   "reg": "plain",
+   "move": "none",
+   "action": "She stops under the lamp and looks back once.",
+   "line": "",
+   "change": "A last look: she is not sure either."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "c2_orbit_b",
+ "f0": 3922,
+ "f1": 4002,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 130.733,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 130.8,
+   "why": "flow spike x7.6",
+   "file": "spike-03924.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 131.167,
+   "why": "one patch jumps (cell 81, x1.8)",
+   "file": "spike-03935.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 131.5,
+   "why": "one patch jumps (cell 114.3, x1.6)",
+   "file": "spike-03945.jpg"
+  }
+ ],
+ "hash": "67e0926fa293b405",
+ "summary": "The cut strip has a fade-in at the start of the shot and a confetti-covered turn at 131.5; the flicker and the unlit confetti squares are the main faults.",
+ "faults": [
+  {
+   "t": 130.79,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The shot opens on a semi-transparent, washed-out frame of the man that fades in over about 6 frames (130.79 to 130.93). The pose is nearly frozen: same arm and head, barely moving. It reads as a ghosted dissolve, not a clean first frame. The camera is also a tight, different close-up compared with the wide frame at 130.76.",
+   "fix": "Cut to the full-opacity frame on the first frame, or hide the fade behind a hard cut. Start the move on frame 1."
+  },
+  {
+   "t": 130.89,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 130.79 to 130.99 the body and arm are almost static, with only a slow drift. This mushy hold lacks a strong pose and any anticipation before the turn at 131.03.",
+   "fix": "Hold a clear pose, then snap into the turn, or trim these frames."
+  },
+  {
+   "t": 131.53,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Large flat, unshaded confetti squares (red, orange, teal) cross in front of the head and torso at 131.53 to 131.56. They are unlit and hide part of his face, then another sits over his hand at 131.63 to 131.66.",
+   "fix": "Shade or shrink the confetti, or keep it from passing between the camera and his head and torso."
+  },
+  {
+   "t": 131.36,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He turns his back to the camera at 131.39. The arm becomes a stump with the forearm and hand hidden or clipped into the body, and the silhouette is lost.",
+   "fix": "Adjust the arm swing or camera angle so the forearm stays readable in the turn."
+  },
+  {
+   "t": 131.59,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Between 131.49 and 131.73 the body spins fast with a big head and torso jump per frame. The facing flips from front to profile to back in about 3 frames, and the figure's position in the frame jumps around. The camera arc fights the spin and he drifts without a clear weight shift.",
+   "fix": "Add anticipation and a settle on the spin, and keep the camera orbit steady so the subject stays centered."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7748,
+  "out": 874
+ },
+ "cost": 0.0242
+}

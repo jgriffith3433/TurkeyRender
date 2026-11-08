@@ -1,0 +1,75 @@
+{
+ "id": "sym_write1",
+ "f0": 774,
+ "f1": 883,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 25.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 26.733,
+   "why": "frame difference x2.5 (5.43)",
+   "file": "spike-00802.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 27.667,
+   "why": "frame difference x2.3 (4.98)",
+   "file": "spike-00830.jpg"
+  }
+ ],
+ "hash": "2082882df21a75f3",
+ "summary": "The shot has a repeating one-frame torso and arm snap, with the same jump at about 25.9, 26.8 and 27.7 s, and the pose doesn't read as writing.",
+ "faults": [
+  {
+   "t": 26.8,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 26.76 and 26.80 the torso, shoulder and near arm jump in one frame. The torso shifts right and down, the elbow changes angle and the shirt silhouette changes. The hands stay roughly in place. It reads as a loop restart or a pose snap, not a move.",
+   "fix": "Blend or retime the mocap loop seam over 6-8 frames, or hide the loop point. Start the next cycle from the pose where the last one ended."
+  },
+  {
+   "t": 27.73,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The same snap repeats between 27.69 and 27.73. The torso and arm lurch to a new position in one frame, about 0.93 s after the previous one. The regular interval confirms a looping clip with an unblended seam.",
+   "fix": "Remove the loop or lengthen it. Cross-blend the seam, or replace it with a non-repeating take."
+  },
+  {
+   "t": 25.93,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The shot's first frames (25.79-25.89) hold a pose, then at 25.93 the body drops and shifts left. The head, neck and hand all move lower in frame over about 2 frames. This is the same loop snap, and it reads as the cut tweening after the shot has started.",
+   "fix": "Start the shot on the settled pose, or trim the first 5 frames so the move happens after a hold."
+  },
+  {
+   "t": 26.7,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Between snaps (26.66-26.76 and 27.59-27.69) the body barely changes. The far hand stays frozen in the same open claw shape and the near hand keeps the same splayed shape on the thigh. Then it all jumps. The poses are mushy and static, and there is no writing action, no pad visible and no wrist motion.",
+   "fix": "Animate a small repeating pen stroke in the near hand and a pad in frame. Give the far hand a purpose, such as holding the pad."
+  },
+  {
+   "t": 26.7,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Her head is down and her eyes stay low and unchanged across all strips. There is no eye movement, no expression change and no head follow-through on the snaps. The 'not a blink' idea reads as a blank stare, not 'she has heard worse'.",
+   "fix": "Add small eye darts along the writing line, a subtle brow or mouth beat, and a head settle on each line break."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6375,
+  "out": 1557
+ },
+ "cost": 0.0283
+}

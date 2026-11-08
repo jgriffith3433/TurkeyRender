@@ -1,0 +1,117 @@
+{
+  // Hawkes Punch, hero moment 6 (the stop: letting the drawing go), SPACE-EPIC f8_face / f8_ghost: HIM (zg_neutral_b). The quiet one: small, slow, on 3s.
+
+ "name": "hp_d2_letgo",
+ "about": "The stop: he looks at the drawing in his hand (24f), the fingers open (4f), the hand stays (8f), his eyes follow it off toward the sunrise and the arm drifts down slowly; HIM on zg_neutral_b.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 6.0,
+ "poses": {
+  "float": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   }
+  },
+  "hold": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 0.2,
+    "Right Arm Front-Back": -0.65,
+    "Right Forearm Stretch": -0.25,
+    "Neck Nod Down-Up": -0.45,
+    "Head Nod Down-Up": -0.2,
+    "Head Turn Left-Right": -0.1,
+    "Right Hand Down-Up": 0.2,
+    "Left Arm Down-Up": -0.15,
+    "Left Forearm Stretch": 0.1
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.45
+    },
+    "right": {
+     "curl": 0.55,
+     "spread": 0
+    },
+    "right.thumb": {
+     "curl": 0.5
+    }
+   }
+  },
+  "open": {
+   "from": "hold",
+   "muscles": {
+    "Right Arm Down-Up": 0.2,
+    "Right Arm Front-Back": -0.5,
+    "Right Forearm Stretch": 0.9,
+    "Right Hand Down-Up": 0.45,
+    "Neck Nod Down-Up": -0.2,
+    "Head Nod Down-Up": -0.1,
+    "Right Arm Twist In-Out": 0.5
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.03,
+     "spread": 0.5
+    },
+    "right.thumb": {
+     "curl": 0.03,
+     "spread": 0.35
+    }
+   }
+  },
+  "watch": {
+   "from": "open",
+   "muscles": {
+    "Right Arm Down-Up": 0.15,
+    "Right Forearm Stretch": 0.85,
+    "Neck Nod Down-Up": -0.08,
+    "Head Nod Down-Up": 0.0,
+    "Head Turn Left-Right": 0.4,
+    "Neck Turn Left-Right": 0.3
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.2,
+     "spread": 0.3
+    }
+   }
+  },
+  "settle": {
+   "from": "float",
+   "muscles": {
+    "Head Turn Left-Right": 0.1,
+    "Neck Turn Left-Right": 0.06
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "hold",
+   "hold": "24f"
+  },
+  {
+   "t": "28f",
+   "pose": "open",
+   "interp": "out",
+   "hold": "8f"
+  },
+  {
+   "t": "60f",
+   "pose": "watch",
+   "interp": "ease",
+   "step": 3,
+   "hold": "36f"
+  },
+  {
+   "t": "132f",
+   "pose": "settle",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "id": "tv_fold",
+ "f0": 4798,
+ "f1": 4835,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 159.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 160,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-04800.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 160.467,
+   "why": "one patch jumps (cell 109, x5.6)",
+   "file": "spike-04814.jpg"
+  }
+ ],
+ "hash": "8c42475f713c31bf",
+ "summary": "The fold-up reads mostly as intended, but the walls and panels pop in with big jumps and the lighting rig flies through the frame with a prop teleport, and both dancers loop the same pose.",
+ "faults": [
+  {
+   "t": 159.99,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The set pieces appear with no in-between: a wall box and a white slab are suddenly there at 159.99, then at 160.03 and 160.06 the walls change angle and size in big steps. Frames 160.09 to 160.19 show panels jumping position the same way. The fold looks like a step-cut, not a continuous move.",
+   "fix": "Add 2-3 in-between frames, or ease the pieces in from scale 0 or from off-screen, so each piece travels instead of appearing."
+  },
+  {
+   "t": 160.13,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat pink, blue and yellow panels with a thin outline and no shading pass in front of and behind the dancers. At 160.13 the pink panel overlaps the purple dancer's shoulder and a pale slab cuts across his body. At 160.16 the blue panel covers his upper body.",
+   "fix": "Keep the panels behind the dancers in depth, or move them off the dancers' silhouettes. Light them like the walls."
+  },
+  {
+   "t": 160.49,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "A black light fixture jumps between positions at 160.46, 160.49 and 160.53. A second black piece appears at the can's edge at 160.49 and is gone by 160.53. The fixture then turns into a tall stand that wobbles over 160.56 to 160.66, and a small grey object drops through the foreground at 160.56 to 160.63. It reads as debris, not a planned prop.",
+   "fix": "Hide the rig until it is fully built, or give it a clean ease-in. Remove the stray foreground object."
+  },
+  {
+   "t": 160.43,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both dancers sit on stools in near-identical, symmetrical poses with hands at the same level. The twinning flattens the ta-da beat.",
+   "fix": "Offset one dancer's timing, or give the dancers different arm poses on the landing."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6369,
+  "out": 806
+ },
+ "cost": 0.0208
+}

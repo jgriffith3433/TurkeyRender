@@ -1,0 +1,61 @@
+{
+ "id": "taste",
+ "f0": 1147,
+ "f1": 1198,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 38.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 39.4,
+   "why": "one patch jumps (cell 131.9, x4)",
+   "file": "spike-01182.jpg"
+  }
+ ],
+ "hash": "f11c3b77b098b77b",
+ "summary": "The hand and blade sit nearly still through the cut, then the arm drops out of frame in about three frames at 39.36–39.43 with the blade going with it, and the tasting beat never shows.",
+ "faults": [
+  {
+   "t": 39.4,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The arm and hand fall from chest height at 39.36 to low in the frame at 39.40 and fully out of frame at 39.43. That is about 3 frames with no anticipation or settle. The blade disappears with the hand, so it reads as the arm and prop snapping away.",
+   "fix": "Spread the drop over 8–10 frames with an ease-out. Keep the hand in frame until the blade is clearly lowered, or cut away from the drop."
+  },
+  {
+   "t": 39.4,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "At 39.36 and 39.40 the blade only touches the fingertips and hangs off the end of the hand. The fingers are loose and do not wrap it, so the blade looks pasted to the hand instead of held.",
+   "fix": "Close the thumb and index finger around the stalk and attach the blade to that grip point."
+  },
+  {
+   "t": 38.4,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is that he tastes the blade. Across 38.26–38.50 the hand stays by the collarbone with the stalk beside the chin, and it never moves to the mouth. The next frames show the hand dropping away. The taste beat is not visible, so the shot reads as a hand idling and then dropping the prop.",
+   "fix": "Bring the blade to the lips with a clear pause, then lower it. Alternatively, hold the pose deliberately and sell the 'nothing happens' with a clear eye or head beat."
+  },
+  {
+   "t": 38.38,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Over 38.26–38.50 the hand and arm barely change and only drift slightly. It looks like a mushy hold with no defined pose, then a sudden fast move later.",
+   "fix": "Make the hold a clean, deliberate pose with a small settle, then a quick move out of it."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4976,
+  "out": 1775
+ },
+ "cost": 0.0277
+}

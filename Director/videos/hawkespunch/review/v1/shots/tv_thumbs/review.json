@@ -1,0 +1,65 @@
+{
+ "id": "tv_thumbs",
+ "f0": 5288,
+ "f1": 5401,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 176.267,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 176.5,
+   "why": "one patch jumps (cell 55, x9.6)",
+   "file": "spike-05295.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 178.767,
+   "why": "one patch jumps (cell 54.8, x13.7)",
+   "file": "spike-05363.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 179.867,
+   "why": "one patch jumps (cell 76.8, x16.7)",
+   "file": "spike-05396.jpg"
+  }
+ ],
+ "hash": "73706dcc510a3f7d",
+ "summary": "A flat dark translucent bar slides in over the floor, stool and table base from 176.43 to 179.86, which is a render fault. The body motion in the visible crop is otherwise clean, and the arm action is mostly out of the crop.",
+ "faults": [
+  {
+   "t": 176.43,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A flat, unshaded dark grey rectangle appears at the bottom left and slides right across the floor. It crosses in front of the stool legs and the table base, going semi-transparent over the table. It reads as a stray unlit card or overlay and not as part of the set.",
+   "fix": "Find and hide or remove the stray plane or overlay, or put it behind the set and give it proper shading."
+  },
+  {
+   "t": 176.5,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The bar's right edge jumps in big steps between tiles (176.43 to 176.46 to 176.49 to 176.53), so it lurches across the frame. It then freezes at about 176.6 and stays put through 178.9.",
+   "fix": "Remove the bar. If it is meant to be there, ease it in and out smoothly."
+  },
+  {
+   "t": 179.83,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The bar shrinks and vanishes within about 3 frames (179.83, 179.86, 179.89), after sitting static for over 3 seconds. This is the spike at 179.867.",
+   "fix": "Remove the bar for the whole shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7816,
+  "out": 981
+ },
+ "cost": 0.0254
+}

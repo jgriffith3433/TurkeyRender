@@ -1,0 +1,9 @@
+{
+  // Test only (videos/_shotcheck_test, the readable check's proof): space_sun as it was before Hawkes Punch fault 14, fill 0.22 and an ambient of
+  // #0a0c16, when a body with its back to the sun was a hole in the black. Never use it in a video.
+  "sky": { "top": "#03040a", "mid": "#04050c", "bottom": "#020309", "ambient": "#0a0c16", "ambientTop": "#0a0c16", "ambientBottom": "#0a0c16", "fog": "#000000", "density": 0, "sun": "#fff2d0", "sunDir": [0.7, 0.42, -0.5], "sunSize": 0.0, "stars": 0, "clouds": 0 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [700, 420, -500], "aim": "subject", "color": "#fff1d2", "intensity": 2.3, "shadows": true },
+    "fill": { "type": "directional", "pos": [-40, -60, -170], "aim": "subject", "color": "#6f8ad8", "intensity": 0.22 }
+  }
+}

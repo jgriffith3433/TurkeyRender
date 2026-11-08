@@ -1,0 +1,14 @@
+{
+  // A voice explains one thing. Picture follows the narration line by line, with one idea per shot and titles for the terms.
+  "about": "A 90 second explainer with a narrator.",
+  "aspect": [16, 9], "render": [1920, 1080], "fps": 30, "length": 90,
+  "narrator": { "wordsPerMinute": 150, "tracks": "voice over from Hawkes Gen audio.voice, house voices" },
+  "pacing": { "avgSeconds": [3, 7], "maxSeconds": 12, "shots": [12, 24] },
+  "beats": [
+    { "part": "question", "seconds": 8, "job": "the question the viewer already has" },
+    { "part": "why it matters", "seconds": 12, "job": "what it costs not to know" },
+    { "part": "how it works", "seconds": 50, "job": "three steps, one picture each" },
+    { "part": "example", "seconds": 14, "job": "one real case" },
+    { "part": "takeaway", "seconds": 6, "job": "say it in one line" }
+  ]
+}

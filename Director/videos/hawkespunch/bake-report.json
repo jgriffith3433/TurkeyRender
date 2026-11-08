@@ -1,0 +1,1551 @@
+{
+ "video": "hawkespunch",
+ "when": "2026-11-07T21:58:50.695Z",
+ "by": "build",
+ "gate": "library/bake-gate.json",
+ "pass": true,
+ "failures": [],
+ "baked": [
+  "stand 4:1",
+  "g_point 5:1.5",
+  "g_nod 5:3.6",
+  "g_hand_cheek 7:1.3",
+  "sit_bed_sick 9:1",
+  "g_nod 13:1.6",
+  "take_can 16:1",
+  "stand 16:1",
+  "jump_scare 35:1",
+  "jump_scare 35:2.9",
+  "lasso_throw 36:1",
+  "g_hands_up 40:1",
+  "grab_earth_careful 41:1",
+  "lasso_throw 43:1"
+ ],
+ "unmeasured": [
+  {
+   "take": "sit_stool_pitch",
+   "at": "56:3",
+   "key": "sit_stool_pitch_2f5c5c21c3",
+   "baked": true
+  },
+  {
+   "take": "drink_can",
+   "at": "60:3",
+   "key": "drink_can_818e1a1b4f",
+   "baked": true
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "63:1",
+   "key": "sit_stool_pitch_16f48a6f4c",
+   "baked": true
+  }
+ ],
+ "takes": [
+  {
+   "take": "sit_bed_sick",
+   "at": "2:1",
+   "key": "sit_bed_sick_e57d1756b3",
+   "actor": "person",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "4:1",
+   "key": "stand_83a1e7fea7",
+   "actor": "doctor",
+   "before": {
+    "snaps": 3,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.37
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.09
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_bed_sick",
+   "at": "5:1",
+   "key": "sit_bed_sick_c750c2edcb",
+   "actor": "person",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_point",
+   "at": "5:1.5",
+   "key": "g_point_cc43fcc625",
+   "actor": "doctor",
+   "before": {
+    "snaps": 8,
+    "jerk": 7,
+    "elbowFlip": 1,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 281,
+    "toesUnder": 268,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_nod",
+   "at": "5:3.6",
+   "key": "g_nod_5d0ac86cf1",
+   "actor": "doctor",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 221,
+    "toesUnder": 208,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_hand_cheek",
+   "at": "7:1.3",
+   "key": "g_hand_cheek_869b461e1a",
+   "actor": "doctor",
+   "before": {
+    "snaps": 11,
+    "jerk": 6,
+    "elbowFlip": 1,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 48,
+    "ankleOver": 341,
+    "toesUnder": 328,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_bed_sick",
+   "at": "9:1",
+   "key": "sit_bed_sick_41f1e0143f",
+   "actor": "person",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "9:1",
+   "key": "stand_d4f94dcbfb",
+   "actor": "doctor",
+   "before": {
+    "snaps": 3,
+    "jerk": 1,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.41
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.09
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_nod",
+   "at": "13:1.6",
+   "key": "g_nod_f0d01b6cfd",
+   "actor": "doctor",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 221,
+    "toesUnder": 208,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "take_can",
+   "at": "16:1",
+   "key": "take_can_1aa83646d0",
+   "actor": "person",
+   "before": {
+    "snaps": 8,
+    "jerk": 6,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 70,
+    "wristOver": 0,
+    "ankleOver": 364,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 1,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "16:1",
+   "key": "stand_659a548b77",
+   "actor": "doctor",
+   "before": {
+    "snaps": 3,
+    "jerk": 4,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.35
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.08
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "punched_away",
+   "at": "22:1",
+   "key": "punched_away_2fc7c0555e",
+   "actor": "person",
+   "before": {
+    "snaps": 37,
+    "jerk": 12,
+    "elbowFlip": 0,
+    "kneeFlip": 1,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 10,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "fly_fast",
+   "at": "24:1",
+   "key": "fly_fast_312e33ad73",
+   "actor": "person",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 499,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "fly_fast",
+   "at": "28:4",
+   "key": "fly_fast_8effbd9b0d",
+   "actor": "other",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 290,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "fly_fast",
+   "at": "30:2",
+   "key": "fly_fast_79f0413436",
+   "actor": "other",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 290,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "fly_fast",
+   "at": "30:2.9",
+   "key": "fly_fast_8c26271ac0",
+   "actor": "person",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 214,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "fly_fast",
+   "at": "31:1",
+   "key": "fly_fast_28dce1eab2",
+   "actor": "person",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 364,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "33:1",
+   "key": "stand_892b1b5931",
+   "actor": "person",
+   "before": {
+    "snaps": 3,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.17
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.03
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "34:2",
+   "key": "stand_551ddf7b7c",
+   "actor": "person",
+   "before": {
+    "snaps": 3,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.15
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.02
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "fly_fast",
+   "at": "35:1",
+   "key": "fly_fast_0ba3601bb3",
+   "actor": "person",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 364,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "jump_scare",
+   "at": "35:1",
+   "key": "jump_scare_b47d787427",
+   "actor": "other",
+   "before": {
+    "snaps": 29,
+    "jerk": 24,
+    "elbowFlip": 1,
+    "kneeFlip": 4,
+    "hyperKnee": 5,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 5,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "jump_scare",
+   "at": "35:2.9",
+   "key": "jump_scare_8fe69c664b",
+   "actor": "other",
+   "before": {
+    "snaps": 29,
+    "jerk": 26,
+    "elbowFlip": 1,
+    "kneeFlip": 5,
+    "hyperKnee": 5,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 5,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "lasso_throw",
+   "at": "36:1",
+   "key": "lasso_throw_53483e3d14",
+   "actor": "person",
+   "before": {
+    "snaps": 14,
+    "jerk": 14,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 41,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "37:1",
+   "key": "stand_e4c78a0328",
+   "actor": "other",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.16
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.03
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "38:1",
+   "key": "stand_419c4331ba",
+   "actor": "person",
+   "before": {
+    "snaps": 3,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.23
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.04
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_hands_up",
+   "at": "40:1",
+   "key": "g_hands_up_19e7649bc3",
+   "actor": "other",
+   "before": {
+    "snaps": 14,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 259,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.06
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.02
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "grab_earth_careful",
+   "at": "41:1",
+   "key": "grab_earth_careful_d7d8833ff7",
+   "actor": "person",
+   "before": {
+    "snaps": 15,
+    "jerk": 17,
+    "elbowFlip": 0,
+    "kneeFlip": 1,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_shrug",
+   "at": "42:1.159",
+   "key": "g_shrug_add1fbb1fd",
+   "actor": "other",
+   "before": {
+    "snaps": 23,
+    "jerk": 23,
+    "elbowFlip": 1,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 109,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "43:1",
+   "key": "stand_be4ffa6484",
+   "actor": "person",
+   "before": {
+    "snaps": 3,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.23
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.04
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "lasso_throw",
+   "at": "43:1",
+   "key": "lasso_throw_3cf0c8092b",
+   "actor": "other",
+   "before": {
+    "snaps": 14,
+    "jerk": 13,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 41,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "stand",
+   "at": "45:1",
+   "key": "stand_13c88a9cf9",
+   "actor": "other",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 2,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.27
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0.06
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_nod",
+   "at": "55:2.4",
+   "key": "g_nod_e6b9ecf200",
+   "actor": "person",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 208,
+    "toesUnder": 220,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_nod",
+   "at": "55:2.9",
+   "key": "g_nod_8c6347cfe9",
+   "actor": "other",
+   "before": {
+    "snaps": 4,
+    "jerk": 2,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 115,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "56:3",
+   "key": "sit_stool_pitch_15edbfdd15",
+   "actor": "other",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "60:1",
+   "key": "sit_stool_pitch_6eed58055b",
+   "actor": "other",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "drink_can",
+   "at": "60:3",
+   "key": "drink_can_39fc922af0",
+   "actor": "other",
+   "before": {
+    "snaps": 2,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 246,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "63:1",
+   "key": "sit_stool_pitch_5221132ef3",
+   "actor": "other",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_nod",
+   "at": "63:3",
+   "key": "g_nod_bea610f8e8",
+   "actor": "other",
+   "before": {
+    "snaps": 4,
+    "jerk": 4,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 115,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "g_nod",
+   "at": "64:1",
+   "key": "g_nod_9be62708f5",
+   "actor": "person",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 208,
+    "toesUnder": 220,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "66:4",
+   "key": "sit_stool_pitch_8157a2eb1f",
+   "actor": "person",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "67:4",
+   "key": "sit_stool_pitch_f7ae499a45",
+   "actor": "other",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_stool_pitch",
+   "at": "68:3",
+   "key": "sit_stool_pitch_deaa1a3a6a",
+   "actor": "person",
+   "before": {
+    "snaps": 1,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  },
+  {
+   "take": "sit_bed_sick",
+   "at": "70:1",
+   "key": "sit_bed_sick_9a23ae4ae8",
+   "actor": "person",
+   "before": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "after": {
+    "snaps": 0,
+    "jerk": 0,
+    "elbowFlip": 0,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0,
+    "wristOver": 0,
+    "ankleOver": 0,
+    "toesUnder": 0,
+    "max": {
+     "plantedTravelM": 0
+    }
+   },
+   "warnings": []
+  }
+ ]
+}

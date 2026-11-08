@@ -1,0 +1,53 @@
+{
+ "id": "balloon_butler",
+ "f0": 1918,
+ "f1": 1969,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 63.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 64.7,
+   "why": "pose jumps and comes back (0.67)",
+   "file": "spike-01941.jpg"
+  }
+ ],
+ "hash": "c265b49d006102f6",
+ "summary": "The strip has no hard pops or render flicker. The main problems are that the butler is tiny and the balloon snatch is not readable, and there is a small pose twitch near 64.7.",
+ "faults": [
+  {
+   "t": 64,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The butler is a tiny dark figure at the far door while the balloon and a foreground frilly bow-tie prop dominate the frame. The subject is unclear, and the balloon is cut off at the top edge.",
+   "fix": "Reframe or push in on the butler, and keep the whole balloon in frame before it pulls him up."
+  },
+  {
+   "t": 64.7,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The tiny butler's pose twitches between 64.69 and 64.73 and settles back by 64.79. It reads as a limb flick rather than a deliberate move, and he stays on the ground with no lift.",
+   "fix": "Smooth or hold the pose across these frames, and key in the taut-string tug and the lift-off."
+  },
+  {
+   "t": 64.5,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The balloon leaves the top of the frame by 64.69 and the butler never visibly gets snatched. The idea of the balloon going taut and lifting him is not shown. He just stands at the door.",
+   "fix": "Show the string going taut and the butler's feet leaving the ground in the same frame as the balloon."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4976,
+  "out": 946
+ },
+ "cost": 0.0194
+}

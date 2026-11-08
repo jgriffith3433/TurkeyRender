@@ -1,0 +1,8 @@
+{
+  // Outside at the end of the day: a blue sky and one sodium lamp.
+  "sky": { "top": "#1a2a4c", "mid": "#54506e", "bottom": "#c47a56", "ambient": "#6a7088", "fog": "#54506e", "density": 0.012 },
+  "lights": {
+    "sun": { "type": "directional", "rot": [22, 70, 0], "color": "#ffb488", "intensity": 1.5 },
+    "lamp": { "type": "point", "pos": [2.2, 3.8, 0.8], "color": "#ffbe78", "intensity": 9, "range": 9 }
+  }
+}

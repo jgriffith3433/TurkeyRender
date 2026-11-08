@@ -1,0 +1,27 @@
+{
+ "clip": "mx_excited",
+ "seconds": 6.667,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 1.596 m, worst step 0.034 m at 5.63s",
+  "right foot on floor moved 1.458 m, worst step 0.031 m at 1.60s"
+ ],
+ "hipsTop": 0.9227922,
+ "hipsLow": 0.8659123,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "RightShoulder": 4.1,
+  "groundHipsCm": 3.5,
+  "Head": 2.7,
+  "LeftLowerLeg": 2.5,
+  "Chest": 1.9,
+  "LeftShoulder": 0.2
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_excited_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_excited_three.mp4"
+ ]
+}

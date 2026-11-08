@@ -1,0 +1,23 @@
+{
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.017 m, worst step 0.000 m at 4.07s",
+  "right foot on floor moved 0.015 m, worst step 0.000 m at 4.03s"
+ ],
+ "hipsTop": 0.28402248,
+ "hipsLow": 0.277593136,
+ "hipsMaxSpeed": 0.0210224427,
+ "hipsTravel": "(0.00, -0.01, 0.01)",
+ "limits": {
+  "Chest": 2
+ },
+ "reverse": 0,
+ "fresh": 0.00003051781,
+ "frames": 145,
+ "warnings": [
+  "person: clip GoToSitOnTheGroundHostage was rejected by admission: feet 0.106 m under the floor"
+ ],
+ "from": 4,
+ "to": 8.8
+}

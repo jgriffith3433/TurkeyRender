@@ -1,0 +1,64 @@
+{
+ "name": "rise_from_grass",
+ "about": "From sitting on the ground, gets up to a stand.",
+ "entry": "sit_ground",
+ "exit": "stand",
+ "length": "3.8s",
+ "min": "3.6s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "SitOntheGroundToGetBackUpHostage",
+   "once": 1,
+   "blend": "0.35s"
+  },
+  {
+   "at": "=for-0.45",
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "0.6s"
+  },
+  {
+   "at": 0.02,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 1,
+     "root": {
+      "pos": [
+       0,
+       0.03,
+       0
+      ]
+     }
+    },
+    {
+     "t": 3.3,
+     "ease": "inout",
+     "root": {
+      "pos": [
+       0,
+       -0.14,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "at": "=for-0.8",
+   "do": "stance",
+   "arms": 1,
+   "legs": 1,
+   "for": "0.8s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   "sit_on_grass"
+  ],
+  "tail": 0.8
+ }
+}

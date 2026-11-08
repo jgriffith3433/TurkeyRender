@@ -1,0 +1,22 @@
+{
+ "id": "better",
+ "f0": 4541,
+ "f1": 4619,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 151.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "58efc6f43535c1f3",
+ "summary": "The cut strip is clean: torso, couch, remote and hands hold steady across all eight tiles with no pops, flicker or clipping I can point to.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3573,
+  "out": 613
+ },
+ "cost": 0.0133
+}

@@ -1,0 +1,1289 @@
+[
+{
+"id": "a-A1",
+"sev": "A",
+"ranges": [
+[
+32.25,
+32.75
+]
+],
+"note": "32.25-32.75, \"dead remote\" (bar 12). The hand does not hold the remote. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A2",
+"sev": "A",
+"ranges": [
+[
+75.75,
+77.5
+]
+],
+"note": "75.75-77.5, dragged by the couch (bar 28). He pops between two poses, and his hands aren't gripping. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A3",
+"sev": "A",
+"ranges": [
+[
+83.25,
+83.7
+]
+],
+"note": "83.25-83.7, door (bar 31). The bird wall shows through the closed door. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A4",
+"sev": "A",
+"ranges": [
+[
+72.75,
+74.25
+],
+[
+26.0,
+27.0
+]
+],
+"note": "72.75-74.25, crawl-out close-up (bars 26-27). His body deforms badly, in good light and close to camera. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A5",
+"sev": "A",
+"ranges": [
+[
+58.0,
+59.7
+]
+],
+"note": "58.0-59.7, \"the push\" (bar 22). A stuck toothy grin, and the push slides off the eye. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A6",
+"sev": "A",
+"ranges": [
+[
+77.75,
+78.6
+]
+],
+"note": "77.75-78.6, the first bird comes out (bar 29). The key event is hidden and the glass doesn't read as skin. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A7",
+"sev": "A",
+"ranges": [
+[
+31.5,
+32.25
+]
+],
+"note": "31.5-32.25, the cameraman's stare (bar 12). It never lands. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-A8",
+"sev": "A",
+"ranges": [
+[
+78.75,
+85.25
+]
+],
+"note": "31.75 and 78.75-85.25, the tie. It's a flat plank, not a tie. ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B1",
+"sev": "B",
+"ranges": [
+[
+82.35,
+83.2
+]
+],
+"note": "82.35-83.2, \"he runs for the door\" (bar 30). The run lasts 0.86 s, shot directly from behind with his legs in the dark. Every sample shows him upright with hands on hips, and at 83.1 he is simply standing at the door. No",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B2",
+"sev": "B",
+"ranges": [
+[
+85.5,
+88.7
+]
+],
+"note": "85.5-88.7, swept off his feet (bar 32). His legs go straight into the birds' bodies and fans with nothing displaced (86.25, 86.75, 87.75). He tilts as one stiff board over them. The energy covers some of it, but it lasts",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B3",
+"sev": "B",
+"ranges": [
+[
+82.5,
+85.25
+]
+],
+"note": "82.5-85.25, the door reaction. His back is to camera for the whole beat. The storyboard says \"He turns. Turkeys.\" We never see the face at the reveal. At 84.5-85.0 he hunches with his hands behind his head and his neck v",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B4",
+"sev": "B",
+"ranges": [
+[
+23.25,
+26.5
+],
+[
+9.0,
+10.0
+]
+],
+"note": "23.25-26.5, scratch and raise (bars 9-10). The neck scratch reads as a wave: his hand is up beside the TV, about an arm's length from his neck (23.5), and never touches. The bar 10 raise (26.0) is the same pose again, an",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B5",
+"sev": "B",
+"ranges": [
+[
+33.0,
+35.0
+]
+],
+"note": "33.0-35.0, throw (bar 13). His arms are in a different position on nearly every sample, with no clear line of action: nape at 33.0, remote up at 33.25, low at 33.5, elbow high at 33.75, limp hand at 34.25. No remote is s",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B6",
+"sev": "B",
+"ranges": [
+[
+36.25,
+43.5
+],
+[
+14.0,
+16.0
+]
+],
+"note": "36.25-43.5, \"the face\" (bars 14-16). Seven seconds of first close-up with one mild half-smile. No expression change and no blink shows in 29 samples. His eyes don't lead the head. The TV colour flashes do the only work.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B7",
+"sev": "B",
+"ranges": [
+[
+59.75,
+63.75
+],
+[
+22.0,
+23.0
+]
+],
+"note": "59.75-63.75, the macro eye (bars 22-23). The white of the eye and the iris are black, so it reads as a dark almond with a TV floating in it. The lids opening reads; the pupil blowing open doesn't, because there is no iri",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B8",
+"sev": "B",
+"ranges": [
+[
+82.75,
+85.25
+]
+],
+"note": "Skin and shirt at the lower back, right side (72.75, 74.25, 74.75, 82.75-85.25). A black slit like a tear sits in the same spot every time his back is lit.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B9",
+"sev": "B",
+"ranges": [
+[
+80.75,
+81.25
+]
+],
+"note": "80.75-81.25, reaction (bar 30). The top of his head and his eyes are cut off at 80.75. His near hand hangs limp from the wrist, thumb down, the same dead shape as the remote hand. He snaps from chin-down to arms-out with",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B10",
+"sev": "B",
+"ranges": [
+[
+75.0,
+82.0
+]
+],
+"note": "75.0-82, the fallen lamp. The shade lies as a half hoop on the rug, as if its near half is missing or sunk through the floor. The base and socket sit beside it, with the shade seemingly detached.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B11",
+"sev": "B",
+"ranges": [
+[
+85.5,
+88.7
+]
+],
+"note": "85.5-88.7, walls (bar 32). The storyboard's walls peeling away don't read. The walls stay whole in every sample. The only sign is a flat red sliver crossing frame at about 88.25, which looks like a glitch.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B12",
+"sev": "B",
+"ranges": [
+[
+28.75,
+29.75
+]
+],
+"note": "28.75-29.75, the corner (bar 11). The storyboard says hold on the camera turning. The camera is a tiny dark shape under a huge black head, so its turn can't be read.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B13",
+"sev": "B",
+"ranges": [
+[
+30.0,
+31.5
+]
+],
+"note": "30.0-31.5, cameraman set (bar 11). The studio camera is plain untextured boxes and the bird's wing never touches it, though the storyboard has it resting there. From behind, the bird's head and neck is one pink sausage.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B14",
+"sev": "B",
+"ranges": [
+[
+0.0,
+0.45
+]
+],
+"note": "0.0-0.45, before the first shot. A bright red-lit view of the corner camera flashes before the dark silhouette, spoiling the reveal at bar 11 and contradicting \"Dark\". If it is deliberate, ignore this.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B15",
+"sev": "B",
+"ranges": [
+[
+10.0,
+17.0
+],
+[
+4.0,
+6.0
+]
+],
+"note": "10-17, channel surfing (bars 4-6). Channels change with no hand or click on screen, only his shoulder at the edge of frame, so the change has no visible cause. The shows themselves read well, and the tie bird is visible ",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "a-B16",
+"sev": "B",
+"ranges": [
+[
+57.9,
+59.7
+]
+],
+"note": "Teeth, 57.9-59.7, 65.5, 81.0. One ridged strip like a grille, with a fang-like glint at 81.0. Visible whenever his mouth opens in close-up.",
+"source": "notes-a.md",
+"video": "v9"
+},
+{
+"id": "b-A1",
+"sev": "A",
+"ranges": [
+[
+119.1,
+121.8
+]
+],
+"note": "119.1-121.8: he never looks at his hand, and we never see the feather. This is the story beat of bars 43-46.",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A2",
+"sev": "A",
+"ranges": [
+[
+117.1,
+118.9
+]
+],
+"note": "117.1-118.9: hauling out has no weight. The rise is four `move`/`rotate` lurches on the actor (`42:2+4.2b` onward).",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A3",
+"sev": "A",
+"ranges": [
+[
+118.55,
+119.4
+]
+],
+"note": "118.55-119.4: the head and arms twitch through the join into the next shot. `IdleLookAroundHostage` (118.6), `gaze` (118.55), head and neck `pose` (118.9), `CheckTime` (118.95) and a second `gaze` (119.15) all land insid",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A4",
+"sev": "A",
+"ranges": [
+[
+122.5,
+122.8
+]
+],
+"note": "122.5: the tie bird pops into a continuous shot. No bird at 122.5, full bird at 122.6, mid-dolly. Cause: `{\"at\":\"45:2\",\"do\":\"set\",\"on\":\"p5_tiebird\",...}`.",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A5",
+"sev": "A",
+"ranges": [
+[
+122.0,
+126.8
+]
+],
+"note": "122.0-126.8: panic is arm-waving and the story beat is missing. \"He tries pulling them out\" never happens: no hand touches an arm. Instead, mocap fragments change every 1 to 1.5 beats (`Idle1Yell`, `mx_injured_stumble`, ",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A6",
+"sev": "A",
+"ranges": [
+[
+107.3,
+108.1
+]
+],
+"note": "107.3-108.1: legs through the sofa. One shin enters the seat from above and comes out below the front rail, foot under the sofa (frames at 107.5 and the 107.3-108.0 strip). The hips also sit inside the seat. Cause: the `",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A7",
+"sev": "A",
+"ranges": [
+[
+95.5,
+97.3
+]
+],
+"note": "95.5-97.3: the tie bird sits inside his chest, and the pose is frozen. At 96.25 the bird fills the space where his chest and shoulders should be, with his head sticking out below it. The hand-to-neck contact is fine at 9",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A8",
+"sev": "A",
+"ranges": [
+[
+111.0,
+112.75
+]
+],
+"note": "111.0-112.75: the biggest hit of Part 5 has no contact. At 111.25-112.0 he floats with hands behind his head, feet up, over an undisturbed surface. No dent or displaced feathers around him, and the dark cross-shaped shad",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-A9",
+"sev": "A",
+"ranges": [
+[
+128.5,
+129.3
+]
+],
+"note": "128.5-129.3: skin through the shirt. A clean-edged skin-coloured hole opens above the collar (crop at 129.0, also 128.55, 128.9), bright against the shirt. Same family: B1.",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B1",
+"sev": "B",
+"ranges": [
+[
+117.0,
+117.7
+]
+],
+"note": "117.0-117.7: gap at the waist. A bright white strip between shirt hem and jeans (crop at 117.25). Fix: less `hips` rotation in the `42:1` pose (-22), or the same body-under-shirt hide as A9.",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B2",
+"sev": "B",
+"ranges": [
+[
+127.4,
+129.75
+]
+],
+"note": "127.4-129.75: head hidden and bobbing. The head is under the shoulders, between the arms, showing only hair for most of the shot, so the retch has no face to build on. It pops up and straight back down around 128.05 and ",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B3",
+"sev": "B",
+"ranges": [
+[
+127.4,
+130.0
+]
+],
+"note": "127.4-130: the raised foot reads as a fist. The lower leg sticks up behind him with the foot hanging in the air (frame 128). Comes from the `FeastZombieB@1.4` pose. Fix: `plant` both feet, or bend the knee so the shin li",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B4",
+"sev": "B",
+"ranges": [
+[
+126.0,
+129.75
+]
+],
+"note": "126-129.75: feather colour and shape. Feathers on him are straw-coloured and stiff, like a grass skirt or thatch, against a blue-white mountain and white bird. They hang as cuffs on the forearms and a spiky ruff on the b",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B5",
+"sev": "B",
+"ranges": [
+[
+100.0,
+101.5
+],
+[
+122.6,
+127.0
+]
+],
+"note": "Tie, every appearance (100.0-101.5, 102.75, 122.6-127). It's a rigid red block, not a \"small red tie\". At 100.5 it stands up above the bird and hides the head. At 126 it tilts off the neck like a stick of dynamite. Fix: ",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B6",
+"sev": "B",
+"ranges": [
+[
+100.0,
+101.75
+]
+],
+"note": "100.0-101.75: twinned arms, held too long. Back view, both arms up in a mirrored pose, almost unchanged for 1.75 s. He is doing nothing but holding the shelf. Fix: offset the hands in height, pull up on one, and let him ",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B7",
+"sev": "B",
+"ranges": [
+[
+97.5,
+99.0
+]
+],
+"note": "97.5-99.0: the grab doesn't read. 97.5-97.75: torso fills the frame and the hands and the bird are off the top. 98.25-99.0: arms are twinned, with the back hinged at the waist like a plank. The hands look pressed on the ",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B8",
+"sev": "B",
+"ranges": [
+[
+102.5,
+102.75
+]
+],
+"note": "102.5-102.75: the bite on \"ME\" hides the fingers. The tie and beak cover the hand, so the bite doesn't read. Fix: rotate the bird or camera so the fingers are in clear, and add a finger flinch and a hand snatch after.",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B9",
+"sev": "B",
+"ranges": [
+[
+94.6,
+95.25
+]
+],
+"note": "94.6-95.25: locked arm to an off-screen target. The arm is dead straight to the top edge, grabbing a bird we can't see yet. Fix: show the bird first, bend the elbow into the reach (`hint`), and add a `layer` before conta",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B10",
+"sev": "B",
+"ranges": [
+[
+94.25,
+94.5
+],
+[
+99.25,
+99.75
+]
+],
+"note": "94.25-94.5 and 99.25-99.75: foreground turkeys bury him. At 94.25-94.5 a big foreground bird covers his lower half. At 99.25 the frame is all blur, and at 99.5-99.75 a blurred leg crosses him, with \"I\" and \"ALWAYS\" sitti",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "b-B11",
+"sev": "B",
+"ranges": [
+[
+103.25,
+105.75
+]
+],
+"note": "103.25-105.75: riding with no ride. He sits on the turkey like a chair: neither hand holds it, and the bird doesn't buck under him. Fix: one hand on the neck (`plant` to `.neck2`), `hop` or `pulse` the bird on the kick, ",
+"source": "notes-b.md",
+"video": "v9"
+},
+{
+"id": "c-A1",
+"sev": "A",
+"ranges": [
+[
+157.75,
+158.5
+]
+],
+"note": "157.75 to 158.5, \"his hand, last\": the hand holds nothing. ",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-A2",
+"sev": "A",
+"ranges": [
+[
+152.5,
+154.9
+]
+],
+"note": "152.5 to 154.9, the slip: no finger visibly slips. ",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-A3",
+"sev": "A",
+"ranges": [
+[
+150.38,
+152.5
+]
+],
+"note": "150.38 to 152.5, \"he sings it up at us\": his arms go into the beam, and he's dead still. ",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-A4",
+"sev": "A",
+"ranges": [
+[
+148.75,
+149.42
+]
+],
+"note": "148.75 to 149.42: the catch is skipped and the TV jumps. ",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-A5",
+"sev": "A",
+"ranges": [
+[
+140.0,
+143.0
+]
+],
+"note": "140.0 to 143.0: an unexplained blue panel. ",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-A6",
+"sev": "A",
+"ranges": [
+[
+143.0,
+144.0
+]
+],
+"note": "143.0 to 144.0: he isn't carried down the funnel. ",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B1",
+"sev": "B",
+"ranges": [
+[
+145.75,
+148.5
+]
+],
+"note": "145.75 to 148.5: he pushes nothing. `PushCubeIdle1` and `PushCube1` read as mime: at 147.25 and 148.75 his hands are",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B2",
+"sev": "B",
+"ranges": [
+[
+145.75,
+146.0
+]
+],
+"note": "145.75 to 146.0, and again by 146.75: pose snaps. Standing, then folded to the floor in under 0.5 s, then upright",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B3",
+"sev": "B",
+"ranges": [
+[
+138.75,
+139.75
+]
+],
+"note": "138.75 to 139.75: the subject leaves the frame. Only his legs are visible at the top edge, sometimes less, while",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B4",
+"sev": "B",
+"ranges": [
+[
+134.0,
+138.0
+]
+],
+"note": "134.0 to 138.0: frog pose, held and drifting. Knees wide, feet cocked, one flat and one pointed, arms symmetrical. It",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B5",
+"sev": "B",
+"ranges": [
+[
+135.0,
+137.0
+]
+],
+"note": "135 to 137: feathers on his mouth. Chest feathers cover his chin and mouth like a beard, which at 135.5 reads as a",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B6",
+"sev": "B",
+"ranges": [
+[
+130.0,
+132.75
+]
+],
+"note": "130.0 to 132.75: feathers don't pour from his mouth. No stream is visible in this range. At 132.5 there's only a dull",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B7",
+"sev": "B",
+"ranges": [
+[
+155.0,
+156.3
+]
+],
+"note": "155.0 to 156.3: the left arm goes the wrong way. After the slip the arm rises across his face and lies along the",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B8",
+"sev": "B",
+"ranges": [
+[
+156.32,
+158.5
+]
+],
+"note": "156.32 to 158.5: the stretch doesn't read. Storyboard 57 wants him thinning into scan lines, limb by limb. Here the",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B9",
+"sev": "B",
+"ranges": [
+[
+152.5,
+154.9
+]
+],
+"note": "152.5 to 154.9: the tie is a plank. A long rigid red rectangle with no knot, swinging at 45 degrees and standing off",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B10",
+"sev": "B",
+"ranges": [
+[
+154.3,
+154.9
+]
+],
+"note": "154.3 to 154.9: the bite doesn't connect. The bird only dips its head, far from the hand (about the hand's own",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B11",
+"sev": "B",
+"ranges": [
+[
+143.0,
+149.0
+],
+[
+154.9,
+158.0
+]
+],
+"note": "143.0 to 149, 154.9 to 158: skin and soles clip to flat orange-red. Feet look like orange socks (143.25, 144.0) and",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B12",
+"sev": "B",
+"ranges": [
+[
+150.0,
+158.0
+]
+],
+"note": "150 to 158: sleeves. At 152.0 and 158.0 the cuff flares off the arm with a visible gap and hollow inside. Fix: weight",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "c-B13",
+"sev": "B",
+"ranges": [
+[
+158.5,
+158.8
+]
+],
+"note": "158.5: the camera starts inside him. A big black and white blob fills a third of the frame as \"down the shaft\"",
+"source": "notes-c.md",
+"video": "v9"
+},
+{
+"id": "d-A1",
+"sev": "A",
+"ranges": [
+[
+171.3,
+171.9
+],
+[
+174.2,
+174.8
+],
+[
+193.0,
+194.1
+],
+[
+195.4,
+196.1
+]
+],
+"note": "171.3-171.9, 174.2-174.8, 193.0-194.1, 195.4-196.1: bodies jump between poses from one frame to the next. Worst fault in this range. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A2",
+"sev": "A",
+"ranges": [
+[
+190.7,
+197.0
+]
+],
+"note": "190.7-197: the next viewer has his face. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A3",
+"sev": "A",
+"ranges": [
+[
+186.4,
+188.3
+]
+],
+"note": "186.4-188.3: the wall of TVs shows black silhouettes. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A4",
+"sev": "A",
+"ranges": [
+[
+194.6,
+196.0
+]
+],
+"note": "185.0, 186.0, 194.6-196: no smile, no feathers. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A5",
+"sev": "A",
+"ranges": [
+[
+177.6,
+178.1
+]
+],
+"note": "177.6-178.1: he is bald. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A6",
+"sev": "A",
+"ranges": [
+[
+183.5,
+184.3
+]
+],
+"note": "183.5-184.3: head out of frame. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A7",
+"sev": "A",
+"ranges": [
+[
+166.5,
+167.5
+]
+],
+"note": "166.5-167.5: he crawls in mid-air on the platter. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-A8",
+"sev": "A",
+"ranges": [
+[
+180.3,
+182.1
+]
+],
+"note": "180.3-182.1: the city-sized bird doesn't read. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B1",
+"sev": "B",
+"ranges": [
+[
+160.5,
+161.0
+]
+],
+"note": "Tie bird's tie, whole section: 160.5-161, 171.2, 174, 186, 195. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B2",
+"sev": "B",
+"ranges": [
+[
+161.5,
+162.0
+]
+],
+"note": "161.5-162.0: bird through him. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B3",
+"sev": "B",
+"ranges": [
+[
+163.7,
+165.1
+],
+[
+166.5,
+167.5
+]
+],
+"note": "163.7-165.1 and 166.5-167.5: rain and fire don't show. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B4",
+"sev": "B",
+"ranges": [
+[
+166.5,
+167.5
+]
+],
+"note": "166.5-167.5: chef hidden. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B5",
+"sev": "B",
+"ranges": [
+[
+165.5,
+166.5
+],
+[
+167.9,
+168.3
+]
+],
+"note": "165.5-166.5 and 167.9-168.3: baster rod. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B6",
+"sev": "B",
+"ranges": [
+[
+168.3,
+170.1
+]
+],
+"note": "168.3-170.1: no struggle on the wheel. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B7",
+"sev": "B",
+"ranges": [
+[
+171.2,
+172.0
+]
+],
+"note": "171.2-172.0: misery doesn't read. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B8",
+"sev": "B",
+"ranges": [
+[
+173.4,
+173.8
+]
+],
+"note": "173.4-173.8: the near miss is lost. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B9",
+"sev": "B",
+"ranges": [
+[
+173.9,
+176.2
+]
+],
+"note": "173.9-176.2: the class never arrives. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B10",
+"sev": "B",
+"ranges": [
+[
+176.7,
+177.5
+]
+],
+"note": "176.7-177.5: bird with camera sits directly behind him. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B11",
+"sev": "B",
+"ranges": [
+[
+179.5,
+179.8
+]
+],
+"note": "179.5: shins through the armchair. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B12",
+"sev": "B",
+"ranges": [
+[
+181.2,
+181.7
+]
+],
+"note": "181.2-181.7: \"starts to enjoy it\" doesn't read. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B13",
+"sev": "B",
+"ranges": [
+[
+180.0,
+180.03
+]
+],
+"note": "180.0-180.03: arm snap. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B14",
+"sev": "B",
+"ranges": [
+[
+170.25,
+170.6
+]
+],
+"note": "170.25-170.6: contestant's chef hat. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "d-B15",
+"sev": "B",
+"ranges": [
+[
+199.7,
+204.1
+]
+],
+"note": "199.7-204.1: stinger missing. ",
+"source": "notes-d.md",
+"video": "v9"
+},
+{
+"id": "j-throw",
+"sev": "A",
+"ranges": [
+[
+32.5,
+35.5
+]
+],
+"note": "J: his arms and hands are messed up when he is throwing the remote",
+"source": "user-notes.txt",
+"video": "v8"
+},
+{
+"id": "j-141",
+"sev": "A",
+"ranges": [
+[
+100.5,
+102
+]
+],
+"note": "J: 1:41 again, arms messed up",
+"source": "user-notes.txt",
+"video": "v8"
+},
+{
+"id": "j-ceiling",
+"sev": "A",
+"ranges": [
+[
+86,
+88
+]
+],
+"note": "J: at 1:26-1:28 he is lifting and getting clipped into the ceiling",
+"source": "user-notes.txt",
+"video": "v8"
+},
+{
+"id": "j-remote-032",
+"sev": "A",
+"ranges": [
+[
+32.2,
+32.9
+]
+],
+"note": "J and notes: the remote is not held at 0:32, the hand does not wrap it",
+"source": "user-notes.txt",
+"video": "v10"
+},
+{
+"id": "j-033",
+"sev": "A",
+"ranges": [
+[
+32.8,
+34.5
+]
+],
+"note": "J: weird poses around 0:33",
+"source": "user-notes.txt",
+"video": "v10"
+},
+{
+"id": "j-cup",
+"sev": "B",
+"ranges": [
+[
+42.5,
+44
+]
+],
+"note": "J: around 0:43 on the beats the cup looks inside out, like the inner mesh comes outside",
+"source": "user-notes.txt",
+"video": "v10"
+},
+{
+"id": "j-239",
+"sev": "A",
+"ranges": [
+[
+158.5,
+160
+]
+],
+"note": "J: arms messed up at 2:39",
+"source": "user-notes.txt",
+"video": "v10"
+},
+{
+"id": "j-312",
+"sev": "A",
+"ranges": [
+[
+191.5,
+193
+]
+],
+"note": "J: at 3:12 the remote is not in her hand",
+"source": "user-notes.txt",
+"video": "v10"
+},
+{
+"id": "j-feather",
+"sev": "A",
+"ranges": [
+[
+122,
+127
+]
+],
+"note": "J: the dance when he is getting feathered was so bad, he looks broken",
+"source": "user-notes.txt",
+"video": "v10"
+}
+]

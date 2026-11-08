@@ -1,0 +1,101 @@
+# The shot checks' proof. bad_ cards reproduce the Hawkes Punch slice's camera and staging faults; good_ cards are their controls and should pass.
+- id: good_cu
+  idea: control, his face on the bed, eyes on a third
+  feel: plain
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_side, clip: IdleBreathe, blend: 0, look: person}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 55}
+  raw:
+    - {at: 0, gfx: lower, title: "A REAL DOCTOR", sub: "Not looking up", color: "#ff2a6a", for: 4b}
+    - {at: 0, gfx: bug, text: "HAWKES PUNCH", box: "#ff2a6a", for: 4b}
+- id: bad_eyes
+  idea: frame fault, his eyes composed past the top of the frame
+  feel: wrong
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 55}
+  shot: {screen: [0, 0.56], deadzone: false}
+- id: bad_cut_top
+  idea: frame fault, his eyes composed at the very top so the top of his face is cut off
+  feel: wrong
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 55}
+  shot: {screen: [0, -0.47], deadzone: false}
+- id: good_wide
+  idea: control, the room with him on the bed and her beside him
+  feel: plain
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+- id: bad_edge
+  idea: frame fault, the room panned so he sits on the right edge of the frame, half cut
+  feel: wrong
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_room_wide, on: person, lens: 24}
+  shot: {screen: [0.5, 0], deadzone: false}
+- id: bad_stand
+  idea: mark fault, cast sitting on the bed but standing, as his cutaway had him
+  feel: wrong
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0, do: anim, on: person, clip: IdleBreathe, blend: 0}
+- id: bad_off
+  idea: mark fault, his root a metre off the bed mark
+  feel: wrong
+  cast: {person: {at: bed_floor, clip: IdleBreathe, blend: 0}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0.01s, do: set, on: person, pos: [699.4, 0, 3.4], rot: [0, 180, 0]}
+- id: good_desk
+  idea: control, him in the patient's chair from over the desk
+  feel: plain
+  cast: {person: {at: desk_chair, clip: mx_sit_still, blend: 0}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0}}
+  camera: {preset: spot, from: cam_over_desk, on: person.head, lens: 50}
+- id: bad_camin
+  idea: camin fault, a desk camera standing inside his head (fault 24)
+  feel: wrong
+  cast: {person: {at: desk_chair, clip: mx_sit_still}, doctor: {at: desk_doc, clip: mx_writing_seated}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor.head, lens: 50}
+  shot: {pos: [701.2, 1.24, 0.74], deadzone: false}
+- id: good_doctor
+  idea: control, the doctor standing still, her glasses on her face and the marker on her head
+  feel: plain
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}}
+  camera: {preset: spot, from: cam_punch, on: doctor.head, lens: 45}
+- id: bad_glasses
+  idea: propat fault, she throws and leans while her glasses ride her root (fault 16)
+  feel: wrong
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: mx_throw, blend: 0, args: {once: 1}}}
+  camera: {preset: spot, from: cam_punch, on: doctor.head, lens: 40}
+- id: good_kick
+  idea: control, his knee kick seen whole from the side
+  feel: plain
+  cast: {person: {at: bed, clip: mx_sit_still}}
+  camera: {preset: spot, from: cam_bed_side, on: person.hips, lens: 24}
+  raw:
+    - {at: 1b, do: anim, on: person, clip: sit_knee_kick_r, blend: 0}
+- id: bad_kick
+  idea: gesture fault, the knee kick happens below the frame edge
+  feel: wrong
+  cast: {person: {at: bed, clip: mx_sit_still}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.chest, lens: 45}
+  raw:
+    - {at: 1b, do: anim, on: person, clip: sit_knee_kick_r, blend: 0}
+- id: good_space
+  idea: meant as the control, him in space lit from the sun side; he renders as a dark speck, so it is a real readable fault
+  feel: plain
+  mood: space_alone
+  cast: {person: {at: drift, clip: mx_falling_air, blend: 0}}
+  camera: {preset: spot, from: start, on: person, lens: 40}
+  shot: {pos: [6.43, 304.0, 1508.26], look: person.chest, rot: null, deadzone: false}
+- id: bad_dark
+  idea: readable fault, him with his back to the sun under the old dim space light (fault 14), a hole in the black
+  feel: wrong
+  mood: space_alone
+  light: _test_space_old
+  cast: {person: {at: drift, clip: mx_falling_air}}
+  camera: {preset: spot, from: start, on: person, lens: 40}
+  shot: {pos: [4.0, 298.6, 1510.0], look: person.chest, rot: null, deadzone: false}
+- id: look_sits
+  idea: regression probe, w_sits as it was, a 75 mm look on his head on the waiting chair
+  feel: plain
+  cast: {person: {at: waiting_seat, clip: sit_cough, blend: 0}}
+  camera: {preset: spot, from: cam_waiting, on: person, lens: 75}

@@ -1,0 +1,489 @@
+{
+ "mx_sit_laugh": {
+  "grade": "B",
+  "uses": [
+   "laugh",
+   "sit",
+   "react"
+  ],
+  "weak": [
+   "talk",
+   "listen"
+  ],
+  "needs": [
+   "start at 2.0 s",
+   "chair at seat height 0.40 m (low seat, knees above hips)"
+  ],
+  "line": "good for: a big seated laugh, head thrown back with a hand on the chest 2.2-2.6 s, then doubled over with hands on the thighs 2.7-4.5 s; weak at: anything held or looped (after 5 s he stays folded and hunched over his lap), talk; needs: start 2.0, stop by 4.5, a low seat ~0.40 m",
+  "hit": 2.9,
+  "watched": "strip 0-8 s, own burst right 2.4-2.9 s every 4th frame"
+ },
+ "mx_sit_look": {
+  "grade": "A",
+  "uses": [
+   "sit",
+   "look-back",
+   "think",
+   "react"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "chair at seat height 0.45 m",
+   "relaxed grip"
+  ],
+  "line": "good for: a slow seated look down and round (head drops to the lap/ground 0-2 s, comes up and across 2-4 s), legs quiet; weak at: talk (the right hand sits open and flat by the thigh throughout); needs: chair ~0.45 m, fingers set 0.35 for close shots",
+  "watched": "strip 0-4 s, own full-body burst 0-2 s every 4th frame (json knee-backward 90 deg not visible: knees fold normally over the seat)"
+ },
+ "mx_sit_point": {
+  "grade": "B",
+  "uses": [
+   "sit",
+   "gesture",
+   "look-back"
+  ],
+  "weak": [
+   "point",
+   "wave"
+  ],
+  "needs": [
+   "relaxed grip",
+   "chair at seat height 0.45 m"
+  ],
+  "line": "good for: a seated sweep of the right arm across the face and up over the head, held as a shade-the-eyes / 'way up there' look 0.6-2.1 s; weak at: a point (no finger point, the hand is flat over the brow), and the hand passes close in front of the face at 0.45 s; needs: relaxed grip (both hands flat and spread), chair ~0.45 m",
+  "watched": "strip 0-3 s, own burst right 0.3-0.8 s every 2nd frame"
+ },
+ "mx_sit_still": {
+  "grade": "A",
+  "uses": [
+   "sit",
+   "listen",
+   "stand-idle"
+  ],
+  "weak": [],
+  "needs": [
+   "chair at seat height 0.45 m",
+   "relaxed grip"
+  ],
+  "line": "good for: the stillest seat, upright, forearms resting, a tiny breath; a base to layer acting over; weak at: nothing it claims (it does nothing); needs: chair ~0.45 m, fingers set 0.35 (right hand open with the thumb splayed in close-up)",
+  "watched": "strip 0-6 s, hands strip 0-1 s"
+ },
+ "mx_sit_to_stand": {
+  "grade": "B",
+  "uses": [
+   "transition",
+   "injured"
+  ],
+  "weak": [
+   "stand-idle",
+   "sit"
+  ],
+  "needs": [
+   "start at 0.8 s",
+   "stop at 3.0 s"
+  ],
+  "line": "good for: getting up off the ground (sitting on the lawn, legs out) through hands and a knee to standing 0.8-3.0 s, reads tired or hurt; weak at: the standing end 3.0-6 s, where he leans back on locked knees with the feet crossed and heels up as if propped on a wall (json knee-backward 142 deg over 106 frames), and a chair stand (use mx_sit_to_stand_2); needs: stop at 3.0 and blend into an idle",
+  "watched": "strip 0-6.5 s, own full-body burst 3.5-6.6 s every 6th frame"
+ },
+ "mx_sit_to_stand_2": {
+  "grade": "B",
+  "uses": [
+   "transition",
+   "stand-idle"
+  ],
+  "weak": [
+   "sit"
+  ],
+  "needs": [
+   "stool at seat height 0.62 m"
+  ],
+  "line": "good for: rising off a high perch, lean forward 0.4-0.9 s and up to standing by 1.5 s, then a calm stand with naturally relaxed hands to 4.8 s; weak at: a normal chair (the start is a high perch, hips about 0.62 m, not a chair sit), sit; needs: a stool or table edge ~0.62 m, or cut into it",
+  "watched": "strip 0-5 s, own full-body burst 0-2.1 s every 4th frame"
+ },
+ "mx_sit_to_stand_pump": {
+  "grade": "B",
+  "uses": [
+   "transition",
+   "gesture",
+   "react"
+  ],
+  "weak": [
+   "wave",
+   "thumbs-up",
+   "stand-idle"
+  ],
+  "needs": [
+   "relaxed grip",
+   "chair at seat height 0.45 m"
+  ],
+  "line": "good for: sit, pop up 0.3-0.7 s, a flustered right hand to the side of the head (0.9-1.1 s and again 1.4-1.6 s) and across the chest, sit back down 2.2-2.8 s; the rise and the sit work as transitions; weak at: a fist pump or wave (no fist: open spread fingers at the hair), a loop; needs: relaxed grip, chair ~0.45 m",
+  "watched": "strip 0-3.4 s, own burst right 0.7-1.5 s every 3rd frame"
+ },
+ "mx_slide_step": {
+  "grade": "C",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "walk",
+   "sneak"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a goofy sideways slide-and-kick dance with the arms flung straight out at shoulder height (0.2-0.4, 1.4-1.7, 2.6-2.8, 3.7-3.9 s) and a strong back lean; weak at: anything but a comic dance (arms go rigid near a T, the near arm swings into the torso at 0.6 s, the source has a 180 deg one-frame flip and 55 cm/s foot slide); needs: relaxed grip, a wide shot",
+  "watched": "strip 0-4.5 s, hands strip 0-1 s, frame-difference scan"
+ },
+ "mx_slide_walk": {
+  "grade": "C",
+  "uses": [
+   "sneak",
+   "dance"
+  ],
+  "weak": [
+   "walk"
+  ],
+  "needs": [
+   "relaxed grip",
+   "root motion"
+  ],
+  "line": "good for: a short shuffling slide walk with the hands held out at the hips; weak at: a walk (feet skate 100+ cm/s even cleaned, knees knock in), close shots of the hands (flat, open); needs: root motion, a wide shot, relaxed grip",
+  "watched": "strip 0-3.9 s (loops), frame-difference scan"
+ },
+ "mx_spin_in_place": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "turn",
+   "pose"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "stop at 2.9 s"
+  ],
+  "line": "good for: a stepping full spin 0.2-1.0 s that lands square, then jazz-hands / 'ta-da' with both hands up by the face, fingers fanned on purpose, 2.0-2.8 s; weak at: a plain idle (the hands are deliberately fanned); needs: stop at 2.9, a mid-wide shot (fast spin, pivot feet slide 34 cm/s)",
+  "hit": 1,
+  "watched": "strip 0-4 s, own full-body burst 0.2-1.2 s every 2nd frame, own burst right 2.2-3.0 s every 3rd frame"
+ },
+ "mx_stairs_down": {
+  "grade": "C",
+  "uses": [
+   "kneel"
+  ],
+  "weak": [
+   "stairs",
+   "walk"
+  ],
+  "needs": [
+   "stop at 0.9 s",
+   "test on a real step before using it as stairs"
+  ],
+  "line": "good for: as a stretch, a quick crouched hop down onto one knee 0.4-0.9 s; weak at: stairs on flat ground (crouched throughout, it ends kneeling with the shin on the lawn; json knee-backward 139 deg over 24 frames, 39 cm/s slide, loop error 155 deg), a walk; needs: a real stair test before any stairs card",
+  "watched": "strip 0-1.4 s, own full-body burst 0.4-0.9 s every 2nd frame, frame-difference scan (spike at 0.93 s, the hold)"
+ },
+ "mx_stairs_up": {
+  "grade": "B",
+  "uses": [
+   "stairs"
+  ],
+  "weak": [
+   "walk"
+  ],
+  "needs": [
+   "stairs: step ~0.2 m high, ~0.25 m tread",
+   "root motion"
+  ],
+  "line": "good for: one deliberate step up, the knee lifts high 0.1-0.5 s, upright and calm, onto the upper foot by 1.3 s; weak at: flat ground (the high knee and the lower foot dipping under the lawn read wrong without a step); needs: a real stair, root motion",
+  "watched": "strip 0-1.9 s (with hold)"
+ },
+ "mx_stairs_up_2": {
+  "grade": "B",
+  "uses": [
+   "stairs"
+  ],
+  "weak": [
+   "walk"
+  ],
+  "needs": [
+   "stairs: step ~0.2 m high",
+   "root motion",
+   "relaxed grip"
+  ],
+  "line": "good for: two quick light steps up a stair 0-1.2 s, brisker than mx_stairs_up; weak at: flat ground; needs: a real stair, root motion, relaxed grip (open flat hands, curl ~30)",
+  "watched": "strip 0-1.7 s (with hold)"
+ },
+ "mx_stand_to_sit": {
+  "grade": "A",
+  "uses": [
+   "sit",
+   "transition"
+  ],
+  "weak": [],
+  "needs": [
+   "chair at seat height 0.45 m",
+   "start heading 90 deg right of the chair's"
+  ],
+  "line": "good for: sitting down onto a chair, turning left as he lowers 0.3-1.4 s, hands to the knees, settled by 1.6 s, a clean fold; weak at: nothing seen; needs: chair ~0.45 m, face the mark 90 deg right of the chair (he turns left on the way down), root drift 0.16 m",
+  "watched": "strip 0-2.7 s"
+ },
+ "mx_strut": {
+  "grade": "A",
+  "uses": [
+   "walk",
+   "taunt"
+  ],
+  "weak": [
+   "sneak",
+   "injured"
+  ],
+  "needs": [
+   "root motion or walk with its 1.36 m cycle"
+  ],
+  "line": "good for: a confident long-striding strut, chest up, arms swinging a little out, knees bend cleanly, rear toe peels off the ground; weak at: anything timid; needs: root motion or a walk tied to its 1.36 m cycle (in place it treadmills, so the preview feet slide by design)",
+  "watched": "strip 0-4.3 s, own full-body burst 0-1.1 s every 2nd frame"
+ },
+ "mx_swagger_walk": {
+  "grade": "A",
+  "uses": [
+   "walk",
+   "taunt"
+  ],
+  "weak": [
+   "sneak"
+  ],
+  "needs": [
+   "root motion or walk with its 2.57 m two-step cycle"
+  ],
+  "line": "good for: a loose swagger, shoulders and head rolling with each step, hands hang relaxed (curl ~50); weak at: urgent or scared moves; needs: root motion or a walk tied to its 2.57 m cycle",
+  "watched": "strip 0-5.6 s"
+ },
+ "mx_tough_walk": {
+  "grade": "B",
+  "uses": [
+   "walk",
+   "taunt"
+  ],
+  "weak": [
+   "sneak",
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip",
+   "root motion or walk with its 1.41 m cycle"
+  ],
+  "line": "good for: a tough-guy walk, arms held out in an A from the sides with the shoulders swinging; weak at: close-ups of the hands (flat and open, curl ~18), a normal walk; needs: relaxed grip, root motion or its 1.41 m cycle",
+  "watched": "strip 0-3.8 s, own full-body burst 0-1.1 s every 2nd frame"
+ },
+ "mx_turn_180_l": {
+  "grade": "A",
+  "uses": [
+   "turn",
+   "look-back"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "root:1 for the new heading",
+   "blend 0.3 s out (ends mid-step in a wide stance)"
+  ],
+  "line": "good for: a clean stepped turn away to the left, head leads at 0.3 s, around by 1.3 s; feet step, no visible skate, knees fine; weak at: a loop (snaps back at 1.65 s), the end pose is a wide stride; needs: once, root:1, blend into the next clip",
+  "watched": "strip 0-3.3 s, own full-body burst 0.2-1.25 s every 2nd frame, frame-difference scan (only spike is the loop wrap at 1.67 s)"
+ },
+ "mx_turn_180_r": {
+  "grade": "A",
+  "uses": [
+   "turn",
+   "look-back"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "root:1 for the new heading"
+  ],
+  "line": "good for: a clean stepped turn away to the right 0.2-1.4 s, a wider knees-soft step at 0.6-1.0 s; weak at: a loop (snaps back at 1.65 s); needs: once, root:1",
+  "watched": "strip 0-3.3 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan (spike only at the loop wrap)"
+ },
+ "mx_turn_90_l": {
+  "grade": "A",
+  "uses": [
+   "turn"
+  ],
+  "weak": [],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "root:1"
+  ],
+  "line": "good for: a quiet quarter turn left on small steps 0.1-0.9 s, upright, feet planted cleanly; weak at: a loop (snaps every 0.93 s); needs: once, root:1",
+  "watched": "strip 0-3.7 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan"
+ },
+ "mx_turn_90_r": {
+  "grade": "A",
+  "uses": [
+   "turn"
+  ],
+  "weak": [],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "root:1"
+  ],
+  "line": "good for: a quarter turn right 0.1-0.9 s, head leads, feet widen for one step at 0.4-0.5 s; weak at: a loop (snaps every 0.93 s; the json slide 74 cm/s is the pivot, not visible as skate); needs: once, root:1",
+  "watched": "strip 0-3.7 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan"
+ },
+ "mx_turn_f": {
+  "grade": "A",
+  "uses": [
+   "turn"
+  ],
+  "weak": [],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "root:1"
+  ],
+  "line": "good for: a small, neat quarter turn 0-1.0 s with tiny steps, the most neutral of the turns; weak at: a loop (snaps at 1.07 s); needs: once, root:1",
+  "watched": "strip 0-3.2 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan"
+ },
+ "mx_turn_happy": {
+  "grade": "B",
+  "uses": [
+   "turn",
+   "dance"
+  ],
+  "weak": [
+   "sneak"
+  ],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "root:1"
+  ],
+  "line": "good for: a bouncy, light quarter turn with the elbows out and hands lifted 0-0.7 s, reads cheerful; weak at: a loop (snaps every 0.73 s, the fastest wrap of the turns), anything sombre; needs: once, root:1",
+  "watched": "strip 0-3.6 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan (spikes at each wrap)"
+ },
+ "mx_turn_in_place": {
+  "grade": "B",
+  "uses": [
+   "turn",
+   "stand-idle"
+  ],
+  "weak": [],
+  "needs": [
+   "root:1 for the heading"
+  ],
+  "line": "good for: a lazy, slow pivot on small shuffles 0.5-2.5 s, relaxed hands (curl ~45), body stays quiet; weak at: a turn on a beat (too slow and soft); needs: root:1",
+  "watched": "strip 0-3.7 s, own full-body burst 0-3.7 s every 6th frame"
+ },
+ "mx_turn_quick_180": {
+  "grade": "B",
+  "uses": [
+   "turn",
+   "dodge"
+  ],
+  "weak": [
+   "talk",
+   "walk"
+  ],
+  "needs": [
+   "play once (\"once\":1): imported as a loop with the turn baked into the pose, so looping snaps him back to the start heading at every wrap",
+   "mask: lower (arms are a boxing guard)",
+   "root:1"
+  ],
+  "line": "good for: a sharp crouched 180 pivot 0.3-0.7 s, low knees, fast; weak at: anything but a fight (hands held up in a fighting guard throughout, right hand near a fist), a loop (snaps at 1.3 s); needs: once, lower mask or a fight context, root:1",
+  "watched": "strip 0-3.9 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan"
+ },
+ "mx_walk_turn_180": {
+  "grade": "A",
+  "uses": [
+   "walk",
+   "turn"
+  ],
+  "weak": [],
+  "needs": [
+   "root:1",
+   "play once"
+  ],
+  "line": "good for: walking in, planting and pivoting 180 at 0.2-0.5 s, and walking off the other way 0.5-1.0 s, smooth; weak at: a loop (snaps at 1.0 s); needs: root:1, once, a walk on each side",
+  "watched": "strip 0-3 s, own full-body burst 0-1.05 s every 2nd frame, frame-difference scan"
+ },
+ "mx_walk_f": {
+  "grade": "B",
+  "uses": [
+   "walk"
+  ],
+  "weak": [
+   "sneak"
+  ],
+  "needs": [
+   "relaxed grip",
+   "root motion or walk with its 1.44 m cycle"
+  ],
+  "line": "good for: a plain, even walk, knees bend and feet roll cleanly; weak at: medium shots of the arms (held stiff a little out from the body with flat open hands, curl ~18: reads as a mannequin); needs: relaxed grip (fingers set 0.35), root motion or its 1.44 m cycle",
+  "watched": "strip 0-3.5 s, hands strip 0-1 s, own full-body burst 0-1.05 s every 2nd frame"
+ },
+ "mx_walk_start": {
+  "grade": "B",
+  "uses": [
+   "walk",
+   "transition"
+  ],
+  "weak": [],
+  "needs": [
+   "start at 0.4 s",
+   "root motion"
+  ],
+  "line": "good for: a plain walk-in from standing, a small dip at 0.4-0.6 s then push-off and first strides 0.6-2.2 s, hands relaxed (curl ~60-75); weak at: the end 2.2-2.9 s where a rear foot flicks up high; needs: root motion, stop at 2.2 into a walk loop",
+  "watched": "strip 0-3.4 s, own full-body burst 0-2.65 s every 6th frame"
+ },
+ "mx_walk_start_f": {
+  "grade": "B",
+  "uses": [
+   "walk",
+   "transition"
+  ],
+  "weak": [],
+  "needs": [
+   "relaxed grip",
+   "root motion"
+  ],
+  "line": "good for: a brisk walk-off from standing, rise onto the toes 0.5-0.7 s, first long stride 0.8-1.3 s; weak at: close hands (flat, curl ~15), the source has 12 snaps and a 30 deg jitter peak; needs: relaxed grip, root motion",
+  "watched": "strip 0-2.4 s, own full-body burst 0-2.1 s every 4th frame"
+ },
+ "mx_walk_stop": {
+  "grade": "B",
+  "uses": [
+   "walk",
+   "transition"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "stop at 1.5 s",
+   "root motion"
+  ],
+  "line": "good for: a plain stop from a walk, slowing strides 0.3-1.5 s; weak at: the end 1.6-3.0 s, where the rear foot stands straight down on its toe tip while he idles (a shuffle that reads broken in a full shot); needs: cut or blend into an idle by 1.5 s, root motion",
+  "watched": "strip 0-3.5 s, own full-body burst 0-2.65 s every 6th frame"
+ },
+ "mx_walk_stop_f": {
+  "grade": "ban",
+  "uses": [
+   "transition"
+  ],
+  "weak": [
+   "walk",
+   "stand-idle"
+  ],
+  "needs": [
+   "stop at 0.7 s",
+   "root motion"
+  ],
+  "line": "BANNED: from 0.8 s the rear foot stands on its toe tip through the hold: use mx_walk_stop. Was: good for: only the last stride 0-0.7 s; weak at: the stop itself, from 0.8 s the rear foot stands vertically on its toe tip through the end and the hold (a foot no grip can hide in a full shot; source 6 snaps, 50 cm/s slide), use mx_walk_stop instead; needs: stop at 0.7 s",
+  "watched": "strip 0-2 s, own full-body burst 0-2.1 s every 4th frame",
+  "banReason": "from 0.8 s the rear foot stands on its toe tip through the hold: use mx_walk_stop"
+ }
+}

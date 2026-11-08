@@ -1,0 +1,47 @@
+{
+ "id": "tv_ahh3",
+ "f0": 5685,
+ "f1": 5741,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 189.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "cb4a68555cf051f7",
+ "summary": "The strip has no big pops or render faults, but the arms are still moving between poses during frames 3 to 5 after the cut, and the second character is cut off at the right edge in a shot about \"both, together\".",
+ "faults": [
+  {
+   "t": 189.63,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The first frames of the new shot are not settled. Both arms keep travelling from the gesture pose (189.56) to a lowered, elbows-out pose (189.66). That reads as the cut tweening rather than a held first pose.",
+   "fix": "Start the shot already in the akimbo pose, or trim the first 5 to 6 frames of the clip so the arms are at rest on the first frame."
+  },
+  {
+   "t": 189.69,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Both hands rest on the hips or thighs with the elbows flared out evenly. The silhouette is symmetrical and stiff, with no clear line of action, and it holds as the mouth opens at 189.73.",
+   "fix": "Offset the arms, for example one hand lifted toward the lens and one resting, or add a small lean or head tilt for the 'ahh'."
+  },
+  {
+   "t": 189.66,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The shot is meant to show both characters together, but the second character (red) is cropped to a sliver at the right edge. Only one is readable.",
+   "fix": "Reframe or shift the camera so both characters are fully in frame, or move the second character in."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3558,
+  "out": 1139
+ },
+ "cost": 0.0185
+}

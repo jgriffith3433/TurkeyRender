@@ -1,0 +1,11 @@
+{
+  // The last hour of sun: long low key, gold on one cheek, blue in the shadows.
+  "sky": { "top": "#5e86b6", "mid": "#f4c088", "bottom": "#6e5a3a", "ambient": "#5a5048", "ambientTop": "#6f86ae", "ambientBottom": "#6a4a2c", "fog": "#f0b880", "density": 0.004, "sun": "#ffc98a", "sunDir": [-0.8, 0.22, -0.5], "sunSize": 0.06, "haze": 2.2, "clouds": 0.42, "cloudColor": "#ffd8a8", "cloudShade": "#8a6f86" },
+  "lights": {
+    "sun": { "type": "directional", "pos": [-8, 2.7, -5], "aim": "subject", "color": "#ffb268", "intensity": 2.8, "shadows": true },
+    "key": { "type": "spot", "at": "window", "offset": [0, 0.2, 0], "pos": [-2.8, 1.6, -1.8], "aim": "subject", "color": "#ffb878", "intensity": 18, "range": 12, "angle": 80, "shadows": true },
+    "fill": { "type": "point", "pos": [2.4, 1.4, 1.8], "color": "#8fa8d8", "intensity": 1.8, "range": 7 },
+    "rim": { "type": "spot", "pos": [-1.2, 2.2, -2.6], "aim": "subject", "color": "#ffd2a0", "intensity": 7, "range": 7, "angle": 50 },
+    "practical": { "type": "point", "at": "practical", "pos": [1.8, 0.9, -1.4], "color": "#ffa860", "intensity": 0.5, "range": 3 }
+  }
+}

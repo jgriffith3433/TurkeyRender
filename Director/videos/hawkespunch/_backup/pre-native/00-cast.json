@@ -1,0 +1,40 @@
+{
+  // Who can be cast in Hawkes Punch. Where they stand and whether they show comes from the cards (cut.json, cards/). Wardrobe: tools/punch_wardrobe.py.
+  "actors": {
+    // him, after Greener: the purple tee, pale and green-tinged
+    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    // the doctor: Person2 in the white coat
+    "doctor": { "model": "person2", "material": "Assets/Videos/hawkespunch/Props/Person2_doctor.mat", "material2": "Assets/MusicVideo/Person2/Head.mat" },
+    // the other one: the same man in the red tee
+    "other": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_red.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    // the turkey nurse at reception
+    "nurse": { "model": "turkey_white_hero", "scale": 1.1 },
+    // her props: the glasses ride her head; the stethoscope and the pad are attached by the cards
+    // Person2's head bone frame isn't world-aligned (four guesses failed), so both ride her root: fine while her head barely moves, hidden on the wind-up.
+    "doctor_glasses": { "model": "Assets/MusicVideo/Props/Punch/glasses.fbx", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "parent": "doctor", "pos": [0, 1.565, 0.15], "rot": [0, 0, 0] },
+    "stethoscope": { "model": "Assets/MusicVideo/Props/Punch/stethoscope.fbx", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "parent": "doctor", "pos": [0, 1.36, 0.09], "rot": [0, 0, 0] },
+    // the can he takes off the desk and carries into space; a copy for the commercial drink, and the one that rolls into frame at the end
+    "can": { "model": "Assets/MusicVideo/Props/Punch/can.fbx", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [700.85, 0.755, 1.72], "rot": [0, 30, 0] },
+    "can_other": { "model": "Assets/MusicVideo/Props/Punch/can.fbx", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [900.1, 0.74, 1.25], "rot": [0, -30, 0] },
+    "can_roll": { "model": "Assets/MusicVideo/Props/Punch/can.fbx", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [702.5, 0.033, 0.9], "rot": [0, 0, 90] },
+    // the Earth he grabs by mistake: half a metre across in his hands, then it goes back and grows to a planet
+    "earth_small": { "model": "prim:sphere", "scale": 0.5, "texture": "Assets/MusicVideo/Props/Punch/tex/earth.png", "smooth": 0.35, "rot": [0, 140, 23], "pos": [-24.5, 301.25, 1650] },
+    // aim points for cameras that need to look somewhere no mark is
+    "aim_punch": { "model": "none", "pos": [700.6, 1.4, 3.3] },
+    "aim_sky": { "model": "none", "pos": [700.6, 40, 60] },
+    "aim_roof": { "model": "none", "pos": [700.6, 4.2, 4.6] },
+    "aim_flick": { "model": "none", "pos": [4.15, 301.35, 1510.4] },
+    "aim_volley": { "model": "none", "pos": [0, 302, 1650] }
+  },
+  "cues": [
+    // person2 imports with her shape keys at 100: hold them at 0 from time zero
+    { "at": 0, "do": "face", "on": "doctor", "blink": 0, "smile": 0, "jawOpen": 0, "fear": 0, "eyesWide": 0, "for": "0.01b" },
+    // the glasses show while she is in the room and still: the clinic parts, off from the wind-up (21:3) to the button; the stethoscope through the exam
+    { "at": 0, "do": "hide", "on": "doctor_glasses" }, { "at": 0, "do": "hide", "on": "stethoscope" },
+    { "at": "24:1", "do": "show", "on": "doctor_glasses" }, { "at": "29:3", "do": "hide", "on": "doctor_glasses" },
+    { "at": "5:1", "do": "show", "on": "stethoscope" }, { "at": "9:1", "do": "hide", "on": "stethoscope" },
+    // the set's own desk can stays hidden: the card's `can` is the one that moves
+    { "at": 0, "do": "hide", "on": "clinic_can_desk" }, { "at": "78:1", "do": "hide", "on": "clinic_can_desk" },
+    { "at": 0, "do": "hide", "on": "can" }, { "at": 0, "do": "hide", "on": "can_other" }, { "at": 0, "do": "hide", "on": "can_roll" }
+  ]
+}

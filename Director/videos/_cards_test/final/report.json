@@ -1,0 +1,143 @@
+{
+ "video": "_cards_test",
+ "file": "videos/_cards_test/output/_cards_test-proof2.mp4",
+ "when": "2026-11-08T01:03:23.520Z",
+ "size": "320x180",
+ "fps": 30,
+ "shots": 13,
+ "reused": 12,
+ "rendered": 1,
+ "framesReused": 6044,
+ "framesRendered": 82,
+ "minutes": 0.9,
+ "join": {
+  "frames": 6126,
+  "wanted": 6126,
+  "unevenFrames": 0,
+  "worstFrameError": 0,
+  "audioSeconds": 204.196,
+  "seconds": 204.2,
+  "clicks": [],
+  "clean": true
+ },
+ "waitedMinutes": 0.4,
+ "list": [
+  {
+   "id": "head",
+   "from": 0,
+   "frames": 14,
+   "hash": "ab3af21714487bdb",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "alone",
+   "from": 0.4666666666666667,
+   "frames": 83,
+   "hash": "eecf0b401ed0e36f",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "his_face",
+   "from": 3.2333333333333334,
+   "frames": 41,
+   "hash": "97b05d6207d61840",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "door_opens",
+   "from": 4.6,
+   "frames": 42,
+   "hash": "4fc1f86e588c3128",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "she_comes",
+   "from": 6,
+   "frames": 82,
+   "hash": "02bf2b90b39e4aff",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "over_him",
+   "from": 8.733333333333333,
+   "frames": 42,
+   "hash": "2f2beb1c0fbe64ff",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "over_her",
+   "from": 10.133333333333333,
+   "frames": 41,
+   "hash": "13b3a39dca39aed2",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "both",
+   "from": 11.5,
+   "frames": 83,
+   "hash": "87a01c6583e51213",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "hero",
+   "from": 14.266666666666667,
+   "frames": 83,
+   "hash": "b92a040cb52b0aa4",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "cold_top",
+   "from": 17.033333333333335,
+   "frames": 82,
+   "hash": "6af36cf45db050dd",
+   "action": "rendered",
+   "why": "changed: camera",
+   "seconds": 3
+  },
+  {
+   "id": "out",
+   "from": 19.766666666666666,
+   "frames": 83,
+   "hash": "4267bce8c25dfaf1",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "walk",
+   "from": 22.533333333333335,
+   "frames": 83,
+   "hash": "6486aae34428803f",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "lamp",
+   "from": 25.3,
+   "frames": 5367,
+   "hash": "74bc5bd5312f3163",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  }
+ ]
+}

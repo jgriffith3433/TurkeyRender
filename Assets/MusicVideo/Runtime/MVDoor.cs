@@ -16,14 +16,26 @@ namespace TKShock.MV
         public Renderer view;
         public Vector3 offset;
         public float turn, clipPad = .05f;
+        /// <summary>A polished floor instead of a door: the camera is the main camera mirrored in the quad's plane, as a proper camera, so the image is flipped left to right (MV/FloorMirror undoes it). Costs a render only while the main camera is over the quad.</summary>
+        public bool mirror;
 
         static readonly List<MVDoor> All = new List<MVDoor>();
 
         void OnEnable() { All.Add(this); RenderPipelineManager.beginCameraRendering += Before; }
         void OnDisable() { All.Remove(this); RenderPipelineManager.beginCameraRendering -= Before; }
-        void Update() { if (cam) cam.enabled = Showing; }
+        void Update() { if (cam) cam.enabled = Showing; if (mirror && view) view.forceRenderingOff = !Over; }
 
-        bool Showing => view && view.enabled;
+        bool Over
+        {
+            get
+            {
+                var m = Camera.main; if (!m || !view) return false;
+                var b = view.bounds; var p = m.transform.position;
+                return p.x > b.min.x && p.x < b.max.x && p.z > b.min.z && p.z < b.max.z && p.y > b.center.y;
+            }
+        }
+
+        bool Showing => view && view.enabled && (!mirror || Over);
 
         void Before(ScriptableRenderContext ctx, Camera c) { if (c == cam) Sync(); }
 
@@ -31,6 +43,19 @@ namespace TKShock.MV
         {
             var main = Camera.main; if (!main || !cam || !view) return;
             var door = view.transform;
+            if (mirror)
+            {
+                float y = door.position.y;
+                var mp = main.transform.position; mp.y = 2 * y - mp.y;
+                var mf = main.transform.forward; mf.y = -mf.y; var mu = main.transform.up; mu.y = -mu.y;
+                cam.transform.SetPositionAndRotation(mp, Quaternion.LookRotation(mf, mu));
+                cam.fieldOfView = main.fieldOfView; cam.aspect = main.aspect;
+                cam.ResetProjectionMatrix();
+                var w = cam.worldToCameraMatrix;
+                var pp = w.MultiplyPoint(door.position); var pn = w.MultiplyVector(Vector3.up).normalized;
+                cam.projectionMatrix = cam.CalculateObliqueMatrix(new Vector4(pn.x, pn.y, pn.z, -Vector3.Dot(pp, pn)));
+                return;
+            }
             var q = Quaternion.AngleAxis(turn, Vector3.up);
             var far = door.position + offset;
             cam.transform.SetPositionAndRotation(far + q * (main.transform.position - door.position), q * main.transform.rotation);
@@ -46,7 +71,11 @@ namespace TKShock.MV
         /// <summary>Captures draw offscreen, so they ask for the doors first.</summary>
         public static void RenderAll()
         {
-            foreach (var d in All) if (d.Showing && d.cam) { d.Sync(); d.cam.Render(); }
+            foreach (var d in All)
+            {
+                if (d.mirror && d.view) d.view.forceRenderingOff = !d.Over;
+                if (d.Showing && d.cam) { d.Sync(); d.cam.Render(); }
+            }
         }
     }
 }

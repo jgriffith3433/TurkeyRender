@@ -1,0 +1,62 @@
+{
+  // Hawkes Punch P3: the deadpan float, plain register.
+
+ "name": "hp_p3_deadpan",
+ "about": "P3 deadpan float (m7_deadpan, e7_anyone): the plain-register body, arms loose at the sides, legs together and soft, head level, breath only; either man.",
+ "seed": {
+  "clip": "zg_neutral_c",
+  "t": 0
+ },
+ "length": 8.0,
+ "loop": true,
+ "poses": {
+  "plain": {
+   "from": {
+    "clip": "zg_neutral_c",
+    "t": 0
+   },
+   "muscles": {
+    "Left Arm Down-Up": -0.45,
+    "Right Arm Down-Up": -0.45,
+    "Left Arm Front-Back": 0.05,
+    "Right Arm Front-Back": 0.05,
+    "Left Forearm Stretch": 0.75,
+    "Right Forearm Stretch": 0.75,
+    "Left Upper Leg In-Out": 0.02,
+    "Right Upper Leg In-Out": 0.02,
+    "Left Upper Leg Front-Back": -0.05,
+    "Right Upper Leg Front-Back": -0.05,
+    "Left Lower Leg Stretch": 0.6,
+    "Right Lower Leg Stretch": 0.6,
+    "Neck Nod Down-Up": 0.05,
+    "Head Nod Down-Up": 0.05
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.35
+    }
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "plain"
+  },
+  {
+   "t": 8.0,
+   "pose": "plain"
+  }
+ ],
+ "cycles": [
+  {
+   "period": 4,
+   "phase": 0,
+   "muscles": {
+    "Chest Front-Back": 0.02,
+    "Left Shoulder Down-Up": 0.03,
+    "Right Shoulder Down-Up": 0.03
+   }
+  }
+ ]
+}

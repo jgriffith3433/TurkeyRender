@@ -1,0 +1,39 @@
+{
+ "id": "curtsy",
+ "f0": 966,
+ "f1": 1018,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 32.2,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "da27367c42186399",
+ "summary": "The cut is clean with no pops or flicker, but the character sits at the right edge with his body cropped and stands nearly motionless, which doesn't yet read as a dignified curtsy.",
+ "faults": [
+  {
+   "t": 32.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The character is jammed against the right edge, with his right shoulder and arm cut off by the frame. Most of the frame is empty fence, so the subject is not clearly staged for a curtsy shot.",
+   "fix": "Reframe or shift the character toward the centre or a third line so the full body has room to curtsy."
+  },
+  {
+   "t": 32.33,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 32.19 to 32.43 the pose is almost unchanged: stiff upright stance, arm hanging, and the same face looking toward the camera. There is no anticipation or settle at the start of the shot, and no clear sign he is addressing the fence.",
+   "fix": "Give the opening a readable pose, such as a slight dip or a head turn toward the fence, to lead into the curtsy."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3566,
+  "out": 722
+ },
+ "cost": 0.0144
+}

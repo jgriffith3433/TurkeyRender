@@ -1,0 +1,69 @@
+{
+ "id": "big_deal",
+ "f0": 1095,
+ "f1": 1147,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 36.5,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 36.867,
+   "why": "one patch jumps (cell 60.4, x2.1)",
+   "file": "spike-01106.jpg"
+  }
+ ],
+ "hash": "6d4091c0d7c00deb",
+ "summary": "The shot's opening has a big pop: he is standing with the blade at his chest at 36.59, then lunges into a bent-over, head-down pose with the arm overhead by 36.63-36.66, with no anticipation. The later frames settle into a held reach, and the blade stays in his hand.",
+ "faults": [
+  {
+   "t": 36.63,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 36.59 and 36.63 the torso and head jump from upright, relaxed standing to a deep lean with the head tilted down and the body shifted and cropped low in frame. This is a snap with no in-between frames. By 36.66 the arm is straight overhead with the blade pointing up.",
+   "fix": "Add 4-6 frames of in-between motion, or cut on the lean pose. Alternatively start the shot on the raised-blade pose."
+  },
+  {
+   "t": 36.63,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "There is no anticipation or hip lead before the big move. He goes from a casual stance to the overhead raise in about 1/30 s. This clashes with the quiet 'stops being funny' feel.",
+   "fix": "Retime the move slower, with a small dip or wind-up. Alternatively remove the raise and start on the held pose."
+  },
+  {
+   "t": 36.86,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The measured spike at 36.867. At 36.86-36.90 the body and head are still leaned over, then by 36.93 the torso straightens quickly and the head rises. This looks like a fast snap rather than an eased move.",
+   "fix": "Smooth the torso and head rise over a few more frames, with overshoot and settle."
+  },
+  {
+   "t": 36.66,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "At 36.63-36.73 the head sits at the bottom of the frame and the raised blade tip nearly touches or leaves the top edge. The framing is awkward for a quiet beat.",
+   "fix": "Reframe or lower the framing offset so the head and the blade tip both stay in frame."
+  },
+  {
+   "t": 37,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The held pose is a stiff arm straight across the chest with the blade pointing up behind it. It is flat and reads as a plain bar with little line of action. The face is nearly blank and static from 36.96 to 37.10.",
+   "fix": "Raise the blade into a clearer silhouette, add a head tilt or an expression change, and give the hand a firmer grip."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4981,
+  "out": 892
+ },
+ "cost": 0.0189
+}

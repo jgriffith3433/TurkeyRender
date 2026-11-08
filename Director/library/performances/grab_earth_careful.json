@@ -1,0 +1,245 @@
+{
+ "name": "grab_earth_careful",
+ "about": "Both hands close on the Earth (`earth`, an actor about half a metre across) slowly, fingers soft and spread, the eyes on it, lips pressed; a held beat of care; then the hands let go (`let`) and come up open at the chest, okay okay, a step back in the hips, a relieved breath and a small smile. The Earth going back to its place is the card's, after `let`. Works for both of them. No ground. Ends hands up. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "any",
+ "exit": "any",
+ "length": "4.4s",
+ "min": "3s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "earth": "earth",
+  "let": 2.6
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$earth",
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "smile": 0,
+   "fear": 0.12,
+   "blink": 0.1,
+   "eyesWide": 0.25,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.1,
+   "do": "reach",
+   "hand": "right",
+   "to": "$earth",
+   "offset": [
+    0.27,
+    0.04,
+    -0.06
+   ],
+   "for": "1.0s",
+   "ease": "hand"
+  },
+  {
+   "at": 0.15,
+   "do": "reach",
+   "hand": "left",
+   "to": "$earth",
+   "offset": [
+    -0.27,
+    0.04,
+    -0.06
+   ],
+   "for": "1.0s",
+   "ease": "hand"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.08,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.08,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.1,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.1,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.2,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 1,
+     "ease": "inout",
+     "hold": "=let-1.2",
+     "bones": {
+      "spine": [
+       6,
+       0,
+       0
+      ],
+      "chest": [
+       6,
+       0,
+       0
+      ],
+      "head": [
+       8,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=let+0.5",
+     "ease": "inout",
+     "hips": [
+      0,
+      0,
+      -0.08
+     ],
+     "bones": {
+      "spine": [
+       -4,
+       0,
+       0
+      ],
+      "chest": [
+       -3,
+       0,
+       0
+      ],
+      "head": [
+       -2,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": 1.8,
+   "do": "blink",
+   "for": "0.3s"
+  },
+  {
+   "at": "$let",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.26,
+    1.28,
+    0.36
+   ],
+   "for": "0.7s",
+   "ease": "hand"
+  },
+  {
+   "at": "=let+0.05",
+   "do": "reach",
+   "hand": "left",
+   "toRel": [
+    -0.26,
+    1.28,
+    0.36
+   ],
+   "for": "0.7s",
+   "ease": "hand"
+  },
+  {
+   "at": "$let",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.04,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "$let",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.04,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=let+0.4",
+   "do": "face",
+   "fear": 0.05,
+   "blink": 0.15,
+   "eyesWide": 0.1,
+   "smile": 0.35,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": "=let+0.8",
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": "=let+1.2",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=let+1.2",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.5s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.4
+ }
+}

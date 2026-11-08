@@ -42,7 +42,7 @@ namespace TKShock.MV
             _r = (float?)j["radius"] ?? 45; _h = (float?)j["height"] ?? 22;
             int cards = (int?)j["cards"] ?? 80000, seed = (int?)j["seed"] ?? 5;
             var sh = Shader.Find("MV/FeatherMound"); if (!sh) return;
-            _skin = new Material(sh) { hideFlags = HideFlags.DontSave }; _cards = new Material(sh) { hideFlags = HideFlags.DontSave };
+            _skin = new Material(sh) { name = MVGen.Name("mound"), hideFlags = HideFlags.DontSave }; _cards = new Material(sh) { name = MVGen.Name("mound"), hideFlags = HideFlags.DontSave };
             foreach (var m in new[] { _skin, _cards })
             {
                 m.SetTexture("_FeatherTex", MVFeatherMeshes.Tex());

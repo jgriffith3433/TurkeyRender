@@ -1,0 +1,164 @@
+{
+  // Hawkes Punch, hero moment 5b (setting Earth back), SPACE-EPIC e7_setback: the DOUBLE (zg_neutral_a). Like setting down a full glass: the carry is slow (on 3s), the set and pat small.
+
+ "name": "hp_a2_setdown",
+ "about": "Setting Earth back: from the Atlas hold down to a careful carry (hands round it, from mx_goalie_catch_mid 0.75), the slow carry, the set (6f, hands open forward, catch_mid 0.45), a small pat (2f), hands hovering (12f), then the float; the DOUBLE on zg_neutral_a.",
+ "seed": {
+  "clip": "zg_neutral_a",
+  "t": 0
+ },
+ "length": 6.2,
+ "poses": {
+  "overhead": {
+   "from": {
+    "clip": "hp_a1_atlas",
+    "t": 3.0
+   }
+  },
+  "carry": {
+   "from": {
+    "clip": "mx_goalie_catch_mid",
+    "t": 0.75
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": -0.12,
+    "Right Upper Leg Front-Back": -0.08,
+    "Left Upper Leg In-Out": 0.15,
+    "Right Upper Leg In-Out": 0.13,
+    "Left Lower Leg Stretch": 0.35,
+    "Right Lower Leg Stretch": 0.4,
+    "Left Foot Up-Down": 0.55,
+    "Right Foot Up-Down": 0.55,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Twist In-Out": 0.25,
+    "Right Upper Leg Twist In-Out": 0.22,
+    "Neck Nod Down-Up": -0.25,
+    "Head Nod Down-Up": -0.1
+   },
+   "add": {
+    "Spine Front-Back": -0.08
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.25,
+     "spread": 0.5
+    }
+   },
+   "root": {
+    "rot": [
+     8,
+     0,
+     0
+    ]
+   }
+  },
+  "set": {
+   "from": {
+    "clip": "mx_goalie_catch_mid",
+    "t": 0.45
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": -0.12,
+    "Right Upper Leg Front-Back": -0.08,
+    "Left Upper Leg In-Out": 0.15,
+    "Right Upper Leg In-Out": 0.13,
+    "Left Lower Leg Stretch": 0.35,
+    "Right Lower Leg Stretch": 0.4,
+    "Left Foot Up-Down": 0.55,
+    "Right Foot Up-Down": 0.55,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Twist In-Out": 0.25,
+    "Right Upper Leg Twist In-Out": 0.22,
+    "Neck Nod Down-Up": -0.2,
+    "Head Nod Down-Up": -0.08,
+    "Left Forearm Stretch": 0.55,
+    "Right Forearm Stretch": 0.55
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.1,
+     "spread": 0.55
+    }
+   },
+   "root": {
+    "rot": [
+     12,
+     0,
+     0
+    ]
+   }
+  },
+  "pat": {
+   "from": "set",
+   "add": {
+    "Right Hand Down-Up": -0.45,
+    "Right Forearm Stretch": 0.08
+   }
+  },
+  "hover": {
+   "from": "set",
+   "add": {
+    "Left Arm Down-Up": -0.05,
+    "Right Arm Down-Up": -0.05
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.2,
+     "spread": 0.4
+    }
+   }
+  },
+  "float": {
+   "from": {
+    "clip": "zg_neutral_a",
+    "t": 0
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "overhead",
+   "hold": "6f"
+  },
+  {
+   "t": "24f",
+   "pose": "carry",
+   "interp": "ease",
+   "step": 3,
+   "hold": "12f"
+  },
+  {
+   "t": "84f",
+   "pose": "set",
+   "interp": "ease",
+   "hold": "6f"
+  },
+  {
+   "t": "92f",
+   "pose": "pat",
+   "interp": "linear"
+  },
+  {
+   "t": "94f",
+   "pose": "set",
+   "interp": "out",
+   "hold": "4f"
+  },
+  {
+   "t": "104f",
+   "pose": "hover",
+   "interp": "ease",
+   "step": 3,
+   "hold": "12f"
+  },
+  {
+   "t": "134f",
+   "pose": "float",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

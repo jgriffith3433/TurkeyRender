@@ -1,0 +1,75 @@
+{
+ "id": "descend",
+ "f0": 3513,
+ "f1": 3642,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 117.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 118.8,
+   "why": "frame difference x5.9 (32.17)",
+   "file": "spike-03564.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 120.5,
+   "why": "frame difference x13.6 (57.82)",
+   "file": "spike-03615.jpg"
+  }
+ ],
+ "hash": "9c784500b6712ae6",
+ "summary": "Shot has stiff, symmetrical standing pose with no skirt visible, a frame-edge pose issue, and a bird-only frame at 120.5 that loses the character; confetti is shaded squares, no major pops.",
+ "faults": [
+  {
+   "t": 117.19,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "He stands stiff and symmetrical, arms hanging out from the sides in twin curled poses, with no line of action. He does not read as descending, and no lifted skirt is visible.",
+   "fix": "Give him a clear descending step with a lead leg and one hand lifting the skirt."
+  },
+  {
+   "t": 117.26,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "His feet barely move across the frames and he looks planted and floating on the pink floor. There is no step, hip lead or settle.",
+   "fix": "Add a stepping cycle with hip lead and weight shift, with the feet pressed into the floor."
+  },
+  {
+   "t": 118.89,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His face is nearly identical across all eight frames, with a blank stare and no eye or head lead. The idea says he knows exactly what this is and looks at us.",
+   "fix": "Add a chin-up head tilt, an eye lock on camera and a smirk or blink."
+  },
+  {
+   "t": 118.93,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The low-angle camera crops his legs and the skirt area at the bottom, and the busy confetti and bright vertical bars compete with him. The descent and skirt are not visible.",
+   "fix": "Reframe to include the hips and skirt, and reduce the confetti."
+  },
+  {
+   "t": 120.49,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The shot ends on an empty staircase with only a small bird flying off, so he is gone from frame. The idea is him descending and looking at us.",
+   "fix": "Keep him in frame, or cut this insert out of the shot unless it is meant as a choice."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6358,
+  "out": 719
+ },
+ "cost": 0.0199
+}

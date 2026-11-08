@@ -1,0 +1,26 @@
+{
+ "clip": "mx_greeting",
+ "seconds": 5.199999999999999,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.073 m, worst step 0.002 m at 1.43s",
+  "right foot on floor moved 0.068 m, worst step 0.002 m at 1.43s"
+ ],
+ "hipsTop": 0.9144703,
+ "hipsLow": 0.911007643,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "RightLowerArm": 12.4,
+  "LeftFoot": 7.3,
+  "LeftLowerLeg": 6.8,
+  "groundHipsCm": 5.2,
+  "RightShoulder": 0.6
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_greeting_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_greeting_three.mp4"
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "descend",
+ "f0": 3513,
+ "f1": 3642,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 117.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 118.8,
+   "why": "frame difference x7.5 (31.24)",
+   "file": "spike-03564.jpg"
+  }
+ ],
+ "hash": "4ed26b9511d1daee",
+ "summary": "The strip shows a dark patch spreading across his shirt and thigh with a visible edge, unlit confetti squares and a stiff, symmetric pose in the cut-in frames. The shot's idea of a lifted skirt and a chin-up look is not clearly shown.",
+ "faults": [
+  {
+   "t": 118.86,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A hard-edged dark shadow patch appears on his torso and hip, then grows and changes shape between 118.83 and 118.96. It reads as a shading or shadow glitch on the shirt, and the shirt colour is not stable.",
+   "fix": "Fix the self-shadow or light on the torso (bias or cascade), or lock the lighting through the descent."
+  },
+  {
+   "t": 118.83,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The shirt hem and lower torso warp and ripple, and the dark patch cuts through the thigh. This looks like cloth or skirt geometry clipping through the legs.",
+   "fix": "Push the cloth collision out or hide the skirt mesh intersection."
+  },
+  {
+   "t": 118.79,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat, unshaded teal, blue and red confetti squares float in front of and around him. At 118.79 and 118.83 they are large, and at 118.89 a red square sits at his leg.",
+   "fix": "Give the confetti lit or soft particle shading, or keep it away from the subject."
+  },
+  {
+   "t": 117.2,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "In the cut-in frames he stands stiff and symmetrical, with both arms hanging at his sides and his thumbs out. There is no line of action and no sign of the lifted skirt. He barely changes pose across 117.13 to 117.36.",
+   "fix": "Start the shot on a clear descent pose with a lifted-skirt gesture."
+  },
+  {
+   "t": 117.26,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "His feet are cut off by the pink floor strip, so his feet are lost behind it and there is no foot contact. The shirt also darkens frame by frame from 117.13 to 117.36.",
+   "fix": "Lower the floor plane or reframe so the feet show. Hold the lighting steady."
+  },
+  {
+   "t": 118.96,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His face is small and nearly static, with no clear chin-up or look into the lens. The 'he knows' attitude does not come through.",
+   "fix": "Add a chin lift, an eye lead to camera and a small expression change."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4964,
+  "out": 915
+ },
+ "cost": 0.0191
+}

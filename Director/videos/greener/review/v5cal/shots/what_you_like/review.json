@@ -1,0 +1,31 @@
+{
+ "id": "what_you_like",
+ "f0": 812,
+ "f1": 889,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 27.067,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "da496a512c0d0ed5",
+ "summary": "The cut is clean, with no pops, flicker or clipping. The only note is that the new shot opens on drifting arms rather than a held pose that sets up the wave.",
+ "faults": [
+  {
+   "t": 27.2,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "After the cut (27.13-27.30) the arms keep drifting. The right hand moves from the hip at 27.13-27.16 to across the belly at 27.20-27.23 and then down at 27.30. The shot opens without a clear held pose, and nothing sets up the slow dismissive wave.",
+   "fix": "Hold the hip-hand pose for a few frames from the cut, then start the slow wave arm from it with a small anticipation."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 935
+ },
+ "cost": 0.0165
+}

@@ -1,0 +1,44 @@
+{
+  // The TK Shock room: 6 m by 6 m, TV on the north wall (+z), sofa facing it. Heading 0 looks at the TV.
+  "origin": [0, 0, 0],
+  "bounds": [-2.75, -2.75, 2.75, 2.75],
+  "ceiling": 3,
+  "light": "tv_glow",
+  // [xmin, zmin, xmax, zmax, height] of what a camera can't see through.
+  "solids": { "table": [-0.6, 0.45, 0.6, 1.05, 0.45], "sofa": [-1.1, -1.3, 1.1, -0.6, 0.8], "cabinet": [-0.7, 2.3, 0.7, 2.8, 1.4] },
+  "marks": {
+    "center": { "pos": [0, 0, 0], "kind": "stand", "face": 0 },
+    "sofa": { "pos": [0, 0.02, -0.8], "kind": "seat", "face": 0 },
+    "sofa_left": { "pos": [-0.72, 0.02, -0.8], "kind": "seat", "face": 0 },
+    "sofa_right": { "pos": [0.72, 0.02, -0.8], "kind": "seat", "face": 0 },
+    "by_tv": { "pos": [-0.9, 0, 1.75], "kind": "stand", "face": 165 },
+    "window": { "pos": [-2.1, 0, -0.2], "kind": "stand", "face": -90 },
+    "door": { "pos": [2.1, 0, -2.3], "kind": "door", "face": -40 },
+    "table": { "pos": [0, 0.5, 0.75], "kind": "prop" },
+    "tv": { "pos": [0, 1.1, 2.55], "kind": "prop" },
+    "corner_cam": { "pos": [2.3, 2.4, 2.3], "kind": "camera" },
+    "doorway_cam": { "pos": [1.9, 1.5, -2.6], "kind": "camera" },
+    "sofa_cu": { "pos": [0, 1.04, 0.2], "kind": "camera" },
+    "tv_close": { "pos": [0, 1.03, 1.3], "kind": "camera" },
+    "tv_screen": { "pos": [0, 1.03, 2.19], "kind": "prop", "head": 0, "face": 180 },
+    "table_cam": { "pos": [0.5, 0.86, 0.1], "kind": "camera" },
+    "table_pot": { "pos": [0.25, 0.47, 0.75], "kind": "prop", "head": 0.2 }
+  },
+  "actors": {
+    "floor": { "model": "floor", "pos": [3, 0, -3] },
+    "ceiling": { "model": "ceiling", "pos": [3, 3, -3] },
+    "wall_n1": { "model": "wall", "pos": [-3, 0, 3], "rot": [0, 180, 0] },
+    "wall_n2": { "model": "wall", "pos": [0, 0, 3], "rot": [0, 180, 0] },
+    "wall_s1": { "model": "wall", "pos": [0, 0, -3] },
+    "wall_s2": { "model": "wall_door", "pos": [3, 0, -3] },
+    "wall_w1": { "model": "wall", "pos": [-3, 0, -3], "rot": [0, 90, 0] },
+    "wall_w2": { "model": "wall", "pos": [-3, 0, 0], "rot": [0, 90, 0] },
+    "wall_e1": { "model": "wall", "pos": [3, 0, 0], "rot": [0, 270, 0] },
+    "wall_e2": { "model": "wall", "pos": [3, 0, 3], "rot": [0, 270, 0] },
+    "carpet": { "model": "carpet", "pos": [0, 0.01, -0.3] },
+    "cabinet": { "model": "tv_stand", "pos": [0, 0, 2.55] },
+    "sofa": { "model": "sofa", "pos": [0, 0, -0.9] },
+    "table": { "model": "coffee_table", "pos": [0, 0, 0.75] },
+    "tv": { "model": "tv", "pos": [0, 0.62, 2.55] }
+  }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "dv_low_2",
+ "f0": 2664,
+ "f1": 2741,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 88.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 90.367,
+   "why": "one patch jumps (cell 64.5, x1.9)",
+   "file": "spike-02711.jpg"
+  }
+ ],
+ "hash": "76f3359486b1c7f9",
+ "summary": "No clear pops or render faults; the measured spike at 90.37 is not visible as a break, but the man's head is cropped out of frame and his standing pose is stiff.",
+ "faults": [
+  {
+   "t": 90.36,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The man's head and upper torso are cut off by the top of the frame through the whole strip, so the 'star' never shows his face or any expression. Only the legs and hips are readable.",
+   "fix": "Tilt the camera up or pull it back a little so the head stays in frame while he still looks huge."
+  },
+  {
+   "t": 90.46,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He stands with straight, parallel legs and arms hanging at his sides, and barely moves for eight frames. The silhouette is stiff and symmetrical, with no weight shift or line of action.",
+   "fix": "Add a hip shift, an arm gesture, or a head turn on the beat."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4961,
+  "out": 1561
+ },
+ "cost": 0.0255
+}

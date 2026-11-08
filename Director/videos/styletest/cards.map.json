@@ -1,0 +1,67 @@
+[
+ {
+  "id": "room_wide",
+  "idea": "a man alone in a room",
+  "feel": "the look of the world",
+  "take": null,
+  "at": "1:1",
+  "end": "2:1",
+  "t": 0.45,
+  "tEnd": 3.209,
+  "set": "living_room",
+  "seq": "room",
+  "note": null
+ },
+ {
+  "id": "room_close",
+  "idea": "his face",
+  "feel": "skin in this light",
+  "take": null,
+  "at": "2:1",
+  "end": "3:1",
+  "t": 3.209,
+  "tEnd": 5.967,
+  "set": "living_room",
+  "seq": "room",
+  "note": null
+ },
+ {
+  "id": "yard_wide",
+  "idea": "out in the yard under the sky",
+  "feel": "space",
+  "take": null,
+  "at": "3:1",
+  "end": "4:1",
+  "t": 5.967,
+  "tEnd": 8.726,
+  "set": "backyard",
+  "seq": "yard",
+  "note": null
+ },
+ {
+  "id": "yard_mid",
+  "idea": "he looks down at the lawn",
+  "feel": "curious",
+  "take": null,
+  "at": "4:1",
+  "end": "5:1",
+  "t": 8.726,
+  "tEnd": 11.484,
+  "set": "backyard",
+  "seq": "yard",
+  "note": null
+ },
+ {
+  "id": "yard_touch",
+  "idea": "his hand touches the grass",
+  "feel": "the first time in years",
+  "take": null,
+  "at": "5:1",
+  "end": "6:3",
+  "t": 11.484,
+  "tEnd": 15.622,
+  "set": "backyard",
+  "seq": "yard",
+  "note": null
+ }
+]

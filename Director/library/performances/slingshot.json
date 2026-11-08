@@ -1,0 +1,183 @@
+{
+ "name": "slingshot",
+ "about": "Whipped round a planet: from the superman he leans hard into the curve (`side` 1 banks to his right), the arms swept back and trailing, the head turned to the planet, lids pressed by the g, holds through the arc, then snaps straight with overshoot as he is flung out. The path is the card's. No ground. Ends flying. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "fly",
+ "exit": "fly",
+ "length": "2.4s",
+ "min": "1.6s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "side": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "keys",
+   "successive": 0.035,
+   "keys": [
+    {
+     "t": 0,
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -18,
+       0,
+       0
+      ],
+      "chest": [
+       -6,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 0.55,
+     "ease": "inout",
+     "hold": "=for-1.6",
+     "from": "mx_hanging_idle@1.0",
+     "hips": [
+      "=side*0.05",
+      0,
+      0
+     ],
+     "bones": {
+      "spine": [
+       0,
+       0,
+       "=side*22"
+      ],
+      "chest": [
+       0,
+       "=side*10",
+       "=side*18"
+      ],
+      "neck": [
+       0,
+       "=side*-15",
+       0
+      ],
+      "head": [
+       -12,
+       "=side*-25",
+       "=side*-10"
+      ],
+      "leftUpperArm": [
+       -30,
+       0,
+       -15
+      ],
+      "rightUpperArm": [
+       -30,
+       0,
+       15
+      ],
+      "leftLowerArm": [
+       -10,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -10,
+       0,
+       0
+      ],
+      "leftUpperLeg": [
+       -8,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       -8,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=for-0.45",
+     "ease": "out",
+     "overshoot": 0.2,
+     "settle": "0.4s",
+     "from": "mx_hanging_idle@1.0",
+     "bones": {
+      "head": [
+       -20,
+       0,
+       0
+      ],
+      "chest": [
+       -8,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": 0.3,
+   "do": "face",
+   "blink": 0.45,
+   "jawOpen": 0.3,
+   "eyesWide": 0,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.9,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.9,
+   "for": "0.2s"
+  },
+  {
+   "at": "=for-0.5",
+   "do": "face",
+   "blink": 0.1,
+   "jawOpen": 0.1,
+   "smile": 0.6,
+   "eyesWide": 0.3,
+   "for": "0.3s",
+   "ease": "out"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "fly_fast",
+    "for": "1.5s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

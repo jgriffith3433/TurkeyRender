@@ -1,0 +1,36 @@
+{
+ "clip": "mx_hh_running_man",
+ "seconds": 4.832999999999999,
+ "popCount": 84,
+ "pops": [
+  "0.033s RightToes kink 0.098 m",
+  "0.100s RightLowerLeg kink 0.098 m",
+  "0.133s LeftLowerLeg kink 0.100 m",
+  "0.167s RightHandMiddle3 kink 0.091 m",
+  "0.267s RightHandMiddle3 kink 0.088 m",
+  "0.300s LeftHandIndex3 kink 0.092 m"
+ ],
+ "feet": [
+  "left foot on floor moved 2.448 m, worst step 0.056 m at 3.90s",
+  "right foot on floor moved 2.484 m, worst step 0.056 m at 1.57s"
+ ],
+ "hipsTop": 0.921525,
+ "hipsLow": 0.8812729,
+ "hipsTravel": "(-0.01, 0.00, 0.00)",
+ "limits": {
+  "LeftLowerLeg": 44.2,
+  "RightLowerLeg": 36.6,
+  "RightFoot": 24.3,
+  "LeftFoot": 13.2,
+  "groundHipsCm": 12.5,
+  "Chest": 0
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_hh_running_man was rejected by admission: joint limits moved RightFoot 49.7 deg"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_running_man_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_running_man_three.mp4"
+ ]
+}

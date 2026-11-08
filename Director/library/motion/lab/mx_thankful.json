@@ -1,0 +1,24 @@
+{
+ "clip": "mx_thankful",
+ "seconds": 3.1,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.086 m, worst step 0.003 m at 1.63s",
+  "right foot on floor moved 0.136 m, worst step 0.004 m at 0.93s"
+ ],
+ "hipsTop": 0.917960465,
+ "hipsLow": 0.913707435,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 1.8,
+  "LeftLowerArm": 0.3,
+  "RightLowerArm": 0.1
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_thankful_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_thankful_three.mp4"
+ ]
+}

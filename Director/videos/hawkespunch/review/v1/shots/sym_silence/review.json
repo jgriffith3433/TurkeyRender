@@ -1,0 +1,75 @@
+{
+ "id": "sym_silence",
+ "f0": 883,
+ "f1": 1029,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 29.433,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 30.067,
+   "why": "flow spike x2.2",
+   "file": "spike-00902.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 33.567,
+   "why": "flow spike x2.2",
+   "file": "spike-01007.jpg"
+  }
+ ],
+ "hash": "8bf2568d7962223f",
+ "summary": "The shot is a locked, static torso with one arm gesture that pops in fast, leaves the frame, and repeats identically 3.5 s later. The wagging finger the idea calls for never reads.",
+ "faults": [
+  {
+   "t": 30.06,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "The arm swings up from rest into frame in about 4 frames (29.99 to 30.09), with no anticipation and no body lead. The torso and shoulders stay frozen while the forearm whips in, so the arm looks driven on its own.",
+   "fix": "Add a small shoulder and torso lean or drop before the lift. Ease the arm in over about 8 to 10 frames and let it settle."
+  },
+  {
+   "t": 30.13,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The gesturing hand is cut off by the left frame edge from 30.13 to 30.23. The hand, which is the point of the shot, is mostly out of frame.",
+   "fix": "Reframe wider or shift the camera left. Alternatively, pull the gesture in so the hand stays inside the frame."
+  },
+  {
+   "t": 30.19,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is a wagging finger that drives the point home. The hand reads as a loose fist or open claw at the frame edge, and no finger point or wag is visible.",
+   "fix": "Pose the hand with the index finger extended. Bring it inside the frame and add a clear side-to-side wag."
+  },
+  {
+   "t": 33.57,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "Frames 33.49 to 33.73 repeat 29.99 to 30.23 exactly: same arm path, same head tilt, same framing. The gesture is a copied loop, so it reads as canned rather than emphatic. It lands as a repeat instead of building a point.",
+   "fix": "Vary the second gesture with a different amplitude, timing or hand. Alternatively, hold a stronger pose and cut the repeat."
+  },
+  {
+   "t": 29.53,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Before the gesture (29.46 to 29.70), the body drifts slightly with a stiff, near-symmetrical stance and the arms hanging. There is no clear held pose and little face change, so the character looks idle and blank rather than meaning it.",
+   "fix": "Hold a stronger pose with a head or eye shift and a blink. Start the gesture earlier."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6339,
+  "out": 1407
+ },
+ "cost": 0.0267
+}

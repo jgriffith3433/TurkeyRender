@@ -1,0 +1,53 @@
+{
+ "id": "plan",
+ "f0": 2921,
+ "f1": 2973,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 97.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 98.167,
+   "why": "frame difference x7.2 (19.63)",
+   "file": "spike-02945.jpg"
+  }
+ ],
+ "hash": "960df70acf4fd855",
+ "summary": "The cloth whip is missing: the magenta cloth is on screen at 98.19 and gone at 98.23, and the turkey floats with no support.",
+ "faults": [
+  {
+   "t": 98.23,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The magenta cloth strip is still beside the green chart at 98.16 and 98.19. It is gone at 98.23, with no pull, travel or flutter between. The whip that is the idea of the shot never reads, and the chart appears fully revealed in a single frame.",
+   "fix": "Animate the cloth sliding or flying off the chart over 4 to 6 frames, with anticipation and a trailing flutter. Or hide it behind a wipe or the butler's arm."
+  },
+  {
+   "t": 98.3,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The turkey's feet are in the air in front of the window and well above the pink chart and floor. Nothing supports it. It also drifts down and settles with no landing, so it reads as floating.",
+   "fix": "Put it on a perch or the chart edge, with the feet planted. Otherwise add a visible hop with takeoff and landing."
+  },
+  {
+   "t": 97.5,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The turkey sits almost frozen in the same pose from 97.39 to 97.63, with only a small bob. The head and eyes do not lead anything, and the body reads as a static prop.",
+   "fix": "Give it a head turn or a clear eye-line toward the chart before the reveal."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4965,
+  "out": 1258
+ },
+ "cost": 0.0225
+}

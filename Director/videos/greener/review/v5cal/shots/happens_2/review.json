@@ -1,0 +1,45 @@
+{
+ "id": "happens_2",
+ "f0": 684,
+ "f1": 735,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 22.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 22.9,
+   "why": "one patch jumps (cell 60.9, x3.8)",
+   "file": "spike-00687.jpg"
+  }
+ ],
+ "hash": "c5f27c95dbaac0d8",
+ "summary": "The head whips from a turned three-quarter pose to full frontal in about 4 frames (22.86 to 22.93) at the start of the shot, which reads as the cut tweening, and after that it settles into a near-static stare.",
+ "faults": [
+  {
+   "t": 22.89,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "At 22.86 the head is still turned and tilted, as in the previous shot's 22.79 and 22.83 frames. By 22.90 and 22.93 it has swung to full frontal, and the neck and shoulders shift with it. This is a fast snap over about 3 frames, with no anticipation and no settle. It reads as the cut tweening, not as intended motion.",
+   "fix": "Start the shot already on the frontal pose, trimming the first 4 frames of the turn. Or ease the turn over 10 or more frames with an overshoot."
+  },
+  {
+   "t": 22.96,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "From 22.93 to 23.00 the head and eyes are nearly frozen. The stare is fixed on camera with no blink or eye lead after the fast turn. Only the mouth opens, at 23.03.",
+   "fix": "Add a blink or small eye shift as the head arrives, and let the head settle with a slight overshoot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4968,
+  "out": 947
+ },
+ "cost": 0.0194
+}

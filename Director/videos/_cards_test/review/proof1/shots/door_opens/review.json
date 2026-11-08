@@ -1,0 +1,22 @@
+{
+ "id": "door_opens",
+ "f0": 138,
+ "f1": 180,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 4.6,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "d0691b32ebf9eb30",
+ "summary": "The strip is clean: the camera is locked, the figure stands almost still with no pops or flicker, though the hold is stiff.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4345,
+  "out": 114
+ },
+ "cost": 0.0098
+}

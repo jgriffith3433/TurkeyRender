@@ -1,0 +1,110 @@
+2026-11-05T19:48 look at C:\Projects\TKShock
+
+Let's create a quick framework for us creating a music video entirely by us here in claude code.
+
+Let's make sure we use unity timeline and let's add the music file C:\Projects\TKShock\Assets\Song\Audio.mp3 to the timelnie
+
+Let's seriously build this out, we are going to
+2026-11-05T20:43 [Image: original 2900x1914, displayed at 2000x1320. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T20:45 [Image: original 2900x1914, displayed at 2000x1320. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T21:08 [Image: original 2900x1914, displayed at 2000x1320. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T21:29 [Image: original 2900x1914, displayed at 2000x1320. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T21:31 Why did you stop working? It's nowhere close to how I imagined. It needs to be at least 3 times better than this. It's terrible. Be creative and make sure it's actually good. Don't stop until I say it's good, just keep iterating over and over like an animator/director would. Go.
+2026-11-05T21:38 [Image: original 2560x1260, displayed at 2000x984. Multiply coordinates by 1.28 to map to original image.]
+2026-11-05T21:43 [Image: original 2412x1635, displayed at 2000x1356. Multiply coordinates by 1.21 to map to original image.]
+2026-11-05T22:10 Rebuild as fully realtime 3d no AI video. You can still use AI for textures if you need
+2026-11-05T22:11 [Image: original 2560x640, displayed at 2000x500. Multiply coordinates by 1.28 to map to original image.]
+2026-11-05T22:21 [Image: original 2048x2048, displayed at 1932x1932. Multiply coordinates by 1.06 to map to original image.]
+2026-11-05T22:23 [Image: original 2900x1914, displayed at 2000x1320. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T22:31 [Image: original 2900x1092, displayed at 2000x753. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T22:34 [Image: original 2900x1092, displayed at 2000x753. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T22:36 [Image: original 2900x1092, displayed at 2000x753. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T22:41 [Image: original 2900x818, displayed at 2000x564. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T22:42 [Image: original 2900x1092, displayed at 2000x753. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T22:50 Okay great. Now let’s make sure this is actually going to come out as this type of music video. There’s a lot of elements at play, and since you have my notes on how I wanted the music video to play out, feel, and story and ALLLL of the notes AND you can understand the music then I’m going to have y
+2026-11-05T22:50 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T22:50 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T22:50 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T22:50 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T22:55 [Image: original 2900x1640, displayed at 2000x1131. Multiply coordinates by 1.45 to map to original image.]
+2026-11-05T23:05 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T23:05 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T23:05 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T23:06 [Image: original 2574x1090, displayed at 2000x847. Multiply coordinates by 1.29 to map to original image.]
+2026-11-05T23:19 How are the sub agents and tasks going? Anything we need to address while they are working? Or maybe you can make sure they are all working together in a cohesive way
+2026-11-05T23:30 Keep checking on them
+2026-11-05T23:31 How are they doing in general
+2026-11-05T23:33 Yeah but I mean in terms of the project
+2026-11-05T23:58 status
+2026-11-06T00:09 I just watched TKShock-v6 and I noticed that there's a lot of camera angle switches and the timing was okay but it didn't really tell a good story, the sucking into the tv should have felt more gradual and there should have been more moments like for instance the couch could fall backwards right whe
+2026-11-06T00:28 How's that going?
+2026-11-06T00:29 Ohhhh okay how do we speed it up
+2026-11-06T00:30 That's fine. Okay is there anything else we can do while we wait?
+2026-11-06T00:45 You decide
+2026-11-06T00:46 You are still going to keep it as the music video to the music beats right?
+2026-11-06T00:46 Great how much longer until this is done
+2026-11-06T00:48 Speed it up
+2026-11-06T00:52 How's it going
+2026-11-06T00:53 Okay but it needs to be really good
+2026-11-06T00:54 Okay keep going. You can do work while these agents are still working right? You should be able to tell what's lacking and keep iterating.
+2026-11-06T01:37 Keep going. How’s this going? Unity keeps crashing?
+2026-11-06T01:47 okay keep working and is there anything we can do to speed things up and how's the quality of the music video so far? Are things on track for a great video? Let me know once the render finishes?
+2026-11-06T01:48 I need you to actually take a good look and compare with what a good music video would be. Actually judge it and decide if it's good, not and why.
+2026-11-06T01:48 while we wait for the render, start working on known issues and keep going
+2026-11-06T02:00 [Image: original 2891x1767, displayed at 2000x1222. Multiply coordinates by 1.45 to map to original image.]
+2026-11-06T02:10 I just watched the video. It has an interesting story. The animation needs to be much much better. Like significantly better. A lot of work needs to go into the animations and poses etc. Make sure to work on that fully. A LOT of work on that
+2026-11-06T02:29 Yes, use it
+2026-11-06T02:49 Okay but really focus on animations and things not looking bad and clipping and stuf.. Let's see a good pass. And yes I have signed into maximo
+2026-11-06T03:02 Alright how can we move things along faster
+2026-11-06T03:04 Okay what else should we do?
+2026-11-06T03:05 Do what ever would make the most impact and that you feel confident in doing. I'm sure there's a lot we can do, and I'm sure the quality needs a little work too?
+2026-11-06T03:09 There's some places where the body is contorted an that makes it look weird.
+2026-11-06T03:27 Status? Everything still working?
+2026-11-06T03:52 Status?
+2026-11-06T03:53 What is so slow
+2026-11-06T03:53 omg. speed it up
+2026-11-06T04:46 what's taking so long
+2026-11-06T04:49 Are the background tasks still working or what do we do with them?
+2026-11-06T04:50 what about the background tasks her in claude come why aren't they gone from the interface (theres 4 of them)
+2026-11-06T05:18 [Image: original 2660x1500, displayed at 2000x1128. Multiply coordinates by 1.33 to map to original image.]
+2026-11-06T05:18 [Image: original 2400x1350, displayed at 2000x1125. Multiply coordinates by 1.20 to map to original image.]
+2026-11-06T05:27 my notes. when he lifts his arm it's all messed up.. why? fix that
+2026-11-06T05:27 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\1.webp] [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\2.webp]
+2026-11-06T05:28 again his arms and hands are messed up when he's throwing the remote too what is that all about? Are you maybe blending things wrong or something?
+2026-11-06T05:28 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\3.webp]
+2026-11-06T05:31 1:41 again, arms messed up. and in general the arms are all messed up, why is that?
+2026-11-06T05:31 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\4.webp]
+2026-11-06T05:32 Then at 1:26-1:28 he's lifting and getting clipped into the ceiling? That looks kinda bad
+2026-11-06T05:32 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\5.png] [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\6.webp]
+2026-11-06T05:42 Are you able to in general fix the arms and hands?
+2026-11-06T05:43 Can you make it so part of the beginning the camera shows a camera man filming himself too? Like a triple forth wall break etc
+2026-11-06T05:54 sounds good
+2026-11-06T06:12 While all that is running. I want you to do a polish pass on the animation. Make sure our character moves correctly. Add a little bit of more VFX during the TV sucking him in
+2026-11-06T06:34 How else can we make it more fun
+2026-11-06T06:44 I like all of your suggestions
+2026-11-06T06:45 Don’t add We do not pitch a cure. We own the category.
+2026-11-06T07:18 Don't add the hawkes biomedical logo or any of that
+2026-11-06T07:19 okay what are we waiting on
+2026-11-06T07:40 [Image: original 2660x1500, displayed at 2000x1128. Multiply coordinates by 1.33 to map to original image.]
+2026-11-06T07:55 Go through and find all the moments where the model is clipped in other models, like the remote in the hand or the animation done wrong like before he starts getting feathered and also let's do another polish pass. Really take a look at it, compare with how others similar style do it and just do a n
+2026-11-06T16:34 Try again
+2026-11-06T16:35 [Image: original 2660x1500, displayed at 2000x1128. Multiply coordinates by 1.33 to map to original image.]
+2026-11-06T16:41 3:12 the remote isn't in here hand right
+
+Also the dance when he's getting feathered was so bad. so so bad and it just looked like he was broken. I'll continue finding more. Get started working on this.
+2026-11-06T16:41 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\7.webp]
+2026-11-06T16:42 what's with these weird poses around 0:33?
+2026-11-06T16:42 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\8.webp]
+2026-11-06T16:43 around 0:43 when the beats hit the cup looks weird for those quick moments. almost like the mesh inside is becoming outside. fix the cup
+2026-11-06T16:43 [Image: source: C:\Users\jgrif\AppData\Local\Temp\claude\9919beaa12ed540b\3161753f-f787-46e0-be7d-e2fec06132e3\images\9.webp]
+2026-11-06T16:51 [Image: original 2400x270, displayed at 2000x225. Multiply coordinates by 1.20 to map to original image.]
+2026-11-06T16:52 Okay work on everything I just talked about and get it done as fast as possible.
+2026-11-06T16:54 [Image: original 2400x270, displayed at 2000x225. Multiply coordinates by 1.20 to map to original image.]
+2026-11-06T17:15 Status on this work?
+2026-11-06T17:35 Status?
+2026-11-06T17:39 anything else we should do?
+2026-11-06T17:59 status?
+2026-11-06T19:20 Good enough. Let's add this to my github as a new repo called, TurkeyRender. If you need the github token it's in gh.txt in C:\Projects
+2026-11-06T20:19 Okay great let's call that done. Now let's turn this into an awesome system we can use to make videos with even more ease.
+
+Let's take all of our lessons, everything that we found out how to do better an make sure we solidify the findings in a way that makes it so we can generate more videos like th

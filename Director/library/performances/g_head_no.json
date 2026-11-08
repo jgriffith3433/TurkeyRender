@@ -1,0 +1,32 @@
+{
+ "name": "g_head_no",
+ "about": "A shake of the head, no, with a little of the chest, from mx_head_no (0.2-1.4 s).",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.2s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_head_no",
+  "mask": "head",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.2,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

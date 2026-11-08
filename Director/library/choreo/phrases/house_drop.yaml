@@ -1,0 +1,5 @@
+about: Drops low and stops dead on the snare. 2 beats, once. For a word like "new".
+kind: pose
+len: 2b
+cues:
+  - {at: 0b, do: anim, clip: mx_house_3, start: 3.75, speed: 1.0, once: 1, blend: 0.13, for: $len}

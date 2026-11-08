@@ -1,0 +1,984 @@
+# Hawkes Punch draft 2 pass 3: the playground. Rules: legs tread (base clip), the upper body relaxes or acts the beat (layers), eyelines to the partner or the lens, a face per line with blinks, everything drifts, the Earth is hand-sized everywhere, wides level so they float in front of Jupiter.
+
+- id: s5_wide
+  idea: hard cut; near silence, only a faint ring and his breathing; he drifts in and stops; behind him a huge lit Jupiter, around him little planets the size of beach balls
+  feel: where am I
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 300.85, 1692.5], look: null, rot: [-4, 0, 0], fov: 50, deadzone: false}
+  raw:
+    - {at: 0, do: hide, on: space_earth}
+    - {at: 0, do: hide, on: space_moon}
+    - {at: 0, do: hide, on: space_moon_turkey_a}
+    - {at: 0, do: hide, on: space_moon_turkey_b}
+    - {at: 0, do: hide, on: space_mars_turkey}
+    - {at: 0, do: hide, on: space_comet}
+    - {at: 0, do: hide, on: space_asteroids_a}
+    - {at: 0, do: hide, on: space_asteroids_b}
+    - {at: 0, do: hide, on: space_asteroids_c}
+    - {at: 0, do: hide, on: space_satellite}
+    - {at: 0, do: hide, on: space_can_space}
+    - {at: 0, do: detach, on: space_mars}
+    - {at: 0, do: detach, on: earth_small}
+    - {at: 0, do: set, on: space_jupiter, pos: [40, 350, 1950], rot: [0, 0, 5]}
+    - {at: 0, do: scale, on: space_jupiter, to: 120, for: 0}
+    - {at: 0, do: set, on: space_mars, pos: [-2.4, 301.4, 1701.6]}
+    - {at: 0, do: scale, on: space_mars, to: 0.5, for: 0}
+    - {at: 0, do: set, on: space_saturn, pos: [2.8, 301.9, 1706.0], rot: [0, 0, 0]}
+    - {at: 0, do: scale, on: space_saturn, to: 1.4, for: 0}
+    - {at: 0, do: show, on: earth_small}
+    - {at: 0, do: set, on: earth_small, pos: [-0.2, 302.6, 1703.8], rot: [0, 140, 23]}
+    - {at: 0, do: scale, on: earth_small, to: 0.25, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: anim, on: person, clip: mx_falling_air, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-4.6, 300.7, 1699.4], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 1.8s, ease: out, face: yaw}
+    - {at: 1.3s, do: anim, on: person, clip: mx_treading_water, blend: 0.5}
+    - {at: 1.6s, do: rotate, on: person, rot: [0, 180, 0], for: 0.4s, ease: inout, lint: slide}
+    - {at: 0.3, do: face, on: person, eyesWide: 0.5, jawOpen: 0.1, for: 0.3s}
+
+- id: s5_cu
+  idea: "Silence." A whisper and a relieved smile; then "...Nope. More music." and his eyes go up to a song we cannot hear
+  feel: peace, then not
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.62, 301.66, 1698.55], look: person.head, rot: null, fov: 24, screen: [0, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.482, 300.161, 1699.908], arc: 0.02, for: 4.52s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [2, 185, -2], for: 4.52s, ease: inout, lint: slide}
+    - {at: 0, do: gaze, on: person, to: [-0.62, 301.66, 1698.55], limit: 35, for: 0}
+    - {at: 0.86s, do: blink, on: person, for: 0.16s}
+    - {at: 3.04s, do: blink, on: person, for: 0.16s}
+    - {at: 0, grade: {faceFill: 0.6, sunRim: 1.6}, for: 0}
+    - {at: 0.4, do: face, on: person, smile: 0.35, eyesWide: 0, for: 0.3s}
+    - {at: 2.3, do: face, on: person, smile: 0, fear: 0.15, for: 0.3s}
+    - {at: 2.3s, do: eyes, on: person, yaw: 12, pitch: 14, for: 0.5s}
+
+- id: s5_real
+  idea: a thought lands; he brightens, pulls out his drawing of her, holds it up and searches the dark for her
+  feel: a goal
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {dolly: [[-0.62, 301.6, 1698.0], [-0.62, 301.62, 1698.6]], look: person.chest, rot: null, fov: 32, screen: [0, 0.02], deadzone: false, ease: inout}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.523, 300.189, 1699.935], arc: 0.02, for: 5.32s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [1.2, 183.0, -1.2], for: 5.32s, ease: inout, lint: slide}
+    - {at: 0, do: gaze, on: person, to: [-0.62, 301.66, 1698.3], limit: 35, for: 0}
+    - {at: 0.66s, do: blink, on: person, for: 0.16s}
+    - {at: 3.30s, do: blink, on: person, for: 0.16s}
+    - {at: 0, grade: {faceFill: 0.6, sunRim: 1.6}, for: 0}
+    - {at: 0.4, do: face, on: person, eyesWide: 0.45, for: 0.3s}
+    - {at: 1.6, do: face, on: person, smile: 0.7, eyesWide: 0.3, for: 0.3s}
+    - {at: 2.3s, do: show, on: drawing}
+    - {at: 2.3s, do: set, on: drawing, pos: [-0.6, 301.2, 1699.58], rot: [0, 0, 0]}
+    - {at: 2.3s, do: reach, on: person, hand: right, to: drawing, offset: [-0.1, -0.1, 0.02], for: 0.3s, ease: hand}
+    - {at: 2.3s, do: reach, on: person, hand: left, to: drawing, offset: [0.1, -0.1, 0.02], for: 0.3s, ease: hand}
+    - {at: 3.2s, do: gaze, on: person, toRel: [1.4, 0.3, 1], limit: 40, for: 0.5s, ease: inout}
+    - {at: 4.3s, do: gaze, on: person, toRel: [-1.4, 0.3, 1], limit: 40, for: 0.5s, ease: inout}
+    - {at: end, do: reach, on: person, hand: right, weight: 0, for: 0}
+    - {at: end, do: reach, on: person, hand: left, weight: 0, for: 0}
+    - {at: end, do: hide, on: drawing}
+
+- id: s6_left
+  idea: he searches to his right, hopeful; behind him, screen right, the faceless sheet ghost from his drawing drifts into view; we see her, he does not
+  feel: look behind you
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.25, 301.3, 1696.6], look: person.chest, rot: null, fov: 40, screen: [-0.2, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.71, 300.105, 1700.06], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [-2, 175, 2], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0, do: show, on: space_ghost}
+    - {at: 0, do: show, on: ghost_body}
+    - {at: 0, do: show, on: ghost_arm}
+    - {at: 0, do: show, on: ghost_arm_l}
+    - {at: 0, do: show, on: ghost_hem_1}
+    - {at: 0, do: show, on: ghost_hem_2}
+    - {at: 0, do: show, on: ghost_hem_3}
+    - {at: 0, do: show, on: ghost_hem_4}
+    - {at: end, do: hide, on: space_ghost}
+    - {at: end, do: hide, on: ghost_body}
+    - {at: end, do: hide, on: ghost_arm}
+    - {at: end, do: hide, on: ghost_arm_l}
+    - {at: end, do: hide, on: ghost_hem_1}
+    - {at: end, do: hide, on: ghost_hem_2}
+    - {at: end, do: hide, on: ghost_hem_3}
+    - {at: end, do: hide, on: ghost_hem_4}
+    - {at: 0, do: set, on: space_ghost, pos: [3.6, 301.7, 1707], rot: [0, 180, 0]}
+    - {at: 0.2s, do: move, on: space_ghost, pos: [1.7, 301.9, 1706.4], for: 2.6s, ease: inout}
+    - {at: 0.65s, do: blink, on: person, for: 0.16s}
+    - {at: 0.2s, do: gaze, on: person, toRel: [1.5, 0.2, 1.0], limit: 40, for: 0.45s, ease: inout}
+    - {at: 0.3, do: face, on: person, smile: 0.4, eyesWide: 0.2, for: 0.3s}
+
+- id: s6_right
+  idea: he turns the other way; the ghost slips behind the ringed planet just in time
+  feel: nope
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.25, 301.3, 1696.6], look: person.chest, rot: null, fov: 40, screen: [-0.2, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.686, 300.077, 1700.044], arc: 0.02, for: 2.12s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [-2, 175, 2], for: 2.12s, ease: inout, lint: slide}
+    - {at: 0, do: show, on: space_ghost}
+    - {at: 0, do: show, on: ghost_body}
+    - {at: 0, do: show, on: ghost_arm}
+    - {at: 0, do: show, on: ghost_arm_l}
+    - {at: 0, do: show, on: ghost_hem_1}
+    - {at: 0, do: show, on: ghost_hem_2}
+    - {at: 0, do: show, on: ghost_hem_3}
+    - {at: 0, do: show, on: ghost_hem_4}
+    - {at: end, do: hide, on: space_ghost}
+    - {at: end, do: hide, on: ghost_body}
+    - {at: end, do: hide, on: ghost_arm}
+    - {at: end, do: hide, on: ghost_arm_l}
+    - {at: end, do: hide, on: ghost_hem_1}
+    - {at: end, do: hide, on: ghost_hem_2}
+    - {at: end, do: hide, on: ghost_hem_3}
+    - {at: end, do: hide, on: ghost_hem_4}
+    - {at: 0, do: set, on: space_ghost, pos: [1.7, 301.9, 1706.4], rot: [0, 180, 0]}
+    - {at: 0.1s, do: move, on: space_ghost, pos: [2.9, 301.9, 1707.8], for: 0.55s, ease: inout}
+    - {at: 0.63s, do: blink, on: person, for: 0.16s}
+    - {at: 0.2s, do: gaze, on: person, toRel: [-1.5, 0.2, 1.0], limit: 40, for: 0.45s, ease: inout}
+    - {at: 0.3, do: face, on: person, smile: 0.4, eyesWide: 0.2, for: 0.3s}
+
+- id: s6_left2
+  idea: he turns back; the ghost peeks out from behind the ringed planet
+  feel: again
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.25, 301.3, 1696.6], look: person.chest, rot: null, fov: 40, screen: [-0.2, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.686, 300.077, 1700.044], arc: 0.02, for: 2.12s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [-2, 175, 2], for: 2.12s, ease: inout, lint: slide}
+    - {at: 0, do: show, on: space_ghost}
+    - {at: 0, do: show, on: ghost_body}
+    - {at: 0, do: show, on: ghost_arm}
+    - {at: 0, do: show, on: ghost_arm_l}
+    - {at: 0, do: show, on: ghost_hem_1}
+    - {at: 0, do: show, on: ghost_hem_2}
+    - {at: 0, do: show, on: ghost_hem_3}
+    - {at: 0, do: show, on: ghost_hem_4}
+    - {at: end, do: hide, on: space_ghost}
+    - {at: end, do: hide, on: ghost_body}
+    - {at: end, do: hide, on: ghost_arm}
+    - {at: end, do: hide, on: ghost_arm_l}
+    - {at: end, do: hide, on: ghost_hem_1}
+    - {at: end, do: hide, on: ghost_hem_2}
+    - {at: end, do: hide, on: ghost_hem_3}
+    - {at: end, do: hide, on: ghost_hem_4}
+    - {at: 0, do: set, on: space_ghost, pos: [2.9, 301.9, 1707.8], rot: [0, 180, 0]}
+    - {at: 0.5s, do: move, on: space_ghost, pos: [1.9, 302.0, 1707.6], for: 0.6s, ease: out}
+    - {at: 1.4s, do: move, on: space_ghost, pos: [2.9, 301.9, 1707.8], for: 0.5s, ease: in}
+    - {at: 0.66s, do: blink, on: person, for: 0.16s}
+    - {at: 0.2s, do: gaze, on: person, toRel: [1.5, 0.2, 1.0], limit: 40, for: 0.45s, ease: inout}
+    - {at: 0.3, do: face, on: person, smile: 0.4, eyesWide: 0.2, for: 0.3s}
+
+- id: s6_tap
+  idea: a tap on his shoulder from behind; he freezes, hope rising: ...Space ghost?
+  feel: is it her
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.62, 301.66, 1698.55], look: person.head, rot: null, fov: 24, screen: [0, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.62, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.578, 300.098, 1699.972], arc: 0.02, for: 2.72s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [1.0, 182.5, -1.0], for: 2.72s, ease: inout, lint: slide}
+    - {at: 0, do: gaze, on: person, to: [-0.62, 301.66, 1698.55], limit: 30, for: 0}
+    - {at: 0.94s, do: blink, on: person, for: 0.16s}
+    - {at: 0, grade: {faceFill: 0.6}, for: 0}
+    - {at: 0.2, do: face, on: person, eyesWide: 0.55, smile: 0, for: 0.3s}
+    - {at: 1.0, do: face, on: person, eyesWide: 0.3, smile: 0.45, for: 0.3s}
+    - {at: 0.2s, do: layer, on: person, clip: mx_boxing_dodge, mask: head, once: 1, start: 0.3, weight: 1, for: 0.35s, blend: 0.08s}
+
+- id: s6_turn
+  idea: close two-shot, both faces side by side: it is him, in a red tee, grinning; he looks at his drawing, at the double, at the drawing, and slowly shakes his head: no
+  feel: that is not her
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.15, 301.62, 1698.15], look: null, rot: [0, 0, 0], fov: 34, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.45, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 175, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.2, 300, 1700.15], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 190, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.407, 300.126, 1699.971], arc: 0.02, for: 3.52s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, 177.0, -0.8], for: 3.52s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [0.157, 300.126, 1700.179], arc: 0.02, for: 3.52s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 188.0, 0.8], for: 3.52s, ease: inout, lint: slide}
+    - {at: 0, do: show, on: drawing}
+    - {at: 0, do: set, on: drawing, pos: [-0.5, 301.08, 1699.55], rot: [20, 0, 0]}
+    - {at: 0, do: reach, on: person, hand: right, to: drawing, offset: [-0.1, -0.1, 0.02], for: 0, lint: point}
+    - {at: 0, do: reach, on: person, hand: left, to: drawing, offset: [0.1, -0.1, 0.02], for: 0, lint: point}
+    - {at: 0, do: face, on: other, smile: 0.85, eyesWide: 0.1, for: 0.3s}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 30, for: 0}
+    - {at: 0.1s, do: gaze, on: person, to: drawing, limit: 40, for: 0.3s, ease: inout}
+    - {at: 0.75s, do: gaze, on: person, to: other.head, limit: 40, for: 0.25s, ease: inout}
+    - {at: 1.3s, do: gaze, on: person, to: drawing, limit: 40, for: 0.25s, ease: inout}
+    - {at: 1.85s, do: gaze, on: person, to: other.head, limit: 40, for: 0.25s, ease: inout}
+    - {at: 0.75, do: face, on: person, eyesWide: 0.6, smile: 0, for: 0.3s}
+    - {at: 2.1, do: face, on: person, eyesWide: 0.15, fear: 0.2, smile: 0, for: 0.3s}
+    - {at: 2.2s, do: layer, on: person, clip: mx_head_no, mask: head, start: 0.2, speed: 0.6, once: 1, weight: 1, for: 1.3s, blend: 0.2s}
+    - {at: end, do: reach, on: person, hand: right, weight: 0, for: 0}
+    - {at: end, do: reach, on: person, hand: left, weight: 0, for: 0}
+    - {at: end, do: hide, on: drawing}
+
+- id: s6_boop
+  idea: the double reaches out and boops his nose: Boop!
+  feel: cheeky
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.35, 301.66, 1698.3], look: other.head, rot: null, fov: 28, screen: [-0.1, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, -90, 0]}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [0.827, 300.063, 1699.982], arc: 0.02, for: 1.72s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [1.0, -87.5, -1.0], for: 1.72s, ease: inout, lint: slide}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 35, for: 0}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 35, for: 0}
+    - {at: 0, do: face, on: other, smile: 0.85, for: 0.3s}
+    - {at: 0.25s, do: reach, on: other, hand: right, to: person.head, offset: [0.16, -0.03, 0], for: 0.18s, ease: hand, lint: point}
+    - {at: 0.6s, do: reach, on: other, hand: right, weight: 0, for: 0.3s, ease: inout}
+
+- id: s6_off
+  idea: him, close: confused, then offended
+  feel: how dare you
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.35, 301.66, 1698.3], look: person.head, rot: null, fov: 28, screen: [0.1, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, -90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.824, 300.056, 1700.016], arc: 0.02, for: 1.52s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [-1.0, 87.5, 1.0], for: 1.52s, ease: inout, lint: slide}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 35, for: 0}
+    - {at: 0.05, do: face, on: person, eyesWide: 0.55, jawOpen: 0.12, for: 0.3s}
+    - {at: 0.8, do: face, on: person, eyesWide: 0.05, fear: 0.3, jawOpen: 0, smile: 0, for: 0.3s}
+    - {at: 0.9s, do: blink, on: person, for: 0.15s}
+
+- id: s7_zip
+  idea: wide, level: the double kicks off and zips away left to right past the little planets, laughing
+  feel: catch me
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 300.85, 1692.5], look: null, rot: [-4, 0, 0], fov: 50, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, -90, 0]}
+    - {at: 0.3s, do: gaze, on: person, to: other.head, limit: 40, for: 0.4s}
+    - {at: 0, do: face, on: other, smile: 0.9, for: 0.3s}
+    - {at: 0.1s, do: fly, on: other, fromHere: 1, points: [[2.5, 300.3, 1700.6], [5.6, 300.5, 1701.4]], for: 1.5s, ease: in, face: yaw}
+
+- id: s7_push
+  idea: he pushes off after him: Hey! Are you her?!
+  feel: wait up
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-1.3, 301.3, 1696.8], look: person.chest, rot: null, fov: 38, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0.2, do: face, on: person, eyesWide: 0.4, jawOpen: 0.1, for: 0.3s}
+    - {at: 0.35s, do: fly, on: person, fromHere: 1, to: [1.9, 300.1, 1700.4], arc: 0, for: 1.7s, ease: in, face: yaw}
+
+- id: s7_chase
+  idea: the chase, wide and level from the side, left to right with Jupiter behind
+  feel: fun
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 300.85, 1692], look: null, rot: [-4, 0, 0], fov: 55, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-1.8, 300.3, 1701.2], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-4.6, 300.1, 1700.4], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [5.6, 300.5, 1701.6], arc: 0.6, for: 2.4s, ease: linear, face: yaw}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [3.2, 300.2, 1700.6], arc: 0.4, for: 2.4s, ease: linear, face: yaw}
+
+- id: s7_hide
+  idea: the double has ducked behind the ringed planet; he arrives and looks around: nothing
+  feel: where did he go
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.3, 301.35, 1696.3], look: person.chest, rot: null, fov: 40, screen: [-0.1, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [2.8, 300.3, 1707.4], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 180, 0]}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-1.6, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.55, 300, 1700.2], arc: 0, for: 1.2s, ease: out, face: 0}
+    - {at: 1.3s, do: gaze, on: person, toRel: [1.3, 0, 1], limit: 40, for: 0.35s, ease: inout}
+    - {at: 1.9s, do: gaze, on: person, toRel: [-1.3, 0, 1], limit: 40, for: 0.35s, ease: inout}
+    - {at: 1.3, do: face, on: person, eyesWide: 0.3, for: 0.3s}
+
+- id: s7_boo
+  idea: the double pops up right behind him: BOO! and a high, embarrassing Aah!
+  feel: gotcha
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.65, 301.6, 1698.5], look: person.head, rot: null, fov: 34, screen: [-0.1, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.55, 300, 1700.2], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [1.0, 299.3, 1700.95], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 200, 0]}
+    - {at: 0.04s, do: fly, on: other, fromHere: 1, to: [0.95, 300.12, 1700.9], arc: 0, for: 0.16s, ease: out, face: 0}
+    - {at: 0.05s, do: anim, on: other, clip: Idle1Yell, once: 1, blend: 0.05}
+    - {at: 1.2s, do: anim, on: other, clip: mx_treading_water, blend: 0.4}
+    - {at: 0.06, do: face, on: other, jawOpen: 0.5, eyesWide: 0.9, smile: 0, for: 0.3s}
+    - {at: 1.2, do: face, on: other, smile: 0.9, jawOpen: 0.1, eyesWide: 0, for: 0.3s}
+    - {at: 0.72s, do: layer, on: person, clip: mx_boxing_dodge, mask: upper, once: 1, weight: 1, for: 0.7s, blend: 0.08s}
+    - {at: 0.72, do: face, on: person, fear: 0.6, eyesWide: 1, jawOpen: 0.4, for: 0.3s}
+
+- id: s7_embar
+  idea: him, close: embarrassed; the double laughs off frame
+  feel: that was me
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.55, 301.66, 1698.6], look: person.head, rot: null, fov: 26, screen: [0, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.55, 300, 1700.2], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 180, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.572, 300.053, 1700.185], arc: 0.02, for: 1.42s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [1.0, 182.5, -1.0], for: 1.42s, ease: inout, lint: slide}
+    - {at: 0.1, do: face, on: person, fear: 0.15, eyesWide: 0, jawOpen: 0, smile: 0.12, for: 0.3s}
+    - {at: 0.2s, do: eyes, on: person, yaw: -8, pitch: -12, for: 0.3s}
+    - {at: 1.0s, do: blink, on: person, for: 0.15s}
+
+- id: s7_kick
+  idea: wide, level, from the side: he lunges at the double, who spins and boots him in the backside; he tumbles off right: You're it!
+  feel: got you
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 300.85, 1692.5], look: null, rot: [-4, 0, 0], fov: 50, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-2.6, 300.1, 1700.2], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.9, 300, 1700.95], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, -90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.2, 300.1, 1700.2], arc: 0, for: 0.85s, ease: in, face: yaw}
+    - {at: 0.4s, do: rotate, on: other, rot: [0, 90, 0], for: 0.35s, ease: out, lint: slide}
+    - {at: 0.55s, do: anim, on: other, clip: mx_roundhouse_kick, start: 0.6, once: 1, blend: 0.1}
+    - {at: 0.9s, do: fly, on: person, fromHere: 1, to: [4.4, 300.8, 1700.4], arc: 0.5, for: 1.3s, ease: out, face: yaw, roll: 540}
+    - {at: 0.9s, do: anim, on: person, clip: mx_falling_air, blend: 0.1}
+    - {at: 1.6s, do: anim, on: other, clip: mx_treading_water, blend: 0.4}
+    - {at: 1.1, do: face, on: other, smile: 0.9, for: 0.3s}
+
+- id: s7_grab
+  idea: he stops tumbling; a little red planet floats by; he grabs it, looks at it, looks at the double, grins: Oh, it's on.
+  feel: an idea
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [2.2, 301.4, 1697.6], look: person.chest, rot: null, fov: 36, screen: [0.1, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: anim, on: person, clip: mx_treading_water, blend: 0.3}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [2.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: set, on: space_mars, pos: [3.7, 301.3, 1699.6]}
+    - {at: 0.02s, do: move, on: space_mars, pos: [2.1, 301.3, 1699.85], for: 0.95s, ease: out}
+    - {at: 0.85s, do: reach, on: person, hand: right, to: space_mars, offset: [0, -0.05, -0.2], for: 0.2s, ease: hand, lint: point}
+    - {at: 1.0s, do: attach, on: space_mars, to: person.rightHand, pos: [0, 0.06, 0.19], blend: 0}
+    - {at: 1.1s, do: reach, on: person, hand: right, weight: 0, for: 0.4s, ease: inout}
+    - {at: 1.1s, do: gaze, on: person, to: space_mars, limit: 40, for: 0.3s}
+    - {at: 1.8s, do: gaze, on: person, toRel: [0, 0.1, 2], limit: 40, for: 0.3s}
+    - {at: 2.0, do: face, on: person, smile: 0.75, eyesWide: 0.1, for: 0.3s}
+    - {at: 2.00s, do: layer, on: person, clip: IdleSit13Explain, mask: arms, start: 0.4, weight: 1, for: 1.27s, blend: 0.3s}
+
+- id: s7_throw
+  idea: wide, level, one shot: he throws; the double catches it in the gut: Right in the... Mars.
+  feel: got you back
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.5, 300.85, 1692.5], look: null, rot: [-4, 0, 0], fov: 45, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [2.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-1.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.01s, do: attach, on: space_mars, to: person.rightHand, pos: [0, 0.06, 0.19], blend: 0}
+    - {at: 0.3s, do: anim, on: person, clip: mx_throw, once: 1, blend: 0.15}
+    - {at: 1.16s, do: detach, on: space_mars}
+    - {at: 1.17s, do: throwobj, on: space_mars, to: other.chest, toOffset: [0, -0.05, 0.34], rel: 1, for: 0.45s, arc: 0.3, spin: 360, catch: {pos: [0, -0.05, 0.34], squash: 0.25}}
+    - {at: 0.95s, do: anim, on: other, clip: mx_goalie_catch_mid, once: 1, blend: 0.12}
+    - {at: 2.2s, do: anim, on: person, clip: mx_treading_water, blend: 0.4}
+    - {at: 2.6s, do: anim, on: other, clip: mx_treading_water, blend: 0.5}
+    - {at: 1.62, do: face, on: other, jawOpen: 0.4, eyesWide: 0.7, for: 0.3s}
+    - {at: 1.8, do: face, on: person, smile: 0.8, for: 0.3s}
+
+- id: s7_grin
+  idea: the double, close: a slow evil grin; he reaches out of frame and comes back winding up with a little blue-green planet
+  feel: oh no he would not
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.85, 301.66, 1698.4], look: other.head, rot: null, fov: 30, screen: [-0.12, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-1.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0, do: hide, on: space_mars}
+    - {at: 0, do: gaze, on: other, to: [-0.85, 301.66, 1698.4], limit: 30, for: 0}
+    - {at: 0.2, do: face, on: other, smile: 0.95, eyesWide: 0.1, for: 0.3s}
+    - {at: 0.9s, do: layer, on: other, clip: Cheer2, mask: rightArm, start: 2.9, speed: 0.45, once: 1, weight: 1, for: 1.6s, blend: 0.3s}
+    - {at: 1.3s, do: attach, on: earth_small, to: other.rightHand, pos: [0, 0.05, 0.11], blend: 0}
+
+- id: s7_earth
+  idea: insert: it is the Earth, tiny clouds turning, in his hand
+  feel: no no no
+  mood: hp_space_quiet
+  tags: [insert, offmark]
+  cast: {other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [-0.9, 302.0, 1698.7], look: earth_small, rot: null, fov: 30, deadzone: false}
+  raw:
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-1.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0, do: layer, on: other, clip: Cheer2, mask: rightArm, start: 3.5, speed: 0.02, weight: 1, for: 1.5s, blend: 0}
+    - {at: 0.01s, do: attach, on: earth_small, to: other.rightHand, pos: [0, 0.05, 0.11], blend: 0}
+
+- id: s7_freeze
+  idea: two-shot: he freezes mid-dodge: Dude. Dude. That's the Earth. / I know. I know.
+  feel: careful
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.5, 301.3, 1695.4], look: null, rot: [-1, 0, 0], fov: 42, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [2.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-1.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 35, for: 0}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 35, for: 0}
+    - {at: 0, do: layer, on: other, clip: Cheer2, mask: rightArm, start: 3.5, speed: 0.02, weight: 1, for: 5.2s, blend: 0}
+    - {at: 0.01s, do: attach, on: earth_small, to: other.rightHand, pos: [0, 0.05, 0.11], blend: 0}
+    - {at: 0, do: layer, on: person, clip: mx_boxing_dodge, mask: upper, start: 0.35, speed: 0.02, weight: 1, for: 5.2s, blend: 0.1s}
+    - {at: 0, do: face, on: person, eyesWide: 0.8, fear: 0.4, for: 0.3s}
+    - {at: 2.8, do: face, on: other, smile: 0, eyesWide: 0.3, for: 0.3s}
+    - {at: 0.70s, do: blink, on: person, for: 0.16s}
+    - {at: 2.97s, do: blink, on: person, for: 0.16s}
+    - {at: 1.36s, do: blink, on: other, for: 0.16s}
+    - {at: 4.05s, do: blink, on: other, for: 0.16s}
+
+- id: s7_place
+  idea: one shot: together they gently put the Earth back where it floated: Sorry, everybody. / Nobody saw that.
+  feel: phew
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.5, 301.3, 1695.4], look: null, rot: [-1, 0, 0], fov: 42, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [2.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-1.4, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.01s, do: attach, on: earth_small, to: other.rightHand, pos: [0, 0.05, 0.11], blend: 0}
+    - {at: 0, do: layer, on: other, clip: Cheer2, mask: rightArm, start: 3.5, speed: 0.02, weight: 1, for: 0.4s, blend: 0.3s}
+    - {at: 0.1s, do: fly, on: person, fromHere: 1, to: [0.42, 300, 1700], arc: 0, for: 1.0s, ease: inout, face: 0}
+    - {at: 0.1s, do: fly, on: other, fromHere: 1, to: [-0.42, 300, 1700], arc: 0, for: 1.0s, ease: inout, face: 0}
+    - {at: 0.35s, do: detach, on: earth_small}
+    - {at: 0.36s, do: move, on: earth_small, pos: [0, 301.5, 1700.4], for: 1.2s, ease: inout}
+    - {at: 1.2s, do: reach, on: person, hand: right, to: earth_small, offset: [0.15, 0, 0], for: 0.5s, ease: hand}
+    - {at: 1.2s, do: reach, on: other, hand: left, to: earth_small, offset: [-0.15, 0, 0], for: 0.5s, ease: hand}
+    - {at: 1.6s, do: move, on: earth_small, pos: [0.3, 302.0, 1702.2], for: 1.6s, ease: inout}
+    - {at: 2.4s, do: reach, on: person, hand: right, weight: 0, for: 0.5s, ease: inout}
+    - {at: 2.4s, do: reach, on: other, hand: left, weight: 0, for: 0.5s, ease: inout}
+    - {at: 1.0, do: face, on: person, eyesWide: 0.3, fear: 0.2, smile: 0, for: 0.3s}
+    - {at: 1.0, do: face, on: other, eyesWide: 0.3, fear: 0.2, smile: 0, for: 0.3s}
+    - {at: 2.5s, do: gaze, on: person, to: earth_small, limit: 40, for: 0.4s}
+    - {at: 2.5s, do: gaze, on: other, to: earth_small, limit: 40, for: 0.4s}
+    - {at: 3.0s, do: layer, on: other, clip: Idle1HaveNoClue, mask: upper, start: 0.3, once: 1, weight: 1, for: 1.4s, blend: 0.3s}
+    - {at: 3.0s, do: gaze, on: other, to: person.head, limit: 35, for: 0.3s}
+    - {at: 3.0, do: face, on: other, smile: 0.4, for: 0.3s}
+
+- id: s8_two
+  idea: close two-shot, breathless, foreheads a hand apart, Jupiter behind; they catch their breath and laugh
+  feel: buddies
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 301.6, 1697.6], look: null, rot: [0, 0, 0], fov: 30, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.536, 300.105, 1699.976], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.536, 300.105, 1700.024], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 1.38s, do: blink, on: person, for: 0.16s}
+    - {at: 1.29s, do: blink, on: other, for: 0.16s}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 35, for: 0}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 35, for: 0}
+    - {at: 0, do: face, on: person, jawOpen: 0.25, eyesWide: 0.1, for: 0.3s}
+    - {at: 0, do: face, on: other, jawOpen: 0.25, eyesWide: 0.1, for: 0.3s}
+    - {at: 1.1, do: face, on: person, smile: 0.85, jawOpen: 0.2, for: 0.3s}
+    - {at: 1.2, do: face, on: other, smile: 0.9, jawOpen: 0.25, for: 0.3s}
+    - {at: 1.1s, do: layer, on: person, clip: mx_nod, mask: head, start: 0.3, once: 1, weight: 1, for: 1.4s, blend: 0.25s}
+    - {at: 1.2s, do: layer, on: other, clip: mx_nod, mask: head, start: 0.35, once: 1, weight: 1, for: 1.4s, blend: 0.25s}
+
+- id: s8_him
+  idea: him, shy: Are you... the space ghost?
+  feel: hope
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.0, 301.66, 1698.3], look: person.head, rot: null, fov: 26, screen: [0.12, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.538, 300.112, 1699.974], arc: 0.02, for: 3.12s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 3.12s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.538, 300.112, 1700.026], arc: 0.02, for: 3.12s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 3.12s, ease: inout, lint: slide}
+    - {at: 0.72s, do: blink, on: person, for: 0.16s}
+    - {at: 2.86s, do: blink, on: person, for: 0.16s}
+    - {at: 1.25s, do: blink, on: other, for: 0.16s}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 30, for: 0}
+    - {at: 0.2, do: face, on: person, smile: 0.3, eyesWide: 0.2, fear: 0.1, for: 0.3s}
+    - {at: 0.6s, do: eyes, on: person, yaw: 0, pitch: -6, for: 0.3s}
+    - {at: 1.6s, do: eyes, on: person, yaw: 0, pitch: 0, for: 0.3s}
+    - {at: 0.30s, do: layer, on: person, clip: IdleSit13Explain, mask: arms, start: 0.4, weight: 1, for: 2.64s, blend: 0.3s}
+
+- id: s8_dbl
+  idea: the double, gentle: No, man. I'm you.
+  feel: kind
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.0, 301.66, 1698.3], look: other.head, rot: null, fov: 26, screen: [-0.12, 0.03], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.528, 300.08, 1699.982], arc: 0.02, for: 2.22s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 2.22s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.528, 300.08, 1700.018], arc: 0.02, for: 2.22s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 2.22s, ease: inout, lint: slide}
+    - {at: 1.07s, do: blink, on: person, for: 0.16s}
+    - {at: 0.90s, do: blink, on: other, for: 0.16s}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 30, for: 0}
+    - {at: 0.2, do: face, on: other, smile: 0.35, eyesWide: 0, for: 0.3s}
+    - {at: 0.30s, do: layer, on: other, clip: IdleSit13Explain, mask: arms, start: 0.4, weight: 1, for: 1.59s, blend: 0.3s}
+
+- id: s8_face
+  idea: he looks at the double's face; a pause; the camera eases in: You do have a face.
+  feel: oh
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {dolly: [[0.0, 301.66, 1698.2], [0.12, 301.66, 1698.6]], look: person.head, rot: null, fov: 26, screen: [0.1, 0.03], deadzone: false, ease: inout}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.536, 300.105, 1699.976], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.536, 300.105, 1700.024], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0.65s, do: blink, on: person, for: 0.16s}
+    - {at: 0.76s, do: blink, on: other, for: 0.16s}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 30, for: 0}
+    - {at: 0.3, do: face, on: person, smile: 0, eyesWide: 0.25, for: 0.3s}
+    - {at: 1.6, do: face, on: person, smile: 0.25, eyesWide: 0, for: 0.3s}
+
+- id: s8_crumple
+  idea: he looks down at his drawing, shrugs, and crumples it
+  feel: oh well
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0.05, 301.5, 1698.1], look: person.chest, rot: null, fov: 34, screen: [0.1, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.529, 300.084, 1699.981], arc: 0.02, for: 2.32s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 2.32s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.529, 300.084, 1700.019], arc: 0.02, for: 2.32s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 2.32s, ease: inout, lint: slide}
+    - {at: 0.94s, do: blink, on: person, for: 0.16s}
+    - {at: 1.07s, do: blink, on: other, for: 0.16s}
+    - {at: 0, do: show, on: drawing}
+    - {at: 0, do: set, on: drawing, pos: [0.3, 301.1, 1699.66], rot: [25, -35, 0]}
+    - {at: 0, do: reach, on: person, hand: right, to: drawing, offset: [-0.08, -0.1, 0.02], for: 0, lint: point}
+    - {at: 0, do: reach, on: person, hand: left, to: drawing, offset: [0.08, -0.1, 0.02], for: 0, lint: point}
+    - {at: 0.1s, do: gaze, on: person, to: drawing, limit: 40, for: 0.3s}
+    - {at: 0.7s, do: layer, on: person, clip: Idle1HaveNoClue, mask: upper, start: 0.3, once: 1, weight: 1, for: 1.1s, blend: 0.2s}
+    - {at: 0.7, do: face, on: person, smile: 0.3, eyesWide: 0.1, for: 0.3s}
+    - {at: 1.3s, do: shrink, on: drawing, for: 0.35s}
+    - {at: 1.7s, do: hide, on: drawing}
+    - {at: 1.3s, do: reach, on: person, hand: right, weight: 0, for: 0.3s}
+    - {at: 1.3s, do: reach, on: person, hand: left, weight: 0, for: 0.3s}
+    - {at: 1.8s, do: gaze, on: person, to: other.head, limit: 35, for: 0.3s}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 30, for: 0}
+
+- id: s8_wide
+  idea: wide two-shot: behind them the ghost drifts past and waves at us; he starts to turn to it; the double turns his chin back: Hey. Focus.
+  feel: so close
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 301.3, 1695.2], look: null, rot: [-2, 0, 0], fov: 38, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.536, 300.105, 1699.976], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.536, 300.105, 1700.024], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0.84s, do: blink, on: person, for: 0.16s}
+    - {at: 1.16s, do: blink, on: other, for: 0.16s}
+    - {at: 0, do: show, on: space_ghost}
+    - {at: 0, do: show, on: ghost_body}
+    - {at: 0, do: show, on: ghost_arm}
+    - {at: 0, do: show, on: ghost_arm_l}
+    - {at: 0, do: show, on: ghost_hem_1}
+    - {at: 0, do: show, on: ghost_hem_2}
+    - {at: 0, do: show, on: ghost_hem_3}
+    - {at: 0, do: show, on: ghost_hem_4}
+    - {at: end, do: hide, on: space_ghost}
+    - {at: end, do: hide, on: ghost_body}
+    - {at: end, do: hide, on: ghost_arm}
+    - {at: end, do: hide, on: ghost_arm_l}
+    - {at: end, do: hide, on: ghost_hem_1}
+    - {at: end, do: hide, on: ghost_hem_2}
+    - {at: end, do: hide, on: ghost_hem_3}
+    - {at: end, do: hide, on: ghost_hem_4}
+    - {at: 0, do: set, on: space_ghost, pos: [-3.4, 302.4, 1708.5], rot: [0, 180, 0]}
+    - {at: 0.05s, do: move, on: space_ghost, pos: [2.6, 302.6, 1708.5], for: 2.9s, ease: inout}
+    - {at: 0.90s, do: rotate, on: ghost_arm, rot: [0, 0, 110], for: 0.25s, ease: inout}
+    - {at: 1.15s, do: rotate, on: ghost_arm, rot: [0, 0, 30], for: 0.25s, ease: inout}
+    - {at: 1.40s, do: rotate, on: ghost_arm, rot: [0, 0, 110], for: 0.25s, ease: inout}
+    - {at: 1.65s, do: rotate, on: ghost_arm, rot: [0, 0, 50], for: 0.25s, ease: inout}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 35, for: 0}
+    - {at: 0.8s, do: gaze, on: person, to: space_ghost, limit: 40, for: 0.4s, ease: inout}
+    - {at: 1.25s, do: reach, on: other, hand: right, to: person.head, offset: [-0.06, -0.13, 0], for: 0.25s, ease: hand}
+    - {at: 1.45s, do: gaze, on: person, to: other.head, limit: 30, for: 0.3s, ease: inout}
+    - {at: 2.3s, do: reach, on: other, hand: right, weight: 0, for: 0.4s, ease: inout}
+    - {at: 1.4, do: face, on: other, smile: 0.3, for: 0.3s}
+
+- id: s8_lens
+  idea: both turn to the camera with TV smiles: Are you feeling like there's two of you?
+  feel: and now a word
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him_r, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl_l, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 301.62, 1697.3], look: null, rot: [0, 0, 0], fov: 32, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, -90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [-0.5, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, 90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0.536, 300.105, 1699.976], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: person, rot: [0.8, -88.0, -0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-0.536, 300.105, 1700.024], arc: 0.02, for: 2.92s, ease: inout, face: 0}
+    - {at: 0.03s, do: rotate, on: other, rot: [-0.8, 88.0, 0.8], for: 2.92s, ease: inout, lint: slide}
+    - {at: 1.06s, do: blink, on: person, for: 0.16s}
+    - {at: 1.30s, do: blink, on: other, for: 0.16s}
+    - {at: 0.1s, do: gaze, on: person, to: [0, 301.62, 1697.3], limit: 45, for: 0.35s, ease: inout}
+    - {at: 0.15s, do: gaze, on: other, to: [0, 301.62, 1697.3], limit: 45, for: 0.35s, ease: inout}
+    - {at: 0.3, do: face, on: person, smile: 0.85, for: 0.3s}
+    - {at: 0.35, do: face, on: other, smile: 0.85, for: 0.3s}
+    - {at: 0.40s, do: layer, on: other, clip: IdleSit13Explain, mask: arms, start: 0.4, weight: 1, for: 2.15s, blend: 0.3s}
+
+- id: b_play
+  idea: the playground again: he rockets in and drifts to a stop; the double floats there waiting, holding out a can: Same time tomorrow?
+  feel: every day
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 300.85, 1693.4], look: null, rot: [-4, 0, 0], fov: 42, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: anim, on: person, clip: mx_falling_air, blend: 0}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-6, 300.8, 1699.2], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, -90, 0]}
+    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-0.8, 300, 1700], arc: 0, for: 1.6s, ease: out, face: yaw}
+    - {at: 1.3s, do: anim, on: person, clip: mx_treading_water, blend: 0.5}
+    - {at: 0, do: show, on: tv_can_a}
+    - {at: 0, do: show, on: tv_can_b}
+    - {at: 0.01s, do: attach, on: tv_can_a, to: other.leftHand, pos: [-0.004, 0.072, -0.05], rot: [0, 0, -90], blend: 0}
+    - {at: 0.01s, do: attach, on: tv_can_b, to: other.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90], blend: 0}
+    - {at: 1.5s, do: gaze, on: other, to: person.head, limit: 35, for: 0.3s}
+    - {at: 1.6s, do: gaze, on: person, to: other.head, limit: 35, for: 0.3s}
+    - {at: 1.9, do: face, on: other, smile: 0.6, for: 0.3s}
+    - {at: 2.00s, do: layer, on: other, clip: IdleSit13Explain, mask: arms, start: 0.4, weight: 1, for: 1.27s, blend: 0.3s}
+
+- id: b_two
+  idea: two-shot: he takes the can, they clink and drink; behind them, out of focus, the ghost waves at us
+  feel: friends
+  mood: hp_space_quiet
+  tags: [offmark]
+  cast: {person: {at: pg_him, clip: mx_treading_water, blend: 0}, other: {at: pg_dbl, clip: mx_treading_water, blend: 0}}
+  camera: {preset: spot, from: stop_cam, on: stop_aim, lens: 40}
+  shot: {pos: [0, 301.62, 1697.2], look: null, rot: [0, 0, 0], fov: 34, aperture: 2, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: layer, on: other, clip: mx_breathing_idle, mask: upper, weight: 1, blend: 0}
+    - {at: 0, do: hide, on: space_mars}
+    - {at: 0, do: fly, on: person, fromHere: 1, to: [-0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: person, rot: [0, 90, 0]}
+    - {at: 0, do: fly, on: other, fromHere: 1, to: [0.8, 300, 1700], arc: 0, for: 0.02s, face: 0}
+    - {at: 0, do: set, on: other, rot: [0, -90, 0]}
+    - {at: 0, do: show, on: space_ghost}
+    - {at: 0, do: show, on: ghost_body}
+    - {at: 0, do: show, on: ghost_arm}
+    - {at: 0, do: show, on: ghost_arm_l}
+    - {at: 0, do: show, on: ghost_hem_1}
+    - {at: 0, do: show, on: ghost_hem_2}
+    - {at: 0, do: show, on: ghost_hem_3}
+    - {at: 0, do: show, on: ghost_hem_4}
+    - {at: end, do: hide, on: space_ghost}
+    - {at: end, do: hide, on: ghost_body}
+    - {at: end, do: hide, on: ghost_arm}
+    - {at: end, do: hide, on: ghost_arm_l}
+    - {at: end, do: hide, on: ghost_hem_1}
+    - {at: end, do: hide, on: ghost_hem_2}
+    - {at: end, do: hide, on: ghost_hem_3}
+    - {at: end, do: hide, on: ghost_hem_4}
+    - {at: 2.20s, do: rotate, on: ghost_arm, rot: [0, 0, 110], for: 0.25s, ease: inout}
+    - {at: 2.45s, do: rotate, on: ghost_arm, rot: [0, 0, 30], for: 0.25s, ease: inout}
+    - {at: 2.70s, do: rotate, on: ghost_arm, rot: [0, 0, 110], for: 0.25s, ease: inout}
+    - {at: 2.95s, do: rotate, on: ghost_arm, rot: [0, 0, 50], for: 0.25s, ease: inout}
+    - {at: 0, do: set, on: space_ghost, pos: [0.3, 302.2, 1711], rot: [0, 180, 0]}
+    - {at: 0.01s, do: attach, on: tv_can_a, to: other.leftHand, pos: [-0.004, 0.072, -0.05], rot: [0, 0, -90], blend: 0}
+    - {at: 0.01s, do: attach, on: tv_can_b, to: other.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90], blend: 0}
+    - {at: 0.3s, do: reach, on: person, hand: right, to: other.leftHand, offset: [-0.06, 0, 0], for: 0.35s, ease: hand}
+    - {at: 0.65s, do: attach, on: tv_can_a, to: person.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90], blend: 0}
+    - {at: 0.8s, do: reach, on: person, hand: right, weight: 0, for: 0.3s, ease: inout}
+    - {at: 1.0s, do: reach, on: person, hand: right, to: other.rightHand, offset: [-0.07, 0.05, 0], for: 0.25s, ease: hand}
+    - {at: 1.0s, do: reach, on: other, hand: right, to: person.rightHand, offset: [0.07, 0.05, 0], for: 0.25s, ease: hand}
+    - {at: 1.35s, do: reach, on: person, hand: right, weight: 0, for: 0.2s}
+    - {at: 1.35s, do: reach, on: other, hand: right, weight: 0, for: 0.2s}
+    - {at: 1.5s, do: layer, on: person, clip: mx_sitting_drinking, mask: "rightArm,head", start: 7.3, weight: 1, for: 2.4s, blend: 0.3s}
+    - {at: 1.6s, do: layer, on: other, clip: mx_sitting_drinking, mask: "rightArm,head", start: 7.3, weight: 1, for: 2.3s, blend: 0.3s}
+    - {at: 0.9, do: face, on: person, smile: 0.8, for: 0.3s}
+    - {at: 0.9, do: face, on: other, smile: 0.8, for: 0.3s}
+    - {at: 0.3s, do: gaze, on: person, to: other.head, limit: 35, for: 0}
+    - {at: 0.3s, do: gaze, on: other, to: person.head, limit: 35, for: 0}
+

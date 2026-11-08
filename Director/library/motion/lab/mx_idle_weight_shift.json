@@ -1,0 +1,25 @@
+{
+ "clip": "mx_idle_weight_shift",
+ "seconds": 10,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.220 m, worst step 0.005 m at 4.53s",
+  "right foot on floor moved 0.258 m, worst step 0.005 m at 4.20s"
+ ],
+ "hipsTop": 0.9234875,
+ "hipsLow": 0.9146553,
+ "hipsTravel": "(-0.08, 0.00, 0.00)",
+ "limits": {
+  "LeftLowerLeg": 15.4,
+  "LeftFoot": 8.5,
+  "groundHipsCm": 2.3,
+  "Chest": 0.1
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_idle_weight_shift_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_idle_weight_shift_three.mp4"
+ ]
+}

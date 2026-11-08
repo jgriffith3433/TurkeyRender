@@ -1,0 +1,25 @@
+{
+ "clip": "mx_blow_kiss",
+ "seconds": 4.667,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.103 m, worst step 0.003 m at 2.10s",
+  "right foot on floor moved 0.114 m, worst step 0.003 m at 2.07s"
+ ],
+ "hipsTop": 0.9142761,
+ "hipsLow": 0.9125644,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 5.4,
+  "LeftFoot": 3.1,
+  "LeftLowerLeg": 1.8,
+  "Head": 0.9
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_blow_kiss_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_blow_kiss_three.mp4"
+ ]
+}

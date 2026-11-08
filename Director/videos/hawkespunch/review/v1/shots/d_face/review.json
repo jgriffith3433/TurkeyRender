@@ -1,0 +1,22 @@
+{
+ "id": "d_face",
+ "f0": 1590,
+ "f1": 1666,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 53,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "f36f0eb3ecb4764f",
+ "summary": "The strip is clean: the head, shoulders and background hold steady across all eight tiles with only a slight drift, and no pops, flicker or clipping show.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 123
+ },
+ "cost": 0.0084
+}

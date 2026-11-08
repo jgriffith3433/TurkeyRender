@@ -1,0 +1,39 @@
+{
+ "id": "dv_wide",
+ "f0": 2381,
+ "f1": 2432,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 79.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "c81dc64eea776064",
+ "summary": "The strip has no pops, flicker or clipping, but the dancer is small and far off, and his head sits against the top edge of the frame while a blurry candelabra dominates the foreground.",
+ "faults": [
+  {
+   "t": 79.39,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The dancer is tiny at the far end of the table, and a large blurry candelabra and goblets in the foreground take the eye. The subject is not clear and the joke of him dancing on the table barely reads.",
+   "fix": "Move the camera closer or lower to the dancer, or shift the framing so the foreground props don't cover the lower half of the frame."
+  },
+  {
+   "t": 79.43,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "His head sits at the very top edge of the frame in the first tiles. There is no headroom, and he is nearly cropped through the 79.53 tile.",
+   "fix": "Tilt the camera up slightly or lower the frame so there is headroom above him."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3565,
+  "out": 911
+ },
+ "cost": 0.0162
+}

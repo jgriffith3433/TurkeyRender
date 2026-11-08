@@ -1,0 +1,75 @@
+{
+  "clip": "gm_zg_laugh",
+  "played": "gm_zg_laugh",
+  "clean": false,
+  "footIK": false,
+  "loop": false,
+  "length": 2.967,
+  "humanMotion": true,
+  "hipsY": {
+    "mean": 0.418,
+    "min": 0.375,
+    "max": 0.467
+  },
+  "stance": "low",
+  "airborneFrac": 0.0,
+  "feetLowestM": -0.135,
+  "rootDriftM": 0.097,
+  "rootFarthestM": 0.105,
+  "handLeft": {
+    "curlMean": 15.8,
+    "curlMin": 15.8,
+    "curlP10": 15.8,
+    "spreadMean": 10.4,
+    "spreadMax": 10.6,
+    "openFrac": 1.0,
+    "fannedFrac": 0.0
+  },
+  "handRight": {
+    "curlMean": 16.1,
+    "curlMin": 16.0,
+    "curlP10": 16.0,
+    "spreadMean": 14.9,
+    "spreadMax": 15.0,
+    "openFrac": 1.0,
+    "fannedFrac": 0.0
+  },
+  "handToFaceMinM": {
+    "left": 0.575,
+    "right": 0.536
+  },
+  "handToFaceFrames": 0,
+  "handToTorsoAxisMinM": {
+    "left": 0.117,
+    "right": 0.039
+  },
+  "handInBodyFrames": 31,
+  "headYawDeg": [
+    -146.9,
+    4.3
+  ],
+  "headPitchDeg": [
+    -80.5,
+    46.5
+  ],
+  "leanFwdMaxDeg": 12.8,
+  "leanMeanDeg": -6.0,
+  "kneeBackwardMaxDeg": 108.0,
+  "kneeBackwardFrames": 182,
+  "peakHand": {
+    "side": "right",
+    "t": 2.93,
+    "mps": 0.72,
+    "farthestReachT": 2.83,
+    "reachM": 0.469
+  },
+  "peakFoot": {
+    "side": "left",
+    "t": 0.43,
+    "mps": 0.7
+  },
+  "frames": 91,
+  "previewSeconds": 3.47,
+  "previewFrom": 0.0,
+  "secondsToMake": 2.8
+}

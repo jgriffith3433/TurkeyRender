@@ -1,0 +1,32 @@
+{
+ "name": "g_hand_heart",
+ "about": "Right hand to the heart with a small bow of the head, from mx_thankful (0.4-2.4 s).",
+ "entry": "any",
+ "exit": "any",
+ "length": "2s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_thankful",
+  "mask": "rightArm,head",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.4,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "name": "butler_chorus_a",
+ "about": "The butlers on chorus 1, from bar 29:1 (beat 2 of dance_chorus), every rank in unison: bows bottom out on his drops, hops land on his stops, still while he walks and spins. Written by captures/dance/build_butlers.mjs.",
+ "entry": "any",
+ "exit": "any",
+ "length": "20.576s",
+ "min": "19.719s",
+ "params": {
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 0.536,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 1.822,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 3.537,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 4.394,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 5.251,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 8.681,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 9.538,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 10.395,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 11.681,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 13.247,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 14.253,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 17.105,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 18.111,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 18.969,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 19.826,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  }
+ ]
+}

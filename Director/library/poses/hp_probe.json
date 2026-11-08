@@ -1,0 +1,22 @@
+{
+  // Hawkes Punch: a scratch sheet to read muscle directions on his avatar (one muscle moved per key). Not for use in a video.
+  "name": "hp_probe",
+  "seed": { "clip": "zg_neutral", "t": 0 },
+  "length": 9,
+  "poses": {
+    "base": {},
+    "armUp": { "add": { "Right Arm Down-Up": 0.6 } },
+    "armFwd": { "add": { "Right Arm Front-Back": 0.6 } },
+    "armFwdNeg": { "add": { "Right Arm Front-Back": -0.6 } },
+    "foreStr": { "muscles": { "Right Forearm Stretch": 1.0 } },
+    "legFwd": { "add": { "Right Upper Leg Front-Back": -0.6 } },
+    "spineFwd": { "add": { "Spine Front-Back": 0.4, "Chest Front-Back": 0.3 } },
+    "twist": { "add": { "Spine Twist Left-Right": 0.5, "Chest Twist Left-Right": 0.4 } },
+    "shoulder": { "add": { "Right Shoulder Front-Back": 0.8, "Right Shoulder Down-Up": 0.6 } }
+  },
+  "keys": [
+    { "t": 0, "pose": "base" }, { "t": 1, "pose": "armUp", "interp": "step" }, { "t": 2, "pose": "armFwd", "interp": "step" },
+    { "t": 3, "pose": "armFwdNeg", "interp": "step" }, { "t": 4, "pose": "foreStr", "interp": "step" }, { "t": 5, "pose": "legFwd", "interp": "step" },
+    { "t": 6, "pose": "spineFwd", "interp": "step" }, { "t": 7, "pose": "twist", "interp": "step" }, { "t": 8, "pose": "shoulder", "interp": "step" }
+  ]
+}

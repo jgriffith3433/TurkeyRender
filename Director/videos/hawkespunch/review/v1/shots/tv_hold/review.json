@@ -1,0 +1,43 @@
+{
+ "id": "tv_hold",
+ "f0": 5798,
+ "f1": 5816,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 193.267,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 193.367,
+   "why": "one patch jumps (cell 42.4, x4.1)",
+   "file": "spike-05801.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 193.8,
+   "why": "one patch jumps (cell 57.2, x5.6)",
+   "file": "spike-05814.jpg"
+  }
+ ],
+ "hash": "f1a46cd3d57d1e2d",
+ "summary": "The two spikes are the \"ASK YOUR DOCTOR\" lower-third wiping in and out, which is intended graphics, so I found no pops or render faults. The one minor point is that the subject is tiny and cropped at the top-right edge, so I can't confirm the thumbs-up.",
+ "faults": [
+  {
+   "t": 193.5,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "In the wide shot the seated man is small in the top-right corner, with the red-clad figure cut off at the edge. The lower-third bar is the dominant element and the large pale floor is empty. The smile hold and thumbs-up can't be read at this size.",
+   "fix": "Reframe so the seated man is larger and more central, or put the title bar lower or smaller so it doesn't outweigh him."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6384,
+  "out": 822
+ },
+ "cost": 0.021
+}

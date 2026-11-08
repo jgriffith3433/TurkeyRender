@@ -1,0 +1,99 @@
+4643 frames, 78 cuts seen, 76 shots
+review funny            2 strips  0 A 0 B
+review yard_wide        2 strips  0 A 2 B
+review hem              1 strips  0 A 2 B
+review secret           3 strips  0 A 3 B
+review sparrow_away     1 strips  0 A 1 B
+review lips             3 strips  0 A 3 B
+review happens          1 strips  0 A 0 B
+review happens_2        1 strips  0 A 0 B
+review weakness         1 strips  0 A 2 B
+review irresponsible    1 strips  0 A 1 B
+review glide            1 strips  0 A 1 B
+review what_you_like    3 strips  0 A 1 B
+review curtsy           1 strips  0 A 1 B
+review big_deal         1 strips  0 A 2 B
+review tonight          3 strips  0 A 1 B
+review sparrow_pastel   1 strips  0 A 1 B
+review taste            2 strips  1 A 2 B
+review creep            1 strips  0 A 0 B
+review delight          1 strips  0 A 0 B
+review fence_one        1 strips  0 A 1 B
+review fence_two        1 strips  0 A 1 B
+review gift_pop         4 strips  2 A 4 B
+review ch_crane         2 strips  0 A 3 B
+review ch_cu_a          2 strips  0 A 3 B
+review ch_orbit_a       1 strips  0 A 1 B
+review doors            4 strips  0 A 1 B
+review ch_glide         1 strips  0 A 1 B
+review ch_orbit_b       1 strips  0 A 1 B
+review ch_cu_2          1 strips  0 A 1 B
+review ch_low           1 strips  0 A 1 B
+review balloon_butler   2 strips  0 A 2 B
+review ch_orbit_c       1 strips  0 A 1 B
+review wobble           1 strips  0 A 0 B
+review look_away        2 strips  0 A 1 B
+review side_eye         1 strips  0 A 0 B
+review blade_up         2 strips  0 A 2 B
+review hall_empty       1 strips  0 A 0 B
+review let_go           1 strips  0 A 2 B
+review snatch           1 strips  0 A 1 B
+review dv_wide_2        1 strips  0 A 0 B
+review dv_wide          1 strips  0 A 0 B
+review dv_cu_4          3 strips  0 A 2 B
+review dv_cu_2          2 strips  0 A 2 B
+review habits           2 strips  0 A 2 B
+review dv_cu            1 strips  1 A 1 B
+review dv_low_2         2 strips  0 A 1 B
+review theory           2 strips  1 A 2 B
+review din_wide         1 strips  0 A 0 B
+review dv_cu_3          3 strips  0 A 2 B
+review plan             2 strips  1 A 1 B
+review clever           2 strips  0 A 2 B
+review vase_slides      4 strips  0 A 2 B
+review push             2 strips  1 A 2 B
+review grey_wide        1 strips  0 A 0 B
+review he_looks         1 strips  0 A 0 B
+review takes_it         4 strips  4 A 3 B
+review holds_out        2 strips  2 A 0 B
+review goes_back        2 strips  1 A 3 B
+review descend          2 strips  1 A 3 B
+review hook_3           1 strips  1 A 2 B
+review c2_orbit_a       1 strips  0 A 1 B
+review c2_cu_a          2 strips  0 A 2 B
+review c2_sil           4 strips  1 A 3 B
+review c2_point         1 strips  0 A 2 B
+review c2_low           3 strips  0 A 2 B
+review c2_orbit_b       4 strips  1 A 3 B
+review alone_fog        2 strips  0 A 0 B
+review c2_med           3 strips  0 A 1 B
+review rise             1 strips  0 A 0 B
+review hand_opens       1 strips  0 A 0 B
+review ribbon_far       1 strips  0 A 0 B
+review darling          1 strips  0 A 0 B
+review pot              1 strips  0 A 0 B
+review tv_pull          1 strips  0 A 1 B
+review click_off        1 strips  0 A 0 B
+review better           1 strips  0 A 0 B
+review: 18 A faults (42 B, 4 C):
+  A 0:39.40 taste: The arm and hand fall from chest height at 39.36 to low in the frame at 39.40 and fully out of frame at 39.43. That is about 3 frames with no anticipation or settle. The blade disappears with the hand, so it reads as the arm and prop snapping away. Fix: Spread the drop over 8–10 frames with an ease-out. Keep the hand in frame until the blade is clearly lowered, or cut away from the drop.
+  A 0:50.33 gift_pop: Box is low and wide in 50.29 (lid hovering above a squat base), then in 50.33 it is a tall, large box filling the frame with the bow above. Scale and shape change in one frame with no in-between, so it reads as a swap rather than a hop. Fix: Add 1-2 in-between frames of the box stretching up, or hide the swap with a cut or dust puff, and keep the box's proportions consistent.
+  A 0:51.09 gift_pop: At 51.09 the lid is already thrown high and tilted with confetti and the butler is visible. In 50.93 the lid was closed. The burst starts on a frame with no visible build-up. Fix: Add 2-3 frames of the lid lifting and the box bulging before the burst.
+  A 1:31.46 dv_cu: Both arms jump pose in about 2 frames. His left hand goes from the chest at 91.39 to out at the side at 91.43, then onto the hip at 91.46. His right arm swings from hanging at 91.43 to raised with a dangling wrist at 91.49. This is the cut tweening into the pose, and at speed it reads as a snap. Fix: Start the shot already in the settled pose, or trim the first 5 frames of the clip so the arms don't travel.
+  A 1:34.76 theory: The magenta veil over the chart shrinks from a wide panel at 94.73 to a thin strip at 94.76 and is gone at 94.79. It vanishes in place rather than being pulled off. The chart appears with no cloth in flight, and the turkey makes no pulling motion. This is the measured spike, and the shot's key beat reads as a cut. Fix: Animate the cloth sliding or flying off, with the turkey's wing or beak pulling it. Otherwise hide the swap behind a fast sweep or a held pose.
+  A 1:38.21 plan: The magenta cloth, a thin strip at x≈150-190 in 98.16 and 98.19, is gone in 98.23. The green striped chart appears fully revealed with no travelling cloth and no anticipation. The 'whip off' reads as a teleport and a swap, which matches the measured spike. Fix: Animate the cloth sweeping off over 4-6 frames with a fast arc and overshoot, or hide the swap with a motion-blurred cloth wipe across the frame.
+  A 1:45.33 push: Door goes from closed pale pink to a dark open doorway in one frame, with a white wall panel appearing in front. At 105.29 the door is closed; at 105.33 it is already open. There is no swing between them, so the key beat of the shot snaps. Fix: Key the door swinging open over 6-10 frames starting at the hand contact, or add a motion blur or smear in between.
+  A 1:50.33 holds_out: The tray jerks left. Its right edge moves from about x=168 to 145 to 130 over 110.29–110.36. The green blade, which was fixed at the left edge, shifts and is gone by 110.36. This is the measured spike. The motion is a fast slide, then a stop, with no settle. Fix: Ease the tray in rather than snapping it, and keep it and the blade in frame. Hold the tray still while the blade is offered.
+  A 1:50.36 holds_out: The blade of grass, the whole point of the shot, is not visible from 110.36 on. The viewer sees only an empty silver plate beside the turkey, so there is nothing to offer and nothing to react to. Fix: Reframe or reposition the tray so the blade stays visible on the plate through the hold.
+  A 1:52.09 takes_it: The cut strip is not settled. From 112.06 to 112.09 the framing jumps: the head goes from cropped at the top to showing the chin, and the torso and arms change position and lean abruptly between tiles. Fix: Hold the first frames of the shot on a stable pose and remove the 2-frame jump after the cut.
+  A 1:52.39 takes_it: By 112.39 he is bent hard over to the right with the left arm flung up out of frame, and the pose differs completely from 112.19. The arm goes from raised to across the body in one frame at 112.43-112.46. There is no anticipation or travel in between. Fix: Add in-between frames or smooth the arm path from raised to reach, and add anticipation.
+  A 1:52.49 takes_it: The blade leaves the tray and is flying in the air, tilted, near the hand. At 112.46 it was upright on the tray. At 112.53 it is held horizontally at the hand with no grasp in between. The blade teleports into the grip. Fix: Parent the blade to the hand from the frame the fingers close, with a clean pickup.
+  A 1:53.59 takes_it: At 113.59 the upper arm detaches from the sleeve, leaving a hole at the shoulder, and the arm becomes a floating sausage shape. The blade is dragged down toward the plate. At 113.63 the arm and blade vanish, and the hand is empty. Fix: Fix the shoulder deformation and keep the blade in the hand through the pull-back, or hide the blade cleanly.
+  A 1:55.36 goes_back: At 115.36 the picture swaps from the dark wooden yard close-up to a heavily washed-out pink room, which is a different set and a different character scale. It reads as a blown-out flash or a wrong-shot cut, not the glide to the door. The 115.29-115.33 close-up is also whipped with heavy blur beforehand. Fix: Remove the stray cut or lower the pink bloom so the door shot reads as a clean continuation of the move.
+  A 1:55.46 hook_3: The character is cropped at the chest in every tile from 115.46 to 115.63, so his head and face are never visible. The hook's main subject is headless and the low camera shows mostly empty pink stairs. Fix: Tilt the camera up or pull it back so the full figure, head included, sits in frame at the top of the stairs.
+  A 1:58.86 descend: A hard-edged dark shadow patch appears on his torso and hip, then grows and changes shape between 118.83 and 118.96. It reads as a shading or shadow glitch on the shirt, and the shirt colour is not stable. Fix: Fix the self-shadow or light on the torso (bias or cascade), or lock the lighting through the descent.
+  A 2:06.26 c2_sil: A flat, unshaded blue square crosses the frame: it starts above the head at 126.19-126.23, then sits over his head and back at 126.26-126.29 and falls past his side at 126.33-126.36. It covers part of the silhouette and looks like a UI sticker, not confetti. Fix: Shade the confetti, or remove or shrink the big blue cube. Keep it from crossing the dancer's body.
+  A 2:11.53 c2_orbit_b: Large flat, unshaded confetti squares (red, orange, teal) cross in front of the head and torso at 131.53 to 131.56. They are unlit and hide part of his face, then another sits over his hand at 131.63 to 131.66. Fix: Shade or shrink the confetti, or keep it from passing between the camera and his head and torso.
+  C:\Projects\TKShock\Director\videos\greener\review\v9\report.md
+{"a":18,"b":42,"c":4,"spikes":55,"cuts":75,"cost":1.331,"errors":0,"report":"C:\\Projects\\TKShock\\Director\\videos\\greener\\review\\v9\\report.md"}
+exit 2

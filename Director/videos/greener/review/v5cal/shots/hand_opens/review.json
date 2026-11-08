@@ -1,0 +1,89 @@
+{
+ "id": "hand_opens",
+ "f0": 4181,
+ "f1": 4284,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 139.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 139.533,
+   "why": "flow spike x2.8",
+   "file": "spike-04186.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 139.833,
+   "why": "one patch jumps (cell 144, x1.8)",
+   "file": "spike-04195.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 142.7,
+   "why": "flow spike x3.4",
+   "file": "spike-04281.jpg"
+  }
+ ],
+ "hash": "b477130e7d748b6c",
+ "summary": "The shot has a fast camera/head swing right after the cut, a blade of grass lying across his face and eye, and a hand that never visibly opens on the beat.",
+ "faults": [
+  {
+   "t": 139.46,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "After the cut the camera and head swing fast over frames 139.39 to 139.62. It starts on a torso crop, tilts, and the face swings up into frame. This reads as the cut tweening, not a settled first frame.",
+   "fix": "Start the shot already framed on the face, or lock the camera for the first 6 frames."
+  },
+  {
+   "t": 139.66,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 139.66 and 139.76 the head drops and the framing shifts. At 139.82 the face is at the far left and the arm and background are in a new position, which looks like a jump.",
+   "fix": "Smooth the camera and head move through 139.6 to 139.85, or hide it in a cut."
+  },
+  {
+   "t": 139.89,
+   "sev": "A",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "From 139.86 to 140.06 the green blade lies diagonally across his face and over his eye. It hides the eye and cuts the face in two. The hand holding it is off-screen, so there is no visible grip.",
+   "fix": "Move the grass or the camera so the blade stays clear of the face, and keep the holding hand in frame."
+  },
+  {
+   "t": 139.82,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "At 139.82 the hand around the stalk looks loose and sits low. The grass then flicks across the face by 139.86 with no hand in frame, so it looks like it moved by itself.",
+   "fix": "Keep the hand wrapped on the stem in every frame, and keep the stem moving with the wrist."
+  },
+  {
+   "t": 142.69,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "At 142.69 to 142.76 the fingers pinch the stem, then the hand drops open and loose with the grass gone. This is not a clear open-hold-close on 'let go', and it does not read as 'he won't let go'. The stalk disappears from the hand.",
+   "fix": "Hold a clearly open palm for a beat, then close it on the grass, and keep the grass in the hand."
+  },
+  {
+   "t": 142.79,
+   "sev": "A",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "At 142.79 the shot jumps to an empty garden with no character, and it stays there to the end of the strip. The shot's idea is the hand, and the subject is gone.",
+   "fix": "Trim the shot to end on the hand, or keep the character in frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7743,
+  "out": 924
+ },
+ "cost": 0.0247
+}

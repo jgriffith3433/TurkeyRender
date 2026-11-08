@@ -1,0 +1,39 @@
+{
+ "id": "w_ahh",
+ "f0": 232,
+ "f1": 307,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 7.733,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "51c37a937cfd8c7e",
+ "summary": "The frames are nearly static, with the head tilted up and the mouth barely open until a sudden jaw drop at 8.00, and the shot's ahh gag is not yet visible in this strip.",
+ "faults": [
+  {
+   "t": 7.76,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "certain",
+   "what": "From 7.76 to 7.96 he is almost frozen: head, shoulders and closed mouth barely change for about 7 frames, so he reads as a stiff, mushy hold with no anticipation or eye/head life before the ahh.",
+   "fix": "Add a small anticipation (breath-in, head dip or eye flick) before the jaw opens, or add a subtle head drift."
+  },
+  {
+   "t": 8,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "At 8.00 the mouth snaps from closed (7.96) to open with teeth showing in a single frame, and the head angle shifts slightly. There is no in-between or anticipation, so it reads as a pose snap rather than a jaw drop.",
+   "fix": "Add 2-3 in-between frames with anticipation, then overshoot the jaw and settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4378,
+  "out": 439
+ },
+ "cost": 0.0131
+}

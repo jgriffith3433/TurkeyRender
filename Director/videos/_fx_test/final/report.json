@@ -1,0 +1,71 @@
+{
+ "video": "_fx_test",
+ "file": "videos/_fx_test/output/_fx_test-proof1.mp4",
+ "when": "2026-11-08T09:26:19.673Z",
+ "size": "1280x720",
+ "fps": 24,
+ "shots": 5,
+ "reused": 0,
+ "rendered": 5,
+ "framesReused": 0,
+ "framesRendered": 4805,
+ "minutes": 6.9,
+ "join": {
+  "frames": 4805,
+  "wanted": 4805,
+  "unevenFrames": 0,
+  "worstFrameError": 0.00033,
+  "audioSeconds": 200.226,
+  "seconds": 200.208,
+  "clicks": [],
+  "clean": true
+ },
+ "waitedMinutes": 2.2,
+ "list": [
+  {
+   "id": "head",
+   "from": 0,
+   "frames": 4,
+   "hash": "547002735ef44770",
+   "action": "rendered",
+   "why": "no saved render",
+   "seconds": 1
+  },
+  {
+   "id": "windup",
+   "from": 0.16666666666666666,
+   "frames": 53,
+   "hash": "3d2ac983610b8850",
+   "action": "rendered",
+   "why": "no saved render",
+   "seconds": 6
+  },
+  {
+   "id": "hit",
+   "from": 2.375,
+   "frames": 58,
+   "hash": "568d31a3a05c4e31",
+   "action": "rendered",
+   "why": "no saved render",
+   "seconds": 5
+  },
+  {
+   "id": "wide",
+   "from": 4.791666666666667,
+   "frames": 67,
+   "hash": "eca165cdc4c5fad7",
+   "action": "rendered",
+   "why": "no saved render",
+   "seconds": 6
+  },
+  {
+   "id": "deadpan",
+   "from": 7.583333333333333,
+   "frames": 4623,
+   "hash": "e438c70dfb4052c9",
+   "action": "rendered",
+   "why": "no saved render",
+   "seconds": 255
+  }
+ ]
+}

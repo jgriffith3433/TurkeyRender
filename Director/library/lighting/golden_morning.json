@@ -1,0 +1,15 @@
+{
+  // Low warm sun for animated-short daylight: one hard-working sun, long soft shadows, a cool sky fill and warm bounce from the ground.
+  // No spot keys: faces are shaped by the sun itself, with the wrap and rim from "skin" and "sunRim" in the grade doing the soft part.
+  // "sun.pos" and "sky.sunDir" have to agree, or the shadows point away from the sun on the clouds.
+  "sky": {
+    "top": "#4a86cc", "mid": "#fbd9ae", "bottom": "#6a6244",
+    "ambient": "#a39a94", "ambientTop": "#8fb0e2", "ambientBottom": "#8a6c3e",
+    "fog": "#f6c994", "density": 0.0,
+    "sun": "#ffc98a", "sunDir": [-0.66, 0.26, -0.70], "sunSize": 0.05, "haze": 2.6,
+    "clouds": 0.42, "cloudColor": "#fff0d8", "cloudShade": "#a88fa4", "cloudScale": 0.55, "cloudSoft": 0.42, "cloudSpeed": 0.008
+  },
+  "lights": {
+    "sun": { "type": "directional", "pos": [-12.6, 6.5, -14.6], "aim": "subject", "color": "#ffbe7a", "intensity": 4.4, "shadows": true }
+  }
+}

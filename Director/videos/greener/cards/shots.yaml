@@ -1,0 +1,1232 @@
+# Gateway Drug: bars and beats from LYRIC-MAP.md. Grass is the gateway drug, and nothing on screen says so. He moves as if in a big party dress he is not wearing.
+
+# ---- the yard
+- id: yard_wide
+  idea: a scruffy yard and a man in a cheap lawn chair, knees together, holding a look at us
+  feel: a stranger who knows something
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: dress_sit}}
+  camera: {preset: spot, from: chair_wide, on: chair_aim, lens: 28}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+
+- id: hem
+  idea: tight on his lap, he smooths an invisible skirt over his knees, twice
+  feel: wait, what is he doing
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: dress_sit}}
+  camera: {preset: medium, on: person.hips, frame: 0.8}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+  events:
+    - {on: 1b, who: person, do: perform, name: hem_smooth, for: 1.6s}
+    - {on: 5b, who: person, do: perform, name: hem_smooth, for: 1.6s}
+
+- id: funny
+  idea: "Oh, isn't it funny?" spoken to camera, one small head tilt
+  feel: he has us
+  sing: person
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+  events:
+    - {on: 4.5b, who: person, do: pose, bones: {head: [0, 0, 8], neck: [0, 0, 4]}, for: 0.5s, ease: inout}
+    - {on: 7b, who: person, do: pose, bones: {head: [0, 0, 0], neck: [0, 0, 0]}, for: 0.5s, ease: inout}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+
+- id: secret
+  idea: on "secret" he lifts one hand beside his face and there is one blade of grass
+  feel: a secret the size of nothing
+  sing: person
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, frame: 0.95, push: 0.15}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+    - {at: 2.2b, do: reach, on: person, hand: right, to: [299.66, 1.22, 0.3], for: 0.5s, ease: hand, lint: point}
+    - {at: 2.2b, do: fingers, on: person, hand: right, finger: thumb, set: 0.85, for: 0.2s}
+    - {at: 2.2b, do: fingers, on: person, hand: right, finger: index, set: 0.8, for: 0.2s}
+    - {at: 2.2b, do: fingers, on: person, hand: right, finger: middle, set: 0.34, for: 0.2s}
+    - {at: 2.2b, do: fingers, on: person, hand: right, finger: ring, set: 0.36, for: 0.2s}
+    - {at: 2.2b, do: fingers, on: person, hand: right, finger: pinky, set: 0.4, for: 0.2s}
+    - {at: 3.4b, do: show, on: blade_hand}
+    - {at: 3.4b, do: pop, on: blade_hand, for: 0.6b}
+    - {at: 7.1b, do: reach, on: person, hand: right, weight: 0, for: 0.35s, ease: inout}
+    - {at: 7.7b, do: fingers, on: person, hand: right, release: 1, for: 0.1s}
+    - {at: 7.7b, do: hide, on: blade_hand}
+
+- id: lips
+  idea: "nothing you should know", one finger up to his lips for a beat, and back
+  feel: we are in on it now
+  sing: person
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, frame: 0.72}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+    - {at: 0.5b, do: reach, on: person, hand: right, to: [299.95, 1.08, 0.44], hint: [299.72, 0.72, 0.52], handRot: [0, 180, 90], for: 0.42s, ease: hand, lint: point}
+    - {at: 0.5b, do: fingers, on: person, hand: right, set: 0.9, for: 0.2s}
+    - {at: 0.5b, do: fingers, on: person, hand: right, finger: index, set: 0.03, for: 0.2s}
+    - {at: 2.5b, do: reach, on: person, hand: right, weight: 0, for: 0.3s, ease: inout}
+    - {at: 2.7b, do: fingers, on: person, hand: right, release: 1, for: 0.2s}
+
+- id: sparrow_away
+  idea: the sparrow on the fence looks at us, flicks its tail and hops round to look away
+  feel: even the bird would rather not know
+  cast: {sparrow: {at: perch}, sparrow_head: {at: perch}, sparrow_tail: {at: perch}}
+  camera: {preset: spot, from: perch_cam, on: perch, lens: 60}
+  raw:
+    - {at: 0, do: attach, on: sparrow_head, to: sparrow, pos: [0, 0.079, 0.024]}
+    - {at: 0, do: attach, on: sparrow_tail, to: sparrow, pos: [0, 0.044, -0.054]}
+    - {at: 0.25b, do: rotate, on: sparrow_head, rot: [0, -35, 0], for: 0.07s, ease: out}
+    - {at: 0.8b, do: rotate, on: sparrow_tail, rot: [-32, 0, 0], for: 0.06s, ease: out}
+    - {at: 1b, do: rotate, on: sparrow_tail, rot: [0, 0, 0], for: 0.14s, ease: out}
+    - {at: 1.2b, do: rotate, on: sparrow_head, rot: [12, 28, 12], for: 0.07s, ease: out}
+    - {at: 1.9b, do: rotate, on: sparrow_head, rot: [0, 0, 0], for: 0.06s, ease: out}
+    - {at: 2b, do: rotate, on: sparrow, rot: [0, 195, 0], for: 0.22s, ease: out}
+    - {at: 2b, do: jump, on: sparrow, pos: [0, 0, 0], rel: 1, height: 0.02, for: 0.22s}
+    - {at: 2.1b, do: rotate, on: sparrow_tail, rot: [-38, 0, 0], for: 0.06s, ease: out}
+    - {at: 2.5b, do: rotate, on: sparrow_tail, rot: [0, 0, 0], for: 0.14s, ease: out}
+    - {at: 3.1b, do: rotate, on: sparrow_head, rot: [0, 60, 0], for: 0.07s, ease: out}
+    - {at: 3.6b, do: rotate, on: sparrow_head, rot: [0, 0, 0], for: 0.06s, ease: out}
+
+- id: weakness
+  idea: on "weakness" his eyes go to the house, then away, fast
+  feel: something in there
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+    - {at: 0.4b, do: layer, on: person, clip: Idle1Apologize, mask: rightArm, start: 0.4, weight: 0.9, for: 2.2b, blend: 0.2s}
+    - {at: 1.6b, do: gaze, on: person, toRel: [-3, 1.2, -4], for: 0.2s, ease: out, limit: 50}
+    - {at: 3.4b, do: gaze, on: person, weight: 0, for: 0.14s}
+
+- id: dark_tv
+  idea: through the window, a dark TV
+  feel: the old habit
+  camera: {preset: spot, from: window_cam, on: window_aim, lens: 50}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+
+- id: happens
+  idea: "mine just happens to be so", sung flat, ankles crossed by the look of him
+  feel: he won't say and we can see it
+  sing: person
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, side: left}
+  raw:
+    - {at: 0, do: show, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, to: [300.25, 0.69, 0.258], for: 0, lint: point}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.62, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, finger: thumb, set: 0.5, for: 0}
+    - {at: 9.9b, do: hide, on: blade_hand}
+
+- id: irresponsible
+  idea: he glides the fence line, hips first, and flicks a bit of grass over his shoulder
+  feel: this man has never doubted a thing
+  sing: person
+  cast: {person: {at: fence_a, to: fence_b, perform: dress_walk, face: 90}}
+  camera: {preset: spot, from: fence_cam, on: person, lens: 45}
+  raw:
+    - {at: 0, do: hide, on: cup_mug}
+    - {at: 0, do: reach, on: person, hand: left, weight: 0, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, release: 1, for: 0}
+    - {at: 3.5b, do: perform, on: person, name: hand_flourish, clip: Idle1Greet, for: 1.2s}
+
+- id: what_you_like
+  idea: he stops and waves the world away with one slow hand
+  feel: oh, the nerve
+  sing: person
+  cast: {person: {at: fence_b, perform: dress_groove}}
+  camera: {preset: medium, on: person, frame: 2}
+  raw:
+    - {at: 1b, do: perform, on: person, name: hand_flourish, clip: Idle1Greet, mask: rightArm, start: 0.3, for: 2.2s}
+
+- id: glide
+  idea: on he goes along the fence, skirt in hand
+  feel: a catwalk made of weeds
+  sing: person
+  cast: {person: {at: fence_b, to: fence_c, perform: dress_walk, face: 90, args: {stride: 0.99}}}
+  camera: {preset: spot, from: fence_cam, on: person, lens: 32}
+
+- id: curtsy
+  idea: "respectable", and a full curtsy to the fence
+  feel: total dignity
+  sing: person
+  cast: {person: {at: fence_c, perform: dress_curtsy}}
+  camera: {preset: medium, on: person, frame: 1.8}
+
+- id: tonight
+  idea: "until tonight", a flat look at us
+  mood: yard_face
+  feel: uh oh
+  sing: person
+  cast: {person: {at: fence_c, perform: dress_groove}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+
+- id: big_deal
+  idea: drums gone, he stops being funny for a second, blade held up, "it's not a big deal"
+  feel: quiet
+  sing: person
+  cast: {person: {at: fence_c, perform: dress_stand}}
+  camera: {preset: medium, on: person, frame: 1.5}
+  mood: yard_face
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, finger: thumb, set: 0.85, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: index, set: 0.8, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: middle, set: 0.34, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: ring, set: 0.36, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: pinky, set: 0.4, for: 0}
+    - {at: 0, do: show, on: blade_hand}
+    - {at: 0, do: reach, on: person, hand: right, to: [299.02, 1.36, -5.17], for: 0, lint: point}
+
+- id: taste
+  idea: on the second "big deal" he tastes the blade
+  mood: yard_face
+  feel: nothing happens, and that is the worst of it
+  sing: person
+  cast: {person: {at: fence_c, perform: dress_stand}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, finger: thumb, set: 0.85, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: index, set: 0.8, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: middle, set: 0.34, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: ring, set: 0.36, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: pinky, set: 0.4, for: 0}
+    - {at: 0, do: reach, on: person, hand: right, to: [299.02, 1.36, -5.17], for: 0, lint: point}
+    - {at: 0.5b, do: reach, on: person, hand: right, to: [298.93, 1.5, -4.96], for: 0.7s, ease: hand, lint: point}
+    - {at: 2.2b, do: reach, on: person, hand: right, weight: 0, for: 0.4s, ease: inout}
+    - {at: 3.8b, do: hide, on: blade_hand}
+
+- id: sparrow_pastel
+  idea: "what everybody says", the sparrow shivers, puffs up and turns pale pink
+  feel: it starts small
+  cast: {sparrow: {at: perch}, sparrow_head: {at: perch}, sparrow_tail: {at: perch}}
+  camera: {preset: spot, from: perch_cam, on: perch, lens: 60}
+  raw:
+    - {at: 0, do: attach, on: sparrow_head, to: sparrow, pos: [0, 0.079, 0.024]}
+    - {at: 0, do: attach, on: sparrow_tail, to: sparrow, pos: [0, 0.044, -0.054]}
+    - {at: 0.5b, do: rotate, on: sparrow_head, rot: [10, -30, 0], for: 0.07s, ease: out}
+    - {at: 1.3b, do: rotate, on: sparrow_tail, rot: [-28, 0, 0], for: 0.06s, ease: out}
+    - {at: 1.5b, do: rotate, on: sparrow_tail, rot: [0, 0, 0], for: 0.14s, ease: out}
+    - {at: 1.9b, do: rotate, on: sparrow_head, rot: [28, 25, 0], for: 0.07s, ease: out}
+    - {at: 4.2b, do: tremble, on: sparrow, amount: 0.004, for: 0.8b}
+    - {at: 5b, do: tint, on: sparrow, color: "#f7a9c4", for: 0.25s, ease: inout}
+    - {at: 5b, do: tint, on: sparrow_head, color: "#f7a9c4", for: 0.25s, ease: inout}
+    - {at: 5b, do: tint, on: sparrow_tail, color: "#f7a9c4", for: 0.25s, ease: inout}
+    - {at: 5b, do: scale, on: sparrow, to: 1.22, for: 0.1s, ease: out}
+    - {at: 5.3b, do: scale, on: sparrow, to: 1, for: 0.25s, ease: back}
+    - {at: 5.3b, do: rotate, on: sparrow_head, rot: [0, 0, 0], for: 0.07s, ease: out}
+    - {at: 5.6b, do: rotate, on: sparrow_tail, rot: [-30, 0, 0], for: 0.06s, ease: out}
+
+- id: creep
+  idea: the pastel spreads out from under his feet, ring after ring on the beat
+  feel: oh, there it goes
+  cast: {person: {at: chair, perform: dress_sit}, lawn_chair: {at: chair}}
+  camera: {preset: spot, from: yard_high, on: yard_feet, lens: 30}
+  raw:
+    - {at: 0, do: scale, on: pastel_a, to: [2.2, 0.01, 2.2], for: 1b, ease: out}
+    - {at: 2b, do: scale, on: pastel_a, to: [4.2, 0.01, 4.2], for: 1b, ease: out}
+    - {at: 4b, do: scale, on: pastel_a, to: [6.8, 0.01, 6.8], for: 1b, ease: out}
+    - {at: 1b, do: scale, on: pastel_b, to: [1.2, 0.01, 1.2], for: 1b, ease: out}
+    - {at: 3b, do: scale, on: pastel_b, to: [2.8, 0.01, 2.8], for: 1b, ease: out}
+    - {at: 5b, do: scale, on: pastel_b, to: [4.8, 0.01, 4.8], for: 1b, ease: out}
+
+- id: fence_one
+  idea: the fence goes down panel by panel, one on each beat, as the pastel runs out to meet it
+  feel: the world is not nailed down
+  cast: {person: {at: chair, perform: dress_sit}, lawn_chair: {at: chair}}
+  camera: {preset: spot, from: yard_up, on: fall_aim, lens: 26}
+  raw:
+    - {at: 0, do: hide, on: backyard_fence_south}
+    - {at: 0, do: scale, on: pastel_a, to: [10, 0.01, 10], for: 1b, ease: out}
+    - {at: 1b, do: scale, on: pastel_b, to: [7.5, 0.01, 7.5], for: 1b, ease: out}
+    - {at: 2b, do: scale, on: pastel_a, to: [15, 0.01, 15], for: 1b, ease: out}
+    - {at: 3b, do: scale, on: pastel_b, to: [11, 0.01, 11], for: 1b, ease: out}
+    - {at: 0, do: topple, on: fence_p1, pivot: [0, 0, 0], axis: [1, 0, 0], angle: 86, bounce: 0.12, land: "27:2", for: 2.4b}
+    - {at: 0.1b, do: topple, on: fence_p6, pivot: [0, 0, 0], axis: [1, 0, 0], angle: 86, bounce: 0.12, land: "27:3", for: 2.4b}
+    - {at: 1.1b, do: topple, on: fence_p2, pivot: [0, 0, 0], axis: [1, 0, 0], angle: 86, bounce: 0.12, land: "27:4", for: 2.4b}
+    - {at: 2.1b, do: topple, on: fence_p5, pivot: [0, 0, 0], axis: [1, 0, 0], angle: 86, bounce: 0.12, land: "28:1", for: 2.4b}
+    - {at: 3.1b, do: topple, on: fence_p3, pivot: [0, 0, 0], axis: [1, 0, 0], angle: 86, bounce: 0.12, land: "28:2", for: 2.4b}
+    - {at: 1b, sfx: couch_slam, volume: 0.35}
+    - {at: 2b, sfx: couch_slam, volume: 0.35}
+    - {at: 3b, sfx: couch_slam, volume: 0.35}
+
+- id: fence_two
+  idea: the last panels go and both sides drop together, the whole lawn is mint
+  feel: delight, and a little dread
+  cast: {person: {at: chair, perform: dress_sit}, lawn_chair: {at: chair}}
+  camera: {preset: spot, from: yard_up, on: fall_aim, lens: 26}
+  raw:
+    - {at: 0, do: scale, on: pastel_a, to: [30, 0.01, 30], for: 1.4b, ease: out}
+    - {at: 0.5b, do: scale, on: pastel_b, to: [24, 0.01, 24], for: 1.4b, ease: out}
+    - {at: 0.1b, do: topple, on: fence_p4, pivot: [0, 0, 0], axis: [1, 0, 0], angle: 86, bounce: 0.12, land: "28:3", for: 2.4b}
+    - {at: 0, do: topple, on: backyard_fence_west, pivot: [0, 0, 0], axis: [0, 0, 1], angle: 86, bounce: 0.12, land: "28:2", for: 2b}
+    - {at: 0, do: topple, on: backyard_fence_east, pivot: [0, 0, 0], axis: [0, 0, 1], angle: -86, bounce: 0.12, land: "28:3", for: 2b}
+    - {at: 0, sfx: couch_slam, volume: 0.4}
+    - {at: 1b, sfx: couch_slam, volume: 0.4}
+
+# ---- chorus 1: the estate bursts up on "gateway"
+- id: burst
+  idea: the estate bursts up around him on the drop
+  feel: delight
+  sing: person
+  set: estate
+  cast: {person: {at: path_a_lens, perform: dress_stand}, butlers_path_l: {at: row_path_l, clip: butler_idle}, butlers_path_r: {at: row_path_r, clip: butler_idle}}
+  camera: {preset: spot, from: gate_cam, on: front_aim, lens: 24}
+  raw:
+    - {at: 2.4b, do: perform, on: person, name: point_at_you, for: 1.1s}
+  events:
+    - {on: 0.01b, who: estate_centre, do: pop, for: 0.5b}
+    - {on: 0.5b, who: estate_wing_l, do: pop, for: 0.5b}
+    - {on: 1b, who: estate_wing_r, do: pop, for: 0.5b}
+    - {on: 1.5b, who: estate_portico, do: pop, for: 0.5b}
+    - {on: 2b, who: estate_roof, do: pop, for: 0.5b}
+
+- id: gift_pop
+  idea: on "baby" a gift box crouches, hops, lands, shivers, and a butler bursts out of the top and bows
+  feel: of course
+  set: estate
+  cast: {gift_hero: {at: path_a}, gift_lid: {at: gift_lid_spot}, butler_a: {at: gift_top, clip: butler_idle}}
+  camera: {preset: spot, from: gift_cam, on: gift_aim, lens: 35, screen: [0, 0]}
+  raw:
+    - {at: 0, do: hide, on: butler_a}
+    - {at: 0, do: scale, on: gift_hero, to: [1.95, 1.15, 1.95], for: 0.25b, ease: out}
+    - {at: 0.25b, do: scale, on: gift_hero, to: [1.3, 2.05, 1.3], for: 0.12b, ease: out}
+    - {at: 0.25b, do: jump, on: gift_hero, pos: [0, 0, 0], rel: 1, height: 0.8, for: 0.68b}
+    - {at: 0.25b, do: jump, on: gift_lid, pos: [0, 0, 0], rel: 1, height: 0.8, for: 0.68b}
+    - {at: 0.5b, do: scale, on: gift_hero, to: [1.6, 1.6, 1.6], for: 0.2b, ease: inout}
+    - {at: 0.93b, do: scale, on: gift_hero, to: [2.05, 1.05, 2.05], for: 0.1b, ease: out}
+    - {at: 1.03b, do: scale, on: gift_hero, to: [1.6, 1.6, 1.6], for: 0.35b, ease: back}
+    - {at: 1.45b, do: tremble, on: gift_hero, amount: 0.03, for: 0.55b}
+    - {at: 1.45b, do: scale, on: gift_hero, to: [1.8, 1.3, 1.8], for: 0.55b, ease: in}
+    - {at: 2b, do: scale, on: gift_hero, to: [1.5, 1.85, 1.5], for: 0.12b, ease: out}
+    - {at: 2.12b, do: scale, on: gift_hero, to: [1.6, 1.6, 1.6], for: 0.3b, ease: back}
+    - {at: 2b, do: show, on: butler_a}
+    - {at: 0, do: move, on: butler_a, pos: [400, 0.7, -30], for: 0.01s}
+    - {at: 1.95b, do: move, on: butler_a, pos: [400, 1.62, -30], for: 0.3b, ease: back}
+    - {at: 1.95b, do: jump, on: gift_lid, pos: [401.6, 0.1, -29], height: 2.2, for: 1.3b}
+    - {at: 1.95b, do: rotate, on: gift_lid, rot: [120, 40, 200], for: 1.3b, ease: linear}
+    - {at: 2b, do: anim, on: butler_a, clip: butler_hop, once: 1, blend: 0.03s, for: 0.5s, return: 0.1s}
+    - {at: 2b, fx: confetti, pos: [400, 2.2, -30]}
+    - {at: 2.7b, do: anim, on: butler_a, clip: butler_bow, once: 1, speed: 1.3, blend: 0.08s, for: 1.3b, return: 0.1s}
+
+- id: tray_new
+  idea: "something new", a silver tray slides into frame by itself
+  feel: nobody ordered this
+  sing: person
+  set: estate
+  cast: {tray: {at: tray_in}, person: {at: path_a, perform: dress_stand}}
+  camera: {preset: medium, on: person, frame: 1.35}
+  raw:
+    - {at: 0, do: set, on: tray, pos: [402.4, 1.06, -28.9]}
+    - {at: 1b, do: move, on: tray, pos: [400.75, 1.06, -28.9], for: 1.2b, ease: out}
+
+- id: rows_bow
+  idea: rows of butlers bow on the bar as he comes up the path
+  feel: absurd, fun
+  sing: person
+  set: estate
+  cast: {person: {at: path_a, to: path_b, perform: dress_walk, face: 0}, butlers_path_l: {at: row_path_l, clip: butler_idle}, butlers_path_r: {at: row_path_r, clip: butler_idle}, gifts_a: {at: gifts_lawn_l}, gifts_b: {at: gifts_lawn_r}}
+  camera: {preset: spot, from: gate_cam, on: person, lens: 40}
+  events:
+    - {on: 2b, who: butlers_path_l, do: perform, name: butler_bow, for: 2b}
+    - {on: 2b, who: butlers_path_r, do: perform, name: butler_bow, for: 2b}
+
+- id: doors
+  idea: "passing through", the camera shoots through three doors as they fling open, and there he is, dancing
+  feel: every door is for him
+  set: estate
+  cast: {door_1: {at: door_p1}, door_2: {at: door_p2}, door_3: {at: door_p3}}
+  camera: {preset: spot, from: front_lens_cam, on: stage_aim, lens: 30}
+  shot: {pos: [400, 1.45, -8], dolly: [[400, 1.45, -8], [400, 1.5, 0.9]], look: null, rot: [1, 0, 0]}
+  raw:
+    - {at: 0.15b, do: rotate, on: door_1, rot: [0, -100, 0], for: 0.35b, ease: back}
+    - {at: 0.85b, do: rotate, on: door_2, rot: [0, -100, 0], for: 0.35b, ease: back}
+    - {at: 1.55b, do: rotate, on: door_3, rot: [0, -100, 0], for: 0.35b, ease: back}
+
+- id: point
+  idea: "darling, look at you", one finger at the lens
+  feel: caught
+  sing: person
+  set: estate
+  cast: {person: {at: path_b_lens, perform: dress_stand}}
+  camera: {preset: spot, from: path_b_cam, on: person.chest, lens: 45}
+  raw:
+    - {at: 1b, do: perform, on: person, name: point_at_you, for: 2.1s}
+
+- id: all_turn
+  idea: every butler turns to camera at once
+  feel: they all saw
+  sing: person
+  set: estate
+  cast: {person: {at: path_c, perform: dress_stand}, butlers_path_l: {at: row_path_l, clip: butler_idle}, butlers_path_r: {at: row_path_r, clip: butler_idle}}
+  camera: {preset: spot, from: gate_cam, on: front_aim, lens: 28}
+  events:
+    - {on: 2b, who: butlers_path_l, do: rotate, rot: [0, 180, 0], for: 0.2b, ease: out}
+    - {on: 2b, who: butlers_path_r, do: rotate, rot: [0, 180, 0], for: 0.2b, ease: out}
+
+- id: balloon_butler
+  idea: on the bar a balloon goes taut and snatches a butler off the path, perfectly composed
+  feel: nothing can touch them
+  set: estate
+  cast: {balloon_big: {at: path_b_up}, butler_a: {at: path_b, face: 180, clip: butler_idle}}
+  camera: {preset: spot, from: balloon_cam, on: balloon_aim, lens: 26, screen: [0, 0]}
+  raw:
+    - {at: 0, do: move, on: balloon_big, pos: [400, 3.5, -18], for: 0.3b, ease: out}
+    - {at: 0.05b, do: scale, on: butler_a, to: [1.3, 1.8, 1.3], for: 0.3b, ease: inout}
+    - {at: 0.4b, do: scale, on: butler_a, to: [1.5, 1.5, 1.5], for: 0.4b, ease: back}
+    - {at: 0.4b, do: move, on: butler_a, pos: [400, 7, -18], for: 1.6b, ease: in}
+    - {at: 0.4b, do: move, on: balloon_big, pos: [400, 10.5, -18], for: 1.6b, ease: in}
+
+- id: look_away
+  idea: "didn't know", every butler is watching us, then all of them turn away at once
+  feel: we saw nothing
+  set: estate
+  cast: {butlers_path_l: {at: row_path_l, clip: butler_idle}, butlers_path_r: {at: row_path_r, clip: butler_idle}}
+  camera: {preset: spot, from: front_low, on: front_aim, lens: 32}
+  events:
+    - {on: 0b, who: butlers_path_l, do: rotate, rot: [0, 90, 0], rel: 1, for: 0.01s}
+    - {on: 0b, who: butlers_path_r, do: rotate, rot: [0, -90, 0], rel: 1, for: 0.01s}
+    - {on: 1b, who: butlers_path_l, do: rotate, rot: [0, 180, 0], rel: 1, for: 0.35b, ease: out}
+    - {on: 1b, who: butlers_path_r, do: rotate, rot: [0, -180, 0], rel: 1, for: 0.35b, ease: out}
+
+- id: blade_up
+  idea: butlers freeze, he holds up the blade and looks at it
+  feel: for one second it is just grass
+  sing: person
+  set: estate
+  cast: {person: {at: stage, perform: dress_stand}, butlers_hall_l: {at: rank_1, clip: butler_idle}, butlers_hall_l2: {at: rank_3, clip: butler_idle}, butlers_hall_r: {at: rank_2, clip: butler_idle}, butlers_hall_r2: {at: rank_4, clip: butler_idle}}
+  camera: {preset: close-up, on: person, frame: 0.95}
+  light: pastel_interior
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, finger: thumb, set: 0.85, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: index, set: 0.8, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: middle, set: 0.34, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: ring, set: 0.36, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: pinky, set: 0.4, for: 0}
+    - {at: 0, do: show, on: blade_hand}
+    - {at: 0, do: reach, on: person, hand: right, to: [399.86, 1.36, 4.12], for: 0, lint: point}
+    - {at: 3.4b, do: reach, on: person, hand: right, weight: 0, for: 0.4s, ease: inout}
+
+- id: wobble
+  idea: one frozen butler wobbles, catches himself, and freezes again
+  feel: who did that
+  sing: person
+  set: estate
+  cast: {butlers_hall_r: {at: rank_2, clip: butler_idle}, butlers_hall_r2: {at: rank_4, clip: butler_idle}, butlers_hall_l: {at: rank_1, clip: butler_idle}, butlers_hall_l2: {at: rank_3, clip: butler_idle}, butler_a: {at: rank_solo, clip: butler_idle}, person: {at: stage, perform: dress_stand}}
+  camera: {preset: spot, from: cam_wide, on: person, lens: 26}
+  light: pastel_interior
+  raw:
+    - {at: 2b, do: wobble, on: butler_a, amount: 14, decay: 1.6, speed: 9}
+
+- id: side_eye
+  idea: a butler stares at him over his shoulder; his eyes flick most of the way there and snap back
+  feel: never look at them straight
+  sing: person
+  set: estate
+  cast: {person: {at: stage, perform: dress_stand}, butler_a: {at: side_butler, clip: butler_idle}}
+  camera: {preset: close-up, on: person, frame: 0.8}
+  light: pastel_interior
+  raw:
+    - {at: 0.5b, do: eyes, on: person, yaw: 14, for: 0.07s}
+    - {at: 1.2b, do: eyes, on: person, yaw: 0, for: 0.06s}
+
+- id: let_go
+  idea: a twirl on "let go"
+  feel: free, or the look of it
+  sing: person
+  set: estate
+  cast: {person: {at: stage, perform: dress_twirl}, butlers_hall_l: {at: rank_1, clip: butler_idle}, butlers_hall_l2: {at: rank_3, clip: butler_idle}, butlers_hall_r: {at: rank_2, clip: butler_idle}, butlers_hall_r2: {at: rank_4, clip: butler_idle}}
+  camera: {preset: spot, from: hall_wide, on: person, lens: 34}
+  light: pastel_interior
+
+- id: snatch
+  idea: he looks at the blade in his hand and slowly closes his fist around it
+  feel: it has him
+  sing: person
+  set: estate
+  cast: {person: {at: stage, perform: dress_stand}}
+  camera: {preset: spot, from: cam_wide, on: person.neck, lens: 62, screen: [0, 0]}
+  light: pastel_interior
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, finger: thumb, set: 0.85, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: index, set: 0.8, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: middle, set: 0.34, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: ring, set: 0.36, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, finger: pinky, set: 0.4, for: 0}
+    - {at: 0, do: show, on: blade_hand}
+    - {at: 0, do: reach, on: person, hand: right, to: [399.82, 1.38, 4.12], for: 0, lint: point}
+    - {at: 1.2b, do: fingers, on: person, hand: right, set: 0.92, for: 0.7s, ease: inout}
+    - {at: 3b, do: reach, on: person, hand: right, to: [399.8, 1.2, 4.2], for: 0.45s, ease: hand, lint: point}
+    - {at: 3.97b, do: reach, on: person, hand: right, weight: 0, for: 0.02s}
+    - {at: 3.97b, do: fingers, on: person, hand: right, release: 1, for: 0.02s}
+    - {at: 3.97b, do: hide, on: blade_hand}
+
+- id: hall_empty
+  idea: the hall holds, he has gone on
+  feel: the size of it
+  set: estate
+  cast: {butlers_hall_l: {at: rank_1, clip: butler_idle}, butlers_hall_l2: {at: rank_3, clip: butler_idle}, butlers_hall_r: {at: rank_2, clip: butler_idle}, butlers_hall_r2: {at: rank_4, clip: butler_idle}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: hall_wide, on: hall_aim, lens: 24}
+  light: pastel_interior
+
+# ---- verse 2: the dining room
+- id: din_wide
+  idea: the longest table in the world and one man at the end of it
+  feel: alone in all this
+  sing: person
+  set: estate
+  cast: {person: {at: din_seat, perform: dress_sit}, butlers_din_l: {at: row_din_l, clip: butler_idle}, butlers_din_r: {at: row_din_r, clip: butler_idle}}
+  camera: {preset: spot, from: din_wide, on: din_aim, lens: 28}
+  light: pastel_interior
+
+- id: fork
+  idea: "manners", a butler moves his fork one inch, then moves it back
+  feel: nothing is ever right
+  sing: person
+  set: estate
+  cast: {person: {at: din_curtsy, perform: dress_curtsy}, butler_a: {at: tray_spot, clip: butler_idle}}
+  camera: {preset: spot, from: din_seat_cam, on: person.chest, lens: 30}
+  light: pastel_interior
+
+- id: bed
+  idea: "get some sleep", a butler on the giant bed bows into the pillow, plumps it twice and straightens up
+  feel: no
+  cast: {bed: {at: bed_mark}, bed_quilt: {at: bed_top}, bed_pillow: {at: bed_head}, butler_a: {at: bed_on, clip: butler_idle}}
+  camera: {preset: spot, from: bed_cam2, on: bed_aim, lens: 30}
+  light: pastel_interior
+  raw:
+    - {at: 0.1b, do: anim, on: butler_a, clip: butler_bow, once: 1, speed: 1.2, blend: 0.08s, for: 1.6b, return: 0.1s}
+    - {at: 0.75b, do: scale, on: bed_pillow, to: [1.15, 0.62, 1.15], for: 0.15b, ease: out}
+    - {at: 0.9b, do: scale, on: bed_pillow, to: [1, 1.15, 1], for: 0.3b, ease: back}
+    - {at: 1.9b, do: anim, on: butler_a, clip: butler_bow, once: 1, speed: 1.2, blend: 0.08s, for: 1.2b, return: 0.1s}
+    - {at: 2.55b, do: scale, on: bed_pillow, to: [1.2, 0.55, 1.2], for: 0.15b, ease: out}
+    - {at: 2.7b, do: scale, on: bed_pillow, to: [1, 1, 1], for: 0.35b, ease: back}
+    - {at: 3.4b, do: wobble, on: bed_pillow, amount: 3, decay: 4, axis: [1, 0, 0]}
+
+- id: habits
+  idea: "bad habits", the cloche trembles and lifts on a single blade
+  feel: the good stuff
+  cast: {tray: {at: table_spot}, cloche: {at: table_spot}, tray_blade: {at: table_spot}}
+  camera: {preset: close-up, on: table_spot, frame: 0.9, height: 1.15}
+  light: pastel_interior
+  raw:
+    - {at: 1.6b, do: tremble, on: cloche, amount: 0.006, for: 1.1b}
+    - {at: 2.7b, do: move, on: cloche, pos: [520, 0.74, 58.5], for: 0.2b, ease: out}
+    - {at: 2.95b, do: move, on: cloche, pos: [520, 1.32, 58.5], for: 0.7b, ease: back}
+
+- id: pocket
+  idea: "hard to keep", the blade goes in his top pocket and he pats it
+  feel: for later
+  sing: person
+  set: estate
+  cast: {person: {at: din_seat, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+  light: pastel_interior
+
+- id: theory
+  idea: "theory", a butler on a box steps up to the veiled chart, crouches, and whips the cloth off on the word
+  feel: there is a plan for this
+  cast: {butler_a: {at: chart_butler_l, clip: butler_idle}, chart_a: {at: chart_l}, chart_cover_a: {at: cover_l}}
+  camera: {preset: spot, from: chart_cam_l, on: chart_l, lens: 30, push: 0.1}
+  light: pastel_interior
+  raw:
+    - {at: 0b, do: anim, on: butler_a, clip: butler_tray, blend: 0.2s, for: 1.6b}
+    - {at: 0b, do: tremble, on: chart_cover_a, amount: 0.008, for: 1.7b}
+    - {at: 1b, do: anim, on: butler_a, clip: butler_hop, once: 1, blend: 0.05s, for: 0.857, return: 0.1s}
+    - {at: 1.7b, do: move, on: chart_cover_a, pos: [517.36, 1.9, 42.9], for: 0.2b, ease: in}
+    - {at: 1.7b, do: scale, on: chart_cover_a, to: [0.25, 1.5, 0.03], for: 0.2b, ease: in}
+    - {at: 2b, do: hide, on: chart_cover_a}
+    - {at: 2.5b, do: wobble, on: chart_a, amount: 2.5, decay: 3, axis: [0, 0, 1]}
+
+- id: plan
+  idea: "plan", a second butler whips the cloth off a chart twice the size
+  feel: bigger is better
+  cast: {butler_b: {at: chart_butler_r, clip: butler_idle}, chart_b: {at: chart_r}, chart_cover_b: {at: cover_r}, frame_lawn: {at: frame_spot}}
+  camera: {preset: spot, from: chart_cam_r, on: chart_r, lens: 26, push: 0.1}
+  light: pastel_interior
+  raw:
+    - {at: 0b, do: anim, on: butler_b, clip: butler_tray, blend: 0.2s, for: 1.6b}
+    - {at: 0b, do: tremble, on: chart_cover_b, amount: 0.012, for: 1.7b}
+    - {at: 1b, do: anim, on: butler_b, clip: butler_hop, once: 1, blend: 0.05s, for: 0.857, return: 0.1s}
+    - {at: 1.7b, do: move, on: chart_cover_b, pos: [523.74, 2.2, 42.4], for: 0.2b, ease: in}
+    - {at: 1.7b, do: scale, on: chart_cover_b, to: [0.3, 2.4, 0.03], for: 0.2b, ease: in}
+    - {at: 2b, do: hide, on: chart_cover_b}
+    - {at: 2.5b, do: wobble, on: chart_b, amount: 3, decay: 3, axis: [0, 0, 1]}
+
+- id: peak
+  idea: everything at once, and him alone at the long table, still singing
+  feel: too much
+  sing: person
+  set: estate
+  cast: {person: {at: din_seat, perform: dress_sit}, butlers_din_l: {at: row_din_l, clip: butler_idle}, butlers_din_r: {at: row_din_r, clip: butler_idle}, balloons: {at: balloons_din}}
+  camera: {preset: spot, from: din_back, on: din_back_aim, lens: 24}
+  light: pastel_interior
+  events:
+    - {on: 0b, who: butlers_din_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_din_r, do: perform, name: butler_hop, for: 2b}
+    - {on: 4b, who: butlers_din_l, do: perform, name: butler_bow, for: 2b}
+    - {on: 4b, who: butlers_din_r, do: perform, name: butler_bow, for: 2b}
+
+- id: clever
+  idea: on "clever" the whole painted wall rocks like a stage flat, and settles
+  feel: the first thing goes wrong
+  camera: {preset: spot, from: wall_cam, on: wall_aim, lens: 30}
+  light: pastel_interior
+  cast: {person: {at: din_table, perform: verse_take_2}, vase: {at: vase_wall}}
+  raw:
+    - {at: 2.75b, do: wobble, on: estate_din_walls, amount: 4, decay: 1.2, speed: 11, axis: [0, 0, 1]}
+    - {at: 2.75b, do: wobble, on: estate_din, amount: 4, decay: 1.2, speed: 11, axis: [0, 0, 1]}
+    - {at: 2.75b, do: wobble, on: estate_din_door_hinge, amount: 4, decay: 1.2, speed: 11, axis: [0, 0, 1]}
+    - {at: 1b, do: tremble, on: vase, amount: 0.007, for: 1.75b}
+    - {at: 2.75b, do: wobble, on: vase, amount: 5, decay: 1.2, speed: 11, axis: [0, 0, 1]}
+
+- id: table_cu
+  idea: he keeps singing, he saw that
+  feel: don't look
+  sing: person
+  set: estate
+  cast: {person: {at: din_seat, perform: sit_lawn_chair_sing}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+  light: pastel_interior
+
+- id: vase_slides
+  idea: "really am", the painted vase shivers and comes down the wall in three jerks. It was never a vase
+  feel: oh no
+  cast: {person: {at: din_table, perform: verse_take_2}, vase: {at: vase_wall}}
+  camera: {preset: spot, from: wall_cam, on: wall_aim, lens: 30}
+  light: pastel_interior
+  raw:
+    - {at: 0.3b, do: tremble, on: vase, amount: 0.012, for: 1b}
+    - {at: 1.3b, do: move, on: vase, pos: [523.25, 1.95, 61.72], for: 0.25b, ease: in}
+    - {at: 2b, do: move, on: vase, pos: [523.25, 1.4, 61.72], for: 0.25b, ease: in}
+    - {at: 2b, do: rotate, on: vase, rot: [0, 0, -6], for: 0.25b, ease: out}
+    - {at: 3b, do: move, on: vase, pos: [523.25, 0.72, 61.72], for: 0.3b, ease: in}
+    - {at: 3b, do: rotate, on: vase, rot: [0, 0, 5], for: 0.3b, ease: out}
+    - {at: 3.3b, do: wobble, on: vase, amount: 5, decay: 3, speed: 16}
+
+# ---- the dip
+- id: push
+  idea: he comes to the wobbling wall, puts a hand on it and it swings open
+  feel: he has to know
+  set: estate
+  cast: {person: {at: din_stand, to: din_door_spot, clip: Walk4, face: 0}, vase: {at: vase_wall}}
+  camera: {preset: spot, from: wall_cam, on: wall_aim, lens: 30}
+  light: pastel_interior
+  raw:
+    - {at: 0, do: set, on: vase, pos: [523.25, 0.72, 61.72], rot: [0, 0, 5]}
+    - {at: 1.8b, do: reach, on: person, hand: right, to: [521.75, 1.15, 61.72], for: 0.3s, ease: hand, lint: point}
+    - {at: 2.4b, do: rotate, on: estate_din_door_hinge, rot: [0, -100, 0], for: 1.2b, ease: inout}
+    - {at: 3.4b, do: reach, on: person, hand: right, weight: 0, for: 0.2s}
+
+- id: grey_wide
+  idea: he comes out onto plywood, braces, dead grass, a grey street. A plain man's walk, no skirt in his hands
+  feel: the air goes out
+  set: flats
+  light: dip_overcast
+  mood: drained
+  cast: {person: {at: threshold, to: verge, perform: walk_plain}}
+  camera: {preset: spot, from: dip_wide, on: person.chest, lens: 40}
+
+- id: he_looks
+  idea: for the first time he looks straight at a butler. We are the butler
+  feel: the whole video was building to this
+  sing: person
+  set: flats
+  light: dip_overcast
+  mood: drained
+  cast: {person: {at: verge_side, perform: stand}}
+  camera: {preset: spot, from: break_cam, on: person.head, lens: 55}
+  shot: {pos: [501.2, 0.98, 2.6]}
+
+- id: on_break
+  idea: the butler on his break, tray down beside him, turns his head and looks back. Nobody speaks
+  feel: they both know
+  set: flats
+  light: dip_overcast
+  mood: drained
+  cast: {butler_b: {at: crate_spot, clip: butler_idle}, offer_crate: {at: break_stand}, tray: {at: break_tray}}
+  camera: {preset: spot, from: break_cam, on: break_aim, lens: 50}
+  raw:
+    - {at: 0, do: rotate, on: butler_b, rot: [0, -35, 0], for: 0.01s}
+    - {at: 0.6b, do: rotate, on: butler_b, rot: [0, -90, 0], for: 0.5b, ease: inout}
+
+- id: holds_out
+  idea: the butler offers one bright blade of grass on the silver tray
+  feel: this is why he goes back
+  set: flats
+  light: dip_overcast
+  mood: drained
+  cast: {butler_b: {at: crate_spot, clip: butler_tray}, offer_crate: {at: break_stand}, tray: {at: break_tray}, blade_free: {at: break_blade}}
+  camera: {preset: spot, from: break_cam, on: break_offer, lens: 42}
+  raw:
+    - {at: 0.2b, do: move, on: tray, pos: [500.4, 0.72, 2.56], for: 0.5b, ease: back}
+    - {at: 0.2b, do: move, on: blade_free, pos: [500.4, 0.77, 2.56], for: 0.5b, ease: back}
+    - {at: 0, do: tint, on: blade_free, color: "#7dff3a", for: 0.01s}
+    - {at: 0, do: glow, on: blade_free, color: "#3ccf14", for: 0.3b}
+
+- id: takes_it
+  idea: on "mind" he reaches across and takes the blade from the butler's tray
+  feel: he chose
+  set: flats
+  light: dip_overcast
+  mood: drained
+  cast: {butler_b: {at: crate_spot, clip: butler_tray}, offer_crate: {at: break_stand}, tray: {at: break_tray}, blade_free: {at: break_blade}, person: {at: verge_side, perform: stand}}
+  camera: {preset: spot, from: break_two, on: break_two_aim, lens: 75}
+  raw:
+    - {at: 0, do: tint, on: blade_free, color: "#7dff3a", for: 0.01s}
+    - {at: 0.3b, do: reach, on: person, hand: right, to: [500.36, 0.82, 2.56], for: 0.4s, ease: hand, lint: point}
+    - {at: 0.3b, do: fingers, on: person, hand: right, set: 0.2, for: 0.2s}
+    - {at: 1.25b, do: fingers, on: person, hand: right, set: 0.8, for: 0.08s}
+    - {at: 1.3b, do: attach, on: blade_free, to: person.rightHand, pos: [-0.03, 0.098, -0.078], rot: [18, 0, 0], blend: 0.04s}
+    - {at: 1.9b, do: reach, on: person, hand: right, to: [500.3, 1.3, 2.42], for: 0.5s, ease: hand, lint: point}
+    - {at: 3.6b, do: reach, on: person, hand: right, weight: 0, for: 0.3s, ease: inout}
+    - {at: 3.6b, do: fingers, on: person, hand: right, set: 0.3, for: 0.2s}
+    - {at: 2b, do: anim, on: butler_b, clip: butler_idle, blend: 0.3s}
+    - {at: 3.95b, do: hide, on: blade_free}
+
+- id: stair_top
+  idea: top of the staircase, fog, balloons, skirt lifted
+  feel: hollow joy
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: stair_top, perform: dress_stand}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: stair_low, on: person.chest, lens: 40}
+  events:
+    - {on: 0b, fx: smoke, pos: [394, 0, 14], color: "#f7c9d2"}
+    - {on: 0b, fx: smoke, pos: [406, 0, 14], color: "#f7c9d2"}
+
+- id: descend
+  idea: he descends, skirt lifted, chin up, looking at us
+  feel: he knows exactly what this is
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: stair_go, to: stair_mid, perform: dress_lift_stairs, face: 180}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: stair_low, on: person.chest, lens: 105}
+
+- id: sparrow_tie
+  idea: the sparrow goes by in a tiny bow tie
+  feel: even him
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {sparrow: {at: sparrow_fly}}
+  camera: {preset: spot, from: stair_low, on: sparrow_fly, lens: 40}
+  raw:
+    - {at: 0, do: move, on: sparrow, pos: [401.6, 2.2, 12], for: 2b, ease: linear}
+
+- id: bow_wave
+  idea: butlers bow in a wave, top to bottom, as he comes down
+  feel: an empire of yes
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}, person: {at: hall_end, perform: dress_stand}}
+  camera: {preset: spot, from: hall_back, on: hall_back_aim, lens: 30}
+  events:
+    - {on: 0b, who: butlers_hall_l, do: perform, name: butler_bow, for: 2b, stagger: 0.14}
+    - {on: 0b, who: butlers_hall_l2, do: perform, name: butler_bow, for: 2b, stagger: 0.14}
+    - {on: 0b, who: butlers_hall_r, do: perform, name: butler_bow, for: 2b, stagger: 0.14}
+    - {on: 0b, who: butlers_hall_r2, do: perform, name: butler_bow, for: 2b, stagger: 0.14}
+
+- id: look_at_you_2
+  idea: "look at you" again, the same finger, more knowing
+  feel: you are in this too
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: hall_end, perform: dress_stand}}
+  camera: {preset: medium, on: person, frame: 1.2}
+  raw:
+    - {at: 1b, do: perform, on: person, name: point_at_you, for: 2.4s}
+
+- id: gifts_hop
+  idea: everything hops
+  feel: hollow joy
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {gifts_a: {at: gifts_l}, gifts_b: {at: gifts_r}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: hall_wide, on: hall_aim, lens: 24}
+  events:
+    - {on: 0b, who: butlers_hall_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_hall_l2, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_hall_r, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_hall_r2, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: gifts_a, do: hop, height: 0.5, for: 2b}
+    - {on: 0b, who: gifts_b, do: hop, height: 0.5, for: 2b}
+    - {on: 2b, who: butlers_hall_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_l2, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_r, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_r2, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: gifts_a, do: hop, height: 0.5, for: 2b}
+    - {on: 2b, who: gifts_b, do: hop, height: 0.5, for: 2b}
+
+- id: symmetry
+  idea: all butlers in symmetry at the foot of the stairs
+  feel: too perfect
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: hall_turn, perform: dress_stand}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: hall_wide, on: hall_aim, lens: 26}
+
+- id: twirl
+  idea: a twirl, in the middle of it all
+  feel: he is having a lovely time, on purpose
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: hall_turn, perform: dress_twirl}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}}
+  camera: {preset: medium, on: person, frame: 3.6}
+
+- id: alone_fog
+  idea: everything stops, a tiny man alone in the fog in an empty hall
+  feel: more knowing than before
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: stage, perform: dress_stand}}
+  camera: {preset: spot, from: hall_wide, on: person.chest, lens: 28}
+  events:
+    - {on: 0b, fx: smoke, pos: [396, 0, 6], color: "#f7c9d2"}
+    - {on: 0b, fx: smoke, pos: [404, 0, 6], color: "#f7c9d2"}
+
+- id: hand_opens
+  idea: his hand comes up shut on the grass, opens on "let go", stays open a beat, and closes
+  feel: he won't let go
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: stage, perform: dress_stand}}
+  camera: {preset: spot, from: cam_cu, on: person.neck, lens: 30}
+  raw:
+    - {at: 0, do: show, on: blade_hand}
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.95, for: 0}
+    - {at: 0, do: reach, on: person, hand: right, to: [399.72, 1.26, 4.24], for: 0, lint: point}
+    - {at: 2b, do: reach, on: person, hand: right, to: [399.7, 1.34, 4.22], for: 3b, ease: hand, lint: point}
+    - {at: 5.4b, do: fingers, on: person, hand: right, set: 0.05, for: 0.4s}
+    - {at: 7.1b, do: fingers, on: person, hand: right, set: 0.95, for: 0.2s}
+    - {at: 7.6b, do: reach, on: person, hand: right, weight: 0, for: 0.3s, ease: inout}
+    - {at: 7.9b, do: hide, on: blade_hand}
+
+- id: rise
+  idea: the camera rises over the estate, and there is a ribbon round it
+  feel: oh
+  set: estate
+  light: ribbon_grey
+  cast: {wrap_band: {at: wrap}, wrap_cross: {at: wrap}, wrap_bow: {at: wrap_top}}
+  camera: {preset: spot, from: front_high, on: sky_aim, lens: 30}
+  shot: {dolly: [[400, 2, -30], [400, 34, -74]]}
+
+- id: ribbon_far
+  idea: it keeps going back. A gift under grey clouds
+  feel: it was always a product
+  set: estate
+  light: ribbon_grey
+  cast: {wrap_band: {at: wrap}, wrap_cross: {at: wrap}, wrap_bow: {at: wrap_top}}
+  camera: {preset: spot, from: sky_cam, on: sky_aim, lens: 30}
+  shot: {dolly: [[400, 34, -74], [400, 66, -96]]}
+
+- id: tv_pull
+  idea: it is a picture on his TV
+  feel: the TV fiasco, all over again
+  sing: person
+  set: living_room
+  light: sofa_tv
+  cast: {tv_picture: {at: tv_screen}, person: {at: sofa, perform: dress_sit}}
+  camera: {preset: spot, from: tv_close, on: tv_screen, lens: 42}
+  shot: {pos: [0, 1.03, 1.3], dolly: [[0, 1.03, 1.3], [0.85, 1.3, 0.3], [0.85, 1.42, -2.3]], look: null, rot: [3, 0, 0]}
+
+- id: darling
+  idea: "Oh, darling...", all of him on the sofa, knees together, remote in hand
+  feel: he is talking to you
+  sing: person
+  set: living_room
+  light: sofa_tv
+  cast: {person: {at: sofa, perform: dress_sit}}
+  camera: {preset: spot, from: tv_close, on: person.chest, lens: 34}
+  shot: {pos: [1.05, 1.32, 0.95], look: person.chest, fov: 44, screen: [0, 0]}
+  raw:
+    - {at: 0, do: show, on: remote_hand}
+    - {at: 0.02b, do: ground, on: person, amount: 0, for: 0}
+    - {at: 0.02b, do: set, on: person, pos: [0, -0.07, -0.75], rot: [0, 0, 0], lint: slide}
+    - {at: 0.04b, do: plant, on: person, foot: left, pos: [-0.09, 0.145, -0.3], for: 0.05s}
+    - {at: 0.04b, do: plant, on: person, foot: right, pos: [0.09, 0.145, -0.3], for: 0.05s}
+
+- id: pot
+  idea: on the coffee table, a small pot of grass with a bow on it
+  feel: of course he kept it
+  set: living_room
+  light: sofa_tv
+  cast: {pot_grass: {at: table_pot}}
+  camera: {preset: spot, from: table_cam, on: table_pot, lens: 42}
+
+- id: better
+  idea: "You really should know better", flat, to camera, and the remote comes up at us
+  feel: the door is closing and it is on you
+  sing: person
+  set: living_room
+  light: sofa_tv
+  cast: {person: {at: sofa, perform: dress_sit}}
+  camera: {preset: spot, from: tv_close, on: person.head, lens: 60}
+  raw:
+    - {at: 0, do: show, on: remote_hand}
+    - {at: 0.02b, do: ground, on: person, amount: 0, for: 0}
+    - {at: 0.02b, do: set, on: person, pos: [0, -0.07, -0.75], rot: [0, 0, 0], lint: slide}
+    - {at: 0.04b, do: plant, on: person, foot: left, pos: [-0.09, 0.145, -0.3], for: 0.05s}
+    - {at: 0.04b, do: plant, on: person, foot: right, pos: [0.09, 0.145, -0.3], for: 0.05s}
+    - {at: 4b, do: perform, on: person, name: point_at_you, for: 1.6s, aim: 40}
+
+- id: click_off
+  idea: click, and he goes to a ghost in dark glass, arm still out. We are what he turned off
+  feel: the end
+  sing: person
+  set: living_room
+  light: sofa_tv
+  cast: {person: {at: sofa, perform: dress_sit}}
+  camera: {preset: spot, from: tv_close, on: person.head, lens: 60}
+  raw:
+    - {at: 0, sfx: tv_click, volume: 0.9}
+    - {at: 0, grade: {exposure: -3.5, saturation: -100}, for: 0.06s}
+    - {at: 0, do: show, on: remote_hand}
+    - {at: 0.02b, do: ground, on: person, amount: 0, for: 0}
+    - {at: 0.02b, do: set, on: person, pos: [0, -0.07, -0.75], rot: [0, 0, 0], lint: slide}
+    - {at: 0.04b, do: plant, on: person, foot: left, pos: [-0.09, 0.145, -0.3], for: 0.05s}
+    - {at: 0.04b, do: plant, on: person, foot: right, pos: [0.09, 0.145, -0.3], for: 0.05s}
+    - {at: 1.75b, do: ground, on: person, amount: 1, for: 0}
+
+# ---- performance shots: to the lens. dress_stand until the dance moves arrive; swap the perform and nothing else moves.
+- id: perf_new
+  idea: straight down the lens, "a little taste"
+  feel: he is the star of this
+  sing: person
+  set: estate
+  cast: {person: {at: path_a_lens, perform: dress_stand}}
+  camera: {preset: spot, from: front_lens_cam, on: person.chest, lens: 45}
+
+- id: perf_taste
+  idea: "something new", he tastes the blade
+  feel: mm
+  sing: person
+  set: estate
+  cast: {person: {at: path_a_lens, perform: dress_stand}}
+  camera: {preset: spot, from: front_lens_cam, on: person.chest, lens: 60}
+  raw:
+    - {at: 0, do: show, on: blade_hand}
+    - {at: 0.2b, do: layer, on: person, clip: Idle2TakeASip, mask: rightArm, start: 0.5, weight: 1, for: 1.2s, blend: 0.2s}
+    - {at: 1.9b, do: hide, on: blade_hand}
+
+- id: dance_1
+  idea: "but darling", he leads and the butlers fall in behind him
+  feel: the pop video he always wanted
+  sing: person
+  set: estate
+  cast: {person: {at: path_b_lens, perform: dress_stand}, butlers_path_l: {at: row_back_l, clip: butler_idle}, butlers_path_r: {at: row_back_r, clip: butler_idle}}
+  camera: {preset: spot, from: path_b_cam, on: person.chest, lens: 32}
+  events:
+    - {on: 0b, who: butlers_path_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_path_r, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_path_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_path_r, do: perform, name: butler_hop, for: 2b}
+
+- id: hook_2
+  idea: the hook, second time, the same move
+  feel: you know this one now
+  sing: person
+  set: estate
+  cast: {person: {at: path_b_lens, perform: dress_stand}, butlers_path_l: {at: row_back_l, clip: butler_idle}, butlers_path_r: {at: row_back_r, clip: butler_idle}}
+  camera: {preset: spot, from: path_b_cam, on: person.chest, lens: 28}
+  raw:
+    - {at: 4.4b, do: perform, on: person, name: point_at_you, for: 1.1s}
+
+- id: eye_roll
+  idea: "didn't know", he rolls his eyes
+  feel: please
+  sing: person
+  set: estate
+  cast: {person: {at: path_b_lens, perform: dress_stand}}
+  camera: {preset: spot, from: path_b_cam, on: person.head, lens: 70}
+  raw:
+    - {at: 0.2b, do: eyes, on: person, yaw: 5, pitch: 12, for: 0.2s}
+    - {at: 1.2b, do: eyes, on: person, yaw: -5, pitch: 8, for: 0.2s}
+    - {at: 1.8b, do: eyes, on: person, yaw: 0, pitch: 0, for: 0.1s}
+
+- id: hook_3
+  idea: the hook from the top of the stairs
+  feel: bigger
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: landing_lens, perform: dance_hook_stairs}}
+  camera: {preset: spot, from: landing_cam, on: person.chest, lens: 34}
+
+- id: dance_2
+  idea: he dances at the foot of the stairs, everyone behind him
+  feel: hollow joy
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: hall_lens, perform: dress_stand}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: hall_lens_cam, on: person.chest, lens: 30}
+
+- id: hook_4
+  idea: the last hook, all the butlers in symmetry behind him
+  feel: too perfect
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: hall_lens, perform: dress_stand}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}}
+  camera: {preset: spot, from: hall_lens_cam, on: person.chest, lens: 26}
+  events:
+    - {on: 0b, fx: smoke, pos: [394, 0, 14], color: "#f7c9d2"}
+    - {on: 0b, fx: smoke, pos: [406, 0, 14], color: "#f7c9d2"}
+  raw:
+    - {at: 4.4b, do: perform, on: person, name: point_at_you, for: 1.1s}
+
+- id: dance_3
+  idea: everything at its loudest, and him in the middle of it singing to you
+  feel: hollow joy
+  sing: person
+  set: estate
+  mood: hollow
+  light: pastel_interior
+  cast: {person: {at: hall_lens, perform: dress_stand}, butlers_hall_l: {at: row_hall_l, clip: butler_idle}, butlers_hall_l2: {at: row_hall_l2, clip: butler_idle}, butlers_hall_r: {at: row_hall_r, clip: butler_idle}, butlers_hall_r2: {at: row_hall_r2, clip: butler_idle}, balloons: {at: balloons_hall}}
+  camera: {preset: spot, from: hall_lens_cam, on: person.chest, lens: 40}
+  events:
+    - {on: 0b, who: butlers_hall_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_hall_r, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_hall_l2, do: perform, name: butler_hop, for: 2b}
+    - {on: 0b, who: butlers_hall_r2, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_l, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_r, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_l2, do: perform, name: butler_hop, for: 2b}
+    - {on: 2b, who: butlers_hall_r2, do: perform, name: butler_hop, for: 2b}
+
+- id: fork_cu
+  idea: on "manners" a white wing slides in, moves the fork one inch, waits, and moves it back
+  feel: nothing is ever right
+  cast: {fork: {at: table_fork}}
+  camera: {preset: spot, from: fork_cam, on: table_fork, lens: 45}
+  light: pastel_interior
+  raw:
+    - {at: 0.1b, do: move, on: wing_tip, pos: [520.41, 0.785, 59.05], for: 0.6b, ease: out}
+    - {at: 0.93b, do: move, on: fork, pos: [520.16, 0.765, 59.05], for: 0.3b, ease: inout}
+    - {at: 0.93b, do: move, on: wing_tip, pos: [520.35, 0.785, 59.05], for: 0.3b, ease: inout}
+    - {at: 2.1b, do: move, on: fork, pos: [520.22, 0.765, 59.05], for: 0.3b, ease: inout}
+    - {at: 2.1b, do: move, on: wing_tip, pos: [520.41, 0.785, 59.05], for: 0.3b, ease: inout}
+    - {at: 3b, do: move, on: wing_tip, pos: [520.8, 0.79, 59.05], for: 0.6b, ease: in}
+
+- id: champagne
+  idea: grass in a champagne glass, served
+  feel: too much
+  cast: {flute: {at: table_flute}, tray_blade: {at: flute_blade}}
+  camera: {preset: spot, from: champagne_cam, on: flute_blade, lens: 42}
+  light: pastel_interior
+
+# ---- chorus 1 as one take: same performance on the same mark, many cameras. Only the camera differs, the rest is sequences/chorus.json.
+- id: ch_wide
+  idea: the whole formation, dead centre, he leads
+  feel: the pop video he always wanted
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_wide, on: person.head, lens: 26}
+
+- id: ch_cu
+  idea: straight down the lens
+  feel: he means this
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_cu, on: person.neck, lens: 40, screen: [0, 0]}
+
+- id: ch_med
+  idea: the groove, hands loose, butlers in step over his shoulder
+  feel: easy
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: person.chest, lens: 30}
+
+- id: ch_track
+  idea: a smooth track across the front of the line
+  feel: gliding
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: person.chest, lens: 34}
+  shot: {dolly: [[396, 1.4, 1.9], [404, 1.4, 1.9]]}
+
+- id: ch_cu_2
+  idea: "look at you", still down the lens
+  feel: caught
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 50}
+
+- id: ch_low
+  idea: the hook again from the floor, he is enormous
+  feel: a star
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 22}
+
+- id: ch_high
+  idea: from above, the ranks are a pattern
+  feel: too perfect
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_high, on: rank_1, lens: 42}
+
+- id: ch_med_2
+  idea: the groove, closer
+  feel: easy
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: person.chest, lens: 42}
+
+- id: ch_wide_2
+  idea: the formation, one last time before it freezes
+  feel: too perfect
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_wide, on: stage_aim, lens: 26}
+
+# ---- verse 2 as one take: he dances down the longest table in the world. sequences/din.json holds the cast; gags cut in with their own cards.
+
+- id: dv_wide
+  idea: he is dancing on the table, and nobody has said anything
+  feel: of course he is
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_wide, on: person.head, lens: 34}
+  sing: person
+
+- id: dv_wide_2
+  idea: he is dancing on the table, and nobody has said anything
+  feel: of course he is
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_wide, on: person.head, lens: 34}
+  sing: person
+
+- id: dv_cu
+  idea: down the lens, from a table top
+  feel: he means this
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_cu, on: person.head, lens: 45}
+  sing: person
+
+- id: dv_cu_2
+  idea: down the lens, from a table top
+  feel: he means this
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_cu, on: person.head, lens: 45}
+  sing: person
+
+- id: dv_cu_3
+  idea: down the lens, from a table top
+  feel: he means this
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_cu, on: person.head, lens: 45}
+  sing: person
+
+- id: dv_cu_4
+  idea: down the lens, from a table top
+  feel: he means this
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_cu, on: person.head, lens: 45}
+  sing: person
+
+- id: dv_low
+  idea: from the chairs, he is enormous
+  feel: a star
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_low, on: person.head, lens: 24}
+  sing: person
+
+- id: dv_low_2
+  idea: from the chairs, he is enormous
+  feel: a star
+  cast: {person: {at: din_table}}
+  camera: {preset: spot, from: cam_din_low, on: person.head, lens: 24}
+  sing: person
+
+- id: c2_wide
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_wide, on: person.head, lens: 28}
+
+- id: c2_cu
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_cu, on: person.neck, lens: 40, screen: [0, 0]}
+
+- id: c2_point
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 50}
+
+- id: c2_track
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_med, on: person.chest, lens: 34}
+  shot: {dolly: [[396, 1.4, 1.9], [404, 1.4, 1.9]]}
+
+- id: c2_low
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_low, on: person.head, lens: 26}
+
+- id: c2_high
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_high, on: rank_1, lens: 42}
+
+- id: c2_med
+  idea: the same take, the second time, more knowing
+  feel: hollow joy
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_med, on: person.chest, lens: 42}
+
+- id: delight
+  idea: the fences are down, and for the first and last time he smiles
+  feel: delight
+  mood: yard_face
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: dress_sit}}
+  camera: {preset: close-up, on: person, frame: 0.62}
+  events:
+    - {on: 0b, who: person, do: face, smile: 0.6, eyesWide: 0.5, for: 1b, ease: out}
+
+- id: goes_back
+  idea: he turns his back on the street, takes up his skirt and glides to the door, by choice
+  feel: he knows exactly what he is doing
+  set: flats
+  light: dip_overcast
+  mood: drained
+  cast: {butler_b: {at: crate_spot, clip: butler_idle}, person: {at: verge_back, to: door_near, perform: dress_walk, face: 0, args: {skirt: 1}}}
+  camera: {preset: spot, from: dip_behind, on: person.chest, lens: 35}
+

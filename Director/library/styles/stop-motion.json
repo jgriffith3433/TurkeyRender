@@ -1,0 +1,14 @@
+{
+  // A puppet film: on twos at 24, a tiny set under small hot lamps, plasticine that boils because hands touched it between frames.
+  "about": "Laika at home. Everything is a small object. Render at 24 fps.",
+  "light": "golden_hour",
+  "fps": 24,
+  "steps": 12,
+  "grade": {
+    "exposure": 0.4, "contrast": 16, "saturation": 16, "hue": 0, "vignette": 0.34, "grain": 0.14, "bloom": 0.25, "threshold": 1.05, "chroma": 0,
+    "clay": 0.6, "toon": 0.28, "flicker": 1, "weave": 1, "motionblur": 0, "split": 0.3, "splitA": "#5a4a6a", "splitB": "#ffd9a0"
+  },
+  "sky": { "top": "#3f6ea6", "mid": "#c7a98a", "bottom": "#4a3a2a", "clouds": 0.55, "cloudScale": 0.5, "cloudColor": "#f4ead8", "cloudShade": "#7f8ea6", "cloudSpeed": 0.003 },
+  "lens": { "close-up": 60, "medium": 40, "wide": 28, "aperture": 1.4 },
+  "type": { "color": "#fff3dc", "style": "pop", "size": 84, "pos": [0.5, 0.16, 0], "caps": 1, "tilt": -2 }
+}

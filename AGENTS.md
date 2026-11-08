@@ -1,147 +1,98 @@
-# TK Shock: a music video built entirely from chat
+# TKShock: a real-time 3D video director system, driven from chat
 
-**J directs, Claude builds.** J opens Unity, plays, takes notes, and gives direction. J never does work in Unity: no menus,
-no scene edits, no running commands, no importing. If a step would need J's hands, automate it instead. If something
-can't be done, build what does it. When something seems done, take it a step further and look at frames before saying so.
+**J directs in chat and watches renders. Claude is the interface.** J never opens Unity, Blender or Cascadeur, never films reference,
+never runs a command, never poses a character. If a step would need his hands, the step is wrong: build what does it. Videos are **cards**
+(one shot in a few lines) compiled to a score that one Unity builds and renders; everything is a pure function of time, so any frame
+can be computed on its own and scrubbing and reverse work. First video: TK Shock (a music video). Current: **Hawkes Punch**, a 3:20
+comedy short at 24 fps with no music (`Director/HANDOFF.md` is its live state). The path forward for the system:
+`Director/docs/roadmap-system.md`.
 
-Read `Director/TREATMENT.md` (J's vision, keep adding to it) and `Director/SONG.md` (the song, bar by bar) before directing.
+**Read in this order:** this file; `Director/HANDOFF.md` (what exists, what is in flight, what is next); `.claude/skills/direct-video/
+SKILL.md` (the procedure stage by stage and the failure playbook); then the one topic doc you need from the table below. Before any Unity
+work: `mv doctor`, `mv queue`, `ls Director/gen/compile.lock`, `Director/gen/WORKLOG-epic.md`. `mv` means `node Director/mv.mjs
+[--video <name>]` (`mv use <name>` once).
 
-## The loop
+## J's standing rules (never break these)
 
-1. J plays in Unity (Music Video desk window: Space plays, M or F8 marks, type a note) and writes direction in chat.
-2. `node Director/mv.mjs marks` gives J's marks: time, bar:beat, section, note, screenshot.
-3. Edit `Director/acts/*.json`, then `node Director/mv.mjs build`. It compiles the code too and reports errors.
-4. Look: `mv frame 12:3`, `mv sheet 25:1 33:1 --every 3`. Read the PNG. Never ship what you haven't looked at.
-5. Tell J what changed and where to look.
+| Rule | J's words or the source |
+|---|---|
+| **No shortcuts.** An `insert` tag to silence a check, a blanket `fingers curl`, a prim for a fist, a void for an exterior: each cost a round. | "You took almost every possible shortcut you could making this. Don't do that. Make it an epic animation." (2026-11-08) |
+| **Never judge motion from stills.** Contact sheets, `cards sheet` and posecheck PNGs are staging only. Motion is judged from consecutive 24 fps strips, the critic score and a reviewer who didn't animate it; say what you stepped. Every render praised from sheets was rejected. | "Are you not understanding how to make animations? Real talk here." (2026-11-08, rated 1/10) |
+| **No fix on a fix.** A wrong beat is rebuilt from a new source or staging; never a second cue to cancel the first (1,954 snaps on Greener came from stacked fixes). | Greener and Hawkes Punch lessons |
+| **Motion comes from real sources as candidates, picked by the critic:** the clip catalog, CMU/Protofactor mocap, Gen motion, physics, video-to-motion, pose sheets seeded from real frames. Never typed muscle numbers. | hand-keyed numbers produced the 1/10 |
+| **Hero moments get 5-second tests J approves (yes/no) before any full render.** One at a time. Never "a 100-second chunk with ten unreviewed changes". | memory feedback-you-are-the-interface |
+| **Comedy:** the bigger the feat, the smaller the reaction; the hold after the boom is the laugh; **no puns**; fewer, longer shots with holds; cut on contact, never on anticipation. | "don't use jokes like Right in the... Mars. Try something a little better" (2026-11-08) |
+| **No music unless it is a music video.** Hawkes Punch has no song in any output; never digital silence (a bed under everything). | "not a music video but rather the fun video" (2026-11-07) |
+| **No AI video or AI footage on screen.** Real-time 3D only; AI is allowed for textures and body motion data on our rigs (and as a mocap source off screen). | the rejected AI shots stay in `Director/acts_ai` |
+| **Real planet scale**; space bodies on the NASA float base, head level, never seated; him screen left, the double screen right; physics drives every change of speed. | "make the planets actual planet size... think One Punch Man" |
+| **No Hawkes Biomedical logo, branding or "we own the category" line** unless J asks. | J |
+| **One Unity, through the `mv` queue.** Never kill or restart it, never make `Director/gen/unity.lock` by hand, `mv hold` for several calls. | `Director/docs/toolchain.md` |
+| **C# and shaders reach Assets only through `mv csharp apply <staging-dir>`** (it takes `Director/gen/compile.lock`, compiles, reverts on error). Never during a final render. | two compile breaks on 2026-11-08 |
+| **Never commit or push.** Nothing in TKShock is committed by an agent. | J |
+| **GPU and vision spend is priced first** (`hawkesgen_estimate`) and capped: cents to a few dollars go (voices, sfx, motion candidates, vision); more, or any cloud render, ask J with the number. | memory feedback-no-rented-gpus-tkshock |
+| **Nothing lands in J's Downloads folder.** A site's own export API + `curl -o` into `Director/gen/...`; never the browser's Download button. | said twice |
+| **Don't ask J to approve steps.** Decide, run, report; stop only for money past the cap, a creative choice only he can make, his sign-in, or going live. Every report names the file, the time and what changed. | "You need to stop asking me. You do it and continue to make this." (2026-11-06) |
+| Never delete `.meta` files unasked; never hand-edit `_Generated`, Timeline tracks, `acts/50-cards.json` or any generated act; make a `_backup/` before destructive batch work; never print, copy or commit secrets. | project safety |
 
-The score is the source of truth. The scene's `_Generated` and every Timeline track are rebuilt from it on each build, so
-never hand-edit them. Hand changes in Unity are lost; put them in the score.
+## The method (every gate stops the pipeline: `mv make`)
 
-## Commands (Unity may be in the background; it only needs to be open)
+1. **Board.** Script (`videos/<v>/SCRIPT.md`) and storyboard (`STORYBOARD.md`, `storyboard/shots.json`: one row per shot with size,
+   lens, frames at 24 fps, action, line, register, what changes). J approves the board in chat. Nothing is animated before this.
+2. **Cards.** `board2cards.mjs` generates `cut.json` and the cards from the board; hand staging goes in `storyboard/overrides.yaml`.
+   `mv cards check`, `mv lint --strict`, `mv cards sheet` for staging.
+3. **Build.** `mv cards` (plain build), `mv shotcheck` to 0 A faults without `--allow-shot`.
+4. **Motion.** Candidates for every hero beat from real sources, scored by `critic.mjs`, watched at 24 fps; `zg_neutral` under every
+   floating body; `mv critic` on the cut, `mv motioncheck` clean.
+5. **Shot.** `mv shot`, `review_strips.mjs`, `qa.mjs --strict`, `mv motioncheck --shot`.
+6. **Test.** Each hero moment as a 5 s clip at full quality with sound, strips and critic vision clean, then J's yes or no (`mv approve`).
+7. **Previs.** `mv previs --fps 24`, strips, a cold view by an agent that never read the script; fixes go in the board or the overrides.
+8. **Final.** `mv freeze`, `mv final --plan`, `mv final` (review, critic, flash check), a cold view of the file, then J:
+   `output/<v>-vN.mp4` plus a copy under 30 MB. Then the note loop (`Director/docs/room.md`).
 
-`node Director/mv.mjs` `ping | status | build | marks | marks-clear | open | setup | refresh`,
-`frame <times>`, `sheet <from> <to> --every <beats> --cols N`, `seek|play <time>`, `pause`,
-`render [--from --to --w --h --fps]` (final mp4 in `Director/output/`),
-`find <words> [--type model|prefab|audio|texture|animation|material|vfx]`, `pull "<package>" "<path words>"...`,
-`call peek '{"pos":[x,y,z],"look":[x,y,z]}'` (free camera on the set), `call look '{"t":100}'` (every look value at a moment),
-`call feedrt` (dumps what the corner camera sends the screens, plus each TV's block), `call inspect '{"path":"Assets/..."}'` (size, rig, parts), `call clips '{"path":"..."}'`, `call bench '{"t":[100]}'` (frame cost).
+## Commands at a glance (`Director/docs/commands.md` has every one)
 
-`node Director/tools/reverse_test.mjs` proves frames match forward and backward. Run it after engine changes. Bars 58-68 can fail it on grain alone (heavy `scan` and `grain`): look at the `_a` and `_b` frames before believing it.
+`mv make | status | approve | coldview | doctor` the pipeline and the machine · `mv new | song | use | videos` videos · `mv cards [check|
+compile|sheet|note|insert|remove] | why | lint` cards and the score · `mv build [--fast] | refresh | shotcheck | motioncheck | critic |
+motion | lab | test` building and checking · `mv shots | shot | frame | sheet | previs | render | final [--plan] | freeze | thaw | review`
+rendering · `mv bake | clips | choreo | style | format | find | pull` libraries · `mv queue | hold | csharp | generated | lease | snap |
+refs | farm` sharing one Unity and the cloud · `mv call <command> '<json>'` the editor bridge. QA, strips, the critic, flashcheck,
+board2cards, the sound tools and the Room are Node tools under `Director/tools/` and `Director/room/`.
 
-**Arms:** gestures are mocap clips on `layer`s first. Use `reach` only for real contact. Stacked `reach` targets lock elbows and bend wrists (J, 2026-11-05).
+## Where things are
 
-`reach` and `plant`: the hand now follows the forearm by default, so wrists stay natural. `"freeWrist":0` keeps the hand's world rotation, `handRot` sets it.
+```
+AGENTS.md, CLAUDE.md             this file (rules, method, map)
+.claude/skills/direct-video/     the director's procedure, agent choreography, failure playbook
+Director/HANDOFF.md              live state of the current video and the system
+Director/PIPELINE.md             the lessons and traps behind every gate (lint reads them)
+Director/docs/                   topic docs (table below); README.md indexes them
+Director/research/               the craft: story, epic action, zero-g acting, Unity animation, how others do it
+Director/review/                 STANDARD.md (the reviewer's bar), motion-critic.md, engine-fidelity.md, qa-calibration.md
+Director/library/                sets, lighting, moods, styles, formats, templates, performances, poses, motion catalog, grips, bake gate
+Director/videos/<v>/             a video: score, acts, cards, cut, style, storyboard, shots, review, final, make, notes, tweaks, _backup
+Director/mv.mjs, tools/, room/   the CLI, every tool, the Review Room;  Director/gen/  scratch: queue, locks, WORKLOG, snaps, mocap, genmotion
+Director/tkshock-docs/           TK Shock's own treatment, storyboard, song, team, roadmap, review, polish, art bible, colour script
+Assets/MusicVideo/               shared engine (Runtime, Editor, Shaders), Person, Person2, Props, Motion (+Clean, Keyed), Sfx
+Assets/Videos/<v>/               a video's scene, Generated, Song;  Assets/Scenes/MusicVideo.unity + Director/score.json are TK Shock
+```
 
-**Camera:** a plain `build` gives every shot that looks at a body a baked dead zone, about a fifth of the frame, so the camera doesn't twitch with the subject. `"deadzone":false` on a shot turns it off. `--fast` skips it.
+## Docs
 
-`build --fast` is for test builds: 70 s against 168 s, because the timeline stays in memory and the scene isn't saved. Before J plays or a full render, do a plain `build`.
-
-After a C# edit, `build` can report the previous compile errors or run on the old code: `refresh`, wait for the reload, then `build`.
-
-Asset Store: `find`/`pull` work on J's downloaded `.unitypackage` files (index in `Director/assets/index.json`, rebuild with
-`py Director/tools/index_assets.py`). `pull` takes only what's needed plus what it references, skips pack scripts, and converts
-materials to `MV/Lit`. Purchases that were never downloaded are not on disk; don't scrape the Store, Unity's terms forbid it.
-
-## The score
-
-`Director/score.json` plus `Director/acts/*.json` in name order. Comments allowed.
-
-Inside a macro, `"+1b"` is measured from the macro's start, not from the previous cue. Times: `"12:3"` bar:beat, `"12"` bar, `"41.2s"`, `41.2` seconds, `"m3"` a mark, `"s5"` a section, plus an offset `"m3+2b"`, `"+1bar"`.
-Lengths: `"2b"`, `"1bar"`, `"0.5s"`. Any cue: `at`, `for`, `until`. Repeat with `"repeat":"1b"` + `times`/`until`, or on hits with
-`"onsets":"kick|snare|hat|all"` + `until`. `"macro":"name"` expands `macros`, `$key` substitutes.
-
-- **Actors** `actors.<name>`: `model` (an alias from `models`, a path, or `prim:cube`), `pos rot scale color emission`, `from`/`until`,
-  `crowd {count shape:grid|circle|line|scatter spacing radius seed modelScale scaleVar face}`, `models` to mix, `tv {...}`, `tvworld` (a surface that is a giant TV).
-- **Shot** `{"at":..,"shot":{name pos rot fov move rotate look follow offset focus aperture handheld dutch dolly:[points] orbit:{around radius y rate angle} frame:[actors] noise blend fovTo fovFor fovEase}}`. `fovTo` is a crash zoom, or a dolly zoom with `move`.
-  Runs until the next shot. Mostly cuts; `blend` only when creative. `look`/`focus` take bones: `person.head`, `.chest`, `.hips`.
-- **Motion** `{"do":kind,"on":actor}`: holds after it ends: `set move rotate scale jump pop shrink spin orbit suck fall scatter tint glow show hide`.
-  Only inside the clip: `hop bob sway shake pulse squash react`. `anim` plays `clip` (any clip in the project by name; `beats` locks a cycle to the beat, `offset`, `speed`).
-  On crowds it acts per member: `stagger`, `jitter`. `every` is beats.
-- **Acting** (actors with a Humanoid rig). All tween with `for`/`ease` and hold; only the bones you name are touched, over whatever clip plays.
-  - `anim`: `{"do":"anim","on":"person","clip":"IdleSit14","blend":"0.3s"}` crossfades from the last clip (default 0.2 s; 0 cuts). `"once":1` plays once and holds the last frame (default loops); `"return":"0.4s"` blends back to the previous clip after `for`. `start`, `stop` (seconds into the clip), `speed`, `beats`, `offset`. Any clip in the project by name; `mv find <words> --type model`, then `mv pull "ULTIMATE ANIMATION COLLECTION" "Humanoid@<Name>.fbx"` (under the Unity lock) brings one in. The turkey clips are `bite death eat getHit1 getHit2 idle jump prancing roll run runAngry sleep squart swim walk`.
-  - `walk`: `{"do":"walk","on":"person","clip":"Sprint","to":[x,y,z],"for":"2bars","stride":3.0}` moves, turns to face the way, and ties the clip to the distance so feet don't skate. `stride` is metres per cycle; `turn`, `face:0`, `rel:1`. Cue the next `anim` when it arrives. Works on turkeys.
-  - `pose`: `{"do":"pose","on":"person","bone":"rightUpperArm","rot":[x,y,z],"for":"1b","ease":"inout"}`, or `"bones":{"head":[..],"chest":[..]}`. `rot` is degrees added on top of the clip, in the actor's own frame, whatever the bone's axes: x tips toward his front, y turns to his right, z rolls toward his left. `[0,0,0]` eases it back. `"space":"local"` uses the bone's own axes. Bones: HumanBodyBones names (`head neck chest spine hips leftUpperArm leftLowerArm leftHand leftUpperLeg leftLowerLeg leftFoot`, same for right). On a turkey, any bone name.
-  - `reach`: `{"do":"reach","on":"person","hand":"right","to":"remote","for":"1b"}` two-bone IK to an actor, bone (`"person.neck"`) or `[x,y,z]`; `offset`, `hint` (where the elbow points), `handRot`. `"weight":0` releases. `"foot":"left"` instead of `hand` does a leg.
-  - `gaze`: `{"do":"gaze","on":"person","to":"tv1.screen","for":"1b"}` chest, neck and head share the turn. `"weight":0` releases, `limit` degrees.
-  - `fingers`: `{"do":"fingers","on":"person","hand":"right","curl":0.8,"for":"0.2b"}`; `"finger":"thumb|index|middle|ring|pinky"` for one.
-  - `plant`: `{"do":"plant","on":"person","foot":"both","for":"2b"}` pins the feet where they were at `at`, or at `pos`. Stays until a `plant` with `"weight":0` or a `release`. Hands and moving things: see Contact below.
-  - `face`: `{"do":"face","on":"person","smile":1,"eyesWide":0.6,"for":"2b"}` shape keys `blink eyesWide smile fear` (`jawOpen` once the next model lands); `{"do":"blink","on":"person","for":"0.2s"}` once.
-- **Performance** (the animation engine: `Runtime/MVPerform.cs`, `MVOverlap.cs`; all pure functions of time). Prefer these over sliding him with `move`/`rotate`.
-  - **Try it without building:** `mv lab file.json` plays cues on a throwaway copy of an actor and writes a sheet, no build, no scene change: `{"on":"person","from":0,"to":4,"every":3,"cols":8,"cues":[{"at":0,"do":"anim","on":"person","clip":"IdleBreathe","blend":0},...]}`, times as in the score. `"actors":{"person":{"model":"person"},"t":{"model":"p3_turkey","pos":[1,0,0]}}` for several; `"probe":[times],"probeBones":["hips","t.neck"]` prints positions. It also proves purity: `reverseWorstMetres` and `shuffledFreshWorstMetres` must be 0.
-  - **Review:** `mv motion <from> <to> --every 2 [--on person --view side|front|back|top --cols 8 --file motion.png]` writes `Director/captures/motion.png`: every Nth frame at 30 fps as a flat silhouette from a fixed view (side = he faces left to right as he stands at `from`), blue line the hips path, yellow the hips now, green left and red right for feet and hands, a floor line, and a big panel below with all the ghosts and paths. It prints `pops` (a bone whose path kinks), `feet` (metres a foot moved while on the floor), `hipsTop`, `hipsLow`, `hipsTravel`. A bad arc, a pop, a foot slide show up here without a render.
-  - **Motion check:** `mv motioncheck <from> <to> [--every 0.1 --on person,p4_grab --budget 60 --lock <your name> --checks joint]` (or `call motioncheck '{"from":0,"to":204,"every":0.1}'`) walks the timeline without rendering and writes `Director/captures/motioncheck.json` and `motioncheck-report.md`: time ranges per shot, ranked by what the shot's camera sees, closer and larger first (frustum only, not occlusion). It covers every humanoid actor plus hero turkeys. **joint**: elbow or knee past 150 or bent backward, shoulder behind 60 / across 50 / twist 120, wrist 70, ankle 65, spine, neck and head 45 per joint, head turn 80, nod 75, hip forward 135 / back 35 / out 60 / across 30 / twist 70, collarbone 45, each read against the parent bone from the rest pose. **overreach**: a bone longer than it was, or a `reach` target beyond the arm. **prop**: capsules between bones against temporary non-convex MeshColliders on each visible mesh (`Physics.ComputePenetration`, plus rays for a part wholly inside a closed mesh); crowds and other skinned meshes are a box at 70% of bounds (`how: bounds`). **self**, **bodies**: capsules against capsules. **floor**, **float**: feet and hips against the surface under them. **footslide**, **pop-rot**, **pop-move**, **bodyslide** run on all 30 fps frames, not across cuts and not during `steps`. **hand**: a finished `reach` or an `attach` over 3 cm off. The rest run every `every` seconds; 2 cm is ignored as contact. Attached items are ignored, `stretch` and `suck` skip a body, and `--checks joint` runs only joints and overreach, much faster. Between samples only the bodies on camera are evaluated, so a body that comes on camera mid-sample starts at the next sample. It changes nothing in the scene (colliders are hidden DontSave objects, each result says `sceneDirtied`) and puts time back. `--lock` takes `gen/unity.lock` only while a piece runs; pieces stop at `--budget` seconds. Ragdoll and hard-falling poses read as contorted by design: look before fixing. `call motioncheck-selftest` proves the collider path.
-  - **Root motion:** `{"do":"anim","on":"person","clip":"LandingHeavy","once":1,"root":1,"blend":"0.1s"}` plays the clip's real travel from where he is and facing as he faces: `_RM` clips, jumps, falls. It stops halfway through the next clip's blend and he stays where it took him. `"root":0.5` scales it, `"root":"y"` only height, `"root":"xz"` no height. **The clip's height comes with it:** `LandingHeavy` starts 0.53 m in the air and drops, so start him 0.53 up or use `"root":"xz"`. Most in-place clips (kneel, sit, get up) already move the hips and need no `root`. `call clipprobe '{"clips":["Name"]}'` shows what a clip's root and hips do.
-  - **Keys:** `{"do":"keys","on":"person","at":"25:1","keys":[{"t":"1b","pose":"crouch"},{"t":"2b","from":"Idle1Wow@0.8","hold":"0.5b","root":{"pos":[0,0,0.6]}},{"t":"3b","bones":{"chest":[25,0,0]},"root":{"pos":[0,0,0.6],"rot":[0,40,0]}},{"t":"4b","pose":"kneel","ease":"out"}],"release":"0.5s"}` animates the whole body pose to pose, with a spline through the keys. A key is `t` (from `at`; `"25:3"` works too) plus any of:
-    - `pose`: a name from `Director/poses.json` (a text library, add to it: `from`, `bones`, `hips`, `pose` to build on another). Starters: `stand crouch kneel kneel_slump kneel_hands_up sit sit_floor lay dead_back hands_up cower stunned hit_front yell surprised wow land_low crawl fall_air recoil lean_in slump`.
-    - `from`: `"Clip@0.4"` takes that frame (seconds; `"Clip@40%"`) of any clip in the project, whole body. Find strong frames with `mv lab` and `"every":1`. Clips are in `Director/assets/motions.md`.
-    - `bones`: degrees on top, same axes as `pose`. With no `pose`/`from` a key is what plays underneath plus these.
-    - `hips`: `[x,y,z]` metres in his frame. `root`: `{"pos":..,"rot":..}` moves the whole actor, relative to where he stood at the start of the cue, in his frame; it stays after the keys end, and a key without `root` keeps the last.
-    - `hold`: stays on this pose that long before moving on. `ease`: shapes the move arriving at this key (`in out inout linear back elastic bounce`), otherwise the spline. `flat`: 1 stops dead on this key.
-    The first key at `t` above 0 starts from what plays underneath; a first key at 0 blends in over `blend` (default 0.2 s, `0` on a cut). After the last key he holds until `release` runs out or the next `anim`/`walk` starts (it fades out over that clip's `blend`). Keys sit on top of clips and under `pose`, `gaze`, `reach`, `plant`. `{"do":"pose","on":"person","pose":"cower","for":"1b"}` or `"from":"Clip@0.4"` is one key at `for`. Use `plant` for the feet when the body moves over them: keys don't know the floor.
-  - **Layers**: `{"do":"layer","on":"person","at":"25:1","clip":"Cheer3","mask":"upper","weight":0.7,"for":"2b","blend":"0.3s"}` plays a clip over part of the body on top of the main clip, so one clip drives his legs while another drives his arms and chest. `mask`: `upper lower arms leftArm rightArm head spine`, or several: `"leftArm,head"`. `upper` is spine, arms and head; `lower` is hips and legs. On a turkey, words in bone names. `weight` 0-1, or keyed: `"weight":[["0b",0],["1b",0.8],["3b",0.2]]`. It fades in over `blend` and, after `for`, out over `blend`. Without `for` it holds until the next `layer` on the same mask, which crossfades over its own `blend`. `"additive":1` adds what the clip does on top of everything under it, measured from the clip's pose at `ref` (seconds, default 0): `{"do":"layer","on":"person","clip":"IdleBreathe","additive":1,"mask":"upper","weight":1}` breathes over a held pose or a ragdoll's last frame. Clip options as `anim`: `speed`, `beats`, `offset`, `start`, `once`. Layers go over clips and under `keys`, `pose`, `gaze`, `reach`, `plant`, in cue order.
-  - **Blend tree**: `{"do":"anim","on":"person","blendTree":[["WalkBackwardsScared",0.6],["ScaredHostage",0.4]],"blend":"0.3s"}` mixes clips over the whole body, every clip at the same fraction of itself, so cycles of different lengths stay in step. The cycle is the weighted average length, or `"cycle":"2b"`, or `"beats":2`. `"mix":[["0b",[1,0]],["2b",[0.3,0.7]]]` keys the mix over time (weights are normalized). It crossfades in and out like any `anim`, with `once`, `offset`, `speed`, `return`; `"root":1` adds up each clip's travel in its share as the mix changes.
-  - **Weight** on `keys` (for every key, or on one key for the move arriving at it) and on bone `pose`: `"anticipate":0.15` is a small move the opposite way first, as a share of the move, starting `lead` (default 0.16 s) before `at`, so the move itself still starts on `at`. `"overshoot":0.12` swings past the end and comes back, `"settle":"0.4s"` is how long that takes to die (alone it gives 0.1 of overshoot). `"successive":true` (or a length per step, default 0.035 s): hips lead, then chest, neck and head, then arms, hands, fingers. Legs stay with the hips. On a turkey the delay grows down each chain. `{"do":"keys","on":"person","at":"25:1","anticipate":0.2,"overshoot":0.14,"settle":"0.5s","successive":true,"keys":[{"t":0,"pose":"stand"},{"t":"1b","pose":"recoil"}]}`.
-  - **Overlap**: `{"at":0,"do":"overlap","on":"person","amount":1,"for":"0.1s"}` on any rigged actor: head, arms and hands lag and swing from how the body really moved, including `move`, `root` and being carried. A spring on each limb tip driven by the body's own motion sampled back in time, so it matches backward. It holds; `"amount":0` fades it out over `for`. `head`, `arms`, `hands`, `torso` (0-1) scale a group, `freq` and `damp` change the springs. A cut or teleport is ignored. Hands in `reach` or `plant` stay exact. Costs about 1.5 ms a frame. On a turkey: `"chains":"neck,tail"`, words in bone names. It is off until cued; turn it on for a whole part when you want him alive, and lower it on a hard `move` (2 m in half a second swings the hand 25 cm). No hair: he has no hair bones.
-  - **Contact**: `plant` also takes hands and a moving place. `{"do":"plant","on":"person","hand":"right","to":"sofa","blend":"0.1s","for":"4b","release":"0.3s"}` locks the hand on the sofa, on the spot it was on at `at`, and it stays there as the sofa moves, keeping its turn on it (`"lockRot":0` to let it turn). `to` takes an actor, a bone (`"p3_turkey.neck"`) or `[x,y,z]`; `"offset":[x,y,z]` picks the spot on the thing instead, and the hand goes there over `blend`, so reach with `reach` first. If the arm can't reach, the body follows: the spine bends, then the hips are dragged (`"follow":0.5` less, `0` never; hands 1, feet 0). `release` lets go after `for`; without it, it holds until a `plant` with `"weight":0`. `"foot":"left"` does the same for a foot, `"hint"` is where the elbow or knee points.
-  - **Joint limits** are on for every human, always the last step: after clips, `pose`, `keys`, `reach`, `plant`, overlap and ragdoll, each joint is eased back inside what a person can do, with a soft stop, so nothing bends the wrong way. Mocap stays as it was unless it was past a limit. A deliberately cartoon moment: `"limits":0` on any cue turns them off while it runs (`pose`, `keys`, `anim`...), `{"do":"limits","on":"person","amount":0,"for":"1b"}` turns them off until `"amount":1`, and `stretch` turns them off by itself. If he stops short of a pose you keyed, that pose was past a joint; `mv lab` prints `limitsMovedDegrees`, the worst correction per bone.
-  - **IK:** elbows point back and out and knees forward when the limb is nearly straight, so they never flip; `hint` overrides. A hand reaching past arm's length leans the torso toward it, up to 30 degrees (`"lean":0` to stop that), then stops short. A `plant` hand drags the body (`follow`).
-  - **Turkeys:** `keys` work by bone name on any rig (`"bones":{"neck":[0,0,50]}`, `root`, `from` with their clips, `successive`), overlap with `chains`.
-  - **Ragdoll**: `{"do":"ragdoll","on":"person","at":"25:1","for":"3b","impulse":[0,1,-2.2],"blendIn":"0.08s","seed":3}` is physics baked at build time into a clip in `Assets/MusicVideo/Generated/Ragdoll/`, from his pose and speed at that moment, so it plays and scrubs like any clip, same seed gives the same clip, and only a changed cue or pose bakes again. `impulse` is metres per second added to the whole body (`"hit":"chest"` to one bone, harder), `spin` degrees per second, `floor` the floor's world height (default: under his feet at `at`, so give it when he starts in the air), `"collide":["sofa","wall_n1"]` actors that stop him, boxes around their meshes where they stand at `at`; they don't move, `gravity` `[x,y,z]`, `drag`, `stiff` (joint damping, default 1.6). `drive` 0-1 holds toward his pose at `at`, or toward `"pose":"cower"` / `"from":"Clip@0.4"`: 0 limp, 0.1-0.3 he fights it, 0.6 a board. `"thrash":40` makes what he fights for wander by that many degrees (`thrashRate` 3.5), with `seed`: struggling. He holds the last frame until the next `anim`, which picks up where he fell (the actor moves there as that clip blends in, over its `blend`; give it a long one, or a get-up clip); he keeps facing as he did before the fall. `"blendOut":"0.3s"` instead fades back to what played before, where he stood, after `for`. His own body parts don't collide with each other. Try it in `mv lab` first: `"actors":{"person":{"model":"person"},"sofa":{"model":"sofa","pos":[0,0,-0.95]}}`, `"collide":["sofa"]`.
-  - **New clips:** Mixamo FBX go in `Assets/MusicVideo/Motion/Humanoid@<name>.fbx` (or `<name>.fbx`). They import as Humanoid with the root kept in the clip and the clip named after the file, so `"clip":"<name>"`, `"from":"<name>@0.4"` and `"root":1` just work. Use "Without Skin" downloads, in place or not. `motion.from-text` in Hawkes Gen is not available: Gen runs it only on SSH GPU servers and those went with AWS.
-- **Attach**: `{"do":"attach","on":"remote","to":"person.rightHand","pos":[..],"rot":[..],"blend":"0.2s"}` follows a bone or actor until `{"do":"detach","on":"remote"}`, which keeps its world pose so `drop`/`move`/`jump` go on from there. `to` takes `actor`, `actor.bone`, `flock#3.head`. A person on a sofa: `attach` him to `sofa` and `topple` the sofa. On an actor: `"parent":"turkey_chef.head"` attaches from the start, `pos`/`rot` are the offset, `"scaled":1` scales with the host. Camera `look`/`focus`/`follow` and `fx` `on` take the same names, plus `person.mouth`, `.hand`, `.lefthand`, `.foot`.
-- **Weight**: `topple` `{"do":"topple","on":"sofa","pivot":[0,0,-0.45],"axis":[1,0,0],"angle":-85,"bounce":0.25,"land":"25:3","at":"25:1","for":"1bar"}` rotates about an edge (`pivot` from the actor, or `"world":1`), falling under gravity and landing on `land`, then bouncing inside `for`. `drop` `{"do":"drop","on":"lamp","floor":0,"bounce":0.35,"height":1.2,"tumble":[80,0,20],"for":"2b"}`. `slide` `{"do":"slide","on":"table","to":[0,0,1.4],"hits":"kick","yaw":4,"for":"2bars"}` stick-slip: it jerks a bit on each hit inside `for` and stays still between (`dir`+`step` instead of `to`; `jerk`). `tremble` `{"do":"tremble","on":"glass","amount":0.006,"band":"kick","for":"2bars"}`. `wobble` `{"do":"wobble","on":"frame","amount":6,"decay":3}` a ringing swing after a hit. Soft props, which the compiler subdivides for you: `ripple` `{"do":"ripple","on":"carpet1","amount":0.1,"wave":0.8,"speed":1.5,"angle":0,"for":"2bars","fade":"0.3s"}` (`"pulse":1` for one hump crossing it), `peel` `{"do":"peel","on":"wall_w1","corner":[1,1,0],"to":1,"curl":0.3,"for":"1bar"}` (0..1 from that corner, holds; `side":-1` lifts the other way; send the rest off with `suck`), `bulge` `{"do":"bulge","on":"curtains","toward":[0,1,2.5],"amount":0.2,"radius":1.2,"for":"2b"}`.
-  Rough for now: `walk` needs a following `anim` to stop cleanly. `peel` assumes a flat sheet and thin walls seen from behind can look thin. The stick-slip `slide` jerks only on hits, so give it `hits` that fall in its window. On `gaze`, the model has no eye bones yet, so eyes don't lead.
-- **Other** `{"do":"fov","on":"feedcam","to":26,"for":"2b"}`. `{"grade":{"suckAt":"tv1.screen"}}` or `[x,y,z]` moves the warp's centre. `"fx":"dust","to":"tv1.screen","pull":0.3` drifts toward a point. `"model":"none"` is an empty actor for grouping.
-- **Look** `{"grade":{...}}` tweens and holds; `{"pulse":{...},"every":"1b","sharp":2}` hits and decays. Keys: `bloom threshold chroma vignette distort exposure contrast saturation hue grain tint
-  focus aperture motionblur shake dutch zoom handheld flash flashColor bars`, world warp `suck suckRadius twist wave toon`, screen `pixel poster halftone ink scan rgb swirl pinch radial tear invert kaleido blur duo duoA duoB mirror mask channel neon neonA neonB hatch`.
-- **TV** `tv` (bright static feed tint mask), `tvflash`, `tvchange` (new picture and colour on the beat), `tvreact` (band, floor, gain). `tvchange` with `"keep":1` moves only the level, no new picture. `feed` shows the corner camera (`feedcam` is an actor).
-- **Lights** `light`, `strobe`, `lightreact` (band, floor, amount), `sky {top mid bottom fog density ambient}`. **Fx** `fx`: `explosion shockwave sparks feathers confetti fireworks smoke dust fire rain snow embers` or `prefab:Assets/...`, with `on`/`pos`.
-- **Time** `{"speed":0.1,"for":"1bar"}` slow motion. `{"steps":12,"for":"8bars"}` animates the world on steps (stop motion); the camera stays smooth. Song time never changes; motion, animation and effects read scene time.
-- **Text** `{"text":"..","style":"pop|slam|type|fade","size":..,"pos":[x,y,0]}`. **Sound** `{"sfx":"Assets/...","volume":1}`.
-- **Inserts** `{"insert":"folder","for":..,"fps":16,"push":0.1,"loop":1}`: frames in `Assets/MusicVideo/Inserts/<folder>/`, picked by scene time.
-
-- **Broadcast graphics** `{"gfx":"lower","title":"..","sub":"..","color":"#c01020","for":"4b"}` slides in and out; `{"gfx":"ticker","text":"..","label":"BREAKING","speed":260,"color":"#..","for":"8b"}` scrolls; `{"gfx":"bug","text":"WTKS 4","box":"#c01020","for":"8b"}` corner logo; `{"gfx":"phone","text":"CALL 1-800-GOBBLE","color":"#ffd000","for":"4b"}` throbs on the beat; `{"gfx":"channel","text":"CH 4","for":"2b"}` green number top right; `{"gfx":"image","path":"Assets/Shows/x.png","pos":[0.8,0.8,0],"size":[400,225,0],"for":"4b"}` any PNG (4 at once). Each lasts `for`. `"on":"feed"` draws it on the room TV's picture instead of the screen.
-- **Channel flip** `{"flip":"CH 7","for":"0.5b","hold":"2b"}` (or `"flip":7`): snow over the whole frame for `for`, the green number stays for `hold`. Cut your shot on the same time or at the end of `for`. `"on":"tv1"` flips only that TV. Key `snow` also works in `grade` and `pulse`.
-- **Texture on a prim** `"texture":"Assets/Shows/wall.png","tile":[2,1],"unlit":1.5`: `unlit` is the glow (so a screen shines in the dark), `color` tints it.
-- **Shows** at the top level of any act: `"shows":{"news":{"set":"show_news","pos":[0,1.5,-3.5],"rot":[0,0,0],"fov":40,"channel":4,"lights":{"key":{"type":"spot","pos":[0,5.5,-5],"rot":[40,0,0],"intensity":3,"color":"#fff2e2","range":16,"angle":62,"shadows":true}}}}`. `pos`, `rot` and `lights` are relative to the `set` actor, or give `"cam":"<actor>"` to look through a camera actor you move yourself. The set's lights are on from the start, and `light` cues reach them as `news.key`.
-- **On a TV** `{"at":"4:4.47","tv":"tv1","show":"news"}` cuts the picture to that show with a short snow flash (`"flip":"0.1b"`, 0 for none); `"show":null` is snow again. `feedcam` is the corner camera as an actor: `{"do":"set","on":"feedcam","pos":..,"rot":..}` and `{"do":"fov","on":"feedcam","to":26,"for":"2b","ease":"inout"}` still work when no show is on, and `"fov"` in a TV's `feed` block sets where it starts. A show's camera is `showcam_<name>`, and takes `do` cues like any actor.
-- **Door** `"portal":{"offset":[40,0,6]}` on a prim quad turns it into an opening: a second camera, which is the main camera carried by `offset`, draws through it with real parallax, clipped at the far doorway. `"turn":180` turns the view about Y, `"res":[960,540]`, `"gain":1.2`, `"shadows":true`. The quad's +z must point the way you look through it (`rot` it). It costs a render only while the quad is visible, so give it `from`/`until`. A door never draws itself in its own view.
-- **Sounds** `{"sfx":"tv_click","volume":0.8}`, or put `"sfx"` on any cue so it fires with it (every repeat and onset too): `{"at":"25:1","do":"move","on":"sofa",..,"sfx":"couch_slam"}`, with `"sfxAt":"+0.5b"` and `"sfxVolume":0.8`. A list picks a variant by time: `"sfx":["turkey_gobble_1","turkey_gobble_2","turkey_gobble_3"]`. A bare name is from `Assets/MusicVideo/Sfx/`, or use an `Assets/...` path. Sounds play in Unity and are mixed into `render`.
-  Library (seconds): `tv_click` .2, `remote_thunk` .5, `tv_power_thump` .6, `channel_flip` .8, `static_burst` .2, `camera_servo` .3, `frame_tick` .2, `glass_ring` .4, `glass_stretch` 1.3, `couch_slam` .6, `wood_scrape` 1.1, `impact_big` 1.8, `turkey_gobble_1` .8, `turkey_gobble_2` .6, `turkey_gobble_3` 1.7, `turkey_flock` 2.7, `feather_whoosh` .7. More: `py Director/tools/sfx_make.py "<name>" "<description>" [seconds]`.
-
-- **Rough for now (broadcast):** only one of each graphic per canvas at a time, so overlapping `gfx` of a kind: the last wins. Text on the feed is small at TV size, so keep it to a few big words. `flip` on the whole frame is a post effect, so `neon`, `swirl` and the like run before it. Doors do not recurse: a door seen through a door is blank. Sounds are shorter than asked for (`turkey_flock` 2.7 s) and nobody has listened to them yet.
-
-Rough first versions from Engine FX, cost-limited on this laptop's GPU: keep one mountain on screen at a time; `"cards"` above 80000 can crash the GPU.
-- **Feathers on him** `{"do":"feather","on":"person","amount":0.4,"from":"LeftHand,RightHand","for":"4bars","ease":"in"}`: `amount` 0-1 is the share of about 9000 feathers grown, tween it up, down or in steps. They spread from the `from` bones along his skeleton (hands, arms, neck, body, never the face). `"count":1` instead of `amount` grows exactly that many: the first is on the back of the first hand. `"strip":1,"to":[x,y,z]` (or `"to":"tv1.screen"`) tears them off in a stream to that point over the cue's length; `"strip":0` puts them back. Also `color`, `color2`, `size`, `lay`.
-- **Mountain** an actor: `"p5_mountain":{"model":"none","mountain":{"radius":45,"height":22,"seed":5,"cards":240000,"holeW":5.4,"holeH":4},"pos":[0,0,-1],"from":"40:1","until":"56:1"}`. The summit is at `pos`, the base `height` below it. `{"do":"drain","on":"p5_mountain","to":1,"for":"6bars","ease":"linear"}`: 0 full, the summit dimples and a funnel bites down, the base reaches the bottom around 0.6, a rectangular hole (`holeW`, `holeH`, half sizes) opens from 0.45 to 0.72 so the TV shows through, and the rest sinks away by 1. Put the TV face up at `pos` minus `height`. His dent: `{"do":"dent","on":"p5_mountain","to":1,"x":0,"z":0,"radius":3,"depth":1.4,"for":"0.5b","ease":"out"}` (x, z from the summit).
-- **Crown** `{"at":"41:1","fx":"crown","pos":[0,0.3,-1],"height":11,"radius":7,"count":3500,"floor":-1,"for":"60s"}`: a ring of feathers thrown up, then floating down. Runs on scene time, so `speed` slows it. `on` takes a bone. Also `size`, `drag`, `color`, `color2`.
-- **Stream** `{"fx":"stream","on":"person.mouth","rate":500,"life":1.2,"spread":0.1,"for":"2bars"}` pours from a bone. `"to":[x,y,z]` or `"to":"tv1.screen"` goes to a point; without it they fall forward (`reach`, `drop`). `"pos"` instead of `on` is a fixed source, `"dir"` and `"push"` shape the curve, `"swirl"` twists it. The rope follows the source as it moves.
-- **Stretch** `{"do":"stretch","on":"person","to":[x,y,z],"amount":1,"for":"2bars","ease":"linear","order":"feet,legs,hips,chest,arms,head,hand"}`: limb by limb he is drawn out to the point (or `"to":"tv1.screen"`) and thins into glowing scan lines. `hand` is the right hand, gone last; `arms` includes the left. Also `span` (how much limbs overlap, .3), `thin`, `lines`, `glow`. Camera `look` follows his bones, not the stretched skin.
-- **Glass as skin** on a TV: `{"at":"28:4","do":"glass","on":"tv1","amount":1,"push":"p3_turkey.head","radius":0.14,"for":"0.1b"}` drapes the picture over whatever is pushing, in metres past the glass, tight over the ball and tented to the frame. `push` takes several, with radii: `"p3_turkey.head:0.12,p3_turkey.neck:0.09"`. `{"at":"29:1","do":"glass","on":"tv1","open":1,"for":"0.5b"}` tears it open around the first pusher, rings and stays open (`openRadius` 0.32, `tear`). `"amount":0` and `"open":0` make it plain again. The pusher must start behind the screen (z greater than the screen for `tv1`), inside the set.
-- **Eye** an actor: `"eyeball":{"model":"none","eye":{"from":"person.head","to":"tv1.screen","skin":"#b27a60","iris":"#2b5566"},"pos":[-60,0,0]}`: a macro set facing +Z with lids, lashes and skin, ball radius 1, same place as the old prim, so old shots still frame it (`rot:[0,180,0]`, z 2.6 to 4.3). The reflection is a small camera really at `from` looking at `to`: whatever he is looking at is what lies in the tear film. `{"do":"eyesee","on":"eyeball","from":"person.head","to":[x,y,z]}` changes it. Controls: `{"do":"face","on":"eyeball","wide":1,"pupil":0.62,"squint":0,"lookX":0,"lookY":0,"reflect":1,"for":"0.25b"}`, `{"do":"blink","on":"eyeball","for":"0.3b"}`, or hold it shut with `"blink":1` in `face`. Grade keys `eyePupil`, `eyeTV` still work. Delete any light-only setup: the eye has its own TV-coloured light; `eye_key` adds a key.
-
-Envelopes for `band`: `kick snare hat drums bass vocal other mid high rms bright`.
-
-Type goes through the screen looks: `neon` turns it to outline, `radial` and `swirl` smear it. Keep lyrics on looks that leave it solid.
-
-## How it works
-
-Everything is a pure function of timeline position: `MVTrack`s fold over all their clips by absolute time, so any frame can be computed
-on its own. That's why scrubbing and reverse work. Never add state that depends on the previous frame, and never use `Time.timeScale`.
-Scene time comes from `SongMap.Warp` (`WarpRaw` skips `steps`, for cameras). A `ScriptableObject` type needs its own file named after it, or it won't save.
-
-`Runtime/`: tracks and drivers, `Shaders/MVWarp.hlsl` injected into `MVLit.shader` (URP Lit, generated from the package copy), `MVStylize` the full-screen pass, `MVTvScreen`.
-`Editor/`: `ScoreCompiler`, `Bridge` (file mailbox, `[BridgeCommand]`), `Transport` (the desk, capture, render), `Quality` (preview in Unity, final for captures and renders), `Setup`.
-
-The song is 87 BPM, 73 bars, a 3-3-2 kick pattern. Re-run the analysis only if the audio changes: demucs into `Director/stems`, then `Director/tools/analyze_deep.py`.
-
-## Rule from J: fully real-time 3D
-
-No AI video or AI footage on screen. AI is allowed for textures, and for body motion data on our rigs (`motion.from-text`, J 2026-11-05). (The rejected AI shots are in `Director/acts_ai` and `Director/ai_footage`; don't bring them back.)
-The person is a real rigged character: 144k tris, 1.8 m, 51 bones with fingers, shape keys `jawOpen blink eyesWide smile fear`. `bash Director/tools/person.sh` rebuilds him (`--no-blender` only installs from `Director/gen/rigged/`). Turkeys: `call importturkeys`, props: `call importprops` copy from `Director/gen` with the right settings; aliases `turkey_<brown|black|white>` are the crowd model, `_hero` the close one; `tv` and `tv_light`, `tv_stand`, `camera`.
-The eye is a real 3D eyeball (`MV/Eye`, keys `eyePupil`, `eyeTV`). `call bones '{"t":70}'` gives where his body is at a moment, for framing.
-`render` runs inside Unity a few frames per tick and waits while J plays: `mv render --w 1280 --h 720 --fps 30 --wait`, `mv render-status`, `mv render-cancel`.
-
-## Current direction
-
-Read `Director/STORYBOARD.md` and `Director/POLISH.md` before working: every bar has an event, and work is judged against polished professional music videos.
+| Topic | File |
+|---|---|
+| **The path forward** (where we are, principles, numbered backlog with status and cost, technique watchlist) | `Director/docs/roadmap-system.md` |
+| Every command | `Director/docs/commands.md` |
+| Builds, lint, previs, bake gate, shot reuse, freeze, the clock, the Unity queue, working beside other agents | `Director/docs/toolchain.md` |
+| Cut, cards, layers, cameras, sets, lighting, moods, templates | `Director/docs/cards.md` |
+| The score and every cue (actors, shots, acting, props, fx, TV, text, sound, the character) | `Director/docs/score-cues.md` |
+| Native acting, MVLate, `rate`, clip import and cleaning, the clip catalog, generated clips | `Director/docs/native-acting.md` |
+| Keyed pose sheets, posecheck, zg_neutral, the hp_ sheets, limbscale | `Director/docs/keyed-poses.md` |
+| Real-scale space | `Director/docs/space.md` |
+| Epic toolkit and punch mechanics | `Director/docs/epic-fx.md` |
+| Judging a render: motion check, shot checks, strips, QA, review, the critic, cold view, "done" | `Director/docs/qa-review.md` |
+| Sound: the mix, voices, lines, beds, captions, silence | `Director/docs/sound.md` |
+| Styles, formats, look keys, captions | `Director/docs/styles-formats.md` |
+| The Review Room and the note loop | `Director/docs/room.md` |
+| Hawkes Gen and Studio in this project, the retarget bone map, open Gen bugs | `Director/docs/gen-and-studio.md` |
+| The cloud render farm (needs J's $20 pilot) | `Director/docs/render-farm.md` |
+| The dialogue clock (design), choreography, this laptop, TK Shock legacy | `Director/docs/dialogue-clock.md`, `choreography.md`, `hardware.md`, `tkshock-legacy.md` |

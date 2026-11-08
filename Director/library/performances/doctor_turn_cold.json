@@ -1,0 +1,239 @@
+{
+ "name": "doctor_turn_cold",
+ "about": "The turn and the stare. She pivots `turn` degrees to face him (positive is to her right) over a slow second, the arms come to her sides, the sway stops, and she holds dead still: no blink, lids a touch wide, the head perfectly level. From `talkAt` the lips move for `talk` seconds on a placeholder mouth (the jaw, in a speech rhythm). Ends in the cold stand; doctor_punch starts from it.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "4.5s",
+ "min": "2.5s",
+ "params": {
+  "turn": 90,
+  "talkAt": 1.6,
+  "talk": 2.2,
+  "patient": "person"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.6s"
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0,
+   "for": "0.4s"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.05,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 1,
+     "ease": "inout",
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ],
+      "rot": [
+       0,
+       "$turn",
+       0
+      ]
+     }
+    },
+    {
+     "t": "=for-0.1",
+     "ease": "linear",
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ],
+      "rot": [
+       0,
+       "$turn",
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.3s"
+  },
+  {
+   "at": 0.1,
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     -4
+    ],
+    "rightUpperArm": [
+     0,
+     0,
+     4
+    ],
+    "leftLowerArm": [
+     -3,
+     0,
+     0
+    ],
+    "rightLowerArm": [
+     -3,
+     0,
+     0
+    ],
+    "neck": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.9s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.2,
+   "do": "face",
+   "smile": 0,
+   "eyesWide": 0.15,
+   "fear": 0,
+   "for": "0.8s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+0.00",
+   "do": "face",
+   "jawOpen": 0.28,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+0.17",
+   "do": "face",
+   "jawOpen": 0.08,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+0.34",
+   "do": "face",
+   "jawOpen": 0.35,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+0.51",
+   "do": "face",
+   "jawOpen": 0.12,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+0.68",
+   "do": "face",
+   "jawOpen": 0.22,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+0.85",
+   "do": "face",
+   "jawOpen": 0.05,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+1.02",
+   "do": "face",
+   "jawOpen": 0.3,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+1.19",
+   "do": "face",
+   "jawOpen": 0.1,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+1.36",
+   "do": "face",
+   "jawOpen": 0.25,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+1.53",
+   "do": "face",
+   "jawOpen": 0.06,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+1.70",
+   "do": "face",
+   "jawOpen": 0.32,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+1.87",
+   "do": "face",
+   "jawOpen": 0.12,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+2.04",
+   "do": "face",
+   "jawOpen": 0.2,
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": "=talkAt+2.21",
+   "do": "face",
+   "jawOpen": 0,
+   "for": "0.2s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

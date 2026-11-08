@@ -1,0 +1,53 @@
+{
+ "id": "holds_out",
+ "f0": 3307,
+ "f1": 3358,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 110.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 110.333,
+   "why": "frame difference x4.7 (4.74)",
+   "file": "spike-03310.jpg"
+  }
+ ],
+ "hash": "a4458fd0c038a97e",
+ "summary": "The measured spike at 110.33 is the tray lurching left and the green blade of grass leaving frame, which hides the shot's whole idea; the turkey and background are steady.",
+ "faults": [
+  {
+   "t": 110.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The tray jerks left. Its right edge moves from about x=168 to 145 to 130 over 110.29–110.36. The green blade, which was fixed at the left edge, shifts and is gone by 110.36. This is the measured spike. The motion is a fast slide, then a stop, with no settle.",
+   "fix": "Ease the tray in rather than snapping it, and keep it and the blade in frame. Hold the tray still while the blade is offered."
+  },
+  {
+   "t": 110.36,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The blade of grass, the whole point of the shot, is not visible from 110.36 on. The viewer sees only an empty silver plate beside the turkey, so there is nothing to offer and nothing to react to.",
+   "fix": "Reframe or reposition the tray so the blade stays visible on the plate through the hold."
+  },
+  {
+   "t": 110.43,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The turkey's head and eye barely change from 110.36 to 110.49. It reads as a stuck stare, with no reaction to the offer.",
+   "fix": "Add a small head tilt or an eye shift toward the blade."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4961,
+  "out": 1054
+ },
+ "cost": 0.0205
+}

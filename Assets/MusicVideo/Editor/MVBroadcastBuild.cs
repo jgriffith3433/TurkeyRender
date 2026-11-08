@@ -134,7 +134,7 @@ namespace TKShock.MV.EditorTools
             var on = (string)c["on"];
             if (on != null && _actors.TryGetValue(on, out var tv) && tv.GetComponent<MVTv>())
             {
-                if (!_tvs.TryGetValue(on, out var tr)) { tr = _tl.CreateTrack<TvTrack>(null, "TV " + on); _tvs[on] = tr; }
+                var tr = TvLane(on);
                 Op(tr, "tv", t, .01, new JObject { ["static"] = 1 });
                 Op(tr, "tv", t + len, .01, new JObject { ["static"] = 0 });
                 a["on"] = "feed";
@@ -154,14 +154,16 @@ namespace TKShock.MV.EditorTools
             if (rt && (rt.width != (int)res.x || rt.height != (int)res.y)) { AssetDatabase.DeleteAsset(rtPath); rt = null; }
             if (!rt) { rt = new RenderTexture((int)res.x, (int)res.y, 24, RenderTextureFormat.ARGB32); AssetDatabase.CreateAsset(rt, rtPath); }
             var mat = AssetDatabase.LoadAssetAtPath<Material>(matPath);
-            if (!mat) { mat = new Material(Shader.Find("MV/DoorPortal")); AssetDatabase.CreateAsset(mat, matPath); }
-            mat.SetTexture("_Portal", rt); mat.SetFloat("_Gain", (float?)p["gain"] ?? 1); EditorUtility.SetDirty(mat);
+            bool mirror = (bool?)p["mirror"] == true;
+            if (!mat) { mat = new Material(Shader.Find(mirror ? "MV/FloorMirror" : "MV/DoorPortal")); AssetDatabase.CreateAsset(mat, matPath); }
+            mat.SetTexture("_Portal", rt); mat.SetFloat("_Gain", (float?)p["gain"] ?? 1); if (mirror) { mat.SetFloat("_Min", (float?)p["min"] ?? .12f); mat.SetFloat("_Max", (float?)p["max"] ?? .62f); mat.SetFloat("_Soft", (float?)p["soft"] ?? .0022f); }
+            EditorUtility.SetDirty(mat);
             view.sharedMaterial = mat; view.shadowCastingMode = ShadowCastingMode.Off;
             view.gameObject.layer = DoorLayer; // a door never sees itself, so a door into its own room can't feed back
             var cg = new GameObject("DoorCamera_" + name); cg.transform.SetParent(_root, false);
             var c = cg.AddComponent<Camera>(); c.targetTexture = rt; c.nearClipPlane = .05f; c.farClipPlane = 900; c.depth = -11; c.enabled = false; c.cullingMask = ~(1 << DoorLayer);
             var ud = cg.AddComponent<UniversalAdditionalCameraData>(); ud.renderPostProcessing = false; ud.antialiasing = AntialiasingMode.None; ud.renderShadows = (bool?)p["shadows"] ?? false;
-            var d = a.gameObject.AddComponent<MVDoor>(); d.cam = c; d.view = view; d.offset = V(p["offset"], Vector3.zero); d.turn = (float?)p["turn"] ?? 0;
+            var d = a.gameObject.AddComponent<MVDoor>(); d.cam = c; d.view = view; d.offset = V(p["offset"], Vector3.zero); d.turn = (float?)p["turn"] ?? 0; d.mirror = mirror;
         }
     }
 }

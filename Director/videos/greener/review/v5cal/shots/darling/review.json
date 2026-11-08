@@ -1,0 +1,39 @@
+{
+ "id": "darling",
+ "f0": 4439,
+ "f1": 4516,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 147.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "8dc7df52cfabdb2f",
+ "summary": "The cut is mostly clean, with a stable camera and no flicker. The one visible problem is a small head and arm change between 148.09 and 148.12, and the remote sits loosely in his hand.",
+ "faults": [
+  {
+   "t": 148.12,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 148.09 and 148.12 the head goes from tilted and turned to square-on, and the remote arm swings lower and further out. This reads as a pose snap just after the cut, not a continuous move.",
+   "fix": "Start the shot on the settled pose, or blend the first 4 frames so the head and arm don't change between 148.09 and 148.12."
+  },
+  {
+   "t": 148.16,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The remote is gripped loosely. The fingers don't visibly wrap it and it sits on the edge of the palm. The other hand hangs limp on the thigh.",
+   "fix": "Tighten the finger curl around the remote and give the idle hand a slight curl or a rest on the knee."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3575,
+  "out": 1379
+ },
+ "cost": 0.0209
+}

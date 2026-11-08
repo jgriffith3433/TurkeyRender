@@ -1,0 +1,196 @@
+# Greener: the energy pass. New cameras on the same takes; nothing here changes a performance.
+
+- id: ch_crane
+  idea: "the drop: from the floor, he points at us and the camera rises and pulls back off him to show the whole hall"
+  feel: "the song opens up"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 30}
+  shot: {dolly: [[400.3, 0.3, 2.75], [400.2, 0.42, 2.5], [400, 1.5, 1.9]], ease: in}
+
+- id: ch_cu_a
+  idea: "a little taste, a slow push into his face, singing straight down the lens"
+  feel: "he means this"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 48}
+  shot: {dolly: [[400.42, 1.6, 3], [400.22, 1.58, 3.5]], ease: linear}
+
+- id: ch_orbit_a
+  idea: "the camera circles him as he dances, the ranks sliding past behind"
+  feel: "gliding"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 32}
+  shot: {dolly: [[398.27, 1.35, 2.03], [399.15, 1.35, 1.62]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: ch_glide
+  idea: "a wide glide across the front of the line"
+  feel: "easy"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 28}
+  shot: {dolly: [[398.2, 1.3, 1.5], [399, 1.35, 1.5]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: ch_cu_b
+  idea: "darling, the other side of his face, closing in"
+  feel: "caught"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 52}
+  shot: {dolly: [[399.5, 1.56, 3.05], [399.72, 1.56, 3.35]], ease: linear}
+
+- id: ch_low_a
+  idea: "low and to the side, a big step from the floor"
+  feel: "a star"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 24}
+  shot: {dolly: [[401.9, 0.42, 2.5], [401.1, 0.34, 2.3]], ease: linear}
+
+- id: ch_orbit_b
+  idea: "a short fast arc in on the groove"
+  feel: "momentum"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 36}
+  shot: {dolly: [[401.67, 1.4, 2.74], [401.02, 1.4, 2.32], [400.26, 1.4, 2.11]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: ch_orbit_c
+  idea: "the arc round the end of the spins, hands to his face"
+  feel: "please"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 38}
+  shot: {dolly: [[399.52, 1.45, 2.35], [398.85, 1.45, 2.61], [398.29, 1.45, 3.06]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: ch_cu_c
+  idea: "funny how, closing in"
+  feel: "the last look before it freezes"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 46}
+  shot: {dolly: [[400.6, 1.55, 3.05], [400.3, 1.58, 3.45]], ease: linear}
+
+- id: ch_high_2
+  idea: "from above, falling toward the pattern"
+  feel: "too perfect"
+  cast: {person: {at: stage, perform: dance_chorus}}
+  camera: {preset: spot, from: cam_high, on: stage_chest, lens: 34}
+  shot: {dolly: [[400, 7.6, 1], [400, 6.5, 1.6]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+  raw:
+    - {at: 0, do: ground, on: person, floor: 0, for: 0}   # the spin's root motion leaves him 5 cm low and the take's bake ends here
+    - {at: 0, do: anim, on: person, clip: mx_hh_booty_step, start: 3.99, speed: 0.25, blend: 0.05, for: 2b}
+
+- id: c2_orbit_a
+  idea: "a wider, faster circle, the whole room turning round him"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 29}
+  shot: {dolly: [[402.8, 1.55, 2.85], [402.08, 1.49, 2.04], [401.13, 1.43, 1.5], [400.06, 1.36, 1.3], [398.98, 1.3, 1.46]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: c2_cu_a
+  idea: "passing through, tight, pushing in"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 50}
+  shot: {dolly: [[399.55, 1.58, 3.05], [399.78, 1.58, 3.4]], ease: linear}
+
+- id: c2_low_a
+  idea: "low from the side, he is huge"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 23}
+  shot: {dolly: [[398.2, 0.36, 2.5], [399, 0.32, 2.25]], ease: linear}
+
+- id: c2_glide
+  idea: "a fast wide glide across the line"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 28}
+  shot: {dolly: [[401.8, 1.35, 1.5], [401, 1.4, 1.5]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: c2_orbit_b
+  idea: "an arc against the spins"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 34}
+  shot: {dolly: [[399.06, 1.4, 2.28], [400.26, 1.4, 2.11], [401.4, 1.4, 2.53]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: c2_low_b
+  idea: "low from the other side"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 24}
+  shot: {dolly: [[401.7, 0.4, 2.5], [400.9, 0.32, 2.3]], ease: linear}
+
+- id: c2_cu_b
+  idea: "tight, the eyes do it all"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 54}
+  shot: {dolly: [[400.5, 1.58, 3.1], [400.24, 1.58, 3.45]], ease: linear}
+
+- id: c2_high_2
+  idea: "from above, the pattern, one beat"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_high, on: stage_chest, lens: 36}
+  shot: {dolly: [[400, 7.4, 1], [400, 6.6, 1.5]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: c2_wide_2
+  idea: "the whole formation, last beat before it stops"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_wide, on: stage_aim, lens: 26}
+  shot: {dolly: [[400, 1.5, 1.2], [400, 1.5, 0.9]], ease: linear}
+
+- id: c2_f1
+  idea: "the point on the hook, frozen on the beat, tight"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 44}
+  shot: {pos: [400.55, 1.55, 3]}
+
+- id: c2_f2
+  idea: "frozen, a hard cut to the floor"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 24}
+  shot: {pos: [398.9, 0.32, 2.6]}
+
+- id: c2_f3
+  idea: "frozen, the whole formation and the confetti hung in the air"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_wide, on: stage_chest, lens: 24}
+  shot: {pos: [400, 1.2, 0.95], look: aim_stage, focus: person.chest, rot: null}
+
+- id: c2_f4
+  idea: "the last stop before everything stops, tight"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_cu, on: person.head, lens: 50}
+  shot: {pos: [399.5, 1.55, 3.1]}
+
+- id: c2_f5
+  idea: "the last stop, from the floor"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_low, on: person.chest, lens: 22}
+  shot: {pos: [400.3, 0.28, 2.8]}
+
+- id: c2_sil
+  idea: "seen from behind the line, black against the bright front doors, three of him dancing"
+  feel: "hollow joy, louder"
+  cast: {person: {at: stage, perform: dance_chorus_2}}
+  camera: {preset: spot, from: cam_med, on: stage_chest, lens: 30}
+  shot: {dolly: [[400.4, 1.05, 6.5], [399.8, 1.1, 6.5]], ease: linear, look: aim_stage, focus: person.chest, rot: null}
+
+- id: happens_2
+  idea: "happens to be so, the other side of him, sliding round"
+  feel: "he will not say"
+  sing: person
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: sit_lawn_chair_sing}}
+  raw:
+    - {at: 3.9b, do: hide, on: blade_hand}
+  camera: {preset: close-up, on: person, side: right, push: 0.18}
+
+- id: whip_out
+  idea: "the smile is barely there and the camera whips up off him into the sky"
+  feel: "here it comes"
+  mood: yard_face
+  cast: {lawn_chair: {at: chair}, person: {at: chair, perform: dress_sit}}
+  camera: {preset: spot, from: chair_wide, on: chair_aim, lens: 40}
+  shot: {pos: [299.29, 1.35, -0.922], look: null, focus: null, fov: 21, rot: [-3, 25, 0], rotate: [-72, 25, 0], ease: in}

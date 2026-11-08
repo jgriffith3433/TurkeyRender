@@ -1,0 +1,67 @@
+{
+ "id": "lips",
+ "f0": 426,
+ "f1": 478,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 14.2,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 14.6,
+   "why": "one patch jumps (cell 124.2, x3.7)",
+   "file": "spike-00438.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 15.5,
+   "why": "one patch jumps (cell 112.5, x4.1)",
+   "file": "spike-00465.jpg"
+  }
+ ],
+ "hash": "6712b52b14d53cb2",
+ "summary": "The cut is clean, but the finger-to-lips move is very fast with no anticipation, the hand covers his mouth, and the return snaps out of frame in about three frames.",
+ "faults": [
+  {
+   "t": 14.63,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "The arm swings from low at the belly (14.56) to up at the face (14.73) in about 6 frames. It has no anticipation and the hand sweeps in a straight line. It reads as a snap rather than a deliberate 'shh' gesture.",
+   "fix": "Add a small wind-up and ease the arm into the lips pose over about 10 frames. Overshoot slightly and settle."
+  },
+  {
+   "t": 14.76,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The whole hand, curled like a fist, covers his mouth and chin at 14.76-14.80. The idea is one finger to the lips, but the finger is lost against the hand and the mouth is hidden. The silhouette is muddy.",
+   "fix": "Pose the hand with the index finger extended and vertical against the lips, with the other fingers curled and the hand angled away from the mouth."
+  },
+  {
+   "t": 15.5,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "On the return the hand and forearm drop out of frame between 15.46 and 15.53 (about 3 frames). The arm vanishes in a snap with no settle, which matches the measured spike.",
+   "fix": "Slow the drop over 8-10 frames, keep the hand in frame, and add a light settle at the rest pose."
+  },
+  {
+   "t": 15.6,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 15.56 to 15.70 the pose is nearly frozen, with the arm hanging stiffly and no secondary motion in the torso or shoulder. After the quick snap it goes dead.",
+   "fix": "Add a subtle breathing and shoulder settle, or a small head shift to carry the 'in on it' feel."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6385,
+  "out": 1517
+ },
+ "cost": 0.0279
+}

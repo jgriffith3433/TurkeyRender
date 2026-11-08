@@ -1,0 +1,35 @@
+{
+ "clip": "mx_hh_raise_roof",
+ "seconds": 4.199999999999999,
+ "popCount": 5,
+ "pops": [
+  "1.867s RightHandMiddle3 kink 0.081 m",
+  "2.800s LeftLowerLeg kink 0.081 m",
+  "2.833s LeftLowerLeg kink 0.159 m",
+  "2.867s LeftLowerLeg kink 0.165 m",
+  "2.900s LeftLowerLeg kink 0.168 m"
+ ],
+ "feet": [
+  "left foot on floor moved 1.197 m, worst step 0.029 m at 0.17s",
+  "right foot on floor moved 1.395 m, worst step 0.032 m at 0.17s"
+ ],
+ "hipsTop": 0.9255918,
+ "hipsLow": 0.892674863,
+ "hipsTravel": "(-0.01, 0.01, 0.00)",
+ "limits": {
+  "LeftLowerLeg": 35.5,
+  "LeftFoot": 22.1,
+  "groundHipsCm": 4.2,
+  "Chest": 3,
+  "RightLowerLeg": 2.9,
+  "RightHand": 0.2
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_hh_raise_roof was rejected by admission: joint limits moved LeftFoot 40.7 deg; foot slide 3.91 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_raise_roof_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_raise_roof_three.mp4"
+ ]
+}

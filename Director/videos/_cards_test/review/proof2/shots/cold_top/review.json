@@ -1,0 +1,22 @@
+{
+ "id": "cold_top",
+ "f0": 510,
+ "f1": 593,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 17,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "e0b5bde00026ed46",
+ "summary": "Clean cut strip: the new shot is stable from its first frame, with no pops, flicker or camera movement across 17.03 to 17.23.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3545,
+  "out": 576
+ },
+ "cost": 0.0129
+}

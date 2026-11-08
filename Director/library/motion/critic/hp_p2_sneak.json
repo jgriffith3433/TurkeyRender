@@ -1,0 +1,295 @@
+{
+ "name": "hp_p2_sneak",
+ "fps": 30,
+ "frames": 61,
+ "seconds": 2,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.03,
+  "straightFrac": 1,
+  "moves": 9,
+  "flatness": null,
+  "abruptFrac": null,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": 0.03,
+  "dynRange": 7.22,
+  "handPeak": 0.2,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.54,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0.62,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 39.23,
+  "plantedFrac": 0.84,
+  "zgSpeedChanges": 0,
+  "snapsPer10": 40,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0,
+  "deadJoints": 7,
+  "deadJointNames": [
+   "Hips",
+   "Spine",
+   "Chest",
+   "Neck",
+   "Head",
+   "LeftShoulder",
+   "RightShoulder"
+  ],
+  "readability": 0.69,
+  "twinnedFrac": 0.5,
+  "curlMedian": 12.83,
+  "spreadMedian": 36.33,
+  "fannedFrac": 0,
+  "bowMedian": 24.84,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 10.17,
+  "armOmegaP95": 23.72,
+  "legOmegaP95": 220.26,
+  "spineOmegaP50": 8.72,
+  "spineOmegaP95": 11.62,
+  "headOmegaP50": 6.11,
+  "headOmegaP95": 6.11,
+  "armAccP95": 591.76,
+  "spineAccP95": 0,
+  "handSpeedP50": 0,
+  "handSpeedP95": 0.18,
+  "spineToArm": 0.86,
+  "energyCV": 1.02,
+  "moveRate": 1.5
+ },
+ "principles": {
+  "arcs": {
+   "score": 0,
+   "note": "median bend 0.03 over 4 moves, 100% straight lines"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": 3.4,
+   "note": "parts' speed profiles agree 0.54 (1 = everything moves as one); typical lag between parts 0 frames; 62% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, 0 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "8 body snaps or pops in 2 s"
+  },
+  "stiffness": {
+   "score": 0,
+   "note": "0% of core joints frozen while the body moves; never moves: Hips, Spine, Chest, Neck, Head, LeftShoulder, RightShoulder"
+  },
+  "silhouette": {
+   "score": 9.3,
+   "note": "4 key poses, readability 0.69 (best of front, side, three-quarter), 50% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 13 deg, spread 36 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.4,
+   "f": 12,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.63,
+   "f": 19,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.77,
+   "f": 23,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 1.5,
+   "f": 45,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 1.63,
+   "f": 49,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 1.77,
+   "f": 53,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "snap",
+   "part": "LeftUpperLeg",
+   "sev": 0.85,
+   "what": "LeftUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.63,
+   "f": 19,
+   "kind": "snap",
+   "part": "LeftUpperLeg",
+   "sev": 0.85,
+   "what": "LeftUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.5,
+   "f": 45,
+   "kind": "snap",
+   "part": "LeftUpperLeg",
+   "sev": 0.85,
+   "what": "LeftUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.63,
+   "f": 49,
+   "kind": "snap",
+   "part": "LeftUpperLeg",
+   "sev": 0.85,
+   "what": "LeftUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "snap",
+   "part": "RightUpperLeg",
+   "sev": 0.85,
+   "what": "RightUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.63,
+   "f": 19,
+   "kind": "snap",
+   "part": "RightUpperLeg",
+   "sev": 0.85,
+   "what": "RightUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.5,
+   "f": 45,
+   "kind": "snap",
+   "part": "RightUpperLeg",
+   "sev": 0.85,
+   "what": "RightUpperLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.63,
+   "f": 49,
+   "kind": "snap",
+   "part": "RightUpperLeg",
+   "sev": 0.85,
+   "what": "RightUpperLeg jumps 9 deg in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.4,
+   "f": 12,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": [
+    "lockstep",
+    "snap"
+   ]
+  },
+  {
+   "t": 0.77,
+   "f": 23,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": []
+  },
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": [
+    "lockstep",
+    "snap"
+   ]
+  },
+  {
+   "t": 1.77,
+   "f": 53,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": []
+  }
+ ],
+ "total": 5.1,
+ "verdict": "looks animated, not acted: arcs and snaps give it away (5.1/10)"
+}

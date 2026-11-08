@@ -1,0 +1,83 @@
+{
+ "id": "ch_low",
+ "f0": 1867,
+ "f1": 1918,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 62.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 63.133,
+   "why": "flicker: patches change and change straight back on 23% of the shot's frames (3 cells here)",
+   "file": "spike-01894.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 63.567,
+   "why": "one patch jumps (cell 132.7, x1.6)",
+   "file": "spike-01907.jpg"
+  }
+ ],
+ "hash": "ba0d274b109de4e6",
+ "summary": "Ceiling/sky patches flicker between tiles around 63.2-63.8 s, and the lighting shifts across the cut strip; the pose reads okay with some stiff, twinned hands-on-hips arms.",
+ "faults": [
+  {
+   "t": 63.23,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling and sky patch swaps between brown ceiling and bright blue/pink sky across neighbouring tiles (63.23 shows sky, 63.26 brown with a jagged edge, 63.33 and 63.36 sky again). This is a big part of the upper frame, and the edges are jagged.",
+   "fix": "Fix the ceiling/sky dome so it does not z-fight or swap. Make the ceiling a single opaque layer or move the near clip plane."
+  },
+  {
+   "t": 63.63,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling/sky patch flickers again: 63.63 and 63.76 show blue sky, while 63.66 and 63.79 are brown. A striped, jagged-edged white patch appears at 63.73 and the upper right at 63.56.",
+   "fix": "Same ceiling fix. Remove the overlapping sky and ceiling geometry visible from the low camera."
+  },
+  {
+   "t": 63.13,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "Confetti squares are flat and unshaded, and they cross in front of the body and the background throughout this section. They are small, but they clutter the silhouette.",
+   "fix": "Light the confetti or add soft edges. Thin it near the torso and face."
+  },
+  {
+   "t": 62.36,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Across the cut strip the character and room lighting darken from 62.26 to 62.49 and the sky patch flickers in and out (62.26, 62.36 and 62.43 show sky; the others are brown). The ceiling is unstable from the first frames of the shot.",
+   "fix": "Lock the ceiling material and the exposure from the first frame."
+  },
+  {
+   "t": 62.43,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both hands sit on the hips in a symmetrical, twinned arm pose with stiff elbows. The line of action is weak.",
+   "fix": "Offset one arm, or change the hand height and elbow angle, to break the symmetry."
+  },
+  {
+   "t": 63.66,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The raised hand reaches up and out of frame at the top (63.69 to 63.79) and is cropped by the frame edge. The held egg or gold object is lost behind the hand.",
+   "fix": "Reframe or tilt up slightly, or lower the reach so the hand stays in frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6398,
+  "out": 963
+ },
+ "cost": 0.0224
+}

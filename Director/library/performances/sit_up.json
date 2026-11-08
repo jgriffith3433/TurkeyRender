@@ -1,0 +1,64 @@
+{
+ "name": "sit_up",
+ "about": "From lying down, sits back up.",
+ "entry": "lie",
+ "exit": "sit_ground",
+ "length": "2.9s",
+ "min": "2.7s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "weight": 0,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleLayDownToIdleSitCampfire",
+   "once": 1,
+   "blend": "0.4s"
+  },
+  {
+   "at": "=for-0.3",
+   "do": "anim",
+   "clip": "IdleSitOntheGroundHostage",
+   "blend": "0.7s"
+  },
+  {
+   "at": 0.02,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 1.2,
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 2.7,
+     "ease": "inout",
+     "root": {
+      "pos": [
+       0,
+       0.14,
+       0
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "test": {
+  "first": [
+   "sit_on_grass",
+   "lie_back"
+  ],
+  "tail": 0.8
+ }
+}

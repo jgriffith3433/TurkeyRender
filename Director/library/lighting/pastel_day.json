@@ -1,0 +1,9 @@
+{
+  // A bright artificial day: a sky too blue and too even, cream clouds in neat painted puffs with pink undersides, and a high hard sun with real shadows. The ground bounces pink, but the shadow side stays a shadow.
+  "sky": { "top": "#3f9fe8", "mid": "#98d8fa", "bottom": "#ffd9e4", "ambient": "#747074", "ambientTop": "#8488a0", "ambientBottom": "#8e7a80", "fog": "#ffe9ee", "density": 0.0003, "sun": "#fff6e2", "sunDir": [0.25, 0.8, -0.55], "sunSize": 0.02, "clouds": 0.5, "cloudColor": "#fffdf6", "cloudShade": "#ffc4d6", "cloudScale": 0.42, "cloudSoft": 0.42, "cloudSpeed": 0.008 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [7, 22, -15.4], "aim": "subject", "color": "#fff0d8", "intensity": 1.7, "shadows": true },
+    "fill": { "type": "directional", "pos": [-8, 3, -8], "aim": "subject", "color": "#ffd4e2", "intensity": 0.2 },
+    "rim": { "type": "directional", "pos": [-5, 5, 22], "aim": "subject", "color": "#e4ecff", "intensity": 1.0 }
+  }
+}

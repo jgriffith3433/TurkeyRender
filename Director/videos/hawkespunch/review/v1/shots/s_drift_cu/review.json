@@ -1,0 +1,69 @@
+{
+ "id": "s_drift_cu",
+ "f0": 2534,
+ "f1": 2647,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 84.467,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 86.767,
+   "why": "one patch jumps (cell 60.3, x12.3)",
+   "file": "spike-02603.jpg"
+  }
+ ],
+ "hash": "c59202b7f1f77f7a",
+ "summary": "The head snaps between 86.73 and 86.76, which is the measured spike and breaks the shot. The held pose is a stiff T-pose with the hand sitting on the planet, and the face doesn't show the smile or the eyes-up beat.",
+ "faults": [
+  {
+   "t": 86.76,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The head jumps in one frame. At 86.73 it is tilted sideways with the hair hiding the face. At 86.76 it is in a turned profile looking left, and the neck and shoulders have shifted with it. There is no in-between pose.",
+   "fix": "Add 3-4 in-between frames for the head turn, or retime the key so the turn eases in. Alternatively, cut the 86.73 frame so the head is already in profile."
+  },
+  {
+   "t": 86.83,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The idea calls for eyes that go up to listen. He looks left and slightly down in profile, and the eyes never lift. The head turn reads as a glance aside, not listening to music.",
+   "fix": "Tilt the head and eyes up on the 'Nope. More music.' beat, and add a blink on the turn."
+  },
+  {
+   "t": 84.63,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The head is bowed with a flat, stern face. There is no whisper or small relieved smile, so the 'peace' half of the shot doesn't read.",
+   "fix": "Add a soft smile and relaxed eyelids on the first held pose, and lift the chin slightly."
+  },
+  {
+   "t": 84.59,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The pose is stiff and near-symmetrical. Both arms stick out sideways in a T-pose with the forearm hanging flat. The left hand rests splayed on the planet's edge, with fingers apparently overlapping the surface. The right hand is cut off at the frame edge.",
+   "fix": "Break the symmetry. Bend the elbows and relax the shoulders. Rest one hand on the planet with the fingers wrapped over the surface, and keep the other hand inside the frame."
+  },
+  {
+   "t": 86.89,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The left hand and forearm sit against the planet with no clear contact. The hand hovers or clips into the surface edge. The right hand floats out at frame right, pale and detached from the dark sleeve.",
+   "fix": "Adjust the arm IK so the palm sits on the planet surface, and bring the right arm inward."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 5020,
+  "out": 1527
+ },
+ "cost": 0.0253
+}

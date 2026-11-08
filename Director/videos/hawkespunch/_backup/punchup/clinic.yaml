@@ -1,0 +1,282 @@
+# Hawkes Punch, the clinic, on the native path (2026-11-07): Unity's Animator plays every body from clips (library/clips.json, the clean copies in
+# Motion/Clean), and only reach, gaze, eyes, fingers and the face go on top. No keys, poses, stances or bakes. Clinic origin is [700,0,0].
+# He stays on the paper bed (mark bed, facing -z) the whole visit; she is beside him for the exam, at the desk (desk_doc, writing_seated) for the
+# symptoms and the prescription, and stands in front of him (doctor_stand) for the line and the punch, so he flies back through the window behind him.
+# No body contact: the can is tossed and caught, the punch cuts on the hit to his face snapping back.
+
+# ---- 1. waiting room (bars 1-4)
+- id: w_clock
+  idea: a clinic at the hour nobody wants, a turkey nurse on the reception counter, nothing moving but the clock
+  feel: sick, small, pale green
+  cast: {nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_reception, on: cam_reception_aim, lens: 32}
+
+- id: w_sits
+  idea: he on a waiting chair, slumped and green, two coughs
+  feel: small
+  cast: {person: {at: waiting_seat, clip: sit_cough, blend: 0}, nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_waiting, on: person, lens: 75}
+  raw:
+    - {at: 0, do: face, on: person, fear: 0.08, smile: 0, for: 0}
+
+- id: w_ahh
+  idea: say ahh: alone in the frame, his jaw drops wide for a doctor we don't see yet
+  feel: ridiculous
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_side, clip: IdleBreathe, blend: 0, look: person}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 65}
+  raw:
+    - {at: 0, do: gaze, on: person, toRel: [0.5, 1.7, 1.0], for: 0}
+    - {at: 0.4b, do: face, on: person, jawOpen: 0.8, eyesWide: 0.2, for: 0.3s, ease: out}
+    - {at: 3.2b, do: face, on: person, jawOpen: 0, eyesWide: 0, for: 0.25s}
+
+- id: w_nurse
+  idea: the nurse looks round at him and does not blink
+  feel: she has seen a thousand like him
+  cast: {nurse: reception_counter clip:idle}
+  camera: {preset: spot, from: cam_nurse_cu, on: nurse, lens: 32}
+  raw:
+    - {at: 1.5b, do: rotate, on: nurse, rot: [0, 150, 0], for: 0.25s, ease: out}
+
+# ---- 2. the exam (bars 5-8). She stands beside the bed head (doctor_side), an arm's length off, and never touches him.
+- id: c_wide
+  idea: the room on the drop: he on the paper bed looking green, she beside him with her stethoscope
+  feel: in good hands
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0, do: gaze, on: person, to: doctor.head, limit: 35, for: 0}
+
+- id: c_eyes
+  idea: his face: his eyes follow her, wary, a slow blink
+  feel: being read
+  cast: {person: {at: bed, clip: mx_sit_look, blend: 0}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 65}
+  events:
+    - {on: 1.2b, who: person, do: blink, for: 0.25s}
+    - {on: 2.6b, who: person, do: face, eyesWide: 0.3, for: 0.3s}
+    - {on: 3.6b, who: person, do: face, eyesWide: 0, for: 0.4s}
+
+- id: c_steth
+  idea: she listens with her hand at her chin, hmm; he holds his breath for her
+  feel: calm, routine
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_bed_side, on: cam_bed_side_aim, lens: 50}
+  raw:
+    - {at: 0, do: gaze, on: person, to: doctor.head, limit: 35, for: 0}
+    - {at: 0.3b, do: layer, on: doctor, clip: mx_thinking, mask: "rightArm,head", start: 0.4, once: 1, weight: 1, for: 3b, blend: 0.3s}
+    - {at: 0.4b, do: face, on: person, eyesWide: 0.25, jawOpen: 0, fear: 0.1, for: 0.4s}
+    - {at: 3.2b, do: face, on: person, eyesWide: 0, fear: 0.04, for: 0.4s}
+
+- id: c_knee
+  idea: the knee tap, cut on the tap: his lower leg kicks out on its own and he looks down at it
+  feel: ha
+  cast: {person: {at: bed, clip: sit_knee_kick_r, blend: 0}, doctor: {at: doctor_side, clip: IdleBreathe, look: person}}
+  camera: {preset: spot, from: cam_bed_side, on: person.hips, lens: 28}
+  shot: {pos: [701.6, 1.15, 2.4], look: person.hips, rot: null}
+  raw:
+    - {at: 0, sfx: frame_tick, volume: 0.6}
+    - {at: 0.3b, do: gaze, on: person, toRel: [0.15, 0.3, 0.8], for: 0.3s, ease: out}
+    - {at: 0.4b, do: face, on: person, eyesWide: 0.4, for: 0.2s}
+    - {at: 2.4b, do: gaze, on: person, to: doctor.head, for: 0.4s, ease: inout}
+    - {at: 2.6b, do: face, on: person, eyesWide: 0, smile: 0.3, for: 0.4s}
+
+# ---- the desk (bars 21-24): she writes at the desk, he stays on the bed; the can is tossed to him without a look
+- id: d_pad
+  idea: wrote a word down on a page: she writes the prescription, head down
+  feel: official
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor, lens: 50}
+  shot: {pos: [700.6, 1.3, 1.4], look: doctor.head, rot: null, deadzone: false}
+  raw:
+    - {at: 0.2s, sfx: Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3, volume: 0.35}
+
+- id: d_face
+  idea: a case of life: his face, reassured, a small smile arrives
+  feel: relief
+  cast: {person: {at: bed, clip: mx_sit_still, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 65}
+  events:
+    - {on: 1b, who: person, do: face, smile: 0.45, fear: 0, for: 1.2s, ease: inout}
+    - {on: 2.4b, who: person, do: blink, for: 0.25s}
+
+- id: d_can
+  idea: every day until the symptoms go away: she stands in front of him and fires the can at him; he catches it against his chest
+  feel: that's it?
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: mx_throw, blend: 0, args: {once: 1}}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_punch, on: cam_punch_aim, lens: 32}
+  raw:
+    - {at: 0, do: gaze, on: person, to: doctor.head, limit: 35, for: 0}
+    - {at: 0.01s, do: attach, on: can, to: doctor.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90], blend: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.6, for: 0}
+    - {at: 0.88s, do: detach, on: can}
+    - {at: 0.9s, do: throwobj, on: can, to: person.rightHand, toOffset: [0.004, 0.072, -0.05], rel: 1, for: 0.28s, arc: 0.12, spin: 720, catch: {pos: [0.004, 0.072, -0.05], rot: [0, 0, 90], squash: 0}}
+    - {at: 0.9s, do: fingers, on: doctor, hand: right, set: 0.15, for: 0.1s}
+    - {at: 0.75s, do: fingers, on: person, hand: right, set: 0.15, for: 0.2s}
+    - {at: 1.15s, do: fingers, on: person, hand: right, set: 0.6, for: 0.08s}
+    - {at: 1.15s, do: face, on: person, eyesWide: 0.5, fear: 0.2, for: 0.1s}
+    - {at: 2.0s, do: anim, on: doctor, clip: IdleBreathe, blend: 0.5}
+    - {at: 2.4s, do: face, on: person, eyesWide: 0.1, fear: 0.08, for: 0.4s}
+- id: d_take
+  idea: he looks at the can in his hand, then up at her
+  feel: okay then
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 55}
+  shot: {pos: [701.3, 1.45, 3.05], look: person.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.6, for: 0}
+    - {at: 0, do: gaze, on: person, to: can, head: 0, for: 0}
+    - {at: 2b, do: gaze, on: person, to: doctor.head, limit: 35, for: 0.5s, ease: inout}
+    - {at: 2.2b, do: face, on: person, eyesWide: 0, smile: 0.1, fear: 0.08, for: 0.5s}
+
+# ---- 3. the line (bars 25-29). She gets up and stands in front of him; her spoken line is acts/70-lines.json.
+- id: l_turn
+  idea: the can in his hand, she does not move; the smile goes off her face and the room goes still
+  feel: something changed
+  mood: clinic_still
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_punch, on: cam_punch_aim, lens: 30}
+  raw:
+    - {at: 0, do: gaze, on: person, to: doctor.head, limit: 35, for: 0}
+    - {at: 0, do: face, on: doctor, smile: 0.35, for: 0}
+    - {at: 1.2b, do: face, on: doctor, smile: 0, eyesWide: 0.12, for: 1.0s}
+- id: l_line
+  idea: her face, flat and still, the line; nothing on it moves but the mouth and one slow blink
+  feel: uh oh
+  mood: clinic_still
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: doctor.head, lens: 60}
+  shot: {pos: [701.15, 1.58, 3.62], look: doctor.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.6, for: 0}
+    - {at: 0, do: face, on: doctor, smile: 0, eyesWide: 0.1, for: 0}
+    - {at: 2.6b, do: blink, on: doctor, for: 0.3s}
+
+- id: l_react
+  idea: him listening, the can in his hand, a swallow
+  feel: this isn't going well
+  mood: clinic_still
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 55}
+  shot: {pos: [701.3, 1.45, 3.05], look: person.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.6, for: 0}
+  events:
+    - {on: 1b, who: person, do: face, fear: 0.18, for: 0.6s}
+    - {on: 2.4b, who: person, do: blink, for: 0.25s}
+
+- id: l_mouth
+  idea: the drums stop; he opens his mouth to answer and nothing comes
+  feel: don't
+  mood: clinic_still
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: IdleBreathe, look: person}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 65}
+  shot: {pos: [701.3, 1.45, 3.05], look: person.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.6, for: 0}
+    - {at: 0.8b, do: face, on: person, jawOpen: 0.22, eyesWide: 0.2, fear: 0.12, for: 0.4s}
+
+# ---- 4. the punch (30:1) and the flight
+- id: p_hit
+  idea: the two-shot from the side: her hook winds up and comes round; cut before it lands
+  feel: oh no
+  mood: clinic_still
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_stand, clip: mx_hook_punch, blend: 0, args: {start: 0.37, once: 1}}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_punch, on: cam_punch_aim, lens: 32}
+  shot: {pos: [701.5, 1.08, 3.6], look: doctor.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.6, for: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0.15s}
+    - {at: 0, do: face, on: doctor, smile: 0, eyesWide: 0.18, fear: 0, for: 0}
+
+- id: p_face
+  idea: hard cut on the hit: his face snaps back with a held flash and he is thrown out of the frame through the window; her fist is never in it
+  feel: WHOA
+  mood: punch_whoa
+  cast: {person: {at: bed, clip: sit_hit_snap, blend: 0, args: {once: 1}}, doctor: {at: doctor_stand, clip: mx_hook_punch, args: {start: 0.37, once: 1}}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 50}
+  shot: {pos: [700.15, 1.5, 3.0], look: person.head, rot: null, screen: [0, 0], deadzone: false}
+  raw:
+    - {at: 0, do: reach, on: person, hand: right, weight: 0, for: 0}
+    - {at: 0, do: gaze, on: person, weight: 0, for: 0}
+    - {at: 0, fx: impact, on: person.head, size: 0.55, count: 30, shake: 0.5, hitstop: 3, color: "#ffcc70", sfx: impact_big, sfxVolume: 1}
+    - {at: 0, do: face, on: person, eyesWide: 0.9, jawOpen: 0.45, for: 0.05s}
+    - {at: 0.22s, do: anim, on: person, clip: mx_flying_back_death, start: 0.35, once: 1, blend: 0.08}
+    - {at: 0.2s, do: fly, on: person, fromHere: 1, points: [[700.6, 1.25, 4.1], [700.6, 1.45, 4.6], [700.6, 1.6, 5.0]], for: 0.5s, ease: in, face: 0}
+    - {at: 0.7s, do: fly, on: person, fromHere: 1, points: [[700.6, 3.2, 6.9], [700.6, 7.5, 12], [700.6, 17, 25], [700.6, 33, 45], [700.6, 58, 74], [700.6, 95, 115], [700.6, 140, 165]], for: 8.7s, ease: linear, face: 0, trail: {lines: 16, width: 0.35}}
+    - {at: 0, do: shatter, on: clinic_window_glass, dir: [0, 0.25, 1], count: 180, push: 7, sfx: glass_ring, sfxVolume: 0.9}
+    - {at: 0, do: hide, on: clinic_window_blind}
+    - {at: 0, do: hide, on: clinic_window_frame}
+    - {at: 0, do: hide, on: clinic_window_sky}
+    - {at: 0.2s, do: jump, on: clinic_roof_plug, pos: [702.4, 3.0, 6.2], height: 5, for: 1.5s}
+    - {at: 0.2s, do: rotate, on: clinic_roof_plug, rot: [110, 30, 50], for: 1.5s, ease: linear}
+    - {at: 0.2s, do: jump, on: clinic_ceiling_plug, pos: [701.4, 2.7, 5.4], height: 3.2, for: 1.3s}
+    - {at: 0.2s, do: rotate, on: clinic_ceiling_plug, rot: [120, 0, 20], for: 1.3s, ease: linear}
+    - {at: 0, do: detach, on: can}
+    - {at: 0.01s, do: fly, on: can, fromHere: 1, points: [[700.7, 1.5, 4.0], [701.0, 2.0, 5.3], [701.2, 6, 11], [701.3, 15, 23], [701.4, 30, 42], [701.4, 54, 70], [701.4, 90, 110], [701.4, 134, 158]], for: 9.3s, ease: linear, roll: 2200}
+
+- id: p_glass
+  idea: from outside, pulled back: the clinic, the window bursting, the roof plug popping, a man going straight up out of it
+  feel: speed
+  mood: punch_whoa
+  cast: {person: {at: bed}, doctor: {at: doctor_stand, clip: mx_hook_punch}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_outside, on: cam_outside_aim, lens: 24}
+  shot: {pos: [703.5, 1.4, 15.5], look: aim_roof, rot: null, fov: 60}
+
+- id: p_travel
+  idea: one travelling shot riding beside him up through the clouds as the sky goes deep blue and the stars come out, speed lines, the can tumbling after
+  feel: and up, and up, and up
+  mood: punch_whoa
+  cast: {person: {at: bed}, can: {at: can_desk}}
+  camera: {preset: spot, from: cam_sky, on: person, lens: 32}
+  shot: {follow: person, offset: [2.6, 1.0, -5.5], lag: 0.12, lead: 0.25, look: person.chest, rot: null, fov: 44}
+  raw:
+    - {at: 0, sky: {top: "#9fc3e4", mid: "#d6e8f6", bottom: "#eaf0ea", clouds: 0.55, cloudColor: "#ffffff", cloudShade: "#b9c6d2", cloudScale: 1.4, cloudSoft: 0.3, stars: 0, density: 0}, for: 0}
+    - {at: 2b, sky: {top: "#071233", mid: "#0f2156", bottom: "#1d3a86", clouds: 0.0, stars: 1, ambient: "#26346a", density: 0}, for: 6.5s, ease: in}
+    - {at: 6b, grade: {saturation: 22, contrast: 16, lift: -0.03, split: 0.12, splitA: "#14286e", splitB: "#ffe6bf"}, for: 4s, ease: inout}
+    - {at: 3b, fx: dust, on: person.chest, count: 300, color: "#ffffff", for: 3b}
+    - {at: 2b, light: clinic_clinic_fluorescent_key, intensity: 2.4, for: 9s}
+    - {at: 0, do: anim, on: person, clip: mx_falling_air, blend: 0}
+
+# ---- 10. the button (78:1)
+- id: b_room
+  idea: hard cut, the exam room again, him on the bed, green, looking at us
+  feel: wait
+  mood: clinic_flat
+  sing: person
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_side, face: 110, clip: mx_hook_punch, blend: 0, args: {start: 0.37, once: 1}}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 65}
+
+- id: b_fist
+  tags: [dark]
+  idea: the fist comes in from off screen and the frame goes black the instant it would land
+  feel: punchline
+  mood: button_dark
+  cast: {person: {at: bed, clip: mx_sit_still}, doctor: {at: doctor_side, clip: mx_hook_punch}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 65}
+  raw:
+    - {at: 0, fx: impact, on: person.head, size: 0.9, shake: 0.5, hitstop: 2, color: "#ffcc70", sfx: impact_big, sfxVolume: 0.9}
+    - {at: 0, grade: {exposure: -14}, for: 0.02s}
+
+- id: b_black
+  tags: [dark]
+  idea: black
+  feel: a held breath
+  mood: button_dark
+  cast: {person: {at: bed, clip: mx_sit_still}}
+  camera: {preset: spot, from: cam_bed_cu, on: person, lens: 65}
+  raw:
+    - {at: 0, grade: {exposure: -14}, for: 0}
+
+- id: b_can
+  idea: the can rolls into frame along the clinic floor and stops; HAWKES PUNCH
+  feel: punchline
+  mood: button_dark
+  cast: {can_roll: {at: door_out}}
+  camera: {preset: spot, from: cam_door, on: can_roll, lens: 40}
+  shot: {pos: [700.2, 0.16, -1.9], look: can_roll, rot: null, fov: 30, aperture: 2}
+  raw:
+    - {at: 0, grade: {exposure: -0.35}, for: 0}
+    - {at: 0, do: set, on: can_roll, pos: [701.6, 0.034, -0.8], rot: [0, 0, 90]}
+    - {at: 0.05s, do: move, on: can_roll, pos: [701.6, 0.034, -2.3], for: 1.7s, ease: out}
+    - {at: 0.05s, do: rotate, on: can_roll, rot: [2520, 0, 90], for: 1.7s, ease: out}
+    - {at: 0.58s, text: "HAWKES PUNCH", style: slam, size: 112, color: "#c01020", pos: [0.5, 0.5, 0], for: 2.9s}

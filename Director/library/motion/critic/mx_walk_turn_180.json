@@ -1,0 +1,293 @@
+{
+ "name": "mx_walk_turn_180",
+ "fps": 30,
+ "frames": 31,
+ "seconds": 1,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.2,
+  "straightFrac": 0,
+  "moves": 7,
+  "flatness": 0.33,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": 0.03,
+  "dynRange": 1.66,
+  "handPeak": 28.06,
+  "bigMoves": 4,
+  "anticipFrac": 0.25,
+  "overshootFrac": 0.5,
+  "coherence": 0.41,
+  "lagMedianFrames": 0,
+  "lockstepFrac": null,
+  "comSpikesPer10": 10,
+  "slideCmPerS": 39.26,
+  "plantedFrac": 0.21,
+  "zgSpeedChanges": null,
+  "snapsPer10": 100,
+  "fingerSnapsPer10": 80,
+  "frozenFrac": 0.06,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.83,
+  "twinnedFrac": 0,
+  "curlMedian": 45.68,
+  "spreadMedian": 35.36,
+  "fannedFrac": 0,
+  "bowMedian": -0.31,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 75.79,
+  "armOmegaP95": 197.07,
+  "legOmegaP95": 198.37,
+  "spineOmegaP50": 26.09,
+  "spineOmegaP95": 108.31,
+  "headOmegaP50": 63.06,
+  "headOmegaP95": 247.83,
+  "armAccP95": 2601.25,
+  "spineAccP95": 1446.9,
+  "handSpeedP50": 1.88,
+  "handSpeedP95": 3.36,
+  "spineToArm": 0.34,
+  "energyCV": 0.53,
+  "moveRate": 2
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.2 over 4 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 5,
+   "note": "speed shape 0.33 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median 0.03 s"
+  },
+  "anticipation": {
+   "score": 8.2,
+   "note": "4 big moves: 1 with anticipation, 2 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 4.8,
+   "note": "parts' speed profiles agree 0.41 (1 = everything moves as one); typical lag between parts 0 frames"
+  },
+  "weight": {
+   "score": 2.5,
+   "note": "1 centre-of-mass jerks, planted feet slide 39 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "10 body snaps or pops, 8 finger snaps in 1 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "6% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "2 key poses, readability 0.83 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 46 deg, spread 35 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 120 m/s^2"
+  },
+  {
+   "t": 0.8,
+   "f": 24,
+   "kind": "snap",
+   "part": "LeftToes",
+   "sev": 0.9,
+   "what": "LeftToes jumps 12 deg in one frame"
+  },
+  {
+   "t": 0.77,
+   "f": 23,
+   "kind": "snap",
+   "part": "LeftFoot",
+   "sev": 0.86,
+   "what": "LeftFoot jumps 10 deg in one frame"
+  },
+  {
+   "t": 0.23,
+   "f": 7,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.86,
+   "what": "LeftHand jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "snap",
+   "part": "LeftLowerLeg",
+   "sev": 0.85,
+   "what": "LeftLowerLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.2,
+   "f": 6,
+   "kind": "snap",
+   "part": "Head",
+   "sev": 0.84,
+   "what": "Head jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.23,
+   "f": 7,
+   "kind": "snap",
+   "part": "RightHand",
+   "sev": 0.84,
+   "what": "RightHand jumps 8 deg in one frame"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "pop",
+   "part": "LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 94 cm in one frame"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "pop",
+   "part": "RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 88 cm in one frame"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "pop",
+   "part": "LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 31 cm in one frame"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "pop",
+   "part": "RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 27 cm in one frame"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.7,
+   "what": "LeftHand stops dead from 100% of its peak"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "abrupt-stop",
+   "part": "RightHand",
+   "sev": 0.7,
+   "what": "RightHand stops dead from 100% of its peak"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.7,
+   "what": "LeftFoot starts at 99% of its peak speed in one frame"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.7,
+   "what": "LeftFoot stops dead from 100% of its peak"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.7,
+   "what": "RightFoot stops dead from 100% of its peak"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.62,
+   "what": "Head stops dead from 100% of its peak"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.6,
+   "what": "Head travels 30 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.55,
+   "what": "Head starts at 94% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 120 m/s^2",
+   "also": [
+    "snap",
+    "pop",
+    "abrupt-stop"
+   ]
+  },
+  {
+   "t": 0.23,
+   "f": 7,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.86,
+   "what": "LeftHand jumps 9 deg in one frame",
+   "also": [
+    "snap",
+    "abrupt-start",
+    "no-prep"
+   ]
+  }
+ ],
+ "total": 7.2,
+ "verdict": "passable, weak on snaps and weight (7.2/10)"
+}

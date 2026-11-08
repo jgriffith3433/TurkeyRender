@@ -1,0 +1,39 @@
+{
+ "id": "hook_3",
+ "f0": 3461,
+ "f1": 3513,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 115.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "9d734ba89bb2cb6e",
+ "summary": "The cut strip is mostly clean with no pops or flicker. The shot opens heavily washed out and the character looks ghosted for about four frames before the colour and contrast settle, and he stands stiffly with his legs together.",
+ "faults": [
+  {
+   "t": 115.43,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The first frames of the shot (115.39 to 115.49) are bleached almost white and the character is semi-transparent against the wall. Contrast then ramps up to full colour by 115.53, so the shot does not read as itself on its first frame.",
+   "fix": "Start the exposure or bloom ramp already settled on the first frame, or shorten it to 1 or 2 frames."
+  },
+  {
+   "t": 115.56,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He stands with his legs together and both hands at his hips, nearly symmetrical, with no visible weight shift or anticipation across 115.53 to 115.63. The silhouette is stiff for the opening of a hook.",
+   "fix": "Offset the hips and one shoulder, and add a small weight shift or arm lead in the first few frames."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3551,
+  "out": 907
+ },
+ "cost": 0.0162
+}

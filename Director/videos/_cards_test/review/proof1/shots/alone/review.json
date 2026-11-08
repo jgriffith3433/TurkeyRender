@@ -1,0 +1,23 @@
+{
+ "id": "alone",
+ "f0": 0,
+ "f1": 97,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "spike",
+   "t": 0.467,
+   "why": "frame difference x41.9 (41.86)",
+   "file": "spike-00014.jpg"
+  }
+ ],
+ "hash": "3171ad2c71a77cba",
+ "summary": "The spike is a fade-up from black (0.43 to 0.46) at the start of the shot, which is a cut and not a fault. The held pose after it is steady with no pops.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3596,
+  "out": 129
+ },
+ "cost": 0.0085
+}

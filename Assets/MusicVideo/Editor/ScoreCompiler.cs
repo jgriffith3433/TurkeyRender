@@ -27,31 +27,53 @@ namespace TKShock.MV.EditorTools
     /// </summary>
     public partial class ScoreCompiler
     {
-        public const string Gen = "Assets/MusicVideo/Generated", ScenePath = "Assets/Scenes/MusicVideo.unity";
-        public const string TimelinePath = Gen + "/MusicVideo.playable", SongPath = Gen + "/Song.asset", PostPath = Gen + "/Post.asset";
-        public static string ScoreFile => Path.Combine(Bridge.Root, "score.json");
+        public static string Gen => Video.Gen; public static string ScenePath => Video.ScenePath;
+        public static string TimelinePath => Gen + "/MusicVideo.playable"; public static string SongPath => Gen + "/Song.asset"; public static string PostPath => Gen + "/Post.asset";
+        public const long MaxSceneBytes = 50000000;
+        public static string ScoreFile => Path.Combine(Video.Dir, "score.json");
+
+        /// <summary>score.json with its "sharedModels" link followed: the models of another score come first, this score's own win.</summary>
+        public static JObject ReadScore()
+        {
+            var s = JObject.Parse(File.ReadAllText(ScoreFile));
+            if (s["sharedModels"] != null)
+            {
+                var shared = (JObject)JObject.Parse(File.ReadAllText(Path.GetFullPath(Path.Combine(Video.Dir, (string)s["sharedModels"]))))["models"]?.DeepClone() ?? new JObject();
+                foreach (var kv in (s["models"] as JObject) ?? new JObject()) shared[kv.Key] = kv.Value;
+                s["models"] = shared;
+            }
+            return s;
+        }
+
+        /// <summary>The song's file, for mixing renders.</summary>
+        public static string SongAudio() => (string)JObject.Parse(File.ReadAllText(ScoreFile))["song"] ?? "Assets/Song/Audio.mp3";
 
         static readonly string[] Meta = { "at", "for", "until", "on", "do", "repeat", "times", "onsets", "note", "shot", "fx", "grade", "pulse", "light", "strobe", "sky", "sfx", "macro", "every", "text", "speed", "tv", "tvflash", "tvchange", "tvreact", "tvclip", "insert", "steps", "lightreact", "gfx", "flip", "sfxAt", "sfxVolume" };
 
         JObject _score; SongMap _song; TimelineAsset _tl; PlayableDirector _dir; MVStage _stage; Transform _root;
         readonly Dictionary<string, MVActor> _actors = new Dictionary<string, MVActor>();
-        readonly Dictionary<string, MotionTrack> _motion = new Dictionary<string, MotionTrack>();
+        readonly Dictionary<string, Lane> _motion = new Dictionary<string, Lane>();
         readonly Dictionary<string, double> _sections = new Dictionary<string, double>();
         readonly List<string> _warn = new List<string>();
         readonly Dictionary<int, double> _marks = new Dictionary<int, double>();
         readonly List<ShotInfo> _shots = new List<ShotInfo>();
         readonly List<AudioTrack> _sfxLanes = new List<AudioTrack>(); readonly List<double> _sfxEnd = new List<double>();
         readonly List<object> _sfxList = new List<object>();
-        PostTrack _post; LightTrack _light; FxTrack _fx; TextTrack _text; TimeTrack _time; InsertTrack _insert; CinemachineTrack _cam; MVBroadcastTrack _gfx;
-        readonly Dictionary<string, TvTrack> _tvs = new Dictionary<string, TvTrack>();
+        Lane _post, _light, _fx, _text, _time, _insert, _gfx; CinemachineTrack _cam;
+        readonly Dictionary<string, Lane> _tvs = new Dictionary<string, Lane>();
         readonly List<(double t, double dur, double v, string ease)> _speeds = new List<(double, double, double, string)>();
+        /// <summary>Hitstops: scene time held at `t` for `d` seconds, then back on the song's clock, so nothing after a freeze lands early against the cuts.</summary>
+        readonly List<(double t, double d)> _holds = new List<(double, double)>();
         readonly List<(double t, double dur, float hz)> _steps = new List<(double, double, float)>();
         int _ops; double _prev;
 
         class ShotInfo { public double t; public double? end; public JObject s; }
 
         [BridgeCommand("build")]
-        public static object BuildCommand(JObject m) => new ScoreCompiler { _fast = (bool?)m?["fast"] == true }.Build();
+        public static object BuildCommand(JObject m) => new ScoreCompiler { _fast = (bool?)m?["fast"] == true, _noReuse = (bool?)m?["full"] == true }.Run();
+
+        object Run() { SceneKeeper.Building = true; try { return Build(); } finally { SceneKeeper.Building = false; } }
+        public object BuildFor(bool fast) { _fast = fast; return Run(); }
 
         bool _fast; // for animators: skips saving the scene and redrawing the Timeline window; the next plain build saves
         readonly System.Diagnostics.Stopwatch _clock = System.Diagnostics.Stopwatch.StartNew();
@@ -64,8 +86,8 @@ namespace TKShock.MV.EditorTools
             InsertCache.Forget();
             _clipFound.Clear();
             MVActor.ForgetNames();
-            _score = JObject.Parse(File.ReadAllText(ScoreFile));
-            foreach (var f in Directory.GetFiles(Path.Combine(Bridge.Root, "acts"), "*.json").OrderBy(x => x))
+            _score = ReadScore();
+            foreach (var f in Directory.GetFiles(Path.Combine(Video.Dir, "acts"), "*.json").OrderBy(x => x))
             {
                 var act = JObject.Parse(File.ReadAllText(f));
                 foreach (var key in new[] { "models", "actors", "macros", "sections", "shows" })
@@ -74,6 +96,7 @@ namespace TKShock.MV.EditorTools
                 if (act["cues"] is JArray cs) { if (!(_score["cues"] is JArray all)) _score["cues"] = all = new JArray(); foreach (var q in cs) all.Add(q); }
             }
             _song = BakeSong();
+            ApplyLibrary();
             if (File.Exists(MarksFile))
                 foreach (var mk in JArray.Parse(File.ReadAllText(MarksFile))) _marks[(int)mk["id"]] = (double)mk["t"];
 
@@ -81,17 +104,19 @@ namespace TKShock.MV.EditorTools
             var old = UnityEngine.Object.FindAnyObjectByType<PlayableDirector>();
             if (old) keep = old.time;
 
+            string setHash = SetHash();
+            _reuse = _fast && !_noReuse && Reusable(setHash);
             Took("read");
             OpenScene();
             Took("openScene");
-            MakeStage();
+            if (!_reuse) { MakeStage(); ApplyCanvas(); }
             MakeTimeline();
-            MakeLights();
+            if (!_reuse) MakeLights();
             Took("stage");
             MakeActors();
             BoneParents();
             Took("actors");
-            MakeShows();
+            if (!_reuse) MakeShows();
             Took("shows");
             foreach (var kv in (_score["sections"] as JObject) ?? new JObject()) _sections[kv.Key] = T(kv.Value, 0);
             var cues = ((_score["cues"] as JArray) ?? new JArray()).OfType<JObject>().ToList();
@@ -101,16 +126,20 @@ namespace TKShock.MV.EditorTools
             FinishMarks();
             BakeWarp();
             Took("cues");
+            Realize();
+            NativeTracks();
+            Took("clips");
 
-            foreach (var kv in _motion) _dir.SetGenericBinding(kv.Value, _actors[kv.Key]);
-            foreach (var t in new TrackAsset[] { _post, _light, _fx, _text, _insert, _gfx }) _dir.SetGenericBinding(t, _stage);
-            foreach (var kv in _tvs) _dir.SetGenericBinding(kv.Value, _actors[kv.Key]);
+            foreach (var kv in _motion) _dir.SetGenericBinding(kv.Value.track, _actors[kv.Key]);
+            foreach (var l in new[] { _post, _light, _fx, _text, _insert, _gfx }) _dir.SetGenericBinding(l.track, _stage);
+            foreach (var kv in _tvs) _dir.SetGenericBinding(kv.Value.track, _actors[kv.Key]);
             foreach (var t in _tl.GetOutputTracks().OfType<MVTrack>()) t.song = _song;
             EditorUtility.SetDirty(_tl);
             if (!_fast) AssetDatabase.SaveAssets();
             Took("saveAssets");
 
-            File.WriteAllText(Path.Combine(Bridge.Root, "sfx-map.json"), JToken.FromObject(_sfxList).ToString());
+            File.WriteAllText(Path.Combine(Video.Dir, "sfx-map.json"), JToken.FromObject(_sfxList).ToString());
+            WriteSilence(); // the epic toolkit's pre-hit silences (MVEpicScore.cs), only when a cue asks
             _dir.playableAsset = _tl;
             MVActor.ForgetNames();
             _dir.RebuildGraph();
@@ -120,16 +149,21 @@ namespace TKShock.MV.EditorTools
             foreach (var d in UnityEngine.Object.FindObjectsByType<MVDeform>(FindObjectsSortMode.None)) d.Restore();
             BakeRagdolls();
             Took("ragdolls");
-            if (!_fast) BakeAim();
+            string aimKey = Hash(_score.ToString(Newtonsoft.Json.Formatting.None));
+            if (!_fast) { BakeAim(); SaveAim(aimKey); } else LoadAim(aimKey);
             Took("aim");
             EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
             if (!_fast) EditorSceneManager.SaveOpenScenes();
             Took("saveScene");
             _dir.Evaluate();
-            Quality.Set(true);
+            if (!Quality.Preview) Quality.Set(true);
             if (!_fast) { Transport.ShowAll(); TimelineEditor.Refresh(RefreshReason.ContentsAddedOrRemoved); }
+            else { var win = TimelineEditor.GetWindow(); if (win != null) win.SetTimeline(_dir); }
+            _memo = _fast ? Remember(setHash) : null;
             Took("finish");
-            return new { tracks = _tl.outputTrackCount, ops = _ops, actors = _actors.Count, shots = _shots.Count, warnings = _warn, took = _took };
+            long sceneBytes = File.Exists(ScenePath) ? new FileInfo(ScenePath).Length : 0;
+            if (!_fast && sceneBytes > MaxSceneBytes) throw new Exception($"The scene is {sceneBytes / 1000000} MB, over the {MaxSceneBytes / 1000000} MB limit. Something is being written into it: look for timeline objects, or a set that should be built from the score.");
+            return new { video = Video.Name, tracks = _tl.outputTrackCount, ops = _ops, actors = _actors.Count, shots = _shots.Count, reused = _reuse ? $"actors, and {_keptTracks} of {_lanes.Count} tracks" : "nothing: " + _whyNot, aim = _fast ? _aimState : "baked", scrubbed = _scrubbed, sceneBytes, warnings = _warn, took = _took };
         }
 
         // ---------- time ----------
@@ -189,15 +223,21 @@ namespace TKShock.MV.EditorTools
 
         static void EnsureFolders()
         {
-            if (!AssetDatabase.IsValidFolder(Gen)) AssetDatabase.CreateFolder("Assets/MusicVideo", "Generated");
-            if (!AssetDatabase.IsValidFolder(Gen + "/Materials")) AssetDatabase.CreateFolder(Gen, "Materials");
+            Folder(Gen); Folder(Gen + "/Materials");
         }
 
-        public static string MarksFile => Path.Combine(Bridge.Root, "marks.json");
+        static void Folder(string path)
+        {
+            if (AssetDatabase.IsValidFolder(path)) return;
+            var parent = Path.GetDirectoryName(path).Replace(Path.DirectorySeparatorChar, '/');
+            Folder(parent); AssetDatabase.CreateFolder(parent, Path.GetFileName(path));
+        }
+
+        public static string MarksFile => Path.Combine(Video.Dir, "marks.json");
 
         SongMap BakeSong()
         {
-            var j = JObject.Parse(File.ReadAllText(Path.Combine(Bridge.Root, "song.json")));
+            var j = JObject.Parse(File.ReadAllText(Path.Combine(Video.Dir, "song.json")));
             var s = AssetDatabase.LoadAssetAtPath<SongMap>(SongPath);
             if (!s) { s = ScriptableObject.CreateInstance<SongMap>(); AssetDatabase.CreateAsset(s, SongPath); }
             float[] A(JToken t) => t.Select(x => (float)x).ToArray();
@@ -216,7 +256,6 @@ namespace TKShock.MV.EditorTools
         {
             if (SceneManager.GetActiveScene().path != ScenePath)
             {
-                EditorSceneManager.SaveOpenScenes();
                 if (File.Exists(ScenePath)) EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
                 else
                 {
@@ -225,6 +264,19 @@ namespace TKShock.MV.EditorTools
                 }
             }
             var dgo = GameObject.Find("_Director"); if (!dgo) dgo = new GameObject("_Director");
+            if (_reuse)
+            {
+                _dir = dgo.GetComponent<PlayableDirector>();
+                _root = GameObject.Find(SceneKeeper.Root).transform;
+                _stage = _root.Find("Stage").GetComponent<MVStage>();
+                foreach (var go in _memo.cameras) if (go) UnityEngine.Object.DestroyImmediate(go); // shots are rebuilt every time
+                foreach (var r in _memo.refs) _dir.ClearReferenceValue(r);
+                return;
+            }
+            // A director keeps a binding for every track it ever saw, and those bindings write the tracks into the scene file.
+            var stale = dgo.GetComponent<PlayableDirector>(); if (stale) UnityEngine.Object.DestroyImmediate(stale);
+            _memo = null;
+            _scrubbed = Scrub();
             _dir = Comp<PlayableDirector>(dgo);
             _dir.playOnAwake = false; _dir.timeUpdateMode = DirectorUpdateMode.DSPClock; _dir.extrapolationMode = DirectorWrapMode.Hold;
             foreach (var n in new[] { "Music", "Sfx" })
@@ -243,8 +295,19 @@ namespace TKShock.MV.EditorTools
             var brain = Comp<CinemachineBrain>(camGo);
             brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0);
 
-            var g = GameObject.Find("_Generated"); if (g) UnityEngine.Object.DestroyImmediate(g);
-            _root = new GameObject("_Generated").transform;
+            var g = GameObject.Find(SceneKeeper.Root); if (g) UnityEngine.Object.DestroyImmediate(g);
+            _root = new GameObject(SceneKeeper.Root).transform;
+        }
+
+        int _scrubbed;
+
+        /// <summary>Destroys every Timeline object that lives in no asset: what earlier fast builds left in memory. Nothing else may own one.</summary>
+        static int Scrub()
+        {
+            int n = 0;
+            foreach (var o in Resources.FindObjectsOfTypeAll<ScriptableObject>())
+                if ((o is PlayableAsset || o is IMarker) && !EditorUtility.IsPersistent(o)) { UnityEngine.Object.DestroyImmediate(o); n++; }
+            return n;
         }
 
         static T Comp<T>(GameObject g) where T : Component { var c = g.GetComponent<T>(); return c ? c : g.AddComponent<T>(); }
@@ -307,9 +370,13 @@ namespace TKShock.MV.EditorTools
         void MakeTimeline()
         {
             // A fast build keeps the timeline in memory: writing thousands of clips into the asset one by one is most of a full build.
-            _tl = _fast ? ScriptableObject.CreateInstance<TimelineAsset>() : AssetDatabase.LoadAssetAtPath<TimelineAsset>(TimelinePath);
+            // DontSave: Timeline passes the flag to every track and clip made under it, so none of it can reach the scene file.
+            if (_reuse) _tl = _memo.tl;
+            else if (_fast) { _tl = ScriptableObject.CreateInstance<TimelineAsset>(); _tl.name = "MusicVideo (fast build)"; _tl.hideFlags = HideFlags.DontSave; }
+            else AssetDatabase.DeleteAsset(TimelinePath); // a new file: deleting 500 tracks out of the old one took over a minute
             if (!_tl) { _tl = ScriptableObject.CreateInstance<TimelineAsset>(); AssetDatabase.CreateAsset(_tl, TimelinePath); }
-            foreach (var t in _tl.GetRootTracks().ToList()) _tl.DeleteTrack(t);
+            // A build that reuses keeps the tracks whose clips haven't changed. Song, cameras and sounds are cheap: those are remade.
+            foreach (var t in _tl.GetRootTracks().ToList()) if (!(_reuse && t is MVTrack)) _tl.DeleteTrack(t);
             var mt = _tl.markerTrack;
             if (mt != null) foreach (var mk in mt.GetMarkers().ToList()) mt.DeleteMarker(mk);
             _tl.durationMode = TimelineAsset.DurationMode.FixedLength; _tl.fixedDuration = _song.duration;
@@ -324,13 +391,126 @@ namespace TKShock.MV.EditorTools
 
             _cam = _tl.CreateTrack<CinemachineTrack>(null, "Cameras");
             _dir.SetGenericBinding(_cam, Camera.main.GetComponent<CinemachineBrain>());
-            _post = _tl.CreateTrack<PostTrack>(null, "Post");
-            _light = _tl.CreateTrack<LightTrack>(null, "Lights");
-            _fx = _tl.CreateTrack<FxTrack>(null, "FX");
-            _text = _tl.CreateTrack<TextTrack>(null, "Text");
-            _time = _tl.CreateTrack<TimeTrack>(null, "Time");
-            _insert = _tl.CreateTrack<InsertTrack>(null, "Inserts");
-            _gfx = _tl.CreateTrack<MVBroadcastTrack>(null, "Graphics");
+            _post = NewLane("Post", typeof(PostTrack));
+            _light = NewLane("Lights", typeof(LightTrack));
+            _fx = NewLane("FX", typeof(FxTrack));
+            _text = NewLane("Text", typeof(TextTrack));
+            _time = NewLane("Time", typeof(TimeTrack));
+            _insert = NewLane("Inserts", typeof(InsertTrack));
+            _gfx = NewLane("Graphics", typeof(MVBroadcastTrack));
+        }
+
+        // ---------- lanes: a build first writes what each track should hold, then touches the Timeline only where that changed ----------
+
+        class LaneOp { public string kind, args; public double start, dur; public UnityEngine.Object[] refs; }
+        class Lane { public string name; public Type type; public MVTrack track; public readonly List<LaneOp> ops = new List<LaneOp>(); }
+        class Memo { public string video, setHash; public int root; public TimelineAsset tl; public readonly Dictionary<string, (MVTrack track, string hash)> tracks = new Dictionary<string, (MVTrack, string)>(); public readonly List<GameObject> cameras = new List<GameObject>(); public readonly List<PropertyName> refs = new List<PropertyName>(); }
+
+        /// <summary>What the last fast build left standing. Statics go at a domain reload, so new code always builds everything once.</summary>
+        static Memo _memo;
+        readonly List<Lane> _lanes = new List<Lane>(); bool _reuse, _noReuse; int _keptTracks; string _whyNot = "plain build"; string _aimState = "none";
+        readonly List<GameObject> _shotObjects = new List<GameObject>(); readonly List<PropertyName> _shotRefs = new List<PropertyName>();
+
+        Lane NewLane(string name, Type type) { var l = new Lane { name = name, type = type }; _lanes.Add(l); return l; }
+        Lane TvLane(string name) { if (!_tvs.TryGetValue(name, out var l)) _tvs[name] = l = NewLane("TV " + name, typeof(TvTrack)); return l; }
+
+        static string Hash(string s) { using (var md5 = System.Security.Cryptography.MD5.Create()) return BitConverter.ToString(md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(s))); }
+
+        /// <summary>Everything that decides the objects on the set. Cues are not in it.</summary>
+        string SetHash()
+        {
+            var o = new JObject { ["video"] = Video.Name, ["song"] = _score["song"], ["models"] = _score["models"], ["actors"] = _score["actors"], ["stage"] = _score["stage"], ["shows"] = _score["shows"] };
+            return Hash(o.ToString(Newtonsoft.Json.Formatting.None));
+        }
+
+        bool Reusable(string setHash)
+        {
+            var m = _memo;
+            if (m == null) { _whyNot = "nothing to reuse: first fast build since a plain build or a reload"; return false; }
+            if (m.video != Video.Name) { _whyNot = "another video was built"; return false; }
+            if (m.setHash != setHash) { _whyNot = "actors, models, stage or shows changed"; return false; }
+            var g = GameObject.Find(SceneKeeper.Root);
+            if (!m.tl || !g || g.GetInstanceID() != m.root || SceneManager.GetActiveScene().path != ScenePath || UnityEngine.Object.FindAnyObjectByType<PlayableDirector>()?.playableAsset != m.tl) { _whyNot = "the scene or timeline was replaced"; return false; }
+            return true;
+        }
+
+        Memo Remember(string setHash)
+        {
+            var m = new Memo { video = Video.Name, setHash = setHash, root = _root.gameObject.GetInstanceID(), tl = _tl };
+            foreach (var l in _lanes) m.tracks[l.name] = (l.track, LaneHash(l));
+            m.cameras.AddRange(_shotObjects); m.refs.AddRange(_shotRefs);
+            return m;
+        }
+
+        static string LaneHash(Lane l)
+        {
+            var b = new System.Text.StringBuilder();
+            foreach (var o in l.ops)
+            {
+                b.Append(o.kind).Append('|').Append(o.start.ToString("R")).Append('|').Append(o.dur.ToString("R")).Append('|').Append(o.args);
+                foreach (var r in o.refs ?? new UnityEngine.Object[0]) b.Append('|').Append(r ? r.GetInstanceID() : 0);
+                b.Append((char)10);
+            }
+            return b.ToString();
+        }
+
+        /// <summary>Puts each lane on its track. Writing thousands of clips was most of a build, so an unchanged lane keeps the track it has.</summary>
+        void Realize()
+        {
+            var keep = new HashSet<string>();
+            foreach (var l in _lanes)
+            {
+                keep.Add(l.name);
+                if (_reuse && _memo.tracks.TryGetValue(l.name, out var old) && old.track)
+                {
+                    l.track = old.track;
+                    if (old.hash == LaneHash(l)) { _keptTracks++; continue; }
+                }
+                else l.track = (MVTrack)_tl.CreateTrack(l.type, null, l.name);
+                // A clip only carries an op, so a changed lane rewrites the clips it has: making and deleting them is the slow part.
+                var have = l.track.GetClips().ToArray();
+                for (int i = 0; i < l.ops.Count; i++)
+                {
+                    var o = l.ops[i]; var c = i < have.Length ? have[i] : l.track.CreateClip<MVClip>();
+                    c.start = o.start; c.duration = o.dur; c.displayName = o.kind;
+                    var m = (MVClip)c.asset; m.kind = o.kind; m.args = o.args; m.refs = o.refs;
+                }
+                for (int i = l.ops.Count; i < have.Length; i++) _tl.DeleteClip(have[i]);
+            }
+            if (_reuse)
+                foreach (var t in _tl.GetRootTracks().OfType<MVTrack>().ToList()) if (!keep.Contains(t.name)) _tl.DeleteTrack(t);
+        }
+
+        // Dead zones take a walk through the whole timeline, so a plain build keeps them for a fast build of the same score.
+        void SaveAim(string key)
+        {
+            var list = new JArray();
+            foreach (var (vc, sh, end) in _aims)
+            {
+                var fx = vc.GetComponent<MVCamFx>();
+                list.Add(new JObject { ["s"] = fx.aimStart, ["d"] = fx.aimStep, ["p"] = new JArray(fx.aimPath.SelectMany(v => new[] { v.x, v.y, v.z })) });
+            }
+            File.WriteAllText(Video.AimFile, new JObject { ["key"] = key, ["aims"] = list }.ToString(Newtonsoft.Json.Formatting.None));
+        }
+
+        void LoadAim(string key)
+        {
+            try
+            {
+                if (!File.Exists(Video.AimFile)) return;
+                var o = JObject.Parse(File.ReadAllText(Video.AimFile));
+                var list = (JArray)o["aims"];
+                if ((string)o["key"] != key || list.Count != _aims.Count) { _aimState = "off: the score changed since the last plain build"; return; }
+                for (int i = 0; i < list.Count; i++)
+                {
+                    var fx = _aims[i].vc.GetComponent<MVCamFx>(); var p = (JArray)list[i]["p"];
+                    var v = new Vector3[p.Count / 3];
+                    for (int k = 0; k < v.Length; k++) v[k] = new Vector3((float)p[k * 3], (float)p[k * 3 + 1], (float)p[k * 3 + 2]);
+                    fx.aimPath = v; fx.aimStart = (double)list[i]["s"]; fx.aimStep = (float)list[i]["d"];
+                }
+                _aimState = "from the last plain build";
+            }
+            catch (Exception e) { _aimState = "off: " + e.Message; }
         }
 
         static readonly Dictionary<string, PrimitiveType> Prims = new Dictionary<string, PrimitiveType> {
@@ -407,7 +587,7 @@ namespace TKShock.MV.EditorTools
                         bool swap = false;
                         var mesh = r is SkinnedMeshRenderer smr ? smr.sharedMesh : null;
                         if (m2 && mesh && mesh.subMeshCount > 1) swap = mesh.GetSubMesh(0).bounds.center.y > mesh.GetSubMesh(1).bounds.center.y;
-                        r.sharedMaterials = m2 ? (swap ? new[] { m2, mm } : new[] { mm, m2 }) : new[] { mm }; r.receiveShadows = false;
+                        r.sharedMaterials = m2 ? (swap ? new[] { m2, mm } : new[] { mm, m2 }) : new[] { mm }; r.receiveShadows = (bool?)def["shadows"] ?? r is SkinnedMeshRenderer; // bodies shade themselves unless told not to
                     }
                 }
                 if (model.StartsWith("Assets/MusicVideo/Turkey/") && def["material"] == null)
@@ -440,8 +620,79 @@ namespace TKShock.MV.EditorTools
                     }
                 }
             }
+            if (def["boxUV"] != null) BoxUV(go, def);
+            if (def["wear"] is JArray wear) Wear(go, wear); // garments skinned to this body's own bones (her lab coat)
             go.transform.SetParent(parent, false);
             return go;
+        }
+
+        /// <summary>"wear":[{"model":"Assets/MusicVideo/Person2/Coat/Coat.fbx","materials":{"Coat_Cloth":"...Coat_Cloth.mat",...}}] (or just the path): each garment's
+        /// skinned meshes are bound by bone name to this body's own bones and become part of the body: its Animator plays them, they hide and show
+        /// with it, and the motion check counts them as the body. The garment must be skinned to the same rest skeleton (blender_coat.py exports
+        /// her armature with the coat). "materials" maps the FBX's material names to .mat files (a list goes on the slots in order). The garment's own armature is dropped.</summary>
+        static void Wear(GameObject body, JArray wear)
+        {
+            var bones = new Dictionary<string, Transform>();
+            foreach (var t in body.GetComponentsInChildren<Transform>(true)) if (!bones.ContainsKey(t.name)) bones[t.name] = t;
+            foreach (var w in wear)
+            {
+                var path = w is JObject wo ? (string)wo["model"] : (string)w;
+                var asset = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+                if (!asset) throw new Exception("no garment at " + path);
+                var g = (GameObject)PrefabUtility.InstantiatePrefab(asset);
+                PrefabUtility.UnpackPrefabInstance(g, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+                var mats = (w as JObject)?["materials"];
+                var skins = g.GetComponentsInChildren<SkinnedMeshRenderer>(true);
+                if (skins.Length == 0) { UnityEngine.Object.DestroyImmediate(g); throw new Exception(path + " has no skinned mesh: import it as Generic (animationType 2), not None"); }
+                foreach (var r in skins)
+                {
+                    var bs = new Transform[r.bones.Length];
+                    for (int i = 0; i < bs.Length; i++)
+                        if (!r.bones[i] || !bones.TryGetValue(r.bones[i].name, out bs[i])) throw new Exception($"{path}: bone {(r.bones[i] ? r.bones[i].name : "null")} is not on the body");
+                    r.bones = bs;
+                    r.rootBone = r.rootBone && bones.TryGetValue(r.rootBone.name, out var rb) ? rb : bones.TryGetValue("Hips", out var hb) ? hb : body.transform;
+                    if (mats != null)
+                    {
+                        var sm = r.sharedMaterials;
+                        for (int i = 0; i < sm.Length; i++)
+                        {
+                            // by the FBX's own material name ({"Coat_Cloth":"...mat"}), or by slot order (a list)
+                            var key = mats is JObject mo ? (sm[i] ? (string)mo[sm[i].name] : null) : mats is JArray ma && i < ma.Count ? (string)ma[i] : null;
+                            if (key == null) continue;
+                            var m = AssetDatabase.LoadAssetAtPath<Material>(key); if (!m) throw new Exception("no material at " + key); sm[i] = m;
+                        }
+                        r.sharedMaterials = sm;
+                    }
+                    r.forceMatrixRecalculationPerRender = true; r.updateWhenOffscreen = true; r.quality = SkinQuality.Bone4; r.receiveShadows = true;
+                    r.transform.SetParent(body.transform, false);
+                    r.gameObject.name = "wear_" + r.gameObject.name;
+                }
+                UnityEngine.Object.DestroyImmediate(g);
+            }
+        }
+
+        /// <summary>"boxUV":tiles a metre: new UVs thrown onto the mesh along its faces, at true size whatever the scale, so a palette prop or a stretched cube can wear a real texture ("texture", "tile", "smooth"). The copy lives with the scene and is never saved.</summary>
+        static void BoxUV(GameObject go, JObject def)
+        {
+            float t = (float)def["boxUV"]; var sc = def["scale"] != null ? V(def["scale"], Vector3.one) : Vector3.one;
+            if (def["scale"] is JValue one) sc = Vector3.one * (float)one;
+            Material mat = null;
+            if (def["texture"] != null) mat = TexMat((string)def["texture"], def["tile"] != null ? V2(def["tile"], Vector2.one) : Vector2.one, (float?)def["unlit"] ?? 0, Col(def["color"], Color.white), (float?)def["smooth"] ?? .25f);
+            foreach (var mf in go.GetComponentsInChildren<MeshFilter>(true))
+            {
+                if (!mf.sharedMesh) continue;
+                var m = UnityEngine.Object.Instantiate(mf.sharedMesh); m.name = mf.sharedMesh.name + "_box"; m.hideFlags = HideFlags.DontSave;
+                var v = m.vertices; var n = m.normals; var uv = new Vector2[v.Length];
+                var s = Vector3.Scale(mf.transform.lossyScale, sc);
+                float ox = Mathf.Abs(go.name.GetHashCode() % 97) / 97f;
+                for (int i = 0; i < v.Length; i++)
+                {
+                    var p = Vector3.Scale(v[i], s); var a = n.Length > i ? new Vector3(Mathf.Abs(n[i].x), Mathf.Abs(n[i].y), Mathf.Abs(n[i].z)) : Vector3.up;
+                    uv[i] = (a.x >= a.y && a.x >= a.z ? new Vector2(p.z, p.y) : a.y >= a.z ? new Vector2(p.x, p.z) : new Vector2(p.x, p.y)) * t + new Vector2(ox, 0);
+                }
+                m.uv = uv; mf.sharedMesh = m;
+                if (mat) { var r = mf.GetComponent<Renderer>(); if (r) r.sharedMaterial = mat; }
+            }
         }
 
         /// <summary>A prim wearing a picture. With "unlit" it glows at that strength, so screens and signs need no light.</summary>
@@ -495,6 +746,17 @@ namespace TKShock.MV.EditorTools
 
         void MakeActors()
         {
+            if (_reuse)
+            {
+                foreach (var a in _root.GetComponentsInChildren<MVActor>(true)) _actors[a.name] = a;
+                foreach (var kv in (_score["actors"] as JObject) ?? new JObject())
+                {
+                    var def = (JObject)kv.Value; string parentName = (string)def["parent"];
+                    if (parentName != null && (parentName.Contains(".") || parentName.Contains("#"))) _boneParents.Add((kv.Key, parentName, def));
+                    ActorOps(kv.Key, def);
+                }
+                return;
+            }
             foreach (var kv in (_score["actors"] as JObject) ?? new JObject())
             {
                 var def = (JObject)kv.Value;
@@ -545,22 +807,48 @@ namespace TKShock.MV.EditorTools
                     FillHuman(a, o);
                 }
                 _actors[kv.Key] = a;
-                if (def["mountain"] != null) { a.gameObject.AddComponent<MVFeatherMountain>().Setup(def["mountain"].ToString()); Op(Track(kv.Key), "show", 0, .01, new JObject()); }
-                if (def["eye"] != null) { a.gameObject.AddComponent<MVEyeRig>().Setup(def["eye"].ToString()); Op(Track(kv.Key), "show", 0, .01, new JObject()); }
+                if (def["shell"] != null) a.gameObject.AddComponent<MVShell>().room = (string)def["shell"] == "room";
+                if (def["grass"] != null) a.gameObject.AddComponent<MVGrass>().Setup(def["grass"].ToString());
+                if (def["fence"] is JObject fe) a.gameObject.AddComponent<MVFence>().Setup(fe.ToString(), TexMat((string)fe["texture"], Vector2.one, 0, Col(fe["color"], Color.white), .25f));
+                if (def["mountain"] != null) a.gameObject.AddComponent<MVFeatherMountain>().Setup(def["mountain"].ToString());
+                if (def["eye"] != null) a.gameObject.AddComponent<MVEyeRig>().Setup(def["eye"].ToString());
+                if (def["space"] != null) a.gameObject.AddComponent<MVSpace>().Setup(def["space"].ToString());
                 if (def["tv"] is JObject tv) MakeTv(a, tv);
-                if (def["from"] != null || def["until"] != null)
-                {
-                    double from = T(def["from"], 0);
-                    if (from > 0) Op(Track(kv.Key), "hide", 0, from, new JObject());
-                    Op(Track(kv.Key), "show", from, .01, new JObject());
-                    if (def["until"] != null) Op(Track(kv.Key), "hide", T(def["until"], 0), .01, new JObject());
-                }
+                ActorOps(kv.Key, def);
+            }
+        }
+
+        /// <summary>What an actor's definition puts on its track, apart from the object itself.</summary>
+        void ActorOps(string name, JObject def)
+        {
+            if (def["mountain"] != null || def["grass"] != null) Op(Track(name), "show", 0, .01, new JObject());
+            if (def["eye"] != null || def["space"] != null) Op(Track(name), "show", 0, .01, new JObject());
+            if (def["from"] != null || def["until"] != null)
+            {
+                double from = T(def["from"], 0);
+                if (from > 0) Op(Track(name), "hide", 0, from, new JObject());
+                Op(Track(name), "show", from, .01, new JObject());
+                if (def["until"] != null) Op(Track(name), "hide", T(def["until"], 0), .01, new JObject());
             }
         }
 
         readonly List<(string name, string parent, JObject def)> _boneParents = new List<(string, string, JObject)>();
 
         /// <summary>Records a Humanoid's bones and how they sit at rest, so the score can pose it in terms of the actor.</summary>
+        /// <summary>A stand-in for the lab that isn't in the open scene: a prim, a model path or an alias from the score's models, as a plain actor.</summary>
+        public static MVActor LabActor(JObject score, string name, string model, JObject def)
+        {
+            var sc = new ScoreCompiler { _score = score ?? new JObject() };
+            var go = new GameObject(name);
+            var a = go.AddComponent<MVActor>();
+            a.basePos = V(def["pos"], Vector3.zero); a.baseEuler = V(def["rot"], Vector3.zero); a.baseScale = def["scale"] != null ? V(def["scale"], Vector3.one) : Vector3.one;
+            go.transform.localPosition = a.basePos; go.transform.localEulerAngles = a.baseEuler; go.transform.localScale = a.baseScale;
+            var o = sc.Spawn(model, def, go.transform);
+            a.animRoot = o; a.clips = ClipsOf(o, model);
+            FillHuman(a, o);
+            return a;
+        }
+
         static void FillHuman(MVActor a, GameObject o)
         {
             var an = o.GetComponentInChildren<Animator>(true);
@@ -702,20 +990,18 @@ namespace TKShock.MV.EditorTools
             }
         }
 
-        MotionTrack Track(string actor)
+        Lane Track(string actor)
         {
             if (!_actors.ContainsKey(actor)) throw new Exception("no actor named '" + actor + "'");
             if (_labOps != null) return null;
-            if (!_motion.TryGetValue(actor, out var t)) { t = _tl.CreateTrack<MotionTrack>(null, actor); _motion[actor] = t; }
+            if (!_motion.TryGetValue(actor, out var t)) _motion[actor] = t = NewLane(actor, typeof(MotionTrack));
             return t;
         }
 
-        void Op(MVTrack track, string kind, double start, double dur, JObject args, params UnityEngine.Object[] refs)
+        void Op(Lane track, string kind, double start, double dur, JObject args, params UnityEngine.Object[] refs)
         {
             if (_labOps != null) { _labOps.Add(new Op { start = Math.Max(0, start), end = Math.Max(0, start) + Math.Max(dur, 1.0 / 60), kind = kind, a = Args.Parse(args.ToString(Newtonsoft.Json.Formatting.None)), refs = refs }); return; }
-            var c = track.CreateClip<MVClip>();
-            c.start = Math.Max(0, start); c.duration = Math.Max(dur, 1.0 / 60); c.displayName = kind;
-            var m = (MVClip)c.asset; m.kind = kind; m.args = args.ToString(Newtonsoft.Json.Formatting.None); m.refs = refs;
+            track.ops.Add(new LaneOp { kind = kind, start = Math.Max(0, start), dur = Math.Max(dur, 1.0 / 60), args = args.ToString(Newtonsoft.Json.Formatting.None), refs = refs });
             _ops++;
         }
 
@@ -751,6 +1037,9 @@ namespace TKShock.MV.EditorTools
             Fire(With(c, t));
         }
 
+        /// <summary>A tween is at 0 on its own first frame. "for":0 means already there, so it starts a tick early and is done on that frame.</summary>
+        static double Now0(double t, double len) => len <= 0 ? t - 1.0 / 60 : t;
+
         static JObject With(JObject c, double t) { var x = (JObject)c.DeepClone(); x["__t"] = t; return x; }
 
         static JObject Substitute(JObject c, Dictionary<string, JToken> subs)
@@ -785,6 +1074,7 @@ namespace TKShock.MV.EditorTools
                 _prev = keep;
             }
             else if (c["shot"] != null) _shots.Add(new ShotInfo { t = t, s = (JObject)c["shot"], end = c["for"] != null || c["until"] != null ? t + Len(0) : (double?)null });
+            else if (c["do"] != null && EpicDo(c, t)) { } // impactframe, speedlines, shake, silence, freeze, hitshake, smear (MVEpicScore.cs)
             else if (c["do"] != null)
             {
                 var targets = c["on"] is JArray arr ? arr.Select(x => (string)x).ToArray() : new[] { (string)c["on"] };
@@ -809,7 +1099,9 @@ namespace TKShock.MV.EditorTools
                         var clip = actor.FindClip((string)c["clip"] ?? "") ?? ProjectClip((string)c["clip"]);
                         if (!clip) { _warn.Add($"{name}: no clip '{c["clip"]}' on it or in the project. Find it with mv find, then mv pull"); continue; }
                         if (a["start"] != null) a["start"] = (float)a["start"];
-                        Op(Track(name), kind, t, len, a, clip);
+                        CheckAdmitted(name, actor, clip);
+                        if (kind == "anim" && c["warpTo"] != null) WarpCue(name, actor, c, a, clip, t, len);
+                        Op(Track(name), c["rootOnly"] != null ? "root" + kind : kind, t, len, a, clip);
                         continue;
                     }
                     if (MotionCue(name, actor, kind, c, a, t, len)) continue;
@@ -820,6 +1112,8 @@ namespace TKShock.MV.EditorTools
             {
                 var name = (string)c["fx"]; var a = ArgsOf(c);
                 if (c["on"] != null) a["on"] = c["on"];
+                PunchFx(name, c, a, t);
+                EpicFx(name, c, a, t);
                 UnityEngine.Object prefab = null;
                 if (name.StartsWith("prefab:")) { prefab = AssetDatabase.LoadAssetAtPath<GameObject>(name.Substring(7)); if (!prefab) _warn.Add("no prefab " + name); }
                 Op(_fx, prefab ? "prefab" : name, t, Len(FxLibrary.DefaultLife(name)), a, prefab ? new[] { prefab } : new UnityEngine.Object[0]);
@@ -827,7 +1121,7 @@ namespace TKShock.MV.EditorTools
             else if (c["insert"] != null)
             {
                 var a = ArgsOf(c); a["name"] = c["insert"];
-                if (!Directory.Exists(Path.Combine(Bridge.Root, "inserts", (string)c["insert"]))) { _warn.Add("no footage called " + c["insert"]); return; }
+                if (!Directory.Exists(Path.Combine(Video.Dir, "inserts", (string)c["insert"]))) { _warn.Add("no footage called " + c["insert"]); return; }
                 Op(_insert, "insert", t, Len(3), a);
             }
             else if (c["steps"] != null) _steps.Add((t, Len(.01), (float)c["steps"]));
@@ -846,23 +1140,23 @@ namespace TKShock.MV.EditorTools
                 var name = (string)c[kind]; var a = ArgsOf(c);
                 if (c["every"] != null) a["every"] = Beats(c["every"]);
                 if (!_actors.ContainsKey(name) || !_actors[name].GetComponent<MVTv>()) { _warn.Add("no TV called '" + name + "'"); return; }
-                if (!_tvs.TryGetValue(name, out var tr)) { tr = _tl.CreateTrack<TvTrack>(null, "TV " + name); _tvs[name] = tr; }
+                var tr = TvLane(name);
                 if (a["flip"] != null) a["flip"] = Dur(a["flip"], t, 0);
                 if (kind == "tv" && c.Property("show") != null && c["show"].Type == JTokenType.Null) a["show"] = "";
                 if (kind == "tv" && a["show"] != null && (string)a["show"] != "" && _score["shows"]?[(string)a["show"]] == null) _warn.Add("no show called " + a["show"]);
                 Op(tr, kind, t, Len(kind == "tv" || kind == "tvclip" ? .01 : 1), a);
             }
-            else if (c["grade"] != null) { var a = (JObject)c["grade"].DeepClone(); if (c["ease"] != null) a["ease"] = c["ease"]; Op(_post, "grade", t, Len(.01), a); }
+            else if (c["grade"] != null) { var a = (JObject)c["grade"].DeepClone(); if (c["ease"] != null) a["ease"] = c["ease"]; var ln = Len(.01); Op(_post, "grade", Now0(t, ln), ln, a); }
             else if (c["pulse"] != null)
             {
                 var a = (JObject)c["pulse"].DeepClone();
                 if (c["every"] != null) a["every"] = Beats(c["every"]);
                 Op(_post, "pulse", t, Len(_song.TimeOf(_song.BeatAt(t) + 1) - t), a);
             }
-            else if (c["light"] != null) { var a = ArgsOf(c); a["name"] = c["light"]; Op(_light, "light", t, Len(.01), a); }
+            else if (c["light"] != null) { var a = ArgsOf(c); a["name"] = c["light"]; var ln = Len(.01); Op(_light, "light", Now0(t, ln), ln, a); }
             else if (c["strobe"] != null) { var a = ArgsOf(c); a["name"] = c["strobe"]; if (c["every"] != null) a["every"] = Beats(c["every"]); Op(_light, "strobe", t, Len(1), a); }
-            else if (c["sky"] != null) { var a = (JObject)c["sky"].DeepClone(); if (c["ease"] != null) a["ease"] = c["ease"]; Op(_light, "sky", t, Len(.01), a); }
-            else if (c["text"] != null) { var a = ArgsOf(c); a["text"] = c["text"]; Op(_text, "text", t, Len(2), a); }
+            else if (c["sky"] != null) { var a = (JObject)c["sky"].DeepClone(); if (c["ease"] != null) a["ease"] = c["ease"]; var ln = Len(.01); Op(_light, "sky", Now0(t, ln), ln, a); }
+            else if (c["text"] != null) { var tc = TypeCue(c); var a = ArgsOf(tc); a["text"] = tc["text"]; Op(_text, "text", t, Len(2), a); }
             else if (c["sfx"] != null) { }
             else _warn.Add("cue does nothing: " + c.ToString(Newtonsoft.Json.Formatting.None));
         }
@@ -935,7 +1229,7 @@ namespace TKShock.MV.EditorTools
             {
                 int n = Mathf.Max(2, (int)Math.Ceiling((end - sh.t) / step) + 1);
                 var raw = new Vector3[n];
-                for (int i = 0; i < n; i++) { _dir.time = Math.Min(sh.t + i * step, end - .001); _dir.Evaluate(); raw[i] = vc.LookAt.position; }
+                for (int i = 0; i < n; i++) { _dir.time = Math.Min(sh.t + i * step, end - .001); _dir.Evaluate(); MVLate.Flush(); raw[i] = vc.LookAt.position; }
                 var cam = V(sh.s["pos"], vc.transform.position);
                 float fov = (float?)sh.s["fov"] ?? 40, r = Vector3.Distance(cam, raw[0]) * Mathf.Tan(fov * .5f * Mathf.Deg2Rad) * .2f;
                 var p = raw[0];
@@ -954,6 +1248,7 @@ namespace TKShock.MV.EditorTools
         {
             if (_shots.Count == 0) _shots.Add(new ShotInfo { t = 0, s = new JObject { ["pos"] = new JArray(0, 2, -10), ["fov"] = 40 } });
             _shots.Sort((a, b) => a.t.CompareTo(b.t));
+            foreach (var sh in _shots) StyleShot(sh.s);
             TimelineClip prev = null;
             for (int i = 0; i < _shots.Count; i++)
             {
@@ -966,6 +1261,7 @@ namespace TKShock.MV.EditorTools
                 var shot = (CinemachineShot)clip.asset;
                 shot.VirtualCamera.exposedName = GUID.Generate().ToString();
                 _dir.SetReferenceValue(shot.VirtualCamera.exposedName, vc);
+                _shotRefs.Add(shot.VirtualCamera.exposedName); _shotObjects.Add(vc.gameObject);
                 if (prev != null && blend > 0)
                 {
                     prev.duration = Math.Max(prev.duration, sh.t + blend - prev.start);
@@ -973,7 +1269,7 @@ namespace TKShock.MV.EditorTools
                 }
                 prev = clip;
                 ShotMotion(name, sh, end);
-                if (vc.LookAt && (bool?)sh.s["deadzone"] != false && vc.LookAt.GetComponentInParent<Animator>()) _aims.Add((vc, sh, end));
+                if (vc.LookAt && (bool?)sh.s["deadzone"] != false && (vc.LookAt.GetComponentInParent<Animator>() || vc.LookAt.name.EndsWith("_lead"))) _aims.Add((vc, sh, end));
                 if (sh.s["fovTo"] != null)
                 {
                     var fx = vc.GetComponent<MVCamFx>();
@@ -1016,7 +1312,7 @@ namespace TKShock.MV.EditorTools
             Transform Find(JToken t) => Resolve((string)t);
             if (s["frame"] is JArray group)
             {
-                var gg = new GameObject(name + "_group"); gg.transform.SetParent(_root, false);
+                var gg = new GameObject(name + "_group"); gg.transform.SetParent(_root, false); _shotObjects.Add(gg);
                 var tg = gg.AddComponent<CinemachineTargetGroup>();
                 foreach (var g in group) { var tr = Find(g); if (tr) tg.AddMember(tr, 1, 1); }
                 vc.LookAt = gg.transform; vc.Follow = gg.transform;
@@ -1032,7 +1328,7 @@ namespace TKShock.MV.EditorTools
                 var comp = rc.Composition; comp.DeadZone.Enabled = false; comp.ScreenPosition = V2(s["screen"], Vector2.zero); rc.Composition = comp;
             }
             var follow = Find(s["follow"]);
-            if (follow)
+            if (follow && s["lag"] == null && s["lead"] == null) // with lag or lead the camera chases on its own track (MVPunchScore.cs)
             {
                 vc.Follow = follow;
                 var f = go.AddComponent<CinemachineFollow>(); f.FollowOffset = V(s["offset"], new Vector3(0, 2, -6));
@@ -1040,7 +1336,7 @@ namespace TKShock.MV.EditorTools
             }
             if (s["dolly"] is JArray pts)
             {
-                var sg = new GameObject(name + "_path"); sg.transform.SetParent(_root, false);
+                var sg = new GameObject(name + "_path"); sg.transform.SetParent(_root, false); _shotObjects.Add(sg);
                 var sc = sg.AddComponent<SplineContainer>();
                 var knots = pts.Select(p => (Unity.Mathematics.float3)V(p, Vector3.zero)).ToList();
                 sc.Spline.Clear();
@@ -1061,12 +1357,14 @@ namespace TKShock.MV.EditorTools
         void ShotMotion(string name, ShotInfo sh, double end)
         {
             var s = sh.s; double len = end - sh.t;
+            PunchShot(name, sh, end);
             if (s["move"] != null) Op(Track(name), "move", sh.t, len, new JObject { ["pos"] = s["move"], ["ease"] = s["ease"] ?? "linear" });
             if (s["rotate"] != null) Op(Track(name), "rotate", sh.t, len, new JObject { ["rot"] = s["rotate"], ["ease"] = s["ease"] ?? "linear" });
             if (s["dolly"] != null) Op(Track(name), "dolly", sh.t, len, new JObject { ["ease"] = s["ease"] ?? "inout" });
             if (s["orbit"] is JObject o)
             {
                 var a = new JObject { ["radius"] = o["radius"] ?? 6, ["y"] = o["y"] ?? 2, ["rate"] = o["rate"] ?? 10, ["angle"] = o["angle"] ?? 0 };
+                if (o["around"] != null) a["around"] = o["around"]; // follows the actor as it moves
                 var c = o["around"] != null && _actors.TryGetValue((string)o["around"], out var ac) ? ac.basePos : V(o["center"], Vector3.zero);
                 a["center"] = new JArray(c.x, c.y, c.z);
                 Op(Track(name), "orbit", sh.t, len, a);
@@ -1090,6 +1388,17 @@ namespace TKShock.MV.EditorTools
                     sp = Mathf.LerpUnclamped((float)sp, (float)s.v, Ease.Apply(s.ease, (float)((t - s.t) / Math.Max(s.dur, 1e-4))));
                 }
                 scene += sp * dt;
+            }
+            // Holds freeze the picture without moving the clock: inside one, scene time stays where it was at its start; after it, scene time is where
+            // it would have been without it. A slowdown (`speed`) still shifts what follows, by design; a hitstop never does (Hawkes Punch: 9 frames of
+            // freezes put every later cast change 0.3 s before its cut).
+            foreach (var (ht, hd) in _holds)
+            {
+                int a = Mathf.Max(0, Mathf.CeilToInt((float)(ht * SongMap.WarpHz))), b = Mathf.Min(n - 1, Mathf.CeilToInt((float)((ht + hd) * SongMap.WarpHz)) - 1);
+                if (a > b) continue;
+                double f = ht * SongMap.WarpHz; int i0 = Mathf.Clamp((int)Math.Floor(f), 0, n - 2);
+                float at = (float)(w[i0] + (w[i0 + 1] - w[i0]) * (f - i0));
+                for (int i = a; i <= b; i++) w[i] = at;
             }
             _song.warp = w;
             var st = new float[n];

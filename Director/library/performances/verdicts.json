@@ -1,0 +1,270 @@
+{
+ "stand": {
+  "verdict": "PASS",
+  "notes": "Rebuilt for Touch Grass: arms close with a soft bend, relaxed hands, weight on the left leg, small sway, as a stance that holds under later performances. Front, side and close hand watched in the lab; pops 0, reverse 0, feet 3 cm."
+ },
+ "sit_idle": {
+  "verdict": "PASS",
+  "notes": "Contact: feet on the floor, seat about 0.45 m; test had no chair, so check the sit against the real one. Face: blinks timed. Quiet by design. Start it on a cut: there is no sit-down from standing in this library."
+ },
+ "stand_up": {
+  "verdict": "PASS",
+  "notes": "Weight: leans over the feet first, hips lead, settles with a small overshoot. Feet planted through the rise. No clip exists for this: built from a held lean, a long crossfade and root travel. Watched at 30 fps, no pop."
+ },
+ "walk_tired": {
+  "verdict": "PASS",
+  "notes": "Weight: slumped, short steps. Contact: stance foot stays within 1 cm for a whole step, proven by probing the foot at 15 fps. Pace is low on purpose (0.32 m/s): 2 bars covers about 1.3 m. Clip Walk6 is marked rejected in clips.json for foot slide, measured against the wrong treadmill speed: with stride 0.335 it holds. Slow speeds up and slows down inside the cue."
+ },
+ "walk_out_door": {
+  "verdict": "PASS",
+  "notes": "Weight: unsure, eases in and out. Face: eyes lead left then right with a blink on each turn. Clear pose: arms carry wide from the front (C, the rig's stance). Stride 0.66 taken from the same measurement as walk_tired but not probed step by step."
+ },
+ "step_stop": {
+  "verdict": "PASS",
+  "notes": "Weight: settles and breathes. Contact: both feet drift about 5 cm forward over 0.6 s as the walk stance turns into the default stand (C, visible only full-body and watching the feet). Needs a walk_* straight before it."
+ },
+ "breathe_deep": {
+  "verdict": "PASS",
+  "notes": "Hold and move: slow rise, hold, fall. Face: eyes shut fully and the mouth softens. Close-up watched. A tiny pink sliver at the closed lid's outer corner in hard sun (C)."
+ },
+ "sigh": {
+  "verdict": "PASS",
+  "notes": "Weight: small breath in, then chest, shoulders and head drop with a settle. Face: lids drop, lips part. Reads best in a medium shot or closer."
+ },
+ "squint_at_sun": {
+  "verdict": "PASS",
+  "notes": "Face: lids narrow, half wince, half smile. First version threw his head back too far, limited to 13 degrees a joint. Eyes lead and a blink lands on the turn. Close-up watched."
+ },
+ "smile_small": {
+  "verdict": "PASS",
+  "notes": "Face: the new smile. Close-up watched: mouth stays shut and curves, cheeks fold, lower lids rise. Warm at 0.7. Eyes blink first."
+ },
+ "look_over_shoulder": {
+  "verdict": "PASS",
+  "notes": "Weight: eyes flick first, then spine, chest, neck and head in order, with a root turn on planted feet. Holds, then comes back. Nervous. Right side tested; side -1 mirrors it, not watched."
+ },
+ "wave_small": {
+  "verdict": "PASS",
+  "notes": "Clear pose: right arm from the elbow, upper body only over the stand, one clear gesture. Fades cleanly."
+ },
+ "stretch_arms": {
+  "verdict": "PASS",
+  "notes": "Clear pose: big open silhouette, arms from a mocap stretch, chest and head lean back. First version hung his head, fixed by masking to the arms. Face: half a yawn. Reads funny."
+ },
+ "kneel_down": {
+  "verdict": "PASS",
+  "notes": "Weight: real mocap, looks down first, folds onto one knee. Ends in the kneel."
+ },
+ "touch_grass": {
+  "verdict": "PASS",
+  "notes": "Contact: fingertips 3 to 6 cm above the ground at the bone, so inside real grass; flat lawn would show the gap. Uses a short reach for real contact, as AGENTS allows, over held poses from a kneeling clip. Weight: leans out, holds, comes back. The first version from the clip itself snapped and was thrown away. Hand is not palm-flat: it touches with the fingers. New params hold and smile: defaults give the same cues as before; hold 1.9 watched in Touch Grass."
+ },
+ "rise_from_kneel": {
+  "verdict": "PASS",
+  "notes": "Weight: mocap, pushes up off the front leg, straightens through. Ends in the default stand."
+ },
+ "sit_on_grass": {
+  "verdict": "PASS",
+  "notes": "Weight: mocap, lowers and drops the last bit. The clip sank his feet 15 cm into the floor (clips.json rejects it for that): root lift added, feet now on the floor in the hold, toes about 8 cm under for a moment mid-drop (C, hidden by grass)."
+ },
+ "rise_from_grass": {
+  "verdict": "PASS",
+  "notes": "Weight: mocap, rocks forward and gets up. Same floor fix as sit_on_grass, and a right foot 3 cm under mid-rise is possible (C, hidden by grass)."
+ },
+ "lie_back": {
+  "verdict": "PASS",
+  "notes": "Rebuilt: ends flat on DeadBack, arms in, head level, feet rolled out, one soft knee. Side watched at 5 fps in the lab, not stepped at 30 fps. In a shot QA scored it 6.7."
+ },
+ "sit_up": {
+  "verdict": "PASS",
+  "notes": "Weight: mocap, curls up. Ends in the ground sit."
+ },
+ "look_at_clouds": {
+  "verdict": "PASS",
+  "notes": "Eyes drift with the head still, one long blink, the smile arrives. A head pop on going to eyes-only was found here and fixed in gaze. Body watched at 30 fps. The face was NOT watched close: the lab's close camera can't see him lying down. Check the face in the shot. Now holds the lie_back pose instead of restarting a clip. Face watched in clouds_face at the new camera, QA 8.5."
+ },
+ "sit_grass_look_up": {
+  "verdict": "PASS",
+  "notes": "Mocap, tips his head to the sky. Blinks added. Face not watched close."
+ },
+ "flinch_small": {
+  "verdict": "PASS",
+  "notes": "Weight: snaps down and in within 0.14 s with no anticipation, holds, then comes down slowly with a settle. Clear pose: shoulders up, head ducks away, hands half curl. Feet planted. Side and front watched at 30 fps; side -1 mirrors it. Face in the shot, medium and close. Made for Touch Grass."
+ },
+ "g_point": {
+  "verdict": "PASS",
+  "notes": "Bent-arm point, right hand, from mx_point_bent over dress_stand. Index out, hand relaxes at the end. Watched in the lab render at 10 fps, front; baked through bake.mjs with the gate passing (snaps 0, ankle 0)."
+ },
+ "g_shrug": {
+  "verdict": "PASS",
+  "notes": "Idle1HaveNoClue on upper over dress_stand; mx_shrug plays as a T-pose on our rig so the local clip stands in. Bake gate passed (17 snaps to 0)."
+ },
+ "g_hand_heart": {
+  "verdict": "PASS",
+  "notes": "Hand to the heart with a head bow, from mx_thankful. Reads clearly at 10 fps. Bake gate passed (wrist 58 to 0)."
+ },
+ "g_hand_cheek": {
+  "verdict": "PASS",
+  "notes": "Hand to chin and cheek with the head tilted, from mx_thinking. Bake gate passed."
+ },
+ "g_finger_lips": {
+  "verdict": "PASS",
+  "notes": "First half of mx_blow_kiss with the hand shut to one finger; the finger sits at chin to lip height, a little low. Check in a close-up before the cut uses it. Bake gate passed."
+ },
+ "g_wave": {
+  "verdict": "PASS",
+  "notes": "Big quick wave with the shoulders, from mx_wave_aj. Bake left 1 snap of 10. Lively; keep for a hello, not a sung line."
+ },
+ "g_bow": {
+  "verdict": "PASS",
+  "notes": "Quick formal bow from the waist on upper, legs stay. Bake gate passed (13 snaps to 0)."
+ },
+ "g_hair_flick": {
+  "verdict": "PASS",
+  "notes": "Note: No hair-flick clip exists on Mixamo by name: this is mx_greeting (hand up beside the head) at speed 1.5 on rightArm,head. It reads as a hand through the hair, not a flick. Bake left 1 snap and cleared an elbow flip."
+ },
+ "g_hands_up": {
+  "verdict": "PASS",
+  "notes": "Note: Both hands up pumping with a lean back, from mx_hh_raise_roof on upper. The arms drop fast at the end of the layer (0.15 s blend): give it a longer blend or cut on the last pump. Bake gate passed (wrist 307 to 0, snaps 18 to 0)."
+ },
+ "g_head_no": {
+  "verdict": "PASS",
+  "notes": "Head shake on head only, from mx_head_no. Bake 2 snaps to 0."
+ },
+ "g_nod": {
+  "verdict": "PASS",
+  "notes": "Slow nod on head only, from mx_nod. Bake 1 snap to 0."
+ },
+ "sit_bed_sick": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Weight: slumped, the slump reads from the side. The cough: fist to the mouth, two chest jolts with the jaw. The look up to the poster lands. Bake standing alone: snaps 0, everything 0."
+ },
+ "tongue_out": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Face: jaw drops wide, head tips back a touch, closes with a blink. No tongue shape key on the model: a placeholder until one exists (C). Seated and standing."
+ },
+ "knee_tap_react": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Weight: the lower leg snaps out with overshoot and settles; eyes wide, then up at her with a small smile. Only the right leg watched; `leg` -1 is mirrored by the same keys."
+ },
+ "take_can": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Contact: the hand opens on the way and the fingers close one after another (close-up render take_can_close: a hook grip, nothing through the hand; the can itself was a stand-in actor, so check it on the real can). Attaches the can at `grab`; `me` must be the actor's name. Bake alone: 0 across."
+ },
+ "mouth_open_about_to_speak": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Face: brows up, jaw parts, breath in; the right hand lifts to the belly with the index half out and freezes. Small by design."
+ },
+ "doctor_examine": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Watched with a seated patient 1 m in front (renders doctor_examine_three/front): lean in, the hand to his chin, the hand to his chest with the head tilted to listen, then the pad up and the pen strokes. The props are the card's. Reaches are to the patient's bones, so a different seat height just works. Bake alone: 0 across after cleaning."
+ },
+ "doctor_slide_can": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Hand lands on the can and rides it as it moves (plant), lets go, looks up with a smile. Tested on a stand-in can actor at desk height; the move is a real `move` on the can."
+ },
+ "doctor_turn_cold": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. The 90 degree turn takes a second (root keys alone; a `successive` or bones on the same keys made it snap, now separate), dead still after, no blink, lips move on the jaw. Feet pivot (slide) under the turn: the bake cleans it (bake alone: 0 across). At 30 fps the head and chest dip forward through the middle of the turn (a keys root-rotation path, B): if it shows in the shot, swap the turn for `{\"do\":\"rotate\",\"rot\":[0,90,0],\"rel\":1,\"for\":\"1.1s\",\"ease\":\"inout\",\"lint\":\"slide\"}` or the admitted clip mx_turn_f (104 degrees, root:1)."
+ },
+ "doctor_punch": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Weight: PowerRightHandCombat: a real wind-up onto the back foot, the right hand lands at `hit`, follow-through, guard, then IdleBreathe and the stance back. 30 fps strip watched. The clip drops the head in the wind-up (joint limits moved the head 45 degrees in the lab): a boxer's head, keep it. Bake alone: snaps 57>1, elbow flips 6>1, ankle 78>40."
+ },
+ "doctor_fist_offscreen": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. RightHook1 from 0.2 s in, hit at `hit`, holds the last frame. Frame her out: only the arm is meant to be seen. The clip is rejected by admission for foot slide, which the bake cleans."
+ },
+ "punched_away": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. The hit snap, then a no-gravity ragdoll (arms thrown up and flailing, spin 320 deg/s), then the loose Falling pose. In-place: the root is the card's `fly`. Bake alone: snaps 25>20, jerk 21>19: the ragdoll, contorted by design (B). Try `seed` for a different tumble."
+ },
+ "drift_space": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Falling at a quarter speed, limbs loose on overlap, a slow tumble from root keys, slow blinks and eye wander. Quiet by design."
+ },
+ "shoulder_tap_react": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Shoulders jump, eyes flick, the head and chest turn over the shoulder with a settle, jaw drops. Front sheet watched, `side` 1 only."
+ },
+ "nose_flick": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Reach to the target's head with the index flicking off the thumb; tested in perf_lab with no target actor, so the reach aimed at his own head (C): test with two actors before a close-up."
+ },
+ "nose_flicked": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Head snaps back with overshoot, eyes shut, hand to the nose, offended face. Front sheet watched."
+ },
+ "bolt_away": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Coil with anticipation, then the superman with overshoot. Pops in the lab are the snap itself."
+ },
+ "fly_fast": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Arms over the head (mx_hanging_idle's frame), fists, a slow alternating wobble through hips, chest and head; the card pitches him level. The wobble is subtle at amp 1: raise `amp` for a shot that holds on him. Bake alone: 0 across."
+ },
+ "hide_peek": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Crouch, lean out to the side with the head popping with overshoot, eyes wide, snap back. Front sheet watched."
+ },
+ "jump_scare": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Coil then the explosion: arms thrown wide and forward, fingers spread, jaw and eyes wide, holds. Bake alone: snaps 53>0."
+ },
+ "kick_spin": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. RightSpinningKick lands at `hit`, then the stand. Front sheet watched."
+ },
+ "spin_top": {
+  "verdict": "FAIL",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. The hit and four slowing turns read, but the arms stay bent near the body instead of out flat (the upper arm z keys were limited 23 degrees): fix the arm axis before use. Bake alone: snaps 79>5, jerk 213>17."
+ },
+ "ride_satellite": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Sits astride with knees wide, left hand gripping ahead, the right arm whooping (Cheer2), the bounce. Attach him to the satellite in the card."
+ },
+ "slingshot": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Side sheet only: the superman holds and the snap at the end reads; the bank is sideways, so judge it from the front in a shot."
+ },
+ "lasso_throw": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. The arm circles over the head (the ring is clipped behind the head by the shoulder limit, 53 degrees in the lab: still reads as a lasso), the throw forward and the two-handed haul with the lean back. Bake alone: snaps 38>0, ankle 589>67. `lasso` fx from the right hand."
+ },
+ "lasso_swing_hammer": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Both hands on the rope ahead, leaning back, two steady turns a quarter turn a key. Measured only (feet 3.5 m in the lab: the spin with no ground), not watched frame by frame (C)."
+ },
+ "catch_planet": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Arms out open, then the fold round the hit, hands clamped to the belly, winded breathing on the chest. Side sheet watched."
+ },
+ "bowl_planet": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Wind-up lunge with the arm back, the low forward swing with overshoot, the follow-through watching it go. Side sheet watched; the arm swing is smaller than a real bowl (B)."
+ },
+ "grab_earth_careful": {
+  "verdict": "FAIL",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Tested in perf_lab with no `earth` actor, so the reaches had nothing to go to: only the hands-up ending was seen. Bake alone: 0 across. Test with the Earth actor before use."
+ },
+ "float_close": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Chest heaving on an additive breath, head dropped toward the other one, calms, smile, then the eyes to the lens. Front sheet watched."
+ },
+ "sit_stool_pitch": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. IdleSit13Explain gestures with the right hand, the can held up in the left (attached on frame one; `me` is the actor), big smile to the lens, a tilt and a nod. Bake alone: 0 across."
+ },
+ "drink_can": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. The can hand to the mouth, head back, three swallows on the jaw with the lids down, down to the chest, the ahh and the smile. Tested without the can actor (warning only). Bake alone: 0 across."
+ },
+ "thumbs_up": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. The forearm swings up beside the chest with overshoot, fist with the thumb out, lean to the lens, the wink (both lids). Front sheet watched."
+ },
+ "point_at_lens": {
+  "verdict": "PASS",
+  "notes": "Made for Hawkes Punch (2026-11-07), lab-tested on the greener scene at every 2nd frame (renders play at 2x), judged on the sheets and 30 fps strips. Right arm straight at the lens with overshoot, index out, lean in, wink. Front sheet watched."
+ }
+}

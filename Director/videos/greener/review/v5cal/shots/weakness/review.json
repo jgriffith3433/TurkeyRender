@@ -1,0 +1,75 @@
+{
+ "id": "weakness",
+ "f0": 529,
+ "f1": 606,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 17.633,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 18.367,
+   "why": "one patch jumps (cell 88.9, x12.9)",
+   "file": "spike-00551.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 19.167,
+   "why": "one patch jumps (cell 77, x14.3)",
+   "file": "spike-00575.jpg"
+  }
+ ],
+ "hash": "4f88a67f77dabe87",
+ "summary": "The strip has a few soft spots: the head snaps from profile to front around 19.16, the 17.7 s opening is a near-frozen blank stare, and the profile turn crowds the top edge and stretches the neck.",
+ "faults": [
+  {
+   "t": 19.18,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Head swings from a near-profile at 19.16 to almost fully frontal by 19.20 and 19.23. That is about 2 frames for a large turn, so it reads as a snap with no anticipation or settle. The jump matches the measured spike.",
+   "fix": "Add 2-3 in-between frames with an ease-out and a small overshoot on the head turn, or fold the move into a blink."
+  },
+  {
+   "t": 17.76,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "For the first 0.3 s of the shot the face is nearly frozen. The eyes stay on the same point near the camera and the expression does not change, so the idea of the eyes going to the house and away is not visible. The stare reads blank.",
+   "fix": "Put a clear eye dart toward the house at 17.7-17.9, led by the eyes and followed by the head, then a quick return. Add a blink on the move."
+  },
+  {
+   "t": 18.4,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "In the profile turn the neck is long and stretched, and the head sits well forward of the shoulders. The chin line and neck look rubbery. Between 18.36 and 18.40 the head slides without the shoulders following.",
+   "fix": "Pull the head back toward the shoulders and add a small shoulder or chest turn to support the head turn."
+  },
+  {
+   "t": 18.46,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 18.43 to 18.60 the profile pose drifts slowly with no clear hold or beat. It looks mushy.",
+   "fix": "Hold the profile cleanly for a few frames, then make a fast move out."
+  },
+  {
+   "t": 18.36,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "In profile the hair touches or is cropped by the top edge of the frame, so the head has no headroom.",
+   "fix": "Lower the camera framing slightly or tilt it down so the head has headroom in the turn."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6373,
+  "out": 1417
+ },
+ "cost": 0.0269
+}

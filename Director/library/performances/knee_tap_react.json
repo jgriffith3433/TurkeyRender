@@ -1,0 +1,131 @@
+{
+ "name": "knee_tap_react",
+ "about": "The hammer lands and the right leg kicks out on its own: a snap of the lower leg with overshoot, the foot flexing, then it swings back. He looks down at it, eyes wide, then up at her with a small amused smile. Seated. `leg` -1 does the left.",
+ "entry": "sit_chair",
+ "exit": "sit_chair",
+ "length": "1.8s",
+ "min": "1.4s",
+ "params": {
+  "leg": 1,
+  "kick": 40
+ },
+ "cues": [
+  {
+   "at": 0.02,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.13,
+     "ease": "out",
+     "overshoot": 0.22,
+     "settle": "0.35s",
+     "hold": 0.25,
+     "hips": [
+      0,
+      0.008,
+      0
+     ],
+     "bones": {
+      "rightLowerLeg": [
+       "=kick*-1*IIF(leg>0,1,0)",
+       0,
+       0
+      ],
+      "rightFoot": [
+       "=-12*IIF(leg>0,1,0)",
+       0,
+       0
+      ],
+      "leftLowerLeg": [
+       "=kick*-1*IIF(leg<0,1,0)",
+       0,
+       0
+      ],
+      "leftFoot": [
+       "=-12*IIF(leg<0,1,0)",
+       0,
+       0
+      ],
+      "chest": [
+       -3,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 0.85,
+     "ease": "inout",
+     "bones": {}
+    }
+   ],
+   "release": "0.3s"
+  },
+  {
+   "at": 0.05,
+   "do": "face",
+   "eyesWide": 0.6,
+   "fear": 0.2,
+   "for": "0.1s",
+   "ease": "out"
+  },
+  {
+   "at": 0.08,
+   "do": "gaze",
+   "toRel": [
+    "=leg*0.2",
+    0.25,
+    0.6
+   ],
+   "for": "0.3s",
+   "ease": "out"
+  },
+  {
+   "at": 0.55,
+   "do": "blink",
+   "for": "0.18s"
+  },
+  {
+   "at": 0.75,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.35,
+    1.1
+   ],
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.8,
+   "do": "face",
+   "eyesWide": 0.15,
+   "fear": 0.12,
+   "smile": 0.35,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.3",
+   "do": "face",
+   "smile": 0.15,
+   "for": "0.3s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "sit_idle",
+    "for": "1s"
+   }
+  ],
+  "then": [
+   {
+    "name": "sit_idle",
+    "for": "0.8s"
+   }
+  ],
+  "tail": 0.2
+ }
+}

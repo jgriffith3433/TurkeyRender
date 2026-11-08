@@ -26,9 +26,12 @@ namespace TKShock.MV
         public override void Apply(double t, object binding)
         {
             var st = binding as MVStage; if (st == null) return;
+            MVEpic.BeginFx();
             foreach (var op in Ops)
             {
+                if (MVEpicFx.Handles(op.kind)) { MVEpicFx.Run(op, t, Song, st); continue; }   // shock, debris, icewake, smear (MVEpicFx.cs)
                 if (MVFeatherFx.Handles(op.kind)) { MVFeatherFx.Run(op, t, Song, st); continue; }
+                if (MVPunchFx.Handles(op.kind)) { MVPunchFx.Run(op, t, Song, st); continue; }
                 double scene = Song.Warp(t) - op.ws;
                 bool on = t >= op.start && scene <= op.Dur;
                 _live.TryGetValue(op.index, out var l);
@@ -42,6 +45,7 @@ namespace TKShock.MV
                 foreach (var r in l.roots) if (r) r.Simulate(tl, true, true, false);
                 if (l.flash) l.flash.intensity = l.curve.Evaluate(tl) * op.a.F("light", 1);
             }
+            MVEpic.EndFx();
         }
 
         Transform Actor(string name)
@@ -89,7 +93,7 @@ namespace TKShock.MV
 
         public override void Dispose()
         {
-            MVFeatherFx.Clear();
+            MVFeatherFx.Clear(); MVPunchFx.Clear(); MVEpicFx.Clear();
             foreach (var l in _live.Values) if (l.go) Object.DestroyImmediate(l.go);
             _live.Clear();
         }
@@ -108,7 +112,7 @@ namespace TKShock.MV
             {
                 case "crown": return 60; case "stream": return 4;
                 case "explosion": return 3.5f; case "feathers": return 5f; case "fireworks": return 3.5f; case "confetti": return 6f;
-                case "shockwave": return 1f; case "sparks": return 1.6f; case "dust": return 3f; case "smoke": case "fire": case "rain": case "snow": case "embers": return 8f;
+                case "shockwave": return 1f; case "sparks": return 1.6f; case "impact": return 2.6f; case "glass": return 3f; case "rope": return 30f; case "trail": return 3f; case "shock": return .6f; case "debris": return 6f; case "icewake": return 6f; case "smear": return 1 / 30f; case "dust": return 3f; case "smoke": case "fire": case "rain": case "snow": case "embers": return 8f;
                 default: return 3f;
             }
         }
@@ -133,7 +137,7 @@ namespace TKShock.MV
                 case "rain": Weather(root, "streak", new Color(.7f, .8f, 1, .35f), a.F("rate", 900), -26, 30, new Vector2(.03f, .9f)); break;
                 case "snow": Weather(root, "soft", new Color(1, 1, 1, .85f), a.F("rate", 200), -2.2f, 30, new Vector2(.14f, .14f)); break;
                 case "embers": Embers(root, c, a.F("rate", 40)); break;
-                default: Debug.LogWarning("Unknown fx preset: " + name); break;
+                default: if (!MVPunchFx.Build(name, root, a)) Debug.LogWarning("Unknown fx preset: " + name); break;
             }
             return root;
         }
@@ -220,7 +224,7 @@ namespace TKShock.MV
 
         static void Confetti(GameObject root, int n)
         {
-            var p = Sys(root, "confetti", "square", false, 5f, new Vector2(.08f, .18f), new Vector2(6, 18), Color.white, 2000); Burst(p, n);
+            var p = Sys(root, "confetti", "square", false, 5f, new Vector2(.04f, .09f), new Vector2(6, 18), Color.white, 2000); Burst(p, n);
             var s = p.shape; s.enabled = true; s.shapeType = ParticleSystemShapeType.Cone; s.angle = 35; s.rotation = new Vector3(-90, 0, 0);
             var m = p.main; m.gravityModifier = .35f;
             var g = new Gradient(); g.SetKeys(new[] { new GradientColorKey(new Color(1, .2f, .3f), 0), new GradientColorKey(new Color(1, .85f, .2f), .33f), new GradientColorKey(new Color(.2f, .8f, .5f), .66f), new GradientColorKey(new Color(.3f, .5f, 1), 1) }, new[] { new GradientAlphaKey(1, 0), new GradientAlphaKey(1, 1) });

@@ -1,0 +1,37 @@
+{
+ "clip": "mx_samba_pocoto",
+ "seconds": 12,
+ "popCount": 50,
+ "pops": [
+  "0.367s RightLowerLeg kink 0.101 m",
+  "0.400s RightLowerLeg kink 0.189 m",
+  "0.433s RightLowerLeg kink 0.083 m",
+  "1.300s LeftLowerLeg kink 0.089 m",
+  "1.433s LeftLowerLeg kink 0.123 m",
+  "1.533s RightLowerLeg kink 0.103 m"
+ ],
+ "feet": [
+  "left foot on floor moved 5.165 m, worst step 0.050 m at 8.33s",
+  "right foot on floor moved 5.230 m, worst step 0.048 m at 0.40s"
+ ],
+ "hipsTop": 0.930492461,
+ "hipsLow": 0.849049449,
+ "hipsTravel": "(-0.17, 0.00, -0.14)",
+ "limits": {
+  "LeftLowerLeg": 20.4,
+  "RightFoot": 14.7,
+  "Head": 12.8,
+  "groundHipsCm": 11.3,
+  "LeftLowerArm": 5.7,
+  "RightLowerLeg": 5.6,
+  "Chest": 3.5,
+  "Spine": 1.1,
+  "LeftFoot": 0
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_samba_pocoto_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_samba_pocoto_three.mp4"
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "id": "wobble",
+ "f0": 2124,
+ "f1": 2176,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 70.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "df4d6ef95aa11695",
+ "summary": "The strip is steady with no camera move, no pops and no flicker. The butler's slight wobble starts in a natural way, and the turkeys stay stable.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3564,
+  "out": 123
+ },
+ "cost": 0.0084
+}

@@ -1,0 +1,87 @@
+{
+ "id": "c2_low",
+ "f0": 3847,
+ "f1": 3924,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 128.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 129.1,
+   "why": "frame difference x15.8 (106.06)",
+   "file": "spike-03873.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 129.933,
+   "why": "one patch jumps (cell 134.6, x2)",
+   "file": "spike-03898.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 130.367,
+   "why": "flow spike x14.6",
+   "file": "spike-03911.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 130.567,
+   "why": "flicker: patches change and change straight back on 20% of the shot's frames (7 cells here)",
+   "file": "spike-03917.jpg"
+  }
+ ],
+ "hash": "2984ead424129a99",
+ "summary": "Mostly clean. Ceiling and sky flicker in the confetti strips, plus a fade-in at the start of image 2 and a pose snap at 130.73.",
+ "faults": [
+  {
+   "t": 130.56,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Ceiling/sky patch alternates between blue sky with cloud and dark brown/maroon from tile to tile (130.36 dark, 130.46 sky, 130.53 dark, 130.56 sky, 130.63 dark). Large part of the frame flickers.",
+   "fix": "Fix the ceiling/sky material or lighting so it doesn't swap. Check z-fighting or a toggled layer on the ceiling mesh."
+  },
+  {
+   "t": 129.29,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Ceiling flips between pale sky and flat brown across tiles (129.19 and 129.29 brown, 129.22, 129.26 and 129.32 sky). The brown wedge edge changes between tiles.",
+   "fix": "Same ceiling material/flicker fix."
+  },
+  {
+   "t": 130.73,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Pose snaps in one frame from the arms-out pointing pose (130.69) to a different wide-stance pose with arm crossing the body (130.73). No in-between frames. Camera framing and head height jump too.",
+   "fix": "Add 2-3 frames of transition or blend, or hide the snap with the cut/fade."
+  },
+  {
+   "t": 129.09,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "Shot opens on a heavily washed-out frame that fades up over about 6 frames. The fade is non-linear and the brightness is uneven between tiles (129.26 to 129.29 darkens).",
+   "fix": "Use a smooth linear fade or cut straight into the shot."
+  },
+  {
+   "t": 130.43,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "Confetti is large, flat and unshaded, and it crosses in front of both figures. It flickers in position between tiles.",
+   "fix": "Light the confetti and shrink it, or move it away from the figures."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 9164,
+  "out": 774
+ },
+ "cost": 0.0261
+}

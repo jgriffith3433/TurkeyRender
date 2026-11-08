@@ -1,0 +1,89 @@
+{
+ "id": "c2_sil",
+ "f0": 3744,
+ "f1": 3795,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 124.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 124.867,
+   "why": "one patch jumps (cell 83.3, x1.9)",
+   "file": "spike-03746.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 125.667,
+   "why": "frame difference x12.3 (45.56)",
+   "file": "spike-03770.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 126.133,
+   "why": "flow spike x2.2",
+   "file": "spike-03784.jpg"
+  }
+ ],
+ "hash": "8864755db036dc58",
+ "summary": "Shot has a fast arm whip, a mid-air hand from off-screen, and unlit blue confetti cubes crossing the dancer's torso, plus a stiff mirrored stance.",
+ "faults": [
+  {
+   "t": 124.93,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Cut-in frames 124.83-124.96: torso and arms change quickly, with the left arm swinging up and back over 3-4 frames. Reads as the cut tweening, not a settled first pose.",
+   "fix": "Start the clip on the settled pose, or trim the first 5 frames so the shot opens on a clear pose."
+  },
+  {
+   "t": 125.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Arm whips from low at 124.96 to a high horizontal swing at 125.03, then up over the head at 125.06-125.09. Few in-between frames, so it reads as a snap.",
+   "fix": "Add in-between frames or ease the arm swing, with a short anticipation before it."
+  },
+  {
+   "t": 125.66,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "Large bare arms and hands enter from the right and top edge (125.66-125.83) and cross the frame beside the dancer. This is the 'three of him' idea read as stray limbs. It matches the frame-difference spike and is distracting.",
+   "fix": "Keep the other dancers' limbs out of frame or show them fully, and place them clearly in the composition."
+  },
+  {
+   "t": 125.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Symmetrical, stiff A-pose: both arms hang out at equal angles with legs apart and no clear line of action (125.79-125.89).",
+   "fix": "Offset the arms and tilt the shoulders and hips to give one clear line."
+  },
+  {
+   "t": 126.26,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A flat, unshaded blue square crosses the frame: it starts above the head at 126.19-126.23, then sits over his head and back at 126.26-126.29 and falls past his side at 126.33-126.36. It covers part of the silhouette and looks like a UI sticker, not confetti.",
+   "fix": "Shade the confetti, or remove or shrink the big blue cube. Keep it from crossing the dancer's body."
+  },
+  {
+   "t": 126.13,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "At 126.13-126.19 his reaching hand overlaps the topiary, and the arm reads as touching or going through it.",
+   "fix": "Shift the reach so the hand stays clear of the topiary, or offset the dancer."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7755,
+  "out": 927
+ },
+ "cost": 0.0248
+}

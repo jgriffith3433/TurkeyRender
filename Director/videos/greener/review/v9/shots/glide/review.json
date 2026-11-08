@@ -1,0 +1,39 @@
+{
+ "id": "glide",
+ "f0": 889,
+ "f1": 966,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 29.633,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "e8ac40c688b80e59",
+ "summary": "No pops, flicker or render faults are visible across the cut. The walk is smooth, but the \"skirt in hand\" idea isn't readable and the near arm hangs limp.",
+ "faults": [
+  {
+   "t": 29.76,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot idea is 'skirt in hand', but his near hand is empty and loosely curled at hip level in every tile. No skirt or fabric is visible, so the prop idea doesn't read.",
+   "fix": "Put the skirt in the near hand with a visible grip, or hold the fist up where the camera can see it."
+  },
+  {
+   "t": 29.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The near arm hangs straight and limp, and the far arm is a mirror of it. Together they make a weak, stiff silhouette that doesn't suggest a 'catwalk' attitude.",
+   "fix": "Add a hip or arm swing, or bend the elbow with the hand lifted to give a clearer line of action."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3568,
+  "out": 692
+ },
+ "cost": 0.0141
+}

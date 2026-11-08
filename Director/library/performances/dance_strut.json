@@ -1,0 +1,16 @@
+{
+ "name": "dance_strut",
+ "about": "Walks straight into camera like he owns the street: mocap strut (Mixamo Strut Walking) with real root travel, two steps a bar at this tempo, soft hands. Ends mid-step; chain step_stop, a dance, or cut.",
+ "entry": "stand",
+ "exit": "walk",
+ "length": "3.43s",
+ "min": "0.86s",
+ "params": { "blend": 0.3 },
+ "cues": [
+  { "at": 0, "do": "stance", "arms": 1, "legs": 0, "bones": { "leftUpperArm": [0, 0, 6], "rightUpperArm": [0, 0, -6] }, "for": 0.4, "ease": "inout" },
+  { "at": 0, "do": "anim", "clip": "mx_strut", "root": 1, "beats": 4, "blend": "$blend", "for": "$for" },
+  { "at": 0, "do": "fingers", "hand": "left", "set": 0.35, "for": 0.3 },
+  { "at": 0, "do": "fingers", "hand": "right", "set": 0.35, "for": 0.3 }
+ ],
+ "test": { "then": ["step_stop"], "tail": 0.4 }
+}

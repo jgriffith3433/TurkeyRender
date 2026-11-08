@@ -1,0 +1,357 @@
+{
+ "mx_jazz_arm_push": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a theatrical jazz loop, right arm sweeps overhead (0-0.3 s, again 1.0-1.4 s) into a deep side lean with the head lolling sideways 0.5-0.9 s, then the arm pushes out low 1.9-2.1 s; weak at: anything quiet, the head-loll lean reads drunk in a close-up; needs: relaxed grip (hands are flat boards, curl 14 deg and never move)",
+  "watched": "strip 0-4.7 s, hands burst 0-1 s, own full-body burst 0.4-1.5 s (knee flag: no visible flip, back leg only straightens)"
+ },
+ "mx_jazz_around_world": {
+  "grade": "A",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a clean jazz loop, both arms circle overhead and out with a knee lift (passe) at 0.1-0.3 s and 1.2-1.4 s, open and in place, reads well wide and medium; weak at: close-ups at 0.43-0.5 s and 2.1 s when a forearm crosses in front of the face; needs: relaxed grip (flat dead hands, curl 15 deg throughout)",
+  "watched": "strip 0-4.6 s, hands burst 0-1 s, own full-body burst 1.0-2.0 s (knee flag: knee lifts read normal)"
+ },
+ "mx_jazz_square": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "relaxed grip",
+   "mask: lower if arms must come in"
+  ],
+  "line": "good for: the jazz square footwork (cross, back, side, front) on a 2 s loop, steps travel about 0.5 m and come back; weak at: the arms, held out at shoulder height like airplane wings almost the whole loop, mannequin-like in a medium shot; needs: relaxed grip, or take only the legs (mask lower) under another upper body",
+  "watched": "strip 0-4.1 s, hands burst 0-1 s"
+ },
+ "mx_locking": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a long funk locking routine with real character: low wide lunge crouches 5.4-7.0 s, stand-up locks with the arm thrown overhead 8.6-8.9 s and swept across 9.0-9.4 s, side shuffles 11.0-11.8 s, a low kick-lunge 12.0-12.6 s; weak at: the low lunges (lean 63 deg) in a tight frame, head drops out; needs: nothing (pick a segment, it is 17 s)",
+  "watched": "strip 4.6-12.6 s (busiest 8 s), hands burst near 11.8 s, own bursts preview 0.8-2.9 s full body and 3.4-5.0 s medium"
+ },
+ "mx_maraschino": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "turn"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [],
+  "line": "good for: a goofy hunched groove with claw hands (curl 100-120 deg), shoulders up, that turns a full circle; good as comic or creepy character dance; weak at: 1.2-2.4 s his back is to the front camera, and the claw hands rule out any normal gesture; needs: nothing",
+  "watched": "strip 0-3.3 s, hands burst around 3.0 s"
+ },
+ "mx_northern_soul": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "gesture",
+   "talk"
+  ],
+  "needs": [
+   "start at 5.5 s for the side-on kicks",
+   "mark the travel: drifts up to 2 m"
+  ],
+  "line": "good for: legs-only northern soul footwork, flick kicks and swivels with the arms hanging loose, side-on kicks 5.5-6.5 s; weak at: anything for the upper body (arms just hang), he turns his back to the front 1.7-3.7 s and roams up to 2 m from the mark; legs lock very straight in side view (knee hyperextension flag, not a visible flip); needs: a wide frame and the travel planned",
+  "watched": "strip 0.13-8.1 s, hands burst, own full-body bursts preview 0-1.6 s and 5.4-7.0 s"
+ },
+ "mx_pose_hand_head": {
+  "grade": "A",
+  "uses": [
+   "pose",
+   "look-back"
+  ],
+  "weak": [],
+  "needs": [],
+  "line": "good for: a held pose, right hand flat at the brow shading the eyes (looking far off, or a loose salute), weight easy; weak at: nothing for a still; needs: nothing (one frame, hold it with keys or a layer)",
+  "watched": "preview 0-0.5 s, still at 0.2 s both cameras"
+ },
+ "mx_pose_hand_hip": {
+  "grade": "B",
+  "uses": [
+   "pose",
+   "stand-idle"
+  ],
+  "weak": [],
+  "needs": [],
+  "line": "good for: a casual one-hand-on-hip stand, weight on one leg; weak at: the hip hand floats palm-up just off the waist in the medium shot, it does not rest on the hip; needs: nothing for wide, a reach to the hip for a medium",
+  "watched": "preview 0-0.5 s, still at 0.2 s both cameras"
+ },
+ "mx_pose_hip_arm_up": {
+  "grade": "B",
+  "uses": [
+   "pose"
+  ],
+  "weak": [],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a pin-up pose, one hand behind the head, the other on the hip; weak at: the hip hand is fanned stiff with fingers spread (fannedFrac 1) right in the medium shot; needs: relaxed grip on the hip hand",
+  "watched": "preview 0-0.5 s, still at 0.2 s both cameras"
+ },
+ "mx_pose_hips_look_back": {
+  "grade": "B",
+  "uses": [
+   "pose",
+   "sigh"
+  ],
+  "weak": [
+   "look-back"
+  ],
+  "needs": [],
+  "line": "good for: hands on the lower back, leaning back (21 deg) as if stretching a sore back or taking a tired breath; weak at: look-back, despite the name the head faces front (yaw 0); needs: nothing",
+  "watched": "preview 0-0.5 s, still at 0.2 s both cameras, own full-body burst"
+ },
+ "mx_pose_leg_hip_arm": {
+  "grade": "B",
+  "uses": [
+   "pose",
+   "jump"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "drop 0.05 m to stand, or play it as a mid-hop"
+  ],
+  "line": "good for: a pin-up kick pose, hand on head, hand on hip, legs crossed with one heel kicked up; weak at: standing, both feet are off the lawn (lowest foot 0.17 m, about 5 cm of air) so it reads as a hop frozen in air; needs: lowering 5 cm or a hop around it",
+  "watched": "preview 0-0.5 s, still at 0.2 s both cameras, own full-body burst"
+ },
+ "mx_pose_legs_crossed_hip": {
+  "grade": "A",
+  "uses": [
+   "pose",
+   "stand-idle"
+  ],
+  "weak": [],
+  "needs": [],
+  "line": "good for: a relaxed stand with legs crossed at the ankle and one fist on the hip, the other arm loose; weak at: nothing for a still; needs: nothing",
+  "watched": "preview 0-0.5 s, still at 0.2 s both cameras"
+ },
+ "mx_rib_pops": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a vogue-like pop loop, palms out framing the face and chest, chest isolations; weak at: the hands are spread stiff palms-out the whole loop (mannequin), and a forearm hangs in front of the face 0.4-0.9 s; needs: relaxed grip unless the spread palms are the style",
+  "watched": "strip 0-3.4 s, hands burst 0-1 s"
+ },
+ "mx_rumba": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: rumba box steps with the arms held in a partner frame at chest height; good with a partner in the hold; weak at: solo, the empty frame arms with drooping flat hands read stiff and zombie-like; needs: a partner, or mask lower under other arms",
+  "watched": "strip 0-4.7 s, hands burst 0-1 s"
+ },
+ "mx_salsa_f": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "mask: lower if arms must stay in"
+  ],
+  "line": "good for: salsa basic on the balls of the feet with feminine styling, one arm held wide at shoulder height and the other sweeping up past the face (0.6-1.0 s, 3.4-3.7 s); weak at: the wide arm and stiff spread fingers at 0.2-0.4 s in a medium shot; needs: legs only (mask lower) for a plain step",
+  "watched": "strip 0-4.5 s, hands burst 0-1 s"
+ },
+ "mx_salsa_side": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a Latin side step with a knee lift, one hand resting on the belly and the other swinging out to the side (0-0.4 s, 2.0-2.3 s), loose and in place; weak at: the hand on the stomach can read as a stomach ache in a close-up, and both hands flash open spread at 1.4-1.6 s; needs: nothing",
+  "watched": "strip 0-4.6 s, hands burst 0-1 s"
+ },
+ "mx_salsa_up_back": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a quiet salsa forward-and-back basic, hands low at the waist, a background dancer; weak at: anything with energy, and the hands are flat and splayed at waist height the whole loop (left fanned 28% of frames); needs: relaxed grip",
+  "watched": "strip 0-4.9 s, hands burst 0-1 s"
+ },
+ "mx_samba_pagode": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "start at 16.7 s for the front-facing part"
+  ],
+  "line": "good for: front-facing samba bounce 16.7-21.8 s with the arms out at shoulder height and a lean-back flourish 16.9-17.7 s; weak at: 13.7-16.5 s he dances with his back or side to the front camera, and the arms stay wide like wings; needs: start at 16.7 s (0-13.7 s not seen in the preview)",
+  "watched": "strip 13.7-21.7 s (busiest 8 s only), hands burst"
+ },
+ "mx_samba_pocoto": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "wave"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "mask: lower for the hips and feet"
+  ],
+  "line": "good for: samba hips and bouncing feet; inside it an open hand raised beside the face 18.8-19.6 s that reads as a friendly wave; weak at: most of 13.2-18.5 s and 20.5-21.2 s he faces away or side-on, arms flung wide at shoulder height; needs: lower mask for the step, or the 18.8-19.6 s stretch for the wave (0-13 s not seen in the preview)",
+  "watched": "strip 13.17-21.17 s (busiest 8 s only), hands burst"
+ },
+ "mx_shim_sham": {
+  "grade": "A",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "face the camera: the kick steps play side-on"
+  ],
+  "line": "good for: a lively swing-era routine with kick-backs and arms swinging out (11.9-12.6 s, 14.7-15.3 s, 17.0-17.5 s), crossing steps and a hand-to-chest flourish at about 12.0 s; weak at: much of it plays side-on and roams up to 0.9 m; needs: turn him to face the lens and allow the travel",
+  "watched": "strip 11.5-19.5 s (busiest 8 s), hands burst, own full-body bursts preview 0.35-0.9 s (30 fps) and 5.5-6.6 s (knee flag: kicks bend normally, no flip)"
+ },
+ "mx_shuffling": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "stand-idle"
+  ],
+  "weak": [
+   "talk",
+   "point",
+   "gesture"
+  ],
+  "needs": [
+   "stop at 5.5 s for the dance"
+  ],
+  "line": "good for: a rave shuffle with fists pumping forward 0-5.5 s, and a loose wide-armed stand 5.6-7.5 s; weak at: fists the whole time, a fist pumps across in front of the face at about 4.7 s in a medium shot; needs: stop at 5.5 s, or take 5.6-7.5 s as an idle",
+  "watched": "strip 0-7.5 s, hands burst around 4.7 s"
+ },
+ "mx_snake": {
+  "grade": "B",
+  "uses": [
+   "dance"
+  ],
+  "weak": [
+   "talk",
+   "stand-idle"
+  ],
+  "needs": [
+   "start at 2.8 s for the upright part"
+  ],
+  "line": "good for: a slinky body wave, upright and side-on with both arms snaking overhead 3.5-5.6 s, hands sliding over the hair; weak at: 0.7-2.6 s and 6.4-8.7 s he folds deep forward in a hunched bounce (lean 66 deg) that reads apelike, and his fingertips sink into the hair at 4.4-5.2 s in a medium shot; needs: start at 2.8 s, wide or mid shot",
+  "watched": "strip 0.7-8.7 s (busiest 8 s), hands burst, own medium burst preview 4.4-5.5 s"
+ },
+ "mx_thriller_1": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "taunt"
+  ],
+  "weak": [
+   "talk",
+   "gesture",
+   "stand-idle"
+  ],
+  "needs": [],
+  "line": "good for: a zombie or monster groove, claw hands, shoulder shrugs and jerky head throws; weak at: the head is thrown straight back so the face goes out of view for about a second (twice in 9.9-17.9 s) and the body rocks off its mark in side-on turns; needs: nothing (it is a horror piece, not a groove for him as himself)",
+  "watched": "strip 9.93-17.93 s (busiest 8 s), hands burst"
+ },
+ "mx_thriller_2": {
+  "grade": "B",
+  "uses": [
+   "dance",
+   "pose",
+   "taunt"
+  ],
+  "weak": [
+   "talk",
+   "stand-idle"
+  ],
+  "needs": [
+   "stop at 16.7 s"
+  ],
+  "line": "good for: the iconic Thriller claw-arms-up poses and side lunges 10.9-14.9 s, a strong pose on a hit at about 11.0 s; weak at: 16.8-17.7 s a deep fold with the head down between the knees and the neck rolled sideways (head yaw to 154 deg), wrong for anything but horror; needs: stop at 16.7 s",
+  "watched": "strip 10.1-18.1 s (busiest 8 s), hands burst, own full-body bursts preview 2.0-3.6 s and 6.6-7.7 s (knee flag: lunges bend normally)"
+ },
+ "mx_twist": {
+  "grade": "A",
+  "uses": [
+   "dance",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "face +90 deg: the clip twists side-on"
+  ],
+  "line": "good for: the twist, knees together, hips swivelling, arms pumping low 0.5-2.3 s and again 4.0-5.5 s, retro and in place; a lean-back with one arm up 2.3-3.5 s works as a pose on a hit; weak at: anything frontal as played, he faces 90 deg off the lens and keeps his chin up; needs: turn him 90 deg toward the lens",
+  "watched": "strip 0.33-8.33 s (busiest 8 s), hands burst, own full-body burst preview 0.4-1.5 s (knee flag: bent knees read normal)"
+ }
+}

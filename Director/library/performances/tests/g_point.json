@@ -1,0 +1,31 @@
+{
+ "popCount": 7,
+ "pops": [
+  "3.533s RightHandMiddle3 kink 0.121 m",
+  "3.567s RightHandMiddle3 kink 0.107 m",
+  "3.600s RightHandMiddle3 kink 0.106 m",
+  "3.633s RightHandMiddle3 kink 0.129 m",
+  "5.133s RightHandIndex3 kink 0.081 m",
+  "5.200s RightHandIndex3 kink 0.081 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.032 m, worst step 0.001 m at 4.27s",
+  "right foot on floor moved 0.027 m, worst step 0.001 m at 5.80s"
+ ],
+ "hipsTop": 0.8945433,
+ "hipsLow": 0.884393752,
+ "hipsMaxSpeed": 0.04506214,
+ "hipsTravel": "(-0.01, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 1.8
+ },
+ "reverse": 0,
+ "fresh": 0.0000109672546,
+ "frames": 82,
+ "warnings": [
+  "person: the bake of 'stand' is stale, so it plays from source. Run: node Director/tools/bake.mjs stand",
+  "person: the bake of 'dress_stand' is stale, so it plays from source. Run: node Director/tools/bake.mjs dress_stand"
+ ],
+ "from": 3.1,
+ "to": 5.800000000000001
+}

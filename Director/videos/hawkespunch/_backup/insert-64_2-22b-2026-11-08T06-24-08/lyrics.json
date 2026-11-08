@@ -1,0 +1,2045 @@
+{
+ "source": "lyrics.txt timed by whisper on the vocal stem (tools/align_lyrics.mjs); lines from 12:4 on moved 8 bars for the symptoms scene (2026-11-07)",
+ "lines": [
+  {
+   "section": "Intro",
+   "text": "Ooh, ooh, say ahh",
+   "words": [
+    {
+     "w": "Ooh,",
+     "t": 2.68,
+     "end": 3.25
+    },
+    {
+     "w": "ooh,",
+     "t": 3.25,
+     "end": 3.81
+    },
+    {
+     "w": "say",
+     "t": 3.81,
+     "end": 4.38
+    },
+    {
+     "w": "ahh",
+     "t": 4.38,
+     "end": 4.94
+    }
+   ],
+   "t": 2.68,
+   "end": 4.94
+  },
+  {
+   "section": "Verse 1",
+   "text": "Woke up green around the edges",
+   "words": [
+    {
+     "w": "Woke",
+     "t": 20.29,
+     "end": 20.67
+    },
+    {
+     "w": "up",
+     "t": 20.67,
+     "end": 21.04
+    },
+    {
+     "w": "green",
+     "t": 21.04,
+     "end": 21.42
+    },
+    {
+     "w": "around",
+     "t": 21.42,
+     "end": 21.8
+    },
+    {
+     "w": "the",
+     "t": 21.8,
+     "end": 22.18
+    },
+    {
+     "w": "edges",
+     "t": 22.18,
+     "end": 22.55
+    }
+   ],
+   "t": 20.29,
+   "end": 22.55
+  },
+  {
+   "section": "Verse 1",
+   "text": "Waiting room and paper sheets",
+   "words": [
+    {
+     "w": "Waiting",
+     "t": 22.81,
+     "end": 23.26
+    },
+    {
+     "w": "room",
+     "t": 23.26,
+     "end": 23.71
+    },
+    {
+     "w": "and",
+     "t": 23.71,
+     "end": 24.16
+    },
+    {
+     "w": "paper",
+     "t": 24.16,
+     "end": 24.62
+    },
+    {
+     "w": "sheets",
+     "t": 24.62,
+     "end": 25.07
+    }
+   ],
+   "t": 22.81,
+   "end": 25.07
+  },
+  {
+   "section": "Verse 1",
+   "text": "Nurse looked up and did not blink",
+   "words": [
+    {
+     "w": "Nurse",
+     "t": 25.32,
+     "end": 25.64
+    },
+    {
+     "w": "looked",
+     "t": 25.64,
+     "end": 25.97
+    },
+    {
+     "w": "up",
+     "t": 25.97,
+     "end": 26.29
+    },
+    {
+     "w": "and",
+     "t": 26.29,
+     "end": 26.62
+    },
+    {
+     "w": "did",
+     "t": 26.62,
+     "end": 26.94
+    },
+    {
+     "w": "not",
+     "t": 26.94,
+     "end": 27.26
+    },
+    {
+     "w": "blink",
+     "t": 27.26,
+     "end": 27.59
+    }
+   ],
+   "t": 25.32,
+   "end": 27.59
+  },
+  {
+   "section": "Verse 1",
+   "text": "She's seen a thousand folks like me",
+   "words": [
+    {
+     "w": "She's",
+     "t": 27.84,
+     "end": 28.16
+    },
+    {
+     "w": "seen",
+     "t": 28.16,
+     "end": 28.48
+    },
+    {
+     "w": "a",
+     "t": 28.48,
+     "end": 28.81
+    },
+    {
+     "w": "thousand",
+     "t": 28.81,
+     "end": 29.13
+    },
+    {
+     "w": "folks",
+     "t": 29.13,
+     "end": 29.45
+    },
+    {
+     "w": "like",
+     "t": 29.45,
+     "end": 29.78
+    },
+    {
+     "w": "me",
+     "t": 29.78,
+     "end": 30.1
+    }
+   ],
+   "t": 27.84,
+   "end": 30.1
+  },
+  {
+   "section": "Verse 1",
+   "text": "Doctor tapped me on the knee",
+   "words": [
+    {
+     "w": "Doctor",
+     "t": 50.125,
+     "end": 50.725
+    },
+    {
+     "w": "tapped",
+     "t": 50.725,
+     "end": 51.065
+    },
+    {
+     "w": "me",
+     "t": 51.065,
+     "end": 51.365
+    },
+    {
+     "w": "on",
+     "t": 51.365,
+     "end": 51.665
+    },
+    {
+     "w": "the",
+     "t": 51.665,
+     "end": 51.825
+    },
+    {
+     "w": "knee",
+     "t": 51.825,
+     "end": 52.246
+    }
+   ],
+   "t": 50.125,
+   "end": 52.246
+  },
+  {
+   "section": "Verse 1",
+   "text": "Said son you've got a case of life",
+   "words": [
+    {
+     "w": "Said",
+     "t": 52.286,
+     "end": 52.546
+    },
+    {
+     "w": "son",
+     "t": 52.546,
+     "end": 52.905
+    },
+    {
+     "w": "you've",
+     "t": 53.085,
+     "end": 53.425
+    },
+    {
+     "w": "got",
+     "t": 53.425,
+     "end": 53.525
+    },
+    {
+     "w": "a",
+     "t": 53.525,
+     "end": 53.705
+    },
+    {
+     "w": "case",
+     "t": 53.705,
+     "end": 54.065
+    },
+    {
+     "w": "of",
+     "t": 54.065,
+     "end": 54.425
+    },
+    {
+     "w": "life",
+     "t": 54.425,
+     "end": 54.825
+    }
+   ],
+   "t": 52.286,
+   "end": 54.825
+  },
+  {
+   "section": "Verse 1",
+   "text": "Wrote a word down on a page",
+   "words": [
+    {
+     "w": "Wrote",
+     "t": 54.825,
+     "end": 55.725
+    },
+    {
+     "w": "a",
+     "t": 55.725,
+     "end": 55.865
+    },
+    {
+     "w": "word",
+     "t": 55.865,
+     "end": 56.065
+    },
+    {
+     "w": "down",
+     "t": 56.065,
+     "end": 56.445
+    },
+    {
+     "w": "on",
+     "t": 56.445,
+     "end": 56.725
+    },
+    {
+     "w": "a",
+     "t": 56.725,
+     "end": 56.905
+    },
+    {
+     "w": "page",
+     "t": 56.905,
+     "end": 57.405
+    }
+   ],
+   "t": 54.825,
+   "end": 57.405
+  },
+  {
+   "section": "Verse 1",
+   "text": "And slid it over with a smile",
+   "words": [
+    {
+     "w": "And",
+     "t": 57.405,
+     "end": 57.645
+    },
+    {
+     "w": "slid",
+     "t": 57.645,
+     "end": 57.985
+    },
+    {
+     "w": "it",
+     "t": 57.985,
+     "end": 58.145
+    },
+    {
+     "w": "over",
+     "t": 58.145,
+     "end": 58.745
+    },
+    {
+     "w": "with",
+     "t": 58.745,
+     "end": 59.126
+    },
+    {
+     "w": "a",
+     "t": 59.126,
+     "end": 59.386
+    },
+    {
+     "w": "smile",
+     "t": 59.386,
+     "end": 59.765
+    }
+   ],
+   "t": 57.405,
+   "end": 59.765
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "It's not for everyone, she said",
+   "words": [
+    {
+     "w": "It's",
+     "t": 59.765,
+     "end": 60.285
+    },
+    {
+     "w": "not",
+     "t": 60.285,
+     "end": 60.465
+    },
+    {
+     "w": "for",
+     "t": 60.465,
+     "end": 60.825
+    },
+    {
+     "w": "everyone,",
+     "t": 60.825,
+     "end": 61.525
+    },
+    {
+     "w": "she",
+     "t": 61.705,
+     "end": 62.005
+    },
+    {
+     "w": "said",
+     "t": 62.005,
+     "end": 62.405
+    }
+   ],
+   "t": 59.765,
+   "end": 62.405
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "But it's for everyone like you",
+   "words": [
+    {
+     "w": "But",
+     "t": 62.465,
+     "end": 62.745
+    },
+    {
+     "w": "it's",
+     "t": 62.745,
+     "end": 63.085
+    },
+    {
+     "w": "for",
+     "t": 63.085,
+     "end": 63.345
+    },
+    {
+     "w": "everyone",
+     "t": 63.345,
+     "end": 64.065
+    },
+    {
+     "w": "like",
+     "t": 64.065,
+     "end": 64.525
+    },
+    {
+     "w": "you",
+     "t": 64.525,
+     "end": 65.065
+    }
+   ],
+   "t": 62.465,
+   "end": 65.065
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "One a day until it's gone",
+   "words": [
+    {
+     "w": "One",
+     "t": 65.065,
+     "end": 65.845
+    },
+    {
+     "w": "a",
+     "t": 65.845,
+     "end": 66.006
+    },
+    {
+     "w": "day",
+     "t": 66.006,
+     "end": 66.186
+    },
+    {
+     "w": "until",
+     "t": 66.186,
+     "end": 66.665
+    },
+    {
+     "w": "it's",
+     "t": 66.665,
+     "end": 67.225
+    },
+    {
+     "w": "gone",
+     "t": 67.225,
+     "end": 67.445
+    }
+   ],
+   "t": 65.065,
+   "end": 67.445
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "And it's never really gone, it's true",
+   "words": [
+    {
+     "w": "And",
+     "t": 67.445,
+     "end": 67.745
+    },
+    {
+     "w": "it's",
+     "t": 67.745,
+     "end": 67.905
+    },
+    {
+     "w": "never",
+     "t": 67.905,
+     "end": 68.105
+    },
+    {
+     "w": "really",
+     "t": 68.105,
+     "end": 68.405
+    },
+    {
+     "w": "gone,",
+     "t": 68.405,
+     "end": 68.805
+    },
+    {
+     "w": "it's",
+     "t": 69.165,
+     "end": 69.745
+    },
+    {
+     "w": "true",
+     "t": 69.745,
+     "end": 70.265
+    }
+   ],
+   "t": 67.445,
+   "end": 70.265
+  },
+  {
+   "section": "Chorus 1",
+   "text": "Hawkes Punch, baby, swallow the sky",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "Punch,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "baby,",
+     "t": 74.065,
+     "end": 74.545
+    },
+    {
+     "w": "swallow",
+     "t": 74.725,
+     "end": 74.945
+    },
+    {
+     "w": "the",
+     "t": 74.945,
+     "end": 75.285
+    },
+    {
+     "w": "sky",
+     "t": 75.285,
+     "end": 75.645
+    }
+   ],
+   "t": 74.065,
+   "end": 75.645
+  },
+  {
+   "section": "Chorus 1",
+   "text": "One for the morning, one for the lie",
+   "words": [
+    {
+     "w": "One",
+     "t": 75.825,
+     "end": 76.145
+    },
+    {
+     "w": "for",
+     "t": 76.145,
+     "end": 76.465
+    },
+    {
+     "w": "the",
+     "t": 76.465,
+     "end": 76.685
+    },
+    {
+     "w": "morning,",
+     "t": 76.685,
+     "end": 77.085
+    },
+    {
+     "w": "one",
+     "t": 77.265,
+     "end": 77.465
+    },
+    {
+     "w": "for",
+     "t": 77.465,
+     "end": 77.645
+    },
+    {
+     "w": "the",
+     "t": 77.645,
+     "end": 77.785
+    },
+    {
+     "w": "lie",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 75.825,
+   "end": 77.785
+  },
+  {
+   "section": "Chorus 1",
+   "text": "You're just one in a healthy amount",
+   "words": [
+    {
+     "w": "You're",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "just",
+     "t": 78.245,
+     "end": 78.845
+    },
+    {
+     "w": "one",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "in",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "a",
+     "t": 79.405,
+     "end": 79.806
+    },
+    {
+     "w": "healthy",
+     "t": 79.806,
+     "end": 80.166
+    },
+    {
+     "w": "amount",
+     "t": 80.166,
+     "end": 80.566
+    }
+   ],
+   "t": 78.245,
+   "end": 80.566
+  },
+  {
+   "section": "Chorus 1",
+   "text": "So shut up and drink it and don't count",
+   "words": [
+    {
+     "w": "So",
+     "t": 80.566,
+     "end": 80.966
+    },
+    {
+     "w": "shut",
+     "t": 80.966,
+     "end": 81.305
+    },
+    {
+     "w": "up",
+     "t": 81.305,
+     "end": 81.565
+    },
+    {
+     "w": "and",
+     "t": 81.565,
+     "end": 81.745
+    },
+    {
+     "w": "drink",
+     "t": 81.745,
+     "end": 82.005
+    },
+    {
+     "w": "it",
+     "t": 82.005,
+     "end": 82.405
+    },
+    {
+     "w": "and",
+     "t": 82.405,
+     "end": 82.585
+    },
+    {
+     "w": "don't",
+     "t": 82.585,
+     "end": 82.825
+    },
+    {
+     "w": "count",
+     "t": 82.825,
+     "end": 83.205
+    }
+   ],
+   "t": 80.566,
+   "end": 83.205
+  },
+  {
+   "section": "Chorus 1",
+   "text": "Hawkes Punch, baby, here comes the floor",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": 83.205,
+     "end": 83.925
+    },
+    {
+     "w": "Punch,",
+     "t": 83.925,
+     "end": 84.125
+    },
+    {
+     "w": "baby,",
+     "t": 84.285,
+     "end": 84.505
+    },
+    {
+     "w": "here",
+     "t": 84.605,
+     "end": 85.025
+    },
+    {
+     "w": "comes",
+     "t": 85.025,
+     "end": 85.245
+    },
+    {
+     "w": "the",
+     "t": 85.245,
+     "end": 85.385
+    },
+    {
+     "w": "floor",
+     "t": 85.385,
+     "end": 85.845
+    }
+   ],
+   "t": 83.205,
+   "end": 85.845
+  },
+  {
+   "section": "Chorus 1",
+   "text": "Hawkes Punch, baby, you asked for more",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": 85.845,
+     "end": 86.445
+    },
+    {
+     "w": "Punch,",
+     "t": 86.445,
+     "end": 86.686
+    },
+    {
+     "w": "baby,",
+     "t": 86.786,
+     "end": 87.106
+    },
+    {
+     "w": "you",
+     "t": 87.326,
+     "end": 87.626
+    },
+    {
+     "w": "asked",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "for",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "more",
+     "t": 87.945,
+     "end": 88.605
+    }
+   ],
+   "t": 85.845,
+   "end": 88.605
+  },
+  {
+   "section": "Verse 2",
+   "text": "Now I'm somewhere past the ceiling",
+   "words": [
+    {
+     "w": "Now",
+     "t": 92.945,
+     "end": 93.586
+    },
+    {
+     "w": "I'm",
+     "t": 93.586,
+     "end": 93.746
+    },
+    {
+     "w": "somewhere",
+     "t": 93.746,
+     "end": 94.106
+    },
+    {
+     "w": "past",
+     "t": 94.106,
+     "end": 94.606
+    },
+    {
+     "w": "the",
+     "t": 94.606,
+     "end": 94.865
+    },
+    {
+     "w": "ceiling",
+     "t": 94.865,
+     "end": 95.245
+    }
+   ],
+   "t": 92.945,
+   "end": 95.245
+  },
+  {
+   "section": "Verse 2",
+   "text": "Past the clouds and past the blue",
+   "words": [
+    {
+     "w": "Past",
+     "t": 95.305,
+     "end": 96.025
+    },
+    {
+     "w": "the",
+     "t": 96.025,
+     "end": 96.265
+    },
+    {
+     "w": "clouds",
+     "t": 96.265,
+     "end": 96.585
+    },
+    {
+     "w": "and",
+     "t": 96.585,
+     "end": 96.745
+    },
+    {
+     "w": "past",
+     "t": 96.745,
+     "end": 97.005
+    },
+    {
+     "w": "the",
+     "t": 97.005,
+     "end": 97.345
+    },
+    {
+     "w": "blue",
+     "t": 97.345,
+     "end": 97.705
+    }
+   ],
+   "t": 95.305,
+   "end": 97.705
+  },
+  {
+   "section": "Verse 2",
+   "text": "Found a guy who's got my face on",
+   "words": [
+    {
+     "w": "Found",
+     "t": 98.245,
+     "end": 98.585
+    },
+    {
+     "w": "a",
+     "t": 98.585,
+     "end": 98.805
+    },
+    {
+     "w": "guy",
+     "t": 98.805,
+     "end": 99.005
+    },
+    {
+     "w": "who's",
+     "t": 99.005,
+     "end": 99.305
+    },
+    {
+     "w": "got",
+     "t": 99.305,
+     "end": 99.505
+    },
+    {
+     "w": "my",
+     "t": 99.505,
+     "end": 99.765
+    },
+    {
+     "w": "face",
+     "t": 99.765,
+     "end": 100.225
+    },
+    {
+     "w": "on",
+     "t": 100.225,
+     "end": 100.585
+    }
+   ],
+   "t": 98.245,
+   "end": 100.585
+  },
+  {
+   "section": "Verse 2",
+   "text": "Found a guy who's green like you",
+   "words": [
+    {
+     "w": "Found",
+     "t": 100.585,
+     "end": 100.905
+    },
+    {
+     "w": "a",
+     "t": 100.905,
+     "end": 101.166
+    },
+    {
+     "w": "guy",
+     "t": 101.166,
+     "end": 101.486
+    },
+    {
+     "w": "who's",
+     "t": 101.486,
+     "end": 101.845
+    },
+    {
+     "w": "green",
+     "t": 101.845,
+     "end": 102.025
+    },
+    {
+     "w": "like",
+     "t": 102.025,
+     "end": 102.345
+    },
+    {
+     "w": "you",
+     "t": 102.345,
+     "end": 103.065
+    }
+   ],
+   "t": 100.585,
+   "end": 103.065
+  },
+  {
+   "section": "Verse 2",
+   "text": "Tag you're it across the moonlight",
+   "words": [
+    {
+     "w": "Tag",
+     "t": 103.065,
+     "end": 103.685
+    },
+    {
+     "w": "you're",
+     "t": 103.685,
+     "end": 103.885
+    },
+    {
+     "w": "it",
+     "t": 103.885,
+     "end": 104.065
+    },
+    {
+     "w": "across",
+     "t": 104.065,
+     "end": 104.345
+    },
+    {
+     "w": "the",
+     "t": 104.345,
+     "end": 104.525
+    },
+    {
+     "w": "moonlight",
+     "t": 104.525,
+     "end": 105.025
+    }
+   ],
+   "t": 103.065,
+   "end": 105.025
+  },
+  {
+   "section": "Verse 2",
+   "text": "Hide behind a planet, boo",
+   "words": [
+    {
+     "w": "Hide",
+     "t": 105.025,
+     "end": 106.005
+    },
+    {
+     "w": "behind",
+     "t": 106.005,
+     "end": 106.585
+    },
+    {
+     "w": "a",
+     "t": 106.585,
+     "end": 106.905
+    },
+    {
+     "w": "planet,",
+     "t": 106.905,
+     "end": 107.265
+    },
+    {
+     "w": "boo",
+     "t": 107.265,
+     "end": 107.845
+    }
+   ],
+   "t": 105.025,
+   "end": 107.845
+  },
+  {
+   "section": "Verse 2",
+   "text": "Rope a ring around the Saturn",
+   "words": [
+    {
+     "w": "Rope",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "a",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "ring",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "around",
+     "t": 109.205,
+     "end": 109.545
+    },
+    {
+     "w": "the",
+     "t": 109.545,
+     "end": 109.905
+    },
+    {
+     "w": "Saturn",
+     "t": 109.905,
+     "end": 110.405
+    }
+   ],
+   "t": 109.205,
+   "end": 110.405
+  },
+  {
+   "section": "Verse 2",
+   "text": "Throw a world and here's one for you",
+   "words": [
+    {
+     "w": "Throw",
+     "t": 110.405,
+     "end": 110.985
+    },
+    {
+     "w": "a",
+     "t": 110.985,
+     "end": 111.285
+    },
+    {
+     "w": "world",
+     "t": 111.285,
+     "end": 111.585
+    },
+    {
+     "w": "and",
+     "t": 111.585,
+     "end": 111.765
+    },
+    {
+     "w": "here's",
+     "t": 111.765,
+     "end": 112.065
+    },
+    {
+     "w": "one",
+     "t": 112.065,
+     "end": 112.285
+    },
+    {
+     "w": "for",
+     "t": 112.285,
+     "end": 112.545
+    },
+    {
+     "w": "you",
+     "t": 112.545,
+     "end": 112.845
+    }
+   ],
+   "t": 110.405,
+   "end": 112.845
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "It's not for everyone, we said",
+   "words": [
+    {
+     "w": "It's",
+     "t": 112.845,
+     "end": 113.325
+    },
+    {
+     "w": "not",
+     "t": 113.325,
+     "end": 113.545
+    },
+    {
+     "w": "for",
+     "t": 113.545,
+     "end": 113.865
+    },
+    {
+     "w": "everyone,",
+     "t": 113.865,
+     "end": 114.585
+    },
+    {
+     "w": "we",
+     "t": 114.585,
+     "end": 115.086
+    },
+    {
+     "w": "said",
+     "t": 115.086,
+     "end": 115.426
+    }
+   ],
+   "t": 112.845,
+   "end": 115.426
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "But it's for everyone like us",
+   "words": [
+    {
+     "w": "But",
+     "t": 115.426,
+     "end": 115.825
+    },
+    {
+     "w": "it's",
+     "t": 115.825,
+     "end": 116.145
+    },
+    {
+     "w": "for",
+     "t": 116.145,
+     "end": 116.405
+    },
+    {
+     "w": "everyone",
+     "t": 116.405,
+     "end": 117.105
+    },
+    {
+     "w": "like",
+     "t": 117.105,
+     "end": 117.565
+    },
+    {
+     "w": "us",
+     "t": 117.565,
+     "end": 118.225
+    }
+   ],
+   "t": 115.426,
+   "end": 118.225
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "Catch a planet in the gut",
+   "words": [
+    {
+     "w": "Catch",
+     "t": 118.225,
+     "end": 118.825
+    },
+    {
+     "w": "a",
+     "t": 118.825,
+     "end": 119.025
+    },
+    {
+     "w": "planet",
+     "t": 119.025,
+     "end": 119.285
+    },
+    {
+     "w": "in",
+     "t": 119.285,
+     "end": 119.905
+    },
+    {
+     "w": "the",
+     "t": 119.905,
+     "end": 120.185
+    },
+    {
+     "w": "gut",
+     "t": 120.185,
+     "end": 120.485
+    }
+   ],
+   "t": 118.225,
+   "end": 120.485
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "Put the Earth back, careful, hush",
+   "words": [
+    {
+     "w": "Put",
+     "t": 120.485,
+     "end": 120.745
+    },
+    {
+     "w": "the",
+     "t": 120.745,
+     "end": 120.945
+    },
+    {
+     "w": "Earth",
+     "t": 120.945,
+     "end": 121.165
+    },
+    {
+     "w": "back,",
+     "t": 121.165,
+     "end": 121.425
+    },
+    {
+     "w": "careful,",
+     "t": 121.425,
+     "end": 122.346
+    },
+    {
+     "w": "hush",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 120.485,
+   "end": 122.346
+  },
+  {
+   "section": "Chorus 2",
+   "text": "Hawkes Punch, baby, swallow the sky",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "Punch,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "baby,",
+     "t": 126.985,
+     "end": 127.585
+    },
+    {
+     "w": "swallow",
+     "t": 127.765,
+     "end": 128.045
+    },
+    {
+     "w": "the",
+     "t": 128.045,
+     "end": 128.305
+    },
+    {
+     "w": "sky",
+     "t": 128.305,
+     "end": 128.705
+    }
+   ],
+   "t": 126.985,
+   "end": 128.705
+  },
+  {
+   "section": "Chorus 2",
+   "text": "One for the morning, one for the lie",
+   "words": [
+    {
+     "w": "One",
+     "t": 128.705,
+     "end": 129.206
+    },
+    {
+     "w": "for",
+     "t": 129.206,
+     "end": 129.506
+    },
+    {
+     "w": "the",
+     "t": 129.506,
+     "end": 129.746
+    },
+    {
+     "w": "morning,",
+     "t": 129.746,
+     "end": 130.145
+    },
+    {
+     "w": "one",
+     "t": 130.145,
+     "end": 130.505
+    },
+    {
+     "w": "for",
+     "t": 130.505,
+     "end": 130.685
+    },
+    {
+     "w": "the",
+     "t": 130.685,
+     "end": 130.825
+    },
+    {
+     "w": "lie",
+     "t": 130.825,
+     "end": 131.205
+    }
+   ],
+   "t": 128.705,
+   "end": 131.205
+  },
+  {
+   "section": "Chorus 2",
+   "text": "You're just one in a healthy amount",
+   "words": [
+    {
+     "w": "You're",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "just",
+     "t": 131.525,
+     "end": 131.865
+    },
+    {
+     "w": "one",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "in",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "a",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "healthy",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "amount",
+     "t": 133.265,
+     "end": 133.685
+    }
+   ],
+   "t": 131.525,
+   "end": 133.685
+  },
+  {
+   "section": "Chorus 2",
+   "text": "So shut up and drink it and don't count",
+   "words": [
+    {
+     "w": "So",
+     "t": 133.685,
+     "end": 134.025
+    },
+    {
+     "w": "shut",
+     "t": 134.025,
+     "end": 134.365
+    },
+    {
+     "w": "up",
+     "t": 134.365,
+     "end": 134.625
+    },
+    {
+     "w": "and",
+     "t": 134.625,
+     "end": 134.805
+    },
+    {
+     "w": "drink",
+     "t": 134.805,
+     "end": 135.045
+    },
+    {
+     "w": "it",
+     "t": 135.045,
+     "end": 135.445
+    },
+    {
+     "w": "and",
+     "t": 135.445,
+     "end": 135.645
+    },
+    {
+     "w": "don't",
+     "t": 135.645,
+     "end": 135.866
+    },
+    {
+     "w": "count",
+     "t": 135.866,
+     "end": 136.286
+    }
+   ],
+   "t": 133.685,
+   "end": 136.286
+  },
+  {
+   "section": "Chorus 2",
+   "text": "Hawkes Punch, baby, here comes the floor",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "Punch,",
+     "t": 136.926,
+     "end": 137.225
+    },
+    {
+     "w": "baby,",
+     "t": 137.305,
+     "end": 137.605
+    },
+    {
+     "w": "here",
+     "t": 137.925,
+     "end": 138.125
+    },
+    {
+     "w": "comes",
+     "t": 138.125,
+     "end": 138.305
+    },
+    {
+     "w": "the",
+     "t": 138.305,
+     "end": 138.445
+    },
+    {
+     "w": "floor",
+     "t": 138.445,
+     "end": 138.825
+    }
+   ],
+   "t": 136.926,
+   "end": 138.825
+  },
+  {
+   "section": "Chorus 2",
+   "text": "Hawkes Punch, baby, you asked for more",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "Punch,",
+     "t": 139.445,
+     "end": 139.725
+    },
+    {
+     "w": "baby,",
+     "t": 139.845,
+     "end": 140.205
+    },
+    {
+     "w": "you",
+     "t": 140.425,
+     "end": 140.685
+    },
+    {
+     "w": "asked",
+     "t": 140.685,
+     "end": 140.805
+    },
+    {
+     "w": "for",
+     "t": 140.805,
+     "end": 140.965
+    },
+    {
+     "w": "more",
+     "t": 140.965,
+     "end": 141.545
+    }
+   ],
+   "t": 139.445,
+   "end": 141.545
+  },
+  {
+   "section": "Bridge",
+   "text": "Out of breath and out of orbit",
+   "words": [
+    {
+     "w": "Out",
+     "t": 146.205,
+     "end": 146.825
+    },
+    {
+     "w": "of",
+     "t": 146.825,
+     "end": 147.445
+    },
+    {
+     "w": "breath",
+     "t": 147.445,
+     "end": 147.645
+    },
+    {
+     "w": "and",
+     "t": 147.645,
+     "end": 148.045
+    },
+    {
+     "w": "out",
+     "t": 148.045,
+     "end": 148.385
+    },
+    {
+     "w": "of",
+     "t": 148.385,
+     "end": 148.605
+    },
+    {
+     "w": "orbit",
+     "t": 148.605,
+     "end": 149.045
+    }
+   ],
+   "t": 146.205,
+   "end": 149.045
+  },
+  {
+   "section": "Bridge",
+   "text": "Forehead to forehead, nothing to say",
+   "words": [
+    {
+     "w": "Forehead",
+     "t": 149.045,
+     "end": 149.805
+    },
+    {
+     "w": "to",
+     "t": 149.805,
+     "end": 149.925
+    },
+    {
+     "w": "forehead,",
+     "t": 149.925,
+     "end": 150.246
+    },
+    {
+     "w": "nothing",
+     "t": 150.726,
+     "end": 150.925
+    },
+    {
+     "w": "to",
+     "t": 150.925,
+     "end": 151.045
+    },
+    {
+     "w": "say",
+     "t": 151.045,
+     "end": 151.565
+    }
+   ],
+   "t": 149.045,
+   "end": 151.565
+  },
+  {
+   "section": "Bridge",
+   "text": "Is it right for you, is it right for me",
+   "words": [
+    {
+     "w": "Is",
+     "t": 151.565,
+     "end": 151.765
+    },
+    {
+     "w": "it",
+     "t": 151.765,
+     "end": 151.885
+    },
+    {
+     "w": "right",
+     "t": 151.885,
+     "end": 152.025
+    },
+    {
+     "w": "for",
+     "t": 152.025,
+     "end": 152.365
+    },
+    {
+     "w": "you,",
+     "t": 152.365,
+     "end": 152.705
+    },
+    {
+     "w": "is",
+     "t": 152.865,
+     "end": 153.005
+    },
+    {
+     "w": "it",
+     "t": 153.005,
+     "end": 153.145
+    },
+    {
+     "w": "right",
+     "t": 153.145,
+     "end": 153.325
+    },
+    {
+     "w": "for",
+     "t": 153.325,
+     "end": 153.645
+    },
+    {
+     "w": "me",
+     "t": 153.645,
+     "end": 153.965
+    }
+   ],
+   "t": 151.565,
+   "end": 153.965
+  },
+  {
+   "section": "Bridge",
+   "text": "Ask your doctor, she'll show you the way",
+   "words": [
+    {
+     "w": "Ask",
+     "t": 154.405,
+     "end": 154.705
+    },
+    {
+     "w": "your",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "doctor,",
+     "t": 154.905,
+     "end": 155.245
+    },
+    {
+     "w": "she'll",
+     "t": 155.365,
+     "end": 155.545
+    },
+    {
+     "w": "show",
+     "t": 155.545,
+     "end": 155.865
+    },
+    {
+     "w": "you",
+     "t": 155.865,
+     "end": 156.285
+    },
+    {
+     "w": "the",
+     "t": 156.285,
+     "end": 156.785
+    },
+    {
+     "w": "way",
+     "t": 156.785,
+     "end": 157.146
+    }
+   ],
+   "t": 154.405,
+   "end": 157.146
+  },
+  {
+   "section": "Chorus 3",
+   "text": "Hawkes Punch, baby, swallow the sky",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": 161.585,
+     "end": 162.265
+    },
+    {
+     "w": "Punch,",
+     "t": 162.265,
+     "end": 162.445
+    },
+    {
+     "w": "baby,",
+     "t": 162.445,
+     "end": 162.825
+    },
+    {
+     "w": "swallow",
+     "t": 162.845,
+     "end": 163.385
+    },
+    {
+     "w": "the",
+     "t": 163.385,
+     "end": 163.685
+    },
+    {
+     "w": "sky",
+     "t": 163.685,
+     "end": 164.046
+    }
+   ],
+   "t": 161.585,
+   "end": 164.046
+  },
+  {
+   "section": "Chorus 3",
+   "text": "One for the morning, one for the lie",
+   "words": [
+    {
+     "w": "One",
+     "t": 164.046,
+     "end": 164.546
+    },
+    {
+     "w": "for",
+     "t": 164.546,
+     "end": 164.825
+    },
+    {
+     "w": "the",
+     "t": 164.825,
+     "end": 165.125
+    },
+    {
+     "w": "morning,",
+     "t": 165.125,
+     "end": 165.505
+    },
+    {
+     "w": "one",
+     "t": 165.745,
+     "end": 165.885
+    },
+    {
+     "w": "for",
+     "t": 165.885,
+     "end": 166.045
+    },
+    {
+     "w": "the",
+     "t": 166.045,
+     "end": 166.185
+    },
+    {
+     "w": "lie",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 164.046,
+   "end": 166.185
+  },
+  {
+   "section": "Chorus 3",
+   "text": "You're just one in a healthy amount",
+   "words": [
+    {
+     "w": "You're",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "just",
+     "t": 166.945,
+     "end": 167.265
+    },
+    {
+     "w": "one",
+     "t": 167.265,
+     "end": 167.665
+    },
+    {
+     "w": "in",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "a",
+     "t": 168.105,
+     "end": 168.225
+    },
+    {
+     "w": "healthy",
+     "t": 168.225,
+     "end": 168.565
+    },
+    {
+     "w": "amount",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 166.945,
+   "end": 168.565
+  },
+  {
+   "section": "Chorus 3",
+   "text": "So shut up and drink it and don't count",
+   "words": [
+    {
+     "w": "So",
+     "t": 169.045,
+     "end": 169.385
+    },
+    {
+     "w": "shut",
+     "t": 169.385,
+     "end": 169.745
+    },
+    {
+     "w": "up",
+     "t": 169.745,
+     "end": 169.965
+    },
+    {
+     "w": "and",
+     "t": 169.965,
+     "end": 170.185
+    },
+    {
+     "w": "drink",
+     "t": 170.185,
+     "end": 170.445
+    },
+    {
+     "w": "it",
+     "t": 170.445,
+     "end": 170.825
+    },
+    {
+     "w": "and",
+     "t": 170.825,
+     "end": 171.006
+    },
+    {
+     "w": "don't",
+     "t": 171.006,
+     "end": 171.266
+    },
+    {
+     "w": "count",
+     "t": 171.266,
+     "end": 171.605
+    }
+   ],
+   "t": 169.045,
+   "end": 171.605
+  },
+  {
+   "section": "Chorus 3",
+   "text": "Hawkes Punch, baby, here comes the floor",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": 172.005,
+     "end": 172.345
+    },
+    {
+     "w": "Punch,",
+     "t": 172.345,
+     "end": 172.565
+    },
+    {
+     "w": "baby,",
+     "t": 172.565,
+     "end": 172.965
+    },
+    {
+     "w": "here",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "comes",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "the",
+     "t": 173.525,
+     "end": 173.825
+    },
+    {
+     "w": "floor",
+     "t": 173.825,
+     "end": 174.165
+    }
+   ],
+   "t": 172.005,
+   "end": 174.165
+  },
+  {
+   "section": "Chorus 3",
+   "text": "Hawkes Punch, baby, you asked for more",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": 174.165,
+     "end": 174.845
+    },
+    {
+     "w": "Punch,",
+     "t": 174.845,
+     "end": 175.105
+    },
+    {
+     "w": "baby,",
+     "t": 175.105,
+     "end": 175.525
+    },
+    {
+     "w": "you",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "asked",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "for",
+     "t": 176.345,
+     "end": 177.105
+    },
+    {
+     "w": "more",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 174.165,
+   "end": 177.105
+  },
+  {
+   "section": "Outro",
+   "text": "Say ahh",
+   "words": [
+    {
+     "w": "Say",
+     "t": 183.225,
+     "end": 183.905
+    },
+    {
+     "w": "ahh",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 183.225,
+   "end": 183.905
+  },
+  {
+   "section": "Outro",
+   "text": "Say ahh",
+   "words": [
+    {
+     "w": "Say",
+     "t": 185.786,
+     "end": 186.466
+    },
+    {
+     "w": "ahh",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 185.786,
+   "end": 186.466
+  },
+  {
+   "section": "Outro",
+   "text": "Hawkes Punch",
+   "words": [
+    {
+     "w": "Hawkes",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "Punch",
+     "t": 196.967,
+     "end": 197.307
+    }
+   ],
+   "t": 196.967,
+   "end": 197.307
+  }
+ ]
+}

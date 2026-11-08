@@ -1,0 +1,67 @@
+{
+ "id": "dv_cu_3",
+ "f0": 2870,
+ "f1": 2921,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 95.667,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 95.733,
+   "why": "one patch jumps (cell 145.9, x2.5)",
+   "file": "spike-02872.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 96.733,
+   "why": "one patch jumps (cell 92.2, x1.7)",
+   "file": "spike-02902.jpg"
+  }
+ ],
+ "hash": "01451a55ce9749c4",
+ "summary": "Two small pops show up at the measured spikes, one in the torso and arm at 95.76 and one in the torso and hand at 96.76. The opening also has an off-lens gaze, and the raised hand is stiff.",
+ "faults": [
+  {
+   "t": 95.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 95.73 and 95.76 the torso and left arm jump. The shoulder and arm shift down and left in one step, and the head turns a step at the same time. This matches the 95.733 spike.",
+   "fix": "Smooth or retime the mocap over these frames, or key the arm and torso so they ease instead of stepping."
+  },
+  {
+   "t": 96.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 96.73 and 96.76 the body and head move right and the raised right hand jumps to a new, higher spot in one frame. This matches the 96.733 spike.",
+   "fix": "Add in-between frames or smooth the hand and torso curve around 96.73 to 96.79."
+  },
+  {
+   "t": 95.72,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The shot is meant to play 'down the lens', but for the first frames his eyes and head look off to the side of the camera. He only lands on the lens around 95.83 to 95.93, and the head wobbles on the way.",
+   "fix": "Make the head and eyes face the lens from the first frame, or hold one clean gaze through the opening."
+  },
+  {
+   "t": 96.89,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The raised hand sits stiffly on the shoulder with straight, slightly clawed fingers, and the pose barely changes from 96.83 to 96.96. The hand is not gesturing and reads as stuck, and the other arm is hidden by his hip.",
+   "fix": "Give the hand a beat of motion or a more open shape, or change the pose to match 'he means this'."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6366,
+  "out": 1448
+ },
+ "cost": 0.0272
+}

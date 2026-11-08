@@ -1,0 +1,38 @@
+{
+ "set": "estate",
+ "light": "pastel_interior",
+ "mood": "hall_pink",
+ "sing": "person",
+ "cast": {
+  "person": {
+   "at": "stage",
+   "perform": "dance_chorus",
+   "args": { "lead": "2b" }
+  },
+  "butlers_hall_l": {
+   "at": "rank_1",
+   "perform": "butler_chorus_a"
+  },
+  "butlers_hall_r": {
+   "at": "rank_2",
+   "perform": "butler_chorus_b"
+  },
+  "butlers_hall_l2": {
+   "at": "rank_3",
+   "perform": "butler_chorus_a"
+  },
+  "butlers_hall_r2": {
+   "at": "rank_4",
+   "perform": "butler_chorus_b"
+  },
+  "balloons": {
+   "at": "balloons_hall"
+  },
+  "gifts_a": {
+   "at": "gifts_l"
+  },
+  "gifts_b": {
+   "at": "gifts_r"
+  }
+ }
+}

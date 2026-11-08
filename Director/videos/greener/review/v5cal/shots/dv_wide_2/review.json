@@ -1,0 +1,22 @@
+{
+ "id": "dv_wide_2",
+ "f0": 2510,
+ "f1": 2561,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 83.667,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "be36a5faef0c8bd2",
+ "summary": "The cut strip is clean: the camera is static, the figure is small and held in a steady pose, and I can't see any pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3566,
+  "out": 120
+ },
+ "cost": 0.0083
+}

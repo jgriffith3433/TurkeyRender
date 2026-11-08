@@ -1,0 +1,187 @@
+{
+ "name": "mx_turn_90_l",
+ "fps": 30,
+ "frames": 29,
+ "seconds": 0.93,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.37,
+  "straightFrac": 0,
+  "moves": 7,
+  "flatness": 0.61,
+  "abruptFrac": 0.33,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 1.68,
+  "handPeak": 1.46,
+  "bigMoves": 4,
+  "anticipFrac": 0,
+  "overshootFrac": 0.5,
+  "coherence": 0.17,
+  "lagMedianFrames": 3,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 45.38,
+  "plantedFrac": 0.97,
+  "zgSpeedChanges": null,
+  "snapsPer10": 32.14,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.06,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.78,
+  "twinnedFrac": 0,
+  "curlMedian": 9.56,
+  "spreadMedian": 25.2,
+  "fannedFrac": 0,
+  "bowMedian": -0.01,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 38.25,
+  "armOmegaP95": 81.47,
+  "legOmegaP95": 204.98,
+  "spineOmegaP50": 14.96,
+  "spineOmegaP95": 37.79,
+  "headOmegaP50": 68.46,
+  "headOmegaP95": 131.75,
+  "armAccP95": 710.72,
+  "spineAccP95": 448.96,
+  "handSpeedP50": 0.43,
+  "handSpeedP95": 1.11,
+  "spineToArm": 0.39,
+  "energyCV": 0.32,
+  "moveRate": 3.21
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.37 over 4 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 8.3,
+   "note": "speed shape 0.61 (bell 0.6, constant 1.0), 33% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": 6,
+   "note": "4 big moves: 0 with anticipation, 2 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 10,
+   "note": "parts' speed profiles agree 0.17 (1 = everything moves as one); typical lag between parts 3 frames"
+  },
+  "weight": {
+   "score": 7.5,
+   "note": "0 centre-of-mass jerks, planted feet slide 45 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "3 body snaps or pops in 0.93 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "6% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "2 key poses, readability 0.78 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 10 deg, spread 25 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.47,
+   "f": 14,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 0.87,
+   "what": "RightLowerLeg jumps 10 deg in one frame"
+  },
+  {
+   "t": 0.2,
+   "f": 6,
+   "kind": "snap",
+   "part": "LeftLowerLeg",
+   "sev": 0.84,
+   "what": "LeftLowerLeg jumps 8 deg in one frame"
+  },
+  {
+   "t": 0.7,
+   "f": 21,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 0.84,
+   "what": "RightLowerLeg jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.4,
+   "f": 12,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.62,
+   "what": "RightHand travels 34 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.45,
+   "what": "RightFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.23,
+   "f": 7,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.45,
+   "what": "RightFoot stops dead from 67% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.47,
+   "f": 14,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 0.87,
+   "what": "RightLowerLeg jumps 10 deg in one frame",
+   "also": [
+    "snap",
+    "no-prep",
+    "abrupt-stop"
+   ]
+  },
+  {
+   "t": 0.2,
+   "f": 6,
+   "kind": "snap",
+   "part": "LeftLowerLeg",
+   "sev": 0.84,
+   "what": "LeftLowerLeg jumps 8 deg in one frame",
+   "also": [
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 8.3,
+ "verdict": "passable, weak on snaps and anticipation (8.3/10)"
+}

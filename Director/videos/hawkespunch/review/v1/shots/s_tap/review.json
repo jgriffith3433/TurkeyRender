@@ -1,0 +1,77 @@
+{
+ "id": "s_tap",
+ "f0": 2703,
+ "f1": 2760,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 90.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 91.767,
+   "why": "one patch jumps (cell 57.3, x4.8)",
+   "file": "spike-02753.jpg"
+  }
+ ],
+ "hash": "a896d73046cf3a65",
+ "summary": "The strip has a hard pop at 91.73 to 91.76, where the framing flips to a view from behind the red man. It also shows a red patch clipping at the blue man's jaw, heads overlapping, a stiff pose, and no visible tap.",
+ "faults": [
+  {
+   "t": 91.76,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 91.73 and 91.76 the picture jumps. The blue man is in front and facing us at 91.73. At 91.76 the red man is large in the foreground with his back to camera, and the blue man is small behind him. There is no in-between motion, so it reads as a swap or teleport.",
+   "fix": "Make the swap a deliberate cut or a motivated turn. Otherwise keep the same camera and blocking across these frames."
+  },
+  {
+   "t": 90.33,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "From 90.29 to 90.36 a red patch sits at the blue man's chin and jaw. It looks like the red man's hand or shirt poking through his face or neck as he turns.",
+   "fix": "Move the red man back or lower his arm, or hide the overlap with the turn."
+  },
+  {
+   "t": 90.29,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The blue man's arms go to akimbo, with both hands on his hips and elbows out. This is a stiff, twinned pose and does not read as turning in surprise. The red man's arm also overlaps his hip.",
+   "fix": "Give the blue man a asymmetric reaction pose, such as one hand up or a shoulder-led turn, and keep the red man's arm clear."
+  },
+  {
+   "t": 90.13,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "No tap on the shoulder is visible. The red man stands still behind the blue man with his hands down. The blue man turns without a cause, so the 'wait, what' beat does not land.",
+   "fix": "Add a clear reach and tap from the red man, followed by the blue man's reaction turn."
+  },
+  {
+   "t": 91.86,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "From 91.76 to 91.96 the red man's back and head cover the reveal. The blue man's face is a small sliver behind the red man's shoulder, with his head tucked behind the red man's head. The grin on the 'man with his face' is never readable. The blue man's arm also shows through beside the red man's torso at 91.76 to 91.83.",
+   "fix": "Offset the characters or the camera so the turning face is clear and unblocked, and fix the arm overlap."
+  },
+  {
+   "t": 91.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The red man stands rigid and symmetrical with both arms hanging and fingers pointing at the floor. He is nearly frozen with only small drift, so the silhouette is weak.",
+   "fix": "Add a clear action pose, such as a hand reaching or a shoulder shrug, and hold it briefly."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4990,
+  "out": 1517
+ },
+ "cost": 0.0252
+}

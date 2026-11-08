@@ -1,0 +1,228 @@
+{
+  "clip": "hp_p3_deadpan",
+  "length": 8.0,
+  "derived": {
+    "clip": "hp_p3_deadpan",
+    "file": "Assets/MusicVideo/Motion/Keyed/hp_p3_deadpan.anim",
+    "length": 8.0,
+    "loop": true,
+    "keys": 2,
+    "samples": 481,
+    "stepped": 0,
+    "additive": false,
+    "seed": "zg_neutral_c",
+    "humanScale": 1.0403,
+    "warnings": []
+  },
+  "contact": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_p3_deadpan.png",
+  "keys": [
+    {
+      "key": "plain",
+      "t": 0.0,
+      "interp": "ease",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 29.8,
+            "hipAbd": 7.4,
+            "knee": 31.3,
+            "anklePF": 23.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 11.6,
+            "shAbd": 10.8,
+            "elbow": 25.3
+          },
+          "fingerCurl": 46.5
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 29.6,
+            "hipAbd": 7.4,
+            "knee": 31.0,
+            "anklePF": 23.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 10.4,
+            "shAbd": 11.7,
+            "elbow": 25.0
+          },
+          "fingerCurl": 47.5
+        },
+        "neckFlex": -4.0,
+        "waistFlex": 12.7,
+        "torsoFromVertical": 5.3,
+        "headPitchWorld": 2.4
+      }
+    },
+    {
+      "key": "plain",
+      "t": 8.0,
+      "interp": "ease",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 29.8,
+            "hipAbd": 7.4,
+            "knee": 31.3,
+            "anklePF": 23.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 11.6,
+            "shAbd": 10.8,
+            "elbow": 25.3
+          },
+          "fingerCurl": 46.5
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 29.6,
+            "hipAbd": 7.4,
+            "knee": 31.0,
+            "anklePF": 23.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 10.4,
+            "shAbd": 11.7,
+            "elbow": 25.0
+          },
+          "fingerCurl": 47.5
+        },
+        "neckFlex": -4.0,
+        "waistFlex": 12.7,
+        "torsoFromVertical": 5.3,
+        "headPitchWorld": 2.4
+      }
+    }
+  ],
+  "muscles": [
+    {
+      "name": "plain",
+      "t": 0.0,
+      "interp": "ease",
+      "hold": 0.0,
+      "step": 0,
+      "show": 0.0,
+      "muscles": {
+        "Neck Nod Down-Up": 0.05,
+        "Head Nod Down-Up": 0.05,
+        "Left Upper Leg Front-Back": -0.05,
+        "Left Upper Leg In-Out": 0.02,
+        "Left Lower Leg Stretch": 0.6,
+        "Right Upper Leg Front-Back": -0.05,
+        "Right Upper Leg In-Out": 0.02,
+        "Right Lower Leg Stretch": 0.6,
+        "Left Arm Down-Up": -0.45,
+        "Left Arm Front-Back": 0.05,
+        "Left Forearm Stretch": 0.75,
+        "Right Arm Down-Up": -0.45,
+        "Right Arm Front-Back": 0.05,
+        "Right Forearm Stretch": 0.75,
+        "Left Thumb 1 Stretched": 0.3,
+        "Left Thumb 2 Stretched": 0.3,
+        "Left Thumb 3 Stretched": 0.3,
+        "Left Index 1 Stretched": 0.3,
+        "Left Index 2 Stretched": 0.3,
+        "Left Index 3 Stretched": 0.3,
+        "Left Middle 1 Stretched": 0.3,
+        "Left Middle 2 Stretched": 0.3,
+        "Left Middle 3 Stretched": 0.3,
+        "Left Ring 1 Stretched": 0.3,
+        "Left Ring 2 Stretched": 0.3,
+        "Left Ring 3 Stretched": 0.3,
+        "Left Little 1 Stretched": 0.3,
+        "Left Little 2 Stretched": 0.3,
+        "Left Little 3 Stretched": 0.3,
+        "Right Thumb 1 Stretched": 0.3,
+        "Right Thumb 2 Stretched": 0.3,
+        "Right Thumb 3 Stretched": 0.3,
+        "Right Index 1 Stretched": 0.3,
+        "Right Index 2 Stretched": 0.3,
+        "Right Index 3 Stretched": 0.3,
+        "Right Middle 1 Stretched": 0.3,
+        "Right Middle 2 Stretched": 0.3,
+        "Right Middle 3 Stretched": 0.3,
+        "Right Ring 1 Stretched": 0.3,
+        "Right Ring 2 Stretched": 0.3,
+        "Right Ring 3 Stretched": 0.3,
+        "Right Little 1 Stretched": 0.3,
+        "Right Little 2 Stretched": 0.3,
+        "Right Little 3 Stretched": 0.3
+      }
+    },
+    {
+      "name": "plain",
+      "t": 8.0,
+      "interp": "ease",
+      "hold": 0.0,
+      "step": 0,
+      "show": 8.0,
+      "muscles": {
+        "Neck Nod Down-Up": 0.05,
+        "Head Nod Down-Up": 0.05,
+        "Left Upper Leg Front-Back": -0.05,
+        "Left Upper Leg In-Out": 0.02,
+        "Left Lower Leg Stretch": 0.6,
+        "Right Upper Leg Front-Back": -0.05,
+        "Right Upper Leg In-Out": 0.02,
+        "Right Lower Leg Stretch": 0.6,
+        "Left Arm Down-Up": -0.45,
+        "Left Arm Front-Back": 0.05,
+        "Left Forearm Stretch": 0.75,
+        "Right Arm Down-Up": -0.45,
+        "Right Arm Front-Back": 0.05,
+        "Right Forearm Stretch": 0.75,
+        "Left Thumb 1 Stretched": 0.3,
+        "Left Thumb 2 Stretched": 0.3,
+        "Left Thumb 3 Stretched": 0.3,
+        "Left Index 1 Stretched": 0.3,
+        "Left Index 2 Stretched": 0.3,
+        "Left Index 3 Stretched": 0.3,
+        "Left Middle 1 Stretched": 0.3,
+        "Left Middle 2 Stretched": 0.3,
+        "Left Middle 3 Stretched": 0.3,
+        "Left Ring 1 Stretched": 0.3,
+        "Left Ring 2 Stretched": 0.3,
+        "Left Ring 3 Stretched": 0.3,
+        "Left Little 1 Stretched": 0.3,
+        "Left Little 2 Stretched": 0.3,
+        "Left Little 3 Stretched": 0.3,
+        "Right Thumb 1 Stretched": 0.3,
+        "Right Thumb 2 Stretched": 0.3,
+        "Right Thumb 3 Stretched": 0.3,
+        "Right Index 1 Stretched": 0.3,
+        "Right Index 2 Stretched": 0.3,
+        "Right Index 3 Stretched": 0.3,
+        "Right Middle 1 Stretched": 0.3,
+        "Right Middle 2 Stretched": 0.3,
+        "Right Middle 3 Stretched": 0.3,
+        "Right Ring 1 Stretched": 0.3,
+        "Right Ring 2 Stretched": 0.3,
+        "Right Ring 3 Stretched": 0.3,
+        "Right Little 1 Stretched": 0.3,
+        "Right Little 2 Stretched": 0.3,
+        "Right Little 3 Stretched": 0.3
+      }
+    }
+  ],
+  "playback": {
+    "mp4": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_p3_deadpan.mp4",
+    "fps": 24.0,
+    "frames": 192,
+    "worstBoneStepDeg": 0.0,
+    "worstBone": null,
+    "worstAt": 0.0,
+    "toeAngleRange": [
+      0.0,
+      0.0
+    ],
+    "neckFlexRange": [
+      -4.0,
+      -4.0
+    ]
+  }
+}

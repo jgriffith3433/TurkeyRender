@@ -1,0 +1,15 @@
+{
+  // golden_morning for a glossy picture: the same low warm sun, cut back so skin holds, with a soft fill near the lens for the eyes and a cool sky rim. Sun and sky agree, as in golden_morning.
+  "sky": {
+    "top": "#4a86cc", "mid": "#fbd9ae", "bottom": "#6a6244",
+    "ambient": "#9c9894", "ambientTop": "#8fb0e2", "ambientBottom": "#7a6240",
+    "fog": "#f6c994", "density": 0.0,
+    "sun": "#ffc98a", "sunDir": [-0.66, 0.26, -0.70], "sunSize": 0.05, "haze": 2.6,
+    "clouds": 0.42, "cloudColor": "#fff0d8", "cloudShade": "#a88fa4", "cloudScale": 0.55, "cloudSoft": 0.42, "cloudSpeed": 0.008
+  },
+  "lights": {
+    "sun": { "type": "directional", "pos": [-12.6, 6.5, -14.6], "aim": "subject", "color": "#ffe6d2", "intensity": 1.5, "shadows": true },
+    "fill": { "type": "directional", "pos": [4, 4, -12], "aim": "subject", "color": "#fff2ea", "intensity": 0.75 },
+    "rim": { "type": "directional", "pos": [6, 7, 12], "aim": "subject", "color": "#cfe2ff", "intensity": 0.7 }
+  }
+}

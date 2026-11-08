@@ -1,0 +1,53 @@
+{
+ "id": "ch_cu_2",
+ "f0": 1816,
+ "f1": 1867,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 60.533,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 61.9,
+   "why": "one patch jumps (cell 70.3, x2)",
+   "file": "spike-01857.jpg"
+  }
+ ],
+ "hash": "2a37d0008103a096",
+ "summary": "The shot has a likely pop in the head and torso at 61.99 to 62.03, with the head also touching the top of the frame just before it. There is a smaller possible snap at 60.63 to 60.66 on the cut.",
+ "faults": [
+  {
+   "t": 62.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 61.99 and 62.03 the head and torso drop sharply in frame (head from touching the top edge to well inside it). The background turkeys also shift, as if the camera or body was re-posed in one frame. This matches the measured spike.",
+   "fix": "Smooth the body or camera offset over 4 to 6 frames, or hide the change with a cut or a hold."
+  },
+  {
+   "t": 61.95,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "From 61.89 to 61.99 the top of the head and hair touch or crop at the top edge as he leans in, so there is no headroom.",
+   "fix": "Lower the camera framing slightly, or reduce the forward lean."
+  },
+  {
+   "t": 60.66,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 60.63 and 60.66 the head swings from a tilt to upright and the torso shifts sideways in one frame, so the early frames of the cut read as snapping, not settling.",
+   "fix": "Retime or blend the first frames so the head and torso move over 3 to 4 frames, or start on the settled pose."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4960,
+  "out": 1102
+ },
+ "cost": 0.0209
+}

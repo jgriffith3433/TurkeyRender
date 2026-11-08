@@ -1,0 +1,22 @@
+{
+ "id": "his_face",
+ "f0": 97,
+ "f1": 138,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 3.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "c9ae5bedd554763e",
+ "summary": "The strip is clean: the camera is static, the shoulder and chair hold steady across all eight tiles with only slight drift, and I see no pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4345,
+  "out": 128
+ },
+ "cost": 0.01
+}

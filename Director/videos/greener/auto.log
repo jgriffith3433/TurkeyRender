@@ -1,0 +1,20 @@
+2026-11-07T19:36:14.159Z n19: Finding the shot
+2026-11-07T19:36:17.470Z n19: Reading the note against hook_3
+2026-11-07T19:36:29.723Z n19: Waiting for Unity to change hook_3
+2026-11-07T19:36:29.734Z n19: Rebuilding: Widened the lens so the whole figure, head included, fits on the stairs through the hook.
+2026-11-07T19:37:06.464Z n19: Rendering hook_3 (build took 33 s)
+2026-11-07T19:37:16.740Z n19: Cutting before and after
+2026-11-07T19:37:19.998Z n19: Checking hook_3 with QA
+2026-11-07T19:37:41.411Z n19: left open: Fix is in and rendered, but it fails QA (5.9 of 10): Opening is washed out by a bright pink bloom and the figure is tiny and faint against the white door, so the subject barely reads. Camera p…
+2026-11-07T19:37:41.461Z n20: Finding the shot
+2026-11-07T19:37:44.875Z n20: Reading the note against weakness
+2026-11-07T19:37:58.709Z n20: Waiting for Unity to change weakness
+2026-11-07T19:37:58.720Z n20: Rebuilding: The look to the house now starts half a beat later, and the look away moves back by the same amount, so the glance keeps its length.
+2026-11-07T19:38:27.910Z n20: Rendering weakness (build took 26 s)
+2026-11-07T19:38:41.709Z n20: Cutting before and after
+2026-11-07T19:38:43.778Z n20: Checking weakness with QA
+2026-11-07T19:38:54.905Z n20: Reviewing weakness at 30 fps
+2026-11-07T19:39:05.514Z n20: fixed: The look to the house now starts half a beat later, and the look away moves back by the same amount, so the glance keeps its length.
+2026-11-07T19:39:05.523Z n21: Finding the shot
+2026-11-07T19:39:08.489Z n21: Reading the note against big_deal
+2026-11-07T19:39:12.133Z n21: left open: "This looks bad" doesn't say what's wrong (light, framing, pose, mood?), so any change would be a guess. Tell me what bothers you in this frame.

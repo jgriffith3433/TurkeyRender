@@ -1,0 +1,223 @@
+{
+ "name": "hanging_idle",
+ "fps": 30,
+ "frames": 143,
+ "seconds": 4.73,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 4,
+  "flatness": 0.93,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 4.73,
+  "fastRunMedianS": null,
+  "dynRange": 1.5,
+  "handPeak": null,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.19,
+  "lagMedianFrames": 3,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 7.12,
+  "plantedFrac": 0.99,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": null,
+  "deadJoints": 6,
+  "deadJointNames": [
+   "Spine",
+   "Chest",
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperLeg",
+   "RightUpperLeg"
+  ],
+  "readability": 0.7,
+  "twinnedFrac": 1,
+  "curlMedian": 6.53,
+  "spreadMedian": 27.54,
+  "fannedFrac": 0.57,
+  "bowMedian": -1.5,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 5.02,
+  "armOmegaP95": 14.87,
+  "legOmegaP95": 12.91,
+  "spineOmegaP50": 0,
+  "spineOmegaP95": 13.36,
+  "headOmegaP50": 7.02,
+  "headOmegaP95": 13.61,
+  "armAccP95": 338.87,
+  "spineAccP95": 317.8,
+  "handSpeedP50": 0.02,
+  "handSpeedP95": 0.04,
+  "spineToArm": 0,
+  "energyCV": 0.26,
+  "moveRate": 0
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": 0,
+   "note": "speed shape 0.93 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 4.73 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": 10,
+   "note": "parts' speed profiles agree 0.19 (1 = everything moves as one); typical lag between parts 3 frames"
+  },
+  "weight": {
+   "score": 9.6,
+   "note": "0 centre-of-mass jerks, planted feet slide 7 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 4.73 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.5,
+   "note": "10 key poses, readability 0.7 (best of front, side, three-quarter), 100% twinned"
+  },
+  "hands": {
+   "score": 7,
+   "note": "fingers flat and splayed 57% of the time"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 2.53,
+   "f": 76,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 84% of its peak speed in one frame"
+  },
+  {
+   "t": 2.73,
+   "f": 82,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 81% of its peak"
+  },
+  {
+   "t": 1.37,
+   "f": 41,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 79% of its peak speed in one frame"
+  },
+  {
+   "t": 1.6,
+   "f": 48,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot stops dead from 80% of its peak"
+  },
+  {
+   "t": 1.97,
+   "f": 59,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 94% of its peak speed in one frame"
+  },
+  {
+   "t": 2.1,
+   "f": 63,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot stops dead from 96% of its peak"
+  },
+  {
+   "t": 1.57,
+   "f": 47,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.42,
+   "what": "RightFoot starts at 86% of its peak speed in one frame"
+  },
+  {
+   "t": 1.8,
+   "f": 54,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.42,
+   "what": "RightFoot stops dead from 85% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 2.53,
+   "f": 76,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 84% of its peak speed in one frame",
+   "also": [
+    "abrupt-stop"
+   ]
+  },
+  {
+   "t": 1.37,
+   "f": 41,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 79% of its peak speed in one frame",
+   "also": [
+    "abrupt-stop",
+    "abrupt-start"
+   ]
+  },
+  {
+   "t": 1.97,
+   "f": 59,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 94% of its peak speed in one frame",
+   "also": [
+    "abrupt-stop"
+   ]
+  }
+ ],
+ "total": 8.1,
+ "verdict": "passable, weak on ease and hands (8.1/10)"
+}

@@ -1,0 +1,7 @@
+{
+  // The Touch Grass daylight with the sun gone: flat white sky, a soft grey shadow, a street at the end of a working day.
+  "sky": { "top": "#a9aeb4", "mid": "#c2c4c6", "bottom": "#6e6c64", "ambient": "#8a8c92", "ambientTop": "#a2a6ae", "ambientBottom": "#5e5c54", "fog": "#bfc1c3", "density": 0.012, "clouds": 1, "cloudColor": "#c6c8ca", "cloudShade": "#8d9196", "cloudScale": 0.7, "cloudSoft": 0.4, "cloudSpeed": 0.004 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [-7, 9, -6], "aim": "subject", "color": "#e8e8e6", "intensity": 2.0, "shadows": true }
+  }
+}

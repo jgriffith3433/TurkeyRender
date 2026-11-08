@@ -1,0 +1,95 @@
+{
+ "id": "dv_low_2",
+ "f0": 2664,
+ "f1": 2741,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 88.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 88.933,
+   "why": "pose jumps and comes back (0.67)",
+   "file": "spike-02668.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 89.2,
+   "why": "flicker: patches change and change straight back on 43% of the shot's frames (11 cells here)",
+   "file": "spike-02676.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 89.633,
+   "why": "pose jumps and comes back (0.79)",
+   "file": "spike-02689.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 90.867,
+   "why": "pose jumps and comes back (0.8)",
+   "file": "spike-02726.jpg"
+  }
+ ],
+ "hash": "0c93dbc284ea6a33",
+ "summary": "The ceiling flickers between a dark brown flat fill and the lit painted ceiling every few frames throughout the shot, which is a serious render fault; the character pose is otherwise mostly continuous.",
+ "faults": [
+  {
+   "t": 88.83,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling swaps between a flat dark brown fill with a jagged sawtooth edge and the lit painted ceiling with gold stripes. It alternates frame to frame (88.83 brown, 88.86 painted, 88.89 brown, 88.93 painted). The ceiling fills the top third of a low-angle shot.",
+   "fix": "Fix the ceiling mesh or material, which looks like z-fighting or a duplicate overlapping layer or a shader failing. Remove the duplicate surface and keep the lit painted ceiling."
+  },
+  {
+   "t": 89.2,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling flicker continues with the same brown and painted swaps (89.19 painted, 89.23 brown, 89.26 and 89.29 brown, 89.33 painted, 89.39 brown). The diagonal sawtooth boundary sweeps across the frame.",
+   "fix": "Same ceiling fix. Check that no two ceiling layers or lighting passes are competing."
+  },
+  {
+   "t": 89.69,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling flicker persists (89.63 and 89.66 painted, 89.69 to 89.83 brown, 89.86 painted). It also continues at 90.86 to 91.09, so the whole shot is affected.",
+   "fix": "Apply the ceiling fix to the whole shot and re-render."
+  },
+  {
+   "t": 88.93,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The measurement flags a pose pop. The torso and head shift slightly between neighbouring tiles (88.89 to 88.93), partly from the ceiling swap. His stance also reads stiff, with the arm hanging out to the side.",
+   "fix": "Smooth the pose keys around 88.9 and check for a one-frame glitch in the mocap."
+  },
+  {
+   "t": 89.63,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "He changes from a lunge to a standing step with a quick arm swing between 89.66 and 89.73. The hand positions change abruptly, and the pose jump was flagged.",
+   "fix": "Add in-between frames or smooth the curve on the arms at 89.66 to 89.73."
+  },
+  {
+   "t": 90.87,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His hand sits at his chest and the pose is nearly static across 90.86 to 91.09. The expression barely changes, so it reads as a held stare.",
+   "fix": "Add a small head tilt, a blink, or an expression change to sell the star feeling."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 9166,
+  "out": 1013
+ },
+ "cost": 0.0285
+}

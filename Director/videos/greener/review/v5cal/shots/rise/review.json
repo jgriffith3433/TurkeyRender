@@ -1,0 +1,22 @@
+{
+ "id": "rise",
+ "f0": 4284,
+ "f1": 4336,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 142.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "2d23981c08702c39",
+ "summary": "The strip is clean: the camera glides smoothly down the path toward the pink carpet with no pops, flicker or clipping across the eight tiles.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3558,
+  "out": 387
+ },
+ "cost": 0.011
+}

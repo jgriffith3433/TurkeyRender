@@ -1,0 +1,37 @@
+{
+ "id": "balloon_butler",
+ "f0": 1918,
+ "f1": 1970,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 63.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 64.8,
+   "why": "one patch jumps (cell 145.2, x3.9)",
+   "file": "spike-01944.jpg"
+  }
+ ],
+ "hash": "5c2b3f96f839f1b2",
+ "summary": "The balloon plate is clean, but the butler strip shows no snatch or taut string, has a fast torso spin with a mangled arm, and crops his head.",
+ "faults": [
+  {
+   "t": 64.99,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Facing away from camera, his near arm vanishes into the torso and the other hand sits behind his back with a bent, twisted wrist. The silhouette reads as a stump plus a floating hand, and it persists at 65.03.",
+   "fix": "Re-pose or retarget the arms during the turn so both arms stay readable and the wrist doesn't fold."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4990,
+  "out": 950
+ },
+ "cost": 0.0195
+}

@@ -1,0 +1,8 @@
+{
+  // A room with the big light on: warm, soft, nothing hidden.
+  "sky": { "top": "#000000", "mid": "#000000", "bottom": "#000000", "ambient": "#3a3430", "fog": "#000000", "density": 0 },
+  "lights": {
+    "ceiling": { "type": "point", "pos": [0, 2.7, 0], "color": "#ffe2bd", "intensity": 2.4, "range": 9 },
+    "fill": { "type": "point", "pos": [1.8, 1.4, 1.2], "color": "#ffd9b0", "intensity": 1.5, "range": 6 }
+  }
+}

@@ -15,6 +15,8 @@ namespace TKShock.MV
             switch (e)
             {
                 case "linear": return p;
+                case "hand": // a hand going somewhere: smooth off the mark, a little past it, and back. 1 at the end, so it lands exactly
+                    { float s = p * p * p * (10 + p * (6 * p - 15)), v = Mathf.Clamp01((p - .55f) / .45f); return s + .07f * Mathf.Sin(v * Mathf.PI) * v; }
                 case "in": return p * p * p;
                 case "out": { float q = 1 - p; return 1 - q * q * q; }
                 case "expo": return p >= 1 ? 1 : 1 - Mathf.Pow(2, -10 * p);
@@ -133,7 +135,8 @@ namespace TKShock.MV
         {
             if (Director == null) return;
             MVClock.T = Director.time; MVClock.Song = Song;
-            Driver?.Apply(Director.time, playerData);
+            MVLate.Deferring = true; MVLate.EvalT = Director.time;   // a native body's pose is written after this: MVLate.cs
+            try { Driver?.Apply(Director.time, playerData); } finally { MVLate.Deferring = false; }
         }
         public override void OnPlayableDestroy(Playable playable) => Driver?.Dispose();
     }

@@ -1,0 +1,21 @@
+{
+  // The shot checks' proof: each bad_ card reproduces one fault class from the Hawkes Punch slice; each good_ card is its control.
+  "shots": [
+    { "id": "look_sits", "at": "1:1", "len": "4b", "seq": "clinic" },
+    { "id": "good_cu", "len": "4b", "seq": "clinic" },
+    { "id": "bad_eyes", "len": "4b", "seq": "clinic" },
+    { "id": "bad_cut_top", "len": "4b", "seq": "clinic" },
+    { "id": "good_wide", "len": "4b", "seq": "clinic" },
+    { "id": "bad_edge", "len": "4b", "seq": "clinic" },
+    { "id": "bad_stand", "len": "4b", "seq": "clinic" },
+    { "id": "bad_off", "len": "4b", "seq": "clinic" },
+    { "id": "good_desk", "len": "4b", "seq": "clinic" },
+    { "id": "bad_camin", "len": "4b", "seq": "clinic" },
+    { "id": "good_doctor", "len": "4b", "seq": "clinic" },
+    { "id": "bad_glasses", "len": "4b", "seq": "clinic" },
+    { "id": "good_kick", "len": "4b", "seq": "clinic" },
+    { "id": "bad_kick", "len": "4b", "seq": "clinic" },
+    { "id": "good_space", "len": "4b", "seq": "space" },
+    { "id": "bad_dark", "len": "4b", "seq": "space" }
+  ]
+}

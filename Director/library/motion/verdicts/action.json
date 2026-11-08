@@ -1,0 +1,464 @@
+{
+ "mx_baseball_pitching": {
+  "grade": "A",
+  "uses": [
+   "throw"
+  ],
+  "weak": [],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: a real pitcher's windup and pitch, set 0-0.4 s, knee lift 0.5-1.4 s, stride 1.4-1.6 s, arm cocked 1.6-1.95 s, release at 2.03 s, big follow-through with the back leg kicked high 2.1-2.5 s, settled 3.6 s; weak at: a quick throw (2 s windup; start at 1.4 s to cut it); needs: play once",
+  "hit": 2.03,
+  "watched": "strip 0-5.2 s, own full-body bursts 1.9-2.9 s"
+ },
+ "mx_boxing_dodge": {
+  "grade": "A",
+  "uses": [
+   "dodge"
+  ],
+  "weak": [
+   "punch"
+  ],
+  "needs": [],
+  "line": "good for: a boxer's bob and weave in guard, ducks under 0.2-0.5 s, leans back away from a swing 0.8-1.1 s (head tipped back), steps out 1.2-1.5 s, guard back 1.8 s, loops cleanly; weak at: throwing a punch (no strike in it); needs: nothing",
+  "hit": 0.9,
+  "watched": "strip 0-4.7 s, hands burst"
+ },
+ "mx_cross_punch": {
+  "grade": "A",
+  "uses": [
+   "punch"
+  ],
+  "weak": [
+   "talk",
+   "gesture",
+   "point"
+  ],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: a big looping overhand right with a lunge (reads as a haymaker more than a straight cross), arm cocked high 0.86-0.93 s, arm straight at 1.07 s (hit), held to 1.2 s, guard back 1.35 s; weak at: a tight jab/cross (the elbow loops over the head first) and anything talky (fists); needs: play once",
+  "hit": 1.07,
+  "watched": "strip 0-4.3 s, hands burst, own full-body burst 0.9-1.4 s"
+ },
+ "mx_hook_punch": {
+  "grade": "A",
+  "uses": [
+   "punch",
+   "taunt"
+  ],
+  "weak": [
+   "talk",
+   "gesture",
+   "point"
+  ],
+  "needs": [
+   "once",
+   "cut or blend out by 1.25 s (arm hangs extended 1.0-1.55 s)"
+  ],
+  "line": "good for: a wide right hook from a boxing guard, wind-up 0.5-0.85 s, fist crosses his centre at 1.0 s (hit), fully out 1.03-1.07 s, guard back by 1.65 s; weak at: talk or any gesture (fists the whole clip); needs: play once, leave by ~1.25 s because the arm stalls out straight for half a second",
+  "hit": 1,
+  "watched": "strip 0-4.3 s, hands burst (0.43-1.4 s), own right-half burst 0.8-1.3 s"
+ },
+ "mx_roundhouse_kick": {
+  "grade": "B",
+  "uses": [
+   "kick"
+  ],
+  "weak": [
+   "punch"
+  ],
+  "needs": [
+   "once",
+   "wide or full-body framing",
+   "relaxed grip"
+  ],
+  "line": "good for: a head-high roundhouse with the right leg, chamber 0.7-0.8 s, leg out straight at 0.93 s (hit), top at 1.0-1.07 s, foot down 1.45 s; weak at: medium shots (1.1-1.35 s the left hand is splayed stiff and sweeps across his face, torso leans way back); needs: frame full body, play once, relaxed grip",
+  "hit": 0.93,
+  "watched": "strip 0-5 s, own bursts 0.57-1.07 s full body, 1.1-1.6 s both cameras"
+ },
+ "mx_throw": {
+  "grade": "B",
+  "uses": [
+   "throw"
+  ],
+  "weak": [],
+  "needs": [
+   "once",
+   "cut by 1.1 s (the rest is standing with dead arms)"
+  ],
+  "line": "good for: a light one-arm overhand toss from a stand, arm up 0.7-0.83 s, release at 0.87 s (hand forward at shoulder height, fingers open), arm down by 1.0 s; weak at: a hard throw (no step, no torso, just the arm) and anything after 1.0 s (passive stand); needs: play once and leave by 1.1 s",
+  "hit": 0.87,
+  "watched": "strip 0-4.4 s, own bursts 0.7-1.2 s both cameras"
+ },
+ "mx_throwing": {
+  "grade": "ban",
+  "uses": [],
+  "weak": [
+   "throw"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "BANNED: no release: the throwing hand sits flat beside his cheek and shoves like a shot-put: use mx_goalie_overhand_throw or mx_baseball_pitching. Was: good for: little; a step and an open-palm push forward, release about 2.45 s; weak at: throw (the throwing hand is held flat and spread beside his face 1.9-2.3 s, palm nearly on the cheek, then shoves forward like a shot-put; no snap) and 2.6-5.5 s is a long stand with claw-spread fingers; needs: relaxed grip if used at all",
+  "hit": 2.45,
+  "watched": "strip 0-5.6 s, own bursts 1.75-2.25 s right, 2.0-2.5 s full body",
+  "banReason": "no release: the throwing hand sits flat beside his cheek and shoves like a shot-put: use mx_goalie_overhand_throw or mx_baseball_pitching"
+ },
+ "mx_throw_object": {
+  "grade": "A",
+  "uses": [
+   "throw"
+  ],
+  "weak": [],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: pick something up off the ground and hurl it, bends to the floor 0.5-1.4 s (hand at the ground ~1.0 s), rises and squares up 1.5-2.0 s, arm back overhead 2.3-2.43 s, release at 2.5 s with a big forward lunge and follow-through 2.5-2.8 s, upright 3.6 s; weak at: a quick throw (2.5 s of pick-up before it); needs: play once (start at 2.0 s for the throw alone)",
+  "hit": 2.5,
+  "watched": "strip 0-4.9 s, own full-body burst 2.3-2.8 s"
+ },
+ "mx_goalie_overhand_throw": {
+  "grade": "A",
+  "uses": [
+   "throw"
+  ],
+  "weak": [],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: a long full-body overhand throw (holds the ball at the chest 0-0.5 s, crow-hop 0.5-0.8 s, arm back 1.0-1.3 s, release at the top at 1.53 s, arm whips down 1.57-1.65 s), recovers by 1.9 s; weak at: anything small; needs: play once",
+  "hit": 1.53,
+  "watched": "strip 0-3.3 s, own full-body burst 1.3-1.8 s"
+ },
+ "mx_goalie_catch_mid": {
+  "grade": "B",
+  "uses": [
+   "catch"
+  ],
+  "weak": [],
+  "needs": [
+   "once",
+   "camera off his right side, not front (his right hand crosses his face 0.36-0.6 s from the front)"
+  ],
+  "line": "good for: hands up ready 0.2-0.6 s, then both hands pull a chest-high ball in to the belly, closed at 0.75 s, held to 1.27 s; weak at: a clean two-hand close (the hands come in side by side, not around a ball) and front framings (open hand over the face 0.36-0.6 s); needs: play once, side angle, a prop catch at 0.75 s",
+  "hit": 0.75,
+  "watched": "strip 0-1.8 s, own bursts 0.3-0.8 s both cameras"
+ },
+ "mx_hit_reaction": {
+  "grade": "ban",
+  "uses": [],
+  "weak": [
+   "hit-react"
+  ],
+  "needs": [
+   "mask: head",
+   "once"
+  ],
+  "line": "BANNED: only the head snaps on a frozen odd arm pose, and as a loop it twitches every 0.45 s: use mx_stomach_hit or stumble_backwards. Was: good for: at most a small head snap back at 0.1 s as a head layer; weak at: hit-react (the body holds an odd pose, right forearm across the chest and left arm out flat, and only the head moves; as a loop it twitches every 0.45 s); needs: mask head, play once",
+  "hit": 0.1,
+  "watched": "strip 0-3 s, own right-half burst 0-0.5 s",
+  "banReason": "only the head snaps on a frozen odd arm pose, and as a loop it twitches every 0.45 s: use mx_stomach_hit or stumble_backwards"
+ },
+ "mx_stomach_hit": {
+  "grade": "A",
+  "uses": [
+   "hit-react"
+  ],
+  "weak": [],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: taking a body shot in a boxing guard, head jerks up 0.07-0.15 s, folds forward and down with a fist to the chest at 0.2-0.3 s (hit 0.2 s), hunched 0.3-0.6 s, back in guard by 1.2 s; weak at: a big knock-back (it is small and stays on the spot); needs: play once",
+  "hit": 0.2,
+  "watched": "strip 0-3.6 s, own right-half burst 0.07-0.6 s"
+ },
+ "mx_flying_back_death": {
+  "grade": "B",
+  "uses": [
+   "hit-react",
+   "fall"
+  ],
+  "weak": [
+   "injured"
+  ],
+  "needs": [
+   "once",
+   "stop at 0.6 s (or hand to ragdoll)"
+  ],
+  "line": "good for: a huge knock-back, hit at 0.07 s, blown off his feet 0.2-0.5 s, lands on his back 0.55 s; weak at: anything after 0.6 s (the backward roll sinks his head and chest under the lawn 0.9-1.1 s, then he ends folded in a knot with a shoe in his face 1.7-3.0 s); needs: play once and cut or ragdoll by 0.6 s",
+  "hit": 0.07,
+  "watched": "strip 0-3.4 s, own full-body bursts 0.07-0.57 s and 0.6-1.1 s, end frame 3.4 s"
+ },
+ "mx_falling_air": {
+  "grade": "A",
+  "uses": [
+   "fall",
+   "fly",
+   "float"
+  ],
+  "weak": [],
+  "needs": [
+   "lift him off the ground (the clip lies at lawn level)"
+  ],
+  "line": "good for: a skydiver's freefall, belly down, arms out with flat open palms, small steady sway, loops cleanly (4.5 s); weak at: nothing it would be picked for; needs: put him in the air with fly or move (it lies on the lawn); open palms are right here",
+  "watched": "strip 0-4.5 s, own right-half burst 1.0-1.5 s, full frame 2.0 s"
+ },
+ "mx_flying_idle": {
+  "grade": "B",
+  "uses": [
+   "fly"
+  ],
+  "weak": [
+   "float"
+  ],
+  "needs": [
+   "fly with face:\"yaw\" (the body is already horizontal)",
+   "lift him off the ground"
+  ],
+  "line": "good for: a rigid torpedo superman glide, prone, arms back along his sides with fists, head down; weak at: anything that needs his face (he looks at the ground) and calm floating (it is nearly still, 0.25 m/s); needs: fly with face:\"yaw\" so he is not pitched twice, lift him off the lawn",
+  "watched": "strip 0-3 s, full frame 1.0 s"
+ },
+ "mx_treading_water": {
+  "grade": "A",
+  "uses": [
+   "float"
+  ],
+  "weak": [],
+  "needs": [],
+  "line": "good for: treading water or hovering in place, knees bent and pedalling, arms out sculling with flat palms down, calm 3 s loop; weak at: flying (no direction to it); needs: nothing (flat hands are the action)",
+  "watched": "strip 0-3 s, own right-half burst 0.5-1.0 s"
+ },
+ "mx_pull_rope": {
+  "grade": "B",
+  "uses": [
+   "pull"
+  ],
+  "weak": [],
+  "needs": [
+   "a rope fx between his hands"
+  ],
+  "line": "good for: hand-over-hand rope hauling from a stand, one arm reaches out then pulls into the chest, alternating about every 1 s (watched 4.6-12.6 s); weak at: a hard tug (mild effort, torso barely leans, hands only half closed); needs: a rope in the hands to sell it",
+  "watched": "strip (8 s from 4.57 s, cells too small), own sheet every 0.2 s of preview 0-4 s"
+ },
+ "mx_lift_heavy": {
+  "grade": "ban",
+  "uses": [
+   "transition"
+  ],
+  "weak": [
+   "lift"
+  ],
+  "needs": [],
+  "line": "BANNED: never lifts anything (squats, looks round, stands up empty-handed): misleading name. Was: good for: squatting down 0.8-1.6 s, staying low and looking around 3.5-6.4 s, standing back up about 8.2-8.7 s; weak at: lift (in the 0.8-8.8 s shown he never grips or raises anything, hands hang open at the knees; the last 2.7 s are not in the preview); needs: nothing; pick another clip for a lift",
+  "watched": "strip 0.77-8.77 s, own sheet every 0.4 s, bursts preview 6.4-6.9 s and 7.4-7.9 s",
+  "banReason": "never lifts anything (squats, looks round, stands up empty-handed): misleading name"
+ },
+ "mx_putting_down": {
+  "grade": "B",
+  "uses": [
+   "put-down"
+  ],
+  "weak": [],
+  "needs": [
+   "start at 2.5 s"
+  ],
+  "line": "good for: setting something on the floor, standing with the right hand carrying at his side to 3.3 s, a straight-legged bend to the ground, hand lowest about 4.7-5.9 s (release 4.7 s), upright by 7.5 s; weak at: close shots of the bend (stiff jack-knife, legs locked, head hanging, a bit mannequin), no grip on the carrying hand; needs: start about 2.5 s, a prop in the hand",
+  "hit": 4.7,
+  "watched": "strip 1.5-9.5 s, own sheet every 0.4 s"
+ },
+ "mx_taunt_flex": {
+  "grade": "A",
+  "uses": [
+   "taunt",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: a fighter's taunt, guard with fist at the chin 0-0.8 s, both arms thrown wide (come on) 0.93-1.2 s, then hunched forward with forearms flexed down 1.3-2.5 s, back to guard 2.8 s; weak at: talk (fists, guard); needs: play once (fingers splay for 0.2 s at arms-wide, fine at speed)",
+  "hit": 1,
+  "watched": "strip 0-3.9 s"
+ },
+ "falling_idle": {
+  "grade": "B",
+  "uses": [
+   "fall"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "in the air with fly or a drop",
+   "0.7 s loop: nearly a held pose"
+  ],
+  "line": "good for: a frozen mid-air fall, knees bent apart, one arm flung up and one out, head ducked; weak at: anything on the ground (reads as an odd crouch) and close-ups (face hidden down by the arm); needs: put him in the air with fly or a drop, it barely moves",
+  "watched": "strip 0-3.5 s, full frame 0.3 s"
+ },
+ "hanging_idle": {
+  "grade": "B",
+  "uses": [
+   "float"
+  ],
+  "weak": [],
+  "needs": [
+   "raise him so the hands meet a bar or ledge"
+  ],
+  "line": "good for: dangling from a bar or ledge or being hauled up by the hands, arms straight overhead, legs hanging, tiny sway, 4.7 s loop; weak at: surrender or celebration (it is a hang, not a reach); needs: lift him off the lawn so the hands meet what he holds",
+  "watched": "strip 0-4.7 s"
+ },
+ "crawl_backwards": {
+  "grade": "B",
+  "uses": [
+   "crawl",
+   "injured"
+  ],
+  "weak": [],
+  "needs": [
+   "move him forward, the clip runs in place"
+  ],
+  "line": "good for: a face-down crawl, dragging himself up from flat 0-0.3 s onto elbows and knees 0.5-1.3 s and reaching forward, flat again 1.5-2.0 s; weak at: crawling backwards despite the name (face down, going forward); needs: a move to carry him, it runs on the spot",
+  "watched": "strip 0-2.1 s, own full-body burst 0.4-0.9 s"
+ },
+ "injured_stumble": {
+  "grade": "B",
+  "uses": [
+   "injured"
+  ],
+  "weak": [
+   "walk"
+  ],
+  "needs": [
+   "move him if he must travel (stays on the spot)"
+  ],
+  "line": "good for: a hurt, dazed stagger, standing hurt 0-0.8 s, doubles forward 0.9-1.5 s, lurches with the right leg trailing and the head lolling back 1.6-2.9 s, steadies 3.2-5.0 s; weak at: a walk (it stays in place) and long holds (standing knee nearly locked 1.6-2.1 s); needs: a move or walk if he travels",
+  "watched": "strip 0-5.1 s, own full-body burst 1.6-2.1 s"
+ },
+ "jumping_jacks": {
+  "grade": "A",
+  "uses": [
+   "jump"
+  ],
+  "weak": [
+   "dance"
+  ],
+  "needs": [],
+  "line": "good for: clean jumping jacks, arms overhead and feet together at 0.0 s, arms down and feet out at 0.5 s, 1.07 s loop; weak at: a dance step (reads as exercise); needs: nothing",
+  "watched": "strip 0-3 s, own full-body burst 0-0.5 s"
+ },
+ "stumble_backwards": {
+  "grade": "A",
+  "uses": [
+   "hit-react",
+   "fall"
+  ],
+  "weak": [],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: being hit and knocked over backwards, head snaps back at 0.55 s (hit), windmills back on one leg 0.6-1.1 s, sits down 1.25 s, rolls onto his back legs up 1.4-2.0 s, ends propped on his hands 2.6-3.3 s; weak at: nothing it would be picked for (spread fingers in the windmill read as panic); needs: play once",
+  "hit": 0.55,
+  "watched": "strip 0-3.3 s, own bursts 0.5-1.0 s right half, 0.9-1.4 s full body"
+ },
+ "mx_falling_idle": {
+  "grade": "B",
+  "uses": [
+   "fall"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "in the air with fly or a drop",
+   "0.7 s loop: nearly a held pose"
+  ],
+  "line": "good for: a frozen mid-air fall, knees bent apart, one arm flung up and one out, head ducked; weak at: anything on the ground (reads as an odd crouch) and close-ups (face hidden down by the arm); needs: put him in the air with fly or a drop, it barely moves",
+  "watched": "strip 0-3.5 s, full frame 0.3 s (preview and strips byte-identical to falling_idle)"
+ },
+ "mx_hanging_idle": {
+  "grade": "B",
+  "uses": [
+   "float"
+  ],
+  "weak": [],
+  "needs": [
+   "raise him so the hands meet a bar or ledge"
+  ],
+  "line": "good for: dangling from a bar or ledge or being hauled up by the hands, arms straight overhead, legs hanging, tiny sway, 4.7 s loop; weak at: surrender or celebration (it is a hang, not a reach); needs: lift him off the lawn so the hands meet what he holds",
+  "watched": "strip 0-4.7 s (preview and strips byte-identical to hanging_idle)"
+ },
+ "mx_crawl_backwards": {
+  "grade": "B",
+  "uses": [
+   "crawl",
+   "injured"
+  ],
+  "weak": [],
+  "needs": [
+   "move him forward, the clip runs in place"
+  ],
+  "line": "good for: a face-down crawl, dragging himself up from flat 0-0.3 s onto elbows and knees 0.5-1.3 s and reaching forward, flat again 1.5-2.0 s; weak at: crawling backwards despite the name (face down, going forward); needs: a move to carry him, it runs on the spot",
+  "watched": "strip 0-2.1 s, own full-body burst 0.4-0.9 s (preview and strips byte-identical to crawl_backwards)"
+ },
+ "mx_injured_stumble": {
+  "grade": "B",
+  "uses": [
+   "injured"
+  ],
+  "weak": [
+   "walk"
+  ],
+  "needs": [
+   "move him if he must travel (stays on the spot)"
+  ],
+  "line": "good for: a hurt, dazed stagger, standing hurt 0-0.8 s, doubles forward 0.9-1.5 s, lurches with the right leg trailing and the head lolling back 1.6-2.9 s, steadies 3.2-5.0 s; weak at: a walk (it stays in place) and long holds (standing knee nearly locked 1.6-2.1 s); needs: a move or walk if he travels",
+  "watched": "strip 0-5.1 s, own full-body burst 1.6-2.1 s (preview and strips byte-identical to injured_stumble)"
+ },
+ "mx_jumping_jacks": {
+  "grade": "A",
+  "uses": [
+   "jump"
+  ],
+  "weak": [
+   "dance"
+  ],
+  "needs": [],
+  "line": "good for: clean jumping jacks, arms overhead and feet together at 0.0 s, arms down and feet out at 0.5 s, 1.07 s loop; weak at: a dance step (reads as exercise); needs: nothing",
+  "watched": "strip 0-3 s, own full-body burst 0-0.5 s (preview and strips byte-identical to jumping_jacks)"
+ },
+ "mx_stumble_backwards": {
+  "grade": "A",
+  "uses": [
+   "hit-react",
+   "fall"
+  ],
+  "weak": [],
+  "needs": [
+   "once"
+  ],
+  "line": "good for: being hit and knocked over backwards, head snaps back at 0.55 s (hit), windmills back on one leg 0.6-1.1 s, sits down 1.25 s, rolls onto his back legs up 1.4-2.0 s, ends propped on his hands 2.6-3.3 s; weak at: nothing it would be picked for (spread fingers in the windmill read as panic); needs: play once",
+  "hit": 0.55,
+  "watched": "strip 0-3.3 s, own bursts 0.5-1.0 s right half, 0.9-1.4 s full body (preview and strips byte-identical to stumble_backwards)"
+ },
+ "sit_hit_snap": {
+  "grade": "A",
+  "uses": [
+   "hit-react",
+   "sit"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "once",
+   "chair at seat height 0.45 m"
+  ],
+  "line": "good for: a seated jolt, head and chest snap back over 0.03-0.07 s (hit 0.05 s) and stay tipped back looking up to 1.0 s, right hand on the belly; weak at: talk (head thrown back); needs: play once, a chair",
+  "hit": 0.05,
+  "watched": "strip 0-1.5 s, own right-half burst 0-0.5 s"
+ }
+}

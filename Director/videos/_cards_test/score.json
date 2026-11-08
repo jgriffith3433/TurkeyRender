@@ -1,0 +1,7 @@
+{
+  // A small test of shot cards: acts/50-cards.json is compiled from cut.json and cards/.
+  "song": "Assets/Song/Audio.mp3",
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {} }
+}

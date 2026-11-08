@@ -1,0 +1,31 @@
+{
+ "id": "creep",
+ "f0": 1275,
+ "f1": 1352,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 42.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "ae19ec405999026b",
+ "summary": "The cut strip is mostly clean: the camera is locked, the figure stays in place and the pastel ring grows steadily, with one small pose and contact issue.",
+ "faults": [
+  {
+   "t": 42.63,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He is stiff and symmetrical across the whole strip: he stands rigidly upright with both arms hanging at his sides, with no anticipation, weight shift or head movement as the pastel spreads. The chair behind him is also hard to read.",
+   "fix": "Add a small weight shift, a head turn or an arm reaction on the ring beats."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3573,
+  "out": 265
+ },
+ "cost": 0.0098
+}

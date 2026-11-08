@@ -1,0 +1,156 @@
+{
+ "name": "thumbs_up",
+ "about": "The thumbs up to the lens, seated or standing: the right forearm swings up beside the chest with overshoot, a fist with the thumb out, a lean toward the lens, the biggest smile, brows up, a wink (both lids: the model has one blink), holds `hold`, then comes down. `cam` is the lens in his own frame.",
+ "entry": "any",
+ "exit": "any",
+ "length": "2.4s",
+ "min": "1.5s",
+ "params": {
+  "hold": 1,
+  "cam": [
+   0,
+   1.25,
+   3.2
+  ]
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": "$cam",
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.02,
+   "do": "fingers",
+   "hand": "right",
+   "set": 1,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.05,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "thumb",
+   "set": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.02,
+   "do": "keys",
+   "anticipate": 0.08,
+   "successive": 0.03,
+   "keys": [
+    {
+     "t": 0.32,
+     "ease": "out",
+     "overshoot": 0.14,
+     "settle": "0.3s",
+     "hold": "$hold",
+     "hips": [
+      0,
+      0,
+      0.03
+     ],
+     "bones": {
+      "chest": [
+       -5,
+       0,
+       0
+      ],
+      "head": [
+       -3,
+       0,
+       -6
+      ],
+      "rightUpperArm": [
+       -28,
+       0,
+       -18
+      ],
+      "rightLowerArm": [
+       -105,
+       0,
+       0
+      ],
+      "rightHand": [
+       0,
+       0,
+       -25
+      ]
+     }
+    },
+    {
+     "t": "=0.85+hold",
+     "ease": "inout",
+     "bones": {}
+    }
+   ],
+   "release": "0.4s"
+  },
+  {
+   "at": 0.1,
+   "do": "face",
+   "smile": 1,
+   "eyesWide": 0.4,
+   "fear": 0.15,
+   "for": "0.25s",
+   "ease": "out"
+  },
+  {
+   "at": 0.55,
+   "do": "face",
+   "blink": 1,
+   "for": "0.1s",
+   "ease": "out"
+  },
+  {
+   "at": 0.75,
+   "do": "face",
+   "blink": 0,
+   "for": "0.12s",
+   "ease": "inout"
+  },
+  {
+   "at": "=0.9+hold",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=0.9+hold",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "thumb",
+   "set": 0.35,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=0.95+hold",
+   "do": "face",
+   "smile": 0.7,
+   "eyesWide": 0.2,
+   "for": "0.4s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "sit_idle",
+    "for": "1s"
+   }
+  ],
+  "then": [
+   {
+    "name": "sit_idle",
+    "for": "0.6s"
+   }
+  ],
+  "tail": 0.2
+ }
+}

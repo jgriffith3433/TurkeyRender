@@ -1,0 +1,22 @@
+{
+ "id": "click_off",
+ "f0": 4619,
+ "f1": 4643,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 153.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "b6c5310dfc84003f",
+ "summary": "The strip is very dark, and the ghostly hand with its pointing arm holds steady across all eight frames. I see no pops, flicker or cut tweening.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3574,
+  "out": 124
+ },
+ "cost": 0.0084
+}

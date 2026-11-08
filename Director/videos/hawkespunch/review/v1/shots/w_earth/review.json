@@ -1,0 +1,61 @@
+{
+ "id": "w_earth",
+ "f0": 3628,
+ "f1": 3703,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 120.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 121,
+   "why": "frame difference x21 (98.93)",
+   "file": "spike-03630.jpg"
+  }
+ ],
+ "hash": "9318d68f23773a1b",
+ "summary": "The cut lands cleanly on the Earth, but the hand doesn't wrap it and the Earth drifts and bursts into debris, which fights the \"stop dead\" idea.",
+ "faults": [
+  {
+   "t": 121.03,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The grabbing hand hovers at the Earth's right edge with fingers dangling, and the globe overlaps or sits behind the forearm. He is not gripping it, so the grab doesn't read as contact.",
+   "fix": "Put the fingers around the globe's surface and set the globe in front of or behind the hand consistently."
+  },
+  {
+   "t": 121.09,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "From 121.06 to 121.09 the Earth jumps left and grows larger, while his arm and body hardly move. The globe slides against the hand instead of being held, and there is no stop-dead hold.",
+   "fix": "Lock the Earth to the hand and hold it still for the hit, with no scale or position drift."
+  },
+  {
+   "t": 121.16,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "At 121.13–121.19 white shards and dark squares burst off the Earth, and a ring pulses around it. This is busy and loud for a 'careful, hush' beat where both are meant to stop dead, and the dark chunks look like unlit confetti.",
+   "fix": "Remove or soften the burst, or shade the debris and time it to the hit."
+  },
+  {
+   "t": 120.96,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The cut frame is a washed-out overlay with an orange planet, then a bright glow at 120.99–121.03, so the first frame of the shot isn't clean.",
+   "fix": "Start the shot on the Earth frame and shorten the flash."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4971,
+  "out": 652
+ },
+ "cost": 0.0165
+}

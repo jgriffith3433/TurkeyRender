@@ -1,0 +1,65 @@
+{
+ "name": "squint_at_sun",
+ "about": "Looks up into the light, eyes narrow, head tips back a little, the face half-winces and half-smiles.",
+ "entry": "any",
+ "exit": "any",
+ "length": "3.4s",
+ "min": "2.4s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    1.5,
+    4.5,
+    4
+   ],
+   "for": "0.8s",
+   "ease": "inout",
+   "limit": 13
+  },
+  {
+   "at": 0.35,
+   "do": "face",
+   "blink": 0.62,
+   "smile": 0.3,
+   "for": "0.5s",
+   "ease": "out"
+  },
+  {
+   "at": 1.3,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": 1.9,
+   "do": "face",
+   "blink": 0.5,
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.8",
+   "do": "face",
+   "blink": 0,
+   "smile": 0,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.75",
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": "=for-0.7",
+   "do": "gaze",
+   "weight": 0,
+   "for": "0.7s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.8
+ }
+}

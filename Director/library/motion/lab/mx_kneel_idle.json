@@ -1,0 +1,28 @@
+{
+ "clip": "mx_kneel_idle",
+ "seconds": 4.367,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.020 m, worst step 0.000 m at 0.60s",
+  "right foot on floor moved 0.024 m, worst step 0.000 m at 2.83s"
+ ],
+ "hipsTop": 0.5634849,
+ "hipsLow": 0.5631378,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "RightFoot": 67,
+  "LeftFoot": 55.8,
+  "RightLowerLeg": 13.2,
+  "LeftLowerLeg": 6.3,
+  "RightShoulder": 0.2
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_kneel_idle was rejected by admission: joint limits moved RightFoot 67 deg"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_kneel_idle_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_kneel_idle_three.mp4"
+ ]
+}

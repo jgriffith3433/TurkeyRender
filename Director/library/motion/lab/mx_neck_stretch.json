@@ -1,0 +1,23 @@
+{
+ "clip": "mx_neck_stretch",
+ "seconds": 3.3000000000000003,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.059 m, worst step 0.002 m at 2.17s",
+  "right foot on floor moved 0.071 m, worst step 0.006 m at 2.43s"
+ ],
+ "hipsTop": 0.9161721,
+ "hipsLow": 0.9125342,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 5.1,
+  "Head": 0.1
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_neck_stretch_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_neck_stretch_three.mp4"
+ ]
+}

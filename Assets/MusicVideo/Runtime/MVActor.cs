@@ -20,6 +20,7 @@ namespace TKShock.MV
         public Quaternion[] humanRest = new Quaternion[0]; // each bone's rotation at rest, relative to the actor
         public Vector3[] curlAxis = new Vector3[0];  // finger bones: the axis they curl around, in bone space
         public float fov = 40;
+        public bool native; // played by Unity's Animator from Timeline AnimationTracks (Editor/Native/NativeCompile.cs): our stack moves only the actor and the face
 
         [NonSerialized] public MotionDriver Driver;
 
@@ -57,7 +58,20 @@ namespace TKShock.MV
             var nm = parts[0]; int member = -1; int h = nm.IndexOf('#');
             if (h > 0) { int.TryParse(nm.Substring(h + 1), out member); nm = nm.Substring(0, h); }
             actor = Named(nm); if (!actor) return null;
+            if (pull && actor.Driver != null && MVLate.Flushing && actor.native && Math.Abs(t - MVLate.EvalT) > 1e-6)
+            {
+                // Late, a native body asked about at another time (a gaze reading where its target will be): read it there into a stand-in and put the
+                // body back at the evaluation's time at once, so no reader leaves it 0.3 s ahead (Hawkes Punch w_out).
+                actor.Driver.Eval(t);
+                var fromL = member >= 0 && member < actor.members.Length ? actor.members[member] : actor.transform;
+                var src = parts.Length > 1 ? actor.Bone(parts[1], fromL) : fromL;
+                var stand = MVLate.StandIn(); if (src) stand.SetPositionAndRotation(src.position, src.rotation);
+                actor.Driver.Restore(actor, MVLate.EvalT);
+                return src ? stand : null;
+            }
             if (pull && actor.Driver != null) actor.Driver.Eval(t);
+            // A native body's bones are still the last evaluation's during our tracks: whoever reads one runs again after the Animator (MVLate.cs).
+            if (parts.Length > 1 && actor.native && MVLate.Deferring && MotionDriver.Current != null && MotionDriver.Current != actor.Driver) MVLate.Depend(MotionDriver.Current, MotionDriver.CurrentActor, MotionDriver.CurrentT);
             var from = member >= 0 && member < actor.members.Length ? actor.members[member] : actor.transform;
             return parts.Length > 1 ? actor.Bone(parts[1], from) : from;
         }
@@ -135,26 +149,63 @@ namespace TKShock.MV
         public override void Apply(double t, object binding)
         {
             var actor = binding as MVActor ?? _actor;
-            if (actor == null || _busy || t == _stamp) return;
-            _actor = actor; _busy = true;
-            try { if (!_plantsDone) { FindPlants(actor); Flush(t); } PrepareOverlap(t, actor); _stamp = t; Run(t, actor); } finally { _busy = false; }
+            if (actor == null || _busy) return;
+            _actor = actor;
+            double body = BodyTime(t, actor, out var groups);
+            ApplyHook?.Invoke(this, actor, t, body == _stamp && groups == null);
+            if (body == _stamp && groups == null)
+            {
+                if (Native && MVLate.Deferring && !MVLate.Flushing && actor.human.Length > 0 && !_raw && !_lite) MVLate.Native(this, actor, _appliedT);   // evaluated again at the same time: the Animator writes the clip's pose again, so the acting goes on again
+                return;
+            }
+            _busy = true; _appliedT = t;
+            var prevD = Current; var prevA = CurrentActor; var prevT = CurrentT; Current = this; CurrentActor = actor; CurrentT = t;
+            try
+            {
+                if (Native) { NoGround = true; _plantsDone = true; }
+                else EnsureTrans(actor, actor.smoothTime ? Song.WarpRaw(body) : Song.Warp(body), InertBack);
+                if (!_plantsDone) { FindPlants(actor); Flush(t); }
+                if (groups != null) { _gVL = _gVR = 0; _stamp = t; RunSteps(t, groups, actor); return; }
+                PrepareOverlap(body, actor); PrepareGround(body, actor); _stamp = body; Run(body, actor);
+            }
+            finally { _busy = false; Current = prevD; CurrentActor = prevA; CurrentT = prevT; }
         }
+
+        /// <summary>The driver whose Apply is running, for MVLate: a read of a native body's bone from inside it means it must run again after the Animator.</summary>
+        public static MotionDriver Current; public static MVActor CurrentActor; public static double CurrentT;
+        /// <summary>Debugging only (`call opsprobe` with "trace"): every Apply, its time, whether the stamp skipped it.</summary>
+        public static Action<MotionDriver, MVActor, double, bool> ApplyHook;
+        double _appliedT = double.NaN;
+
+        /// <summary>MVLate: this native body's reach, gaze, eyes and grips, on the pose the Animator has now written. If the driver was since run at another time, run it at t again first.</summary>
+        public void LateNative(MVActor actor, double t)
+        {
+            if (_appliedT != t) { _stamp = double.NaN; Apply(t, actor); }   // under MVLate.Flushing a run never does the acting: only this call does, once
+            if (actor.human.Length > 0) NativeActing(actor);
+        }
+
+        /// <summary>MVLate, last: if something pulled this driver to another time during the flush (a gaze reading where its target will be), put it back at t. No acting runs here.</summary>
+        public void Restore(MVActor actor, double t) { if (_appliedT != t) { _stamp = double.NaN; Apply(t, actor); } }
+
+        /// <summary>MVLate: run again at t, now that the native bodies it reads are posed.</summary>
+        public void Reapply(MVActor actor, double t) { _stamp = double.NaN; Apply(t, actor); }
 
         void Run(double tSong, MVActor actor)
         {
-            double t = tSong - EchoDelay(tSong);
+            double t = _raw ? tSong : tSong - EchoDelay(tSong);
             _t = t;
             double tw = actor.smoothTime ? Song.WarpRaw(t) : Song.Warp(t);
             _tw = tw;
 
             var root = Pose.From(actor.basePos, actor.baseEuler, actor.baseScale);
             bool visible = true, hasTint = false, hasGlow = false; Color tint = actor.baseTint, glow = Color.black;
-            BeginBody();
+            BeginBody(); BeginGround(actor); BeginBaked();
 
             foreach (var op in Ops)
             {
                 if (op.a.F("each") > 0) continue;
                 double tl = tw - op.ws; if (t < op.start) break;
+                if (_raw && _rawBefore && op.start >= _rawCut - EdgeEps) break;
                 if (op.kind == "limits" || op.kind == "stretch" || op.a.Num.ContainsKey("limits")) FoldLimits(op, tl);
                 switch (op.kind)
                 {
@@ -163,14 +214,15 @@ namespace TKShock.MV
                     case "tint": tint = Color.Lerp(hasTint ? tint : actor.baseTint, op.a.C("color", Color.white), Ease.Apply(op.a.S("ease"), (float)(tl / op.WDur))); hasTint = true; break;
                     case "glow": glow = Color.Lerp(glow, op.a.C("color", Color.white) * op.a.F("power", 3), Ease.Apply(op.a.S("ease"), (float)(tl / op.WDur))); hasGlow = true; break;
                     case "delay": break;
-                    case "anim": AddLayer(actor, op, tl, 0); if (op.a.Has("root")) ApplyRootMotion(ref root, actor, op, tl); if (op.a.F("stay") > 0) ApplyStay(ref root, actor, op, tw); break;
-                    case "keys": { var ks = KeysOf(actor, op); _keyOps.Add((op, tl, ks)); KeysRoot(ref root, ks, tl); break; }
+                    case "anim": if (!Native) AddLayer(actor, op, tl, 0); if (_raw) break; if (op.a.Has("root")) ApplyRootMotion(ref root, actor, op, tl); if (op.a.F("stay") > 0) ApplyStay(ref root, actor, op, tw); break;
+                    case "rootanim": if (!_raw && op.a.Has("root")) ApplyRootMotion(ref root, actor, op, tl); break;
+                    case "keys": { var ks = KeysOf(actor, op); if (!Native) _keyOps.Add((op, tl, ks)); KeysRoot(ref root, ks, tl); break; }
                     case "overlap": FoldOverlap(op, tl); break;
-                    case "layer": _layerOps.Add((op, tl)); break;
-                    case "walk": { var before = root.pos; Step(ref root, op, tl, 0, 1, actor); AddWalkLayer(actor, op, tl, before, root.pos); break; }
-                    case "pose": case "fingers": case "reach": case "gaze": case "plant": case "face": case "shape": case "blink": case "ripple": case "peel": case "bulge":
+                    case "layer": if (!Native) _layerOps.Add((op, tl)); break;
+                    case "walk": { var before = root.pos; Step(ref root, op, tl, 0, 1, actor); if (!Native) AddWalkLayer(actor, op, tl, before, root.pos); GroundWalk(op, tl, before, root.pos); break; }
+                    case "pose": case "stance": case "eyes": case "fingers": case "reach": case "gaze": case "plant": case "face": case "shape": case "blink": case "ripple": case "peel": case "bulge":
                     case "feather": case "stretch": case "drain": case "dent": case "glass": case "eyesee":
-                        if (!_lite || op.kind == "pose" || op.kind == "gaze") Body(actor, op, tl);
+                        if (!_raw && (!_lite || op.kind == "pose" || op.kind == "stance" || op.kind == "gaze") && !(Native && BoneCue(op.kind))) Body(actor, op, tl);
                         break;
                     case "dolly":
                         {
@@ -178,16 +230,18 @@ namespace TKShock.MV
                             if (d) d.CameraPosition = Ease.Apply(op.a.S("ease"), (float)(tl / op.WDur));
                             break;
                         }
-                    default: Step(ref root, op, tl, 0, 1, actor); break;
+                    default: if (!_raw || (op.kind != "attach" && op.kind != "detach")) Step(ref root, op, tl, 0, 1, actor); break;
                 }
+                FoldGround(op, tl, root.pos.y);
+                if (op.kind == "anim" || op.kind == "walk") FoldBaked(op, tl);
             }
 
             var tr = actor.transform;
             tr.localPosition = root.FinalPos; tr.localRotation = root.FinalRot; tr.localScale = root.FinalScale;
             if (root.fov > 0) { actor.fov = root.fov; var cam = actor.GetComponent<Camera>(); if (cam) cam.fieldOfView = root.fov; }
-            if (!_lite) actor.ApplyLook(visible, tint, hasTint, glow, hasGlow);
+            if (!_lite && !_raw) actor.ApplyLook(visible, tint, hasTint, glow, hasGlow);
             EndBody(actor);
-            if (_lite) return;
+            if (_lite || _raw) return;
 
             int n = actor.members.Length;
             for (int i = 0; i < n; i++)
@@ -290,11 +344,12 @@ namespace TKShock.MV
                 case "orbit":
                     {
                         var c = a.V("center"); float r = a.F("radius", 5);
+                        if (a.S("around") != null) { var ctr = MVActor.Point(a.S("around"), _t); if (ctr) c = ctr.position; } // a moving centre: a planet
                         float ang = a.F("angle") + (float)(Song.BeatAt(op.start + Math.Min(tl, op.WDur)) - Song.BeatAt(op.start)) * a.F("rate", 15);
                         p.pos = c + new Vector3(Mathf.Sin(ang * Mathf.Deg2Rad) * r, a.F("y"), Mathf.Cos(ang * Mathf.Deg2Rad) * r);
                         break;
                     }
-                case "topple": case "slide": case "drop": case "wobble": case "tremble": case "attach": case "detach": case "fov": case "walk":
+                case "topple": case "slide": case "drop": case "wobble": case "tremble": case "attach": case "detach": case "fov": case "walk": case "rootwalk":
                     Prop(ref p, op, tl, raw, k, inside, w, i, actor); break;
                 case "suck": // dragged spiralling into a point, stretching, shrinking to nothing at the end
                     {
@@ -325,6 +380,7 @@ namespace TKShock.MV
                         p.euler += HashDir(i * 17) * (T * a.F("tumble", 540));
                         break;
                     }
+                default: PunchStep(ref p, op, tl, raw, k, i, actor); break; // fly, throwobj, swing, fold, chase, leadpoint (MVPunch.cs)
                 // Oscillators: only inside the clip.
                 case "hop":
                     if (inside) { float s = Mathf.Abs(Mathf.Sin(ph * Mathf.PI)); p.addPos.y += s * a.F("height", 1) * w; }

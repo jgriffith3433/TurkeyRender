@@ -1,0 +1,48 @@
+{
+ "id": "yard_wide",
+ "f0": 0,
+ "f1": 118,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "spike",
+   "t": 0.5,
+   "why": "one patch jumps (cell 181, x38.5)",
+   "file": "spike-00015.jpg"
+  }
+ ],
+ "hash": "aef84f921940fb87",
+ "summary": "The spike at 0.5 s is the cut from the close-up to the yard wide, and the camera is stable after it. The man's legs settle from apart to together over the first few frames, and his seat contact with the chair looks doubtful.",
+ "faults": [
+  {
+   "t": 0.53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The first frames of the new shot are not settled. At 0.50 his knees are apart and his stance is wide. By 0.56 his legs have drawn together and the pose has shifted. This reads as the cut tweening, not a held pose.",
+   "fix": "Start the shot on the final knees-together pose, or trim the first 4–5 frames so the hold begins at 0.60."
+  },
+  {
+   "t": 0.63,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "He reads as standing in front of the chair, not sitting in it. His legs run straight down to the grass, there is no visible thigh-to-seat bend, and the chair frame shows behind and beside his legs. The body does not sink into the seat.",
+   "fix": "Lower the hips onto the seat and bend the knees to about 90°, with the thighs on the cushion. Check that the chair sits under the pelvis."
+  },
+  {
+   "t": 0.66,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The pose is stiff and symmetrical, with both arms hanging at his sides or on the chair arms and the legs parallel. There is no clear line of action, and the figure is tiny and hard to read at the right edge of the wide.",
+   "fix": "Add an asymmetry, such as a head tilt, a shoulder drop or one hand resting differently. Move him slightly in from the right edge."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3646,
+  "out": 1023
+ },
+ "cost": 0.0175
+}

@@ -1,0 +1,32 @@
+{
+ "clip": "mx_sit_to_stand_pump",
+ "seconds": 3.533,
+ "popCount": 5,
+ "pops": [
+  "1.133s RightHandIndex1 kink 0.104 m",
+  "1.167s RightHandMiddle1 kink 0.095 m",
+  "1.200s RightHandMiddle1 kink 0.097 m",
+  "1.233s RightHandIndex1 kink 0.113 m",
+  "1.267s RightHandIndex1 kink 0.086 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.473 m, worst step 0.018 m at 0.87s",
+  "right foot on floor moved 0.468 m, worst step 0.013 m at 0.67s"
+ ],
+ "hipsTop": 0.904529,
+ "hipsLow": 0.544092,
+ "hipsTravel": "(0.00, 0.00, -0.01)",
+ "limits": {
+  "RightLowerLeg": 15.4,
+  "groundHipsCm": 7.3,
+  "Chest": 5.4,
+  "LeftLowerLeg": 3.7,
+  "RightShoulder": 1.7
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_to_stand_pump_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_to_stand_pump_three.mp4"
+ ]
+}

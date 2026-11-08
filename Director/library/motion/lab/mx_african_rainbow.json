@@ -1,0 +1,37 @@
+{
+ "clip": "mx_african_rainbow",
+ "seconds": 7.433,
+ "popCount": 133,
+ "pops": [
+  "0.033s RightHandMiddle3 kink 0.082 m",
+  "0.100s RightToes kink 0.090 m",
+  "0.133s RightHandIndex3 kink 0.101 m",
+  "0.167s RightHandIndex3 kink 0.089 m",
+  "0.200s RightHandIndex3 kink 0.097 m",
+  "0.233s RightHandMiddle3 kink 0.081 m"
+ ],
+ "feet": [
+  "left foot on floor moved 4.542 m, worst step 0.066 m at 2.77s",
+  "right foot on floor moved 1.159 m, worst step 0.047 m at 0.40s"
+ ],
+ "hipsTop": 1.03754449,
+ "hipsLow": 0.8675679,
+ "hipsTravel": "(0.01, 0.00, 0.02)",
+ "limits": {
+  "RightFoot": 39.4,
+  "RightLowerLeg": 35.6,
+  "LeftLowerLeg": 33.9,
+  "groundHipsCm": 14.1,
+  "Head": 11.6,
+  "LeftFoot": 8.6,
+  "Chest": 1
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_african_rainbow was rejected by admission: joint limits moved RightFoot 61.4 deg; foot slide 4.85 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_african_rainbow_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_african_rainbow_three.mp4"
+ ]
+}

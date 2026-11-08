@@ -1,0 +1,65 @@
+{
+ "id": "doors",
+ "f0": 1661,
+ "f1": 1712,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 55.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 55.433,
+   "why": "one patch jumps (cell 87, x1.9)",
+   "file": "spike-01663.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 55.767,
+   "why": "one patch jumps (cell 89.2, x2)",
+   "file": "spike-01673.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 56.533,
+   "why": "one patch jumps (cell 99.5, x2.2)",
+   "file": "spike-01696.jpg"
+  }
+ ],
+ "hash": "7f0df5c3fb6baeaa",
+ "summary": "The door swing has one abrupt snap at the cut, and the dancer reveal is otherwise clean, though he reads small and shifts side to side.",
+ "faults": [
+  {
+   "t": 55.46,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The cream door fills the right half of the frame with its knob visible at 55.43. One frame later at 55.46 it is a thin sliver and the pink door behind it is fully open. The door travels most of its arc in a single frame, so it reads as a jump rather than a swing.",
+   "fix": "Add one or two in-between frames of the door swing, or start the swing earlier so the speed ramps up. Alternatively, cut on the sliver frame."
+  },
+  {
+   "t": 55.43,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The upper panel edge on the cream door shows a dotted or broken outline. It looks like an aliasing or shading artifact on the panel border.",
+   "fix": "Thicken or smooth the panel trim, or hide the edge with motion blur."
+  },
+  {
+   "t": 56.6,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The dancer is small and sits off-centre in the first frames of the reveal. He drifts right and grows as the camera pushes in, so the reveal of 'there he is' lands softly.",
+   "fix": "Frame him centred at the reveal, or push in faster so he reads at once."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7786,
+  "out": 1097
+ },
+ "cost": 0.0265
+}

@@ -1,0 +1,75 @@
+{
+ "id": "push",
+ "f0": 3127,
+ "f1": 3179,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 104.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 105.233,
+   "why": "one patch jumps (cell 80.7, x2.8)",
+   "file": "spike-03157.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 105.767,
+   "why": "flow spike x2.1",
+   "file": "spike-03173.jpg"
+  }
+ ],
+ "hash": "06da7b37dcc290ab",
+ "faults": [
+  {
+   "t": 105.29,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The door/wall panel changes from a pale pink door to a dark grey flat panel over 105.29-105.36. The white wainscot also pops in at 105.32, covering where the door was. There is no swing in between, so the open reads as a texture and geometry swap. The hand also stays at the same spot in the frame and never visibly pushes.",
+   "fix": "Animate the door swinging over several frames, or hide the swap with a motion blur or a cover. Match the door's back face and the wainscot so they don't pop."
+  },
+  {
+   "t": 105.26,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "His hand reaches toward the door knob area but does not press on the surface. At 105.29-105.32 the arm hangs in front of the door and the hand seems to be near, not on, the wall. The door opens before any clear touch.",
+   "fix": "Time the door's opening to the frame where the palm lands. Plant the palm flat on the door."
+  },
+  {
+   "t": 105.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The shirt changes from dark navy (105.22-105.46) to bright purple (105.76 onward). His pants and the lighting also change, and the wall is now white. The character looks recolored, and the framing and scale jump between strips.",
+   "fix": "Keep the shirt material and lighting consistent through the shot. If it is meant to be a transition, make it clearly a cut or a wipe."
+  },
+  {
+   "t": 105.89,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The frame blows out to full white at 105.93-105.96 and fades back to a ghost image at 105.99. The white-out starts abruptly, with no ramp from 105.89 to 105.93.",
+   "fix": "If it is a flash transition, ramp it up over 3-4 frames. Otherwise remove the blown-out frames."
+  },
+  {
+   "t": 105.79,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "His back is to the camera and his head is turned into the dark panel. His arms swing in a mirrored, even way, and his face is hidden. So the 'he has to know' curiosity does not read.",
+   "fix": "Turn him three-quarters toward the camera, or lead with a head turn so the eyes can be seen."
+  }
+ ],
+ "summary": "The push reads as a swap, not a swing: the door goes from pink to a grey panel in about 3 frames, with no clear hand contact. The shirt colour jumps from navy to purple, and the shot ends in an abrupt white-out.",
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6349,
+  "out": 909
+ },
+ "cost": 0.0218
+}

@@ -1,0 +1,327 @@
+{
+ "about": "Hawkes Punch spoken lines: start in video seconds, the mp3 under Assets/MusicVideo/Sfx/punch, mouth = whose jaw follows it, duck = how far the song drops. tools/punch_lines.mjs reads this.",
+ "lines": [
+  {
+   "file": "symptoms/doctor_ask.mp3",
+   "start": 20.54,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "symptoms/him_symptoms_tight.mp3",
+   "start": 22.866,
+   "mouth": "person",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "symptoms/doctor_space_ghost.mp3",
+   "start": 45.133,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "symptoms/him_space_ghost.mp3",
+   "start": 47.526,
+   "mouth": "person",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "doctor_rx_a.mp3",
+   "start": 55.125,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "doctor_line_a.mp3",
+   "start": 63.315,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.35
+  },
+  {
+   "file": "lines2/him_scream_flight_cut.mp3",
+   "start": 80.4,
+   "mouth": null,
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_silence.mp3",
+   "start": 84.6,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_more_music.mp3",
+   "start": 86.5,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_out_here.mp3",
+   "start": 88.45,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_space_ghost_q.mp3",
+   "start": 90.1,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_boop.mp3",
+   "start": 92.45,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_youre_it.mp3",
+   "start": 93.6,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_my_face.mp3",
+   "start": 94.3,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_yeehaw.mp3",
+   "start": 96.6,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_no_youre_it.mp3",
+   "start": 102.25,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_peekaboo.mp3",
+   "start": 104.95,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_boo.mp3",
+   "start": 107.0,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_shriek.mp3",
+   "start": 107.33,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_that_worked.mp3",
+   "start": 110.6,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_all_you_got.mp3",
+   "start": 114.5,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_right_in_mars.mp3",
+   "start": 118.45,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_thats_earth.mp3",
+   "start": 121.3,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_i_know.mp3",
+   "start": 123.75,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_sorry_everybody.mp3",
+   "start": 125.95,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_nobody_saw.mp3",
+   "start": 127.6,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_okay_jupiter.mp3",
+   "start": 129.0,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_swallow_planet.mp3",
+   "start": 138.7,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_are_you_ghost.mp3",
+   "start": 144.2,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_im_you.mp3",
+   "start": 146.95,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_you_have_face.mp3",
+   "start": 149.3,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_two_of_you.mp3",
+   "start": 152.3,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_right_for_me.mp3",
+   "start": 155.4,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_everyone_like_you.mp3",
+   "start": 156.9,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_thats_me.mp3",
+   "start": 158.9,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_tv_hi.mp3",
+   "start": 161.7,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_tv_music.mp3",
+   "start": 164.1,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_love_space.mp3",
+   "start": 166.3,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/doc_testimonial.mp3",
+   "start": 168.6,
+   "mouth": "doctor",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/ann_name.mp3",
+   "start": 171.45,
+   "mouth": null,
+   "volume": 0.95,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_tv_fist.mp3",
+   "start": 176.4,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/dbl_good_fist.mp3",
+   "start": 178.7,
+   "mouth": "other",
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/ann_side_effects.mp3",
+   "start": 180.1,
+   "mouth": null,
+   "volume": 0.95,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/ann_ask.mp3",
+   "start": 191.2,
+   "mouth": null,
+   "volume": 0.95,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/doc_any_symptoms.mp3",
+   "start": 194.2,
+   "mouth": null,
+   "volume": 1.0,
+   "duck": 0.45
+  },
+  {
+   "file": "lines2/him_button_cut.mp3",
+   "start": 195.5,
+   "mouth": "person",
+   "volume": 1.0,
+   "duck": 0.45
+  }
+ ]
+}

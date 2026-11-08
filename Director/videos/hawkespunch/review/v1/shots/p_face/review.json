@@ -1,0 +1,71 @@
+{
+ "id": "p_face",
+ "f0": 2195,
+ "f1": 2224,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 73.167,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "86a665eb395ad96e",
+ "summary": "The hit cut works on the head snap, but unlit flat brown squares cover his neck and body from 73.23 to 73.43, and the shot jumps from a close face view to a wide thrown body at 73.36-73.39.",
+ "faults": [
+  {
+   "t": 73.29,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat, unshaded dark brown squares cover his neck and jaw and grow in number and size. They look like unlit confetti and hide the face and neck at the moment of impact.",
+   "fix": "Shade the debris squares or replace them with lit or textured shards. Make them smaller and keep them off the face."
+  },
+  {
+   "t": 73.36,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Dozens of large flat dark squares fill the frame over his body and the smoke. They are unlit and read as placeholder geometry, and they hide the subject.",
+   "fix": "Cut the particle count and size, shade them, and keep the silhouette clear."
+  },
+  {
+   "t": 73.36,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The camera and subject jump between 73.33 and 73.36. A close shot of the face becomes a wide shot of the head and body tilted back, with a different shirt colour and white hair. At 73.39 it jumps again to a low view of a raised arm and torso, then at 73.43 to a boot sole. The framing changes every frame, so the throw is not readable.",
+   "fix": "Hold one camera framing through the throw, or cut once cleanly to the wide shot. Keep the character and lighting consistent."
+  },
+  {
+   "t": 73.39,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The shirt turns from dark navy to bright violet-white and the lighting changes between 73.33 and 73.39. The look is inconsistent and flickers.",
+   "fix": "Lock the lighting and material across the shot."
+  },
+  {
+   "t": 73.43,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "A large boot sole fills the right side and hides the thrown body. The idea says her fist is never in it, but this reads as a kick or a foreground object, and the subject is unclear.",
+   "fix": "Move the boot out of frame or make it read as his own leg flying. Keep the body as the subject."
+  },
+  {
+   "t": 73.26,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His eyes glow flat white-yellow and the mouth is open, but the face does not change across 73.26 to 73.33 and it stays fixed upward. The reaction is a stuck expression, not a snap and settle.",
+   "fix": "Add a quick head overshoot and an expression change, such as eyes squeezing shut, across these frames."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3591,
+  "out": 944
+ },
+ "cost": 0.0166
+}

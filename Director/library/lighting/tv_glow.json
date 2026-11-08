@@ -1,0 +1,9 @@
+{
+  // A dark room lit by a TV: cold key from the screen, a low warm lamp behind, a thin rim. Keyed to a "tv" mark when the set has one.
+  "sky": { "top": "#000000", "mid": "#000000", "bottom": "#000000", "ambient": "#161b26", "fog": "#000000", "density": 0 },
+  "lights": {
+    "key": { "type": "point", "at": "tv", "offset": [0, 0.1, -0.5], "pos": [0, 1.3, 1.6], "color": "#a8c8ff", "intensity": 4, "range": 7 },
+    "lamp": { "type": "point", "at": "practical", "pos": [-2.2, 1.2, -1.6], "color": "#ffb070", "intensity": 2, "range": 5 },
+    "rim": { "type": "point", "pos": [1.4, 2.3, -2.0], "color": "#8ce8ff", "intensity": 1.6, "range": 5 }
+  }
+}

@@ -1,0 +1,142 @@
+{
+ "name": "mx_turn_90_r",
+ "fps": 30,
+ "frames": 29,
+ "seconds": 0.93,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.41,
+  "straightFrac": 0,
+  "moves": 5,
+  "flatness": 0.6,
+  "abruptFrac": 0.2,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 1.27,
+  "handPeak": 1.35,
+  "bigMoves": 4,
+  "anticipFrac": 0.25,
+  "overshootFrac": 0.5,
+  "coherence": -0.04,
+  "lagMedianFrames": 6,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 41.39,
+  "plantedFrac": 0.9,
+  "zgSpeedChanges": null,
+  "snapsPer10": 21.43,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.06,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.79,
+  "twinnedFrac": 0,
+  "curlMedian": 9.05,
+  "spreadMedian": 24.87,
+  "fannedFrac": 0,
+  "bowMedian": 0.31,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 36.14,
+  "armOmegaP95": 97.15,
+  "legOmegaP95": 175.55,
+  "spineOmegaP50": 15.37,
+  "spineOmegaP95": 47.97,
+  "headOmegaP50": 66.82,
+  "headOmegaP95": 134.14,
+  "armAccP95": 557.08,
+  "spineAccP95": 492.99,
+  "handSpeedP50": 0.69,
+  "handSpeedP95": 1.16,
+  "spineToArm": 0.43,
+  "energyCV": 0.18,
+  "moveRate": 2.14
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.41 over 4 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 9.5,
+   "note": "speed shape 0.6 (bell 0.6, constant 1.0), 20% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": 8.2,
+   "note": "4 big moves: 1 with anticipation, 2 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 10,
+   "note": "parts' speed profiles agree -0.04 (1 = everything moves as one); typical lag between parts 6 frames"
+  },
+  "weight": {
+   "score": 7.5,
+   "note": "0 centre-of-mass jerks, planted feet slide 41 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "2 body snaps or pops in 0.93 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "6% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "2 key poses, readability 0.79 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 9 deg, spread 25 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "snap",
+   "part": "LeftFoot",
+   "sev": 0.85,
+   "what": "LeftFoot jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.57,
+   "f": 17,
+   "kind": "snap",
+   "part": "Hips",
+   "sev": 0.84,
+   "what": "Hips jumps 8 deg in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "snap",
+   "part": "LeftFoot",
+   "sev": 0.85,
+   "what": "LeftFoot jumps 9 deg in one frame",
+   "also": [
+    "snap"
+   ]
+  }
+ ],
+ "total": 8.6,
+ "verdict": "reads as human (8.6/10)"
+}

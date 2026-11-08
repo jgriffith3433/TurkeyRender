@@ -1,0 +1,13 @@
+{
+  // The proofs: five stills (the first frame of each 3 s shot is the still) and two 6 s clips (crater, hoop).
+  "beats": {},
+  "shots": [
+    { "id": "p_speck", "seq": "space", "at": "0s", "len": "3s" },
+    { "id": "p_jupiter_cu", "seq": "space", "len": "3s" },
+    { "id": "p_wall", "seq": "space", "len": "3s" },
+    { "id": "p_earth_night", "seq": "space", "len": "3s" },
+    { "id": "p_crater", "seq": "space", "len": "6s" },
+    { "id": "p_hoop", "seq": "space", "len": "6s" },
+    { "id": "p_atlas_night", "seq": "space", "len": "3s" }
+  ]
+}

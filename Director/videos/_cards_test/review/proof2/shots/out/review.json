@@ -1,0 +1,22 @@
+{
+ "id": "out",
+ "f0": 593,
+ "f1": 677,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 19.767,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "564c57d09bb06f0a",
+ "summary": "The strip shows an almost static dark figure standing in the same pose across all frames with no camera movement, pops, or flicker; no faults are visible at this crop.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 705,
+  "out": 124
+ },
+ "cost": 0.0026
+}

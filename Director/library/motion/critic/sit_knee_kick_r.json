@@ -1,0 +1,256 @@
+{
+ "name": "sit_knee_kick_r",
+ "fps": 30,
+ "frames": 106,
+ "seconds": 3.5,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 5,
+  "flatness": 0.68,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 3.07,
+  "fastRunMedianS": 0.4,
+  "dynRange": 7.48,
+  "handPeak": 0.19,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.65,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0.67,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 7.54,
+  "plantedFrac": 0.97,
+  "zgSpeedChanges": null,
+  "snapsPer10": 8.57,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.48,
+  "deadJoints": 11,
+  "deadJointNames": [
+   "Hips",
+   "Spine",
+   "Chest",
+   "Neck",
+   "Head",
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperArm",
+   "RightUpperArm",
+   "LeftUpperLeg",
+   "RightUpperLeg"
+  ],
+  "readability": 0.63,
+  "twinnedFrac": 1,
+  "curlMedian": 23.61,
+  "spreadMedian": 20.29,
+  "fannedFrac": 0,
+  "bowMedian": 3.03,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 4.88,
+  "armOmegaP95": 13.63,
+  "legOmegaP95": 16.12,
+  "spineOmegaP50": 0,
+  "spineOmegaP95": 14.12,
+  "headOmegaP50": 6.32,
+  "headOmegaP95": 13.58,
+  "armAccP95": 279.9,
+  "spineAccP95": 297.98,
+  "handSpeedP50": 0,
+  "handSpeedP95": 0.11,
+  "spineToArm": 0,
+  "energyCV": 1.22,
+  "moveRate": 0.57
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": 3.9,
+   "note": "speed shape 0.68 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 3.07 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": 2.2,
+   "note": "parts' speed profiles agree 0.65 (1 = everything moves as one); typical lag between parts 0 frames; 67% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 9.6,
+   "note": "0 centre-of-mass jerks, planted feet slide 8 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "3 body snaps or pops in 3.5 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.5,
+   "note": "7 key poses, readability 0.63 (best of front, side, three-quarter), 100% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 24 deg, spread 20 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.13,
+   "f": 4,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.27,
+   "f": 8,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.13,
+   "f": 4,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 1,
+   "what": "RightLowerLeg jumps 26 deg in one frame"
+  },
+  {
+   "t": 0.27,
+   "f": 8,
+   "kind": "snap",
+   "part": "RightLowerLeg",
+   "sev": 1,
+   "what": "RightLowerLeg jumps 23 deg in one frame"
+  },
+  {
+   "t": 0.13,
+   "f": 4,
+   "kind": "snap",
+   "part": "RightFoot",
+   "sev": 0.85,
+   "what": "RightFoot jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.1,
+   "f": 3,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.7,
+   "what": "RightFoot starts at 66% of its peak speed in one frame"
+  },
+  {
+   "t": 0.1,
+   "f": 3,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.43,
+   "what": "LeftHand starts at 66% of its peak speed in one frame"
+  },
+  {
+   "t": 0.27,
+   "f": 8,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.43,
+   "what": "LeftHand stops dead from 85% of its peak"
+  },
+  {
+   "t": 0.1,
+   "f": 3,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.43,
+   "what": "RightHand starts at 66% of its peak speed in one frame"
+  },
+  {
+   "t": 0.27,
+   "f": 8,
+   "kind": "abrupt-stop",
+   "part": "RightHand",
+   "sev": 0.43,
+   "what": "RightHand stops dead from 87% of its peak"
+  },
+  {
+   "t": 0.1,
+   "f": 3,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 65% of its peak speed in one frame"
+  },
+  {
+   "t": 0.27,
+   "f": 8,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 85% of its peak"
+  },
+  {
+   "t": 0.13,
+   "f": 4,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.43,
+   "what": "Head starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.3,
+   "f": 9,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.43,
+   "what": "Head stops dead from 66% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.13,
+   "f": 4,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)",
+   "also": [
+    "lockstep",
+    "snap",
+    "abrupt-start",
+    "abrupt-stop"
+   ]
+  }
+ ],
+ "total": 6.2,
+ "verdict": "looks animated, not acted: snaps and overlap give it away (6.2/10)"
+}

@@ -1,0 +1,39 @@
+{
+ "id": "w_ch2_a",
+ "f0": 3854,
+ "f1": 3930,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 128.467,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "56aa33a0bd413dbb",
+ "summary": "The cut is clean with no pops, flicker or camera movement, but the character's head tangents Jupiter's lower edge and the stiff, near-static stance shows no anticipation for the coming whip.",
+ "faults": [
+  {
+   "t": 128.63,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The character's hair and head sit right on Jupiter's lower rim, so the silhouette tangents and merges with the planet's dark brown band. The head does not read cleanly against the background.",
+   "fix": "Shift the character or the planet a little so the head sits clearly against the starfield or clearly overlaps the planet."
+  },
+  {
+   "t": 128.66,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "From 128.56 to 128.73 the character is a near-static, symmetrical straight-legged stand with arms hanging. There is no anticipation or weight shift before the whip-round the shot promises.",
+   "fix": "Add a small crouch or weight shift and an arm wind-up in the first frames so the whip reads as motivated."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3575,
+  "out": 1046
+ },
+ "cost": 0.0176
+}

@@ -1,0 +1,31 @@
+{
+ "id": "irresponsible",
+ "f0": 735,
+ "f1": 813,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 24.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "03529d7aefec34f4",
+ "summary": "No pops, flicker or contact problems show in this strip, but he sits tight against the right edge and his back and arm are clipped by the frame in the first four tiles.",
+ "faults": [
+  {
+   "t": 24.56,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "He is pushed against the right edge of the frame. His back and shoulder are cropped by the edge from 24.49 to 24.59, and he leans out of frame. The fence fills the empty left side, so the subject reads as crowded out.",
+   "fix": "Pan or reframe the camera about 10-15% right, so he sits inside the frame with room in front of him."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3586,
+  "out": 634
+ },
+ "cost": 0.0135
+}

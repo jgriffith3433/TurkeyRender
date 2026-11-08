@@ -1,0 +1,89 @@
+{
+ "id": "w_swing",
+ "f0": 3326,
+ "f1": 3402,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 110.867,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 111.9,
+   "why": "one patch jumps (cell 95.7, x2.4)",
+   "file": "spike-03357.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 112.733,
+   "why": "one patch jumps (cell 168.6, x1.8)",
+   "file": "spike-03382.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 113.1,
+   "why": "frame difference x13.4 (56.42)",
+   "file": "spike-03393.jpg"
+  }
+ ],
+ "hash": "e099e42300e2ee4d",
+ "summary": "The shot barely shows the idea: Saturn is tiny or absent for most of it, the figure is a tiny silhouette, and Saturn's ring passes through him in the opening frames.",
+ "faults": [
+  {
+   "t": 110.89,
+   "sev": "A",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The ring of Saturn slices straight across the tiny figure's body and the planet sits behind him, so the ring and body overlap. He is not holding Saturn at all. The figure is a tiny static silhouette with no grip or hauling pose.",
+   "fix": "Put the figure in front of the planet and ring, or move the ring clear of him. Add hands gripping the ring or planet."
+  },
+  {
+   "t": 111.86,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "From 111.86 to 112.69 the frames show only stars, a thin orange line and a faint orbit arc. Saturn is gone and the figure is a speck. The 'hauls it in and swings it round him like a hammer' idea cannot be read. The shot is nearly empty, with no huge or absurd feel.",
+   "fix": "Keep Saturn large in frame and the figure readable throughout. Frame the swing so the planet visibly arcs around him."
+  },
+  {
+   "t": 111.89,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The orbit arc and a grey fragment at the right edge change sharply between tiles. At 111.86 a grey bit of planet shows, at 111.89 the arc is larger, and at 111.96 both are gone. Saturn exits abruptly with no follow-through.",
+   "fix": "Smooth Saturn's path off-screen, or keep it in frame."
+  },
+  {
+   "t": 112.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Saturn is huge at the left edge at 112.76, then small and distant at 112.79 and 112.83. Its scale changes by a large factor in one frame, so it looks like it teleports or jumps depth. At 112.86 it also loses its ring, and at 112.89 it is suddenly at the right edge.",
+   "fix": "Make Saturn's distance and scale change continuous along the swing path."
+  },
+  {
+   "t": 113.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "A full-frame ring or planet surface fills the lower half at 113.09 and is gone at 113.13. The thin orange tether also flips direction between 113.06 and 113.13. The frame difference is x13.4, so this is a one-frame flash.",
+   "fix": "Remove or smooth the near pass of the ring, and keep the tether direction continuous."
+  },
+  {
+   "t": 113.29,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "Saturn reappears small at the left with a different orbit arc, and the figure is a barely visible speck. The throw 'at the other one' has no target and no clear release, so the shot ends without a payoff.",
+   "fix": "Show the release and the target, and keep the figure larger."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7796,
+  "out": 1042
+ },
+ "cost": 0.026
+}

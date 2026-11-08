@@ -1,0 +1,36 @@
+- id: room_wide
+  idea: a man alone in a room
+  feel: the look of the world
+  cast: {person: center clip:IdleBreathe}
+  camera: wide person
+
+- id: room_close
+  idea: his face
+  feel: skin in this light
+  cast: {person: clip:IdleBreathe}
+  camera: close-up person
+
+- id: yard_wide
+  idea: out in the yard under the sky
+  feel: space
+  cast: {person: lawn clip:IdleBreathe}
+  camera: wide person
+
+- id: yard_mid
+  idea: he looks down at the lawn
+  feel: curious
+  cast: {person: {clip: IdleBreathe}}
+  camera: medium person
+
+- id: yard_touch
+  idea: his hand touches the grass
+  feel: the first time in years
+  cast: {person: touch clip:IdleBreathe}
+  camera: close-up person
+  raw:
+    - {at: 0, do: pose, on: person, pose: kneel, for: 0.01b}
+    - {at: 0, do: pose, on: person, bones: {spine: [18, 0, 0], chest: [22, 0, 0], neck: [10, 0, 0]}, for: 1b}
+    - {at: 0, do: reach, on: person, hand: right, to: backyard_touch_spot, offset: [-0.05, 0.05, 0.1], for: 0.01b}
+    - {at: 1b, do: reach, on: person, hand: right, to: backyard_touch_spot, for: 3b}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.15, for: 0.01b}
+  shot: {pos: [300.55, 0.3, -1.45], look: person.rightHand, rot: null, screen: null, lookOffset: null, fov: 24, focus: person.rightHand, aperture: 9, name: yard_touch}

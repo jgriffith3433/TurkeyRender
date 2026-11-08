@@ -1,0 +1,419 @@
+// face_act.mjs direction, one entry per lyrics.json line: smile under the line (first to last), fear on the brow, wide/brow per word, gain on the mouth. Sick and small in the clinic, play in space, the biggest grin on the stools.
+[
+{
+"smile": [
+0.0,
+0.05
+],
+"fear": 0.1,
+"gain": 0.8
+},
+{
+"smile": [
+0.02,
+0.06
+],
+"fear": 0.1,
+"gain": 0.85,
+"wide": {
+"green": 0.3
+}
+},
+{
+"smile": [
+0.04,
+0.08
+],
+"fear": 0.08
+},
+{
+"smile": [
+0.05,
+0.1
+],
+"fear": 0.06,
+"wide": {
+"blink": 0.4
+}
+},
+{
+"smile": [
+0.06,
+0.12
+],
+"fear": 0.05
+},
+{
+"smile": [
+0.1,
+0.18
+],
+"brow": {
+"knee": 0.12
+}
+},
+{
+"smile": [
+0.14,
+0.22
+],
+"wide": {
+"life": 0.3
+}
+},
+{
+"smile": [
+0.2,
+0.26
+]
+},
+{
+"smile": [
+0.26,
+0.34
+],
+"brow": {
+"smile": 0.1
+}
+},
+{
+"smile": [
+0.3,
+0.3
+]
+},
+{
+"smile": [
+0.3,
+0.26
+],
+"wide": {
+"you": 0.25
+}
+},
+{
+"smile": [
+0.24,
+0.18
+],
+"fear": 0.06
+},
+{
+"smile": [
+0.14,
+0.04
+],
+"fear": 0.12,
+"wide": {
+"true": 0.4
+}
+},
+{
+"smile": [
+0.06,
+0.1
+],
+"fear": 0.1,
+"wide": {
+"hawkes": 0.5,
+"sky": 0.3
+}
+},
+{
+"smile": [
+0.1,
+0.14
+],
+"fear": 0.08
+},
+{
+"smile": [
+0.12,
+0.16
+],
+"brow": {
+"healthy": 0.1
+}
+},
+{
+"smile": [
+0.12,
+0.2
+],
+"wide": {
+"shut": 0.3
+}
+},
+{
+"smile": [
+0.16,
+0.22
+],
+"wide": {
+"floor": 0.3
+}
+},
+{
+"smile": [
+0.18,
+0.26
+]
+},
+{
+"smile": [
+0.08,
+0.12
+],
+"fear": 0.06
+},
+{
+"smile": [
+0.12,
+0.2
+]
+},
+{
+"smile": [
+0.26,
+0.36
+],
+"wide": {
+"face": 0.3
+}
+},
+{
+"smile": [
+0.3,
+0.38
+],
+"brow": {
+"green": 0.1
+}
+},
+{
+"smile": [
+0.36,
+0.4
+],
+"wide": {
+"tag": 0.4
+}
+},
+{
+"smile": [
+0.36,
+0.4
+],
+"wide": {
+"boo": 0.6
+}
+},
+{
+"smile": [
+0.34,
+0.4
+],
+"brow": {
+"rope": 0.12
+}
+},
+{
+"smile": [
+0.36,
+0.4
+],
+"wide": {
+"throw": 0.3
+}
+},
+{
+"smile": [
+0.34,
+0.38
+]
+},
+{
+"smile": [
+0.36,
+0.4
+],
+"wide": {
+"us": 0.25
+}
+},
+{
+"smile": [
+0.3,
+0.2
+],
+"wide": {
+"gut": 0.5
+}
+},
+{
+"smile": [
+0.1,
+0.06
+],
+"fear": 0.14,
+"brow": {
+"careful": 0.16
+},
+"gain": 0.7
+},
+{
+"smile": [
+0.3,
+0.38
+],
+"wide": {
+"hawkes": 0.4
+}
+},
+{
+"smile": [
+0.32,
+0.38
+]
+},
+{
+"smile": [
+0.34,
+0.4
+],
+"brow": {
+"healthy": 0.1
+}
+},
+{
+"smile": [
+0.34,
+0.4
+],
+"wide": {
+"shut": 0.3
+}
+},
+{
+"smile": [
+0.36,
+0.4
+],
+"wide": {
+"floor": 0.3
+}
+},
+{
+"smile": [
+0.36,
+0.4
+]
+},
+{
+"smile": [
+0.1,
+0.14
+],
+"fear": 0.06,
+"gain": 0.7
+},
+{
+"smile": [
+0.12,
+0.18
+],
+"gain": 0.7
+},
+{
+"smile": [
+0.16,
+0.24
+],
+"brow": {
+"you": 0.1,
+"me": 0.1
+},
+"gain": 0.8
+},
+{
+"smile": [
+0.2,
+0.3
+],
+"brow": {
+"doctor": 0.12
+}
+},
+{
+"smile": [
+0.36,
+0.42
+],
+"wide": {
+"hawkes": 0.4,
+"baby": 0.2
+}
+},
+{
+"smile": [
+0.38,
+0.42
+]
+},
+{
+"smile": [
+0.38,
+0.42
+],
+"brow": {
+"healthy": 0.12
+}
+},
+{
+"smile": [
+0.38,
+0.42
+],
+"wide": {
+"shut": 0.3
+}
+},
+{
+"smile": [
+0.38,
+0.42
+],
+"wide": {
+"floor": 0.3
+}
+},
+{
+"smile": [
+0.4,
+0.42
+]
+},
+{
+"smile": [
+0.3,
+0.2
+],
+"wide": {
+"ahh": 0.4
+}
+},
+{
+"smile": [
+0.3,
+0.2
+],
+"wide": {
+"ahh": 0.4
+}
+},
+{
+"smile": 0.0,
+"fear": 0.1,
+"gain": 0.9
+}
+]

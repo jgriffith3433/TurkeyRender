@@ -1,0 +1,28 @@
+{
+ "clip": "mx_sit_floor",
+ "seconds": 10,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.000 m, worst step 0.000 m at 0.00s",
+  "right foot on floor moved 0.030 m, worst step 0.000 m at 4.17s"
+ ],
+ "hipsTop": 0.07654046,
+ "hipsLow": 0.07608476,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "RightLowerLeg": 49.9,
+  "RightFoot": 9.9,
+  "LeftFoot": 7,
+  "LeftLowerArm": 1,
+  "LeftUpperLeg": 0.8
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_sit_floor was rejected by admission: joint limits moved RightLowerLeg 49.9 deg; feet 0.311 m under the floor"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_floor_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_floor_three.mp4"
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "id": "snatch",
+ "f0": 2279,
+ "f1": 2330,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 75.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "8bd98c11ab369492",
+ "summary": "The strip is almost static across all 8 frames, with no pops or render flicker, but the blade is held up beside his face and he looks at the camera instead of at it.",
+ "faults": [
+  {
+   "t": 76.03,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is that he looks at the blade and closes his fist around it. In these frames his eyes and head face the camera, and the blade is a thin stick beside his cheek. The fist is already mostly closed, so the slow close has no visible start.",
+   "fix": "Turn his head and eyes down to the blade, and start with the hand open so the fist can close slowly."
+  },
+  {
+   "t": 76.09,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The blade is a thin green-and-dark sliver held at the edge of the fingers right next to his face. Its grip is hard to read and it sits close to the cheek.",
+   "fix": "Move the hand away from the face and wrap the fingers visibly around the blade."
+  },
+  {
+   "t": 76.13,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The pose is nearly frozen across all 8 frames. His other arm is stiff, with the hand hanging on his hip, and there is no breathing or settle.",
+   "fix": "Add a slight weight shift or a head drift into the held pose."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3561,
+  "out": 493
+ },
+ "cost": 0.0121
+}

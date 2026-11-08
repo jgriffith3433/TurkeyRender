@@ -1,0 +1,130 @@
+{
+ "name": "nose_flicked",
+ "about": "The nose takes a flick at `hit`: the head snaps back with overshoot, both eyes shut, then the right hand covers the nose and the face comes back offended: brows up, jaw open. No ground. Ends flying, hand on nose. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "fly",
+ "exit": "fly",
+ "length": "1.6s",
+ "min": "1.1s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "hit": 0.1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": "$hit",
+   "do": "keys",
+   "successive": 0.02,
+   "keys": [
+    {
+     "t": 0.1,
+     "ease": "out",
+     "overshoot": 0.2,
+     "settle": "0.3s",
+     "hold": 0.15,
+     "bones": {
+      "neck": [
+       -8,
+       0,
+       0
+      ],
+      "head": [
+       -16,
+       0,
+       3
+      ],
+      "chest": [
+       -4,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 0.65,
+     "ease": "inout",
+     "bones": {
+      "neck": [
+       -2,
+       0,
+       0
+      ],
+      "head": [
+       -3,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": "$hit",
+   "do": "face",
+   "blink": 1,
+   "for": "0.06s",
+   "ease": "out"
+  },
+  {
+   "at": "=hit+0.3",
+   "do": "face",
+   "blink": 0,
+   "eyesWide": 0.6,
+   "fear": 0.5,
+   "jawOpen": 0.35,
+   "for": "0.2s",
+   "ease": "out"
+  },
+  {
+   "at": "=hit+0.2",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.02,
+    1.57,
+    0.11
+   ],
+   "for": "0.35s",
+   "ease": "hand"
+  },
+  {
+   "at": "=hit+0.2",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.5,
+   "for": "0.3s"
+  },
+  {
+   "at": "=hit+0.9",
+   "do": "face",
+   "eyesWide": 0.3,
+   "fear": 0.35,
+   "jawOpen": 0.2,
+   "for": "0.4s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "drift_space",
+    "for": "1.5s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

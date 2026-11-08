@@ -1,0 +1,27 @@
+{
+ "clip": "mx_kneel_down",
+ "seconds": 2.867,
+ "popCount": 2,
+ "pops": [
+  "2.767s LeftLowerLeg kink 0.543 m",
+  "2.800s LeftLowerLeg kink 0.543 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.001 m, worst step 0.001 m at 2.83s",
+  "right foot on floor moved 0.001 m, worst step 0.001 m at 2.83s"
+ ],
+ "hipsTop": 0.9128664,
+ "hipsLow": 0.3653202,
+ "hipsTravel": "(0.02, -0.45, 0.09)",
+ "limits": {
+  "Chest": 22.4,
+  "Head": 5.1,
+  "groundHipsCm": 4.9
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_kneel_down_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_kneel_down_three.mp4"
+ ]
+}

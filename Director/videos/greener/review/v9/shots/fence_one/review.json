@@ -1,0 +1,31 @@
+{
+ "id": "fence_one",
+ "f0": 1352,
+ "f1": 1404,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 45.067,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "32bd3c62d01c2419",
+ "summary": "The cut is clean with no pops or flicker, but the seated character's head is cropped by the top of the frame throughout.",
+ "faults": [
+  {
+   "t": 45.13,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The character's head is cut off by the top edge of the frame in every tile, so the subject is cropped and the hair is only partly visible.",
+   "fix": "Tilt the camera up or reframe so the whole head sits inside the frame with some headroom."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3580,
+  "out": 879
+ },
+ "cost": 0.016
+}

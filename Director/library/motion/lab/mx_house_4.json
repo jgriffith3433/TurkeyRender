@@ -1,0 +1,37 @@
+{
+ "clip": "mx_house_4",
+ "seconds": 12,
+ "popCount": 46,
+ "pops": [
+  "0.167s RightLowerLeg kink 0.096 m",
+  "1.500s LeftHandIndex3 kink 0.081 m",
+  "1.533s LeftHandIndex3 kink 0.092 m",
+  "1.567s LeftHandIndex3 kink 0.101 m",
+  "1.600s LeftHandIndex3 kink 0.093 m",
+  "1.900s RightLowerLeg kink 0.104 m"
+ ],
+ "feet": [
+  "left foot on floor moved 4.926 m, worst step 0.072 m at 10.33s",
+  "right foot on floor moved 4.247 m, worst step 0.076 m at 3.33s"
+ ],
+ "hipsTop": 0.9261449,
+ "hipsLow": 0.7645141,
+ "hipsTravel": "(0.30, 0.00, 0.82)",
+ "limits": {
+  "LeftLowerLeg": 38.4,
+  "Head": 29.9,
+  "RightLowerLeg": 19.3,
+  "LeftShoulder": 19.2,
+  "groundHipsCm": 9.1,
+  "Chest": 6.7,
+  "Spine": 3.6,
+  "RightLowerArm": 2.5,
+  "LeftFoot": 2
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_house_4_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_house_4_three.mp4"
+ ]
+}

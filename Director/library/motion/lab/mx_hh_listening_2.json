@@ -1,0 +1,32 @@
+{
+ "clip": "mx_hh_listening_2",
+ "seconds": 10,
+ "popCount": 2,
+ "pops": [
+  "9.133s RightLowerLeg kink 0.080 m",
+  "9.200s RightLowerLeg kink 0.123 m"
+ ],
+ "feet": [
+  "left foot on floor moved 3.106 m, worst step 0.034 m at 9.20s",
+  "right foot on floor moved 3.419 m, worst step 0.041 m at 5.13s"
+ ],
+ "hipsTop": 0.932904,
+ "hipsLow": 0.8933654,
+ "hipsTravel": "(0.05, 0.01, 0.02)",
+ "limits": {
+  "RightLowerArm": 10.8,
+  "Chest": 5.7,
+  "groundHipsCm": 5.3,
+  "Head": 1.1,
+  "LeftLowerLeg": 0.9,
+  "LeftLowerArm": 0
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_hh_listening_2 was rejected by admission: foot slide 4.6 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_listening_2_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_listening_2_three.mp4"
+ ]
+}

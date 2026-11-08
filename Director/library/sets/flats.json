@@ -1,0 +1,58 @@
+{
+  // The back of the fantasy: a row of painted plywood flats held up by braces and sandbags, on a dead verge, facing a grey street. Heading 0 looks at the flats, the door in the middle.
+  // Same palette as `estate`, so the pink that shows round an edge is the same pink. The street is its own copy of `grey_street`'s road, pavement and wall.
+  "origin": [500, 0, 0],
+  "bounds": [-30, -11, 30, 5.8],
+  "ceiling": 30,
+  "light": "dip_overcast",
+  "solids": { "lamp": [-9.1, -2.6, -8.9, -2.4, 4.4] },
+  "models": {
+    "flat_back": "Assets/MusicVideo/Props/Estate/flat_back.fbx", "flat_door": "Assets/MusicVideo/Props/Estate/flat_door.fbx", "flat_brace": "Assets/MusicVideo/Props/Estate/flat_brace.fbx",
+    "crate": "Assets/MusicVideo/Props/Estate/crate.fbx", "din_door": "Assets/MusicVideo/Props/Estate/din_door.fbx"
+  },
+  "marks": {
+    "center": { "pos": [0, 0, 2], "kind": "stand", "face": 0 },
+    "subject": { "pos": [0, 0, 4.2], "kind": "stand", "face": 180 },
+    "door": { "pos": [0, 0, 6.3], "kind": "door", "face": 180 },
+    "threshold": { "pos": [0, 0, 5.4], "kind": "stand", "face": 180 },
+    "verge": { "pos": [0, 0, 2.6], "kind": "stand", "face": 180 },
+    "verge_back": { "pos": [0, 0, 2.6], "kind": "stand", "face": 0 }, "dip_wide": { "pos": [1.6, 1.35, -2.2], "kind": "camera" }, "dip_behind": { "pos": [0.5, 1.05, 0.2], "kind": "camera" }, "door_near": { "pos": [0, 0, 5.207], "kind": "stand", "face": 0 }, "verge_side": { "pos": [0, 0, 2.6], "kind": "stand", "face": 90 },
+    "kerb": { "pos": [0, 0.1, -0.9], "kind": "stand", "face": 180 },
+    "kerb_back": { "pos": [0, 0.1, -0.9], "kind": "stand", "face": 0 },
+    "kerb_side": { "pos": [0, 0.1, -0.9], "kind": "stand", "face": 90 },
+    "crate_spot": { "pos": [1.1, 0, 2.6], "kind": "seat", "face": -90, "head": 0.95 },
+    "break_blade": { "pos": [0.5, 0.77, 2.56], "kind": "prop", "face": 0 }, "break_offer": { "pos": [0.5, 1.0, 2.56], "kind": "prop", "head": 0 }, "break_stand": { "pos": [0.5, 0, 2.56], "kind": "prop", "face": 0 }, "break_tray": { "pos": [0.5, 0.72, 2.56], "kind": "prop", "face": 0 }, "break_two": { "pos": [0.55, 1.35, -1.5], "kind": "camera" }, "break_two_aim": { "pos": [0.45, 1.1, 2.6], "kind": "prop", "head": 0 },
+    "street_wide": { "pos": [0, 1.5, -9.8], "kind": "camera" },
+    "door_aim": { "pos": [0, 1.7, 6], "kind": "prop", "head": 0 },
+    "side_cam": { "pos": [-13, 1.45, 3.2], "kind": "camera" },
+    "side_aim": { "pos": [6, 1.3, 2.8], "kind": "prop", "head": 0 },
+    "from_door": { "pos": [0, 1.6, 5.2], "kind": "camera" },
+    "street_aim": { "pos": [0, 1.2, -10], "kind": "prop", "head": 0 },
+    "break_cam": { "pos": [0.2, 1.1, 1.05], "kind": "camera" },
+    "break_aim": { "pos": [0.95, 0.85, 2.6], "kind": "prop", "head": 0 }
+  },
+  "actors": {
+    "flats_l": { "model": "flat_back", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 1.2, "texture": "Assets/MusicVideo/Props/Estate/tex/crate_timber.png", "color": "#ffffff", "smooth": 0.18, "crowd": { "count": 5, "shape": "line", "spacing": 4.88, "face": 0, "scaleVar": 0 }, "pos": [-12.2, 0, 6] },
+    "flats_r": { "model": "flat_back", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 1.2, "texture": "Assets/MusicVideo/Props/Estate/tex/crate_timber.png", "color": "#ffffff", "smooth": 0.18, "crowd": { "count": 5, "shape": "line", "spacing": 4.88, "face": 0, "scaleVar": 0 }, "pos": [12.2, 0, 6] },
+    "ply_wall_l": { "model": "prim:cube", "pos": [-13.42, 4, 6.0], "scale": [21.96, 8, 0.012], "boxUV": 0.04098, "tile": [1, 3.05], "texture": "Assets/MusicVideo/Props/Estate/tex/ply_grain.png", "color": "#ffffff", "smooth": 0.2 },
+    "ply_wall_r": { "model": "prim:cube", "pos": [13.42, 4, 6.0], "scale": [21.96, 8, 0.012], "boxUV": 0.04098, "tile": [1, 3.05], "texture": "Assets/MusicVideo/Props/Estate/tex/ply_grain.png", "color": "#ffffff", "smooth": 0.2 },
+    "flat_c": { "model": "flat_door", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 0.04098, "tile": [1, 3.05], "texture": "Assets/MusicVideo/Props/Estate/tex/ply_grain.png", "color": "#ffffff", "smooth": 0.2, "pos": [0, 0, 6] },
+    "braces_l": { "model": "flat_brace", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 1.2, "texture": "Assets/MusicVideo/Props/Estate/tex/crate_timber.png", "color": "#ffffff", "smooth": 0.18, "crowd": { "count": 6, "shape": "line", "spacing": 4.88, "face": 0, "scaleVar": 0 }, "pos": [-14.64, 0, 5.92] },
+    "braces_r": { "model": "flat_brace", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 1.2, "texture": "Assets/MusicVideo/Props/Estate/tex/crate_timber.png", "color": "#ffffff", "smooth": 0.18, "crowd": { "count": 6, "shape": "line", "spacing": 4.88, "face": 0, "scaleVar": 0 }, "pos": [14.64, 0, 5.92] },
+    "door_hinge": { "model": "none", "pos": [0.5, 0, 6.02], "rot": [0, 120, 0] },
+    "door_leaf": { "model": "din_door", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "parent": "door_hinge", "rot": [0, 180, 0], "scale": [1.08, 1, 1] },
+    "door_light": { "model": "prim:quad", "pos": [0, 1.05, 6.4], "scale": [1.1, 2.2, 1], "color": "#ffe6ee", "emission": "#ffcfdc", "smooth": 0 },
+    "verge": { "model": "none", "pos": [0, 0, 3.2], "grass": { "size": [62, 5.6], "seed": 3, "dark": "#3a382c", "mid": "#6a6650", "tip": "#9a9478", "dry": "#a89e80", "soil": "#37352c", "flowers": 0, "height": 0.1, "width": 0.0042, "wind": 0.12, "hero": [[0, 0, 3]], "heroDensity": 3000, "midDensity": 900, "farDensity": 320, "midRadius": 10 } },
+    "verge_soil": { "model": "prim:cube", "pos": [0, -0.03, 3.5], "scale": [64, 0.06, 6.4], "color": "#3c3a30", "smooth": 0.1 },
+    "kerbstone": { "model": "prim:cube", "pos": [0, 0.05, 0.25], "scale": [64, 0.1, 0.25], "color": "#807f7c" },
+    "pavement": { "model": "prim:cube", "pos": [0, 0.04, -1.1], "scale": [64, 0.12, 2.5], "color": "#6e6e70" },
+    "kerb_far": { "model": "prim:cube", "pos": [0, 0.05, -2.45], "scale": [64, 0.1, 0.2], "color": "#7a7977" },
+    "road": { "model": "prim:cube", "pos": [0, -0.03, -6.4], "scale": [64, 0.06, 8], "color": "#2e2f33" },
+    "far_kerb": { "model": "prim:cube", "pos": [0, 0.05, -10.5], "scale": [64, 0.1, 1], "color": "#6a6a6c" },
+    "far_wall": { "model": "prim:cube", "pos": [0, 3, -11.2], "scale": [64, 6, 0.4], "color": "#5c5a5e" },
+    "far_top": { "model": "prim:cube", "pos": [0, 6.1, -11.2], "scale": [64, 0.2, 0.6], "color": "#47464a" },
+    "post": { "model": "prim:cube", "pos": [-9, 2.2, -2.5], "scale": [0.12, 4.4, 0.12], "color": "#222226" },
+    "post_head": { "model": "prim:cube", "pos": [-9, 4.35, -2.1], "scale": [0.2, 0.1, 0.9], "color": "#1a1a1e" },
+    "crate": { "model": "crate", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 1.6, "texture": "Assets/MusicVideo/Props/Estate/tex/crate_timber.png", "color": "#ffffff", "smooth": 0.18, "pos": [1.1, 0, 2.6], "rot": [0, 60, 0] }
+  }
+}

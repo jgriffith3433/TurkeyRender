@@ -68,7 +68,7 @@ namespace TKShock.MV.EditorTools
         {
             var w = TimelineEditor.GetWindow();
             if (w != null && TimelineEditor.masterDirector) w.playbackControls.SetCurrentTime(t);
-            var d = Director; if (d) { d.time = t; d.Evaluate(); }
+            var d = Director; if (d) { d.time = t; d.Evaluate(); MVLate.Flush(); }
         }
 
         static GUIStyle _big, _small;
@@ -150,7 +150,7 @@ namespace TKShock.MV.EditorTools
             var song = Song; double t = at ?? Now;
             var marks = LoadMarks();
             int id = marks.Count == 0 ? 1 : marks.Max(x => (int)x["id"]) + 1;
-            string shot = Path.Combine(Bridge.Root, "captures", $"mark-{id}.png");
+            string shot = Path.Combine(Video.Captures, $"mark-{id}.png");
             try { File.WriteAllBytes(shot, Capture.Png(Capture.Current(960, 540), 960, 540)); } catch (Exception e) { UnityEngine.Debug.LogWarning(e.Message); shot = null; }
             song.BarBeat(t, out var bar, out var beat);
             var m = new JObject { ["id"] = id, ["t"] = Math.Round(t, 3), ["at"] = song.Label(t), ["bar"] = bar, ["beat"] = Math.Round(beat, 2), ["section"] = song.SectionAt(t), ["note"] = note, ["image"] = shot };
@@ -188,6 +188,7 @@ namespace TKShock.MV.EditorTools
     public static class Capture
     {
         static RenderTexture _rt; static Texture2D _tex;
+        public static int ExtrasEvery = 1; static int _extra;
 
         static void Size(int w, int h)
         {
@@ -203,11 +204,15 @@ namespace TKShock.MV.EditorTools
         public static byte[] Current(int w, int h)
         {
             Size(w, h);
+            MVGfx.FitCanvases(MVGfx.Stage);   // the graphics' plane follows the lens now the camera has its fov for this frame, or TMP text vanishes on long lenses
             Canvas.ForceUpdateCanvases();
-            var feed = GameObject.Find("FeedCamera");
-            if (feed) feed.GetComponent<Camera>().Render();
-            MVEyeRig.RenderAll();
-            MVDoor.RenderAll();
+            if (_extra++ % ExtrasEvery == 0) // the TV feed, the eye's reflection and the doors are whole extra renders
+            {
+                var feed = GameObject.Find("FeedCamera");
+                if (feed) feed.GetComponent<Camera>().Render();
+                MVEyeRig.RenderAll();
+                MVDoor.RenderAll();
+            }
             var cam = Camera.main;
             var old = cam.targetTexture; cam.targetTexture = _rt;
             cam.Render();
@@ -222,13 +227,17 @@ namespace TKShock.MV.EditorTools
         {
             var d = Transport.Director;
             if (!d.playableGraph.IsValid()) d.RebuildGraph();
-            d.time = t; d.Evaluate();
+            d.time = t; d.Evaluate(); MVLate.Flush();   // native bodies' acting and what they hold, on the pose the Animator just wrote, before the camera reads it
             var brain = Camera.main.GetComponent<CinemachineBrain>();
             if (brain)
             {
                 var keep = brain.UpdateMethod;
                 brain.UpdateMethod = CinemachineBrain.UpdateMethods.ManualUpdate;
+                var was = brain.ActiveVirtualCamera;
                 brain.ManualUpdate(); brain.ManualUpdate();
+                // After a cut or a seek the outgoing camera is still live on the first update and writes its focus into the depth of field. A shot with no
+                // focus target never overwrites that, so go round once more now only the new camera is live. A frame must not depend on the frame before.
+                if (brain.ActiveVirtualCamera != was) { d.Evaluate(); MVLate.Flush(); brain.ManualUpdate(); }
                 brain.UpdateMethod = keep;
             }
             return Current(w, h);
@@ -244,7 +253,7 @@ namespace TKShock.MV.EditorTools
             Quality.Set(false);
             int w = (int?)m["w"] ?? 960, h = (int?)m["h"] ?? 540;
             var song = AssetDatabase.LoadAssetAtPath<SongMap>(ScoreCompiler.SongPath);
-            var outs = new List<string>(); var dir = Path.Combine(Bridge.Root, "captures");
+            var outs = new List<string>(); var dir = Video.Captures;
             double keep = Transport.Director.time;
             foreach (var t in Times(m))
             {
@@ -258,7 +267,7 @@ namespace TKShock.MV.EditorTools
 
         // ---- The finished video: every frame rendered offline and muxed with the song and sfx, so a slow PC never drops one.
         // It runs a frame per editor tick, so Unity stays usable, and it waits whenever J is playing the timeline.
-        class Job { public int w, h, fps, frames, i; public double from, to; public string outPath, tmp; public Process enc; public System.Diagnostics.Stopwatch clock; }
+        class Job { public int w, h, fps, frames, i; public double from, to; public string outPath, tmp, quality; public bool pictureOnly; public Process enc; public System.Diagnostics.Stopwatch clock; }
         static Job _job;
         public static string Progress => _job == null ? null : $"Rendering {100 * _job.i / Mathf.Max(1, _job.frames)}%";
 
@@ -270,12 +279,15 @@ namespace TKShock.MV.EditorTools
             {
                 w = (int?)m["w"] ?? 1920, h = (int?)m["h"] ?? 1080, fps = (int?)m["fps"] ?? 30,
                 from = (double?)m["from"] ?? 0, to = (double?)m["to"] ?? Transport.Director.duration,
-                outPath = (string)m["out"] ?? Path.Combine(Bridge.Root, "output", "video.mp4"), clock = System.Diagnostics.Stopwatch.StartNew(),
+                outPath = (string)m["out"] ?? Path.Combine(Video.Dir, "output", "video.mp4"), clock = System.Diagnostics.Stopwatch.StartNew(),
+                quality = (string)m["quality"] ?? "final",
+                pictureOnly = (bool?)m["pictureOnly"] ?? false,
             };
             Directory.CreateDirectory(Path.GetDirectoryName(j.outPath));
             j.tmp = j.outPath + ".video.mp4"; j.frames = (int)System.Math.Ceiling((j.to - j.from) * j.fps);
+            string enc = j.quality == "previs" ? "-preset ultrafast -crf 28" : j.quality == "draft" || j.quality == "preview" ? "-preset veryfast -crf 23" : "-preset medium -crf 17";
             j.enc = Process.Start(new ProcessStartInfo("ffmpeg",
-                $"-y -loglevel error -f rawvideo -pix_fmt rgb24 -s {j.w}x{j.h} -r {j.fps} -i - -vf vflip -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p \"{j.tmp}\"")
+                $"-y -loglevel error -f rawvideo -pix_fmt rgb24 -s {j.w}x{j.h} -r {j.fps} -i - -vf vflip -c:v libx264 {enc} -pix_fmt yuv420p \"{j.tmp}\"")
             { UseShellExecute = false, RedirectStandardInput = true, CreateNoWindow = true });
             _job = j;
             EditorApplication.update += Step;
@@ -291,7 +303,7 @@ namespace TKShock.MV.EditorTools
             if (_job == null) return "nothing running";
             EditorApplication.update -= Step;
             try { _job.enc.StandardInput.Close(); _job.enc.WaitForExit(); File.Delete(_job.tmp); } catch { }
-            _job = null; Quality.Set(true);
+            _job = null; EndQuality();
             return "cancelled";
         }
 
@@ -302,7 +314,7 @@ namespace TKShock.MV.EditorTools
             var j = _job; if (j == null) return;
             if (Transport.Director.playableGraph.IsValid() && Transport.Director.playableGraph.IsPlaying()) return; // J is watching: wait
             if (EditorApplication.isCompiling || EditorApplication.isUpdating) return;
-            if (!_finalOn) { Quality.Set(false); _finalOn = true; }
+            if (!_finalOn) { StartQuality(j); _finalOn = true; }
             var budget = System.Diagnostics.Stopwatch.StartNew();
             var s = j.enc.StandardInput.BaseStream;
             do
@@ -311,15 +323,27 @@ namespace TKShock.MV.EditorTools
                 s.Write(raw, 0, raw.Length);
                 j.i++;
             } while (j.i < j.frames && budget.ElapsedMilliseconds < 1500);
-            if (j.i >= j.frames) { Quality.Set(true); _finalOn = false; Finish(j); }
+            if (j.i >= j.frames) { EndQuality(); Finish(j); }
         }
+
+        static void StartQuality(Job j)
+        {
+            if (j.quality == "previs") { Quality.Previs(true); ExtrasEvery = 4; }
+            else if (j.quality == "draft") Quality.Draft();
+            else if (j.quality == "preview") Quality.Set(true, 1);
+            else Quality.Set(false);
+        }
+
+        static void EndQuality() { ExtrasEvery = 1; Quality.Previs(false); _finalOn = false; }
 
         static void Finish(Job j)
         {
             EditorApplication.update -= Step; _job = null;
             j.enc.StandardInput.Close(); j.enc.WaitForExit();
-            var song = Path.GetFullPath("Assets/Song/Audio.mp3");
-            var sfxFile = Path.Combine(Bridge.Root, "sfx-map.json");
+            // tools/final.mjs mixes the sound once for the whole video. -shortest below can drop a shot's last frames, and a shot has to be every frame.
+            if (j.pictureOnly) { File.Delete(j.outPath); File.Move(j.tmp, j.outPath); UnityEngine.Debug.Log("Rendered " + j.outPath); return; }
+            var song = Path.GetFullPath(ScoreCompiler.SongAudio());
+            var sfxFile = Path.Combine(Video.Dir, "sfx-map.json");
             var sfx = File.Exists(sfxFile) ? JArray.Parse(File.ReadAllText(sfxFile)) : new JArray();
             string inputs = $"-i \"{j.tmp}\" -ss {j.from:0.000} -t {j.to - j.from:0.000} -i \"{song}\"", filter = "";
             var used = new List<(string path, double ts, float vol)>();

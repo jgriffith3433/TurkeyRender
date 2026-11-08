@@ -33,7 +33,7 @@ namespace TKShock.MV.EditorTools
             var a = RenderTexture.active; RenderTexture.active = rt;
             var tex = new Texture2D(w, h, TextureFormat.RGB24, false); tex.ReadPixels(new Rect(0, 0, w, h), 0, 0); tex.Apply();
             RenderTexture.active = a;
-            var path = Path.Combine(Bridge.Root, "captures", (string)m["name"] ?? "peek.png");
+            var path = Path.Combine(Video.Captures, (string)m["name"] ?? "peek.png");
             File.WriteAllBytes(path, tex.EncodeToPNG());
             Object.DestroyImmediate(go); Object.DestroyImmediate(tex); rt.Release(); Object.DestroyImmediate(rt);
             return path;
@@ -47,7 +47,7 @@ namespace TKShock.MV.EditorTools
             var rt = cam.targetTexture; var a = RenderTexture.active; RenderTexture.active = rt;
             var tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false); tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0); tex.Apply();
             RenderTexture.active = a;
-            var path = System.IO.Path.Combine(Bridge.Root, "captures", "feed.png"); System.IO.File.WriteAllBytes(path, tex.EncodeToPNG());
+            var path = System.IO.Path.Combine(Video.Captures, "feed.png"); System.IO.File.WriteAllBytes(path, tex.EncodeToPNG());
             var info = new System.Collections.Generic.List<string>();
             foreach (var tv in Object.FindObjectsByType<MVTv>(FindObjectsSortMode.None))
             {
@@ -84,6 +84,13 @@ namespace TKShock.MV.EditorTools
         }
 
         /// <summary>Where a person's body is at a moment, so shots can be framed without guessing.</summary>
+        [BridgeCommand("gencount")]
+        static object GenCount(JObject m)
+        {
+            var (meshes, mats, verts) = MVGen.Count();
+            return new JObject { ["meshes"] = meshes, ["materials"] = mats, ["verts"] = verts, ["swept"] = (bool?)m["sweep"] == true ? MVGen.Sweep() : 0 };
+        }
+
         [BridgeCommand("bones")]
         static object Bones(JObject m)
         {

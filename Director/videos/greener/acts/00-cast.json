@@ -1,0 +1,83 @@
+{
+  // Who can be cast. Where they stand and whether they show comes from the cards. Same man as TK Shock, same materials. Grass is the gateway drug; nothing says so.
+  "actors": {
+    "person": { "model": "person", "material": "Assets/Videos/greener/Props/Person_pop.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "lawn_chair": { "model": "Assets/MusicVideo/Props/Estate/lawn_chair.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    // the blade, tested grip: library/grips.json. Shown and hidden by raw cues, since it rides his hand.
+    "blade_hand": { "model": "Assets/MusicVideo/Props/Estate/blade.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": [1, 1.4, 1.2], "parent": "person.rightIndexDistal", "pos": [0, 0.02, 0], "rot": [170, 0, 0] },
+    "blade_free": { "model": "Assets/MusicVideo/Props/Estate/blade.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": [2.5, 4, 6], "pos": [399.85, 1.35, 4.1] },
+    "cup_mug": { "model": "Assets/Videos/greener/Props/cup.obj", "material": "Assets/Videos/greener/Props/cup.mat", "scale": 0.88, "pos": [300.25, 0.7, 0.2] },
+    "sparrow": { "model": "Assets/Videos/greener/Props/sparrow_body.obj", "material": "Assets/Videos/touchgrass/Props/sparrow.mat" },
+    // head and tail turn on their own joints: the bird split by its atlas boxes, pivots in the split.
+    "sparrow_head": { "model": "Assets/Videos/greener/Props/sparrow_head.obj", "material": "Assets/Videos/touchgrass/Props/sparrow.mat" },
+    "sparrow_tail": { "model": "Assets/Videos/greener/Props/sparrow_tail.obj", "material": "Assets/Videos/touchgrass/Props/sparrow.mat" },
+    // the pastel coming up out of the yard
+    "pastel_a": { "model": "prim:cylinder", "pos": [300, 0.07, 0.6], "scale": [0.2, 0.01, 0.2], "color": "#9fe8c4", "from": "25:3", "until": "29:1" },
+    "pastel_b": { "model": "prim:cylinder", "pos": [300, 0.08, 0.6], "scale": [0.1, 0.01, 0.1], "color": "#f9c4d6", "from": "25:3", "until": "29:1" },
+    // the south fence, panel by panel, stands in for the set's one long fence from the moment it starts to go
+    "fence_p1": { "model": "none", "fence": { "length": 3, "texture": "Assets/AtmosphericHouse/Textures/Clean/Floor_wooden_A/Floor_wooden_A_BaseColor.png", "color": "#d0a070", "seed": 11, "gap": 0.03 }, "pos": [291, 0, -6.2], "from": "27:1", "until": "29:1" },
+    "fence_p2": { "model": "none", "fence": { "length": 3, "texture": "Assets/AtmosphericHouse/Textures/Clean/Floor_wooden_A/Floor_wooden_A_BaseColor.png", "color": "#d0a070", "seed": 12, "gap": 0.03 }, "pos": [294, 0, -6.2], "from": "27:1", "until": "29:1" },
+    "fence_p3": { "model": "none", "fence": { "length": 3, "texture": "Assets/AtmosphericHouse/Textures/Clean/Floor_wooden_A/Floor_wooden_A_BaseColor.png", "color": "#d0a070", "seed": 13, "gap": 0.03 }, "pos": [297, 0, -6.2], "from": "27:1", "until": "29:1" },
+    "fence_p4": { "model": "none", "fence": { "length": 3, "texture": "Assets/AtmosphericHouse/Textures/Clean/Floor_wooden_A/Floor_wooden_A_BaseColor.png", "color": "#d0a070", "seed": 14, "gap": 0.03 }, "pos": [300, 0, -6.2], "from": "27:1", "until": "29:1" },
+    "fence_p5": { "model": "none", "fence": { "length": 3, "texture": "Assets/AtmosphericHouse/Textures/Clean/Floor_wooden_A/Floor_wooden_A_BaseColor.png", "color": "#d0a070", "seed": 15, "gap": 0.03 }, "pos": [303, 0, -6.2], "from": "27:1", "until": "29:1" },
+    "fence_p6": { "model": "none", "fence": { "length": 3, "texture": "Assets/AtmosphericHouse/Textures/Clean/Floor_wooden_A/Floor_wooden_A_BaseColor.png", "color": "#d0a070", "seed": 16, "gap": 0.03 }, "pos": [306, 0, -6.2], "from": "27:1", "until": "29:1" },
+    // butlers, in rows. One model, crowd settings do the rest.
+    "butlers_path_l": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 13, "shape": "line", "spacing": 1.9, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_path_r": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 13, "shape": "line", "spacing": 1.9, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_hall_l": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 7, "shape": "line", "spacing": 1.9, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_hall_l2": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 7, "shape": "line", "spacing": 1.9, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_hall_r": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 7, "shape": "line", "spacing": 1.9, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_hall_r2": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 7, "shape": "line", "spacing": 1.9, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_din_l": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 14, "shape": "line", "spacing": 1.88, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butlers_din_r": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "crowd": { "count": 14, "shape": "line", "spacing": 1.88, "face": 0, "scaleVar": 0, "modelScale": 1.5 } },
+    "butler_a": { "model": "Assets/MusicVideo/Turkey/turkey_butler_hero.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "scale": 1.5 },
+    "butler_b": { "model": "Assets/MusicVideo/Turkey/turkey_butler_hero.fbx", "material": "Assets/MusicVideo/Props/Estate/butler_tie.mat", "material2": "Assets/MusicVideo/Turkey/turkey_white.mat", "scale": 1.5 },
+    // gifts
+    "gifts_a": { "model": "Assets/MusicVideo/Props/Estate/gift_pink.fbx", "models": ["Assets/MusicVideo/Props/Estate/gift_pink.fbx", "Assets/MusicVideo/Props/Estate/gift_mint.fbx", "Assets/MusicVideo/Props/Estate/gift_blue.fbx", "Assets/MusicVideo/Props/Estate/gift_lilac.fbx"], "material": "Assets/MusicVideo/Props/Estate/estate.mat", "crowd": { "count": 6, "shape": "line", "spacing": 2.6, "face": 0, "scaleVar": 0.25, "modelScale": 1.5, "seed": 3 } },
+    "gifts_b": { "model": "Assets/MusicVideo/Props/Estate/gift_mint.fbx", "models": ["Assets/MusicVideo/Props/Estate/gift_blue.fbx", "Assets/MusicVideo/Props/Estate/gift_lilac.fbx", "Assets/MusicVideo/Props/Estate/gift_pink.fbx", "Assets/MusicVideo/Props/Estate/gift_mint.fbx"], "material": "Assets/MusicVideo/Props/Estate/estate.mat", "crowd": { "count": 6, "shape": "line", "spacing": 2.6, "face": 0, "scaleVar": 0.25, "modelScale": 1.5, "seed": 5 } },
+    "gift_lid": { "model": "prim:cube", "scale": [1.86, 0.14, 1.86], "color": "#f0b8c8" },
+    "gift_hero": { "model": "Assets/MusicVideo/Props/Estate/gift_pink.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 1.6 },
+    // balloons
+    "balloons": { "model": "Assets/MusicVideo/Props/Estate/balloon_pink.fbx", "models": ["Assets/MusicVideo/Props/Estate/balloon_pink.fbx", "Assets/MusicVideo/Props/Estate/balloon_mint.fbx", "Assets/MusicVideo/Props/Estate/balloon_blue.fbx", "Assets/MusicVideo/Props/Estate/balloon_gold.fbx", "Assets/MusicVideo/Props/Estate/balloon_lilac.fbx", "Assets/MusicVideo/Props/Estate/balloon_rose.fbx"], "material": "Assets/MusicVideo/Props/Estate/estate.mat", "crowd": { "count": 40, "shape": "scatter", "radius": 9, "yRange": [1, 6], "scaleVar": 0.25, "modelScale": 1.8, "seed": 7 } },
+    "balloon_big": { "model": "Assets/MusicVideo/Props/Estate/balloon_rose.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 5 },
+    // table things
+    "offer_crate": { "model": "Assets/MusicVideo/Props/Estate/crate.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "boxUV": 1.6, "texture": "Assets/MusicVideo/Props/Estate/tex/crate_timber.png", "color": "#ffffff", "smooth": 0.18, "scale": [0.95, 1.55, 0.95] },
+    "tray": { "model": "Assets/MusicVideo/Props/Estate/tray_silver.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 1.4 },
+    "cloche": { "model": "Assets/MusicVideo/Props/Estate/cloche.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 1.4 },
+    "tray_blade": { "model": "Assets/MusicVideo/Props/Estate/blade.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 1.4 },
+    "fork": { "model": "prim:cube", "scale": [0.022, 0.008, 0.2], "color": "#f4d36e", "smooth": 0.6, "from": "48:1", "until": "49:1" },
+    "chart_a": { "model": "prim:quad", "scale": [1.9, 1.46, 1], "texture": "Assets/MusicVideo/Props/Estate/tex/chart_a.png", "smooth": 0.3 },
+    "chart_b": { "model": "prim:quad", "scale": [3.2, 2.46, 1], "texture": "Assets/MusicVideo/Props/Estate/tex/chart_b.png", "smooth": 0.3 },
+    "fork_t1": { "model": "prim:cube", "scale": [0.005, 0.007, 0.07], "color": "#f4d36e", "smooth": 0.6, "parent": "fork", "pos": [-0.009, 0, -0.13], "from": "48:1", "until": "49:1" },
+    "fork_t2": { "model": "prim:cube", "scale": [0.005, 0.007, 0.07], "color": "#f4d36e", "smooth": 0.6, "parent": "fork", "pos": [0, 0, -0.13], "from": "48:1", "until": "49:1" },
+    "fork_t3": { "model": "prim:cube", "scale": [0.005, 0.007, 0.07], "color": "#f4d36e", "smooth": 0.6, "parent": "fork", "pos": [0.009, 0, -0.13], "from": "48:1", "until": "49:1" },
+    "fork_mat": { "model": "prim:cube", "pos": [520.2, 0.762, 59.05], "scale": [0.6, 0.002, 0.5], "color": "#fbf4e6", "from": "48:1", "until": "49:1" },
+    "chart_cover_a": { "model": "prim:cube", "scale": [2.05, 1.6, 0.03], "color": "#c8506e" },
+    "chart_cover_b": { "model": "prim:cube", "scale": [3.4, 2.65, 0.03], "color": "#c8506e" },
+    "wing_tip": { "model": "none", "pos": [520.75, 0.79, 59.05], "from": "48:1", "until": "49:1" },
+    "wing_f1": { "model": "prim:sphere", "scale": [0.24, 0.012, 0.04], "color": "#fbf7ee", "parent": "wing_tip", "pos": [0, 0, -0.05], "rot": [0, -14, 0], "from": "48:1", "until": "49:1" },
+    "wing_f2": { "model": "prim:sphere", "scale": [0.24, 0.012, 0.04], "color": "#fbf7ee", "parent": "wing_tip", "pos": [0, 0.006, 0.00], "rot": [0, 0, 0], "from": "48:1", "until": "49:1" },
+    "wing_f3": { "model": "prim:sphere", "scale": [0.24, 0.012, 0.04], "color": "#fbf7ee", "parent": "wing_tip", "pos": [0, 0.012, 0.05], "rot": [0, 14, 0], "from": "48:1", "until": "49:1" },
+    "frame_lawn": { "model": "Assets/MusicVideo/Props/Estate/frame_gold.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    "flute": { "model": "Assets/MusicVideo/Props/Estate/flute_grass.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 3 },
+    "bed": { "model": "Assets/MusicVideo/Props/Estate/bed_giant.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "shadows": true },
+    "bed_quilt": { "model": "none" },
+    "bed_pillow": { "model": "Assets/MusicVideo/Props/Estate/pillow_big.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    "vase": { "model": "prim:quad", "scale": [0.8, 1.4, 1], "texture": "Assets/MusicVideo/Props/Estate/tex/vase.png", "smooth": 0.4 },
+    // the freestanding doors, grey until the door is built
+    "door_1": { "model": "Assets/MusicVideo/Props/Estate/door_leaf_cream.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    "door_2": { "model": "Assets/MusicVideo/Props/Estate/door_leaf_pink.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    "door_3": { "model": "Assets/MusicVideo/Props/Estate/door_leaf_mint.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    // the ribbon, wrapped round the house only at the end
+    "wrap_band": { "model": "Assets/MusicVideo/Props/Estate/wrap_band.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    "wrap_cross": { "model": "Assets/MusicVideo/Props/Estate/wrap_cross.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    "wrap_bow": { "model": "Assets/MusicVideo/Props/Estate/wrap_bow.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat" },
+    // the sofa end
+    "remote_hand": { "model": "remote", "parent": "person.leftHand", "pos": [-0.005, 0.075, -0.028], "rot": [35, 90, -90] },
+    "tv_picture": { "model": "prim:cube", "scale": [0.74, 0.555, 0.01], "texture": "Assets/Videos/greener/Props/tv_estate.png", "color": "#2a2a2a", "unlit": 3.0 },
+    "pot_grass": { "model": "Assets/MusicVideo/Props/Estate/pot_bow.fbx", "material": "Assets/MusicVideo/Props/Estate/estate.mat", "scale": 1.3 },
+  },
+  "cues": [
+    { "at": 0, "do": "hide", "on": ["cup_mug", "blade_hand", "blade_free", "remote_hand", "door_1", "door_2", "door_3", "flute", "bed", "bed_quilt", "bed_pillow"], "each": 0 }
+  ]
+}

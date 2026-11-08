@@ -1,0 +1,73 @@
+{
+ "id": "dv_cu_4",
+ "f0": 2432,
+ "f1": 2510,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 81.067,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 81.3,
+   "why": "one patch jumps (cell 77.7, x2.1)",
+   "file": "spike-02439.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 82.8,
+   "why": "one patch jumps (cell 175, x1.8)",
+   "file": "spike-02484.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 83.3,
+   "why": "one patch jumps (cell 130.2, x1.5)",
+   "file": "spike-02499.jpg"
+  }
+ ],
+ "hash": "bfff588fedd8d073",
+ "summary": "The shot has a visible ceiling render flicker in the low-angle frames, plus a stiff, tiny subject in a framing that doesn't match the close-up idea. The cut itself and the arm swing are fine.",
+ "faults": [
+  {
+   "t": 82.83,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling, a large part of the frame, flickers between tiles. The pink/gold trim and the white sawtooth-edged panel swap with the dark brown ceiling (82.79 to 83.03). The panel edges are jagged and shift position every frame.",
+   "fix": "Fix the ceiling mesh, z-fighting or overlapping ceiling layers, or hide or cull the ceiling geometry for this camera."
+  },
+  {
+   "t": 83.36,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling flickers again. Jagged white and gold-striped fragments appear and vanish across the brown ceiling at 83.29, 83.36, 83.39 and 83.49, then go dark at 83.53.",
+   "fix": "Same ceiling fix. Remove the overlapping ceiling planes or the coplanar surfaces."
+  },
+  {
+   "t": 82.9,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The shot idea is a close-up down the lens from a table top, but the frames show a distant low-angle full-body view. The figure is tiny and the ceiling takes up much of the frame, so the 'he means this' intent is lost.",
+   "fix": "Move the camera closer and frame him from chest up, with the ceiling out of shot."
+  },
+  {
+   "t": 83.43,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "His arms stay mirrored and symmetrical, both hands near the hips or chest, with a stiff stance. The line of action is weak and the hands read as twinned.",
+   "fix": "Offset the arms and give one hand a clear gesture, with a hip shift."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7765,
+  "out": 703
+ },
+ "cost": 0.0226
+}

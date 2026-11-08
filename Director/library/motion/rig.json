@@ -1,0 +1,470 @@
+{
+ "about": "His skeleton in BVH space (Y up, faces +Z, left +X, metres), from Assets/MusicVideo/Person/Person.fbx by motion_rig.py. Rest is his T-pose. offset is from the parent head; the root offset is the hips rest position. Clips made from it carry the mixamo names.",
+ "source": "Assets/MusicVideo/Person/Person.fbx",
+ "height": 1.75,
+ "mass": 74.8,
+ "joints": [
+  {
+   "name": "Hips",
+   "unity": "Hips",
+   "mixamo": "Hips",
+   "parent": null,
+   "mass": 11.0,
+   "head": [
+    0.0,
+    0.95704,
+    0.02109
+   ],
+   "tail": [
+    -3e-05,
+    1.08488,
+    -0.00496
+   ],
+   "offset": [
+    0.0,
+    0.95704,
+    0.02109
+   ]
+  },
+  {
+   "name": "Spine",
+   "unity": "Spine",
+   "mixamo": "Spine",
+   "parent": "Hips",
+   "mass": 9.0,
+   "head": [
+    -3e-05,
+    1.08488,
+    -0.00496
+   ],
+   "tail": [
+    -3e-05,
+    1.21014,
+    -0.01241
+   ],
+   "offset": [
+    -3e-05,
+    0.12784,
+    -0.02605
+   ]
+  },
+  {
+   "name": "Chest",
+   "unity": "Chest",
+   "mixamo": "Spine1",
+   "parent": "Spine",
+   "mass": 14.0,
+   "head": [
+    -3e-05,
+    1.21014,
+    -0.01241
+   ],
+   "tail": [
+    -3e-05,
+    1.51436,
+    -0.0305
+   ],
+   "offset": [
+    0.0,
+    0.12526,
+    -0.00745
+   ]
+  },
+  {
+   "name": "Neck",
+   "unity": "Neck",
+   "mixamo": "Neck",
+   "parent": "Chest",
+   "mass": 1.0,
+   "head": [
+    -3e-05,
+    1.51436,
+    -0.0305
+   ],
+   "tail": [
+    -3e-05,
+    1.55623,
+    -0.0203
+   ],
+   "offset": [
+    0.0,
+    0.30422,
+    -0.01809
+   ]
+  },
+  {
+   "name": "Head",
+   "unity": "Head",
+   "mixamo": "Head",
+   "parent": "Neck",
+   "mass": 5.0,
+   "head": [
+    -3e-05,
+    1.55623,
+    -0.0203
+   ],
+   "tail": [
+    -3e-05,
+    1.75,
+    -0.0203
+   ],
+   "offset": [
+    0.0,
+    0.04187,
+    0.0102
+   ]
+  },
+  {
+   "name": "LeftShoulder",
+   "unity": "LeftShoulder",
+   "mixamo": "LeftShoulder",
+   "parent": "Chest",
+   "mass": 0.5,
+   "head": [
+    0.07456,
+    1.48569,
+    -0.03049
+   ],
+   "tail": [
+    0.2234,
+    1.42878,
+    -0.03047
+   ],
+   "offset": [
+    0.07459,
+    0.27555,
+    -0.01808
+   ]
+  },
+  {
+   "name": "LeftUpperArm",
+   "unity": "LeftUpperArm",
+   "mixamo": "LeftArm",
+   "parent": "LeftShoulder",
+   "mass": 2.2,
+   "head": [
+    0.2234,
+    1.42878,
+    -0.03047
+   ],
+   "tail": [
+    0.46026,
+    1.41449,
+    -0.04243
+   ],
+   "offset": [
+    0.14884,
+    -0.05691,
+    2e-05
+   ]
+  },
+  {
+   "name": "LeftLowerArm",
+   "unity": "LeftLowerArm",
+   "mixamo": "LeftForeArm",
+   "parent": "LeftUpperArm",
+   "mass": 1.4,
+   "head": [
+    0.46026,
+    1.41449,
+    -0.04243
+   ],
+   "tail": [
+    0.69424,
+    1.42232,
+    -0.03351
+   ],
+   "offset": [
+    0.23686,
+    -0.01429,
+    -0.01196
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "unity": "LeftHand",
+   "mixamo": "LeftHand",
+   "parent": "LeftLowerArm",
+   "mass": 0.5,
+   "head": [
+    0.69424,
+    1.42232,
+    -0.03351
+   ],
+   "tail": [
+    0.85977,
+    1.40329,
+    -0.00922
+   ],
+   "offset": [
+    0.23398,
+    0.00783,
+    0.00892
+   ]
+  },
+  {
+   "name": "RightShoulder",
+   "unity": "RightShoulder",
+   "mixamo": "RightShoulder",
+   "parent": "Chest",
+   "mass": 0.5,
+   "head": [
+    -0.07462,
+    1.48569,
+    -0.03051
+   ],
+   "tail": [
+    -0.22346,
+    1.42878,
+    -0.03053
+   ],
+   "offset": [
+    -0.07459,
+    0.27555,
+    -0.0181
+   ]
+  },
+  {
+   "name": "RightUpperArm",
+   "unity": "RightUpperArm",
+   "mixamo": "RightArm",
+   "parent": "RightShoulder",
+   "mass": 2.2,
+   "head": [
+    -0.22346,
+    1.42878,
+    -0.03053
+   ],
+   "tail": [
+    -0.46032,
+    1.41449,
+    -0.04225
+   ],
+   "offset": [
+    -0.14884,
+    -0.05691,
+    -2e-05
+   ]
+  },
+  {
+   "name": "RightLowerArm",
+   "unity": "RightLowerArm",
+   "mixamo": "RightForeArm",
+   "parent": "RightUpperArm",
+   "mass": 1.4,
+   "head": [
+    -0.46032,
+    1.41449,
+    -0.04225
+   ],
+   "tail": [
+    -0.6943,
+    1.42232,
+    -0.03409
+   ],
+   "offset": [
+    -0.23686,
+    -0.01429,
+    -0.01172
+   ]
+  },
+  {
+   "name": "RightHand",
+   "unity": "RightHand",
+   "mixamo": "RightHand",
+   "parent": "RightLowerArm",
+   "mass": 0.5,
+   "head": [
+    -0.6943,
+    1.42232,
+    -0.03409
+   ],
+   "tail": [
+    -0.86269,
+    1.40204,
+    -0.00844
+   ],
+   "offset": [
+    -0.23398,
+    0.00783,
+    0.00816
+   ]
+  },
+  {
+   "name": "LeftUpperLeg",
+   "unity": "LeftUpperLeg",
+   "mixamo": "LeftUpLeg",
+   "parent": "Hips",
+   "mass": 8.0,
+   "head": [
+    0.08927,
+    0.89828,
+    0.02191
+   ],
+   "tail": [
+    0.12713,
+    0.49074,
+    -0.01212
+   ],
+   "offset": [
+    0.08927,
+    -0.05876,
+    0.00082
+   ]
+  },
+  {
+   "name": "LeftLowerLeg",
+   "unity": "LeftLowerLeg",
+   "mixamo": "LeftLeg",
+   "parent": "LeftUpperLeg",
+   "mass": 3.5,
+   "head": [
+    0.12713,
+    0.49074,
+    -0.01212
+   ],
+   "tail": [
+    0.14846,
+    0.12472,
+    -0.03776
+   ],
+   "offset": [
+    0.03786,
+    -0.40754,
+    -0.03403
+   ]
+  },
+  {
+   "name": "LeftFoot",
+   "unity": "LeftFoot",
+   "mixamo": "LeftFoot",
+   "parent": "LeftLowerLeg",
+   "mass": 1.1,
+   "head": [
+    0.14846,
+    0.12472,
+    -0.03776
+   ],
+   "tail": [
+    0.16786,
+    0.00818,
+    0.1238
+   ],
+   "offset": [
+    0.02133,
+    -0.36602,
+    -0.02564
+   ]
+  },
+  {
+   "name": "LeftToes",
+   "unity": "LeftToes",
+   "mixamo": "LeftToeBase",
+   "parent": "LeftFoot",
+   "mass": 0.2,
+   "head": [
+    0.16786,
+    0.00818,
+    0.1238
+   ],
+   "tail": [
+    0.20167,
+    0.00818,
+    0.32107
+   ],
+   "offset": [
+    0.0194,
+    -0.11654,
+    0.16156
+   ]
+  },
+  {
+   "name": "RightUpperLeg",
+   "unity": "RightUpperLeg",
+   "mixamo": "RightUpLeg",
+   "parent": "Hips",
+   "mass": 8.0,
+   "head": [
+    -0.08927,
+    0.89828,
+    0.02229
+   ],
+   "tail": [
+    -0.12713,
+    0.49074,
+    -0.01297
+   ],
+   "offset": [
+    -0.08927,
+    -0.05876,
+    0.0012
+   ]
+  },
+  {
+   "name": "RightLowerLeg",
+   "unity": "RightLowerLeg",
+   "mixamo": "RightLeg",
+   "parent": "RightUpperLeg",
+   "mass": 3.5,
+   "head": [
+    -0.12713,
+    0.49074,
+    -0.01297
+   ],
+   "tail": [
+    -0.14852,
+    0.12472,
+    -0.0382
+   ],
+   "offset": [
+    -0.03786,
+    -0.40754,
+    -0.03526
+   ]
+  },
+  {
+   "name": "RightFoot",
+   "unity": "RightFoot",
+   "mixamo": "RightFoot",
+   "parent": "RightLowerLeg",
+   "mass": 1.1,
+   "head": [
+    -0.14852,
+    0.12472,
+    -0.0382
+   ],
+   "tail": [
+    -0.16792,
+    0.00817,
+    0.12075
+   ],
+   "offset": [
+    -0.02139,
+    -0.36602,
+    -0.02523
+   ]
+  },
+  {
+   "name": "RightToes",
+   "unity": "RightToes",
+   "mixamo": "RightToeBase",
+   "parent": "RightFoot",
+   "mass": 0.2,
+   "head": [
+    -0.16792,
+    0.00817,
+    0.12075
+   ],
+   "tail": [
+    -0.20138,
+    0.00817,
+    0.31595
+   ],
+   "offset": [
+    -0.0194,
+    -0.11655,
+    0.15895
+   ]
+  }
+ ]
+}

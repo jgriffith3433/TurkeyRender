@@ -1,0 +1,22 @@
+{
+ "clip": "mx_bow_formal",
+ "seconds": 2.833,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.094 m, worst step 0.004 m at 0.70s",
+  "right foot on floor moved 0.080 m, worst step 0.003 m at 0.67s"
+ ],
+ "hipsTop": 0.916029036,
+ "hipsLow": 0.9133146,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 5
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_bow_formal_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_bow_formal_three.mp4"
+ ]
+}

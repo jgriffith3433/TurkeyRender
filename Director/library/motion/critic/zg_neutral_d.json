@@ -1,0 +1,124 @@
+{
+ "name": "zg_neutral_d",
+ "fps": 30,
+ "frames": 361,
+ "seconds": 12,
+ "zerog": true,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 0,
+  "flatness": null,
+  "abruptFrac": null,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 12,
+  "fastRunMedianS": null,
+  "dynRange": 1.32,
+  "handPeak": null,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.04,
+  "lagMedianFrames": 6,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 3.02,
+  "plantedFrac": 0.84,
+  "zgSpeedChanges": 0,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": null,
+  "deadJoints": 5,
+  "deadJointNames": [
+   "Spine",
+   "Neck",
+   "Head",
+   "LeftShoulder",
+   "RightShoulder"
+  ],
+  "readability": 0.74,
+  "twinnedFrac": 0.5,
+  "curlMedian": 25.12,
+  "spreadMedian": 24.06,
+  "fannedFrac": 0,
+  "bowMedian": 14.75,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 3.77,
+  "armOmegaP95": 12.97,
+  "legOmegaP95": 12.82,
+  "spineOmegaP50": 9.26,
+  "spineOmegaP95": 15.28,
+  "headOmegaP50": 0,
+  "headOmegaP95": 0,
+  "armAccP95": 316.61,
+  "spineAccP95": 280.42,
+  "handSpeedP50": 0.02,
+  "handSpeedP95": 0.05,
+  "spineToArm": 2.45,
+  "energyCV": 0.2,
+  "moveRate": 0
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 12 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, 0 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 12 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 9.3,
+   "note": "16 key poses, readability 0.74 (best of front, side, three-quarter), 50% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 25 deg, spread 24 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [],
+ "worst": [],
+ "total": 9.9,
+ "verdict": "reads as human (9.9/10)"
+}

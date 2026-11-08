@@ -1,0 +1,31 @@
+{
+ "id": "c_eyes",
+ "f0": 383,
+ "f1": 458,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 12.767,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "cd0d8e6bef9f18e8",
+ "summary": "The strip has no big pops or render faults. The head moves continuously, but from 12.89 on his eyes drop and stay down, which doesn't fit the \"eyes follow her, wary\" idea.",
+ "faults": [
+  {
+   "t": 12.89,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "From 12.89 to 13.00 his head dips and his eyes look down and away at the floor, and the expression doesn't change. This reads as downcast, not wary tracking of her, and the eyes aren't leading the head.",
+   "fix": "Raise the eye line toward her, off-screen, with eyes leading the head. Keep the head level, and save the slow blink for after the settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 881
+ },
+ "cost": 0.0159
+}

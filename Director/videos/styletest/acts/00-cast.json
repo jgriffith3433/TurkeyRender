@@ -1,0 +1,9 @@
+{
+  // Who can be cast. Where they stand and whether they show comes from the cards.
+  "actors": {
+    "person": { "model": "person", "material": "Assets/MusicVideo/Person/Person.mat", "material2": "Assets/MusicVideo/Person/Head.mat" }
+  },
+  "cues": [
+    { "at": 0, "do": "anim", "on": "person", "clip": "IdleBreathe", "blend": 0 }
+  ]
+}

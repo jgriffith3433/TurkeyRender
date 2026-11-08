@@ -1,0 +1,74 @@
+# The proofs of the real-scale space set. Each card puts the near world somewhere in the far one with a focus, then shoots it.
+- id: p_speck
+  idea: he is a speck against Saturn's rings
+  feel: tiny
+  tags: [offmark]
+  cast: {person: {at: arr_him, clip: gm_zg_idle, blend: 0}}
+  camera: {preset: spot, from: arr_cam_speck, on: arr_him, lens: 50}
+  shot: {pos: [25, 26, 8870], look: null, rot: [-1.7, -10.9, 0], fov: 32, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: arrival_rings, for: 0}
+
+- id: p_jupiter_cu
+  idea: Jupiter fills everything behind his face
+  feel: enormous
+  tags: [offmark]
+  cast: {person: {at: low_him, clip: gm_zg_idle, blend: 0}}
+  camera: {preset: spot, from: catch_cam, on: low_him, lens: 85}
+  shot: {pos: [0.2, 1.62, 8998.3], look: null, rot: [2, -6, 0], fov: 17, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: jupiter_bg, for: 0}
+
+- id: p_wall
+  idea: he is metres from Jupiter's cloud wall
+  feel: the wall of the world
+  tags: [offmark]
+  cast: {person: {at: catch_him, clip: gm_zg_idle, blend: 0}}
+  camera: {preset: spot, from: catch_cam, on: catch_him, lens: 28}
+  shot: {pos: [-2.3, 1.1, 8995.6], look: null, rot: [-4, 56, 0], fov: 50, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: jupiter_catch, for: 0}
+
+- id: p_earth_night
+  idea: Earth's night side, the city lights
+  feel: people live there
+  tags: [offmark]
+  cast: {}
+  camera: {preset: spot, from: catch_cam, on: ahead, lens: 35}
+  shot: {pos: [0, 0, 9000], look: null, rot: [-40, 0, 0], fov: 38, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: earth_insert, for: 0}
+
+- id: p_crater
+  idea: a crater the size of a city blooms on the small moon
+  feel: oops
+  tags: [offmark]
+  cast: {}
+  camera: {preset: spot, from: catch_cam, on: ahead, lens: 40}
+  shot: {pos: [0, 0, 9000], look: null, rot: [0, 0, 0], fov: 34, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: crater_wide, for: 0}
+    - {at: 0.5s, do: crater, on: space_epic_crater, for: 5.4s}
+
+- id: p_hoop
+  idea: the outer ring comes off Saturn like a hoop
+  feel: the impossible, casually
+  tags: [offmark]
+  cast: {}
+  camera: {preset: spot, from: catch_cam, on: ahead, lens: 40}
+  shot: {pos: [0, 0, 9000], look: null, rot: [0, 0, 0], fov: 27, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: saturn_wide, for: 0}
+    - {at: 0.8s, do: ring_hoop, on: space_epic_hoop, stage: lift, lift: 60000, tilt: 18, spin: 25, for: 4.5s, ease: inout}
+
+
+- id: p_atlas_night
+  idea: the double holds the Earth overhead, its night side to him, the terminator and the city lights in frame
+  feel: people live there
+  tags: [offmark]
+  cast: {other: {at: atlas_dbl, clip: gm_zg_idle, blend: 0}}
+  camera: {preset: spot, from: catch_cam, on: atlas_dbl, lens: 24}
+  shot: {pos: [3, 0.6, 8994], look: null, rot: [-28, -28, 0], fov: 62, deadzone: false}
+  raw:
+    - {at: 0, do: focus, on: space_epic_space, name: atlas, rot: [0, 40, 5], for: 0}
+    - {at: 0, do: planet_hold, on: space_epic_earth, offset: [0, 6671, 0], face: [48, 12, 0], for: 0}

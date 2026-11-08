@@ -1,0 +1,22 @@
+{
+ "id": "b_black",
+ "f0": 5949,
+ "f1": 5986,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 198.3,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "56b1c1d11c45714b",
+ "summary": "All eight tiles are the same flat dark frame with no change, which fits the \"black\" held-breath shot, so I found no faults.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3536,
+  "out": 114
+ },
+ "cost": 0.0082
+}

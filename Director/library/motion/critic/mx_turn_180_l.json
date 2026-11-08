@@ -1,0 +1,204 @@
+{
+ "name": "mx_turn_180_l",
+ "fps": 30,
+ "frames": 50,
+ "seconds": 1.63,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.39,
+  "straightFrac": 0,
+  "moves": 8,
+  "flatness": 0.61,
+  "abruptFrac": 0.63,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 1.34,
+  "handPeak": 1.77,
+  "bigMoves": 6,
+  "anticipFrac": 0,
+  "overshootFrac": 0.33,
+  "coherence": -0.01,
+  "lagMedianFrames": 6,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 38.76,
+  "plantedFrac": 0.78,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.09,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.82,
+  "twinnedFrac": 0,
+  "curlMedian": 9.05,
+  "spreadMedian": 24.41,
+  "fannedFrac": 0.06,
+  "bowMedian": -0.34,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 34.48,
+  "armOmegaP95": 87,
+  "legOmegaP95": 169,
+  "spineOmegaP50": 11.44,
+  "spineOmegaP95": 26.82,
+  "headOmegaP50": 35.72,
+  "headOmegaP95": 62.7,
+  "armAccP95": 674.14,
+  "spineAccP95": 343.23,
+  "handSpeedP50": 0.86,
+  "handSpeedP95": 1.58,
+  "spineToArm": 0.33,
+  "energyCV": 0.18,
+  "moveRate": 1.84
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.39 over 6 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 5.7,
+   "note": "speed shape 0.61 (bell 0.6, constant 1.0), 63% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": 5,
+   "note": "6 big moves: 0 with anticipation, 2 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 10,
+   "note": "parts' speed profiles agree -0.01 (1 = everything moves as one); typical lag between parts 6 frames"
+  },
+  "weight": {
+   "score": 7.5,
+   "note": "0 centre-of-mass jerks, planted feet slide 39 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 1.63 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "9% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "3 key poses, readability 0.82 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 9 deg, spread 24 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 79 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 1.63,
+   "f": 49,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.64,
+   "what": "LeftHand stops dead from 62% of its peak"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightFoot",
+   "sev": 0.62,
+   "what": "RightFoot travels 33 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "linear",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand moves at one speed for 0.27 s (flat 0.89): interpolation, not a move"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.5,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "Head starts at 68% of its peak speed in one frame"
+  },
+  {
+   "t": 1.43,
+   "f": 43,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.45,
+   "what": "LeftFoot starts at 91% of its peak speed in one frame"
+  },
+  {
+   "t": 1.63,
+   "f": 49,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.45,
+   "what": "LeftFoot stops dead from 95% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 79 cm with no anticipation and no overshoot or settle",
+   "also": [
+    "no-prep",
+    "linear",
+    "abrupt-start"
+   ]
+  },
+  {
+   "t": 1.63,
+   "f": 49,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.64,
+   "what": "LeftHand stops dead from 62% of its peak",
+   "also": [
+    "abrupt-start",
+    "abrupt-stop"
+   ]
+  }
+ ],
+ "total": 8.9,
+ "verdict": "reads as human (8.9/10)"
+}

@@ -1,0 +1,62 @@
+{
+ "name": "g_finger_lips",
+ "about": "One finger to the lips, from the first half of mx_blow_kiss (0.6-1.9 s): the hand comes to the mouth and stays; the kiss is cut off. The hand is shut to one finger.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.4s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_blow_kiss",
+  "mask": "rightArm",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.6,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  },
+  {
+   "at": 0.05,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.9,
+   "for": 0.2
+  },
+  {
+   "at": 0.05,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.05,
+   "for": 0.2
+  },
+  {
+   "at": "=for-0.3",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": 0.3
+  },
+  {
+   "at": "=for-0.3",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.3,
+   "for": 0.3
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

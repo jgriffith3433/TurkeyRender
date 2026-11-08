@@ -1,0 +1,6 @@
+about: Deep house, warped to the snare, the right hand on the hip from the catwalk clip. Starts half a beat early (7:4.5 for a bar-8 phrase) so the stop lands on the snare. Add a point accent with `aim` for the arm straight down the lens.
+kind: groove
+len: 4.5b
+cues:
+  - {at: 0b, do: anim, clip: mx_house_2, start: 7.9, speed: 1.33, warpTo: snare, maxRate: 1.35, blend: 0.16, for: $len}
+  - {at: 0b, do: layer, clip: mx_catwalk_seq03, mask: rightArm, start: 5.0, speed: 0.4, weight: 1, for: 4b, blend: 0.16}

@@ -1,0 +1,31 @@
+{
+ "id": "fence_two",
+ "f0": 1404,
+ "f1": 1429,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 46.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "bfb434a53d8f4456",
+ "summary": "The cut is clean and the fence panels drop progressively as intended, but his head is cropped by the top of the frame in every tile.",
+ "faults": [
+  {
+   "t": 46.93,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The seated character's head is cut off by the top edge in every tile, and by 46.93 to 47.03 only the neck and hair base show. The subject's head and face are lost during the shot's key beat.",
+   "fix": "Tilt the camera up or pull it back slightly so the head sits inside the frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3573,
+  "out": 772
+ },
+ "cost": 0.0149
+}

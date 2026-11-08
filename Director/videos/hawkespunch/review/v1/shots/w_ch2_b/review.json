@@ -1,0 +1,85 @@
+{
+ "id": "w_ch2_b",
+ "f0": 3930,
+ "f1": 4005,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 131,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 133.367,
+   "why": "one patch jumps (cell 73.5, x16)",
+   "file": "spike-04001.jpg"
+  }
+ ],
+ "hash": "b8dc16e148eba0ff",
+ "summary": "The Jupiter swing has several visible breaks: the rope pops in and points the wrong way, Jupiter jumps across the frame, and the figure is tiny, which works against the \"bigger\" feel.",
+ "faults": [
+  {
+   "t": 133.36,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "At 133.33 there is only a faint curved orbit line and no rope. At 133.36 a thick straight rope appears from his hand and Jupiter pops in at the top-left corner. The prop appears with no lead-in.",
+   "fix": "Have Jupiter enter from off-frame over several frames and keep the rope visible and attached from before this point."
+  },
+  {
+   "t": 133.41,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Jupiter is upper-left of Earth at 133.39 and upper-right at 133.43, a jump of about 400 px in one frame. It reads as a teleport rather than a swing, with no arc or motion blur in between.",
+   "fix": "Add in-between positions along the orbit, or blur or ease the swing so Jupiter travels a continuous arc."
+  },
+  {
+   "t": 133.43,
+   "sev": "A",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The rope points straight down off-frame while Jupiter is at the upper right, so it is not attached to Jupiter. It swings from right to down-right to straight down. By 133.46 it has vanished while Jupiter is still beside him. The hammer-throw reads as broken.",
+   "fix": "Constrain the rope end to Jupiter's position every frame, and keep it taut until the release."
+  },
+  {
+   "t": 133.46,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Jupiter has no visible mass in the swing. There is no anticipation or drag, and the figure on Earth does not move. Jupiter just slides past with no sense of effort or pull.",
+   "fix": "Add a lean and brace on the figure, and have Earth react slightly to the pull."
+  },
+  {
+   "t": 131.1,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The figure is tiny at the planet's edge and almost nothing moves across all eight frames. The rope is a hairline that runs off-frame attached to nothing. For a 'bigger' feel and a hauling idea, the subject and the action are unclear.",
+   "fix": "Push in on the figure or show Jupiter on the rope, and animate the rope and a haul pose from the first frame."
+  },
+  {
+   "t": 133.53,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "In the cut to the close-up from 133.49 to 133.56, the man hangs almost frozen. The hands are loose and the left fist is half closed on nothing, with no sign of gripping or throwing. The head and eyes stay in the same downward gaze with a stuck expression.",
+   "fix": "Give him a clear throw or release pose, with the hands gripping a rope and the eyes tracking the thrown planet."
+  },
+  {
+   "t": 133.49,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The left hand and forearm are cropped at the bottom-left edge of frame, and the pose is lopsided toward the corner.",
+   "fix": "Reframe a little wider or lower so both hands stay in shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4974,
+  "out": 1773
+ },
+ "cost": 0.0277
+}

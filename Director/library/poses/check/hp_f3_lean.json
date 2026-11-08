@@ -1,0 +1,159 @@
+{
+  "clip": "hp_f3_lean",
+  "length": 2.0,
+  "derived": {
+    "clip": "hp_f3_lean",
+    "file": "Assets/MusicVideo/Motion/Keyed/hp_f3_lean.anim",
+    "length": 2.0,
+    "loop": true,
+    "keys": 2,
+    "samples": 121,
+    "stepped": 0,
+    "additive": false,
+    "seed": "zg_neutral_b",
+    "humanScale": 1.0403,
+    "warnings": []
+  },
+  "contact": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_f3_lean.png",
+  "keys": [
+    {
+      "key": "fly",
+      "t": 0.0,
+      "interp": "ease",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 17.7,
+            "hipAbd": 6.7,
+            "knee": 27.3,
+            "anklePF": 30.9,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": -12.5,
+            "shAbd": 15.4,
+            "elbow": 21.3
+          },
+          "fingerCurl": 56.0
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 15.0,
+            "hipAbd": 6.6,
+            "knee": 35.0,
+            "anklePF": 31.0,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": -13.8,
+            "shAbd": 15.6,
+            "elbow": 21.0
+          },
+          "fingerCurl": 56.9
+        },
+        "neckFlex": -10.0,
+        "waistFlex": 11.7,
+        "torsoFromVertical": 34.5,
+        "headPitchWorld": -30.7
+      }
+    }
+  ],
+  "muscles": [
+    {
+      "name": "fly",
+      "t": 0.0,
+      "interp": "ease",
+      "hold": 0.0,
+      "step": 0,
+      "show": 0.0,
+      "muscles": {
+        "Neck Nod Down-Up": 0.15,
+        "Head Nod Down-Up": 0.1,
+        "Left Upper Leg Front-Back": 0.15,
+        "Left Upper Leg In-Out": 0.02,
+        "Left Lower Leg Stretch": 0.65,
+        "Left Foot Up-Down": 0.7,
+        "Right Upper Leg Front-Back": 0.2,
+        "Right Upper Leg In-Out": 0.02,
+        "Right Lower Leg Stretch": 0.55,
+        "Right Foot Up-Down": 0.7,
+        "Left Arm Down-Up": -0.5,
+        "Left Arm Front-Back": 0.3,
+        "Left Forearm Stretch": 0.8,
+        "Right Arm Down-Up": -0.5,
+        "Right Arm Front-Back": 0.3,
+        "Right Forearm Stretch": 0.8,
+        "Left Thumb 1 Stretched": 0.2,
+        "Left Thumb 2 Stretched": 0.2,
+        "Left Thumb 3 Stretched": 0.2,
+        "Left Index 1 Stretched": 0.2,
+        "Left Index 3 Stretched": 0.2,
+        "Left Middle 1 Stretched": 0.2,
+        "Left Middle 3 Stretched": 0.2,
+        "Left Ring 1 Stretched": 0.2,
+        "Left Ring 3 Stretched": 0.2,
+        "Left Little 1 Stretched": 0.2,
+        "Left Little 3 Stretched": 0.2,
+        "Right Thumb 1 Stretched": 0.2,
+        "Right Thumb 2 Stretched": 0.2,
+        "Right Thumb 3 Stretched": 0.2,
+        "Right Index 1 Stretched": 0.2,
+        "Right Index 3 Stretched": 0.2,
+        "Right Middle 1 Stretched": 0.2,
+        "Right Middle 3 Stretched": 0.2,
+        "Right Ring 1 Stretched": 0.2,
+        "Right Ring 3 Stretched": 0.2,
+        "Right Little 1 Stretched": 0.2,
+        "Right Little 3 Stretched": 0.2
+      }
+    },
+    {
+      "name": "fly",
+      "t": 2.0,
+      "interp": "ease",
+      "hold": 0.0,
+      "step": 0,
+      "show": 2.0,
+      "muscles": {
+        "Neck Nod Down-Up": 0.15,
+        "Head Nod Down-Up": 0.1,
+        "Left Upper Leg Front-Back": 0.15,
+        "Left Upper Leg In-Out": 0.02,
+        "Left Lower Leg Stretch": 0.65,
+        "Left Foot Up-Down": 0.7,
+        "Right Upper Leg Front-Back": 0.2,
+        "Right Upper Leg In-Out": 0.02,
+        "Right Lower Leg Stretch": 0.55,
+        "Right Foot Up-Down": 0.7,
+        "Left Arm Down-Up": -0.5,
+        "Left Arm Front-Back": 0.3,
+        "Left Forearm Stretch": 0.8,
+        "Right Arm Down-Up": -0.5,
+        "Right Arm Front-Back": 0.3,
+        "Right Forearm Stretch": 0.8,
+        "Left Thumb 1 Stretched": 0.2,
+        "Left Thumb 2 Stretched": 0.2,
+        "Left Thumb 3 Stretched": 0.2,
+        "Left Index 1 Stretched": 0.2,
+        "Left Index 3 Stretched": 0.2,
+        "Left Middle 1 Stretched": 0.2,
+        "Left Middle 3 Stretched": 0.2,
+        "Left Ring 1 Stretched": 0.2,
+        "Left Ring 3 Stretched": 0.2,
+        "Left Little 1 Stretched": 0.2,
+        "Left Little 3 Stretched": 0.2,
+        "Right Thumb 1 Stretched": 0.2,
+        "Right Thumb 2 Stretched": 0.2,
+        "Right Thumb 3 Stretched": 0.2,
+        "Right Index 1 Stretched": 0.2,
+        "Right Index 3 Stretched": 0.2,
+        "Right Middle 1 Stretched": 0.2,
+        "Right Middle 3 Stretched": 0.2,
+        "Right Ring 1 Stretched": 0.2,
+        "Right Ring 3 Stretched": 0.2,
+        "Right Little 1 Stretched": 0.2,
+        "Right Little 3 Stretched": 0.2
+      }
+    }
+  ]
+}

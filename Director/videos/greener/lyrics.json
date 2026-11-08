@@ -1,0 +1,1469 @@
+{
+ "source": "lyrics.txt timed by whisper on the vocal stem",
+ "lines": [
+  {
+   "section": "Intro",
+   "text": "Oh, isn't it funny?",
+   "words": [
+    {
+     "w": "Oh,",
+     "t": 8.06,
+     "end": 8.5
+    },
+    {
+     "w": "isn't",
+     "t": 9.32,
+     "end": 9.64
+    },
+    {
+     "w": "it",
+     "t": 9.64,
+     "end": 9.72
+    },
+    {
+     "w": "funny?",
+     "t": 9.72,
+     "end": 9.98
+    }
+   ],
+   "t": 8.06,
+   "end": 9.98
+  },
+  {
+   "section": "Verse 1",
+   "text": "I've got a little secret",
+   "words": [
+    {
+     "w": "I've",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "got",
+     "t": 11.52,
+     "end": 11.74
+    },
+    {
+     "w": "a",
+     "t": 11.74,
+     "end": 12.02
+    },
+    {
+     "w": "little",
+     "t": 12.02,
+     "end": 12.3
+    },
+    {
+     "w": "secret",
+     "t": 12.3,
+     "end": 13.02
+    }
+   ],
+   "t": 11.52,
+   "end": 13.02
+  },
+  {
+   "section": "Verse 1",
+   "text": "But it's nothing you should know",
+   "words": [
+    {
+     "w": "But",
+     "t": 13.02,
+     "end": 14.78
+    },
+    {
+     "w": "it's",
+     "t": 14.78,
+     "end": 15.0
+    },
+    {
+     "w": "nothing",
+     "t": 15.0,
+     "end": 15.36
+    },
+    {
+     "w": "you",
+     "t": 15.36,
+     "end": 15.66
+    },
+    {
+     "w": "should",
+     "t": 15.66,
+     "end": 15.92
+    },
+    {
+     "w": "know",
+     "t": 15.92,
+     "end": 16.48
+    }
+   ],
+   "t": 13.02,
+   "end": 16.48
+  },
+  {
+   "section": "Verse 1",
+   "text": "Everybody's got a weakness",
+   "words": [
+    {
+     "w": "Everybody's",
+     "t": 18.52,
+     "end": 18.86
+    },
+    {
+     "w": "got",
+     "t": 18.86,
+     "end": 19.1
+    },
+    {
+     "w": "a",
+     "t": 19.1,
+     "end": 19.3
+    },
+    {
+     "w": "weakness",
+     "t": 19.3,
+     "end": 19.86
+    }
+   ],
+   "t": 18.52,
+   "end": 19.86
+  },
+  {
+   "section": "Verse 1",
+   "text": "Mine just happens to be so",
+   "words": [
+    {
+     "w": "Mine",
+     "t": 20.74,
+     "end": 21.28
+    },
+    {
+     "w": "just",
+     "t": 21.28,
+     "end": 21.72
+    },
+    {
+     "w": "happens",
+     "t": 21.72,
+     "end": 22.46
+    },
+    {
+     "w": "to",
+     "t": 22.46,
+     "end": 22.9
+    },
+    {
+     "w": "be",
+     "t": 22.9,
+     "end": 23.22
+    },
+    {
+     "w": "so",
+     "t": 23.22,
+     "end": 23.86
+    }
+   ],
+   "t": 20.74,
+   "end": 23.86
+  },
+  {
+   "section": "Verse 1",
+   "text": "You can call me irresponsible",
+   "words": [
+    {
+     "w": "You",
+     "t": 24.52,
+     "end": 25.02
+    },
+    {
+     "w": "can",
+     "t": 25.02,
+     "end": 25.24
+    },
+    {
+     "w": "call",
+     "t": 25.24,
+     "end": 25.5
+    },
+    {
+     "w": "me",
+     "t": 25.5,
+     "end": 25.7
+    },
+    {
+     "w": "irresponsible",
+     "t": 25.7,
+     "end": 26.6
+    }
+   ],
+   "t": 24.52,
+   "end": 26.6
+  },
+  {
+   "section": "Verse 1",
+   "text": "You can call me what you like",
+   "words": [
+    {
+     "w": "You",
+     "t": 27.58,
+     "end": 28.48
+    },
+    {
+     "w": "can",
+     "t": 28.48,
+     "end": 28.68
+    },
+    {
+     "w": "call",
+     "t": 28.68,
+     "end": 28.96
+    },
+    {
+     "w": "me",
+     "t": 28.96,
+     "end": 29.14
+    },
+    {
+     "w": "what",
+     "t": 29.14,
+     "end": 29.34
+    },
+    {
+     "w": "you",
+     "t": 29.34,
+     "end": 29.56
+    },
+    {
+     "w": "like",
+     "t": 29.56,
+     "end": 29.88
+    }
+   ],
+   "t": 27.58,
+   "end": 29.88
+  },
+  {
+   "section": "Verse 1",
+   "text": "But I'm perfectly respectable",
+   "words": [
+    {
+     "w": "But",
+     "t": 29.88,
+     "end": 31.86
+    },
+    {
+     "w": "I'm",
+     "t": 31.86,
+     "end": 32.12
+    },
+    {
+     "w": "perfectly",
+     "t": 32.12,
+     "end": 32.6
+    },
+    {
+     "w": "respectable",
+     "t": 32.6,
+     "end": 33.5
+    }
+   ],
+   "t": 29.88,
+   "end": 33.5
+  },
+  {
+   "section": "Verse 1",
+   "text": "At least until tonight",
+   "words": [
+    {
+     "w": "At",
+     "t": 33.5,
+     "end": 34.38
+    },
+    {
+     "w": "least",
+     "t": 34.38,
+     "end": 34.86
+    },
+    {
+     "w": "until",
+     "t": 34.86,
+     "end": 35.66
+    },
+    {
+     "w": "tonight",
+     "t": 35.66,
+     "end": 36.72
+    }
+   ],
+   "t": 33.5,
+   "end": 36.72
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "It's not a big deal",
+   "words": [
+    {
+     "w": "It's",
+     "t": 36.72,
+     "end": 37.3
+    },
+    {
+     "w": "not",
+     "t": 37.3,
+     "end": 37.52
+    },
+    {
+     "w": "a",
+     "t": 37.52,
+     "end": 37.7
+    },
+    {
+     "w": "big",
+     "t": 37.7,
+     "end": 37.98
+    },
+    {
+     "w": "deal",
+     "t": 37.98,
+     "end": 38.58
+    }
+   ],
+   "t": 36.72,
+   "end": 38.58
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "It's not a big deal",
+   "words": [
+    {
+     "w": "It's",
+     "t": 38.62,
+     "end": 39.0
+    },
+    {
+     "w": "not",
+     "t": 39.0,
+     "end": 39.24
+    },
+    {
+     "w": "a",
+     "t": 39.24,
+     "end": 39.46
+    },
+    {
+     "w": "big",
+     "t": 39.46,
+     "end": 39.74
+    },
+    {
+     "w": "deal",
+     "t": 39.74,
+     "end": 40.26
+    }
+   ],
+   "t": 38.62,
+   "end": 40.26
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "That's what everybody says",
+   "words": [
+    {
+     "w": "That's",
+     "t": 40.38,
+     "end": 41.12
+    },
+    {
+     "w": "what",
+     "t": 41.12,
+     "end": 41.34
+    },
+    {
+     "w": "everybody",
+     "t": 41.34,
+     "end": 42.06
+    },
+    {
+     "w": "says",
+     "t": 42.06,
+     "end": 42.8
+    }
+   ],
+   "t": 40.38,
+   "end": 42.8
+  },
+  {
+   "section": "Pre-Chorus 1",
+   "text": "Until they change their mind",
+   "words": [
+    {
+     "w": "Until",
+     "t": 42.8,
+     "end": 43.38
+    },
+    {
+     "w": "they",
+     "t": 43.38,
+     "end": 44.04
+    },
+    {
+     "w": "change",
+     "t": 44.04,
+     "end": 44.58
+    },
+    {
+     "w": "their",
+     "t": 44.58,
+     "end": 44.94
+    },
+    {
+     "w": "mind",
+     "t": 44.94,
+     "end": 46.22
+    }
+   ],
+   "t": 42.8,
+   "end": 46.22
+  },
+  {
+   "section": "Chorus 1",
+   "text": "I'm your gateway drug, baby",
+   "words": [
+    {
+     "w": "I'm",
+     "t": 47.76,
+     "end": 48.28
+    },
+    {
+     "w": "your",
+     "t": 48.28,
+     "end": 48.44
+    },
+    {
+     "w": "gateway",
+     "t": 48.44,
+     "end": 48.88
+    },
+    {
+     "w": "drug,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "baby",
+     "t": 49.74,
+     "end": 50.46
+    }
+   ],
+   "t": 47.76,
+   "end": 50.46
+  },
+  {
+   "section": "Chorus 1",
+   "text": "A little taste of something new",
+   "words": [
+    {
+     "w": "A",
+     "t": 50.46,
+     "end": 51.46
+    },
+    {
+     "w": "little",
+     "t": 51.46,
+     "end": 51.74
+    },
+    {
+     "w": "taste",
+     "t": 51.74,
+     "end": 52.2
+    },
+    {
+     "w": "of",
+     "t": 52.2,
+     "end": 52.54
+    },
+    {
+     "w": "something",
+     "t": 52.54,
+     "end": 53.02
+    },
+    {
+     "w": "new",
+     "t": 53.02,
+     "end": 53.8
+    }
+   ],
+   "t": 50.46,
+   "end": 53.8
+  },
+  {
+   "section": "Chorus 1",
+   "text": "You say you're only passing through",
+   "words": [
+    {
+     "w": "You",
+     "t": 53.8,
+     "end": 54.76
+    },
+    {
+     "w": "say",
+     "t": 54.76,
+     "end": 55.06
+    },
+    {
+     "w": "you're",
+     "t": 55.06,
+     "end": 55.38
+    },
+    {
+     "w": "only",
+     "t": 55.38,
+     "end": 55.88
+    },
+    {
+     "w": "passing",
+     "t": 55.88,
+     "end": 56.48
+    },
+    {
+     "w": "through",
+     "t": 56.48,
+     "end": 57.34
+    }
+   ],
+   "t": 53.8,
+   "end": 57.34
+  },
+  {
+   "section": "Chorus 1",
+   "text": "But darling, look at you",
+   "words": [
+    {
+     "w": "But",
+     "t": 57.34,
+     "end": 58.34
+    },
+    {
+     "w": "darling,",
+     "t": 58.34,
+     "end": 59.52
+    },
+    {
+     "w": "look",
+     "t": 60.28,
+     "end": 60.7
+    },
+    {
+     "w": "at",
+     "t": 60.7,
+     "end": 61.02
+    },
+    {
+     "w": "you",
+     "t": 61.02,
+     "end": 61.46
+    }
+   ],
+   "t": 57.34,
+   "end": 61.46
+  },
+  {
+   "section": "Chorus 1",
+   "text": "I'm your gateway drug, baby",
+   "words": [
+    {
+     "w": "I'm",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "your",
+     "t": 61.78,
+     "end": 62.1
+    },
+    {
+     "w": "gateway",
+     "t": 62.1,
+     "end": 62.66
+    },
+    {
+     "w": "drug,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "baby",
+     "t": 63.46,
+     "end": 64.16
+    }
+   ],
+   "t": 61.78,
+   "end": 64.16
+  },
+  {
+   "section": "Chorus 1",
+   "text": "Don't pretend you didn't know",
+   "words": [
+    {
+     "w": "Don't",
+     "t": 64.9,
+     "end": 65.36
+    },
+    {
+     "w": "pretend",
+     "t": 65.36,
+     "end": 65.72
+    },
+    {
+     "w": "you",
+     "t": 65.72,
+     "end": 66.3
+    },
+    {
+     "w": "didn't",
+     "t": 66.3,
+     "end": 66.94
+    },
+    {
+     "w": "know",
+     "t": 66.94,
+     "end": 67.46
+    }
+   ],
+   "t": 64.9,
+   "end": 67.46
+  },
+  {
+   "section": "Chorus 1",
+   "text": "Funny how a little curiosity",
+   "words": [
+    {
+     "w": "Funny",
+     "t": 67.46,
+     "end": 68.5
+    },
+    {
+     "w": "how",
+     "t": 68.5,
+     "end": 68.86
+    },
+    {
+     "w": "a",
+     "t": 68.86,
+     "end": 69.04
+    },
+    {
+     "w": "little",
+     "t": 69.04,
+     "end": 69.26
+    },
+    {
+     "w": "curiosity",
+     "t": 69.26,
+     "end": 70.48
+    }
+   ],
+   "t": 67.46,
+   "end": 70.48
+  },
+  {
+   "section": "Chorus 1",
+   "text": "Can be so difficult to let go",
+   "words": [
+    {
+     "w": "Can",
+     "t": 70.48,
+     "end": 71.18
+    },
+    {
+     "w": "be",
+     "t": 71.18,
+     "end": 71.6
+    },
+    {
+     "w": "so",
+     "t": 71.6,
+     "end": 72.08
+    },
+    {
+     "w": "difficult",
+     "t": 72.08,
+     "end": 73.52
+    },
+    {
+     "w": "to",
+     "t": 74.68,
+     "end": 75.14
+    },
+    {
+     "w": "let",
+     "t": 75.14,
+     "end": 75.5
+    },
+    {
+     "w": "go",
+     "t": 75.5,
+     "end": 75.9
+    }
+   ],
+   "t": 70.48,
+   "end": 75.9
+  },
+  {
+   "section": "Verse 2",
+   "text": "I've been told to mind my manners",
+   "words": [
+    {
+     "w": "I've",
+     "t": 79.12,
+     "end": 79.58
+    },
+    {
+     "w": "been",
+     "t": 79.58,
+     "end": 79.82
+    },
+    {
+     "w": "told",
+     "t": 79.82,
+     "end": 80.24
+    },
+    {
+     "w": "to",
+     "t": 80.24,
+     "end": 80.58
+    },
+    {
+     "w": "mind",
+     "t": 80.58,
+     "end": 81.08
+    },
+    {
+     "w": "my",
+     "t": 81.08,
+     "end": 81.46
+    },
+    {
+     "w": "manners",
+     "t": 81.46,
+     "end": 82.26
+    }
+   ],
+   "t": 79.12,
+   "end": 82.26
+  },
+  {
+   "section": "Verse 2",
+   "text": "I've been told to get some sleep",
+   "words": [
+    {
+     "w": "I've",
+     "t": 82.26,
+     "end": 83.0
+    },
+    {
+     "w": "been",
+     "t": 83.0,
+     "end": 83.24
+    },
+    {
+     "w": "told",
+     "t": 83.24,
+     "end": 83.62
+    },
+    {
+     "w": "to",
+     "t": 83.62,
+     "end": 84.0
+    },
+    {
+     "w": "get",
+     "t": 84.0,
+     "end": 84.42
+    },
+    {
+     "w": "some",
+     "t": 84.42,
+     "end": 84.82
+    },
+    {
+     "w": "sleep",
+     "t": 84.82,
+     "end": 85.44
+    }
+   ],
+   "t": 82.26,
+   "end": 85.44
+  },
+  {
+   "section": "Verse 2",
+   "text": "But I've got a few bad habits",
+   "words": [
+    {
+     "w": "But",
+     "t": 85.44,
+     "end": 86.3
+    },
+    {
+     "w": "I've",
+     "t": 86.3,
+     "end": 86.76
+    },
+    {
+     "w": "got",
+     "t": 86.76,
+     "end": 87.08
+    },
+    {
+     "w": "a",
+     "t": 87.08,
+     "end": 87.46
+    },
+    {
+     "w": "few",
+     "t": 87.46,
+     "end": 87.84
+    },
+    {
+     "w": "bad",
+     "t": 87.84,
+     "end": 88.36
+    },
+    {
+     "w": "habits",
+     "t": 88.36,
+     "end": 89.08
+    }
+   ],
+   "t": 85.44,
+   "end": 89.08
+  },
+  {
+   "section": "Verse 2",
+   "text": "And they're awfully hard to keep",
+   "words": [
+    {
+     "w": "And",
+     "t": 89.08,
+     "end": 89.8
+    },
+    {
+     "w": "they're",
+     "t": 89.8,
+     "end": 90.44
+    },
+    {
+     "w": "awfully",
+     "t": 90.44,
+     "end": 90.82
+    },
+    {
+     "w": "hard",
+     "t": 90.82,
+     "end": 91.5
+    },
+    {
+     "w": "to",
+     "t": 91.5,
+     "end": 91.8
+    },
+    {
+     "w": "keep",
+     "t": 91.8,
+     "end": 92.38
+    }
+   ],
+   "t": 89.08,
+   "end": 92.38
+  },
+  {
+   "section": "Verse 2",
+   "text": "Everybody's got a theory",
+   "words": [
+    {
+     "w": "Everybody's",
+     "t": 93.34,
+     "end": 94.22
+    },
+    {
+     "w": "got",
+     "t": 94.22,
+     "end": 94.42
+    },
+    {
+     "w": "a",
+     "t": 94.42,
+     "end": 94.66
+    },
+    {
+     "w": "theory",
+     "t": 94.66,
+     "end": 95.04
+    }
+   ],
+   "t": 93.34,
+   "end": 95.04
+  },
+  {
+   "section": "Verse 2",
+   "text": "Everybody's got a plan",
+   "words": [
+    {
+     "w": "Everybody's",
+     "t": 95.04,
+     "end": 97.66
+    },
+    {
+     "w": "got",
+     "t": 97.66,
+     "end": 97.86
+    },
+    {
+     "w": "a",
+     "t": 97.86,
+     "end": 98.08
+    },
+    {
+     "w": "plan",
+     "t": 98.08,
+     "end": 98.62
+    }
+   ],
+   "t": 95.04,
+   "end": 98.62
+  },
+  {
+   "section": "Verse 2",
+   "text": "But nobody's quite as clever",
+   "words": [
+    {
+     "w": "But",
+     "t": 99.44,
+     "end": 99.92
+    },
+    {
+     "w": "nobody's",
+     "t": 99.92,
+     "end": 101.24
+    },
+    {
+     "w": "quite",
+     "t": 101.24,
+     "end": 101.58
+    },
+    {
+     "w": "as",
+     "t": 101.58,
+     "end": 101.96
+    },
+    {
+     "w": "clever",
+     "t": 101.96,
+     "end": 102.58
+    }
+   ],
+   "t": 99.44,
+   "end": 102.58
+  },
+  {
+   "section": "Verse 2",
+   "text": "As they think they really am",
+   "words": [
+    {
+     "w": "As",
+     "t": 102.58,
+     "end": 103.48
+    },
+    {
+     "w": "they",
+     "t": 103.48,
+     "end": 103.86
+    },
+    {
+     "w": "think",
+     "t": 103.86,
+     "end": 104.32
+    },
+    {
+     "w": "they",
+     "t": 104.32,
+     "end": 104.76
+    },
+    {
+     "w": "really",
+     "t": 104.76,
+     "end": 105.28
+    },
+    {
+     "w": "am",
+     "t": 105.28,
+     "end": 105.88
+    }
+   ],
+   "t": 102.58,
+   "end": 105.88
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "It's not a big deal",
+   "words": [
+    {
+     "w": "It's",
+     "t": 105.88,
+     "end": 106.18
+    },
+    {
+     "w": "not",
+     "t": 106.18,
+     "end": 106.44
+    },
+    {
+     "w": "a",
+     "t": 106.44,
+     "end": 106.64
+    },
+    {
+     "w": "big",
+     "t": 106.64,
+     "end": 107.28
+    },
+    {
+     "w": "deal",
+     "t": 107.28,
+     "end": 107.7
+    }
+   ],
+   "t": 105.88,
+   "end": 107.7
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "It's not a big deal",
+   "words": [
+    {
+     "w": "It's",
+     "t": 107.7,
+     "end": 107.88
+    },
+    {
+     "w": "not",
+     "t": 107.88,
+     "end": 108.12
+    },
+    {
+     "w": "a",
+     "t": 108.12,
+     "end": 108.34
+    },
+    {
+     "w": "big",
+     "t": 108.34,
+     "end": 108.94
+    },
+    {
+     "w": "deal",
+     "t": 108.94,
+     "end": 109.5
+    }
+   ],
+   "t": 107.7,
+   "end": 109.5
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "That's what everybody says",
+   "words": [
+    {
+     "w": "That's",
+     "t": 109.5,
+     "end": 109.86
+    },
+    {
+     "w": "what",
+     "t": 109.86,
+     "end": 110.04
+    },
+    {
+     "w": "everybody",
+     "t": 110.04,
+     "end": 110.5
+    },
+    {
+     "w": "says",
+     "t": 110.5,
+     "end": 111.04
+    }
+   ],
+   "t": 109.5,
+   "end": 111.04
+  },
+  {
+   "section": "Pre-Chorus 2",
+   "text": "Until they change their mind",
+   "words": [
+    {
+     "w": "Until",
+     "t": 111.04,
+     "end": 111.44
+    },
+    {
+     "w": "they",
+     "t": 111.44,
+     "end": 111.7
+    },
+    {
+     "w": "change",
+     "t": 111.7,
+     "end": 112.14
+    },
+    {
+     "w": "their",
+     "t": 112.14,
+     "end": 112.5
+    },
+    {
+     "w": "mind",
+     "t": 112.5,
+     "end": 114.42
+    }
+   ],
+   "t": 111.04,
+   "end": 114.42
+  },
+  {
+   "section": "Chorus 2",
+   "text": "I'm your gateway drug, baby",
+   "words": [
+    {
+     "w": "I'm",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "your",
+     "t": 114.94,
+     "end": 115.1
+    },
+    {
+     "w": "gateway",
+     "t": 115.1,
+     "end": 115.62
+    },
+    {
+     "w": "drug,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "baby",
+     "t": 116.42,
+     "end": 117.12
+    }
+   ],
+   "t": 114.94,
+   "end": 117.12
+  },
+  {
+   "section": "Chorus 2",
+   "text": "A little taste of something new",
+   "words": [
+    {
+     "w": "A",
+     "t": 117.12,
+     "end": 118.12
+    },
+    {
+     "w": "little",
+     "t": 118.12,
+     "end": 118.44
+    },
+    {
+     "w": "taste",
+     "t": 118.44,
+     "end": 118.86
+    },
+    {
+     "w": "of",
+     "t": 118.86,
+     "end": 119.22
+    },
+    {
+     "w": "something",
+     "t": 119.22,
+     "end": 119.7
+    },
+    {
+     "w": "new",
+     "t": 119.7,
+     "end": 120.54
+    }
+   ],
+   "t": 117.12,
+   "end": 120.54
+  },
+  {
+   "section": "Chorus 2",
+   "text": "You say you're only passing through",
+   "words": [
+    {
+     "w": "You",
+     "t": 120.54,
+     "end": 121.46
+    },
+    {
+     "w": "say",
+     "t": 121.46,
+     "end": 121.7
+    },
+    {
+     "w": "you're",
+     "t": 121.7,
+     "end": 121.98
+    },
+    {
+     "w": "only",
+     "t": 121.98,
+     "end": 122.36
+    },
+    {
+     "w": "passing",
+     "t": 122.36,
+     "end": 123.12
+    },
+    {
+     "w": "through",
+     "t": 123.12,
+     "end": 123.94
+    }
+   ],
+   "t": 120.54,
+   "end": 123.94
+  },
+  {
+   "section": "Chorus 2",
+   "text": "But darling, look at you",
+   "words": [
+    {
+     "w": "But",
+     "t": 123.94,
+     "end": 125.0
+    },
+    {
+     "w": "darling,",
+     "t": 125.0,
+     "end": 125.96
+    },
+    {
+     "w": "look",
+     "t": 126.84,
+     "end": 127.34
+    },
+    {
+     "w": "at",
+     "t": 127.34,
+     "end": 127.62
+    },
+    {
+     "w": "you",
+     "t": 127.62,
+     "end": 128.04
+    }
+   ],
+   "t": 123.94,
+   "end": 128.04
+  },
+  {
+   "section": "Chorus 2",
+   "text": "I'm your gateway drug, baby",
+   "words": [
+    {
+     "w": "I'm",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "your",
+     "t": 128.54,
+     "end": 128.74
+    },
+    {
+     "w": "gateway",
+     "t": 128.74,
+     "end": 129.22
+    },
+    {
+     "w": "drug,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "baby",
+     "t": 130.1,
+     "end": 130.88
+    }
+   ],
+   "t": 128.54,
+   "end": 130.88
+  },
+  {
+   "section": "Chorus 2",
+   "text": "Don't pretend you didn't know",
+   "words": [
+    {
+     "w": "Don't",
+     "t": 131.36,
+     "end": 131.88
+    },
+    {
+     "w": "pretend",
+     "t": 131.88,
+     "end": 132.32
+    },
+    {
+     "w": "you",
+     "t": 132.32,
+     "end": 132.88
+    },
+    {
+     "w": "didn't",
+     "t": 132.88,
+     "end": 133.52
+    },
+    {
+     "w": "know",
+     "t": 133.52,
+     "end": 134.04
+    }
+   ],
+   "t": 131.36,
+   "end": 134.04
+  },
+  {
+   "section": "Chorus 2",
+   "text": "Funny how a little curiosity",
+   "words": [
+    {
+     "w": "Funny",
+     "t": 134.04,
+     "end": 135.02
+    },
+    {
+     "w": "how",
+     "t": 135.02,
+     "end": 135.4
+    },
+    {
+     "w": "a",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "little",
+     "t": 135.4,
+     "end": 135.74
+    },
+    {
+     "w": "curiosity",
+     "t": 135.74,
+     "end": 137.04
+    }
+   ],
+   "t": 134.04,
+   "end": 137.04
+  },
+  {
+   "section": "Chorus 2",
+   "text": "Can be so difficult to let go",
+   "words": [
+    {
+     "w": "Can",
+     "t": 137.04,
+     "end": 137.72
+    },
+    {
+     "w": "be",
+     "t": 137.72,
+     "end": 138.2
+    },
+    {
+     "w": "so",
+     "t": 138.2,
+     "end": 138.78
+    },
+    {
+     "w": "difficult",
+     "t": 138.78,
+     "end": 139.56
+    },
+    {
+     "w": "to",
+     "t": 141.4,
+     "end": 141.7
+    },
+    {
+     "w": "let",
+     "t": 141.7,
+     "end": 142.1
+    },
+    {
+     "w": "go",
+     "t": 142.1,
+     "end": 142.9
+    }
+   ],
+   "t": 137.04,
+   "end": 142.9
+  },
+  {
+   "section": "Outro",
+   "text": "Oh, darling...",
+   "words": [
+    {
+     "w": "Oh,",
+     "t": null,
+     "end": null
+    },
+    {
+     "w": "darling...",
+     "t": null,
+     "end": null
+    }
+   ],
+   "t": 148.0,
+   "end": 150.0
+  },
+  {
+   "section": "Outro",
+   "text": "You really should know better.",
+   "words": [
+    {
+     "w": "You",
+     "t": 151.11,
+     "end": 151.52
+    },
+    {
+     "w": "really",
+     "t": 151.52,
+     "end": 151.82
+    },
+    {
+     "w": "should",
+     "t": 151.82,
+     "end": 152.06
+    },
+    {
+     "w": "know",
+     "t": 152.06,
+     "end": 152.28
+    },
+    {
+     "w": "better.",
+     "t": 152.28,
+     "end": 152.54
+    }
+   ],
+   "t": 151.36,
+   "end": 152.54
+  }
+ ]
+}

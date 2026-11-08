@@ -1,0 +1,57 @@
+{
+ "id": "c2_med",
+ "f0": 4001,
+ "f1": 4078,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 133.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 134.233,
+   "why": "flow spike x8.3",
+   "file": "spike-04027.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 135.1,
+   "why": "flow spike x8.2",
+   "file": "spike-04053.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 135.533,
+   "why": "flow spike x7.6",
+   "file": "spike-04066.jpg"
+  }
+ ],
+ "hash": "6c0d625ce21c1f08",
+ "summary": "Mostly clean: the cut strip is steady, the spike windows show smooth camera and arm motion, and there are only minor pose and face issues.",
+ "faults": [
+  {
+   "t": 135.1,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Held arm and hand stay nearly frozen across 135.09-135.32 with a stiff, mushy pointing hand and unchanged face, so it reads as a blank hold rather than a pose with a clear beat.",
+   "fix": "Add a small hand or head accent, or a brief expression change, during the hold."
+  },
+  {
+   "t": 134.23,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Outstretched arm with a limp, dangling hand is held out stiffly while the head turns. The arm line is flat and the hand does not read as a gesture.",
+   "fix": "Add an elbow bend or a hand shape with a clearer silhouette."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7695,
+  "out": 363
+ },
+ "cost": 0.019
+}

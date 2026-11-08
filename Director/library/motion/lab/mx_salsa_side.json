@@ -1,0 +1,31 @@
+{
+ "clip": "mx_salsa_side",
+ "seconds": 2.367,
+ "popCount": 6,
+ "pops": [
+  "0.033s RightLowerLeg kink 0.247 m",
+  "0.067s RightLowerLeg kink 0.146 m",
+  "2.000s RightLowerLeg kink 0.158 m",
+  "2.033s RightLowerLeg kink 0.123 m",
+  "2.300s RightLowerLeg kink 0.151 m",
+  "2.333s RightLowerLeg kink 0.146 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.846 m, worst step 0.045 m at 1.87s",
+  "right foot on floor moved 0.840 m, worst step 0.043 m at 1.27s"
+ ],
+ "hipsTop": 0.9125715,
+ "hipsLow": 0.8276428,
+ "hipsTravel": "(-0.06, -0.01, 0.04)",
+ "limits": {
+  "groundHipsCm": 4,
+  "RightLowerLeg": 1,
+  "LeftLowerArm": 0.6
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_salsa_side_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_salsa_side_three.mp4"
+ ]
+}

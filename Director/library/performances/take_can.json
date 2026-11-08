@@ -1,0 +1,155 @@
+{
+ "name": "take_can",
+ "about": "Seated, he reaches to the can (`can`, an actor on the desk), the fingers open on the way, close round it, and he brings it to his chest and looks at her (`to`). The can is attached to his right hand from the grasp on (the cup grip of grips.json: a can is 6.6 cm). Ends holding it: the next performance decides the hand. `grab` is the second the fingers close, `me` the actor performing (the attach needs his name). `chest` is where the can comes to rest, in his frame from his root: [0.22,0.98,0.3] for a root on the floor; about 0.45 up when the root sits on the seat itself.",
+ "entry": "sit_chair",
+ "exit": "sit_chair_can",
+ "length": "2.8s",
+ "min": "2.2s",
+ "params": {
+  "can": "can",
+  "to": [
+   0,
+   1.35,
+   1.1
+  ],
+  "grab": 1.05,
+  "me": "person",
+  "chest": [
+   0.22,
+   0.98,
+   0.3
+  ]
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$can",
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.1,
+   "do": "reach",
+   "hand": "right",
+   "to": "$can",
+   "offset": [
+    0,
+    0.015,
+    0
+   ],
+   "for": "=grab-0.1",
+   "ease": "hand"
+  },
+  {
+   "at": 0.15,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.12,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=grab-0.12",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "thumb",
+   "set": 0.5,
+   "for": "0.14s"
+  },
+  {
+   "at": "=grab-0.12",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.5,
+   "for": "0.14s"
+  },
+  {
+   "at": "=grab-0.1",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "middle",
+   "set": 0.56,
+   "for": "0.14s"
+  },
+  {
+   "at": "=grab-0.08",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "ring",
+   "set": 0.6,
+   "for": "0.14s"
+  },
+  {
+   "at": "=grab-0.06",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "pinky",
+   "set": 0.66,
+   "for": "0.14s"
+  },
+  {
+   "at": "=grab+0.04",
+   "do": "attach",
+   "on": "$can",
+   "to": "$me.rightHand",
+   "pos": [
+    0.004,
+    0.072,
+    -0.05
+   ],
+   "rot": [
+    0,
+    0,
+    90
+   ],
+   "blend": "0.08s"
+  },
+  {
+   "at": "=grab+0.15",
+   "do": "reach",
+   "hand": "right",
+   "toRel": "$chest",
+   "for": "0.8s",
+   "ease": "hand"
+  },
+  {
+   "at": "=grab+0.1",
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": "=grab+0.3",
+   "do": "gaze",
+   "toRel": "$chest",
+   "for": "0.4s",
+   "ease": "inout",
+   "head": 0.4
+  },
+  {
+   "at": "=grab+0.9",
+   "do": "gaze",
+   "toRel": "$to",
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=grab+1.0",
+   "do": "face",
+   "fear": 0.15,
+   "eyesWide": 0.12,
+   "for": "0.4s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "sit_idle",
+    "for": "1s"
+   }
+  ],
+  "tail": 0.5
+ }
+}

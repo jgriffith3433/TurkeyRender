@@ -1,0 +1,4 @@
+{
+ "when": "2026-11-08T01:02:11.194Z",
+ "error": "Not rendering: 13 A shot faults in 0.0-204.2 s:\n  4:4.01 006 over_her: her readable subject 0.10 on 0.11 (1.25 % contrast, 0.03 s of 1.38)\n  4:2.94 005 over_him: person frame face cut at left edge (57.37 % out, 1.37 s of 1.38)\n  4:2.07 005 over_him: person readable subject 0.10 on 0.11 (1.51 % contrast, 0.03 s of 1.38)\n  6:3.06 008 hero: her readable subject 0.20 on 0.19 (0.75 % contrast, 0.03 s of 2.76)\n  2:2.05 002 his_face: person readable subject 0.10 on 0.13 (2.33 % contrast, 0.03 s of 1.38)\n  4:3.04 006 over_her: her frame subject out of frame (100 % out, 1.37 s of 1.38)\n  8:3.09 010 out: her readable subject 0.16 on 0.15 (0.52 % contrast, 0.03 s of 2.76)\n  9:3.05 011 walk: her readable subject 0.11 on 0.13 (1.76 % contrast, 0.03 s of 2.76)\n  and 5 more\nvideos/_cards_test/captures/mo"
+}

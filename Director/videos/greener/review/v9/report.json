@@ -1,0 +1,4476 @@
+{
+ "video": "greener",
+ "label": "v9",
+ "render": "C:\\Projects\\TKShock\\Director\\videos\\greener\\output\\greener-v9.mp4",
+ "when": "2026-11-07T19:23:22.190Z",
+ "frames": 4643,
+ "fps": 30,
+ "a": [
+  {
+   "t": 39.4,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The arm and hand fall from chest height at 39.36 to low in the frame at 39.40 and fully out of frame at 39.43. That is about 3 frames with no anticipation or settle. The blade disappears with the hand, so it reads as the arm and prop snapping away.",
+   "fix": "Spread the drop over 8–10 frames with an ease-out. Keep the hand in frame until the blade is clearly lowered, or cut away from the drop.",
+   "shot": "taste"
+  },
+  {
+   "t": 50.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Box is low and wide in 50.29 (lid hovering above a squat base), then in 50.33 it is a tall, large box filling the frame with the bow above. Scale and shape change in one frame with no in-between, so it reads as a swap rather than a hop.",
+   "fix": "Add 1-2 in-between frames of the box stretching up, or hide the swap with a cut or dust puff, and keep the box's proportions consistent.",
+   "shot": "gift_pop"
+  },
+  {
+   "t": 51.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "At 51.09 the lid is already thrown high and tilted with confetti and the butler is visible. In 50.93 the lid was closed. The burst starts on a frame with no visible build-up.",
+   "fix": "Add 2-3 frames of the lid lifting and the box bulging before the burst.",
+   "shot": "gift_pop"
+  },
+  {
+   "t": 91.46,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Both arms jump pose in about 2 frames. His left hand goes from the chest at 91.39 to out at the side at 91.43, then onto the hip at 91.46. His right arm swings from hanging at 91.43 to raised with a dangling wrist at 91.49. This is the cut tweening into the pose, and at speed it reads as a snap.",
+   "fix": "Start the shot already in the settled pose, or trim the first 5 frames of the clip so the arms don't travel.",
+   "shot": "dv_cu"
+  },
+  {
+   "t": 94.76,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The magenta veil over the chart shrinks from a wide panel at 94.73 to a thin strip at 94.76 and is gone at 94.79. It vanishes in place rather than being pulled off. The chart appears with no cloth in flight, and the turkey makes no pulling motion. This is the measured spike, and the shot's key beat reads as a cut.",
+   "fix": "Animate the cloth sliding or flying off, with the turkey's wing or beak pulling it. Otherwise hide the swap behind a fast sweep or a held pose.",
+   "shot": "theory"
+  },
+  {
+   "t": 98.21,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The magenta cloth, a thin strip at x≈150-190 in 98.16 and 98.19, is gone in 98.23. The green striped chart appears fully revealed with no travelling cloth and no anticipation. The 'whip off' reads as a teleport and a swap, which matches the measured spike.",
+   "fix": "Animate the cloth sweeping off over 4-6 frames with a fast arc and overshoot, or hide the swap with a motion-blurred cloth wipe across the frame.",
+   "shot": "plan"
+  },
+  {
+   "t": 105.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Door goes from closed pale pink to a dark open doorway in one frame, with a white wall panel appearing in front. At 105.29 the door is closed; at 105.33 it is already open. There is no swing between them, so the key beat of the shot snaps.",
+   "fix": "Key the door swinging open over 6-10 frames starting at the hand contact, or add a motion blur or smear in between.",
+   "shot": "push"
+  },
+  {
+   "t": 110.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The tray jerks left. Its right edge moves from about x=168 to 145 to 130 over 110.29–110.36. The green blade, which was fixed at the left edge, shifts and is gone by 110.36. This is the measured spike. The motion is a fast slide, then a stop, with no settle.",
+   "fix": "Ease the tray in rather than snapping it, and keep it and the blade in frame. Hold the tray still while the blade is offered.",
+   "shot": "holds_out"
+  },
+  {
+   "t": 110.36,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The blade of grass, the whole point of the shot, is not visible from 110.36 on. The viewer sees only an empty silver plate beside the turkey, so there is nothing to offer and nothing to react to.",
+   "fix": "Reframe or reposition the tray so the blade stays visible on the plate through the hold.",
+   "shot": "holds_out"
+  },
+  {
+   "t": 112.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The cut strip is not settled. From 112.06 to 112.09 the framing jumps: the head goes from cropped at the top to showing the chin, and the torso and arms change position and lean abruptly between tiles.",
+   "fix": "Hold the first frames of the shot on a stable pose and remove the 2-frame jump after the cut.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 112.39,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "By 112.39 he is bent hard over to the right with the left arm flung up out of frame, and the pose differs completely from 112.19. The arm goes from raised to across the body in one frame at 112.43-112.46. There is no anticipation or travel in between.",
+   "fix": "Add in-between frames or smooth the arm path from raised to reach, and add anticipation.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 112.49,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The blade leaves the tray and is flying in the air, tilted, near the hand. At 112.46 it was upright on the tray. At 112.53 it is held horizontally at the hand with no grasp in between. The blade teleports into the grip.",
+   "fix": "Parent the blade to the hand from the frame the fingers close, with a clean pickup.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 113.59,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "At 113.59 the upper arm detaches from the sleeve, leaving a hole at the shoulder, and the arm becomes a floating sausage shape. The blade is dragged down toward the plate. At 113.63 the arm and blade vanish, and the hand is empty.",
+   "fix": "Fix the shoulder deformation and keep the blade in the hand through the pull-back, or hide the blade cleanly.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 115.36,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "At 115.36 the picture swaps from the dark wooden yard close-up to a heavily washed-out pink room, which is a different set and a different character scale. It reads as a blown-out flash or a wrong-shot cut, not the glide to the door. The 115.29-115.33 close-up is also whipped with heavy blur beforehand.",
+   "fix": "Remove the stray cut or lower the pink bloom so the door shot reads as a clean continuation of the move.",
+   "shot": "goes_back"
+  },
+  {
+   "t": 115.46,
+   "sev": "A",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The character is cropped at the chest in every tile from 115.46 to 115.63, so his head and face are never visible. The hook's main subject is headless and the low camera shows mostly empty pink stairs.",
+   "fix": "Tilt the camera up or pull it back so the full figure, head included, sits in frame at the top of the stairs.",
+   "shot": "hook_3"
+  },
+  {
+   "t": 118.86,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A hard-edged dark shadow patch appears on his torso and hip, then grows and changes shape between 118.83 and 118.96. It reads as a shading or shadow glitch on the shirt, and the shirt colour is not stable.",
+   "fix": "Fix the self-shadow or light on the torso (bias or cascade), or lock the lighting through the descent.",
+   "shot": "descend"
+  },
+  {
+   "t": 126.26,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A flat, unshaded blue square crosses the frame: it starts above the head at 126.19-126.23, then sits over his head and back at 126.26-126.29 and falls past his side at 126.33-126.36. It covers part of the silhouette and looks like a UI sticker, not confetti.",
+   "fix": "Shade the confetti, or remove or shrink the big blue cube. Keep it from crossing the dancer's body.",
+   "shot": "c2_sil"
+  },
+  {
+   "t": 131.53,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Large flat, unshaded confetti squares (red, orange, teal) cross in front of the head and torso at 131.53 to 131.56. They are unlit and hide part of his face, then another sits over his hand at 131.63 to 131.66.",
+   "fix": "Shade or shrink the confetti, or keep it from passing between the camera and his head and torso.",
+   "shot": "c2_orbit_b"
+  }
+ ],
+ "b": [
+  {
+   "t": 3.8,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The window glass jumps from a bright blue sky reflection (3.76) to flat black (3.80) in one frame and stays black. The wall around it is unchanged, so it reads as a reflection or material pop.",
+   "fix": "Lock the window reflection or probe so it doesn't switch, or fix the glass material to one state for the whole shot.",
+   "shot": "yard_wide"
+  },
+  {
+   "t": 11.93,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "From 11.76 to 12.00 the hand drifts down across the torso with no anticipation. At 11.93-12.00 the fingers hang and point at the floor, then the arm whips up. The move gives no cue for the gesture, so the lift feels unmotivated.",
+   "fix": "Hold the hand low briefly, or add a small wind-up. Avoid the fingers-down dangle before the lift.",
+   "shot": "secret"
+  },
+  {
+   "t": 12.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The free arm goes from forearm low across the belly with fingers pointing down (12.00) to the hand up at face height (12.06) and above the head line (12.10). That is about two frames for a large arc, so it reads as a snap rather than a lift.",
+   "fix": "Add 3-4 in-between frames on the rise, or ease the arm into the lift. A small preparatory dip before it would also help.",
+   "shot": "secret"
+  },
+  {
+   "t": 14.63,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "The arm swings from low at the belly (14.56) to up at the face (14.73) in about 6 frames. It has no anticipation and the hand sweeps in a straight line. It reads as a snap rather than a deliberate 'shh' gesture.",
+   "fix": "Add a small wind-up and ease the arm into the lips pose over about 10 frames. Overshoot slightly and settle.",
+   "shot": "lips"
+  },
+  {
+   "t": 14.76,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The whole hand, curled like a fist, covers his mouth and chin at 14.76-14.80. The idea is one finger to the lips, but the finger is lost against the hand and the mouth is hidden. The silhouette is muddy.",
+   "fix": "Pose the hand with the index finger extended and vertical against the lips, with the other fingers curled and the hand angled away from the mouth.",
+   "shot": "lips"
+  },
+  {
+   "t": 15.5,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "On the return the hand and forearm drop out of frame between 15.46 and 15.53 (about 3 frames). The arm vanishes in a snap with no settle, which matches the measured spike.",
+   "fix": "Slow the drop over 8-10 frames, keep the hand in frame, and add a light settle at the rest pose.",
+   "shot": "lips"
+  },
+  {
+   "t": 15.96,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The sparrow, the subject of the shot, is jammed in the top-left corner with its head cut off by the frame edge. The fence and leaves take up most of the picture, so the subject is unclear and the look-at-us moment isn't visible.",
+   "fix": "Reframe or shift the camera so the whole bird, head included, sits inside the frame with room to turn.",
+   "shot": "sparrow_away"
+  },
+  {
+   "t": 17.83,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "From 17.80 onward the eyes and brow sit at the very top edge and the hairline is cropped. The shot is about the eyes going to the house and away, and they are almost out of frame.",
+   "fix": "Tilt the camera up or reframe so the eyes sit in the upper third with headroom.",
+   "shot": "weakness"
+  },
+  {
+   "t": 36.56,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He is pushed against the left edge. His back and left shoulder are cropped off and the right two-thirds of the frame is empty fence and house. This reads as bad framing rather than a deliberate quiet beat.",
+   "fix": "Pan or reframe so he sits at a third line with space in front of him, or push in on his face.",
+   "shot": "big_deal"
+  },
+  {
+   "t": 40,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The sparrow is the subject of the shot but is pushed into the top-left corner. Its body and head are cropped by the left edge, and it stays cropped in every tile from 39.96 to 40.20. The viewer cannot read the shiver or puff-up from a clipped bird.",
+   "fix": "Reframe or shift the camera or bird so the whole sparrow sits inside the frame with some margin, ideally near the centre or on a third.",
+   "shot": "sparrow_pastel"
+  },
+  {
+   "t": 45.13,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The character's head is cut off by the top edge of the frame in every tile, so the subject is cropped and the hair is only partly visible.",
+   "fix": "Tilt the camera up or reframe so the whole head sits inside the frame with some headroom.",
+   "shot": "fence_one"
+  },
+  {
+   "t": 46.93,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The seated character's head is cut off by the top edge in every tile, and by 46.93 to 47.03 only the neck and hair base show. The subject's head and face are lost during the shot's key beat.",
+   "fix": "Tilt the camera up or pull it back slightly so the head sits inside the frame.",
+   "shot": "fence_two"
+  },
+  {
+   "t": 48.63,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The beat should be him pointing at us from the floor. Through the opening frames he stands with both hands on his hips, a stiff, near-symmetrical akimbo pose. His gaze is up and off to the side, not at camera. No point is visible.",
+   "fix": "Key a clear point toward camera with the eyes locked on lens at the drop, and replace the akimbo pose.",
+   "shot": "ch_crane"
+  },
+  {
+   "t": 50.26,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "At the start the lid floats detached above the base with the bow beneath it. This reads as a lid hovering, not a crouch, so there is no real anticipation before the hop.",
+   "fix": "Keep the lid on the box during the crouch and squash the whole box down before the hop.",
+   "shot": "gift_pop"
+  },
+  {
+   "t": 52.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "His left arm swings from raised beside the head (51.96) to across the belly (52.09) in about 4 frames. The forearm and hand jump between tiles with no ease, so the arm reads as snapping. The head also tilts and shifts at 52.06 to 52.09.",
+   "fix": "Add in-between frames or ease the arm move over the cut. Retime the arm so it doesn't swing so far in 4 frames.",
+   "shot": "ch_cu_a"
+  },
+  {
+   "t": 52.06,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Large flat, unshaded red and green confetti squares pass close to the camera at the lower left (52.03, 52.06, 52.09). They read as unlit paper cutouts and are distracting.",
+   "fix": "Shade the confetti or make it smaller. Keep near-camera pieces out of the frame during the face push.",
+   "shot": "ch_cu_a"
+  },
+  {
+   "t": 55.46,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The cream door fills the right half of the frame with its knob visible at 55.43. One frame later at 55.46 it is a thin sliver and the pink door behind it is fully open. The door travels most of its arc in a single frame, so it reads as a jump rather than a swing.",
+   "fix": "Add one or two in-between frames of the door swing, or start the swing earlier so the speed ramps up. Alternatively, cut on the sliver frame.",
+   "shot": "doors"
+  },
+  {
+   "t": 58.93,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The orbit pushes him against the right frame edge. His right arm and hand are cut off by the edge from 58.93 through 59.06, and the body sits tight to the border with empty space on the left.",
+   "fix": "Offset the orbit target or framing so he stays about a third in from the right edge, or shorten the arc so he doesn't end up at the border.",
+   "shot": "ch_orbit_b"
+  },
+  {
+   "t": 62.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The framing cuts off his head at the top edge in every tile. The shot is meant to show a star who is enormous, but the face never shows and the hook reads as a headless torso. The crop gets slightly worse by 62.39 to 62.49.",
+   "fix": "Tilt the camera up or lower it a little so the head and face sit inside the frame.",
+   "shot": "ch_low"
+  },
+  {
+   "t": 64,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The butler is a tiny dark figure at the far door while the balloon and a foreground frilly bow-tie prop dominate the frame. The subject is unclear, and the balloon is cut off at the top edge.",
+   "fix": "Reframe or push in on the butler, and keep the whole balloon in frame before it pulls him up.",
+   "shot": "balloon_butler"
+  },
+  {
+   "t": 70.73,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The arm drops, and the hand with the blade lies on his palm at the very bottom edge of the frame. At 70.73 the blade is cut off, and by 70.76 the hand is gone. The key prop leaves the shot just before the cut.",
+   "fix": "Stop the arm lower-lift at chest height, or reframe slightly lower, so the blade on the palm stays in frame.",
+   "shot": "blade_up"
+  },
+  {
+   "t": 81.3,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The head is cropped at the nose or mouth in the close frames (81.2 to 81.5 and 83.49 to 83.63). On a 'he means this' shot to the lens, the eyes are cut off and the face does no acting.",
+   "fix": "Tilt the camera up or reframe so the eyes and mouth are in frame.",
+   "shot": "dv_cu_4"
+  },
+  {
+   "t": 85.37,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The frame cuts him off at the nose or mouth in every tile, so his eyes and upper face are never seen. For a shot meant to show 'he means this' down the lens, the eyes are what matter.",
+   "fix": "Tilt the camera up or lower it so the eyes and brow are in frame.",
+   "shot": "dv_cu_2"
+  },
+  {
+   "t": 90.36,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The man's head and upper torso are cut off by the top of the frame through the whole strip, so the 'star' never shows his face or any expression. Only the legs and hips are readable.",
+   "fix": "Tilt the camera up or pull it back a little so the head stays in frame while he still looks huge.",
+   "shot": "dv_low_2"
+  },
+  {
+   "t": 94,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "From 93.96 to 94.19 the turkey is mostly hidden behind the box, showing only a thin neck and head with the tail fan fanned around it. The figure barely changes across these frames, so the shot opens on a weak silhouette and nothing in it reads as stepping up to the chart.",
+   "fix": "Reframe or reposition the turkey so the body and its step-up are readable. Alternatively, trim the held opening.",
+   "shot": "theory"
+  },
+  {
+   "t": 102.06,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The rock exposes a hard black slit between the door's right edge and the wall. It is visible from 102.03 to 102.19. A green floor wedge also shows under the white wainscot on the right. The door and wall read as separate pieces pulling apart, and the flat looks hollow, not like one painted wall.",
+   "fix": "Fill the gap behind the door with wall colour or a backing plane, and keep the door and wainscot rotating together around a floor pivot so the base stays on the floor.",
+   "shot": "clever"
+  },
+  {
+   "t": 105.26,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Arm jumps from a fist at the chest (105.23) to a wide back-swung arm (105.26) and then to a forward reach (105.29). The arm snaps through poses with no in-between, which matches the measured spike at 105.233.",
+   "fix": "Smooth the arm transition with an anticipation wind-up spread over more frames, or retime so the swing reads continuously.",
+   "shot": "push"
+  },
+  {
+   "t": 113.06,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The forearm is stretched and thin where it crosses the chest. The arm reads as rubbery, long and tubular, with a shoulder or sleeve gap. The upper arm is hidden and the elbow is oddly placed.",
+   "fix": "Fix the arm rig or shoulder rotation so arm lengths stay consistent.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 113.66,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The shot ends with a camera angle change to a back view. The arm swings out to the side in an uncontrolled way, and the hand is empty. The story beat of taking the blade is lost.",
+   "fix": "End the shot on the held blade and cut after the beat.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 113.69,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He is jammed against the right edge, with his shoulder, arm and half of his body cut off by the frame. His head is cropped at the top in 113.69-113.79. The subject is poorly framed for a character who 'knows exactly what he is doing'.",
+   "fix": "Pan or reframe so he sits inside the frame with room on the side he walks toward.",
+   "shot": "goes_back"
+  },
+  {
+   "t": 113.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Right after the cut the character's torso, head and arm shift sideways and vertically between tiles 113.73, 113.76 and 113.79: he drops low, then rises again by 113.83, so the first frames of the shot still tween instead of landing as the shot.",
+   "fix": "Trim the first 4-5 frames of the shot or start the move from the settled pose so the first frame is already the shot.",
+   "shot": "goes_back"
+  },
+  {
+   "t": 115.39,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "In the pink frames he stands with a hand on his hip, looking up, with almost no movement from 115.36 to 115.53. This is a stuck, blank pose rather than gliding to the door by choice.",
+   "fix": "Show him moving toward the door with an eye lead and weight shift, or cut this hold.",
+   "shot": "goes_back"
+  },
+  {
+   "t": 115.46,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The picture starts heavily washed out, with a pale pink-white veil over the figure and set. It clears over about 5 frames until 115.56, and the figure's contrast and the stair saturation change with it. The opening frames lose the dancer against the background.",
+   "fix": "Shorten the exposure fade, or start at full exposure so the first frame already reads as the shot.",
+   "shot": "hook_3"
+  },
+  {
+   "t": 117.2,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "In the cut-in frames he stands stiff and symmetrical, with both arms hanging at his sides and his thumbs out. There is no line of action and no sign of the lifted skirt. He barely changes pose across 117.13 to 117.36.",
+   "fix": "Start the shot on a clear descent pose with a lifted-skirt gesture.",
+   "shot": "descend"
+  },
+  {
+   "t": 118.79,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat, unshaded teal, blue and red confetti squares float in front of and around him. At 118.79 and 118.83 they are large, and at 118.89 a red square sits at his leg.",
+   "fix": "Give the confetti lit or soft particle shading, or keep it away from the subject.",
+   "shot": "descend"
+  },
+  {
+   "t": 121.46,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "A second dancer in the same dark outfit sits directly behind the lead and copies his pose, with the same bent knee and arm line. The two silhouettes stack and read as one muddled shape, and the copy looks twinned.",
+   "fix": "Offset the back dancer's timing by a few frames or give him a different pose, and move him clear of the lead's silhouette.",
+   "shot": "c2_orbit_a"
+  },
+  {
+   "t": 125.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Arm whips from low at 124.96 to a high horizontal swing at 125.03, then up over the head at 125.06-125.09. Few in-between frames, so it reads as a snap.",
+   "fix": "Add in-between frames or ease the arm swing, with a short anticipation before it.",
+   "shot": "c2_sil"
+  },
+  {
+   "t": 125.66,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "Large bare arms and hands enter from the right and top edge (125.66-125.83) and cross the frame beside the dancer. This is the 'three of him' idea read as stray limbs. It matches the frame-difference spike and is distracting.",
+   "fix": "Keep the other dancers' limbs out of frame or show them fully, and place them clearly in the composition.",
+   "shot": "c2_sil"
+  },
+  {
+   "t": 126.59,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A large flat orange square with no shading or lighting passes in front of the raised arm and shoulder. It reads as a pasted-on 2D shape, not 3D confetti. It also covers part of the arm silhouette.",
+   "fix": "Light and shade the confetti, or shrink it and keep it behind or away from the character.",
+   "shot": "c2_point"
+  },
+  {
+   "t": 126.63,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A huge flat orange square fills the lower left, with a flat blue square above it and a smaller orange one beside it. All are unshaded. They compete with the subject and the turkeys.",
+   "fix": "Use smaller shaded confetti, and cut the spawn size near the camera.",
+   "shot": "c2_point"
+  },
+  {
+   "t": 129.09,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Heavy bright cream wash-out over the whole frame fading down over about 10 frames; the background turkeys also swap from white with bow ties to flat gold feather shapes between 129.19 and 129.23, a sudden change in the crowd.",
+   "fix": "Smooth the flash decay and keep the crowd asset the same across the fade, or hide the swap under the peak of the white.",
+   "shot": "c2_low"
+  },
+  {
+   "t": 130.79,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The shot opens on a semi-transparent, washed-out frame of the man that fades in over about 6 frames (130.79 to 130.93). The pose is nearly frozen: same arm and head, barely moving. It reads as a ghosted dissolve, not a clean first frame. The camera is also a tight, different close-up compared with the wide frame at 130.76.",
+   "fix": "Cut to the full-opacity frame on the first frame, or hide the fade behind a hard cut. Start the move on frame 1.",
+   "shot": "c2_orbit_b"
+  }
+ ],
+ "c": [
+  {
+   "t": 12.2,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "certain",
+   "what": "From 12.13 to 12.30 the raised arm is almost frozen in one pose, with a closed fist and no finger detail. The cup arm and torso are also static throughout, so the gesture feels stiff and the secret idea is not conveyed.",
+   "fix": "Open the fingers into a small pinch or hold to show the blade. Add slight settle and overshoot on arrival, plus a small head or eye reaction.",
+   "shot": "secret"
+  },
+  {
+   "t": 52.33,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "His hand is cut off by the left frame edge at 52.33 and 52.36. The other hand sits at the bottom edge. The push-in is meant to be on his face, but the hands fight for attention.",
+   "fix": "Keep the gesture hands inside the frame or lower them out of the shot.",
+   "shot": "ch_cu_a"
+  },
+  {
+   "t": 83.59,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The swinging hand goes to the right edge of the frame and is partly cut off at 83.59. The face is also cropped, and the fingers are splayed and floppy.",
+   "fix": "Keep the hand inside the frame or move the camera slightly right.",
+   "shot": "dv_cu_4"
+  },
+  {
+   "t": 126.66,
+   "sev": "C",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat unshaded blue and orange squares are still crossing the lower left and bottom of the frame (blue square at 126.66, another blue at 126.69). They are distracting but do not hide him.",
+   "fix": "Fade or cull the near-camera confetti sooner.",
+   "shot": "c2_point"
+  }
+ ],
+ "likely": [
+  {
+   "t": 0.6,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The brief is a man sitting in a cheap lawn chair with his knees together. In the wide he stands upright with straight legs in front of or inside the chair, and his arms hang at the armrests. He doesn't read as seated, and the chair looks like it overlaps his legs.",
+   "fix": "Lower the hips onto the seat and bend the knees with the knees together. Otherwise move the chair out from behind him so the legs don't intersect it.",
+   "shot": "yard_wide"
+  },
+  {
+   "t": 0.6,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The figure is frozen and symmetrical from 0.50 to 0.70. Both arms hang, and there is no visible weight shift, breath or head movement.",
+   "fix": "Add a small weight shift, breathing and a slight head tilt or eye change, while keeping the held look.",
+   "shot": "yard_wide"
+  },
+  {
+   "t": 3.96,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The mug sits on top of the right hand's curled fingers. The handle faces outward and the fingers don't visibly wrap the body. It reads as balanced on the palm rather than gripped, and it stays like that through 4.20.",
+   "fix": "Close the fingers and thumb around the mug body, or pass them through the handle. Lock the mug to the hand bone so it doesn't float.",
+   "shot": "hem"
+  },
+  {
+   "t": 4.1,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to be him smoothing an invisible skirt over his knees. In these frames his left hand rests loosely on the chair arm and his right hand holds a mug. Nothing starts a smoothing gesture, so the idea is unclear and the arm looks frozen.",
+   "fix": "Free the mug hand, or drop the mug. Start the first smoothing stroke across the knees within the first few frames, with a small anticipation.",
+   "shot": "hem"
+  },
+  {
+   "t": 9.2,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Across 9.06-9.30 the face holds almost the same soft smile and direct stare with no blink or brow change. The head tilt is very slight, so 'he has us' reads weakly.",
+   "fix": "Add a blink and a small brow lift on the head tilt, and push the tilt a few degrees further.",
+   "shot": "funny"
+  },
+  {
+   "t": 12.13,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "From 12.13 to 12.30 the raised hand is at or past the top edge of the crop, so the fist is cut off. The key gesture, the hand beside the face, is not fully readable and the blade of grass cannot be seen.",
+   "fix": "Reframe or tilt down slightly so the hand and the face fit in frame, or lower the hand to cheek height.",
+   "shot": "secret"
+  },
+  {
+   "t": 15.6,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 15.56 to 15.70 the pose is nearly frozen, with the arm hanging stiffly and no secondary motion in the torso or shoulder. After the quick snap it goes dead.",
+   "fix": "Add a subtle breathing and shoulder settle, or a small head shift to carry the 'in on it' feel.",
+   "shot": "lips"
+  },
+  {
+   "t": 16.1,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 15.96 to 16.20 the bird is almost frozen, with only a slight head and body drift. There is no clear pose change and no tail flick starting, so it reads as a mushy hold.",
+   "fix": "Hold a clear look-at-camera pose, then add a quick tail flick with anticipation before the hop.",
+   "shot": "sparrow_away"
+  },
+  {
+   "t": 17.8,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 17.76 and 17.80 the head lifts and turns up in one frame, while the shoulders and torso barely move. The face goes from looking down, with the mouth and nose low, to level, with the eyes near the top edge. It reads as a head snap right after the cut, not a smooth turn.",
+   "fix": "Key a few in-between head frames, or start the shot on the raised head pose so there is no move over frames 3 to 5.",
+   "shot": "weakness"
+  },
+  {
+   "t": 24.56,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "He is pushed against the right edge of the frame. His back and shoulder are cropped by the edge from 24.49 to 24.59, and he leans out of frame. The fence fills the empty left side, so the subject reads as crowded out.",
+   "fix": "Pan or reframe the camera about 10-15% right, so he sits inside the frame with room in front of him.",
+   "shot": "irresponsible"
+  },
+  {
+   "t": 28.2,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The raised waving arm is nearly frozen from 28.06 to 28.30. The forearm and hand barely move, so the wave reads as a held pose, not a slow wave of the world away.",
+   "fix": "Add a slow, clear sweep of the forearm and hand, about 20-30 degrees side to side, with a small overshoot at each end.",
+   "shot": "what_you_like"
+  },
+  {
+   "t": 28.5,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His face and eyes keep the same fixed stare at camera from 28.06 through 29.20, with no blink or expression change through the dismissive wave. This misses the 'oh, the nerve' feel.",
+   "fix": "Add a blink and a small head tilt or eyebrow raise as the hand rises, and lead the wave with the eyes.",
+   "shot": "what_you_like"
+  },
+  {
+   "t": 28.97,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Between 28.96 and 29.03 the torso and arms change pose quickly after the long hold. The lowered arm and torso turn look abrupt, with little settle after the raised arm drops. This may be the measured spike.",
+   "fix": "Add 3-4 frames of ease and settle on the arm drop, or blend the torso turn.",
+   "shot": "what_you_like"
+  },
+  {
+   "t": 29.76,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot idea is 'skirt in hand', but his near hand is empty and loosely curled at hip level in every tile. No skirt or fabric is visible, so the prop idea doesn't read.",
+   "fix": "Put the skirt in the near hand with a visible grip, or hold the fist up where the camera can see it.",
+   "shot": "glide"
+  },
+  {
+   "t": 29.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The near arm hangs straight and limp, and the far arm is a mirror of it. Together they make a weak, stiff silhouette that doesn't suggest a 'catwalk' attitude.",
+   "fix": "Add a hip or arm swing, or bend the elbow with the hand lifted to give a clearer line of action.",
+   "shot": "glide"
+  },
+  {
+   "t": 32.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The character is jammed against the right edge, with his right shoulder and arm cut off by the frame. Most of the frame is empty fence, so the subject is not clearly staged for a curtsy shot.",
+   "fix": "Reframe or shift the character toward the centre or a third line so the full body has room to curtsy.",
+   "shot": "curtsy"
+  },
+  {
+   "t": 32.33,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 32.19 to 32.43 the pose is almost unchanged: stiff upright stance, arm hanging, and the same face looking toward the camera. There is no anticipation or settle at the start of the shot, and no clear sign he is addressing the fence.",
+   "fix": "Give the opening a readable pose, such as a slight dip or a head turn toward the fence, to lead into the curtsy.",
+   "shot": "curtsy"
+  },
+  {
+   "t": 34.1,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "After the cut, the body keeps shifting over frames 3 to 6 (34.03-34.20). The collar rises, the shoulders widen and the arm swings into frame. The shot is not settled on its first frames.",
+   "fix": "Start the shot on the settled pose, or trim the first 5 frames of the move.",
+   "shot": "tonight"
+  },
+  {
+   "t": 35.46,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "From 35.43 to 35.53 the head drops and tilts hard over about three frames. The torso and collar shift down, and the neck looks stretched and long at 35.46-35.49. It reads as a snap, not a move with anticipation and settle.",
+   "fix": "Smooth or retime the head and spine keys across 35.40-35.55 and add an ease into the tilt. Shorten the neck stretch.",
+   "shot": "tonight"
+  },
+  {
+   "t": 36.63,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to have the blade held up for 'it's not a big deal'. No blade is visible, and his right hand hangs low and open at his side, so the beat has no focal prop.",
+   "fix": "Raise the blade hand into frame at chest or face height, or recut the framing so the held-up blade is visible.",
+   "shot": "big_deal"
+  },
+  {
+   "t": 38.38,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Over 38.26–38.50 the hand and arm barely change and only drift slightly. It looks like a mushy hold with no defined pose, then a sudden fast move later.",
+   "fix": "Make the hold a clean, deliberate pose with a small settle, then a quick move out of it.",
+   "shot": "taste"
+  },
+  {
+   "t": 38.4,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is that he tastes the blade. Across 38.26–38.50 the hand stays by the collarbone with the stalk beside the chin, and it never moves to the mouth. The next frames show the hand dropping away. The taste beat is not visible, so the shot reads as a hand idling and then dropping the prop.",
+   "fix": "Bring the blade to the lips with a clear pause, then lower it. Alternatively, hold the pose deliberately and sell the 'nothing happens' with a clear eye or head beat.",
+   "shot": "taste"
+  },
+  {
+   "t": 39.4,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "At 39.36 and 39.40 the blade only touches the fingertips and hangs off the end of the hand. The fingers are loose and do not wrap it, so the blade looks pasted to the hand instead of held.",
+   "fix": "Close the thumb and index finger around the stalk and attach the blade to that grip point.",
+   "shot": "taste"
+  },
+  {
+   "t": 40.1,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "Dense dark foliage and the large wooden blocks take up most of the frame and draw the eye away from the small bird. Leaves overlap the bird's upper edge, so the silhouette is not clear.",
+   "fix": "Move the foliage off the bird or lower its contrast, and give the bird a clear backdrop.",
+   "shot": "sparrow_pastel"
+  },
+  {
+   "t": 42.63,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He is stiff and symmetrical across the whole strip: he stands rigidly upright with both arms hanging at his sides, with no anticipation, weight shift or head movement as the pastel spreads. The chair behind him is also hard to read.",
+   "fix": "Add a small weight shift, a head turn or an arm reaction on the ring beats.",
+   "shot": "creep"
+  },
+  {
+   "t": 49.09,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 49.06 and 49.09 his arms change quickly. The hand on the hip (viewer's right) drops to hang at his side, and the other hand slides across the belly. There is almost no transition, so it reads as a snap.",
+   "fix": "Smooth or retime the arm transition over more frames, or hold one pose through the beat.",
+   "shot": "ch_crane"
+  },
+  {
+   "t": 49.16,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 48.99 to 49.23 the arms drift between hip, belly and hanging positions with no strong held pose. The motion is mushy and has no clear line of action, and he is not pointing.",
+   "fix": "Hold one strong pose, such as the point, and make the moves into and out of it quick.",
+   "shot": "ch_crane"
+  },
+  {
+   "t": 49.23,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His gaze stays up and away through the whole strip. The expression is flat and doesn't engage the viewer, which weakens the drop.",
+   "fix": "Add a head turn and eye lead toward camera, with a blink on the turn.",
+   "shot": "ch_crane"
+  },
+  {
+   "t": 50.69,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 50.69 to 50.93 the box sits almost perfectly still. The requested shiver is barely visible, so the hold is dead and there is no landing overshoot or settle. The box drops from 50.36 to 50.59 smoothly with no bounce.",
+   "fix": "Add a squash on landing and a small, fast shake of 2-4 px during the hold.",
+   "shot": "gift_pop"
+  },
+  {
+   "t": 51.13,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The lid's underside is dark maroon at 51.09-51.13 and then pink at 51.16, so its shading flips. The confetti is flat and unshaded squares that cover part of the butler.",
+   "fix": "Fix the lid's normals or lighting, and thin out the confetti in front of the butler.",
+   "shot": "gift_pop"
+  },
+  {
+   "t": 51.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The butler stays in the same stiff, symmetrical pose from 51.13 to 51.33. He is half hidden in the box with no bow, and the bow-tie ribbon ornaments sit around him. The lid ends up edge-on near the frame edge.",
+   "fix": "Have him rise and bow with a clear line of action, and move the lid out of frame sooner.",
+   "shot": "gift_pop"
+  },
+  {
+   "t": 52.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "At 52.33 to 52.43 the raised left arm, with its hand at the left frame edge, drops to low in front of the body in about 3 frames. This matches the spike at 52.333. The torso and head also shift position between tiles, so the whole body lurches.",
+   "fix": "Smooth the arm and torso curve across 52.33 to 52.43 and add in-betweens.",
+   "shot": "ch_cu_a"
+  },
+  {
+   "t": 52.5,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "From 52.46 to 52.56 the forearm lies flat across the chest and the pose barely changes. It reads mushy and hides his torso line, with no clear silhouette.",
+   "fix": "Hold a clear pose or open the hand away from the body.",
+   "shot": "ch_cu_a"
+  },
+  {
+   "t": 53.69,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "His feet sit at or below the bottom edge in tiles 53.66-53.76, so the planted feet are cropped while he is standing. The feet only come into view as he squats.",
+   "fix": "Raise the camera or tilt it down slightly, or pull back a little, so the feet stay in frame during the orbit.",
+   "shot": "ch_orbit_a"
+  },
+  {
+   "t": 53.73,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 53.66 to 53.83 he goes from upright with arms out to a deep wide squat with arms tucked in. There is no anticipation, and the hips drop and the arms fold almost at once. It reads as a pose snap, not a weighted dip. It also begins in the first frames of the shot, so it could be read as the cut settling.",
+   "fix": "Add 2-3 frames of anticipation (a small rise or lean) before the drop, or start the shot already in the squat. Ease the arm fold so it follows the hips.",
+   "shot": "ch_orbit_a"
+  },
+  {
+   "t": 55.43,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The upper panel edge on the cream door shows a dotted or broken outline. It looks like an aliasing or shading artifact on the panel border.",
+   "fix": "Thicken or smooth the panel trim, or hide the edge with motion blur.",
+   "shot": "doors"
+  },
+  {
+   "t": 56.6,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The dancer is small and sits off-centre in the first frames of the reveal. He drifts right and grows as the camera pushes in, so the reveal of 'there he is' lands softly.",
+   "fix": "Frame him centred at the reveal, or push in faster so he reads at once.",
+   "shot": "doors"
+  },
+  {
+   "t": 57.23,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Camera is nearly static through 57.09-57.19, then at 57.23 the background (mirror, balloons) and the figure's size and position shift noticeably. This reads as the glide starting abruptly or the cut tweening, not a smooth move that is already running on the first frame.",
+   "fix": "Start the camera glide already at speed on the first frame of the shot, or ease it in over a few frames before the cut so there is no visible jump at 57.23.",
+   "shot": "ch_glide"
+  },
+  {
+   "t": 58.86,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "His arm goes from a raised, clawed hand at 58.83 to a straight horizontal reach at 58.86. It then drops to hanging at 58.89. That is a big change in one or two frames and may read as a snap at speed.",
+   "fix": "Smooth or retime the arm swing over a few more frames, or trim the clip start so the shot opens after the swing.",
+   "shot": "ch_orbit_b"
+  },
+  {
+   "t": 60.76,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The shot is meant to be 'still down the lens', but from 60.69 the head tilts back and the eyes look up and away, past the camera. The 'caught' beat is lost.",
+   "fix": "Keep the head and eyes locked on the lens for the first ~0.5 s of the shot, or delay the upward tilt.",
+   "shot": "ch_cu_2"
+  },
+  {
+   "t": 60.79,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The right arm swings out to a straight, limp-handed extension that overlaps the white turkey. The cream sleeve and hand merge with the turkey, so the silhouette is muddy and the hand has no clear gesture.",
+   "fix": "Shift the arm line away from the turkey, or give the hand a clear open or pointing shape.",
+   "shot": "ch_cu_2"
+  },
+  {
+   "t": 62.39,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both hands sit on his hips with the elbows out, an almost mirror-symmetrical akimbo pose. The legs are also close together and parallel. The silhouette is stiff and has no clear line of action.",
+   "fix": "Offset one arm or hip and widen or angle the stance so the pose has one diagonal line.",
+   "shot": "ch_low"
+  },
+  {
+   "t": 62.43,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "His shirt and trousers get steadily darker from 62.39 to 62.49 and lose their form. The silhouette gets muddy against the pink set. The background lighting does not change, so it looks like a lighting or exposure drift on him.",
+   "fix": "Lock the key and rim light on him for the whole shot so the exposure stays constant.",
+   "shot": "ch_low"
+  },
+  {
+   "t": 64.5,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The balloon leaves the top of the frame by 64.69 and the butler never visibly gets snatched. The idea of the balloon going taut and lifting him is not shown. He just stands at the door.",
+   "fix": "Show the string going taut and the butler's feet leaving the ground in the same frame as the balloon.",
+   "shot": "balloon_butler"
+  },
+  {
+   "t": 64.7,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The tiny butler's pose twitches between 64.69 and 64.73 and settles back by 64.79. It reads as a limb flick rather than a deliberate move, and he stays on the ground with no lift.",
+   "fix": "Smooth or hold the pose across these frames, and key in the taut-string tug and the lift-off.",
+   "shot": "balloon_butler"
+  },
+  {
+   "t": 65.73,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "In the opening frames his arms hang loose and near-parallel at his sides with a stiff torso. The shot's idea is hands to his face, but nothing in this strip shows an arm starting toward it, so the pose is flat and has no clear line of action.",
+   "fix": "Start the arm lift toward the face earlier, or give the held pose an asymmetric arm line.",
+   "shot": "ch_orbit_c"
+  },
+  {
+   "t": 65.79,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 65.76 and 65.79 the background shifts noticeably: the stairs, balloons and turkeys change position and scale more than in the earlier frame steps, and he moves left in frame. This reads as the orbit lurching, or the cut tweening, in frames 3 to 5.",
+   "fix": "Smooth the camera orbit's ease-in over the first frames, or start the orbit already at speed so there is no jump at 65.76 to 65.79.",
+   "shot": "ch_orbit_c"
+  },
+  {
+   "t": 67.5,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The butler in the doorway is tiny and nearly static (67.39-68.06). The 'all turn away' beat is carried only by the turkeys, and the 'we saw nothing' idea doesn't read at this size.",
+   "fix": "Give the figure a small turn or head-away action on the same beat, or push the camera in slightly.",
+   "shot": "look_away"
+  },
+  {
+   "t": 67.83,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The turkey groups on both sides change shape in one frame. At 67.83 the fans are lower and the bodies and legs are spread apart. At 67.86 the fans are larger and the group is bunched. The turn-away reads as a snap, not a continuous move. This matches the measured spike.",
+   "fix": "Smooth the turn on the turkey rigs around 67.8 s: key an in-between pose, or blend the animation over 2-3 frames so the fans and bodies don't jump.",
+   "shot": "look_away"
+  },
+  {
+   "t": 69.26,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The idea is that he looks at the blade and it is just grass. His head is tilted and he talks with his mouth open and eyes squinted, aimed toward the camera instead of at the blade in his raised hand. The stillness the shot needs is missing.",
+   "fix": "Aim his eyes and head at the blade tip for the hold, with the mouth closed and a slow blink.",
+   "shot": "blade_up"
+  },
+  {
+   "t": 70.66,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 70.63 to 70.73 the arm swings down and the blade turns from a pinch to a flat palm in about 3 frames. It reads as a snap with no settle, and it matches the spike measured at 70.633.",
+   "fix": "Add 2-3 frames of ease-in and ease-out on the arm drop, or hold the blade up longer before the drop.",
+   "shot": "blade_up"
+  },
+  {
+   "t": 74.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Arms hang straight and stiff at his sides, and the legs are close together with knees slightly bent. The silhouette is symmetrical and doesn't read as the start of a twirl or as 'free'.",
+   "fix": "Open the arms and give one clear line of action, such as a lean or a wind-up that sets up the twirl.",
+   "shot": "let_go"
+  },
+  {
+   "t": 74.39,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His expression is neutral and fixed. His eyes and head don't lead, and nothing signals the 'let go' feeling.",
+   "fix": "Have the head and eyes lead the turn, and add a lifted or smiling expression.",
+   "shot": "let_go"
+  },
+  {
+   "t": 74.43,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 74.36 to 74.49 he bobs and shifts slightly with no anticipation or hip lead. The body drifts and looks mushy, with no strong pose held before the move.",
+   "fix": "Hold a clear anticipation pose with the hips dropped and turned, then move quickly into the twirl.",
+   "shot": "let_go"
+  },
+  {
+   "t": 76.03,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is that he looks at the blade and closes his fist around it. In these frames his eyes and head face the camera, and the blade is a thin stick beside his cheek. The fist is already mostly closed, so the slow close has no visible start.",
+   "fix": "Turn his head and eyes down to the blade, and start with the hand open so the fist can close slowly.",
+   "shot": "snatch"
+  },
+  {
+   "t": 76.09,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The blade is a thin green-and-dark sliver held at the edge of the fingers right next to his face. Its grip is hard to read and it sits close to the cheek.",
+   "fix": "Move the hand away from the face and wrap the fingers visibly around the blade.",
+   "shot": "snatch"
+  },
+  {
+   "t": 76.13,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The pose is nearly frozen across all 8 frames. His other arm is stiff, with the hand hanging on his hip, and there is no breathing or settle.",
+   "fix": "Add a slight weight shift or a head drift into the held pose.",
+   "shot": "snatch"
+  },
+  {
+   "t": 81.19,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Right arm and torso move fast from 81.16 to 81.29. The hand goes from low at the hip to a fist at the chest in about 4 frames, and the torso shifts in frame at the same time. This looks like the cut tweening into the pose, not a held first frame.",
+   "fix": "Start the shot already on the fist-at-chest pose, or trim the first ~6 frames so the shot opens on the held pose.",
+   "shot": "dv_cu_4"
+  },
+  {
+   "t": 81.43,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 81.33 to 81.53 the fist stays at the chest almost frozen, and the other hand hangs limp and unchanged. The pose is stiff, and the fist is pressed flat against the torso.",
+   "fix": "Add a small push or settle on the fist, and pull it a little off the chest.",
+   "shot": "dv_cu_4"
+  },
+  {
+   "t": 83.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He is small in frame and stands upright with legs close together and arms tucked near his torso. The silhouette is weak, and the dance idea barely reads in these first frames of the shot.",
+   "fix": "Start the shot on a stronger dance pose with arms or legs clearly apart, or push the camera in slightly.",
+   "shot": "dv_wide_2"
+  },
+  {
+   "t": 85.53,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Just after the cut, the torso and background shift position between 85.49 and 85.56. The raised hand and shoulder slide, and the turkey drops lower in frame, so the shot does not settle at once.",
+   "fix": "Hold the first pose for the opening frames, or start the shot after the settle.",
+   "shot": "dv_cu_2"
+  },
+  {
+   "t": 86.6,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "His right arm (viewer right) hangs straight down at 86.59, then at 86.63 the elbow is bent and the hand is at the hip. The pose changes in one frame, with no in-between, which matches the measured spike.",
+   "fix": "Add 2-3 in-between frames or smooth the arm keys so the elbow bends over several frames.",
+   "shot": "dv_cu_2"
+  },
+  {
+   "t": 88.36,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The cloche, the subject of the shot, is already out of frame at 88.36, so its lift and the single blade that supports it are not shown. The viewer sees only the empty plate and a shadow leaving.",
+   "fix": "Tilt the camera up or widen the crop so the lift is visible, or hold the cloche in frame for the first part of the rise.",
+   "shot": "habits"
+  },
+  {
+   "t": 88.39,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The big soft cloche shadow covers the plate at 88.36, shrinks at 88.39 and is gone from the plate by 88.43. A dark patch then slides off the right edge by 88.46 to 88.59. The shadow moves much faster than anything the viewer can see, so the cloche seems to vanish instead of lifting. This matches the frame-difference spike.",
+   "fix": "Ease the cloche's lift so the shadow moves over about 8 to 10 frames, or keep the cloche visible while it rises.",
+   "shot": "habits"
+  },
+  {
+   "t": 90.46,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He stands with straight, parallel legs and arms hanging at his sides, and barely moves for eight frames. The silhouette is stiff and symmetrical, with no weight shift or line of action.",
+   "fix": "Add a hip shift, an arm gesture, or a head turn on the beat.",
+   "shot": "dv_low_2"
+  },
+  {
+   "t": 91.53,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "From 91.53 to 91.63 his right forearm lies flat across the body with a limp, dangling hand and splayed fingers. The other hand is on his hip. The pose is a stiff, twinned akimbo shape and doesn't read as 'he means this'.",
+   "fix": "Lift the right hand into an open, purposeful gesture, or lift the elbow and give the fingers a clear shape.",
+   "shot": "dv_cu"
+  },
+  {
+   "t": 91.56,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The face is nearly unchanged from 91.46 to 91.63. He stares down the lens with no blink or brow change while the body snaps, so the eyes and head don't lead the move.",
+   "fix": "Add a blink or a small brow and head lead on the first move.",
+   "shot": "dv_cu"
+  },
+  {
+   "t": 94.73,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "No crouch or anticipation is visible before the reveal. At 94.73 the turkey is already upright with its head high above the box. The wind-up and whip the shot is meant to show are missing, so the move snaps from pose to pose.",
+   "fix": "Add a one- to two-frame dip and coil before the pull, then an overshoot and settle after it.",
+   "shot": "theory"
+  },
+  {
+   "t": 94.86,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The sunglasses cover the eyes in 94.73–94.96. The expression is fixed, with no visible eye or head lead on the reveal word, and the head only bobs slightly.",
+   "fix": "Add a head turn or chin lift on the word, and a brow or glasses push.",
+   "shot": "theory"
+  },
+  {
+   "t": 95.72,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The shot is meant to play 'down the lens', but for the first frames his eyes and head look off to the side of the camera. He only lands on the lens around 95.83 to 95.93, and the head wobbles on the way.",
+   "fix": "Make the head and eyes face the lens from the first frame, or hold one clean gaze through the opening.",
+   "shot": "dv_cu_3"
+  },
+  {
+   "t": 95.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 95.73 and 95.76 the torso and left arm jump. The shoulder and arm shift down and left in one step, and the head turns a step at the same time. This matches the 95.733 spike.",
+   "fix": "Smooth or retime the mocap over these frames, or key the arm and torso so they ease instead of stepping.",
+   "shot": "dv_cu_3"
+  },
+  {
+   "t": 96.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 96.73 and 96.76 the body and head move right and the raised right hand jumps to a new, higher spot in one frame. This matches the 96.733 spike.",
+   "fix": "Add in-between frames or smooth the hand and torso curve around 96.73 to 96.79.",
+   "shot": "dv_cu_3"
+  },
+  {
+   "t": 96.89,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The raised hand sits stiffly on the shoulder with straight, slightly clawed fingers, and the pose barely changes from 96.83 to 96.96. The hand is not gesturing and reads as stuck, and the other arm is hidden by his hip.",
+   "fix": "Give the hand a beat of motion or a more open shape, or change the pose to match 'he means this'.",
+   "shot": "dv_cu_3"
+  },
+  {
+   "t": 97.5,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "During the held cut frames 97.39 to 97.63 the cloth, chart and turkey barely move, and the turkey's pose hardly changes. The butler's action is not set up before the whip, so the beat reads as a static, mushy drift.",
+   "fix": "Add a clear wind-up pose for the butler, such as a grab and a lean back, before the 98.2 whip.",
+   "shot": "plan"
+  },
+  {
+   "t": 98.29,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The turkey's feet hover in mid-air or overlap the top of the pink chart frame. Its height changes from tile to tile (98.26, 98.29, 98.33, 98.36), so it bobs with nothing under it. It does not stand on anything and has no weight.",
+   "fix": "Plant the feet on a surface or perch and lock them there, or add a clear hop with anticipation and a landing settle. Lower the root so the feet meet the support.",
+   "shot": "plan"
+  },
+  {
+   "t": 102,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The rock starts abruptly between 101.99 and 102.03 with no anticipation. The door tilts and the gap opens within about 2 frames. It then snaps shut between 102.19 and 102.23, with little overshoot or settle. This is the measured frame-difference spike.",
+   "fix": "Add a small counter-lean before the rock. Ease the tilt in and out over 4 to 6 frames, with a small overshoot and settle at the end.",
+   "shot": "clever"
+  },
+  {
+   "t": 102.56,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "A feathered or bandaged hand intrudes at the lower-left corner (102.53, 102.56 and again 103.13 to 103.19). It is partly cropped and pulls the eye from the wall action.",
+   "fix": "Move the hand fully out of frame or fully in, or keep it clear of the bottom-left corner.",
+   "shot": "vase_slides"
+  },
+  {
+   "t": 102.63,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The door's top edge shifts and tilts (102.59 to 102.66), then snaps straight by 102.69 and 102.73. It reads as a jitter, not a deliberate shiver with anticipation and settle.",
+   "fix": "Lock the door static or key a clear anticipation and settle.",
+   "shot": "vase_slides"
+  },
+  {
+   "t": 103.46,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The idea is the vase jerking down the wall, but the only trace is a pale panel and shadow sliding at the right frame edge (103.43 to 103.56). The key action is cut off and the viewer sees a door.",
+   "fix": "Reframe or shift the crop so the vase is fully in frame during its three jerks.",
+   "shot": "vase_slides"
+  },
+  {
+   "t": 104.33,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "At the cut he walks past the throne with a stiff, narrow-legged stride. His feet look light on the floor and the pose is similar from frame to frame, with no weight shift as he approaches the wall.",
+   "fix": "Add a hip drop and weight shift as he arrives at the wall.",
+   "shot": "push"
+  },
+  {
+   "t": 105.36,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "His hand stays at the door edge and never visibly presses on it. The door was already open before it was touched, and the hand hangs in front of the dark opening without pushing. This undercuts the idea of the wall swinging open when he touches it.",
+   "fix": "Time the door opening to start after hand contact, and put the palm flat on the door surface.",
+   "shot": "push"
+  },
+  {
+   "t": 105.39,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 105.36 to 105.46 he freezes in the same bent, lunging pose with almost no change. No settle or reaction to the open door, and no head or face reaction is visible.",
+   "fix": "Add a small settle and a head lift or lean toward the opening to show he has to know.",
+   "shot": "push"
+  },
+  {
+   "t": 110.43,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The turkey's head and eye barely change from 110.36 to 110.49. It reads as a stuck stare, with no reaction to the offer.",
+   "fix": "Add a small head tilt or an eye shift toward the blade.",
+   "shot": "holds_out"
+  },
+  {
+   "t": 112.53,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The blade is held at the wrist or forearm and not wrapped in the fingers. It sticks out of the hand at 112.53-112.63 and the hand looks clipped into the forearm.",
+   "fix": "Move the blade grip to the palm and fingers and fix the hand pose.",
+   "shot": "takes_it"
+  },
+  {
+   "t": 113.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The back view is stiff and symmetrical with both arms hanging. There is no skirt grab or clear intent, so the idea of taking up his skirt is not readable.",
+   "fix": "Add the hand lifting the skirt hem and a clear lean into the walk.",
+   "shot": "goes_back"
+  },
+  {
+   "t": 115.53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Both arms jump from hands-on-hips at 115.49 to hands hanging at the thighs at 115.53. There are no in-between frames, which reads as a pose snap just after the cut.",
+   "fix": "Blend or retime the arm pose on the first frames of the shot, or start the clip already in the hands-down pose.",
+   "shot": "hook_3"
+  },
+  {
+   "t": 117.26,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "His feet are cut off by the pink floor strip, so his feet are lost behind it and there is no foot contact. The shirt also darkens frame by frame from 117.13 to 117.36.",
+   "fix": "Lower the floor plane or reframe so the feet show. Hold the lighting steady.",
+   "shot": "descend"
+  },
+  {
+   "t": 118.83,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The shirt hem and lower torso warp and ripple, and the dark patch cuts through the thigh. This looks like cloth or skirt geometry clipping through the legs.",
+   "fix": "Push the cloth collision out or hide the skirt mesh intersection.",
+   "shot": "descend"
+  },
+  {
+   "t": 118.96,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His face is small and nearly static, with no clear chin-up or look into the lens. The 'he knows' attitude does not come through.",
+   "fix": "Add a chin lift, an eye lead to camera and a small expression change.",
+   "shot": "descend"
+  },
+  {
+   "t": 123.13,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "On the first frames of the shot both arms are held out in a stiff, symmetrical T-shape with limp, dangling hands. The line of action is weak. The arms then fold down quickly with no anticipation.",
+   "fix": "Start on a clearer asymmetric pose, or add a small anticipation before the arm drop.",
+   "shot": "c2_cu_a"
+  },
+  {
+   "t": 123.93,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The frame is washed out and low-contrast, like a ghosted dissolve or exposure lift. Contrast and saturation then build over about 8 frames until 124.16. This matches the measured spike and reads as a flash or fade rather than a deliberate look.",
+   "fix": "Remove the stray fade or exposure ramp at 123.9 to 124.1, or make it a deliberate quick hit.",
+   "shot": "c2_cu_a"
+  },
+  {
+   "t": 124.06,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 124.03 and 124.06 the background shifts (gift boxes and turkeys move). The head and torso also change position and scale and the raised hand drops, with no in-between. It reads as a camera or framing hop rather than a smooth push-in.",
+   "fix": "Smooth the camera push-in keys around 124.0 to 124.06, and check the pose blend at that point.",
+   "shot": "c2_cu_a"
+  },
+  {
+   "t": 124.93,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Cut-in frames 124.83-124.96: torso and arms change quickly, with the left arm swinging up and back over 3-4 frames. Reads as the cut tweening, not a settled first pose.",
+   "fix": "Start the clip on the settled pose, or trim the first 5 frames so the shot opens on a clear pose.",
+   "shot": "c2_sil"
+  },
+  {
+   "t": 125.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Symmetrical, stiff A-pose: both arms hang out at equal angles with legs apart and no clear line of action (125.79-125.89).",
+   "fix": "Offset the arms and tilt the shoulders and hips to give one clear line.",
+   "shot": "c2_sil"
+  },
+  {
+   "t": 126.13,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "At 126.13-126.19 his reaching hand overlaps the topiary, and the arm reads as touching or going through it.",
+   "fix": "Shift the reach so the hand stays clear of the topiary, or offset the dancer.",
+   "shot": "c2_sil"
+  },
+  {
+   "t": 126.53,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The raised hand is cropped off the top of the frame, so the point or wave gesture is not visible.",
+   "fix": "Tilt the camera up slightly or lower the arm so the hand stays in frame.",
+   "shot": "c2_point"
+  },
+  {
+   "t": 128.36,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both figures use near-identical hip-lean and hands-on-hips poses in sync, which reads twinned and stiff, and the near figure's head is cut by the top edge.",
+   "fix": "Offset the second figure's timing or pose and lower the camera tilt so the head is in frame.",
+   "shot": "c2_low"
+  },
+  {
+   "t": 130.29,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "Main figure is cropped at the head and the raised arm leaves frame, while the second figure is half cut off at the right edge; the pose reads as muddled, and confetti and feathers clutter the frame.",
+   "fix": "Reframe or tilt the camera to keep the head and arm in frame, and thin the confetti near the figures.",
+   "shot": "c2_low"
+  },
+  {
+   "t": 130.89,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 130.79 to 130.99 the body and arm are almost static, with only a slow drift. This mushy hold lacks a strong pose and any anticipation before the turn at 131.03.",
+   "fix": "Hold a clear pose, then snap into the turn, or trim these frames.",
+   "shot": "c2_orbit_b"
+  },
+  {
+   "t": 131.36,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He turns his back to the camera at 131.39. The arm becomes a stump with the forearm and hand hidden or clipped into the body, and the silhouette is lost.",
+   "fix": "Adjust the arm swing or camera angle so the forearm stays readable in the turn.",
+   "shot": "c2_orbit_b"
+  },
+  {
+   "t": 131.59,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Between 131.49 and 131.73 the body spins fast with a big head and torso jump per frame. The facing flips from front to profile to back in about 3 frames, and the figure's position in the frame jumps around. The camera arc fights the spin and he drifts without a clear weight shift.",
+   "fix": "Add anticipation and a settle on the spin, and keep the camera orbit steady so the subject stays centered.",
+   "shot": "c2_orbit_b"
+  },
+  {
+   "t": 135.43,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "His raised right hand is cut off by the top edge of the frame through the whole strip (135.43 to 135.66). The gesture's end point is lost and the head sits tight to the top.",
+   "fix": "Tilt the camera up or lower the framing a little for this beat so the hand stays inside the frame.",
+   "shot": "c2_med"
+  },
+  {
+   "t": 135.43,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "A large pink feather hangs in front of the right turkey's body and barely moves across the tiles, so it looks stuck to the bird. The 5x flow spike here may come from the feather or the turkey's motion, not from him.",
+   "fix": "Let the feather drift or fall, or move it away from the turkey so it doesn't look attached.",
+   "shot": "c2_med"
+  },
+  {
+   "t": 146.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The TV bezel is almost stationary between 146.26 and 146.29, then slides left by about 20 to 30 px per frame from 146.33 on. The camera starts moving sharply right after the cut, and the wall to the right of the TV appears suddenly. This looks like the cut tweening into the move instead of a shot that is already established.",
+   "fix": "Hold the first shot framing for the first few frames, or start the camera move already at speed on the first frame of the shot. Alternatively, trim the first 3 to 4 frames so the shot begins mid-move.",
+   "shot": "tv_pull"
+  }
+ ],
+ "cost": 1.331,
+ "spikes": 55,
+ "cuts": 75,
+ "shots": [
+  {
+   "id": "yard_wide",
+   "from": 0,
+   "to": 3.933333333333333,
+   "strips": [
+    {
+     "kind": "spike",
+     "t": 0.5,
+     "why": "one patch jumps (cell 181, x38.5)",
+     "file": "spike-00015.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 3.8,
+     "why": "one patch jumps (cell 48.5, x8.7)",
+     "file": "spike-00114.jpg"
+    }
+   ],
+   "summary": "The cut at 0.50 is clean and the camera holds, but the window reflection flips from sky to black at 3.80, and the man reads as standing in front of the chair rather than sitting in it.",
+   "faults": [
+    {
+     "t": 3.8,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "The window glass jumps from a bright blue sky reflection (3.76) to flat black (3.80) in one frame and stays black. The wall around it is unchanged, so it reads as a reflection or material pop.",
+     "fix": "Lock the window reflection or probe so it doesn't switch, or fix the glass material to one state for the whole shot."
+    },
+    {
+     "t": 0.6,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The brief is a man sitting in a cheap lawn chair with his knees together. In the wide he stands upright with straight legs in front of or inside the chair, and his arms hang at the armrests. He doesn't read as seated, and the chair looks like it overlaps his legs.",
+     "fix": "Lower the hips onto the seat and bend the knees with the knees together. Otherwise move the chair out from behind him so the legs don't intersect it."
+    },
+    {
+     "t": 0.6,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The figure is frozen and symmetrical from 0.50 to 0.70. Both arms hang, and there is no visible weight shift, breath or head movement.",
+     "fix": "Add a small weight shift, breathing and a slight head tilt or eye change, while keeping the held look."
+    }
+   ],
+   "reused": false,
+   "cost": 0.021
+  },
+  {
+   "id": "hem",
+   "from": 3.933333333333333,
+   "to": 7.366666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 3.933,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean with no pops, flicker or camera movement, but the cup grip looks weak and the shot doesn't yet show the skirt-smoothing idea.",
+   "faults": [
+    {
+     "t": 3.96,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The mug sits on top of the right hand's curled fingers. The handle faces outward and the fingers don't visibly wrap the body. It reads as balanced on the palm rather than gripped, and it stays like that through 4.20.",
+     "fix": "Close the fingers and thumb around the mug body, or pass them through the handle. Lock the mug to the hand bone so it doesn't float."
+    },
+    {
+     "t": 4.1,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot is meant to be him smoothing an invisible skirt over his knees. In these frames his left hand rests loosely on the chair arm and his right hand holds a mug. Nothing starts a smoothing gesture, so the idea is unclear and the arm looks frozen.",
+     "fix": "Free the mug hand, or drop the mug. Start the first smoothing stroke across the knees within the first few frames, with a small anticipation."
+    }
+   ],
+   "reused": false,
+   "cost": 0.016
+  },
+  {
+   "id": "funny",
+   "from": 7.366666666666666,
+   "to": 10.766666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 7.367,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 9.067,
+     "why": "frame difference x3.7 (6.65)",
+     "file": "spike-00272.jpg"
+    }
+   ],
+   "summary": "Strip 1 shows a cut at 7.43 with a small settle and no visible pop, and strip 2 shows no visible spike at 9.07. The face looks fairly static, with a faint head tilt and little expression change.",
+   "faults": [
+    {
+     "t": 9.2,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "Across 9.06-9.30 the face holds almost the same soft smile and direct stare with no blink or brow change. The head tilt is very slight, so 'he has us' reads weakly.",
+     "fix": "Add a blink and a small brow lift on the head tilt, and push the tilt a few degrees further."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0127
+  },
+  {
+   "id": "secret",
+   "from": 10.766666666666667,
+   "to": 14.2,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 10.767,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 11.8,
+     "why": "one patch jumps (cell 74.7, x12.7)",
+     "file": "spike-00354.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 12.067,
+     "why": "one patch jumps (cell 72, x2.5)",
+     "file": "spike-00362.jpg"
+    }
+   ],
+   "summary": "The cut is clean and the first strip is stable, but the hand-lift on \"secret\" snaps up with no anticipation and then freezes with the hand at or above the top edge of the frame.",
+   "faults": [
+    {
+     "t": 12.03,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The free arm goes from forearm low across the belly with fingers pointing down (12.00) to the hand up at face height (12.06) and above the head line (12.10). That is about two frames for a large arc, so it reads as a snap rather than a lift.",
+     "fix": "Add 3-4 in-between frames on the rise, or ease the arm into the lift. A small preparatory dip before it would also help."
+    },
+    {
+     "t": 11.93,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "From 11.76 to 12.00 the hand drifts down across the torso with no anticipation. At 11.93-12.00 the fingers hang and point at the floor, then the arm whips up. The move gives no cue for the gesture, so the lift feels unmotivated.",
+     "fix": "Hold the hand low briefly, or add a small wind-up. Avoid the fingers-down dangle before the lift."
+    },
+    {
+     "t": 12.13,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "From 12.13 to 12.30 the raised hand is at or past the top edge of the crop, so the fist is cut off. The key gesture, the hand beside the face, is not fully readable and the blade of grass cannot be seen.",
+     "fix": "Reframe or tilt down slightly so the hand and the face fit in frame, or lower the hand to cheek height."
+    },
+    {
+     "t": 12.2,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "certain",
+     "what": "From 12.13 to 12.30 the raised arm is almost frozen in one pose, with a closed fist and no finger detail. The cup arm and torso are also static throughout, so the gesture feels stiff and the secret idea is not conveyed.",
+     "fix": "Open the fingers into a small pinch or hold to show the blade. Add slight settle and overshoot on arrival, plus a small head or eye reaction."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0303
+  },
+  {
+   "id": "lips",
+   "from": 14.2,
+   "to": 15.933333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 14.2,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 14.6,
+     "why": "one patch jumps (cell 124.2, x3.7)",
+     "file": "spike-00438.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 15.5,
+     "why": "one patch jumps (cell 112.5, x4.1)",
+     "file": "spike-00465.jpg"
+    }
+   ],
+   "summary": "The cut is clean, but the finger-to-lips move is very fast with no anticipation, the hand covers his mouth, and the return snaps out of frame in about three frames.",
+   "faults": [
+    {
+     "t": 14.63,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "The arm swings from low at the belly (14.56) to up at the face (14.73) in about 6 frames. It has no anticipation and the hand sweeps in a straight line. It reads as a snap rather than a deliberate 'shh' gesture.",
+     "fix": "Add a small wind-up and ease the arm into the lips pose over about 10 frames. Overshoot slightly and settle."
+    },
+    {
+     "t": 14.76,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "The whole hand, curled like a fist, covers his mouth and chin at 14.76-14.80. The idea is one finger to the lips, but the finger is lost against the hand and the mouth is hidden. The silhouette is muddy.",
+     "fix": "Pose the hand with the index finger extended and vertical against the lips, with the other fingers curled and the hand angled away from the mouth."
+    },
+    {
+     "t": 15.5,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "On the return the hand and forearm drop out of frame between 15.46 and 15.53 (about 3 frames). The arm vanishes in a snap with no settle, which matches the measured spike.",
+     "fix": "Slow the drop over 8-10 frames, keep the hand in frame, and add a light settle at the rest pose."
+    },
+    {
+     "t": 15.6,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 15.56 to 15.70 the pose is nearly frozen, with the arm hanging stiffly and no secondary motion in the torso or shoulder. After the quick snap it goes dead.",
+     "fix": "Add a subtle breathing and shoulder settle, or a small head shift to carry the 'in on it' feel."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0279
+  },
+  {
+   "id": "sparrow_away",
+   "from": 15.933333333333334,
+   "to": 17.633333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 15.933,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is mostly static: the bird sits cropped at the top-left edge and barely moves across 15.96 to 16.20, with no pops or flicker, but the bird is badly framed and the shot's idea isn't readable.",
+   "faults": [
+    {
+     "t": 15.96,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The sparrow, the subject of the shot, is jammed in the top-left corner with its head cut off by the frame edge. The fence and leaves take up most of the picture, so the subject is unclear and the look-at-us moment isn't visible.",
+     "fix": "Reframe or shift the camera so the whole bird, head included, sits inside the frame with room to turn."
+    },
+    {
+     "t": 16.1,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 15.96 to 16.20 the bird is almost frozen, with only a slight head and body drift. There is no clear pose change and no tail flick starting, so it reads as a mushy hold.",
+     "fix": "Hold a clear look-at-camera pose, then add a quick tail flick with anticipation before the hop."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0114
+  },
+  {
+   "id": "weakness",
+   "from": 17.633333333333333,
+   "to": 20.2,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 17.633,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut itself is clean and the torso is steady, but the head rises sharply between 17.76 and 17.80 and the eyes end up against the top edge, which hurts the eye-flick idea.",
+   "faults": [
+    {
+     "t": 17.8,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 17.76 and 17.80 the head lifts and turns up in one frame, while the shoulders and torso barely move. The face goes from looking down, with the mouth and nose low, to level, with the eyes near the top edge. It reads as a head snap right after the cut, not a smooth turn.",
+     "fix": "Key a few in-between head frames, or start the shot on the raised head pose so there is no move over frames 3 to 5."
+    },
+    {
+     "t": 17.83,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "From 17.80 onward the eyes and brow sit at the very top edge and the hairline is cropped. The shot is about the eyes going to the house and away, and they are almost out of frame.",
+     "fix": "Tilt the camera up or reframe so the eyes sit in the upper third with headroom."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0182
+  },
+  {
+   "id": "happens",
+   "from": 20.2,
+   "to": 22.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 20.2,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut lands cleanly on a settled, nearly static head-and-shoulders frame with only slight drift, and I see no pops, flicker or clipping.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0084
+  },
+  {
+   "id": "happens_2",
+   "from": 22.8,
+   "to": 24.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 22.8,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "Camera is steady and the face drifts with small continuous motion across the strip; the mouth opens at 23.03 as speech begins, with no pops or render faults.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0084
+  },
+  {
+   "id": "irresponsible",
+   "from": 24.5,
+   "to": 27.1,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 24.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "No pops, flicker or contact problems show in this strip, but he sits tight against the right edge and his back and arm are clipped by the frame in the first four tiles.",
+   "faults": [
+    {
+     "t": 24.56,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "He is pushed against the right edge of the frame. His back and shoulder are cropped by the edge from 24.49 to 24.59, and he leans out of frame. The fence fills the empty left side, so the subject reads as crowded out.",
+     "fix": "Pan or reframe the camera about 10-15% right, so he sits inside the frame with room in front of him."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0135
+  },
+  {
+   "id": "what_you_like",
+   "from": 27.1,
+   "to": 29.633333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 27.1,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 28.067,
+     "why": "pose jumps and comes back (0.5)",
+     "file": "spike-00842.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 28.967,
+     "why": "one patch jumps (cell 49, x3.3)",
+     "file": "spike-00869.jpg"
+    }
+   ],
+   "summary": "The strip is mostly clean, with no clear pops or clipping. The raised wave hand is held almost frozen, and his face stays on the same stare throughout.",
+   "faults": [
+    {
+     "t": 28.2,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The raised waving arm is nearly frozen from 28.06 to 28.30. The forearm and hand barely move, so the wave reads as a held pose, not a slow wave of the world away.",
+     "fix": "Add a slow, clear sweep of the forearm and hand, about 20-30 degrees side to side, with a small overshoot at each end."
+    },
+    {
+     "t": 28.97,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "Between 28.96 and 29.03 the torso and arms change pose quickly after the long hold. The lowered arm and torso turn look abrupt, with little settle after the raised arm drops. This may be the measured spike.",
+     "fix": "Add 3-4 frames of ease and settle on the arm drop, or blend the torso turn."
+    },
+    {
+     "t": 28.5,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "His face and eyes keep the same fixed stare at camera from 28.06 through 29.20, with no blink or expression change through the dismissive wave. This misses the 'oh, the nerve' feel.",
+     "fix": "Add a blink and a small head tilt or eyebrow raise as the hand rises, and lead the wave with the eyes."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0245
+  },
+  {
+   "id": "glide",
+   "from": 29.633333333333333,
+   "to": 32.2,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 29.633,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "No pops, flicker or render faults are visible across the cut. The walk is smooth, but the \"skirt in hand\" idea isn't readable and the near arm hangs limp.",
+   "faults": [
+    {
+     "t": 29.76,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot idea is 'skirt in hand', but his near hand is empty and loosely curled at hip level in every tile. No skirt or fabric is visible, so the prop idea doesn't read.",
+     "fix": "Put the skirt in the near hand with a visible grip, or hold the fist up where the camera can see it."
+    },
+    {
+     "t": 29.83,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The near arm hangs straight and limp, and the far arm is a mirror of it. Together they make a weak, stiff silhouette that doesn't suggest a 'catwalk' attitude.",
+     "fix": "Add a hip or arm swing, or bend the elbow with the hand lifted to give a clearer line of action."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0141
+  },
+  {
+   "id": "curtsy",
+   "from": 32.2,
+   "to": 33.93333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 32.2,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean with no pops or flicker, but the character sits at the right edge with his body cropped and stands nearly motionless, which doesn't yet read as a dignified curtsy.",
+   "faults": [
+    {
+     "t": 32.26,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "The character is jammed against the right edge, with his right shoulder and arm cut off by the frame. Most of the frame is empty fence, so the subject is not clearly staged for a curtsy shot.",
+     "fix": "Reframe or shift the character toward the centre or a third line so the full body has room to curtsy."
+    },
+    {
+     "t": 32.33,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 32.19 to 32.43 the pose is almost unchanged: stiff upright stance, arm hanging, and the same face looking toward the camera. There is no anticipation or settle at the start of the shot, and no clear sign he is addressing the fence.",
+     "fix": "Give the opening a readable pose, such as a slight dip or a head turn toward the fence, to lead into the curtsy."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0144
+  },
+  {
+   "id": "tonight",
+   "from": 33.93333333333333,
+   "to": 36.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 33.933,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 35.433,
+     "why": "one patch jumps (cell 79.4, x1.8)",
+     "file": "spike-01063.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 35.867,
+     "why": "one patch jumps (cell 92.8, x2.1)",
+     "file": "spike-01076.jpg"
+    }
+   ],
+   "summary": "The shot mostly holds as a flat look, but the head and torso snap around 35.46 to 35.53, and there is a smaller body shift over the first frames after the cut.",
+   "faults": [
+    {
+     "t": 35.46,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "From 35.43 to 35.53 the head drops and tilts hard over about three frames. The torso and collar shift down, and the neck looks stretched and long at 35.46-35.49. It reads as a snap, not a move with anticipation and settle.",
+     "fix": "Smooth or retime the head and spine keys across 35.40-35.55 and add an ease into the tilt. Shorten the neck stretch."
+    },
+    {
+     "t": 34.1,
+     "sev": "C",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "After the cut, the body keeps shifting over frames 3 to 6 (34.03-34.20). The collar rises, the shoulders widen and the arm swings into frame. The shot is not settled on its first frames.",
+     "fix": "Start the shot on the settled pose, or trim the first 5 frames of the move."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0262
+  },
+  {
+   "id": "big_deal",
+   "from": 36.5,
+   "to": 38.233333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 36.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean with no pops or render flicker, but he is jammed against the left edge and the blade the shot is built on isn't visible.",
+   "faults": [
+    {
+     "t": 36.56,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "He is pushed against the left edge. His back and left shoulder are cropped off and the right two-thirds of the frame is empty fence and house. This reads as bad framing rather than a deliberate quiet beat.",
+     "fix": "Pan or reframe so he sits at a third line with space in front of him, or push in on his face."
+    },
+    {
+     "t": 36.63,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot is meant to have the blade held up for 'it's not a big deal'. No blade is visible, and his right hand hangs low and open at his side, so the beat has no focal prop.",
+     "fix": "Raise the blade hand into frame at chest or face height, or recut the framing so the held-up blade is visible."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0157
+  },
+  {
+   "id": "taste",
+   "from": 38.233333333333334,
+   "to": 39.93333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 38.233,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 39.4,
+     "why": "one patch jumps (cell 131.9, x4)",
+     "file": "spike-01182.jpg"
+    }
+   ],
+   "summary": "The hand and blade sit nearly still through the cut, then the arm drops out of frame in about three frames at 39.36–39.43 with the blade going with it, and the tasting beat never shows.",
+   "faults": [
+    {
+     "t": 39.4,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The arm and hand fall from chest height at 39.36 to low in the frame at 39.40 and fully out of frame at 39.43. That is about 3 frames with no anticipation or settle. The blade disappears with the hand, so it reads as the arm and prop snapping away.",
+     "fix": "Spread the drop over 8–10 frames with an ease-out. Keep the hand in frame until the blade is clearly lowered, or cut away from the drop."
+    },
+    {
+     "t": 39.4,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "At 39.36 and 39.40 the blade only touches the fingertips and hangs off the end of the hand. The fingers are loose and do not wrap it, so the blade looks pasted to the hand instead of held.",
+     "fix": "Close the thumb and index finger around the stalk and attach the blade to that grip point."
+    },
+    {
+     "t": 38.4,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is that he tastes the blade. Across 38.26–38.50 the hand stays by the collarbone with the stalk beside the chin, and it never moves to the mouth. The next frames show the hand dropping away. The taste beat is not visible, so the shot reads as a hand idling and then dropping the prop.",
+     "fix": "Bring the blade to the lips with a clear pause, then lower it. Alternatively, hold the pose deliberately and sell the 'nothing happens' with a clear eye or head beat."
+    },
+    {
+     "t": 38.38,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "Over 38.26–38.50 the hand and arm barely change and only drift slightly. It looks like a mushy hold with no defined pose, then a sudden fast move later.",
+     "fix": "Make the hold a clean, deliberate pose with a small settle, then a quick move out of it."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0277
+  },
+  {
+   "id": "sparrow_pastel",
+   "from": 39.93333333333333,
+   "to": 42.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 39.933,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is stable with no pops or flicker, but the sparrow, which is the subject, sits jammed in the top-left corner and is cut off by the frame edge.",
+   "faults": [
+    {
+     "t": 40,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The sparrow is the subject of the shot but is pushed into the top-left corner. Its body and head are cropped by the left edge, and it stays cropped in every tile from 39.96 to 40.20. The viewer cannot read the shiver or puff-up from a clipped bird.",
+     "fix": "Reframe or shift the camera or bird so the whole sparrow sits inside the frame with some margin, ideally near the centre or on a third."
+    },
+    {
+     "t": 40.1,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "Dense dark foliage and the large wooden blocks take up most of the frame and draw the eye away from the small bird. Leaves overlap the bird's upper edge, so the silhouette is not clear.",
+     "fix": "Move the foliage off the bird or lower its contrast, and give the bird a clear backdrop."
+    }
+   ],
+   "reused": false,
+   "cost": 0.014
+  },
+  {
+   "id": "creep",
+   "from": 42.5,
+   "to": 45.06666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 42.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is mostly clean: the camera is locked, the figure stays in place and the pastel ring grows steadily, with one small pose and contact issue.",
+   "faults": [
+    {
+     "t": 42.63,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "He is stiff and symmetrical across the whole strip: he stands rigidly upright with both arms hanging at his sides, with no anticipation, weight shift or head movement as the pastel spreads. The chair behind him is also hard to read.",
+     "fix": "Add a small weight shift, a head turn or an arm reaction on the ring beats."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0098
+  },
+  {
+   "id": "fence_one",
+   "from": 45.06666666666667,
+   "to": 46.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 45.067,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean with no pops or flicker, but the seated character's head is cropped by the top of the frame throughout.",
+   "faults": [
+    {
+     "t": 45.13,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The character's head is cut off by the top edge of the frame in every tile, so the subject is cropped and the hair is only partly visible.",
+     "fix": "Tilt the camera up or reframe so the whole head sits inside the frame with some headroom."
+    }
+   ],
+   "reused": false,
+   "cost": 0.016
+  },
+  {
+   "id": "fence_two",
+   "from": 46.8,
+   "to": 47.63333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 46.8,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean and the fence panels drop progressively as intended, but his head is cropped by the top of the frame in every tile.",
+   "faults": [
+    {
+     "t": 46.93,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The seated character's head is cut off by the top edge in every tile, and by 46.93 to 47.03 only the neck and hair base show. The subject's head and face are lost during the shot's key beat.",
+     "fix": "Tilt the camera up or pull it back slightly so the head sits inside the frame."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0149
+  },
+  {
+   "id": "delight",
+   "from": 47.63333333333333,
+   "to": 48.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 47.633,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is clean: the camera is static, the framing is stable and the body moves smoothly with no pops or render flicker. The crop shows only the lower face, so the smile can't be judged here.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0085
+  },
+  {
+   "id": "ch_crane",
+   "from": 48.5,
+   "to": 50.233333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 48.5,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 49.033,
+     "why": "flow spike x2.1",
+     "file": "spike-01471.jpg"
+    }
+   ],
+   "summary": "The shot never shows the idea (he points at us): he stands with hands on hips or hanging arms, looks up and away, and his arms shift between poses with a quick drop around 49.06 to 49.09.",
+   "faults": [
+    {
+     "t": 48.63,
+     "sev": "B",
+     "rule": "story",
+     "seen": "certain",
+     "what": "The beat should be him pointing at us from the floor. Through the opening frames he stands with both hands on his hips, a stiff, near-symmetrical akimbo pose. His gaze is up and off to the side, not at camera. No point is visible.",
+     "fix": "Key a clear point toward camera with the eyes locked on lens at the drop, and replace the akimbo pose."
+    },
+    {
+     "t": 49.09,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 49.06 and 49.09 his arms change quickly. The hand on the hip (viewer's right) drops to hang at his side, and the other hand slides across the belly. There is almost no transition, so it reads as a snap.",
+     "fix": "Smooth or retime the arm transition over more frames, or hold one pose through the beat."
+    },
+    {
+     "t": 49.16,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 48.99 to 49.23 the arms drift between hip, belly and hanging positions with no strong held pose. The motion is mushy and has no clear line of action, and he is not pointing.",
+     "fix": "Hold one strong pose, such as the point, and make the moves into and out of it quick."
+    },
+    {
+     "t": 49.23,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "His gaze stays up and away through the whole strip. The expression is flat and doesn't engage the viewer, which weakens the drop.",
+     "fix": "Add a head turn and eye lead toward camera, with a blink on the turn."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0222
+  },
+  {
+   "id": "gift_pop",
+   "from": 50.233333333333334,
+   "to": 51.93333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 50.233,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 50.367,
+     "why": "one patch jumps (cell 68.8, x2.1)",
+     "file": "spike-01511.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 50.7,
+     "why": "pose jumps and comes back (1)",
+     "file": "spike-01521.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 51.1,
+     "why": "one patch jumps (cell 98.9, x3.3)",
+     "file": "spike-01533.jpg"
+    }
+   ],
+   "summary": "The gift box jumps up, lands and the lid pops with confetti, but the cut-in frames show the box jumping sharply, there is no visible crouch or shiver anticipation, and the lid and bow have a few snaps.",
+   "faults": [
+    {
+     "t": 50.33,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Box is low and wide in 50.29 (lid hovering above a squat base), then in 50.33 it is a tall, large box filling the frame with the bow above. Scale and shape change in one frame with no in-between, so it reads as a swap rather than a hop.",
+     "fix": "Add 1-2 in-between frames of the box stretching up, or hide the swap with a cut or dust puff, and keep the box's proportions consistent."
+    },
+    {
+     "t": 50.26,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "At the start the lid floats detached above the base with the bow beneath it. This reads as a lid hovering, not a crouch, so there is no real anticipation before the hop.",
+     "fix": "Keep the lid on the box during the crouch and squash the whole box down before the hop."
+    },
+    {
+     "t": 50.69,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "From 50.69 to 50.93 the box sits almost perfectly still. The requested shiver is barely visible, so the hold is dead and there is no landing overshoot or settle. The box drops from 50.36 to 50.59 smoothly with no bounce.",
+     "fix": "Add a squash on landing and a small, fast shake of 2-4 px during the hold."
+    },
+    {
+     "t": 51.09,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "At 51.09 the lid is already thrown high and tilted with confetti and the butler is visible. In 50.93 the lid was closed. The burst starts on a frame with no visible build-up.",
+     "fix": "Add 2-3 frames of the lid lifting and the box bulging before the burst."
+    },
+    {
+     "t": 51.13,
+     "sev": "B",
+     "rule": "render",
+     "seen": "likely",
+     "what": "The lid's underside is dark maroon at 51.09-51.13 and then pink at 51.16, so its shading flips. The confetti is flat and unshaded squares that cover part of the butler.",
+     "fix": "Fix the lid's normals or lighting, and thin out the confetti in front of the butler."
+    },
+    {
+     "t": 51.33,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The butler stays in the same stiff, symmetrical pose from 51.13 to 51.33. He is half hidden in the box with no bow, and the bow-tie ribbon ornaments sit around him. The lid ends up edge-on near the frame edge.",
+     "fix": "Have him rise and bow with a clear line of action, and move the lid out of frame sooner."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0254
+  },
+  {
+   "id": "ch_cu_a",
+   "from": 51.93333333333333,
+   "to": 53.63333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 51.933,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 52.333,
+     "why": "one patch jumps (cell 102.3, x1.5)",
+     "file": "spike-01570.jpg"
+    }
+   ],
+   "summary": "The face and camera push hold up, but the arms snap through fast poses in both strips and large flat confetti squares cross the frame at the cut.",
+   "faults": [
+    {
+     "t": 52.03,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "His left arm swings from raised beside the head (51.96) to across the belly (52.09) in about 4 frames. The forearm and hand jump between tiles with no ease, so the arm reads as snapping. The head also tilts and shifts at 52.06 to 52.09.",
+     "fix": "Add in-between frames or ease the arm move over the cut. Retime the arm so it doesn't swing so far in 4 frames."
+    },
+    {
+     "t": 52.06,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Large flat, unshaded red and green confetti squares pass close to the camera at the lower left (52.03, 52.06, 52.09). They read as unlit paper cutouts and are distracting.",
+     "fix": "Shade the confetti or make it smaller. Keep near-camera pieces out of the frame during the face push."
+    },
+    {
+     "t": 52.36,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "At 52.33 to 52.43 the raised left arm, with its hand at the left frame edge, drops to low in front of the body in about 3 frames. This matches the spike at 52.333. The torso and head also shift position between tiles, so the whole body lurches.",
+     "fix": "Smooth the arm and torso curve across 52.33 to 52.43 and add in-betweens."
+    },
+    {
+     "t": 52.33,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "His hand is cut off by the left frame edge at 52.33 and 52.36. The other hand sits at the bottom edge. The push-in is meant to be on his face, but the hands fight for attention.",
+     "fix": "Keep the gesture hands inside the frame or lower them out of the shot."
+    },
+    {
+     "t": 52.5,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "From 52.46 to 52.56 the forearm lies flat across the chest and the pose barely changes. It reads mushy and hides his torso line, with no clear silhouette.",
+     "fix": "Hold a clear pose or open the hand away from the body."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0248
+  },
+  {
+   "id": "ch_orbit_a",
+   "from": 53.63333333333333,
+   "to": 55.36666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 53.633,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean and the camera orbit reads smoothly, but he drops from standing to a deep squat in about 0.17 s with no anticipation, and his feet are cropped at the bottom edge of the early frames.",
+   "faults": [
+    {
+     "t": 53.73,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "From 53.66 to 53.83 he goes from upright with arms out to a deep wide squat with arms tucked in. There is no anticipation, and the hips drop and the arms fold almost at once. It reads as a pose snap, not a weighted dip. It also begins in the first frames of the shot, so it could be read as the cut settling.",
+     "fix": "Add 2-3 frames of anticipation (a small rise or lean) before the drop, or start the shot already in the squat. Ease the arm fold so it follows the hips."
+    },
+    {
+     "t": 53.69,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "His feet sit at or below the bottom edge in tiles 53.66-53.76, so the planted feet are cropped while he is standing. The feet only come into view as he squats.",
+     "fix": "Raise the camera or tilt it down slightly, or pull back a little, so the feet stay in frame during the orbit."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0178
+  },
+  {
+   "id": "doors",
+   "from": 55.36666666666667,
+   "to": 57.06666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 55.367,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 55.433,
+     "why": "one patch jumps (cell 87, x1.9)",
+     "file": "spike-01663.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 55.767,
+     "why": "one patch jumps (cell 89.2, x2)",
+     "file": "spike-01673.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 56.533,
+     "why": "one patch jumps (cell 99.5, x2.2)",
+     "file": "spike-01696.jpg"
+    }
+   ],
+   "summary": "The door swing has one abrupt snap at the cut, and the dancer reveal is otherwise clean, though he reads small and shifts side to side.",
+   "faults": [
+    {
+     "t": 55.46,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The cream door fills the right half of the frame with its knob visible at 55.43. One frame later at 55.46 it is a thin sliver and the pink door behind it is fully open. The door travels most of its arc in a single frame, so it reads as a jump rather than a swing.",
+     "fix": "Add one or two in-between frames of the door swing, or start the swing earlier so the speed ramps up. Alternatively, cut on the sliver frame."
+    },
+    {
+     "t": 55.43,
+     "sev": "C",
+     "rule": "render",
+     "seen": "likely",
+     "what": "The upper panel edge on the cream door shows a dotted or broken outline. It looks like an aliasing or shading artifact on the panel border.",
+     "fix": "Thicken or smooth the panel trim, or hide the edge with motion blur."
+    },
+    {
+     "t": 56.6,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The dancer is small and sits off-centre in the first frames of the reveal. He drifts right and grows as the camera pushes in, so the reveal of 'there he is' lands softly.",
+     "fix": "Frame him centred at the reveal, or push in faster so he reads at once."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0265
+  },
+  {
+   "id": "ch_glide",
+   "from": 57.06666666666667,
+   "to": 58.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 57.067,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The background barely moves from 57.09 to 57.19, then the camera and framing shift at 57.23, so the first frames look like the previous shot's framing and the glide only starts a few frames in.",
+   "faults": [
+    {
+     "t": 57.23,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Camera is nearly static through 57.09-57.19, then at 57.23 the background (mirror, balloons) and the figure's size and position shift noticeably. This reads as the glide starting abruptly or the cut tweening, not a smooth move that is already running on the first frame.",
+     "fix": "Start the camera glide already at speed on the first frame of the shot, or ease it in over a few frames before the cut so there is no visible jump at 57.23."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0171
+  },
+  {
+   "id": "ch_orbit_b",
+   "from": 58.8,
+   "to": 60.53333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 58.8,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The camera arc drifts him to the right edge, where his far arm and shoulder are cropped from 58.93 on. His raised arm also moves very fast between 58.83 and 58.89, which may read as a snap.",
+   "faults": [
+    {
+     "t": 58.93,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The orbit pushes him against the right frame edge. His right arm and hand are cut off by the edge from 58.93 through 59.06, and the body sits tight to the border with empty space on the left.",
+     "fix": "Offset the orbit target or framing so he stays about a third in from the right edge, or shorten the arc so he doesn't end up at the border."
+    },
+    {
+     "t": 58.86,
+     "sev": "C",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "His arm goes from a raised, clawed hand at 58.83 to a straight horizontal reach at 58.86. It then drops to hanging at 58.89. That is a big change in one or two frames and may read as a snap at speed.",
+     "fix": "Smooth or retime the arm swing over a few more frames, or trim the clip start so the shot opens after the swing."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0169
+  },
+  {
+   "id": "ch_cu_2",
+   "from": 60.53333333333333,
+   "to": 62.233333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 60.533,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "No pops, flicker or camera jumps in the strip, but the gaze drifts off the lens and the arm swing reads weakly against the turkey.",
+   "faults": [
+    {
+     "t": 60.76,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The shot is meant to be 'still down the lens', but from 60.69 the head tilts back and the eyes look up and away, past the camera. The 'caught' beat is lost.",
+     "fix": "Keep the head and eyes locked on the lens for the first ~0.5 s of the shot, or delay the upward tilt."
+    },
+    {
+     "t": 60.79,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The right arm swings out to a straight, limp-handed extension that overlaps the white turkey. The cream sleeve and hand merge with the turkey, so the silhouette is muddy and the hand has no clear gesture.",
+     "fix": "Shift the arm line away from the turkey, or give the hand a clear open or pointing shape."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0176
+  },
+  {
+   "id": "ch_low",
+   "from": 62.233333333333334,
+   "to": 63.93333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 62.233,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip has no hard pops, but his head is cropped out of frame throughout and he darkens over the last frames, and the hands-on-hips pose is stiff.",
+   "faults": [
+    {
+     "t": 62.26,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The framing cuts off his head at the top edge in every tile. The shot is meant to show a star who is enormous, but the face never shows and the hook reads as a headless torso. The crop gets slightly worse by 62.39 to 62.49.",
+     "fix": "Tilt the camera up or lower it a little so the head and face sit inside the frame."
+    },
+    {
+     "t": 62.43,
+     "sev": "C",
+     "rule": "render",
+     "seen": "likely",
+     "what": "His shirt and trousers get steadily darker from 62.39 to 62.49 and lose their form. The silhouette gets muddy against the pink set. The background lighting does not change, so it looks like a lighting or exposure drift on him.",
+     "fix": "Lock the key and rim light on him for the whole shot so the exposure stays constant."
+    },
+    {
+     "t": 62.39,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Both hands sit on his hips with the elbows out, an almost mirror-symmetrical akimbo pose. The legs are also close together and parallel. The silhouette is stiff and has no clear line of action.",
+     "fix": "Offset one arm or hip and widen or angle the stance so the pose has one diagonal line."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0189
+  },
+  {
+   "id": "balloon_butler",
+   "from": 63.93333333333333,
+   "to": 65.63333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 63.933,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 64.7,
+     "why": "pose jumps and comes back (0.67)",
+     "file": "spike-01941.jpg"
+    }
+   ],
+   "summary": "The strip has no hard pops or render flicker. The main problems are that the butler is tiny and the balloon snatch is not readable, and there is a small pose twitch near 64.7.",
+   "faults": [
+    {
+     "t": 64,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The butler is a tiny dark figure at the far door while the balloon and a foreground frilly bow-tie prop dominate the frame. The subject is unclear, and the balloon is cut off at the top edge.",
+     "fix": "Reframe or push in on the butler, and keep the whole balloon in frame before it pulls him up."
+    },
+    {
+     "t": 64.7,
+     "sev": "C",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The tiny butler's pose twitches between 64.69 and 64.73 and settles back by 64.79. It reads as a limb flick rather than a deliberate move, and he stays on the ground with no lift.",
+     "fix": "Smooth or hold the pose across these frames, and key in the taut-string tug and the lift-off."
+    },
+    {
+     "t": 64.5,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The balloon leaves the top of the frame by 64.69 and the butler never visibly gets snatched. The idea of the balloon going taut and lifting him is not shown. He just stands at the door.",
+     "fix": "Show the string going taut and the butler's feet leaving the ground in the same frame as the balloon."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0194
+  },
+  {
+   "id": "ch_orbit_c",
+   "from": 65.63333333333334,
+   "to": 67.36666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 65.633,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is mostly clean, but the camera or background appears to shift abruptly between 65.76 and 65.79, and his arms hang stiffly in the opening frames.",
+   "faults": [
+    {
+     "t": 65.79,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 65.76 and 65.79 the background shifts noticeably: the stairs, balloons and turkeys change position and scale more than in the earlier frame steps, and he moves left in frame. This reads as the orbit lurching, or the cut tweening, in frames 3 to 5.",
+     "fix": "Smooth the camera orbit's ease-in over the first frames, or start the orbit already at speed so there is no jump at 65.76 to 65.79."
+    },
+    {
+     "t": 65.73,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "In the opening frames his arms hang loose and near-parallel at his sides with a stiff torso. The shot's idea is hands to his face, but nothing in this strip shows an arm starting toward it, so the pose is flat and has no clear line of action.",
+     "fix": "Start the arm lift toward the face earlier, or give the held pose an asymmetric arm line."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0163
+  },
+  {
+   "id": "look_away",
+   "from": 67.36666666666666,
+   "to": 69.06666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 67.367,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 67.833,
+     "why": "one patch jumps (cell 58.1, x14.5)",
+     "file": "spike-02035.jpg"
+    }
+   ],
+   "summary": "The turkeys' turn-away shows one visible snap at 67.83, and the tiny butler in the doorway barely moves.",
+   "faults": [
+    {
+     "t": 67.83,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The turkey groups on both sides change shape in one frame. At 67.83 the fans are lower and the bodies and legs are spread apart. At 67.86 the fans are larger and the group is bunched. The turn-away reads as a snap, not a continuous move. This matches the measured spike.",
+     "fix": "Smooth the turn on the turkey rigs around 67.8 s: key an in-between pose, or blend the animation over 2-3 frames so the fans and bodies don't jump."
+    },
+    {
+     "t": 67.5,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The butler in the doorway is tiny and nearly static (67.39-68.06). The 'all turn away' beat is carried only by the turkeys, and the 'we saw nothing' idea doesn't read at this size.",
+     "fix": "Give the figure a small turn or head-away action on the same beat, or push the camera in slightly."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0198
+  },
+  {
+   "id": "blade_up",
+   "from": 69.06666666666666,
+   "to": 70.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 69.067,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 70.633,
+     "why": "one patch jumps (cell 84.8, x3.3)",
+     "file": "spike-02119.jpg"
+    }
+   ],
+   "summary": "The cut in is clean, with no tweening. The blade is the focus, but he looks at the camera instead of the blade, and the lowered hand with the blade drops out of the bottom of the frame before the cut to the wide shot.",
+   "faults": [
+    {
+     "t": 69.26,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The idea is that he looks at the blade and it is just grass. His head is tilted and he talks with his mouth open and eyes squinted, aimed toward the camera instead of at the blade in his raised hand. The stillness the shot needs is missing.",
+     "fix": "Aim his eyes and head at the blade tip for the hold, with the mouth closed and a slow blink."
+    },
+    {
+     "t": 70.73,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The arm drops, and the hand with the blade lies on his palm at the very bottom edge of the frame. At 70.73 the blade is cut off, and by 70.76 the hand is gone. The key prop leaves the shot just before the cut.",
+     "fix": "Stop the arm lower-lift at chest height, or reframe slightly lower, so the blade on the palm stays in frame."
+    },
+    {
+     "t": 70.66,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "From 70.63 to 70.73 the arm swings down and the blade turns from a pinch to a flat palm in about 3 frames. It reads as a snap with no settle, and it matches the spike measured at 70.633.",
+     "fix": "Add 2-3 frames of ease-in and ease-out on the arm drop, or hold the blade up longer before the drop."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0253
+  },
+  {
+   "id": "wobble",
+   "from": 70.8,
+   "to": 72.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 70.8,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is clean: the camera drifts smoothly, the butler's pose changes gradually with no snaps, and there is no flicker or clipping I can point to.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0084
+  },
+  {
+   "id": "side_eye",
+   "from": 72.5,
+   "to": 74.23333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 72.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the man and the turkey drift smoothly with no pops, flicker or clipping, and the camera holds still.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0124
+  },
+  {
+   "id": "let_go",
+   "from": 74.23333333333333,
+   "to": 75.96666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 74.233,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean, with no snap or flicker, but the pose is stiff and the face is blank over these frames, so there is no sign yet of a free twirl.",
+   "faults": [
+    {
+     "t": 74.33,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Arms hang straight and stiff at his sides, and the legs are close together with knees slightly bent. The silhouette is symmetrical and doesn't read as the start of a twirl or as 'free'.",
+     "fix": "Open the arms and give one clear line of action, such as a lean or a wind-up that sets up the twirl."
+    },
+    {
+     "t": 74.43,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "From 74.36 to 74.49 he bobs and shifts slightly with no anticipation or hip lead. The body drifts and looks mushy, with no strong pose held before the move.",
+     "fix": "Hold a clear anticipation pose with the hips dropped and turned, then move quickly into the twirl."
+    },
+    {
+     "t": 74.39,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "His expression is neutral and fixed. His eyes and head don't lead, and nothing signals the 'let go' feeling.",
+     "fix": "Have the head and eyes lead the turn, and add a lifted or smiling expression."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0172
+  },
+  {
+   "id": "snatch",
+   "from": 75.96666666666667,
+   "to": 77.66666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 75.967,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is almost static across all 8 frames, with no pops or render flicker, but the blade is held up beside his face and he looks at the camera instead of at it.",
+   "faults": [
+    {
+     "t": 76.03,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is that he looks at the blade and closes his fist around it. In these frames his eyes and head face the camera, and the blade is a thin stick beside his cheek. The fist is already mostly closed, so the slow close has no visible start.",
+     "fix": "Turn his head and eyes down to the blade, and start with the hand open so the fist can close slowly."
+    },
+    {
+     "t": 76.09,
+     "sev": "C",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The blade is a thin green-and-dark sliver held at the edge of the fingers right next to his face. Its grip is hard to read and it sits close to the cheek.",
+     "fix": "Move the hand away from the face and wrap the fingers visibly around the blade."
+    },
+    {
+     "t": 76.13,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The pose is nearly frozen across all 8 frames. His other arm is stiff, with the hand hanging on his hip, and there is no breathing or settle.",
+     "fix": "Add a slight weight shift or a head drift into the held pose."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0121
+  },
+  {
+   "id": "hall_empty",
+   "from": 77.66666666666667,
+   "to": 79.36666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 77.667,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the camera drifts slowly, the turkeys hold their poses, and I can see no pops, flicker, clipping or render faults across the cut.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0084
+  },
+  {
+   "id": "dv_wide",
+   "from": 79.36666666666666,
+   "to": 81.06666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 79.367,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the camera drifts slowly and the dancer's pose changes smoothly from tile to tile, with no pops, flicker or clipping that I can point to.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0159
+  },
+  {
+   "id": "dv_cu_4",
+   "from": 81.06666666666666,
+   "to": 83.66666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 81.067,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 81.3,
+     "why": "one patch jumps (cell 65.6, x2)",
+     "file": "spike-02439.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 83.5,
+     "why": "one patch jumps (cell 111.3, x2.4)",
+     "file": "spike-02505.jpg"
+    }
+   ],
+   "summary": "The shot is mostly clean, but the first frames after the cut have a fast arm swing that reads as tweening, and the face is cropped off in every close frame.",
+   "faults": [
+    {
+     "t": 81.19,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Right arm and torso move fast from 81.16 to 81.29. The hand goes from low at the hip to a fist at the chest in about 4 frames, and the torso shifts in frame at the same time. This looks like the cut tweening into the pose, not a held first frame.",
+     "fix": "Start the shot already on the fist-at-chest pose, or trim the first ~6 frames so the shot opens on the held pose."
+    },
+    {
+     "t": 81.3,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The head is cropped at the nose or mouth in the close frames (81.2 to 81.5 and 83.49 to 83.63). On a 'he means this' shot to the lens, the eyes are cut off and the face does no acting.",
+     "fix": "Tilt the camera up or reframe so the eyes and mouth are in frame."
+    },
+    {
+     "t": 81.43,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 81.33 to 81.53 the fist stays at the chest almost frozen, and the other hand hangs limp and unchanged. The pose is stiff, and the fist is pressed flat against the torso.",
+     "fix": "Add a small push or settle on the fist, and pull it a little off the chest."
+    },
+    {
+     "t": 83.59,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The swinging hand goes to the right edge of the frame and is partly cut off at 83.59. The face is also cropped, and the fingers are splayed and floppy.",
+     "fix": "Keep the hand inside the frame or move the camera slightly right."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0291
+  },
+  {
+   "id": "dv_wide_2",
+   "from": 83.66666666666667,
+   "to": 85.36666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 83.667,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is mostly clean, with no pops, flicker or clipping. The only note is that he is small and stands fairly upright, so the dancing barely reads.",
+   "faults": [
+    {
+     "t": 83.83,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "He is small in frame and stands upright with legs close together and arms tucked near his torso. The silhouette is weak, and the dance idea barely reads in these first frames of the shot.",
+     "fix": "Start the shot on a stronger dance pose with arms or legs clearly apart, or push the camera in slightly."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0127
+  },
+  {
+   "id": "dv_cu_2",
+   "from": 85.36666666666666,
+   "to": 87.06666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 85.367,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 86.6,
+     "why": "one patch jumps (cell 67.6, x2.1)",
+     "file": "spike-02598.jpg"
+    }
+   ],
+   "summary": "The frame crops him at the nose or mouth in every tile, so his eyes are never visible, and his right arm snaps from hanging to a bent hand-on-hip pose around 86.6 s.",
+   "faults": [
+    {
+     "t": 86.6,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "His right arm (viewer right) hangs straight down at 86.59, then at 86.63 the elbow is bent and the hand is at the hip. The pose changes in one frame, with no in-between, which matches the measured spike.",
+     "fix": "Add 2-3 in-between frames or smooth the arm keys so the elbow bends over several frames."
+    },
+    {
+     "t": 85.37,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The frame cuts him off at the nose or mouth in every tile, so his eyes and upper face are never seen. For a shot meant to show 'he means this' down the lens, the eyes are what matter.",
+     "fix": "Tilt the camera up or lower it so the eyes and brow are in frame."
+    },
+    {
+     "t": 85.53,
+     "sev": "C",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Just after the cut, the torso and background shift position between 85.49 and 85.56. The raised hand and shoulder slide, and the turkey drops lower in frame, so the shot does not settle at once.",
+     "fix": "Hold the first pose for the opening frames, or start the shot after the settle."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0213
+  },
+  {
+   "id": "habits",
+   "from": 87.06666666666666,
+   "to": 88.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 87.067,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 88.367,
+     "why": "frame difference x11 (15.06)",
+     "file": "spike-02651.jpg"
+    }
+   ],
+   "summary": "The cut in is clean and the cloche holds steady, but the cloche's shadow races off the plate in about 3 frames at 88.36 to 88.46, and the lift itself happens out of frame.",
+   "faults": [
+    {
+     "t": 88.39,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The big soft cloche shadow covers the plate at 88.36, shrinks at 88.39 and is gone from the plate by 88.43. A dark patch then slides off the right edge by 88.46 to 88.59. The shadow moves much faster than anything the viewer can see, so the cloche seems to vanish instead of lifting. This matches the frame-difference spike.",
+     "fix": "Ease the cloche's lift so the shadow moves over about 8 to 10 frames, or keep the cloche visible while it rises."
+    },
+    {
+     "t": 88.36,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The cloche, the subject of the shot, is already out of frame at 88.36, so its lift and the single blade that supports it are not shown. The viewer sees only the empty plate and a shadow leaving.",
+     "fix": "Tilt the camera up or widen the crop so the lift is visible, or hold the cloche in frame for the first part of the rise."
+    }
+   ],
+   "reused": false,
+   "cost": 0.011
+  },
+  {
+   "id": "dv_low_2",
+   "from": 88.8,
+   "to": 91.36666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 88.8,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 90.367,
+     "why": "one patch jumps (cell 64.5, x1.9)",
+     "file": "spike-02711.jpg"
+    }
+   ],
+   "summary": "No clear pops or render faults; the measured spike at 90.37 is not visible as a break, but the man's head is cropped out of frame and his standing pose is stiff.",
+   "faults": [
+    {
+     "t": 90.36,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The man's head and upper torso are cut off by the top of the frame through the whole strip, so the 'star' never shows his face or any expression. Only the legs and hips are readable.",
+     "fix": "Tilt the camera up or pull it back a little so the head stays in frame while he still looks huge."
+    },
+    {
+     "t": 90.46,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "He stands with straight, parallel legs and arms hanging at his sides, and barely moves for eight frames. The silhouette is stiff and symmetrical, with no weight shift or line of action.",
+     "fix": "Add a hip shift, an arm gesture, or a head turn on the beat."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0255
+  },
+  {
+   "id": "dv_cu",
+   "from": 91.36666666666666,
+   "to": 93.93333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 91.367,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The arms snap between poses over 91.39-91.53, which reads as the cut tweening into the pose, and the pose that settles is stiff and limp.",
+   "faults": [
+    {
+     "t": 91.46,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Both arms jump pose in about 2 frames. His left hand goes from the chest at 91.39 to out at the side at 91.43, then onto the hip at 91.46. His right arm swings from hanging at 91.43 to raised with a dangling wrist at 91.49. This is the cut tweening into the pose, and at speed it reads as a snap.",
+     "fix": "Start the shot already in the settled pose, or trim the first 5 frames of the clip so the arms don't travel."
+    },
+    {
+     "t": 91.53,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "From 91.53 to 91.63 his right forearm lies flat across the body with a limp, dangling hand and splayed fingers. The other hand is on his hip. The pose is a stiff, twinned akimbo shape and doesn't read as 'he means this'.",
+     "fix": "Lift the right hand into an open, purposeful gesture, or lift the elbow and give the fingers a clear shape."
+    },
+    {
+     "t": 91.56,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The face is nearly unchanged from 91.46 to 91.63. He stares down the lens with no blink or brow change while the body snaps, so the eyes and head don't lead the move.",
+     "fix": "Add a blink or a small brow and head lead on the first move."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0177
+  },
+  {
+   "id": "theory",
+   "from": 93.93333333333334,
+   "to": 95.66666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 93.933,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 94.733,
+     "why": "frame difference x6.6 (20.29)",
+     "file": "spike-02842.jpg"
+    }
+   ],
+   "summary": "The veil disappears in about two frames at 94.73–94.79 with no one whipping it off, and the butler is mostly hidden behind the box and shows no crouch or anticipation.",
+   "faults": [
+    {
+     "t": 94.76,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The magenta veil over the chart shrinks from a wide panel at 94.73 to a thin strip at 94.76 and is gone at 94.79. It vanishes in place rather than being pulled off. The chart appears with no cloth in flight, and the turkey makes no pulling motion. This is the measured spike, and the shot's key beat reads as a cut.",
+     "fix": "Animate the cloth sliding or flying off, with the turkey's wing or beak pulling it. Otherwise hide the swap behind a fast sweep or a held pose."
+    },
+    {
+     "t": 94.73,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "No crouch or anticipation is visible before the reveal. At 94.73 the turkey is already upright with its head high above the box. The wind-up and whip the shot is meant to show are missing, so the move snaps from pose to pose.",
+     "fix": "Add a one- to two-frame dip and coil before the pull, then an overshoot and settle after it."
+    },
+    {
+     "t": 94,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "From 93.96 to 94.19 the turkey is mostly hidden behind the box, showing only a thin neck and head with the tail fan fanned around it. The figure barely changes across these frames, so the shot opens on a weak silhouette and nothing in it reads as stepping up to the chart.",
+     "fix": "Reframe or reposition the turkey so the body and its step-up are readable. Alternatively, trim the held opening."
+    },
+    {
+     "t": 94.86,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The sunglasses cover the eyes in 94.73–94.96. The expression is fixed, with no visible eye or head lead on the reveal word, and the head only bobs slightly.",
+     "fix": "Add a head turn or chin lift on the word, and a brow or glasses push."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0235
+  },
+  {
+   "id": "dv_cu_3",
+   "from": 95.66666666666667,
+   "to": 97.36666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 95.667,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 95.733,
+     "why": "one patch jumps (cell 145.9, x2.5)",
+     "file": "spike-02872.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 96.733,
+     "why": "one patch jumps (cell 92.2, x1.7)",
+     "file": "spike-02902.jpg"
+    }
+   ],
+   "summary": "Two small pops show up at the measured spikes, one in the torso and arm at 95.76 and one in the torso and hand at 96.76. The opening also has an off-lens gaze, and the raised hand is stiff.",
+   "faults": [
+    {
+     "t": 95.76,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 95.73 and 95.76 the torso and left arm jump. The shoulder and arm shift down and left in one step, and the head turns a step at the same time. This matches the 95.733 spike.",
+     "fix": "Smooth or retime the mocap over these frames, or key the arm and torso so they ease instead of stepping."
+    },
+    {
+     "t": 96.76,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 96.73 and 96.76 the body and head move right and the raised right hand jumps to a new, higher spot in one frame. This matches the 96.733 spike.",
+     "fix": "Add in-between frames or smooth the hand and torso curve around 96.73 to 96.79."
+    },
+    {
+     "t": 95.72,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The shot is meant to play 'down the lens', but for the first frames his eyes and head look off to the side of the camera. He only lands on the lens around 95.83 to 95.93, and the head wobbles on the way.",
+     "fix": "Make the head and eyes face the lens from the first frame, or hold one clean gaze through the opening."
+    },
+    {
+     "t": 96.89,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The raised hand sits stiffly on the shoulder with straight, slightly clawed fingers, and the pose barely changes from 96.83 to 96.96. The hand is not gesturing and reads as stuck, and the other arm is hidden by his hip.",
+     "fix": "Give the hand a beat of motion or a more open shape, or change the pose to match 'he means this'."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0272
+  },
+  {
+   "id": "plan",
+   "from": 97.36666666666666,
+   "to": 99.1,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 97.367,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 98.167,
+     "why": "frame difference x7.2 (19.63)",
+     "file": "spike-02945.jpg"
+    }
+   ],
+   "summary": "The cloth reveal pops: the magenta cloth strip vanishes in one frame at 98.19 to 98.23 with no whip motion. The turkey also floats and bobs with its feet unsupported.",
+   "faults": [
+    {
+     "t": 98.21,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The magenta cloth, a thin strip at x≈150-190 in 98.16 and 98.19, is gone in 98.23. The green striped chart appears fully revealed with no travelling cloth and no anticipation. The 'whip off' reads as a teleport and a swap, which matches the measured spike.",
+     "fix": "Animate the cloth sweeping off over 4-6 frames with a fast arc and overshoot, or hide the swap with a motion-blurred cloth wipe across the frame."
+    },
+    {
+     "t": 98.29,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The turkey's feet hover in mid-air or overlap the top of the pink chart frame. Its height changes from tile to tile (98.26, 98.29, 98.33, 98.36), so it bobs with nothing under it. It does not stand on anything and has no weight.",
+     "fix": "Plant the feet on a surface or perch and lock them there, or add a clear hop with anticipation and a landing settle. Lower the root so the feet meet the support."
+    },
+    {
+     "t": 97.5,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "During the held cut frames 97.39 to 97.63 the cloth, chart and turkey barely move, and the turkey's pose hardly changes. The butler's action is not set up before the whip, so the beat reads as a static, mushy drift.",
+     "fix": "Add a clear wind-up pose for the butler, such as a grab and a lean back, before the 98.2 whip."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0149
+  },
+  {
+   "id": "din_wide",
+   "from": 99.1,
+   "to": 100.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 99.1,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the camera pushes steadily down the table, the candelabra and goblets move smoothly with no pops, flicker or clipping.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0113
+  },
+  {
+   "id": "clever",
+   "from": 100.8,
+   "to": 102.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 100.8,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 102,
+     "why": "frame difference x3.2 (5.64)",
+     "file": "spike-03060.jpg"
+    }
+   ],
+   "summary": "The cut is clean, but the rock at 102 s opens a dark gap beside the door and a green floor wedge under the wall, and it snaps into and out of position with little easing.",
+   "faults": [
+    {
+     "t": 102.06,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "The rock exposes a hard black slit between the door's right edge and the wall. It is visible from 102.03 to 102.19. A green floor wedge also shows under the white wainscot on the right. The door and wall read as separate pieces pulling apart, and the flat looks hollow, not like one painted wall.",
+     "fix": "Fill the gap behind the door with wall colour or a backing plane, and keep the door and wainscot rotating together around a floor pivot so the base stays on the floor."
+    },
+    {
+     "t": 102,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "The rock starts abruptly between 101.99 and 102.03 with no anticipation. The door tilts and the gap opens within about 2 frames. It then snaps shut between 102.19 and 102.23, with little overshoot or settle. This is the measured frame-difference spike.",
+     "fix": "Add a small counter-lean before the rock. Ease the tilt in and out over 4 to 6 frames, with a small overshoot and settle at the end."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0197
+  },
+  {
+   "id": "vase_slides",
+   "from": 102.5,
+   "to": 104.23333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 102.5,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 102.6,
+     "why": "one patch jumps (cell 60.5, x5.7)",
+     "file": "spike-03078.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 103.133,
+     "why": "flow spike x4.5",
+     "file": "spike-03094.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 103.433,
+     "why": "flow spike x3.6",
+     "file": "spike-03103.jpg"
+    }
+   ],
+   "summary": "The crop shows a static door and bed with no vase in view. The vase action is mostly offscreen at the right edge, and a feathered hand enters and exits at the lower left.",
+   "faults": [
+    {
+     "t": 103.46,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "The idea is the vase jerking down the wall, but the only trace is a pale panel and shadow sliding at the right frame edge (103.43 to 103.56). The key action is cut off and the viewer sees a door.",
+     "fix": "Reframe or shift the crop so the vase is fully in frame during its three jerks."
+    },
+    {
+     "t": 102.56,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "A feathered or bandaged hand intrudes at the lower-left corner (102.53, 102.56 and again 103.13 to 103.19). It is partly cropped and pulls the eye from the wall action.",
+     "fix": "Move the hand fully out of frame or fully in, or keep it clear of the bottom-left corner."
+    },
+    {
+     "t": 102.63,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "The door's top edge shifts and tilts (102.59 to 102.66), then snaps straight by 102.69 and 102.73. It reads as a jitter, not a deliberate shiver with anticipation and settle.",
+     "fix": "Lock the door static or key a clear anticipation and settle."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0261
+  },
+  {
+   "id": "push",
+   "from": 104.23333333333333,
+   "to": 105.96666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 104.233,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 105.233,
+     "why": "one patch jumps (cell 94.3, x3)",
+     "file": "spike-03157.jpg"
+    }
+   ],
+   "summary": "The door pops open abruptly at 105.33 and the hand never lands on the wall, with a smaller pose jump at 105.26.",
+   "faults": [
+    {
+     "t": 105.33,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Door goes from closed pale pink to a dark open doorway in one frame, with a white wall panel appearing in front. At 105.29 the door is closed; at 105.33 it is already open. There is no swing between them, so the key beat of the shot snaps.",
+     "fix": "Key the door swinging open over 6-10 frames starting at the hand contact, or add a motion blur or smear in between."
+    },
+    {
+     "t": 105.26,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Arm jumps from a fist at the chest (105.23) to a wide back-swung arm (105.26) and then to a forward reach (105.29). The arm snaps through poses with no in-between, which matches the measured spike at 105.233.",
+     "fix": "Smooth the arm transition with an anticipation wind-up spread over more frames, or retime so the swing reads continuously."
+    },
+    {
+     "t": 105.36,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "His hand stays at the door edge and never visibly presses on it. The door was already open before it was touched, and the hand hangs in front of the dark opening without pushing. This undercuts the idea of the wall swinging open when he touches it.",
+     "fix": "Time the door opening to start after hand contact, and put the palm flat on the door surface."
+    },
+    {
+     "t": 105.39,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 105.36 to 105.46 he freezes in the same bent, lunging pose with almost no change. No settle or reaction to the open door, and no head or face reaction is visible.",
+     "fix": "Add a small settle and a head lift or lean toward the opening to show he has to know."
+    },
+    {
+     "t": 104.33,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "At the cut he walks past the throne with a stiff, narrow-legged stride. His feet look light on the floor and the pose is similar from frame to frame, with no weight shift as he approaches the wall.",
+     "fix": "Add a hip drop and weight shift as he arrives at the wall."
+    }
+   ],
+   "reused": false,
+   "cost": 0.018
+  },
+  {
+   "id": "grey_wide",
+   "from": 105.96666666666667,
+   "to": 108.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 105.967,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: a static camera and a smooth white-to-scene fade, with the man's walk and the crate steady from tile to tile and no pops, flicker or clipping that I can see.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0114
+  },
+  {
+   "id": "he_looks",
+   "from": 108.5,
+   "to": 110.23333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 108.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the camera is locked and the head and torso drift smoothly across all eight frames, with no pops, flicker or clipping.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0117
+  },
+  {
+   "id": "holds_out",
+   "from": 110.23333333333333,
+   "to": 111.93333333333334,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 110.233,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 110.333,
+     "why": "frame difference x4.7 (4.74)",
+     "file": "spike-03310.jpg"
+    }
+   ],
+   "summary": "The measured spike at 110.33 is the tray lurching left and the green blade of grass leaving frame, which hides the shot's whole idea; the turkey and background are steady.",
+   "faults": [
+    {
+     "t": 110.33,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The tray jerks left. Its right edge moves from about x=168 to 145 to 130 over 110.29–110.36. The green blade, which was fixed at the left edge, shifts and is gone by 110.36. This is the measured spike. The motion is a fast slide, then a stop, with no settle.",
+     "fix": "Ease the tray in rather than snapping it, and keep it and the blade in frame. Hold the tray still while the blade is offered."
+    },
+    {
+     "t": 110.36,
+     "sev": "A",
+     "rule": "story",
+     "seen": "certain",
+     "what": "The blade of grass, the whole point of the shot, is not visible from 110.36 on. The viewer sees only an empty silver plate beside the turkey, so there is nothing to offer and nothing to react to.",
+     "fix": "Reframe or reposition the tray so the blade stays visible on the plate through the hold."
+    },
+    {
+     "t": 110.43,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The turkey's head and eye barely change from 110.36 to 110.49. It reads as a stuck stare, with no reaction to the offer.",
+     "fix": "Add a small head tilt or an eye shift toward the blade."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0205
+  },
+  {
+   "id": "takes_it",
+   "from": 111.93333333333334,
+   "to": 113.66666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 111.933,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 112.4,
+     "why": "one patch jumps (cell 40.3, x8.6)",
+     "file": "spike-03372.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 113.067,
+     "why": "one patch jumps (cell 51.1, x2.8)",
+     "file": "spike-03392.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 113.533,
+     "why": "one patch jumps (cell 61.4, x13.1)",
+     "file": "spike-03406.jpg"
+    }
+   ],
+   "summary": "The reach is clear but has pops: the torso and head jump between 111.99 and 112.09, the blade teleports at 112.49, and the shot ends with a back-view cut and a limb snap.",
+   "faults": [
+    {
+     "t": 112.09,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The cut strip is not settled. From 112.06 to 112.09 the framing jumps: the head goes from cropped at the top to showing the chin, and the torso and arms change position and lean abruptly between tiles.",
+     "fix": "Hold the first frames of the shot on a stable pose and remove the 2-frame jump after the cut."
+    },
+    {
+     "t": 112.39,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "By 112.39 he is bent hard over to the right with the left arm flung up out of frame, and the pose differs completely from 112.19. The arm goes from raised to across the body in one frame at 112.43-112.46. There is no anticipation or travel in between.",
+     "fix": "Add in-between frames or smooth the arm path from raised to reach, and add anticipation."
+    },
+    {
+     "t": 112.49,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The blade leaves the tray and is flying in the air, tilted, near the hand. At 112.46 it was upright on the tray. At 112.53 it is held horizontally at the hand with no grasp in between. The blade teleports into the grip.",
+     "fix": "Parent the blade to the hand from the frame the fingers close, with a clean pickup."
+    },
+    {
+     "t": 112.53,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The blade is held at the wrist or forearm and not wrapped in the fingers. It sticks out of the hand at 112.53-112.63 and the hand looks clipped into the forearm.",
+     "fix": "Move the blade grip to the palm and fingers and fix the hand pose."
+    },
+    {
+     "t": 113.06,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The forearm is stretched and thin where it crosses the chest. The arm reads as rubbery, long and tubular, with a shoulder or sleeve gap. The upper arm is hidden and the elbow is oddly placed.",
+     "fix": "Fix the arm rig or shoulder rotation so arm lengths stay consistent."
+    },
+    {
+     "t": 113.59,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "At 113.59 the upper arm detaches from the sleeve, leaving a hole at the shoulder, and the arm becomes a floating sausage shape. The blade is dragged down toward the plate. At 113.63 the arm and blade vanish, and the hand is empty.",
+     "fix": "Fix the shoulder deformation and keep the blade in the hand through the pull-back, or hide the blade cleanly."
+    },
+    {
+     "t": 113.66,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The shot ends with a camera angle change to a back view. The arm swings out to the side in an uncontrolled way, and the hand is empty. The story beat of taking the blade is lost.",
+     "fix": "End the shot on the held blade and cut after the beat."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0267
+  },
+  {
+   "id": "goes_back",
+   "from": 113.66666666666667,
+   "to": 115.36666666666666,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 113.667,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 115.3,
+     "why": "one patch jumps (cell 114.2, x1.5)",
+     "file": "spike-03459.jpg"
+    }
+   ],
+   "summary": "The cut strip shows a back-turned character who is mostly stable but sits cropped at the right edge, and the 115.3 s spike is a hard cut to a washed-out pink shot, with a pop right before it.",
+   "faults": [
+    {
+     "t": 113.76,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Right after the cut the character's torso, head and arm shift sideways and vertically between tiles 113.73, 113.76 and 113.79: he drops low, then rises again by 113.83, so the first frames of the shot still tween instead of landing as the shot.",
+     "fix": "Trim the first 4-5 frames of the shot or start the move from the settled pose so the first frame is already the shot."
+    },
+    {
+     "t": 113.69,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "He is jammed against the right edge, with his shoulder, arm and half of his body cut off by the frame. His head is cropped at the top in 113.69-113.79. The subject is poorly framed for a character who 'knows exactly what he is doing'.",
+     "fix": "Pan or reframe so he sits inside the frame with room on the side he walks toward."
+    },
+    {
+     "t": 113.83,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The back view is stiff and symmetrical with both arms hanging. There is no skirt grab or clear intent, so the idea of taking up his skirt is not readable.",
+     "fix": "Add the hand lifting the skirt hem and a clear lean into the walk."
+    },
+    {
+     "t": 115.36,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "At 115.36 the picture swaps from the dark wooden yard close-up to a heavily washed-out pink room, which is a different set and a different character scale. It reads as a blown-out flash or a wrong-shot cut, not the glide to the door. The 115.29-115.33 close-up is also whipped with heavy blur beforehand.",
+     "fix": "Remove the stray cut or lower the pink bloom so the door shot reads as a clean continuation of the move."
+    },
+    {
+     "t": 115.39,
+     "sev": "B",
+     "rule": "story",
+     "seen": "certain",
+     "what": "In the pink frames he stands with a hand on his hip, looking up, with almost no movement from 115.36 to 115.53. This is a stuck, blank pose rather than gliding to the door by choice.",
+     "fix": "Show him moving toward the door with an eye lead and weight shift, or cut this hold."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0186
+  },
+  {
+   "id": "hook_3",
+   "from": 115.36666666666666,
+   "to": 117.1,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 115.367,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The new shot opens with the dancer's head and upper chest cut off by the top of the frame, and his arms snap from hands-on-hips to hands-at-thighs between 115.49 and 115.53. The washed-out opening fades to full colour over about 5 frames.",
+   "faults": [
+    {
+     "t": 115.46,
+     "sev": "A",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The character is cropped at the chest in every tile from 115.46 to 115.63, so his head and face are never visible. The hook's main subject is headless and the low camera shows mostly empty pink stairs.",
+     "fix": "Tilt the camera up or pull it back so the full figure, head included, sits in frame at the top of the stairs."
+    },
+    {
+     "t": 115.53,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Both arms jump from hands-on-hips at 115.49 to hands hanging at the thighs at 115.53. There are no in-between frames, which reads as a pose snap just after the cut.",
+     "fix": "Blend or retime the arm pose on the first frames of the shot, or start the clip already in the hands-down pose."
+    },
+    {
+     "t": 115.46,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "The picture starts heavily washed out, with a pale pink-white veil over the figure and set. It clears over about 5 frames until 115.56, and the figure's contrast and the stair saturation change with it. The opening frames lose the dancer against the background.",
+     "fix": "Shorten the exposure fade, or start at full exposure so the first frame already reads as the shot."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0187
+  },
+  {
+   "id": "descend",
+   "from": 117.1,
+   "to": 121.4,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 117.1,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 118.8,
+     "why": "frame difference x7.5 (31.24)",
+     "file": "spike-03564.jpg"
+    }
+   ],
+   "summary": "The strip shows a dark patch spreading across his shirt and thigh with a visible edge, unlit confetti squares and a stiff, symmetric pose in the cut-in frames. The shot's idea of a lifted skirt and a chin-up look is not clearly shown.",
+   "faults": [
+    {
+     "t": 118.86,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A hard-edged dark shadow patch appears on his torso and hip, then grows and changes shape between 118.83 and 118.96. It reads as a shading or shadow glitch on the shirt, and the shirt colour is not stable.",
+     "fix": "Fix the self-shadow or light on the torso (bias or cascade), or lock the lighting through the descent."
+    },
+    {
+     "t": 118.83,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The shirt hem and lower torso warp and ripple, and the dark patch cuts through the thigh. This looks like cloth or skirt geometry clipping through the legs.",
+     "fix": "Push the cloth collision out or hide the skirt mesh intersection."
+    },
+    {
+     "t": 118.79,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Flat, unshaded teal, blue and red confetti squares float in front of and around him. At 118.79 and 118.83 they are large, and at 118.89 a red square sits at his leg.",
+     "fix": "Give the confetti lit or soft particle shading, or keep it away from the subject."
+    },
+    {
+     "t": 117.2,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "In the cut-in frames he stands stiff and symmetrical, with both arms hanging at his sides and his thumbs out. There is no line of action and no sign of the lifted skirt. He barely changes pose across 117.13 to 117.36.",
+     "fix": "Start the shot on a clear descent pose with a lifted-skirt gesture."
+    },
+    {
+     "t": 117.26,
+     "sev": "C",
+     "rule": "render",
+     "seen": "likely",
+     "what": "His feet are cut off by the pink floor strip, so his feet are lost behind it and there is no foot contact. The shirt also darkens frame by frame from 117.13 to 117.36.",
+     "fix": "Lower the floor plane or reframe so the feet show. Hold the lighting steady."
+    },
+    {
+     "t": 118.96,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "His face is small and nearly static, with no clear chin-up or look into the lens. The 'he knows' attitude does not come through.",
+     "fix": "Add a chin lift, an eye lead to camera and a small expression change."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0191
+  },
+  {
+   "id": "c2_orbit_a",
+   "from": 121.4,
+   "to": 123.1,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 121.4,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip has no pops or flicker, but the two near-identical dancers overlap tightly and mirror each other, which reads as twinning and possible clipping.",
+   "faults": [
+    {
+     "t": 121.46,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "A second dancer in the same dark outfit sits directly behind the lead and copies his pose, with the same bent knee and arm line. The two silhouettes stack and read as one muddled shape, and the copy looks twinned.",
+     "fix": "Offset the back dancer's timing by a few frames or give him a different pose, and move him clear of the lead's silhouette."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0137
+  },
+  {
+   "id": "c2_cu_a",
+   "from": 123.1,
+   "to": 124.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 123.1,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 123.933,
+     "why": "one patch jumps (cell 113.7, x2.8)",
+     "file": "spike-03718.jpg"
+    }
+   ],
+   "summary": "The cut strip is mostly clean, with one stiff T-pose at the start. The second strip has a washed-out, low-contrast look at 123.93 that clears by 124.16, and a small camera or pose jump at 124.03 to 124.06.",
+   "faults": [
+    {
+     "t": 123.93,
+     "sev": "B",
+     "rule": "render",
+     "seen": "likely",
+     "what": "The frame is washed out and low-contrast, like a ghosted dissolve or exposure lift. Contrast and saturation then build over about 8 frames until 124.16. This matches the measured spike and reads as a flash or fade rather than a deliberate look.",
+     "fix": "Remove the stray fade or exposure ramp at 123.9 to 124.1, or make it a deliberate quick hit."
+    },
+    {
+     "t": 124.06,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 124.03 and 124.06 the background shifts (gift boxes and turkeys move). The head and torso also change position and scale and the raised hand drops, with no in-between. It reads as a camera or framing hop rather than a smooth push-in.",
+     "fix": "Smooth the camera push-in keys around 124.0 to 124.06, and check the pose blend at that point."
+    },
+    {
+     "t": 123.13,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "On the first frames of the shot both arms are held out in a stiff, symmetrical T-shape with limp, dangling hands. The line of action is weak. The arms then fold down quickly with no anticipation.",
+     "fix": "Start on a clearer asymmetric pose, or add a small anticipation before the arm drop."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0214
+  },
+  {
+   "id": "c2_sil",
+   "from": 124.8,
+   "to": 126.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 124.8,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 124.867,
+     "why": "one patch jumps (cell 83.3, x1.9)",
+     "file": "spike-03746.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 125.667,
+     "why": "frame difference x12.3 (45.56)",
+     "file": "spike-03770.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 126.133,
+     "why": "flow spike x2.2",
+     "file": "spike-03784.jpg"
+    }
+   ],
+   "summary": "Shot has a fast arm whip, a mid-air hand from off-screen, and unlit blue confetti cubes crossing the dancer's torso, plus a stiff mirrored stance.",
+   "faults": [
+    {
+     "t": 124.93,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Cut-in frames 124.83-124.96: torso and arms change quickly, with the left arm swinging up and back over 3-4 frames. Reads as the cut tweening, not a settled first pose.",
+     "fix": "Start the clip on the settled pose, or trim the first 5 frames so the shot opens on a clear pose."
+    },
+    {
+     "t": 125.03,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Arm whips from low at 124.96 to a high horizontal swing at 125.03, then up over the head at 125.06-125.09. Few in-between frames, so it reads as a snap.",
+     "fix": "Add in-between frames or ease the arm swing, with a short anticipation before it."
+    },
+    {
+     "t": 125.66,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "Large bare arms and hands enter from the right and top edge (125.66-125.83) and cross the frame beside the dancer. This is the 'three of him' idea read as stray limbs. It matches the frame-difference spike and is distracting.",
+     "fix": "Keep the other dancers' limbs out of frame or show them fully, and place them clearly in the composition."
+    },
+    {
+     "t": 125.83,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Symmetrical, stiff A-pose: both arms hang out at equal angles with legs apart and no clear line of action (125.79-125.89).",
+     "fix": "Offset the arms and tilt the shoulders and hips to give one clear line."
+    },
+    {
+     "t": 126.26,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A flat, unshaded blue square crosses the frame: it starts above the head at 126.19-126.23, then sits over his head and back at 126.26-126.29 and falls past his side at 126.33-126.36. It covers part of the silhouette and looks like a UI sticker, not confetti.",
+     "fix": "Shade the confetti, or remove or shrink the big blue cube. Keep it from crossing the dancer's body."
+    },
+    {
+     "t": 126.13,
+     "sev": "C",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "At 126.13-126.19 his reaching hand overlaps the topiary, and the arm reads as touching or going through it.",
+     "fix": "Shift the reach so the hand stays clear of the topiary, or offset the dancer."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0248
+  },
+  {
+   "id": "c2_point",
+   "from": 126.5,
+   "to": 128.23333333333332,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 126.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut is clean and the camera and pose hold steady, but large flat unlit confetti squares sweep across the frame in the first frames of the shot.",
+   "faults": [
+    {
+     "t": 126.59,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A large flat orange square with no shading or lighting passes in front of the raised arm and shoulder. It reads as a pasted-on 2D shape, not 3D confetti. It also covers part of the arm silhouette.",
+     "fix": "Light and shade the confetti, or shrink it and keep it behind or away from the character."
+    },
+    {
+     "t": 126.63,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A huge flat orange square fills the lower left, with a flat blue square above it and a smaller orange one beside it. All are unshaded. They compete with the subject and the turkeys.",
+     "fix": "Use smaller shaded confetti, and cut the spawn size near the camera."
+    },
+    {
+     "t": 126.66,
+     "sev": "C",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Flat unshaded blue and orange squares are still crossing the lower left and bottom of the frame (blue square at 126.66, another blue at 126.69). They are distracting but do not hide him.",
+     "fix": "Fade or cull the near-camera confetti sooner."
+    },
+    {
+     "t": 126.53,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "The raised hand is cropped off the top of the frame, so the point or wave gesture is not visible.",
+     "fix": "Tilt the camera up slightly or lower the arm so the hand stays in frame."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0181
+  },
+  {
+   "id": "c2_low",
+   "from": 128.23333333333332,
+   "to": 130.73333333333332,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 128.233,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 129.1,
+     "why": "flow spike x17.6",
+     "file": "spike-03873.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 130.3,
+     "why": "flow spike x7.6",
+     "file": "spike-03909.jpg"
+    }
+   ],
+   "summary": "The cut is clean, but the 129.09-129.33 strip is a heavy white-out that fades in with the turkey crowd changing to gold feathers, and the lower-left figure's frame-edge crop is a minor issue.",
+   "faults": [
+    {
+     "t": 129.09,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Heavy bright cream wash-out over the whole frame fading down over about 10 frames; the background turkeys also swap from white with bow ties to flat gold feather shapes between 129.19 and 129.23, a sudden change in the crowd.",
+     "fix": "Smooth the flash decay and keep the crowd asset the same across the fade, or hide the swap under the peak of the white."
+    },
+    {
+     "t": 130.29,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "Main figure is cropped at the head and the raised arm leaves frame, while the second figure is half cut off at the right edge; the pose reads as muddled, and confetti and feathers clutter the frame.",
+     "fix": "Reframe or tilt the camera to keep the head and arm in frame, and thin the confetti near the figures."
+    },
+    {
+     "t": 128.36,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Both figures use near-identical hip-lean and hands-on-hips poses in sync, which reads twinned and stiff, and the near figure's head is cut by the top edge.",
+     "fix": "Offset the second figure's timing or pose and lower the camera tilt so the head is in frame."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0182
+  },
+  {
+   "id": "c2_orbit_b",
+   "from": 130.73333333333332,
+   "to": 133.4,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 130.733,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 130.8,
+     "why": "flow spike x7.6",
+     "file": "spike-03924.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 131.167,
+     "why": "one patch jumps (cell 81, x1.8)",
+     "file": "spike-03935.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 131.5,
+     "why": "one patch jumps (cell 114.3, x1.6)",
+     "file": "spike-03945.jpg"
+    }
+   ],
+   "summary": "The cut strip has a fade-in at the start of the shot and a confetti-covered turn at 131.5; the flicker and the unlit confetti squares are the main faults.",
+   "faults": [
+    {
+     "t": 130.79,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The shot opens on a semi-transparent, washed-out frame of the man that fades in over about 6 frames (130.79 to 130.93). The pose is nearly frozen: same arm and head, barely moving. It reads as a ghosted dissolve, not a clean first frame. The camera is also a tight, different close-up compared with the wide frame at 130.76.",
+     "fix": "Cut to the full-opacity frame on the first frame, or hide the fade behind a hard cut. Start the move on frame 1."
+    },
+    {
+     "t": 130.89,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 130.79 to 130.99 the body and arm are almost static, with only a slow drift. This mushy hold lacks a strong pose and any anticipation before the turn at 131.03.",
+     "fix": "Hold a clear pose, then snap into the turn, or trim these frames."
+    },
+    {
+     "t": 131.53,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Large flat, unshaded confetti squares (red, orange, teal) cross in front of the head and torso at 131.53 to 131.56. They are unlit and hide part of his face, then another sits over his hand at 131.63 to 131.66.",
+     "fix": "Shade or shrink the confetti, or keep it from passing between the camera and his head and torso."
+    },
+    {
+     "t": 131.36,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "He turns his back to the camera at 131.39. The arm becomes a stump with the forearm and hand hidden or clipped into the body, and the silhouette is lost.",
+     "fix": "Adjust the arm swing or camera angle so the forearm stays readable in the turn."
+    },
+    {
+     "t": 131.59,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "Between 131.49 and 131.73 the body spins fast with a big head and torso jump per frame. The facing flips from front to profile to back in about 3 frames, and the figure's position in the frame jumps around. The camera arc fights the spin and he drifts without a clear weight shift.",
+     "fix": "Add anticipation and a settle on the spin, and keep the camera orbit steady so the subject stays centered."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0242
+  },
+  {
+   "id": "c2_med",
+   "from": 133.4,
+   "to": 135.86666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 133.4,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 135.033,
+     "why": "flow spike x2.1",
+     "file": "spike-04051.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 135.433,
+     "why": "flow spike x5.1",
+     "file": "spike-04063.jpg"
+    }
+   ],
+   "summary": "Mostly clean: I couldn't see a pop or flicker at either flagged spike, only a raised hand cropped at the top edge and a pink feather that doesn't move.",
+   "faults": [
+    {
+     "t": 135.43,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "His raised right hand is cut off by the top edge of the frame through the whole strip (135.43 to 135.66). The gesture's end point is lost and the head sits tight to the top.",
+     "fix": "Tilt the camera up or lower the framing a little for this beat so the hand stays inside the frame."
+    },
+    {
+     "t": 135.43,
+     "sev": "C",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "A large pink feather hangs in front of the right turkey's body and barely moves across the tiles, so it looks stuck to the bird. The 5x flow spike here may come from the feather or the turkey's motion, not from him.",
+     "fix": "Let the feather drift or fall, or move it away from the turkey so it doesn't look attached."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0209
+  },
+  {
+   "id": "alone_fog",
+   "from": 135.86666666666667,
+   "to": 139.36666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 135.867,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 135.933,
+     "why": "one patch jumps (cell 158.2, x13.1)",
+     "file": "spike-04078.jpg"
+    }
+   ],
+   "summary": "The shot opens from a heavy white fog and fades in smoothly over about six frames with no pops. The figure holds nearly still, so the spike at 135.933 is just the fog fade, not a fault.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0113
+  },
+  {
+   "id": "hand_opens",
+   "from": 139.36666666666667,
+   "to": 142.8,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 139.367,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the cut at 139.43 to 139.46 lands straight on the held pose, with the fist and grass blade steady and no pops, flicker or clipping across the frames.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.014
+  },
+  {
+   "id": "rise",
+   "from": 142.8,
+   "to": 144.53333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 142.8,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is clean: the camera glides steadily over the path toward the pink ribbon with no pops, flicker or lurches.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0113
+  },
+  {
+   "id": "ribbon_far",
+   "from": 144.53333333333333,
+   "to": 146.23333333333332,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 144.533,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "Clean cut strip: a slow, even drift across all frames with no pops, flicker or clipping.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0119
+  },
+  {
+   "id": "tv_pull",
+   "from": 146.23333333333332,
+   "to": 147.96666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 146.233,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The first frames of the shot hold nearly still, then the camera starts a quick pull-back or pan over frames 3 to 5 (146.33 to 146.39) that reveals the wall beside the TV, which reads as the cut tweening. I saw no flicker or other faults.",
+   "faults": [
+    {
+     "t": 146.36,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The TV bezel is almost stationary between 146.26 and 146.29, then slides left by about 20 to 30 px per frame from 146.33 on. The camera starts moving sharply right after the cut, and the wall to the right of the TV appears suddenly. This looks like the cut tweening into the move instead of a shot that is already established.",
+     "fix": "Hold the first shot framing for the first few frames, or start the camera move already at speed on the first frame of the shot. Alternatively, trim the first 3 to 4 frames so the shot begins mid-move."
+    }
+   ],
+   "reused": false,
+   "cost": 0.0157
+  },
+  {
+   "id": "darling",
+   "from": 147.96666666666667,
+   "to": 150.53333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 147.967,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the camera is locked, the pose and remote stay steady across the cut, and I can't point to a pop, clip or render fault in any tile.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0119
+  },
+  {
+   "id": "pot",
+   "from": 150.53333333333333,
+   "to": 151.36666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 150.533,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is clean: the pot and bow sit still on the table, the camera doesn't move, and I can't see any pop, clipping or flicker.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0112
+  },
+  {
+   "id": "better",
+   "from": 151.36666666666667,
+   "to": 153.96666666666667,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 151.367,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut strip is clean: torso, couch, remote and hands hold steady across all eight tiles with no pops, flicker or clipping I can point to.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0133
+  },
+  {
+   "id": "click_off",
+   "from": 153.96666666666667,
+   "to": 154.76666666666668,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 153.967,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The strip is very dark, and the ghostly hand with its pointing arm holds steady across all eight frames. I see no pops, flicker or cut tweening.",
+   "faults": [],
+   "reused": false,
+   "cost": 0.0084
+  }
+ ]
+}

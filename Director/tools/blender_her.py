@@ -2,7 +2,7 @@
 person2. His finished body (same 51 bones, same Body maps) from gen/person_work/final.blend, with his head, hair and mouth taken off and
 the Mixamo Ch37 head put on: artist-modelled, with its own texture. It keeps the layout his Head maps use (head islands in the lower 80%,
 hair strip above), so she takes two materials like him. Writes Person2.fbx and Person2_Head_*.png.
-Shape keys have his names: jawOpen blink eyesWide smile fear. They are simple deformations from landmarks, not his sculpted set."""
+Shape keys have his names: jawOpen blink eyesWide smile fear, plus face_shapes.py's acting set. They are simple deformations from landmarks, not his sculpted set."""
 import bpy, bmesh, sys, os, math
 import numpy as np
 from mathutils import Vector
@@ -449,6 +449,9 @@ key("blink", lids(1))
 key("eyesWide", lids(-1))
 key("smile", smile() + lids(.1))
 key("fear", lids(-1) + brows(1) + jaw(2))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import face_shapes                        # the acting shapes on top (face_shapes.py, shared with him); every key left at 0
+face_shapes.add(ob, os.path.join(OUT, "Person2_Head_BaseMap.png"))
 print("TRIS", sum(len(p.vertices) - 2 for p in me.polygons), "KEYS", [k.name for k in me.shape_keys.key_blocks[1:]], "BONES", len(arm.data.bones))
 bpy.ops.wm.save_as_mainfile(filepath=os.path.join(WORK, "her.blend"))
 bpy.ops.object.select_all(action="DESELECT"); arm.select_set(True); ob.select_set(True); bpy.context.view_layer.objects.active = arm

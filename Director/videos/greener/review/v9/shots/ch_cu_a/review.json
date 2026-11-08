@@ -1,0 +1,69 @@
+{
+ "id": "ch_cu_a",
+ "f0": 1558,
+ "f1": 1609,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 51.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 52.333,
+   "why": "one patch jumps (cell 102.3, x1.5)",
+   "file": "spike-01570.jpg"
+  }
+ ],
+ "hash": "0d0fb1e56bf67217",
+ "summary": "The face and camera push hold up, but the arms snap through fast poses in both strips and large flat confetti squares cross the frame at the cut.",
+ "faults": [
+  {
+   "t": 52.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "His left arm swings from raised beside the head (51.96) to across the belly (52.09) in about 4 frames. The forearm and hand jump between tiles with no ease, so the arm reads as snapping. The head also tilts and shifts at 52.06 to 52.09.",
+   "fix": "Add in-between frames or ease the arm move over the cut. Retime the arm so it doesn't swing so far in 4 frames."
+  },
+  {
+   "t": 52.06,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Large flat, unshaded red and green confetti squares pass close to the camera at the lower left (52.03, 52.06, 52.09). They read as unlit paper cutouts and are distracting.",
+   "fix": "Shade the confetti or make it smaller. Keep near-camera pieces out of the frame during the face push."
+  },
+  {
+   "t": 52.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "At 52.33 to 52.43 the raised left arm, with its hand at the left frame edge, drops to low in front of the body in about 3 frames. This matches the spike at 52.333. The torso and head also shift position between tiles, so the whole body lurches.",
+   "fix": "Smooth the arm and torso curve across 52.33 to 52.43 and add in-betweens."
+  },
+  {
+   "t": 52.33,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "His hand is cut off by the left frame edge at 52.33 and 52.36. The other hand sits at the bottom edge. The push-in is meant to be on his face, but the hands fight for attention.",
+   "fix": "Keep the gesture hands inside the frame or lower them out of the shot."
+  },
+  {
+   "t": 52.5,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "From 52.46 to 52.56 the forearm lies flat across the chest and the pose barely changes. It reads mushy and hides his torso line, with no clear silhouette.",
+   "fix": "Hold a clear pose or open the hand away from the body."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4979,
+  "out": 1484
+ },
+ "cost": 0.0248
+}

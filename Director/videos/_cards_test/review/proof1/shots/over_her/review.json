@@ -1,0 +1,31 @@
+{
+ "id": "over_her",
+ "f0": 304,
+ "f1": 345,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 10.133,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "d3fbc61986d566a9",
+ "summary": "The cut strip is clean, with no pops, flicker or clipping, but the seated figure is almost frozen and shows no sign yet of \"he finally looks up\".",
+ "faults": [
+  {
+   "t": 10.3,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "From 10.16 to 10.40 the head, eyes and expression barely change. He holds a flat stare with a stiff torso and no visible look-up beat or anticipation, so the 'finally looks up' idea doesn't read yet.",
+   "fix": "Add a small head tilt and eye lead, or a blink, in the first few frames of the shot. This sets up the look-up."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3541,
+  "out": 477
+ },
+ "cost": 0.0119
+}

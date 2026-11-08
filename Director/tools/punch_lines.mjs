@@ -1,0 +1,71 @@
+#!/usr/bin/env node
+// Hawkes Punch's spoken lines: the doctor's prescription, her punch line and the announcer. Writes videos/hawkespunch/acts/70-lines.json
+// (an `sfx` cue per line, and a placeholder mouth on the doctor: her jaw follows the line's own envelope, read from the mp3 with ffmpeg)
+// and videos/hawkespunch/duck.json, which tools/mv/sound.mjs reads to drop the song under each line. Generated: never edit the act.
+//   node Director/tools/punch_lines.mjs            [--export]
+// LINES below is the direction: when each line starts, in song seconds. Keep each line's end on the beat it was cut for.
+// Once videos/hawkespunch/lines.json exists it is the direction instead (same fields), so `mv cards insert/remove` can move the starts
+// with every other time in the video. `--export` writes LINES there once and changes nothing else.
+import fs from 'node:fs';
+import path from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
+const DIR = path.join(ROOT, 'Director', 'videos', 'hawkespunch'), SFX = 'Assets/MusicVideo/Sfx/punch';
+// start: song seconds. mouth: the actor whose jaw flaps. duck: how far the song drops under it (0.4 = to 40%).
+const LINES = [
+  { file: 'symptoms/doctor_ask.mp3', start: 20.54, mouth: 'doctor', volume: 1.0, duck: 0.45 },           // sym_ask: "So. Tell me about your symptoms." over the wide (9:1)
+  { file: 'symptoms/him_symptoms_tight.mp3', start: 22.866, mouth: 'person', volume: 1.0, duck: 0.45 },  // sym_music..sym_vibe: the overshare, 21 s from 10:1; cuts sit in its pauses
+  { file: 'symptoms/doctor_space_ghost.mp3', start: 45.133, mouth: 'doctor', volume: 1.0, duck: 0.45 }, // sym_ghost_her: after the beat of silence, deadpan, still writing
+  { file: 'symptoms/him_space_ghost.mp3', start: 47.526, mouth: 'person', volume: 1.0, duck: 0.45 },    // sym_ghost_him: dreamy
+  { file: 'doctor_rx_a.mp3', start: 55.125, mouth: 'doctor', volume: 1.0, duck: 0.45 },          // d_can: "every day until the symptoms go away"
+  { file: 'doctor_line_a.mp3', start: 63.315, mouth: 'doctor', volume: 1.0, duck: 0.35 },       // the line, ends just before the punch on 30:1 (73.119)
+  { file: 'announcer_a.mp3', start: 176.725, mouth: null, volume: 0.95, duck: 0.45 },            // the commercial's voice-over, under the side-effects ticker
+];
+const LINES_FILE = path.join(DIR, 'lines.json');
+if (process.argv.includes('--export')) {
+  if (fs.existsSync(LINES_FILE)) { console.error(`${LINES_FILE} already exists: it is the direction now`); process.exit(1); }
+  fs.writeFileSync(LINES_FILE, JSON.stringify({ about: 'Hawkes Punch spoken lines: start in video seconds, the mp3 under Assets/MusicVideo/Sfx/punch, mouth = whose jaw follows it, duck = how far the song drops. tools/punch_lines.mjs reads this.', lines: LINES }, null, 1) + '\n');
+  console.log(`wrote ${LINES_FILE} (${LINES.length} lines); punch_lines.mjs reads it from now on`);
+  process.exit(0);
+}
+if (fs.existsSync(LINES_FILE)) { LINES.length = 0; LINES.push(...JSON.parse(fs.readFileSync(LINES_FILE, 'utf8')).lines); }
+// more lines (the punch-up: space and the commercial) live in videos/hawkespunch/lines2.json, same fields; file is relative to Sfx/punch (e.g. lines2/x.mp3).
+// mouth: person, doctor, other (his double) or null for a voice-over.
+const EXTRA = path.join(DIR, 'lines2.json');
+if (fs.existsSync(EXTRA)) LINES.push(...JSON.parse(fs.readFileSync(EXTRA, 'utf8')).map((l) => ({ volume: 1.0, duck: 0.45, mouth: null, ...l })));
+for (const L of LINES) if (L.mouth && !['person', 'doctor', 'other'].includes(L.mouth)) throw new Error(`${L.file}: mouth must be person, doctor, other or null, not ${L.mouth}`);
+const RATE = 8000, HZ = 30;
+const cues = [], duck = [];
+for (const L of LINES) {
+  const file = path.join(ROOT, SFX, L.file);
+  const raw = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-ac', '1', '-ar', String(RATE), '-f', 's16le', '-'], { maxBuffer: 1 << 28 });
+  const pcm = new Int16Array(raw.buffer, raw.byteOffset, raw.length >> 1), N = Math.floor(pcm.length / RATE * HZ), env = new Float64Array(N);
+  for (let i = 0; i < N; i++) { let s = 0, c = 0; for (let j = i * RATE / HZ | 0, e = Math.min(pcm.length, (i + 1) * RATE / HZ | 0); j < e; j++, c++) s += pcm[j] * pcm[j]; env[i] = Math.sqrt(s / (c || 1)); }
+  const top = [...env].sort((a, b) => a - b)[N * .97 | 0] || 1, len = pcm.length / RATE;
+  cues.push({ at: `${L.start.toFixed(3)}s`, sfx: `${SFX}/${L.file}`, volume: L.volume });
+  duck.push({ from: +L.start.toFixed(3), to: +(L.start + len).toFixed(3), gain: L.duck, fade: 0.35 });
+  if (L.mouth) {
+    // the jaw: a key every frame the level moves, scaled to 0.38 at the line's loudest, shut in the gaps, so it reads as speech and never as a held yawn
+    let last = -1;
+    for (let i = 0; i < N; i += 2) {
+      const lv = Math.min(1, Math.max(0, (env[i] / top - .12) / .88)), jaw = +(Math.pow(lv, .7) * .38).toFixed(3);
+      if (Math.abs(jaw - last) < .03 && jaw > 0) continue;
+      cues.push({ at: `${(L.start + i / HZ).toFixed(3)}s`, do: 'face', on: L.mouth, jawOpen: jaw, for: `${(2 / HZ).toFixed(3)}s` });
+      last = jaw;
+    }
+    cues.push({ at: `${(L.start + len + .05).toFixed(3)}s`, do: 'face', on: L.mouth, jawOpen: 0, for: '0.12s' });
+  }
+}
+cues.sort((a, b) => parseFloat(a.at) - parseFloat(b.at));
+const head = '// GENERATED by Director/tools/punch_lines.mjs: the spoken lines as sfx, the doctor\'s placeholder mouth on their envelopes. Change the tool, not this.\n';
+const { warnIfLeased } = await import('./mv/lease.mjs'), { register } = await import('./mv/generated.mjs');
+warnIfLeased(path.join(DIR, 'acts', '70-lines.json')); warnIfLeased(path.join(DIR, 'duck.json'));
+fs.writeFileSync(path.join(DIR, 'acts', '70-lines.json'), head + '{\n "cues": [\n' + cues.map((q) => '  ' + JSON.stringify(q)).join(',\n') + '\n ]\n}\n');
+fs.writeFileSync(path.join(DIR, 'duck.json'), JSON.stringify(duck, null, 1));
+// generated.json: what made these and from what, so mv build regenerates them when a line or an mp3 changes (tools/mv/generated.mjs)
+const INPUTS = ['lines.json', 'lines2.json', ...new Set(LINES.map((L) => `${SFX}/${L.file}`))];
+register(DIR, 'acts/70-lines.json', { tool: 'node Director/tools/punch_lines.mjs', inputs: INPUTS });
+register(DIR, 'duck.json', { tool: 'node Director/tools/punch_lines.mjs', inputs: INPUTS });
+console.log(`${LINES.length} lines, ${cues.length} cues; duck ranges: ${duck.map((d) => `${d.from}-${d.to} x${d.gain}`).join(', ')}`);

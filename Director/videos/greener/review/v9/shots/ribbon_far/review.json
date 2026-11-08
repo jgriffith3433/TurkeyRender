@@ -1,0 +1,22 @@
+{
+ "id": "ribbon_far",
+ "f0": 4336,
+ "f1": 4387,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 144.533,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "b899379b0715b4b6",
+ "summary": "Clean cut strip: a slow, even drift across all frames with no pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3564,
+  "out": 476
+ },
+ "cost": 0.0119
+}

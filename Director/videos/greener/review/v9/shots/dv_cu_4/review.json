@@ -1,0 +1,67 @@
+{
+ "id": "dv_cu_4",
+ "f0": 2432,
+ "f1": 2510,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 81.067,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 81.3,
+   "why": "one patch jumps (cell 65.6, x2)",
+   "file": "spike-02439.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 83.5,
+   "why": "one patch jumps (cell 111.3, x2.4)",
+   "file": "spike-02505.jpg"
+  }
+ ],
+ "hash": "490576a6438c3a89",
+ "summary": "The shot is mostly clean, but the first frames after the cut have a fast arm swing that reads as tweening, and the face is cropped off in every close frame.",
+ "faults": [
+  {
+   "t": 81.19,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Right arm and torso move fast from 81.16 to 81.29. The hand goes from low at the hip to a fist at the chest in about 4 frames, and the torso shifts in frame at the same time. This looks like the cut tweening into the pose, not a held first frame.",
+   "fix": "Start the shot already on the fist-at-chest pose, or trim the first ~6 frames so the shot opens on the held pose."
+  },
+  {
+   "t": 81.3,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The head is cropped at the nose or mouth in the close frames (81.2 to 81.5 and 83.49 to 83.63). On a 'he means this' shot to the lens, the eyes are cut off and the face does no acting.",
+   "fix": "Tilt the camera up or reframe so the eyes and mouth are in frame."
+  },
+  {
+   "t": 81.43,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 81.33 to 81.53 the fist stays at the chest almost frozen, and the other hand hangs limp and unchanged. The pose is stiff, and the fist is pressed flat against the torso.",
+   "fix": "Add a small push or settle on the fist, and pull it a little off the chest."
+  },
+  {
+   "t": 83.59,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The swinging hand goes to the right edge of the frame and is partly cut off at 83.59. The face is also cropped, and the fingers are splayed and floppy.",
+   "fix": "Keep the hand inside the frame or move the camera slightly right."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6361,
+  "out": 1639
+ },
+ "cost": 0.0291
+}

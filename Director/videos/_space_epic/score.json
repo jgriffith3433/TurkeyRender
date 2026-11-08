@@ -1,0 +1,9 @@
+{
+  // _space_epic: the proof of the real-scale space set (library/sets/space_epic.json). Not a video for J. Made by hand (mv new names can't start with _).
+  "song": "Assets/Song/Audio.mp3",
+  "music": 0,
+  "native": true,
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {} }
+}

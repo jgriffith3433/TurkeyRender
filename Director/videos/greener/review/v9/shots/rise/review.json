@@ -1,0 +1,22 @@
+{
+ "id": "rise",
+ "f0": 4284,
+ "f1": 4336,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 142.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "c212e9c4897c5f82",
+ "summary": "The cut strip is clean: the camera glides steadily over the path toward the pink ribbon with no pops, flicker or lurches.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 418
+ },
+ "cost": 0.0113
+}

@@ -1,0 +1,39 @@
+{
+ "id": "weakness",
+ "f0": 529,
+ "f1": 606,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 17.633,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "3c6f50f0e9d7497e",
+ "summary": "The cut itself is clean and the torso is steady, but the head rises sharply between 17.76 and 17.80 and the eyes end up against the top edge, which hurts the eye-flick idea.",
+ "faults": [
+  {
+   "t": 17.8,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 17.76 and 17.80 the head lifts and turns up in one frame, while the shoulders and torso barely move. The face goes from looking down, with the mouth and nose low, to level, with the eyes near the top edge. It reads as a head snap right after the cut, not a smooth turn.",
+   "fix": "Key a few in-between head frames, or start the shot on the raised head pose so there is no move over frames 3 to 5."
+  },
+  {
+   "t": 17.83,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "From 17.80 onward the eyes and brow sit at the very top edge and the hairline is cropped. The shot is about the eyes going to the house and away, and they are almost out of frame.",
+   "fix": "Tilt the camera up or reframe so the eyes sit in the upper third with headroom."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3565,
+  "out": 1106
+ },
+ "cost": 0.0182
+}

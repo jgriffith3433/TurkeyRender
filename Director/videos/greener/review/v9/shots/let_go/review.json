@@ -1,0 +1,47 @@
+{
+ "id": "let_go",
+ "f0": 2227,
+ "f1": 2279,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 74.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "7e820f17b944677f",
+ "summary": "The cut is clean, with no snap or flicker, but the pose is stiff and the face is blank over these frames, so there is no sign yet of a free twirl.",
+ "faults": [
+  {
+   "t": 74.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Arms hang straight and stiff at his sides, and the legs are close together with knees slightly bent. The silhouette is symmetrical and doesn't read as the start of a twirl or as 'free'.",
+   "fix": "Open the arms and give one clear line of action, such as a lean or a wind-up that sets up the twirl."
+  },
+  {
+   "t": 74.43,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 74.36 to 74.49 he bobs and shifts slightly with no anticipation or hip lead. The body drifts and looks mushy, with no strong pose held before the move.",
+   "fix": "Hold a clear anticipation pose with the hips dropped and turned, then move quickly into the twirl."
+  },
+  {
+   "t": 74.39,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His expression is neutral and fixed. His eyes and head don't lead, and nothing signals the 'let go' feeling.",
+   "fix": "Have the head and eyes lead the turn, and add a lifted or smiling expression."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3559,
+  "out": 1006
+ },
+ "cost": 0.0172
+}

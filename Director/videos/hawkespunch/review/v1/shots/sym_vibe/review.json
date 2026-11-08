@@ -1,0 +1,31 @@
+{
+ "id": "sym_vibe",
+ "f0": 1222,
+ "f1": 1321,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 40.733,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "969b968bb5c9fd97",
+ "summary": "The strip is mostly clean: a tight static crop of the neck and shoulder with a slow drift and no pops or flicker. The only issue is that the face is cropped to the chin, so the idea of the hand searching for the word isn't visible.",
+ "faults": [
+  {
+   "t": 40.76,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The crop cuts the face off at the right edge and top, leaving only the ear, jaw, neck and shoulder. The shot idea is a hand searching for the word, but no hand is visible and the eye is barely in frame. The face can't carry the expression.",
+   "fix": "Reframe so the face and the searching hand are in frame, or shift the camera left and down."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 296
+ },
+ "cost": 0.0101
+}

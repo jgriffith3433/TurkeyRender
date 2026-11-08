@@ -1,0 +1,112 @@
+{
+  // Hawkes Punch B1: the boop; a reach on top lands the fingertip on his nose.
+
+ "name": "hp_b1_boop",
+ "about": "B1 boop (s6_boop): the double leans in, index finger out to his nose (6f), the boop (2f), held 6f grinning, then pulls back as the push sends them apart; the DOUBLE on zg_neutral_a.",
+ "seed": {
+  "clip": "zg_neutral_a",
+  "t": 0
+ },
+ "length": 2.0,
+ "poses": {
+  "float": {
+   "from": {
+    "clip": "zg_neutral_a",
+    "t": 0
+   }
+  },
+  "reach": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 0.4,
+    "Right Arm Front-Back": -0.55,
+    "Right Forearm Stretch": 0.6,
+    "Spine Front-Back": -0.08,
+    "Neck Nod Down-Up": 0.1
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.95
+    },
+    "right.index": {
+     "curl": 0.0,
+     "spread": 0
+    },
+    "right.thumb": {
+     "curl": 0.7
+    }
+   },
+   "root": {
+    "rot": [
+     6,
+     0,
+     0
+    ]
+   }
+  },
+  "boop": {
+   "from": "reach",
+   "muscles": {
+    "Right Forearm Stretch": 0.85,
+    "Right Arm Front-Back": -0.6
+   },
+   "root": {
+    "rot": [
+     8,
+     0,
+     0
+    ]
+   }
+  },
+  "back": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 0.2,
+    "Right Arm Front-Back": -0.3,
+    "Right Forearm Stretch": 0.4,
+    "Spine Front-Back": 0.08
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.6
+    },
+    "right.index": {
+     "curl": 0.2
+    }
+   },
+   "root": {
+    "rot": [
+     -6,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "float",
+   "hold": "4f"
+  },
+  {
+   "t": "10f",
+   "pose": "reach",
+   "interp": "ease",
+   "step": 2
+  },
+  {
+   "t": "12f",
+   "pose": "boop",
+   "interp": "linear",
+   "hold": "6f"
+  },
+  {
+   "t": "30f",
+   "pose": "back",
+   "interp": "out",
+   "step": 2,
+   "hold": "12f"
+  }
+ ]
+}

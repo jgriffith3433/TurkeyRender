@@ -1,0 +1,156 @@
+{
+ "name": "jump_scare",
+ "about": "Boo: from a coil he explodes at `boom`: arms thrown wide and forward (Idle1Yell's yell frame, opened out), fingers spread, jaw wide, eyes wide, with anticipation and overshoot, and holds the shape `hold` seconds. Any length over 1.2 s; no ground needed. Ends in the shape. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.6s",
+ "min": "1s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "boom": 0.3,
+  "hold": 0.8
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "keys",
+   "successive": 0.035,
+   "keys": [
+    {
+     "t": "=boom-0.14",
+     "ease": "in",
+     "pose": "crouch",
+     "bones": {
+      "head": [
+       8,
+       0,
+       0
+      ],
+      "leftUpperArm": [
+       10,
+       0,
+       0
+      ],
+      "rightUpperArm": [
+       10,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=boom+0.1",
+     "ease": "out",
+     "overshoot": 0.16,
+     "settle": "0.35s",
+     "hold": "$hold",
+     "from": "Idle1Yell@1.12",
+     "hips": [
+      0,
+      0.03,
+      0.05
+     ],
+     "bones": {
+      "leftUpperArm": [
+       -25,
+       0,
+       55
+      ],
+      "rightUpperArm": [
+       -25,
+       0,
+       -55
+      ],
+      "leftLowerArm": [
+       -20,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -20,
+       0,
+       0
+      ],
+      "chest": [
+       -8,
+       0,
+       0
+      ],
+      "head": [
+       -6,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": "=boom-0.1",
+   "do": "face",
+   "blink": 0.6,
+   "smile": 0.5,
+   "for": "0.1s"
+  },
+  {
+   "at": "=boom+0.02",
+   "do": "face",
+   "jawOpen": 1,
+   "eyesWide": 1,
+   "blink": 0,
+   "smile": 0.3,
+   "fear": 0.3,
+   "for": "0.08s",
+   "ease": "out"
+  },
+  {
+   "at": "=boom",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": "=boom",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": "=boom+0.02",
+   "do": "fingers",
+   "hand": "left",
+   "finger": "thumb",
+   "set": 0.05,
+   "for": "0.1s"
+  },
+  {
+   "at": "=boom+0.02",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "thumb",
+   "set": 0.05,
+   "for": "0.1s"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

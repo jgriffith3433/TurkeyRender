@@ -1,0 +1,31 @@
+{
+ "id": "tv_pull",
+ "f0": 4387,
+ "f1": 4439,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 146.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "d7265f5856fff499",
+ "summary": "The shot opens nearly still on the TV picture, then the camera pull-back starts abruptly at 146.39 and moves at a steady fast rate after that.",
+ "faults": [
+  {
+   "t": 146.39,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The TV screen's right edge barely moves from 146.26 to 146.36, at about 285-300 px in tile coordinates. Then it jumps to about 245 px at 146.39 and keeps moving about 30 px per frame (213, 180, 153). The camera pull-back starts with a sudden lurch after a near-hold, so it reads as the cut tweening.",
+   "fix": "Ease the pull-back in over the first 6 to 8 frames, or start it at the cut. Alternatively, hold the framing steady until the move begins."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3561,
+  "out": 838
+ },
+ "cost": 0.0155
+}

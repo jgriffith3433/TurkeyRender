@@ -1,0 +1,37 @@
+{
+ "id": "funny",
+ "f0": 221,
+ "f1": 323,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 7.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 9.067,
+   "why": "frame difference x3.7 (6.65)",
+   "file": "spike-00272.jpg"
+  }
+ ],
+ "hash": "0f42ef793a9e7841",
+ "summary": "Strip 1 shows a cut at 7.43 with a small settle and no visible pop, and strip 2 shows no visible spike at 9.07. The face looks fairly static, with a faint head tilt and little expression change.",
+ "faults": [
+  {
+   "t": 9.2,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Across 9.06-9.30 the face holds almost the same soft smile and direct stare with no blink or brow change. The head tilt is very slight, so 'he has us' reads weakly.",
+   "fix": "Add a blink and a small brow lift on the head tilt, and push the tilt a few degrees further."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4961,
+  "out": 274
+ },
+ "cost": 0.0127
+}

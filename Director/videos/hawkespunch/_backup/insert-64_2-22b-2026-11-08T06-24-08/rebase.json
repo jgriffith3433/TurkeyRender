@@ -1,0 +1,2637 @@
+{
+ "op": "insert",
+ "video": "hawkespunch",
+ "at": "159.279s",
+ "length": "22b",
+ "beat": 253,
+ "beats": 22,
+ "T": 159.279,
+ "seconds": 13.838,
+ "ibi": 0.629,
+ "bar": "64:2",
+ "files": {
+  "acts/00-cast.json": {
+   "moved": 1,
+   "dropped": 0,
+   "changes": [
+    {
+     "at": "acts/00-cast.json:65",
+     "key": "at",
+     "old": "78:1",
+     "new": "83:3"
+    }
+   ],
+   "drops": []
+  },
+  "acts/60-face.json": {
+   "moved": 24,
+   "dropped": 0,
+   "changes": [
+    {
+     "at": "acts/60-face.json:69",
+     "key": "at",
+     "old": "159.39s",
+     "new": "173.228s"
+    },
+    {
+     "at": "acts/60-face.json:70",
+     "key": "at",
+     "old": "159.64s",
+     "new": "173.478s"
+    },
+    {
+     "at": "acts/60-face.json:71",
+     "key": "at",
+     "old": "162.20s",
+     "new": "176.038s"
+    },
+    {
+     "at": "acts/60-face.json:72",
+     "key": "at",
+     "old": "162.37s",
+     "new": "176.208s"
+    },
+    {
+     "at": "acts/60-face.json:73",
+     "key": "at",
+     "old": "165.56s",
+     "new": "179.398s"
+    },
+    {
+     "at": "acts/60-face.json:74",
+     "key": "at",
+     "old": "166.35s",
+     "new": "180.188s"
+    },
+    {
+     "at": "acts/60-face.json:75",
+     "key": "at",
+     "old": "168.54s",
+     "new": "182.378s"
+    },
+    {
+     "at": "acts/60-face.json:76",
+     "key": "at",
+     "old": "169.67s",
+     "new": "183.508s"
+    },
+    {
+     "at": "acts/60-face.json:77",
+     "key": "at",
+     "old": "171.63s",
+     "new": "185.468s"
+    },
+    {
+     "at": "acts/60-face.json:78",
+     "key": "at",
+     "old": "173.79s",
+     "new": "187.628s"
+    },
+    {
+     "at": "acts/60-face.json:79",
+     "key": "at",
+     "old": "175.97s",
+     "new": "189.808s"
+    },
+    {
+     "at": "acts/60-face.json:80",
+     "key": "at",
+     "old": "177.09s",
+     "new": "190.928s"
+    },
+    {
+     "at": "acts/60-face.json:81",
+     "key": "at",
+     "old": "180.02s",
+     "new": "193.858s"
+    },
+    {
+     "at": "acts/60-face.json:82",
+     "key": "at",
+     "old": "181.41s",
+     "new": "195.248s"
+    },
+    {
+     "at": "acts/60-face.json:83",
+     "key": "at",
+     "old": "183.17s",
+     "new": "197.008s"
+    },
+    {
+     "at": "acts/60-face.json:84",
+     "key": "at",
+     "old": "185.54s",
+     "new": "199.378s"
+    },
+    {
+     "at": "acts/60-face.json:85",
+     "key": "at",
+     "old": "187.36s",
+     "new": "201.198s"
+    },
+    {
+     "at": "acts/60-face.json:86",
+     "key": "at",
+     "old": "188.14s",
+     "new": "201.978s"
+    },
+    {
+     "at": "acts/60-face.json:87",
+     "key": "at",
+     "old": "190.34s",
+     "new": "204.178s"
+    },
+    {
+     "at": "acts/60-face.json:88",
+     "key": "at",
+     "old": "191.11s",
+     "new": "204.948s"
+    },
+    {
+     "at": "acts/60-face.json:89",
+     "key": "at",
+     "old": "193.65s",
+     "new": "207.488s"
+    },
+    {
+     "at": "acts/60-face.json:90",
+     "key": "at",
+     "old": "195.35s",
+     "new": "209.188s"
+    },
+    {
+     "at": "acts/60-face.json:91",
+     "key": "at",
+     "old": "197.79s",
+     "new": "211.628s"
+    },
+    {
+     "at": "acts/60-face.json:92",
+     "key": "at",
+     "old": "198.80s",
+     "new": "212.638s"
+    }
+   ],
+   "drops": []
+  },
+  "acts/70-lines.json": {
+   "moved": 210,
+   "dropped": 0,
+   "changes": [
+    {
+     "at": "acts/70-lines.json:1060",
+     "key": "at",
+     "old": "159.293s",
+     "new": "173.131s"
+    },
+    {
+     "at": "acts/70-lines.json:1061",
+     "key": "at",
+     "old": "161.290s",
+     "new": "175.128s"
+    },
+    {
+     "at": "acts/70-lines.json:1062",
+     "key": "at",
+     "old": "161.290s",
+     "new": "175.128s"
+    },
+    {
+     "at": "acts/70-lines.json:1063",
+     "key": "at",
+     "old": "161.357s",
+     "new": "175.195s"
+    },
+    {
+     "at": "acts/70-lines.json:1064",
+     "key": "at",
+     "old": "161.423s",
+     "new": "175.261s"
+    },
+    {
+     "at": "acts/70-lines.json:1065",
+     "key": "at",
+     "old": "161.490s",
+     "new": "175.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1066",
+     "key": "at",
+     "old": "161.557s",
+     "new": "175.395s"
+    },
+    {
+     "at": "acts/70-lines.json:1067",
+     "key": "at",
+     "old": "161.623s",
+     "new": "175.461s"
+    },
+    {
+     "at": "acts/70-lines.json:1068",
+     "key": "at",
+     "old": "161.690s",
+     "new": "175.528s"
+    },
+    {
+     "at": "acts/70-lines.json:1069",
+     "key": "at",
+     "old": "161.823s",
+     "new": "175.661s"
+    },
+    {
+     "at": "acts/70-lines.json:1070",
+     "key": "at",
+     "old": "161.890s",
+     "new": "175.728s"
+    },
+    {
+     "at": "acts/70-lines.json:1071",
+     "key": "at",
+     "old": "161.957s",
+     "new": "175.795s"
+    },
+    {
+     "at": "acts/70-lines.json:1072",
+     "key": "at",
+     "old": "162.023s",
+     "new": "175.861s"
+    },
+    {
+     "at": "acts/70-lines.json:1073",
+     "key": "at",
+     "old": "162.090s",
+     "new": "175.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1074",
+     "key": "at",
+     "old": "162.157s",
+     "new": "175.995s"
+    },
+    {
+     "at": "acts/70-lines.json:1075",
+     "key": "at",
+     "old": "162.290s",
+     "new": "176.128s"
+    },
+    {
+     "at": "acts/70-lines.json:1076",
+     "key": "at",
+     "old": "162.357s",
+     "new": "176.195s"
+    },
+    {
+     "at": "acts/70-lines.json:1077",
+     "key": "at",
+     "old": "162.423s",
+     "new": "176.261s"
+    },
+    {
+     "at": "acts/70-lines.json:1078",
+     "key": "at",
+     "old": "162.490s",
+     "new": "176.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1079",
+     "key": "at",
+     "old": "162.603s",
+     "new": "176.441s"
+    },
+    {
+     "at": "acts/70-lines.json:1080",
+     "key": "at",
+     "old": "163.190s",
+     "new": "177.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1081",
+     "key": "at",
+     "old": "163.190s",
+     "new": "177.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1082",
+     "key": "at",
+     "old": "163.257s",
+     "new": "177.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1083",
+     "key": "at",
+     "old": "163.323s",
+     "new": "177.161s"
+    },
+    {
+     "at": "acts/70-lines.json:1084",
+     "key": "at",
+     "old": "163.390s",
+     "new": "177.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1085",
+     "key": "at",
+     "old": "163.457s",
+     "new": "177.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1086",
+     "key": "at",
+     "old": "163.523s",
+     "new": "177.361s"
+    },
+    {
+     "at": "acts/70-lines.json:1087",
+     "key": "at",
+     "old": "163.590s",
+     "new": "177.428s"
+    },
+    {
+     "at": "acts/70-lines.json:1088",
+     "key": "at",
+     "old": "163.657s",
+     "new": "177.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1089",
+     "key": "at",
+     "old": "163.723s",
+     "new": "177.561s"
+    },
+    {
+     "at": "acts/70-lines.json:1090",
+     "key": "at",
+     "old": "163.790s",
+     "new": "177.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1091",
+     "key": "at",
+     "old": "163.857s",
+     "new": "177.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1092",
+     "key": "at",
+     "old": "163.923s",
+     "new": "177.761s"
+    },
+    {
+     "at": "acts/70-lines.json:1093",
+     "key": "at",
+     "old": "163.990s",
+     "new": "177.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1094",
+     "key": "at",
+     "old": "164.057s",
+     "new": "177.895s"
+    },
+    {
+     "at": "acts/70-lines.json:1095",
+     "key": "at",
+     "old": "164.123s",
+     "new": "177.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1096",
+     "key": "at",
+     "old": "164.257s",
+     "new": "178.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1097",
+     "key": "at",
+     "old": "164.323s",
+     "new": "178.161s"
+    },
+    {
+     "at": "acts/70-lines.json:1098",
+     "key": "at",
+     "old": "164.390s",
+     "new": "178.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1099",
+     "key": "at",
+     "old": "164.457s",
+     "new": "178.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1100",
+     "key": "at",
+     "old": "164.590s",
+     "new": "178.428s"
+    },
+    {
+     "at": "acts/70-lines.json:1101",
+     "key": "at",
+     "old": "164.657s",
+     "new": "178.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1102",
+     "key": "at",
+     "old": "164.723s",
+     "new": "178.561s"
+    },
+    {
+     "at": "acts/70-lines.json:1103",
+     "key": "at",
+     "old": "164.790s",
+     "new": "178.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1104",
+     "key": "at",
+     "old": "164.857s",
+     "new": "178.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1105",
+     "key": "at",
+     "old": "164.990s",
+     "new": "178.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1106",
+     "key": "at",
+     "old": "165.100s",
+     "new": "178.938s"
+    },
+    {
+     "at": "acts/70-lines.json:1107",
+     "key": "at",
+     "old": "165.490s",
+     "new": "179.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1108",
+     "key": "at",
+     "old": "165.490s",
+     "new": "179.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1109",
+     "key": "at",
+     "old": "165.557s",
+     "new": "179.395s"
+    },
+    {
+     "at": "acts/70-lines.json:1110",
+     "key": "at",
+     "old": "165.623s",
+     "new": "179.461s"
+    },
+    {
+     "at": "acts/70-lines.json:1111",
+     "key": "at",
+     "old": "165.690s",
+     "new": "179.528s"
+    },
+    {
+     "at": "acts/70-lines.json:1112",
+     "key": "at",
+     "old": "165.757s",
+     "new": "179.595s"
+    },
+    {
+     "at": "acts/70-lines.json:1113",
+     "key": "at",
+     "old": "165.823s",
+     "new": "179.661s"
+    },
+    {
+     "at": "acts/70-lines.json:1114",
+     "key": "at",
+     "old": "165.957s",
+     "new": "179.795s"
+    },
+    {
+     "at": "acts/70-lines.json:1115",
+     "key": "at",
+     "old": "166.023s",
+     "new": "179.861s"
+    },
+    {
+     "at": "acts/70-lines.json:1116",
+     "key": "at",
+     "old": "166.090s",
+     "new": "179.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1117",
+     "key": "at",
+     "old": "166.157s",
+     "new": "179.995s"
+    },
+    {
+     "at": "acts/70-lines.json:1118",
+     "key": "at",
+     "old": "166.259s",
+     "new": "180.097s"
+    },
+    {
+     "at": "acts/70-lines.json:1119",
+     "key": "at",
+     "old": "166.890s",
+     "new": "180.728s"
+    },
+    {
+     "at": "acts/70-lines.json:1120",
+     "key": "at",
+     "old": "166.890s",
+     "new": "180.728s"
+    },
+    {
+     "at": "acts/70-lines.json:1121",
+     "key": "at",
+     "old": "166.957s",
+     "new": "180.795s"
+    },
+    {
+     "at": "acts/70-lines.json:1122",
+     "key": "at",
+     "old": "167.023s",
+     "new": "180.861s"
+    },
+    {
+     "at": "acts/70-lines.json:1123",
+     "key": "at",
+     "old": "167.090s",
+     "new": "180.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1124",
+     "key": "at",
+     "old": "167.157s",
+     "new": "180.995s"
+    },
+    {
+     "at": "acts/70-lines.json:1125",
+     "key": "at",
+     "old": "167.223s",
+     "new": "181.061s"
+    },
+    {
+     "at": "acts/70-lines.json:1126",
+     "key": "at",
+     "old": "167.290s",
+     "new": "181.128s"
+    },
+    {
+     "at": "acts/70-lines.json:1127",
+     "key": "at",
+     "old": "167.357s",
+     "new": "181.195s"
+    },
+    {
+     "at": "acts/70-lines.json:1128",
+     "key": "at",
+     "old": "167.423s",
+     "new": "181.261s"
+    },
+    {
+     "at": "acts/70-lines.json:1129",
+     "key": "at",
+     "old": "167.490s",
+     "new": "181.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1130",
+     "key": "at",
+     "old": "167.557s",
+     "new": "181.395s"
+    },
+    {
+     "at": "acts/70-lines.json:1131",
+     "key": "at",
+     "old": "167.690s",
+     "new": "181.528s"
+    },
+    {
+     "at": "acts/70-lines.json:1132",
+     "key": "at",
+     "old": "167.757s",
+     "new": "181.595s"
+    },
+    {
+     "at": "acts/70-lines.json:1133",
+     "key": "at",
+     "old": "167.890s",
+     "new": "181.728s"
+    },
+    {
+     "at": "acts/70-lines.json:1134",
+     "key": "at",
+     "old": "167.957s",
+     "new": "181.795s"
+    },
+    {
+     "at": "acts/70-lines.json:1135",
+     "key": "at",
+     "old": "168.023s",
+     "new": "181.861s"
+    },
+    {
+     "at": "acts/70-lines.json:1136",
+     "key": "at",
+     "old": "168.090s",
+     "new": "181.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1137",
+     "key": "at",
+     "old": "168.157s",
+     "new": "181.995s"
+    },
+    {
+     "at": "acts/70-lines.json:1138",
+     "key": "at",
+     "old": "168.223s",
+     "new": "182.061s"
+    },
+    {
+     "at": "acts/70-lines.json:1139",
+     "key": "at",
+     "old": "168.290s",
+     "new": "182.128s"
+    },
+    {
+     "at": "acts/70-lines.json:1140",
+     "key": "at",
+     "old": "168.357s",
+     "new": "182.195s"
+    },
+    {
+     "at": "acts/70-lines.json:1141",
+     "key": "at",
+     "old": "168.423s",
+     "new": "182.261s"
+    },
+    {
+     "at": "acts/70-lines.json:1142",
+     "key": "at",
+     "old": "168.490s",
+     "new": "182.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1143",
+     "key": "at",
+     "old": "168.557s",
+     "new": "182.395s"
+    },
+    {
+     "at": "acts/70-lines.json:1144",
+     "key": "at",
+     "old": "168.757s",
+     "new": "182.595s"
+    },
+    {
+     "at": "acts/70-lines.json:1145",
+     "key": "at",
+     "old": "168.890s",
+     "new": "182.728s"
+    },
+    {
+     "at": "acts/70-lines.json:1146",
+     "key": "at",
+     "old": "168.957s",
+     "new": "182.795s"
+    },
+    {
+     "at": "acts/70-lines.json:1147",
+     "key": "at",
+     "old": "169.023s",
+     "new": "182.861s"
+    },
+    {
+     "at": "acts/70-lines.json:1148",
+     "key": "at",
+     "old": "169.090s",
+     "new": "182.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1149",
+     "key": "at",
+     "old": "169.157s",
+     "new": "182.995s"
+    },
+    {
+     "at": "acts/70-lines.json:1150",
+     "key": "at",
+     "old": "169.223s",
+     "new": "183.061s"
+    },
+    {
+     "at": "acts/70-lines.json:1151",
+     "key": "at",
+     "old": "169.290s",
+     "new": "183.128s"
+    },
+    {
+     "at": "acts/70-lines.json:1152",
+     "key": "at",
+     "old": "169.357s",
+     "new": "183.195s"
+    },
+    {
+     "at": "acts/70-lines.json:1153",
+     "key": "at",
+     "old": "169.423s",
+     "new": "183.261s"
+    },
+    {
+     "at": "acts/70-lines.json:1154",
+     "key": "at",
+     "old": "169.557s",
+     "new": "183.395s"
+    },
+    {
+     "at": "acts/70-lines.json:1155",
+     "key": "at",
+     "old": "169.656s",
+     "new": "183.494s"
+    },
+    {
+     "at": "acts/70-lines.json:1156",
+     "key": "at",
+     "old": "172.790s",
+     "new": "186.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1157",
+     "key": "at",
+     "old": "172.790s",
+     "new": "186.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1158",
+     "key": "at",
+     "old": "172.923s",
+     "new": "186.761s"
+    },
+    {
+     "at": "acts/70-lines.json:1159",
+     "key": "at",
+     "old": "172.990s",
+     "new": "186.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1160",
+     "key": "at",
+     "old": "173.123s",
+     "new": "186.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1161",
+     "key": "at",
+     "old": "173.190s",
+     "new": "187.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1162",
+     "key": "at",
+     "old": "173.257s",
+     "new": "187.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1163",
+     "key": "at",
+     "old": "173.323s",
+     "new": "187.161s"
+    },
+    {
+     "at": "acts/70-lines.json:1164",
+     "key": "at",
+     "old": "173.390s",
+     "new": "187.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1165",
+     "key": "at",
+     "old": "173.457s",
+     "new": "187.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1166",
+     "key": "at",
+     "old": "173.523s",
+     "new": "187.361s"
+    },
+    {
+     "at": "acts/70-lines.json:1167",
+     "key": "at",
+     "old": "173.590s",
+     "new": "187.428s"
+    },
+    {
+     "at": "acts/70-lines.json:1168",
+     "key": "at",
+     "old": "173.657s",
+     "new": "187.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1169",
+     "key": "at",
+     "old": "173.723s",
+     "new": "187.561s"
+    },
+    {
+     "at": "acts/70-lines.json:1170",
+     "key": "at",
+     "old": "173.790s",
+     "new": "187.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1171",
+     "key": "at",
+     "old": "173.857s",
+     "new": "187.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1172",
+     "key": "at",
+     "old": "173.923s",
+     "new": "187.761s"
+    },
+    {
+     "at": "acts/70-lines.json:1173",
+     "key": "at",
+     "old": "173.990s",
+     "new": "187.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1174",
+     "key": "at",
+     "old": "174.057s",
+     "new": "187.895s"
+    },
+    {
+     "at": "acts/70-lines.json:1175",
+     "key": "at",
+     "old": "174.123s",
+     "new": "187.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1176",
+     "key": "at",
+     "old": "174.190s",
+     "new": "188.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1177",
+     "key": "at",
+     "old": "174.257s",
+     "new": "188.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1178",
+     "key": "at",
+     "old": "174.323s",
+     "new": "188.161s"
+    },
+    {
+     "at": "acts/70-lines.json:1179",
+     "key": "at",
+     "old": "174.390s",
+     "new": "188.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1180",
+     "key": "at",
+     "old": "174.457s",
+     "new": "188.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1181",
+     "key": "at",
+     "old": "174.657s",
+     "new": "188.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1182",
+     "key": "at",
+     "old": "174.723s",
+     "new": "188.561s"
+    },
+    {
+     "at": "acts/70-lines.json:1183",
+     "key": "at",
+     "old": "174.790s",
+     "new": "188.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1184",
+     "key": "at",
+     "old": "174.857s",
+     "new": "188.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1185",
+     "key": "at",
+     "old": "174.923s",
+     "new": "188.761s"
+    },
+    {
+     "at": "acts/70-lines.json:1186",
+     "key": "at",
+     "old": "174.990s",
+     "new": "188.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1187",
+     "key": "at",
+     "old": "174.990s",
+     "new": "188.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1188",
+     "key": "at",
+     "old": "175.056s",
+     "new": "188.894s"
+    },
+    {
+     "at": "acts/70-lines.json:1189",
+     "key": "at",
+     "old": "175.057s",
+     "new": "188.895s"
+    },
+    {
+     "at": "acts/70-lines.json:1190",
+     "key": "at",
+     "old": "175.123s",
+     "new": "188.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1191",
+     "key": "at",
+     "old": "175.190s",
+     "new": "189.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1192",
+     "key": "at",
+     "old": "175.257s",
+     "new": "189.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1193",
+     "key": "at",
+     "old": "175.323s",
+     "new": "189.161s"
+    },
+    {
+     "at": "acts/70-lines.json:1194",
+     "key": "at",
+     "old": "175.390s",
+     "new": "189.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1195",
+     "key": "at",
+     "old": "175.457s",
+     "new": "189.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1196",
+     "key": "at",
+     "old": "175.590s",
+     "new": "189.428s"
+    },
+    {
+     "at": "acts/70-lines.json:1197",
+     "key": "at",
+     "old": "175.657s",
+     "new": "189.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1198",
+     "key": "at",
+     "old": "175.723s",
+     "new": "189.561s"
+    },
+    {
+     "at": "acts/70-lines.json:1199",
+     "key": "at",
+     "old": "175.790s",
+     "new": "189.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1200",
+     "key": "at",
+     "old": "175.857s",
+     "new": "189.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1201",
+     "key": "at",
+     "old": "175.923s",
+     "new": "189.761s"
+    },
+    {
+     "at": "acts/70-lines.json:1202",
+     "key": "at",
+     "old": "175.990s",
+     "new": "189.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1203",
+     "key": "at",
+     "old": "176.057s",
+     "new": "189.895s"
+    },
+    {
+     "at": "acts/70-lines.json:1204",
+     "key": "at",
+     "old": "176.123s",
+     "new": "189.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1205",
+     "key": "at",
+     "old": "176.190s",
+     "new": "190.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1206",
+     "key": "at",
+     "old": "176.257s",
+     "new": "190.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1207",
+     "key": "at",
+     "old": "176.323s",
+     "new": "190.161s"
+    },
+    {
+     "at": "acts/70-lines.json:1208",
+     "key": "at",
+     "old": "176.390s",
+     "new": "190.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1209",
+     "key": "at",
+     "old": "176.457s",
+     "new": "190.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1210",
+     "key": "at",
+     "old": "176.523s",
+     "new": "190.361s"
+    },
+    {
+     "at": "acts/70-lines.json:1211",
+     "key": "at",
+     "old": "176.638s",
+     "new": "190.476s"
+    },
+    {
+     "at": "acts/70-lines.json:1212",
+     "key": "at",
+     "old": "177.190s",
+     "new": "191.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1213",
+     "key": "at",
+     "old": "192.090s",
+     "new": "205.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1214",
+     "key": "at",
+     "old": "192.090s",
+     "new": "205.928s"
+    },
+    {
+     "at": "acts/70-lines.json:1215",
+     "key": "at",
+     "old": "192.157s",
+     "new": "205.995s"
+    },
+    {
+     "at": "acts/70-lines.json:1216",
+     "key": "at",
+     "old": "192.223s",
+     "new": "206.061s"
+    },
+    {
+     "at": "acts/70-lines.json:1217",
+     "key": "at",
+     "old": "192.357s",
+     "new": "206.195s"
+    },
+    {
+     "at": "acts/70-lines.json:1218",
+     "key": "at",
+     "old": "192.423s",
+     "new": "206.261s"
+    },
+    {
+     "at": "acts/70-lines.json:1219",
+     "key": "at",
+     "old": "192.490s",
+     "new": "206.328s"
+    },
+    {
+     "at": "acts/70-lines.json:1220",
+     "key": "at",
+     "old": "192.557s",
+     "new": "206.395s"
+    },
+    {
+     "at": "acts/70-lines.json:1221",
+     "key": "at",
+     "old": "192.623s",
+     "new": "206.461s"
+    },
+    {
+     "at": "acts/70-lines.json:1222",
+     "key": "at",
+     "old": "192.690s",
+     "new": "206.528s"
+    },
+    {
+     "at": "acts/70-lines.json:1223",
+     "key": "at",
+     "old": "192.823s",
+     "new": "206.661s"
+    },
+    {
+     "at": "acts/70-lines.json:1224",
+     "key": "at",
+     "old": "192.890s",
+     "new": "206.728s"
+    },
+    {
+     "at": "acts/70-lines.json:1225",
+     "key": "at",
+     "old": "192.957s",
+     "new": "206.795s"
+    },
+    {
+     "at": "acts/70-lines.json:1226",
+     "key": "at",
+     "old": "193.068s",
+     "new": "206.906s"
+    },
+    {
+     "at": "acts/70-lines.json:1227",
+     "key": "at",
+     "old": "194.190s",
+     "new": "208.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1228",
+     "key": "at",
+     "old": "194.190s",
+     "new": "208.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1229",
+     "key": "at",
+     "old": "194.257s",
+     "new": "208.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1230",
+     "key": "at",
+     "old": "194.390s",
+     "new": "208.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1231",
+     "key": "at",
+     "old": "194.590s",
+     "new": "208.428s"
+    },
+    {
+     "at": "acts/70-lines.json:1232",
+     "key": "at",
+     "old": "194.657s",
+     "new": "208.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1233",
+     "key": "at",
+     "old": "194.723s",
+     "new": "208.561s"
+    },
+    {
+     "at": "acts/70-lines.json:1234",
+     "key": "at",
+     "old": "194.790s",
+     "new": "208.628s"
+    },
+    {
+     "at": "acts/70-lines.json:1235",
+     "key": "at",
+     "old": "194.857s",
+     "new": "208.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1236",
+     "key": "at",
+     "old": "194.923s",
+     "new": "208.761s"
+    },
+    {
+     "at": "acts/70-lines.json:1237",
+     "key": "at",
+     "old": "194.990s",
+     "new": "208.828s"
+    },
+    {
+     "at": "acts/70-lines.json:1238",
+     "key": "at",
+     "old": "195.057s",
+     "new": "208.895s"
+    },
+    {
+     "at": "acts/70-lines.json:1239",
+     "key": "at",
+     "old": "195.123s",
+     "new": "208.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1240",
+     "key": "at",
+     "old": "195.190s",
+     "new": "209.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1241",
+     "key": "at",
+     "old": "195.257s",
+     "new": "209.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1242",
+     "key": "at",
+     "old": "195.390s",
+     "new": "209.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1243",
+     "key": "at",
+     "old": "195.457s",
+     "new": "209.295s"
+    },
+    {
+     "at": "acts/70-lines.json:1244",
+     "key": "at",
+     "old": "195.523s",
+     "new": "209.361s"
+    },
+    {
+     "at": "acts/70-lines.json:1245",
+     "key": "at",
+     "old": "195.590s",
+     "new": "209.428s"
+    },
+    {
+     "at": "acts/70-lines.json:1246",
+     "key": "at",
+     "old": "195.657s",
+     "new": "209.495s"
+    },
+    {
+     "at": "acts/70-lines.json:1247",
+     "key": "at",
+     "old": "195.857s",
+     "new": "209.695s"
+    },
+    {
+     "at": "acts/70-lines.json:1248",
+     "key": "at",
+     "old": "196.057s",
+     "new": "209.895s"
+    },
+    {
+     "at": "acts/70-lines.json:1249",
+     "key": "at",
+     "old": "196.123s",
+     "new": "209.961s"
+    },
+    {
+     "at": "acts/70-lines.json:1250",
+     "key": "at",
+     "old": "196.190s",
+     "new": "210.028s"
+    },
+    {
+     "at": "acts/70-lines.json:1251",
+     "key": "at",
+     "old": "196.257s",
+     "new": "210.095s"
+    },
+    {
+     "at": "acts/70-lines.json:1252",
+     "key": "at",
+     "old": "196.390s",
+     "new": "210.228s"
+    },
+    {
+     "at": "acts/70-lines.json:1253",
+     "key": "at",
+     "old": "198.440s",
+     "new": "212.278s"
+    },
+    {
+     "at": "acts/70-lines.json:1254",
+     "key": "at",
+     "old": "198.440s",
+     "new": "212.278s"
+    },
+    {
+     "at": "acts/70-lines.json:1255",
+     "key": "at",
+     "old": "198.507s",
+     "new": "212.345s"
+    },
+    {
+     "at": "acts/70-lines.json:1256",
+     "key": "at",
+     "old": "198.573s",
+     "new": "212.411s"
+    },
+    {
+     "at": "acts/70-lines.json:1257",
+     "key": "at",
+     "old": "198.640s",
+     "new": "212.478s"
+    },
+    {
+     "at": "acts/70-lines.json:1258",
+     "key": "at",
+     "old": "198.707s",
+     "new": "212.545s"
+    },
+    {
+     "at": "acts/70-lines.json:1259",
+     "key": "at",
+     "old": "198.907s",
+     "new": "212.745s"
+    },
+    {
+     "at": "acts/70-lines.json:1260",
+     "key": "at",
+     "old": "198.973s",
+     "new": "212.811s"
+    },
+    {
+     "at": "acts/70-lines.json:1261",
+     "key": "at",
+     "old": "199.040s",
+     "new": "212.878s"
+    },
+    {
+     "at": "acts/70-lines.json:1262",
+     "key": "at",
+     "old": "199.107s",
+     "new": "212.945s"
+    },
+    {
+     "at": "acts/70-lines.json:1263",
+     "key": "at",
+     "old": "199.173s",
+     "new": "213.011s"
+    },
+    {
+     "at": "acts/70-lines.json:1264",
+     "key": "at",
+     "old": "199.240s",
+     "new": "213.078s"
+    },
+    {
+     "at": "acts/70-lines.json:1265",
+     "key": "at",
+     "old": "199.307s",
+     "new": "213.145s"
+    },
+    {
+     "at": "acts/70-lines.json:1266",
+     "key": "at",
+     "old": "199.373s",
+     "new": "213.211s"
+    },
+    {
+     "at": "acts/70-lines.json:1267",
+     "key": "at",
+     "old": "199.573s",
+     "new": "213.411s"
+    },
+    {
+     "at": "acts/70-lines.json:1268",
+     "key": "at",
+     "old": "199.640s",
+     "new": "213.478s"
+    },
+    {
+     "at": "acts/70-lines.json:1269",
+     "key": "at",
+     "old": "199.758s",
+     "new": "213.596s"
+    }
+   ],
+   "drops": []
+  },
+  "acts/75-captions.json": {
+   "moved": 9,
+   "dropped": 0,
+   "changes": [
+    {
+     "at": "acts/75-captions.json:48",
+     "key": "at",
+     "old": "161.290s",
+     "new": "175.128s"
+    },
+    {
+     "at": "acts/75-captions.json:49",
+     "key": "at",
+     "old": "163.190s",
+     "new": "177.028s"
+    },
+    {
+     "at": "acts/75-captions.json:50",
+     "key": "at",
+     "old": "165.490s",
+     "new": "179.328s"
+    },
+    {
+     "at": "acts/75-captions.json:51",
+     "key": "at",
+     "old": "166.890s",
+     "new": "180.728s"
+    },
+    {
+     "at": "acts/75-captions.json:52",
+     "key": "at",
+     "old": "172.790s",
+     "new": "186.628s"
+    },
+    {
+     "at": "acts/75-captions.json:53",
+     "key": "at",
+     "old": "174.990s",
+     "new": "188.828s"
+    },
+    {
+     "at": "acts/75-captions.json:54",
+     "key": "at",
+     "old": "192.090s",
+     "new": "205.928s"
+    },
+    {
+     "at": "acts/75-captions.json:55",
+     "key": "at",
+     "old": "194.190s",
+     "new": "208.028s"
+    },
+    {
+     "at": "acts/75-captions.json:56",
+     "key": "at",
+     "old": "198.440s",
+     "new": "212.278s"
+    }
+   ],
+   "drops": []
+  },
+  "acts/80-sfx.json": {
+   "moved": 22,
+   "dropped": 0,
+   "changes": [
+    {
+     "at": "acts/80-sfx.json:43",
+     "key": "at",
+     "old": "159.690s",
+     "new": "173.528s"
+    },
+    {
+     "at": "acts/80-sfx.json:44",
+     "key": "at",
+     "old": "160.440s",
+     "new": "174.278s"
+    },
+    {
+     "at": "acts/80-sfx.json:45",
+     "key": "at",
+     "old": "160.490s",
+     "new": "174.328s"
+    },
+    {
+     "at": "acts/80-sfx.json:46",
+     "key": "at",
+     "old": "170.040s",
+     "new": "183.878s"
+    },
+    {
+     "at": "acts/80-sfx.json:47",
+     "key": "at",
+     "old": "170.840s",
+     "new": "184.678s"
+    },
+    {
+     "at": "acts/80-sfx.json:48",
+     "key": "at",
+     "old": "171.240s",
+     "new": "185.078s"
+    },
+    {
+     "at": "acts/80-sfx.json:49",
+     "key": "at",
+     "old": "171.640s",
+     "new": "185.478s"
+    },
+    {
+     "at": "acts/80-sfx.json:50",
+     "key": "at",
+     "old": "172.090s",
+     "new": "185.928s"
+    },
+    {
+     "at": "acts/80-sfx.json:51",
+     "key": "at",
+     "old": "172.240s",
+     "new": "186.078s"
+    },
+    {
+     "at": "acts/80-sfx.json:52",
+     "key": "at",
+     "old": "172.640s",
+     "new": "186.478s"
+    },
+    {
+     "at": "acts/80-sfx.json:53",
+     "key": "at",
+     "old": "172.690s",
+     "new": "186.528s"
+    },
+    {
+     "at": "acts/80-sfx.json:54",
+     "key": "at",
+     "old": "186.990s",
+     "new": "200.828s"
+    },
+    {
+     "at": "acts/80-sfx.json:55",
+     "key": "at",
+     "old": "190.490s",
+     "new": "204.328s"
+    },
+    {
+     "at": "acts/80-sfx.json:56",
+     "key": "at",
+     "old": "190.740s",
+     "new": "204.578s"
+    },
+    {
+     "at": "acts/80-sfx.json:57",
+     "key": "at",
+     "old": "196.440s",
+     "new": "210.278s"
+    },
+    {
+     "at": "acts/80-sfx.json:58",
+     "key": "at",
+     "old": "196.440s",
+     "new": "210.278s"
+    },
+    {
+     "at": "acts/80-sfx.json:59",
+     "key": "at",
+     "old": "196.490s",
+     "new": "210.328s"
+    },
+    {
+     "at": "acts/80-sfx.json:60",
+     "key": "at",
+     "old": "201.190s",
+     "new": "215.028s"
+    },
+    {
+     "at": "acts/80-sfx.json:61",
+     "key": "at",
+     "old": "201.390s",
+     "new": "215.228s"
+    },
+    {
+     "at": "acts/80-sfx.json:62",
+     "key": "at",
+     "old": "202.140s",
+     "new": "215.978s"
+    },
+    {
+     "at": "acts/80-sfx.json:63",
+     "key": "at",
+     "old": "202.440s",
+     "new": "216.278s"
+    },
+    {
+     "at": "acts/80-sfx.json:64",
+     "key": "at",
+     "old": "204.240s",
+     "new": "218.078s"
+    }
+   ],
+   "drops": []
+  },
+  "cut.json": {
+   "moved": 1,
+   "changes": [
+    {
+     "at": "cut.json:64",
+     "key": "s8_lens.len",
+     "old": "3.0000s",
+     "new": "16.838s"
+    }
+   ]
+  },
+  "duck.json": {
+   "moved": 20,
+   "changes": [
+    {
+     "key": "[32].from",
+     "old": 161.29,
+     "new": 175.128
+    },
+    {
+     "key": "[32].to",
+     "old": 162.553,
+     "new": 176.391
+    },
+    {
+     "key": "[33].from",
+     "old": 163.19,
+     "new": 177.028
+    },
+    {
+     "key": "[33].to",
+     "old": 165.05,
+     "new": 178.888
+    },
+    {
+     "key": "[34].from",
+     "old": 165.49,
+     "new": 179.328
+    },
+    {
+     "key": "[34].to",
+     "old": 166.209,
+     "new": 180.047
+    },
+    {
+     "key": "[35].from",
+     "old": 166.89,
+     "new": 180.728
+    },
+    {
+     "key": "[35].to",
+     "old": 169.606,
+     "new": 183.444
+    },
+    {
+     "key": "[36].from",
+     "old": 172.79,
+     "new": 186.628
+    },
+    {
+     "key": "[36].to",
+     "old": 175.006,
+     "new": 188.844
+    },
+    {
+     "key": "[37].from",
+     "old": 174.99,
+     "new": 188.828
+    },
+    {
+     "key": "[37].to",
+     "old": 176.588,
+     "new": 190.426
+    },
+    {
+     "key": "[38].from",
+     "old": 177.19,
+     "new": 191.028
+    },
+    {
+     "key": "[38].to",
+     "old": 186.861,
+     "new": 200.699
+    },
+    {
+     "key": "[39].from",
+     "old": 192.09,
+     "new": 205.928
+    },
+    {
+     "key": "[39].to",
+     "old": 193.018,
+     "new": 206.856
+    },
+    {
+     "key": "[40].from",
+     "old": 194.19,
+     "new": 208.028
+    },
+    {
+     "key": "[40].to",
+     "old": 196.34,
+     "new": 210.178
+    },
+    {
+     "key": "[41].from",
+     "old": 198.44,
+     "new": 212.278
+    },
+    {
+     "key": "[41].to",
+     "old": 199.708,
+     "new": 213.546
+    }
+   ]
+  },
+  "lines.json": {
+   "moved": 10,
+   "changes": [
+    {
+     "key": "[32].start",
+     "old": 161.29,
+     "new": 175.128
+    },
+    {
+     "key": "[33].start",
+     "old": 163.19,
+     "new": 177.028
+    },
+    {
+     "key": "[34].start",
+     "old": 165.49,
+     "new": 179.328
+    },
+    {
+     "key": "[35].start",
+     "old": 166.89,
+     "new": 180.728
+    },
+    {
+     "key": "[36].start",
+     "old": 172.79,
+     "new": 186.628
+    },
+    {
+     "key": "[37].start",
+     "old": 174.99,
+     "new": 188.828
+    },
+    {
+     "key": "[38].start",
+     "old": 177.19,
+     "new": 191.028
+    },
+    {
+     "key": "[39].start",
+     "old": 192.09,
+     "new": 205.928
+    },
+    {
+     "key": "[40].start",
+     "old": 194.19,
+     "new": 208.028
+    },
+    {
+     "key": "[41].start",
+     "old": 198.44,
+     "new": 212.278
+    }
+   ]
+  },
+  "lyrics-raw.json": {
+   "moved": 28,
+   "changes": [
+    {
+     "key": "lines[35].t",
+     "old": 160.64,
+     "new": 174.478
+    },
+    {
+     "key": "lines[35].end",
+     "old": 161.82,
+     "new": 175.658
+    },
+    {
+     "key": "lines[35].words[0].t",
+     "old": 160.64,
+     "new": 174.478
+    },
+    {
+     "key": "lines[35].words[0].end",
+     "old": 161.32,
+     "new": 175.158
+    },
+    {
+     "key": "lines[35].words[1].t",
+     "old": 161.32,
+     "new": 175.158
+    },
+    {
+     "key": "lines[35].words[1].end",
+     "old": 161.82,
+     "new": 175.658
+    },
+    {
+     "key": "lines[36].t",
+     "old": 163.1,
+     "new": 176.938
+    },
+    {
+     "key": "lines[36].end",
+     "old": 164.46,
+     "new": 178.298
+    },
+    {
+     "key": "lines[36].words[0].t",
+     "old": 163.1,
+     "new": 176.938
+    },
+    {
+     "key": "lines[36].words[0].end",
+     "old": 163.78,
+     "new": 177.618
+    },
+    {
+     "key": "lines[36].words[1].t",
+     "old": 163.78,
+     "new": 177.618
+    },
+    {
+     "key": "lines[36].words[1].end",
+     "old": 164.46,
+     "new": 178.298
+    },
+    {
+     "key": "lines[37].t",
+     "old": 165.66,
+     "new": 179.498
+    },
+    {
+     "key": "lines[37].end",
+     "old": 166.96,
+     "new": 180.798
+    },
+    {
+     "key": "lines[37].words[0].t",
+     "old": 165.66,
+     "new": 179.498
+    },
+    {
+     "key": "lines[37].words[0].end",
+     "old": 166.34,
+     "new": 180.178
+    },
+    {
+     "key": "lines[37].words[1].t",
+     "old": 166.34,
+     "new": 180.178
+    },
+    {
+     "key": "lines[37].words[1].end",
+     "old": 166.96,
+     "new": 180.798
+    },
+    {
+     "key": "lines[38].t",
+     "old": 175.84,
+     "new": 189.678
+    },
+    {
+     "key": "lines[38].end",
+     "old": 176.52,
+     "new": 190.358
+    },
+    {
+     "key": "lines[38].words[0].t",
+     "old": 175.84,
+     "new": 189.678
+    },
+    {
+     "key": "lines[38].words[0].end",
+     "old": 176.52,
+     "new": 190.358
+    },
+    {
+     "key": "lines[39].t",
+     "old": 176.52,
+     "new": 190.358
+    },
+    {
+     "key": "lines[39].end",
+     "old": 177.18,
+     "new": 191.018
+    },
+    {
+     "key": "lines[39].words[0].t",
+     "old": 176.52,
+     "new": 190.358
+    },
+    {
+     "key": "lines[39].words[0].end",
+     "old": 176.84,
+     "new": 190.678
+    },
+    {
+     "key": "lines[39].words[1].t",
+     "old": 176.84,
+     "new": 190.678
+    },
+    {
+     "key": "lines[39].words[1].end",
+     "old": 177.18,
+     "new": 191.018
+    }
+   ]
+  },
+  "lyrics.json": {
+   "moved": 94,
+   "changes": [
+    {
+     "key": "lines[41].t",
+     "old": 161.585,
+     "new": 175.423
+    },
+    {
+     "key": "lines[41].end",
+     "old": 164.046,
+     "new": 177.884
+    },
+    {
+     "key": "lines[41].words[0].t",
+     "old": 161.585,
+     "new": 175.423
+    },
+    {
+     "key": "lines[41].words[0].end",
+     "old": 162.265,
+     "new": 176.103
+    },
+    {
+     "key": "lines[41].words[1].t",
+     "old": 162.265,
+     "new": 176.103
+    },
+    {
+     "key": "lines[41].words[1].end",
+     "old": 162.445,
+     "new": 176.283
+    },
+    {
+     "key": "lines[41].words[2].t",
+     "old": 162.445,
+     "new": 176.283
+    },
+    {
+     "key": "lines[41].words[2].end",
+     "old": 162.825,
+     "new": 176.663
+    },
+    {
+     "key": "lines[41].words[3].t",
+     "old": 162.845,
+     "new": 176.683
+    },
+    {
+     "key": "lines[41].words[3].end",
+     "old": 163.385,
+     "new": 177.223
+    },
+    {
+     "key": "lines[41].words[4].t",
+     "old": 163.385,
+     "new": 177.223
+    },
+    {
+     "key": "lines[41].words[4].end",
+     "old": 163.685,
+     "new": 177.523
+    },
+    {
+     "key": "lines[41].words[5].t",
+     "old": 163.685,
+     "new": 177.523
+    },
+    {
+     "key": "lines[41].words[5].end",
+     "old": 164.046,
+     "new": 177.884
+    },
+    {
+     "key": "lines[42].t",
+     "old": 164.046,
+     "new": 177.884
+    },
+    {
+     "key": "lines[42].end",
+     "old": 166.185,
+     "new": 180.023
+    },
+    {
+     "key": "lines[42].words[0].t",
+     "old": 164.046,
+     "new": 177.884
+    },
+    {
+     "key": "lines[42].words[0].end",
+     "old": 164.546,
+     "new": 178.384
+    },
+    {
+     "key": "lines[42].words[1].t",
+     "old": 164.546,
+     "new": 178.384
+    },
+    {
+     "key": "lines[42].words[1].end",
+     "old": 164.825,
+     "new": 178.663
+    },
+    {
+     "key": "lines[42].words[2].t",
+     "old": 164.825,
+     "new": 178.663
+    },
+    {
+     "key": "lines[42].words[2].end",
+     "old": 165.125,
+     "new": 178.963
+    },
+    {
+     "key": "lines[42].words[3].t",
+     "old": 165.125,
+     "new": 178.963
+    },
+    {
+     "key": "lines[42].words[3].end",
+     "old": 165.505,
+     "new": 179.343
+    },
+    {
+     "key": "lines[42].words[4].t",
+     "old": 165.745,
+     "new": 179.583
+    },
+    {
+     "key": "lines[42].words[4].end",
+     "old": 165.885,
+     "new": 179.723
+    },
+    {
+     "key": "lines[42].words[5].t",
+     "old": 165.885,
+     "new": 179.723
+    },
+    {
+     "key": "lines[42].words[5].end",
+     "old": 166.045,
+     "new": 179.883
+    },
+    {
+     "key": "lines[42].words[6].t",
+     "old": 166.045,
+     "new": 179.883
+    },
+    {
+     "key": "lines[42].words[6].end",
+     "old": 166.185,
+     "new": 180.023
+    },
+    {
+     "key": "lines[43].t",
+     "old": 166.945,
+     "new": 180.783
+    },
+    {
+     "key": "lines[43].end",
+     "old": 168.565,
+     "new": 182.403
+    },
+    {
+     "key": "lines[43].words[1].t",
+     "old": 166.945,
+     "new": 180.783
+    },
+    {
+     "key": "lines[43].words[1].end",
+     "old": 167.265,
+     "new": 181.103
+    },
+    {
+     "key": "lines[43].words[2].t",
+     "old": 167.265,
+     "new": 181.103
+    },
+    {
+     "key": "lines[43].words[2].end",
+     "old": 167.665,
+     "new": 181.503
+    },
+    {
+     "key": "lines[43].words[4].t",
+     "old": 168.105,
+     "new": 181.943
+    },
+    {
+     "key": "lines[43].words[4].end",
+     "old": 168.225,
+     "new": 182.063
+    },
+    {
+     "key": "lines[43].words[5].t",
+     "old": 168.225,
+     "new": 182.063
+    },
+    {
+     "key": "lines[43].words[5].end",
+     "old": 168.565,
+     "new": 182.403
+    },
+    {
+     "key": "lines[44].t",
+     "old": 169.045,
+     "new": 182.883
+    },
+    {
+     "key": "lines[44].end",
+     "old": 171.605,
+     "new": 185.443
+    },
+    {
+     "key": "lines[44].words[0].t",
+     "old": 169.045,
+     "new": 182.883
+    },
+    {
+     "key": "lines[44].words[0].end",
+     "old": 169.385,
+     "new": 183.223
+    },
+    {
+     "key": "lines[44].words[1].t",
+     "old": 169.385,
+     "new": 183.223
+    },
+    {
+     "key": "lines[44].words[1].end",
+     "old": 169.745,
+     "new": 183.583
+    },
+    {
+     "key": "lines[44].words[2].t",
+     "old": 169.745,
+     "new": 183.583
+    },
+    {
+     "key": "lines[44].words[2].end",
+     "old": 169.965,
+     "new": 183.803
+    },
+    {
+     "key": "lines[44].words[3].t",
+     "old": 169.965,
+     "new": 183.803
+    },
+    {
+     "key": "lines[44].words[3].end",
+     "old": 170.185,
+     "new": 184.023
+    },
+    {
+     "key": "lines[44].words[4].t",
+     "old": 170.185,
+     "new": 184.023
+    },
+    {
+     "key": "lines[44].words[4].end",
+     "old": 170.445,
+     "new": 184.283
+    },
+    {
+     "key": "lines[44].words[5].t",
+     "old": 170.445,
+     "new": 184.283
+    },
+    {
+     "key": "lines[44].words[5].end",
+     "old": 170.825,
+     "new": 184.663
+    },
+    {
+     "key": "lines[44].words[6].t",
+     "old": 170.825,
+     "new": 184.663
+    },
+    {
+     "key": "lines[44].words[6].end",
+     "old": 171.006,
+     "new": 184.844
+    },
+    {
+     "key": "lines[44].words[7].t",
+     "old": 171.006,
+     "new": 184.844
+    },
+    {
+     "key": "lines[44].words[7].end",
+     "old": 171.266,
+     "new": 185.104
+    },
+    {
+     "key": "lines[44].words[8].t",
+     "old": 171.266,
+     "new": 185.104
+    },
+    {
+     "key": "lines[44].words[8].end",
+     "old": 171.605,
+     "new": 185.443
+    },
+    {
+     "key": "lines[45].t",
+     "old": 172.005,
+     "new": 185.843
+    },
+    {
+     "key": "lines[45].end",
+     "old": 174.165,
+     "new": 188.003
+    },
+    {
+     "key": "lines[45].words[0].t",
+     "old": 172.005,
+     "new": 185.843
+    },
+    {
+     "key": "lines[45].words[0].end",
+     "old": 172.345,
+     "new": 186.183
+    },
+    {
+     "key": "lines[45].words[1].t",
+     "old": 172.345,
+     "new": 186.183
+    },
+    {
+     "key": "lines[45].words[1].end",
+     "old": 172.565,
+     "new": 186.403
+    },
+    {
+     "key": "lines[45].words[2].t",
+     "old": 172.565,
+     "new": 186.403
+    },
+    {
+     "key": "lines[45].words[2].end",
+     "old": 172.965,
+     "new": 186.803
+    },
+    {
+     "key": "lines[45].words[5].t",
+     "old": 173.525,
+     "new": 187.363
+    },
+    {
+     "key": "lines[45].words[5].end",
+     "old": 173.825,
+     "new": 187.663
+    },
+    {
+     "key": "lines[45].words[6].t",
+     "old": 173.825,
+     "new": 187.663
+    },
+    {
+     "key": "lines[45].words[6].end",
+     "old": 174.165,
+     "new": 188.003
+    },
+    {
+     "key": "lines[46].t",
+     "old": 174.165,
+     "new": 188.003
+    },
+    {
+     "key": "lines[46].end",
+     "old": 177.105,
+     "new": 190.943
+    },
+    {
+     "key": "lines[46].words[0].t",
+     "old": 174.165,
+     "new": 188.003
+    },
+    {
+     "key": "lines[46].words[0].end",
+     "old": 174.845,
+     "new": 188.683
+    },
+    {
+     "key": "lines[46].words[1].t",
+     "old": 174.845,
+     "new": 188.683
+    },
+    {
+     "key": "lines[46].words[1].end",
+     "old": 175.105,
+     "new": 188.943
+    },
+    {
+     "key": "lines[46].words[2].t",
+     "old": 175.105,
+     "new": 188.943
+    },
+    {
+     "key": "lines[46].words[2].end",
+     "old": 175.525,
+     "new": 189.363
+    },
+    {
+     "key": "lines[46].words[5].t",
+     "old": 176.345,
+     "new": 190.183
+    },
+    {
+     "key": "lines[46].words[5].end",
+     "old": 177.105,
+     "new": 190.943
+    },
+    {
+     "key": "lines[47].t",
+     "old": 183.225,
+     "new": 197.063
+    },
+    {
+     "key": "lines[47].end",
+     "old": 183.905,
+     "new": 197.743
+    },
+    {
+     "key": "lines[47].words[0].t",
+     "old": 183.225,
+     "new": 197.063
+    },
+    {
+     "key": "lines[47].words[0].end",
+     "old": 183.905,
+     "new": 197.743
+    },
+    {
+     "key": "lines[48].t",
+     "old": 185.786,
+     "new": 199.624
+    },
+    {
+     "key": "lines[48].end",
+     "old": 186.466,
+     "new": 200.304
+    },
+    {
+     "key": "lines[48].words[0].t",
+     "old": 185.786,
+     "new": 199.624
+    },
+    {
+     "key": "lines[48].words[0].end",
+     "old": 186.466,
+     "new": 200.304
+    },
+    {
+     "key": "lines[49].t",
+     "old": 196.967,
+     "new": 210.805
+    },
+    {
+     "key": "lines[49].end",
+     "old": 197.307,
+     "new": 211.145
+    },
+    {
+     "key": "lines[49].words[1].t",
+     "old": 196.967,
+     "new": 210.805
+    },
+    {
+     "key": "lines[49].words[1].end",
+     "old": 197.307,
+     "new": 211.145
+    }
+   ]
+  },
+  "sfx-map.json": {
+   "moved": 34,
+   "changes": [
+    {
+     "key": "[7].t",
+     "old": 159.73999944763185,
+     "new": 173.57799944763227
+    },
+    {
+     "key": "[8].t",
+     "old": 166.8899731048584,
+     "new": 180.7279731048588
+    },
+    {
+     "key": "[41].t",
+     "old": 161.29,
+     "new": 175.128
+    },
+    {
+     "key": "[42].t",
+     "old": 163.19,
+     "new": 177.028
+    },
+    {
+     "key": "[43].t",
+     "old": 165.49,
+     "new": 179.328
+    },
+    {
+     "key": "[44].t",
+     "old": 166.89,
+     "new": 180.728
+    },
+    {
+     "key": "[45].t",
+     "old": 172.79,
+     "new": 186.628
+    },
+    {
+     "key": "[46].t",
+     "old": 174.99,
+     "new": 188.828
+    },
+    {
+     "key": "[47].t",
+     "old": 177.19,
+     "new": 191.028
+    },
+    {
+     "key": "[48].t",
+     "old": 192.09,
+     "new": 205.928
+    },
+    {
+     "key": "[49].t",
+     "old": 194.19,
+     "new": 208.028
+    },
+    {
+     "key": "[50].t",
+     "old": 198.44,
+     "new": 212.278
+    },
+    {
+     "key": "[90].t",
+     "old": 159.69,
+     "new": 173.528
+    },
+    {
+     "key": "[91].t",
+     "old": 160.44,
+     "new": 174.278
+    },
+    {
+     "key": "[92].t",
+     "old": 160.49,
+     "new": 174.328
+    },
+    {
+     "key": "[93].t",
+     "old": 170.04,
+     "new": 183.878
+    },
+    {
+     "key": "[94].t",
+     "old": 170.84,
+     "new": 184.678
+    },
+    {
+     "key": "[95].t",
+     "old": 171.24,
+     "new": 185.078
+    },
+    {
+     "key": "[96].t",
+     "old": 171.64,
+     "new": 185.478
+    },
+    {
+     "key": "[97].t",
+     "old": 172.09,
+     "new": 185.928
+    },
+    {
+     "key": "[98].t",
+     "old": 172.24,
+     "new": 186.078
+    },
+    {
+     "key": "[99].t",
+     "old": 172.64,
+     "new": 186.478
+    },
+    {
+     "key": "[100].t",
+     "old": 172.69,
+     "new": 186.528
+    },
+    {
+     "key": "[101].t",
+     "old": 186.99,
+     "new": 200.828
+    },
+    {
+     "key": "[102].t",
+     "old": 190.49,
+     "new": 204.328
+    },
+    {
+     "key": "[103].t",
+     "old": 190.74,
+     "new": 204.578
+    },
+    {
+     "key": "[104].t",
+     "old": 196.44,
+     "new": 210.278
+    },
+    {
+     "key": "[105].t",
+     "old": 196.44,
+     "new": 210.278
+    },
+    {
+     "key": "[106].t",
+     "old": 196.49,
+     "new": 210.328
+    },
+    {
+     "key": "[107].t",
+     "old": 201.19,
+     "new": 215.028
+    },
+    {
+     "key": "[108].t",
+     "old": 201.39,
+     "new": 215.228
+    },
+    {
+     "key": "[109].t",
+     "old": 202.14,
+     "new": 215.978
+    },
+    {
+     "key": "[110].t",
+     "old": 202.44,
+     "new": 216.278
+    },
+    {
+     "key": "[111].t",
+     "old": 204.24,
+     "new": 218.078
+    }
+   ]
+  },
+  "song.json": {
+   "beats": "333 -> 355",
+   "duration": "209.622 -> 223.46"
+  }
+ },
+ "warnings": [
+  "acts/70-lines.json is made by tools/punch_lines.mjs from lines.json: both are moved, so running the tool again gives the same times",
+  "acts/75-captions.json:47: a cue at 157.09 s runs 2.45 s over the point (for: \"2.453s\"); its length doesn't change",
+  "acts/80-sfx.json:24: the sound Assets/MusicVideo/Sfx/punch/script2/bed_space_p3_2.mp3 starts at 85.39 s and plays 74.3 s, over the point: it plays on unchanged (splice it, as bed_clinic_long was, if it must follow)",
+  "'s8_lens' runs over the point (63:1.8824 to 64:2.6534): it grows by 22 beats"
+ ],
+ "blockers": [],
+ "audio": [
+  "Assets/Videos/hawkespunch/Song/audio.mp3",
+  "Director/videos/hawkespunch/audio.mp3",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/bass.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/drums.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/other.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/vocals.wav"
+ ],
+ "proof": {
+  "cards": 76,
+  "checked": 76,
+  "bad": []
+ },
+ "map": "t >= 159.279 s -> t + 13.838 s; beat >= 253 -> beat + 22",
+ "backup": "videos/hawkespunch/_backup/insert-64_2-22b-2026-11-08T06-24-08"
+}

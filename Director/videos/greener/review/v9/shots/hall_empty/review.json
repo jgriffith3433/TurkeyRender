@@ -1,0 +1,22 @@
+{
+ "id": "hall_empty",
+ "f0": 2330,
+ "f1": 2381,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 77.667,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "2d0f8eb9e60c40b2",
+ "summary": "The strip is clean: the camera drifts slowly, the turkeys hold their poses, and I can see no pops, flicker, clipping or render faults across the cut.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3554,
+  "out": 126
+ },
+ "cost": 0.0084
+}

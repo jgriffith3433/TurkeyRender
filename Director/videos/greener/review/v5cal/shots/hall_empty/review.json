@@ -1,0 +1,37 @@
+{
+ "id": "hall_empty",
+ "f0": 2330,
+ "f1": 2381,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 77.667,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 79.2,
+   "why": "one patch jumps (cell 64.1, x2.6)",
+   "file": "spike-02376.jpg"
+  }
+ ],
+ "hash": "bdc1387160a9404f",
+ "summary": "The cut strip is clean, but at 79.26 the sky and clouds at the top of the hall change to a flat brown band and stay that way.",
+ "faults": [
+  {
+   "t": 79.26,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The ceiling or sky band above the chandelier changes between neighbouring frames. It shows blue sky with pink clouds at 79.19 and 79.23, then a flat dark maroon-brown from 79.26 to 79.33. This is a texture or skybox drop-out, and it matches the measured spike.",
+   "fix": "Fix the sky or ceiling material so it stays loaded and visible through the end of the shot. Otherwise put a matching pink-sky texture on that band."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4964,
+  "out": 610
+ },
+ "cost": 0.016
+}

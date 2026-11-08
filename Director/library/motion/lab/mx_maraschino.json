@@ -1,0 +1,38 @@
+{
+ "clip": "mx_maraschino",
+ "seconds": 3.333,
+ "popCount": 7,
+ "pops": [
+  "1.233s RightLowerLeg kink 0.118 m",
+  "1.600s RightHandMiddle2 kink 0.099 m",
+  "1.667s RightHandMiddle2 kink 0.092 m",
+  "2.800s LeftHandIndex3 kink 0.083 m",
+  "3.167s LeftHandIndex3 kink 0.082 m",
+  "3.200s LeftHandIndex2 kink 0.101 m"
+ ],
+ "feet": [
+  "left foot on floor moved 2.041 m, worst step 0.064 m at 2.90s",
+  "right foot on floor moved 1.368 m, worst step 0.048 m at 0.57s"
+ ],
+ "hipsTop": 0.9143094,
+ "hipsLow": 0.8356195,
+ "hipsTravel": "(0.00, 0.01, 0.01)",
+ "limits": {
+  "LeftLowerArm": 47.7,
+  "Chest": 11.6,
+  "RightLowerArm": 7.7,
+  "groundHipsCm": 5.9,
+  "LeftLowerLeg": 2.5,
+  "LeftFoot": 2.5,
+  "LeftShoulder": 1.1,
+  "Head": 0.4
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_maraschino was rejected by admission: joint limits moved LeftLowerArm 47.3 deg"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_maraschino_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_maraschino_three.mp4"
+ ]
+}

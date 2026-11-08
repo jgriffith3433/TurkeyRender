@@ -1,0 +1,26 @@
+{
+ "clip": "mx_catwalk_twist_r",
+ "seconds": 5.2669999999999995,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.064 m, worst step 0.001 m at 3.43s",
+  "right foot on floor moved 0.073 m, worst step 0.001 m at 1.57s"
+ ],
+ "hipsTop": 0.920018256,
+ "hipsLow": 0.9189471,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "LeftLowerLeg": 25.6,
+  "LeftFoot": 13,
+  "RightFoot": 5.5,
+  "groundHipsCm": 4.8,
+  "RightLowerLeg": 3.9
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_catwalk_twist_r_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_catwalk_twist_r_three.mp4"
+ ]
+}

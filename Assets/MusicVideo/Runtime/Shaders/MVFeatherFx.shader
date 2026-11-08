@@ -21,6 +21,7 @@ Shader "MV/FeatherFx"
         _Floor ("Floor", Float) = -1000
         _Drag ("Drag", Float) = 1.6
         _Swirl ("Swirl", Float) = 4
+        _Water ("Water", Float) = 0
     }
     SubShader
     {

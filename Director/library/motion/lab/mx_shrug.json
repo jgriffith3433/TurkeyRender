@@ -1,0 +1,26 @@
+{
+ "clip": "mx_shrug",
+ "seconds": 6.1,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.001 m, worst step 0.000 m at 0.40s",
+  "right foot on floor moved 0.001 m, worst step 0.000 m at 0.40s"
+ ],
+ "hipsTop": 0.866867542,
+ "hipsLow": 0.5103618,
+ "hipsTravel": "(0.00, -0.36, 0.00)",
+ "limits": {
+  "groundHipsCm": 4.5,
+  "RightFoot": 3.6,
+  "LeftFoot": 3.5
+ },
+ "reverse": 0.356506,
+ "warnings": [
+  "person: no clip 'mx_shrug' on it or in the project. Find it with mv find, then mv pull"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_shrug_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_shrug_three.mp4"
+ ]
+}

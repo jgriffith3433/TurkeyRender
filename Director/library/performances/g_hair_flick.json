@@ -1,0 +1,34 @@
+{
+ "name": "g_hair_flick",
+ "about": "The right hand goes up past the ear and through the hair, from mx_greeting (1.2-2.3 s) run fast. No real hair-flick clip exists on Mixamo by name; this is the nearest hand-to-head move.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.1s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_greeting",
+  "mask": "rightArm,head",
+  "weight": 1,
+  "speed": 1.5
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 1.2,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s",
+   "speed": "$speed"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

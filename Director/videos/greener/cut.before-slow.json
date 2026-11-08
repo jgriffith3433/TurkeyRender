@@ -1,0 +1,460 @@
+{
+ "beats": {},
+ "shots": [
+  {
+   "id": "yard_wide",
+   "len": "8b",
+   "at": "1",
+   "seq": "yard"
+  },
+  {
+   "id": "hem",
+   "len": "8b",
+   "seq": "yard"
+  },
+  {
+   "id": "funny",
+   "len": "8b",
+   "seq": "yard"
+  },
+  {
+   "id": "secret",
+   "len": "8b",
+   "seq": "yard"
+  },
+  {
+   "id": "lips",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "sparrow_away",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "weakness",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "happens",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "happens_2",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "irresponsible",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "what_you_like",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "glide",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "curtsy",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "tonight",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "big_deal",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "taste",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "sparrow_pastel",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "creep",
+   "len": "6b",
+   "seq": "yard"
+  },
+  {
+   "id": "fence_one",
+   "len": "4b",
+   "seq": "yard"
+  },
+  {
+   "id": "fence_two",
+   "len": "2b",
+   "seq": "yard"
+  },
+  {
+   "id": "delight",
+   "len": "1.5b",
+   "seq": "yard"
+  },
+  {
+   "id": "whip_out",
+   "len": "0.5b",
+   "seq": "yard"
+  },
+  {
+   "id": "ch_crane",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "gift_pop",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_cu_a",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_orbit_a",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "doors",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_glide",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_cu_b",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_low_a",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_orbit_b",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_cu_2",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_low",
+   "len": "4b",
+   "seq": "chorus"
+  },
+  {
+   "id": "balloon_butler",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_med_2",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_orbit_c",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "look_away",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_cu_c",
+   "len": "2b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_high_2",
+   "len": "1b",
+   "seq": "chorus"
+  },
+  {
+   "id": "ch_wide_2",
+   "len": "1b",
+   "seq": "chorus"
+  },
+  {
+   "id": "blade_up",
+   "len": "4b"
+  },
+  {
+   "id": "wobble",
+   "len": "6b"
+  },
+  {
+   "id": "side_eye",
+   "len": "2b"
+  },
+  {
+   "id": "let_go",
+   "len": "4b"
+  },
+  {
+   "id": "snatch",
+   "len": "4b"
+  },
+  {
+   "id": "hall_empty",
+   "len": "4b"
+  },
+  {
+   "id": "dv_wide",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_cu_4",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_low",
+   "len": "2b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_wide_2",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_cu_2",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "habits",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_low_2",
+   "len": "6b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_cu",
+   "len": "6b",
+   "seq": "din"
+  },
+  {
+   "id": "theory",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "dv_cu_3",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "plan",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "din_wide",
+   "len": "4b"
+  },
+  {
+   "id": "clever",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "vase_slides",
+   "len": "4b",
+   "seq": "din"
+  },
+  {
+   "id": "push",
+   "len": "4b"
+  },
+  {
+   "id": "grey_wide",
+   "len": "6b"
+  },
+  {
+   "id": "he_looks",
+   "len": "4b"
+  },
+  {
+   "id": "on_break",
+   "len": "2b"
+  },
+  {
+   "id": "holds_out",
+   "len": "2b"
+  },
+  {
+   "id": "takes_it",
+   "len": "4b"
+  },
+  {
+   "id": "goes_back",
+   "len": "4b"
+  },
+  {
+   "id": "hook_3",
+   "len": "4b"
+  },
+  {
+   "id": "descend",
+   "len": "8b"
+  },
+  {
+   "id": "sparrow_tie",
+   "len": "2b"
+  },
+  {
+   "id": "c2_orbit_a",
+   "len": "4b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_cu_a",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_low_a",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_glide",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_sil",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_point",
+   "len": "4b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_high",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_low",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_f1",
+   "len": "1b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_f2",
+   "len": "1b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_f3",
+   "len": "1b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_orbit_b",
+   "len": "3b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_cu_b",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_med",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_cu",
+   "len": "2b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_f4",
+   "len": "1b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "c2_f5",
+   "len": "1b",
+   "seq": "chorus2"
+  },
+  {
+   "id": "alone_fog",
+   "len": "8b"
+  },
+  {
+   "id": "hand_opens",
+   "len": "8b"
+  },
+  {
+   "id": "rise",
+   "len": "6b"
+  },
+  {
+   "id": "ribbon_far",
+   "len": "2b"
+  },
+  {
+   "id": "tv_pull",
+   "len": "4b"
+  },
+  {
+   "id": "darling",
+   "len": "6b"
+  },
+  {
+   "id": "pot",
+   "len": "2b"
+  },
+  {
+   "id": "better",
+   "len": "6b"
+  },
+  {
+   "id": "click_off",
+   "len": "1.8b"
+  }
+ ]
+}

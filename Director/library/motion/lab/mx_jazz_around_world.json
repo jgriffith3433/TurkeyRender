@@ -1,0 +1,39 @@
+{
+ "clip": "mx_jazz_around_world",
+ "seconds": 2.367,
+ "popCount": 21,
+ "pops": [
+  "0.100s RightHandMiddle3 kink 0.085 m",
+  "0.467s LeftToes kink 0.084 m",
+  "0.500s LeftToes kink 0.084 m",
+  "0.633s LeftToes kink 0.095 m",
+  "0.667s LeftToes kink 0.128 m",
+  "0.700s LeftLowerLeg kink 0.158 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.346 m, worst step 0.036 m at 1.17s",
+  "right foot on floor moved 0.536 m, worst step 0.076 m at 2.03s"
+ ],
+ "hipsTop": 1.105682,
+ "hipsLow": 0.872770548,
+ "hipsTravel": "(0.02, 0.08, 1.58)",
+ "limits": {
+  "LeftFoot": 73.7,
+  "LeftLowerLeg": 30.2,
+  "RightLowerLeg": 20.8,
+  "groundHipsCm": 14.1,
+  "Chest": 9.4,
+  "RightFoot": 3.5,
+  "LeftHand": 0.9,
+  "RightLowerArm": 0.7,
+  "RightHand": 0.5
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_jazz_around_world was rejected by admission: joint limits moved LeftFoot 79.9 deg; foot slide 3.66 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_jazz_around_world_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_jazz_around_world_three.mp4"
+ ]
+}

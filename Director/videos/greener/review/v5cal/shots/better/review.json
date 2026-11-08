@@ -1,0 +1,31 @@
+{
+ "id": "better",
+ "f0": 4541,
+ "f1": 4619,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 151.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "7a6330dd0d483980",
+ "summary": "Clean cut with a static, steady hold and no pops or flicker. The only issue is that the hand does not clearly wrap the remote.",
+ "faults": [
+  {
+   "t": 151.52,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The remote's dark top sticks up beside the forearm, and the curled fingers sit in front of it rather than clearly wrapping it. The grip is ambiguous, and the arm hangs stiff and straight.",
+   "fix": "Close the fingers around the remote body and tilt the wrist slightly so the grip reads."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3573,
+  "out": 676
+ },
+ "cost": 0.0139
+}

@@ -1,0 +1,45 @@
+{
+ "id": "sym_music",
+ "f0": 685,
+ "f1": 774,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 22.833,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 25.3,
+   "why": "flow spike x2.1",
+   "file": "spike-00759.jpg"
+  }
+ ],
+ "hash": "1634f2bedd726214",
+ "summary": "The cut is clean and the right hand rises smoothly with no pop, but his arms hang stiff on the first frames and both hands are cropped by the frame edges in the gesture at 25.3 s.",
+ "faults": [
+  {
+   "t": 22.9,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "On the first frames of the shot both arms hang straight down, mirrored and stiff, with no pose or line of action. The viewer's-right arm stays frozen through 23.10 while the other hand lifts.",
+   "fix": "Give the static arm a slight bend or drift, or start the shot on a stronger pose."
+  },
+  {
+   "t": 25.36,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "During the fast gesture the viewer's-right hand sits at the right edge and is partly cropped (25.26 to 25.36). The left hand is also cut off at the left edge. From 25.40 both hands drop out of the bottom of the frame, so the gesture is hard to read.",
+   "fix": "Pull the camera back or narrow the gesture so both hands stay inside the frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4956,
+  "out": 1261
+ },
+ "cost": 0.0225
+}

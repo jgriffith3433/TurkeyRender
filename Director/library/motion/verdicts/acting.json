@@ -1,0 +1,574 @@
+{
+ "mx_laughing": {
+  "grade": "A",
+  "uses": [
+   "laugh",
+   "react"
+  ],
+  "weak": [
+   "talk",
+   "stand-idle"
+  ],
+  "needs": [
+   "start at 1.2 s"
+  ],
+  "line": "good for: a big laugh, head thrown back 1.6-3.2 s, then doubled over with a slap toward the knee 3.6-5.2 s, upright again by 5.6 s; fingers relaxed; weak at: talk or idle (the fold is deep, 25 deg, and the first 1 s and last 4 s are plain standing); needs: start at 1.2 s for the laugh alone",
+  "watched": "strip 0.4-8.4 s, hands burst (the fold), measures"
+ },
+ "mx_terrified": {
+  "grade": "B",
+  "uses": [
+   "scared",
+   "react"
+  ],
+  "weak": [
+   "talk",
+   "stand-idle",
+   "listen"
+  ],
+  "needs": [
+   "start at 1.5 s"
+  ],
+  "line": "good for: fear, hands snap up 1.5-2.3 s into a deep cower (67 deg forward) with clawed hands, a fist pressed to the mouth 4.7-7.7 s, head darting left and right (up to 98 deg); weak at: anything upright (folded nearly the whole clip); needs: start at 1.5 s, a frontal or three-quarter camera so the fist reads as covering the mouth rather than sunk into it",
+  "watched": "strip 0.7-8.7 s, hands burst, own burst 5.0-5.5 s (fist at the mouth)"
+ },
+ "mx_sneak_fwd": {
+  "grade": "C",
+  "uses": [
+   "sneak"
+  ],
+  "weak": [
+   "walk",
+   "stand-idle"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a tiptoe sneak cycle on a treadmill (1.67 s loop, no travel), crouched with arms out; weak at: real travel (feet cross and slide when carried) and the legs read stiff, the stance knee near-locked at times (measure 72 deg backward on 17 of 52 frames, not clearly a flip at this size); needs: relaxed grip (both hands flat and splayed the whole loop), a walk to carry it, a close look at the knees before using",
+  "watched": "strip 0-3.3 s, own full-body burst 0.2-0.7 s"
+ },
+ "mx_look_over_shoulder": {
+  "grade": "B",
+  "uses": [
+   "look-back",
+   "stand-idle",
+   "pose"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: hands on hips with a look back over his left shoulder 0.3-2.6 s, then facing front hands on hips to 3.8 s; weak at: talk (no gesture); needs: relaxed grip (left hand fanned flat on the hip)",
+  "watched": "strip 0-3.8 s"
+ },
+ "mx_standing_arguing": {
+  "grade": "B",
+  "uses": [
+   "talk",
+   "gesture",
+   "react"
+  ],
+  "weak": [
+   "listen",
+   "stand-idle"
+  ],
+  "needs": [
+   "relaxed grip",
+   "start inside 9.8-17.8 s"
+  ],
+  "line": "good for: heated talk, a flat 'hold on' palm raised beside his head 9.8-12.2 s (clear of the face), arms flung wide 12.2-13.4 s, both hands up 14.6-15.4 s, chest jabs after; weak at: calm talk or listening (big, fast, head tipped up a lot); needs: relaxed grip (palms stiff and spread through the sweeps; the stop palm can stay open)",
+  "watched": "strip 9.8-17.8 s, hands burst, own burst 10.4-10.9 s"
+ },
+ "mx_sitting_talking": {
+  "grade": "B",
+  "uses": [
+   "talk",
+   "sit",
+   "listen"
+  ],
+  "weak": [
+   "drink",
+   "write"
+  ],
+  "needs": [
+   "relaxed grip",
+   "chair at seat height 0.45 m"
+  ],
+  "line": "good for: seated talk to someone on his LEFT (head turned up to 66 deg), upright, no fold; small right-hand gestures 31.3-32.1 s and 33.3-34.1 s, left hand 35.7-36.5 s; weak at: a partner in front of him, drink, write; needs: relaxed grip (hands rest flat and spread on the thighs), chair 0.45 m",
+  "watched": "strip 30.9-38.9 s, hands burst"
+ },
+ "mx_writing_seated": {
+  "grade": "B",
+  "uses": [
+   "write",
+   "sit"
+  ],
+  "weak": [
+   "talk",
+   "drink"
+  ],
+  "needs": [
+   "relaxed grip",
+   "chair at seat height 0.45 m",
+   "pad or desk at lap height, pen in right hand"
+  ],
+  "line": "good for: seated, head down, small writing moves of the right hand over the lap for the whole 5 s loop, mild 13 deg lean (not a fold); weak at: talk or anything to camera (face down); needs: relaxed grip on the LEFT hand (dead flat and spread the whole clip, curl 17), a pad or desk under the hands",
+  "watched": "strip 0-5.0 s"
+ },
+ "mx_sitting_drinking": {
+  "grade": "B",
+  "uses": [
+   "drink",
+   "sit",
+   "transition"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [
+   "start at 4.2 s",
+   "chair at seat height 0.45 m",
+   "cup in right hand"
+  ],
+  "line": "good for: steps and sits down 0.0-4.2 s (42 deg lean only during the sit), seated gesturing 4.2-7.2 s, cup hand to the chin 7.5-8.0 s with the head tipped back (at the chin, not in it); weak at: standing (the first 4 s stands and travels 0.16 m); needs: start at 4.2 s for seated, a chair, a cup prop (the empty half-curled hand reads odd)",
+  "watched": "strip 0-8.0 s, own burst 7.3-7.8 s"
+ },
+ "mx_thumbs_up": {
+  "grade": "ban",
+  "uses": [
+   "react"
+  ],
+  "weak": [
+   "thumbs-up",
+   "talk",
+   "gesture"
+  ],
+  "needs": [],
+  "line": "BANNED: no thumbs up ever reads (a crouched fist pump) and the hand sweeps across his face 2.1-2.4 s: no catalogued thumbs-up exists, use a fingers set on a gesture clip. Was: good for: a crouched hype with fist pumps 1.2-3.0 s; weak at: a thumbs up (none reads, it is a fist), talk; the hand sweeps across his face 2.1-2.4 s and covers it from the front, deep crouch (48 deg lean); needs: a different clip for a thumbs up",
+  "watched": "strip 0-4.2 s, hands burst, own bursts 1.9-2.4 s full body and medium",
+  "banReason": "no thumbs up ever reads (a crouched fist pump) and the hand sweeps across his face 2.1-2.4 s: no catalogued thumbs-up exists, use a fingers set on a gesture clip"
+ },
+ "mx_blow_kiss": {
+  "grade": "B",
+  "uses": [
+   "wave",
+   "gesture"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a soft raised hand at shoulder height 0.6-2.2 s, then tossed outward palm open 2.4-3.2 s, a gentle send-off; weak at: an actual kiss (the hand never reaches the lips, closest 0.24 m); needs: relaxed grip (both hands flat and spread), a mouth touch from another clip if the kiss must read",
+  "hit": 2.5,
+  "watched": "strip 0-4.6 s, hands burst"
+ },
+ "mx_bow_formal": {
+  "grade": "B",
+  "uses": [
+   "bow"
+  ],
+  "weak": [
+   "stand-idle"
+  ],
+  "needs": [],
+  "line": "good for: a small polite bow, head and shoulders dip 0.4-1.0 s, back up by 1.6 s (lean only 14 deg); weak at: a big stage bow from the waist; needs: nothing",
+  "watched": "strip 0-5.6 s (two loops)"
+ },
+ "mx_excited": {
+  "grade": "A",
+  "uses": [
+   "react",
+   "dance",
+   "gesture"
+  ],
+  "weak": [
+   "talk",
+   "listen"
+  ],
+  "needs": [],
+  "line": "good for: an excited 'yes!' bounce, fists pumping, head up 0.3-4.8 s, settled by 5.2 s; real fists, no fanning; weak at: talk or listening; needs: nothing",
+  "watched": "strip 0-6.6 s"
+ },
+ "mx_greeting": {
+  "grade": "B",
+  "uses": [
+   "wave"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a hello to someone above or far off, right hand up beside his head 1.6-3.8 s with small waves, head tipped up; weak at: a wave at eye level (he looks up); needs: relaxed grip (fingers splayed stiff right beside the temple, fanned 39% of frames)",
+  "watched": "strip 0-5.1 s, hands burst 0-1.0 s"
+ },
+ "mx_head_no": {
+  "grade": "A",
+  "uses": [
+   "react",
+   "listen"
+  ],
+  "weak": [
+   "gesture"
+  ],
+  "needs": [
+   "mask: head"
+  ],
+  "line": "good for: a head shake no, 0.2-1.4 s, small and clean; weak at: anything with the arms (arms hang slightly out with flat hands); needs: mask: head over another body clip",
+  "watched": "strip 0-3.6 s"
+ },
+ "mx_neck_stretch": {
+  "grade": "B",
+  "uses": [
+   "stand-idle",
+   "sigh"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "mask: head"
+  ],
+  "line": "good for: bored or stiff, head rolls to his left 0.4-1.1 s and right 2.0-2.6 s; weak at: talk; needs: mask: head (the body is a stiff pose, arms hanging away from the hips with flat hands)",
+  "watched": "strip 0-3.2 s"
+ },
+ "mx_nod": {
+  "grade": "A",
+  "uses": [
+   "listen",
+   "react"
+  ],
+  "weak": [
+   "gesture"
+  ],
+  "needs": [
+   "mask: head"
+  ],
+  "line": "good for: a yes nod, up 0.5-0.9 s, down 1.0-1.6 s, small and clean; weak at: arms (stiff, flat hands); needs: mask: head",
+  "watched": "strip 0-5.2 s (two loops)"
+ },
+ "mx_sigh": {
+  "grade": "B",
+  "uses": [
+   "sigh"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "mask: head"
+  ],
+  "line": "good for: a small sigh, head lifts 0.4-1.2 s and drops 1.6-2.4 s; weak at: a whole-body sigh (no visible chest or shoulder drop); needs: mask: head or upper, a face cue",
+  "watched": "strip 0-3.0 s"
+ },
+ "mx_point_aj": {
+  "grade": "B",
+  "uses": [
+   "pose",
+   "dance"
+  ],
+  "weak": [
+   "point",
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a dance pose hit, left arm high and right hand up before the chest, leaning back on bent knees 0.45-0.85 s, released by 1.2 s; weak at: a point (no index finger, the fingers fan), talk; needs: relaxed grip or a point grip",
+  "hit": 0.45,
+  "watched": "strip 0-3.7 s, hands burst 0-1.0 s"
+ },
+ "mx_point_bent": {
+  "grade": "B",
+  "uses": [
+   "point",
+   "gesture"
+  ],
+  "weak": [
+   "wave"
+  ],
+  "needs": [
+   "index point grip on the right hand"
+  ],
+  "line": "good for: the reach of a point, right arm out at head height 0.5-0.7 s, held to 1.9 s, down by 2.3 s; weak at: a real point (the hand is open with stiff spread fingers, a claw; from the medium camera it crosses in front of the face 0.55-0.65 s); needs: a fingers set for an index point on the right hand",
+  "hit": 0.6,
+  "watched": "strip 0-5.6 s, hands burst 0-1.0 s"
+ },
+ "mx_point_vegas": {
+  "grade": "A",
+  "uses": [
+   "point",
+   "pose",
+   "dance"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a lunge with finger guns, left arm points out with a real index at 0.43 s, right finger gun by the chin, held to 1.2 s, back by 1.4 s; weak at: talk; needs: nothing (no pops in the 30 fps burst)",
+  "hit": 0.45,
+  "watched": "strip 0-3.9 s, hands burst 0-1.0 s"
+ },
+ "mx_secret": {
+  "grade": "B",
+  "uses": [
+   "talk",
+   "gesture"
+  ],
+  "weak": [
+   "listen",
+   "stand-idle"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a whisper, leans to his left (35 deg) with the right hand raised flat beside the mouth 2.2-8.0 s (0.24 m off the face), straightens 8.0-8.6 s; weak at: anything else (the long lean is on nothing); needs: someone at his left, relaxed grip if the flat shield hand reads stiff",
+  "watched": "strip 1.2-9.2 s, hands burst"
+ },
+ "mx_shrug": {
+  "grade": "B",
+  "uses": [
+   "shrug"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a shrug; NOT a T-pose on the current import (confirmed): palms turn up and out 0.4-0.6 s, held to 1.0 s, down by 1.6 s; weak at: anything else; needs: relaxed grip (palms flat and rigid; a set near 0.2 keeps them open but alive)",
+  "watched": "strip 0-4.0 s (two loops), hands burst 0-1.0 s"
+ },
+ "mx_thankful": {
+  "grade": "A",
+  "uses": [
+   "gesture",
+   "bow"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: hand on heart, right hand to chest 0.4-0.9 s, a small head bow 0.8-1.6 s, release 1.9-2.3 s; weak at: talk; needs: relaxed grip (fingers a little spread on the chest)",
+  "watched": "strip 0-3.0 s, hands burst 0-1.0 s"
+ },
+ "mx_thinking": {
+  "grade": "A",
+  "uses": [
+   "think",
+   "stand-idle"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: thinking, fist to the chin 0.8-1.1 s (under the jaw, not into it), other hand on the hip, hold to 2.9 s, release 3.0-3.3 s; weak at: talk; needs: nothing",
+  "watched": "strip 0-4.2 s, own burst 1.3-1.8 s"
+ },
+ "mx_wave": {
+  "grade": "C",
+  "uses": [
+   "wave"
+  ],
+  "weak": [
+   "talk",
+   "gesture"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a frantic hello only in a wide shot; weak at: a normal wave (0.53 s loop, fast; the stiff open palm sweeps across in front of his eyes every cycle, 0.0-0.15 s, covering the face from the front, 0.30 m off it); needs: relaxed grip, mx_wave_aj instead",
+  "watched": "strip 0-3.2 s, own burst 0-0.5 s"
+ },
+ "mx_wave_aj": {
+  "grade": "A",
+  "uses": [
+   "wave"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a wave to the lens, arm up 0.3-0.5 s, waving 0.5-1.0 s at shoulder height clear of the face, down by 1.4 s; weak at: talk; needs: nothing (left hand a little fanned at his side, acceptable)",
+  "watched": "strip 0-4.4 s (loops)"
+ },
+ "mx_idle_weight_shift": {
+  "grade": "B",
+  "uses": [
+   "stand-idle",
+   "listen"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a long quiet standing idle with a slow weight shift (16.6 s); weak at: talk (nothing happens); needs: relaxed grip (hands hang open and flat, arms a touch away from the hips)",
+  "watched": "strip 3.1-11.1 s"
+ },
+ "mx_weight_shift": {
+  "grade": "B",
+  "uses": [
+   "stand-idle",
+   "listen"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: a near-still standing idle (9.4 s), very slight sway; weak at: talk; needs: relaxed grip (hands flat, arms held a little out, reads mannequin in a medium shot)",
+  "watched": "strip 0.5-8.5 s"
+ },
+ "mx_shake_off": {
+  "grade": "B",
+  "uses": [
+   "react",
+   "sigh",
+   "transition"
+  ],
+  "weak": [
+   "talk",
+   "stand-idle"
+  ],
+  "needs": [
+   "relaxed grip"
+  ],
+  "line": "good for: shaking it off, turns away to his right 0-1.2 s, shakes the arms out 1.2-2.6 s, folds forward and shakes the head down 2.8-4.4 s (37 deg), recovers to stand by 5.2 s; weak at: talk; needs: relaxed grip (fingers fanned 26-34% of frames while shaking)",
+  "watched": "strip 0-5.8 s"
+ },
+ "IdleSit13Explain": {
+  "grade": "A",
+  "uses": [
+   "talk",
+   "sit",
+   "gesture"
+  ],
+  "weak": [
+   "drink",
+   "write"
+  ],
+  "needs": [
+   "chair at seat height 0.45 m"
+  ],
+  "line": "good for: seated explaining to the front, upright, both hands gesturing 0.4-2.9 s, hands half-curled (no fanning); weak at: drink, write; needs: chair 0.45 m",
+  "watched": "strip 0-3.5 s, hands burst 0-1.0 s"
+ },
+ "IdleBreathe": {
+  "grade": "A",
+  "uses": [
+   "stand-idle",
+   "listen"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: a calm standing breath idle, relaxed hands, the whole 4 s loop; weak at: talk; needs: nothing",
+  "watched": "strip 0-4.0 s"
+ },
+ "Idle1HaveNoClue": {
+  "grade": "A",
+  "uses": [
+   "shrug",
+   "react",
+   "gesture"
+  ],
+  "weak": [
+   "listen"
+  ],
+  "needs": [],
+  "line": "good for: an 'I have no clue' shrug, arms out palms up 0.3-1.4 s, down by 1.8 s, hands half-curled; better than mx_shrug for fingers; weak at: listening; needs: nothing",
+  "watched": "strip 0-4.6 s (two loops)"
+ },
+ "Idle1Yell": {
+  "grade": "A",
+  "uses": [
+   "react",
+   "taunt",
+   "talk"
+  ],
+  "weak": [
+   "listen",
+   "stand-idle"
+  ],
+  "needs": [],
+  "line": "good for: a frustrated yell, clawed hands up beside the head 0.4-1.6 s with a 30 deg forward push, arms out 1.6-2.2 s, settled by 2.4 s; hands stay clear of the head; weak at: listen, idle; needs: a jawOpen face cue",
+  "watched": "strip 0-3.3 s"
+ },
+ "CrouchIdleLookAround1Unarmed": {
+  "grade": "A",
+  "uses": [
+   "kneel",
+   "sneak",
+   "look-back"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [],
+  "line": "good for: on one knee, wary, looking around (head to 60 deg each way, 2.4-4.4 s), relaxed hands; weak at: talk; needs: nothing",
+  "watched": "strip 0-5.8 s"
+ },
+ "Cheer2": {
+  "grade": "A",
+  "uses": [
+   "clap",
+   "react",
+   "gesture"
+  ],
+  "weak": [
+   "talk",
+   "listen"
+  ],
+  "needs": [],
+  "line": "good for: soft claps before the chest 0.3-2.9 s, then a fist punched overhead 3.0-4.2 s, down by 4.4 s; weak at: talk, listen; needs: nothing",
+  "hit": 3.3,
+  "watched": "strip 0-5.0 s"
+ },
+ "sit_cough": {
+  "grade": "B",
+  "uses": [
+   "sit",
+   "react",
+   "hit-react"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "chair at seat height 0.45 m",
+   "face cue (jawOpen) for the cough"
+  ],
+  "line": "good for: a seated jolt at 1.33-1.6 s, head snaps up and back, hands lift off the thighs, feet jerk; weak at: reading as a cough on its own (no hand to the mouth, no forward hunch: it reads as a startle); needs: chair, a face cue to sell the cough",
+  "hit": 1.37,
+  "watched": "strip 0-4.3 s, own full-body burst 1.2-1.7 s"
+ },
+ "sit_knee_kick_r": {
+  "grade": "A",
+  "uses": [
+   "kick",
+   "sit",
+   "react"
+  ],
+  "weak": [
+   "talk"
+  ],
+  "needs": [
+   "chair at seat height 0.45 m"
+  ],
+  "line": "good for: a seated reflex kick of the right shin, out 0.13 s, fully out 0.2 s, back by 0.4 s, knee bends the right way, then sits still; weak at: talk; needs: chair",
+  "hit": 0.2,
+  "watched": "strip 0-3.5 s, own full-body burst 0-0.5 s"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "id": "b_room",
+ "f0": 5816,
+ "f1": 5930,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 193.867,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "212ca9c55a5a09ae",
+ "summary": "Clean strip: the framing, pose and expression stay steady across all eight frames, with no pop, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3565,
+  "out": 527
+ },
+ "cost": 0.0124
+}

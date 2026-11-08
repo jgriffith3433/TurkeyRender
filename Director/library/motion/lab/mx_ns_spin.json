@@ -1,0 +1,36 @@
+{
+ "clip": "mx_ns_spin",
+ "seconds": 4.133,
+ "popCount": 36,
+ "pops": [
+  "0.233s LeftHandMiddle3 kink 0.088 m",
+  "0.267s RightHandRing3 kink 0.108 m",
+  "0.300s RightHandRing3 kink 0.142 m",
+  "0.333s RightHandRing3 kink 0.169 m",
+  "0.367s RightHandMiddle3 kink 0.186 m",
+  "0.400s RightHandMiddle3 kink 0.192 m"
+ ],
+ "feet": [
+  "left foot on floor moved 1.179 m, worst step 0.061 m at 1.73s",
+  "right foot on floor moved 1.938 m, worst step 0.067 m at 1.67s"
+ ],
+ "hipsTop": 0.923110366,
+ "hipsLow": 0.845699549,
+ "hipsTravel": "(0.01, -0.02, 0.02)",
+ "limits": {
+  "LeftFoot": 24.1,
+  "LeftLowerLeg": 23.5,
+  "RightLowerLeg": 13.2,
+  "groundHipsCm": 4.6,
+  "Head": 2.6,
+  "RightLowerArm": 2.3
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_ns_spin was rejected by admission: foot slide 5 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_ns_spin_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_ns_spin_three.mp4"
+ ]
+}

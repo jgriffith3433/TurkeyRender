@@ -1,0 +1,24 @@
+{
+  // Tested grips, right hand. Attach the prop to person.rightHand with pos and rot, then set the fingers with one `fingers` cue per finger.
+  // Bone frame: +y along the fingers, -z out of the palm, -x the thumb side. Left hand: negate pos x and rot y and z, and start from the remote's
+  // left values below. Tested with `mv lab` (Director/library/grip_tests/<name>_front|side|three.mp4). Models are this project's: scale them as given.
+  "remote": {
+    "model": "remote", "scale": 1, "bone": "rightHand",
+    "pos": [0.005, 0.08, -0.028], "rot": [35, -90, 90],
+    "fingers": { "thumb": 0.45, "index": 0.5, "middle": 0.72, "ring": 0.78, "pinky": 0.8 },
+    "left": { "bone": "leftHand", "pos": [-0.005, 0.075, -0.028], "rot": [35, 90, -90] },
+    "verdict": "PASS. Sits along the palm, fingers wrap it, no gap and nothing through the hand from three sides."
+  },
+  "cup": {
+    "model": "glass_prop", "scale": 0.58, "bone": "rightHand",
+    "pos": [0.004, 0.072, -0.05], "rot": [0, 0, 90],
+    "fingers": { "thumb": 0.5, "index": 0.5, "middle": 0.56, "ring": 0.6, "pinky": 0.66 },
+    "verdict": "PASS for medium shots. A wrap around a 7 cm cup tested with the glass model at 0.58. The fingers meet it from below and the far side. Redo the pos for a real mug: a handle changes the grip. In a close-up on the hand, check the palm side first."
+  },
+  "blade": {
+    "model": "a thin blade: prim:cylinder scale [0.006, 0.05, 0.0015], about 10 cm", "scale": 1, "bone": "rightHand",
+    "pos": [-0.022, 0.125, -0.06], "rot": [30, 0, 0],
+    "fingers": { "thumb": 0.55, "index": 0.62, "middle": 0.4, "ring": 0.35, "pinky": 0.3 },
+    "verdict": "PASS. Pinched between thumb and index, the rest of the fingers loose. Tested as a dark stand-in, so tint the real blade green."
+  }
+}

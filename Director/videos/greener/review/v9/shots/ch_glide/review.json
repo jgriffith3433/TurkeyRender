@@ -1,0 +1,31 @@
+{
+ "id": "ch_glide",
+ "f0": 1712,
+ "f1": 1764,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 57.067,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "523c44c6d749161a",
+ "summary": "The background barely moves from 57.09 to 57.19, then the camera and framing shift at 57.23, so the first frames look like the previous shot's framing and the glide only starts a few frames in.",
+ "faults": [
+  {
+   "t": 57.23,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Camera is nearly static through 57.09-57.19, then at 57.23 the background (mirror, balloons) and the figure's size and position shift noticeably. This reads as the glide starting abruptly or the cut tweening, not a smooth move that is already running on the first frame.",
+   "fix": "Start the camera glide already at speed on the first frame of the shot, or ease it in over a few frames before the cut so there is no visible jump at 57.23."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3550,
+  "out": 1004
+ },
+ "cost": 0.0171
+}

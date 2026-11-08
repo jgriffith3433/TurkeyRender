@@ -1,0 +1,51 @@
+{
+ "name": "chorus_butlers",
+ "about": "The butlers' side of the chorus take: butler_dance, end to end, 12 bars. Every rank in unison.",
+ "entry": "any",
+ "exit": "any",
+ "length": "18.857s",
+ "min": "18s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0.0,
+   "do": "perform",
+   "name": "butler_dance"
+  },
+  {
+   "at": 3.4285714285714284,
+   "do": "perform",
+   "name": "butler_dance"
+  },
+  {
+   "at": 6.857142857142857,
+   "do": "perform",
+   "name": "butler_dance"
+  },
+  {
+   "at": 10.285714285714285,
+   "do": "perform",
+   "name": "butler_dance"
+  },
+  {
+   "at": 13.714285714285714,
+   "do": "perform",
+   "name": "butler_dance"
+  },
+  {
+   "at": 17.142857142857142,
+   "do": "perform",
+   "name": "butler_hop",
+   "for": 0.8571428571428571
+  },
+  {
+   "at": 18.0,
+   "do": "perform",
+   "name": "butler_hop",
+   "for": 0.8571428571428571
+  }
+ ],
+ "test": {
+  "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx"
+ }
+}

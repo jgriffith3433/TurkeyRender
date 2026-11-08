@@ -1,0 +1,31 @@
+{
+ "id": "c2_orbit_a",
+ "f0": 3642,
+ "f1": 3693,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 121.4,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "414f019343956eb8",
+ "summary": "The strip has no pops or flicker, but the two near-identical dancers overlap tightly and mirror each other, which reads as twinning and possible clipping.",
+ "faults": [
+  {
+   "t": 121.46,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "A second dancer in the same dark outfit sits directly behind the lead and copies his pose, with the same bent knee and arm line. The two silhouettes stack and read as one muddled shape, and the copy looks twinned.",
+   "fix": "Offset the back dancer's timing by a few frames or give him a different pose, and move him clear of the lead's silhouette."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3573,
+  "out": 660
+ },
+ "cost": 0.0137
+}

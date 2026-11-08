@@ -1,0 +1,26 @@
+{
+ "name": "butler_hop",
+ "about": "A turkey butler's hop on the beat: crouch, spring, wings out at the top, land, settle.",
+ "entry": "any",
+ "exit": "any",
+ "length": "0.857s",
+ "min": "0.5s",
+ "params": {
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": "$for",
+   "return": "0.1s",
+   "stagger": "$stagger"
+  }
+ ],
+ "test": {
+  "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx"
+ }
+}

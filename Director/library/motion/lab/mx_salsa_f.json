@@ -1,0 +1,36 @@
+{
+ "clip": "mx_salsa_f",
+ "seconds": 4.6,
+ "popCount": 21,
+ "pops": [
+  "0.033s RightHandRing3 kink 0.081 m",
+  "0.067s RightHandMiddle3 kink 0.126 m",
+  "0.100s RightHandMiddle3 kink 0.150 m",
+  "0.133s LeftHandMiddle3 kink 0.081 m",
+  "0.467s LeftHandIndex3 kink 0.086 m",
+  "1.033s RightHandRing3 kink 0.085 m"
+ ],
+ "feet": [
+  "left foot on floor moved 1.572 m, worst step 0.048 m at 1.60s",
+  "right foot on floor moved 1.686 m, worst step 0.046 m at 2.10s"
+ ],
+ "hipsTop": 0.9384218,
+ "hipsLow": 0.880833,
+ "hipsTravel": "(0.01, 0.00, 0.00)",
+ "limits": {
+  "LeftLowerLeg": 17.6,
+  "RightLowerLeg": 17.3,
+  "LeftFoot": 15.8,
+  "RightFoot": 12.3,
+  "Chest": 12.2,
+  "groundHipsCm": 7.7
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_salsa_f was rejected by admission: joint limits moved RightFoot 41.6 deg; foot slide 4.78 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_salsa_f_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_salsa_f_three.mp4"
+ ]
+}

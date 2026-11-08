@@ -1,0 +1,115 @@
+{
+ "name": "butler_chorus_2_b",
+ "about": "The butlers on chorus 2, in sync with dance_chorus_2: bows bottom out on his drops, hops land on his stops, still while he walks and spins. Written by captures/dance/build_butlers.mjs.",
+ "entry": "any",
+ "exit": "any",
+ "length": "14.575s",
+ "min": "13.717s",
+ "params": {
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": 1.822,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 2.679,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 3.537,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 5.251,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 6.817,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 7.823,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 10.675,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 11.681,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 12.539,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 13.396,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  }
+ ]
+}

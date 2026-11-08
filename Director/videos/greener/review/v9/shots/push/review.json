@@ -1,0 +1,69 @@
+{
+ "id": "push",
+ "f0": 3127,
+ "f1": 3179,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 104.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 105.233,
+   "why": "one patch jumps (cell 94.3, x3)",
+   "file": "spike-03157.jpg"
+  }
+ ],
+ "hash": "9b393129af3d27ae",
+ "summary": "The door pops open abruptly at 105.33 and the hand never lands on the wall, with a smaller pose jump at 105.26.",
+ "faults": [
+  {
+   "t": 105.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Door goes from closed pale pink to a dark open doorway in one frame, with a white wall panel appearing in front. At 105.29 the door is closed; at 105.33 it is already open. There is no swing between them, so the key beat of the shot snaps.",
+   "fix": "Key the door swinging open over 6-10 frames starting at the hand contact, or add a motion blur or smear in between."
+  },
+  {
+   "t": 105.26,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Arm jumps from a fist at the chest (105.23) to a wide back-swung arm (105.26) and then to a forward reach (105.29). The arm snaps through poses with no in-between, which matches the measured spike at 105.233.",
+   "fix": "Smooth the arm transition with an anticipation wind-up spread over more frames, or retime so the swing reads continuously."
+  },
+  {
+   "t": 105.36,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "His hand stays at the door edge and never visibly presses on it. The door was already open before it was touched, and the hand hangs in front of the dark opening without pushing. This undercuts the idea of the wall swinging open when he touches it.",
+   "fix": "Time the door opening to start after hand contact, and put the palm flat on the door surface."
+  },
+  {
+   "t": 105.39,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 105.36 to 105.46 he freezes in the same bent, lunging pose with almost no change. No settle or reaction to the open door, and no head or face reaction is visible.",
+   "fix": "Add a small settle and a head lift or lean toward the opening to show he has to know."
+  },
+  {
+   "t": 104.33,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "At the cut he walks past the throne with a stiff, narrow-legged stride. His feet look light on the floor and the pose is similar from frame to frame, with no weight shift as he approaches the wall.",
+   "fix": "Add a hip drop and weight shift as he arrives at the wall."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4970,
+  "out": 809
+ },
+ "cost": 0.018
+}

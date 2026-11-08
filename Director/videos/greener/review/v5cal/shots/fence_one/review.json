@@ -1,0 +1,22 @@
+{
+ "id": "fence_one",
+ "f0": 1352,
+ "f1": 1404,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 45.067,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "ea9c77e02aeb7082",
+ "summary": "Clean cut strip: static camera, steady seated figure and chair, no pops, flicker or clipping visible.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3578,
+  "out": 546
+ },
+ "cost": 0.0126
+}

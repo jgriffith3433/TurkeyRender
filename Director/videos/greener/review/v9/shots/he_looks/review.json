@@ -1,0 +1,22 @@
+{
+ "id": "he_looks",
+ "f0": 3255,
+ "f1": 3307,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 108.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "c834dfdfc9f09e67",
+ "summary": "The strip is clean: the camera is locked and the head and torso drift smoothly across all eight frames, with no pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3569,
+  "out": 458
+ },
+ "cost": 0.0117
+}

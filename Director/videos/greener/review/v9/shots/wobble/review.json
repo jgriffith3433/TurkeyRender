@@ -1,0 +1,22 @@
+{
+ "id": "wobble",
+ "f0": 2124,
+ "f1": 2175,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 70.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "83d35c7e622d933e",
+ "summary": "The cut strip is clean: the camera drifts smoothly, the butler's pose changes gradually with no snaps, and there is no flicker or clipping I can point to.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3564,
+  "out": 127
+ },
+ "cost": 0.0084
+}

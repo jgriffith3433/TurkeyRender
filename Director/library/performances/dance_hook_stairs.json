@@ -1,0 +1,166 @@
+{
+ "name": "dance_hook_stairs",
+ "about": "dance_hook from just after \"gateway\": the rise and the point on \"baby\", for a four-beat card that starts on the bar. Same frames as the hook.",
+ "entry": "any",
+ "exit": "stand",
+ "length": "1.715s",
+ "min": "1.715s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": 0.3,
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.55,
+    6
+   ],
+   "for": 0.3
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "mx_snake",
+   "start": 1.69,
+   "speed": 1.32,
+   "blend": 0.05,
+   "for": 1.715
+  },
+  {
+   "at": 0.95,
+   "do": "layer",
+   "clip": "Idle1PointOut",
+   "mask": "leftArm",
+   "start": 0.38,
+   "speed": 1.3,
+   "once": 1,
+   "weight": 1,
+   "for": 0.63,
+   "blend": 0.07
+  },
+  {
+   "at": 0.96,
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     28,
+     22,
+     0
+    ],
+    "chest": [
+     7,
+     0,
+     0
+    ],
+    "spine": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "out",
+   "overshoot": 0.1,
+   "settle": "0.3s"
+  },
+  {
+   "at": 1.7,
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.2,
+   "ease": "inout"
+  },
+  {
+   "at": 1.03,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.8,
+   "for": 0.08
+  },
+  {
+   "at": 1.03,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.03,
+   "for": 0.08,
+   "finger": "index"
+  },
+  {
+   "at": 1.03,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.7,
+   "for": 0.08,
+   "finger": "thumb"
+  },
+  {
+   "at": 1.7,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.15
+  },
+  {
+   "at": 1.7,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.15,
+   "finger": "index"
+  },
+  {
+   "at": 1.7,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.15,
+   "finger": "thumb"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

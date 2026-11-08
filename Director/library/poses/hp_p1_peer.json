@@ -1,0 +1,93 @@
+{
+  // Hawkes Punch P1: peering round a boulder for the ghost; the turns are the gag beats.
+
+ "name": "hp_p1_peer",
+ "about": "P1 peer (s6_peer): leaning to peek round a boulder with the drawing held up, then a quick turn to look behind (12f), twice; HIM on zg_neutral_b.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 5.0,
+ "poses": {
+  "peek": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   },
+   "muscles": {
+    "Spine Left-Right": 0.3,
+    "Chest Left-Right": 0.25,
+    "Neck Tilt Left-Right": 0.15,
+    "Right Arm Down-Up": 0.6,
+    "Right Arm Front-Back": -0.3,
+    "Right Forearm Stretch": 0.6,
+    "Left Arm Down-Up": -0.1,
+    "Left Arm Front-Back": -0.5,
+    "Left Forearm Stretch": 0.6,
+    "Left Hand Down-Up": 0.4
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.35
+    },
+    "right": {
+     "curl": 0.55
+    }
+   }
+  },
+  "turn": {
+   "from": "peek",
+   "muscles": {
+    "Spine Left-Right": 0.0,
+    "Chest Left-Right": 0.0,
+    "Spine Twist Left-Right": -0.7,
+    "Chest Twist Left-Right": -0.6,
+    "Neck Turn Left-Right": -0.9,
+    "Head Turn Left-Right": -0.8,
+    "Neck Tilt Left-Right": 0,
+    "UpperChest Twist Left-Right": -0.4
+   },
+   "root": {
+    "rot": [
+     0,
+     -30,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "peek",
+   "hold": "30f"
+  },
+  {
+   "t": "42f",
+   "pose": "turn",
+   "interp": "out",
+   "step": 2,
+   "hold": "12f"
+  },
+  {
+   "t": "66f",
+   "pose": "peek",
+   "interp": "ease",
+   "step": 3,
+   "hold": "18f"
+  },
+  {
+   "t": "96f",
+   "pose": "turn",
+   "interp": "out",
+   "step": 2,
+   "hold": "12f"
+  },
+  {
+   "t": "120f",
+   "pose": "peek",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

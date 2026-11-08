@@ -1,0 +1,59 @@
+{
+ "id": "c2_low",
+ "f0": 3847,
+ "f1": 3922,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 128.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 129.1,
+   "why": "flow spike x17.6",
+   "file": "spike-03873.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 130.3,
+   "why": "flow spike x7.6",
+   "file": "spike-03909.jpg"
+  }
+ ],
+ "hash": "c6ed203129fe7b5a",
+ "summary": "The cut is clean, but the 129.09-129.33 strip is a heavy white-out that fades in with the turkey crowd changing to gold feathers, and the lower-left figure's frame-edge crop is a minor issue.",
+ "faults": [
+  {
+   "t": 129.09,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Heavy bright cream wash-out over the whole frame fading down over about 10 frames; the background turkeys also swap from white with bow ties to flat gold feather shapes between 129.19 and 129.23, a sudden change in the crowd.",
+   "fix": "Smooth the flash decay and keep the crowd asset the same across the fade, or hide the swap under the peak of the white."
+  },
+  {
+   "t": 130.29,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "Main figure is cropped at the head and the raised arm leaves frame, while the second figure is half cut off at the right edge; the pose reads as muddled, and confetti and feathers clutter the frame.",
+   "fix": "Reframe or tilt the camera to keep the head and arm in frame, and thin the confetti near the figures."
+  },
+  {
+   "t": 128.36,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both figures use near-identical hip-lean and hands-on-hips poses in sync, which reads twinned and stiff, and the near figure's head is cut by the top edge.",
+   "fix": "Offset the second figure's timing or pose and lower the camera tilt so the head is in frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6315,
+  "out": 560
+ },
+ "cost": 0.0182
+}

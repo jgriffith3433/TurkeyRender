@@ -1,0 +1,67 @@
+{
+ "id": "blade_up",
+ "f0": 2072,
+ "f1": 2124,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 69.067,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 69.167,
+   "why": "one patch jumps (cell 89.2, x3.1)",
+   "file": "spike-02075.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 69.533,
+   "why": "one patch jumps (cell 86.8, x2.7)",
+   "file": "spike-02086.jpg"
+  }
+ ],
+ "hash": "cd5f144fcc2ef296",
+ "summary": "The cut is clean, but the blade raise pops between 69.53 and 69.56, the held pose crops his head and the blade tip, and his eyes stay on the camera instead of the blade.",
+ "faults": [
+  {
+   "t": 69.56,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 69.53 and 69.56 the arm and blade jump. At 69.53 the hand is low on the left chest with the blade lying diagonally across the torso. At 69.56 the forearm is raised across the chest with the blade vertical. The torso and head also drop in frame between the two tiles. There is no in-between motion.",
+   "fix": "Add 3-4 in-between frames of the arm raising, or cut the blade raise on a clean frame. Lock the torso and camera position across the move."
+  },
+  {
+   "t": 69.66,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "In the held blade-up pose (69.56-69.76) his head is cropped at the forehead and the blade tip leaves the top of the frame. The idea is that he looks at the blade, but the blade end and his eyes are barely in shot.",
+   "fix": "Tilt the camera down or reframe so the face and the full blade are in shot, or lower the held hand."
+  },
+  {
+   "t": 69.69,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "During the hold his eyes stay on the camera or straight ahead and he does not look up at the blade. There is no eye lead or blink, so the 'looks at it' beat reads as a blank stare.",
+   "fix": "Aim the eyes and head up at the blade tip, and add a small head tilt or blink as he looks."
+  },
+  {
+   "t": 69.23,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 69.16 to 69.33 he sits in an awkward lean with one arm flung out behind and one out to the side. He drifts only slightly, so it reads as a mushy, twinned T-pose rather than a clear held pose. It also does not match the 'butlers freeze, he holds up the blade' idea.",
+   "fix": "Replace it with a clear, deliberate freeze pose with one line of action, or move the blade raise earlier."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6376,
+  "out": 1460
+ },
+ "cost": 0.0274
+}

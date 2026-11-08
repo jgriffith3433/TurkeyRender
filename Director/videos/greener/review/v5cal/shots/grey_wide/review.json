@@ -1,0 +1,39 @@
+{
+ "id": "grey_wide",
+ "f0": 3179,
+ "f1": 3255,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 105.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "ab7c4502f3e43ee8",
+ "summary": "The cut is a fade up from white, which fits the \"air goes out\" feel. The box, the man and the camera stay stable with no pops or flicker. The only issue is that his head looks cut off at the top edge, and his arms hang stiff.",
+ "faults": [
+  {
+   "t": 106.13,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The man's head is cut off by the top edge of the frame in every tile, so only his torso and legs show. This may come from the crop, but the shot's subject is the man.",
+   "fix": "Tilt the camera up or pull it back so his head sits inside the frame. If it is only the crop, ignore this."
+  },
+  {
+   "t": 106.19,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "His arms hang straight and stiff at his sides during the walk, with little swing or counter-motion. The walk reads as a flat, plain stride.",
+   "fix": "Add a slight arm swing opposite the legs and a small hip or shoulder sway."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3588,
+  "out": 774
+ },
+ "cost": 0.0149
+}

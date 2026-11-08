@@ -1,0 +1,22 @@
+{
+ "id": "dv_wide",
+ "f0": 2381,
+ "f1": 2432,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 79.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "b10fc1c934709184",
+ "summary": "The strip is clean: the camera drifts slowly and the dancer's pose changes smoothly from tile to tile, with no pops, flicker or clipping that I can point to.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3561,
+  "out": 873
+ },
+ "cost": 0.0159
+}

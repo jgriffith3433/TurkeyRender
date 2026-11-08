@@ -1,0 +1,37 @@
+{
+ "file": "videos/_fx_test/output/_fx_test-proof1.mp4",
+ "fps": 24,
+ "when": "2026-11-08T09:26:19.568Z",
+ "segments": [
+  {
+   "id": "head",
+   "f0": 0,
+   "f1": 4,
+   "hash": "547002735ef44770"
+  },
+  {
+   "id": "windup",
+   "f0": 4,
+   "f1": 57,
+   "hash": "3d2ac983610b8850"
+  },
+  {
+   "id": "hit",
+   "f0": 57,
+   "f1": 115,
+   "hash": "568d31a3a05c4e31"
+  },
+  {
+   "id": "wide",
+   "f0": 115,
+   "f1": 182,
+   "hash": "eca165cdc4c5fad7"
+  },
+  {
+   "id": "deadpan",
+   "f0": 182,
+   "f1": 4805,
+   "hash": "e438c70dfb4052c9"
+  }
+ ]
+}

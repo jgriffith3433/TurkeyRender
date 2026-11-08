@@ -1,0 +1,131 @@
+{
+ "name": "micro_life",
+ "about": "What a still face does: small eye darts off where he is looking and back, slow blinks landing on some of them, the lids and brow softening. Eyes only, on top of any gaze, so it goes over any close-up as an event and never moves the head. `amt` is the dart in degrees, `soft` 0 keeps the brow. The `fear` in `soft` opens the lips a little under a smile: use `soft` 0 there.",
+ "entry": "any",
+ "exit": "any",
+ "length": "6s",
+ "min": "1s",
+ "params": {
+  "amt": 7,
+  "soft": 1
+ },
+ "cues": [
+  {
+   "at": 0.1,
+   "do": "face",
+   "blink": 0.1,
+   "fear": 0.1,
+   "for": "0.9s",
+   "ease": "inout",
+   "if": "$soft"
+  },
+  {
+   "at": 0.55,
+   "do": "eyes",
+   "yaw": "=amt*1",
+   "pitch": "=amt*0.2",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>0.55,1,0)"
+  },
+  {
+   "at": 1.25,
+   "do": "eyes",
+   "yaw": "=amt*0",
+   "pitch": "=amt*0",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>1.25,1,0)"
+  },
+  {
+   "at": 1.2,
+   "do": "blink",
+   "for": 0.26,
+   "if": "=IIF(for>1.2,1,0)"
+  },
+  {
+   "at": 2.05,
+   "do": "eyes",
+   "yaw": "=amt*-1.1",
+   "pitch": "=amt*-0.2",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>2.05,1,0)"
+  },
+  {
+   "at": 2.5,
+   "do": "eyes",
+   "yaw": "=amt*-0.2",
+   "pitch": "=amt*0.1",
+   "for": 0.1,
+   "ease": "out",
+   "if": "=IIF(for>2.5,1,0)"
+  },
+  {
+   "at": 3.05,
+   "do": "blink",
+   "for": 0.32,
+   "if": "=IIF(for>3.05,1,0)"
+  },
+  {
+   "at": 3.1,
+   "do": "eyes",
+   "yaw": "=amt*0.2",
+   "pitch": "=amt*0",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>3.1,1,0)"
+  },
+  {
+   "at": 3.85,
+   "do": "eyes",
+   "yaw": "=amt*1.2",
+   "pitch": "=amt*-0.3",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>3.85,1,0)"
+  },
+  {
+   "at": 4.45,
+   "do": "eyes",
+   "yaw": "=amt*0",
+   "pitch": "=amt*0",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>4.45,1,0)"
+  },
+  {
+   "at": 4.9,
+   "do": "blink",
+   "for": 0.3,
+   "if": "=IIF(for>4.9,1,0)"
+  },
+  {
+   "at": 5.5,
+   "do": "eyes",
+   "yaw": "=amt*-1",
+   "pitch": "=amt*0.3",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>5.5,1,0)"
+  },
+  {
+   "at": 6.2,
+   "do": "eyes",
+   "yaw": "=amt*0",
+   "pitch": "=amt*0",
+   "for": 0.07,
+   "ease": "out",
+   "if": "=IIF(for>6.2,1,0)"
+  },
+  {
+   "at": 6.9,
+   "do": "blink",
+   "for": 0.3,
+   "if": "=IIF(for>6.9,1,0)"
+  }
+ ],
+ "test": {
+  "tail": 0.2
+ }
+}

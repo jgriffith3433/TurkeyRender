@@ -1,0 +1,53 @@
+{
+ "id": "clever",
+ "f0": 3024,
+ "f1": 3075,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 100.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 102,
+   "why": "frame difference x3.2 (5.64)",
+   "file": "spike-03060.jpg"
+  }
+ ],
+ "hash": "26003405e573bae6",
+ "summary": "The cut in is clean and static, but the rock at about 102 s opens a dark void gap beside the door and lifts the wall off the floor, and the door seems to move separately from the wall.",
+ "faults": [
+  {
+   "t": 102.06,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "As the wall rocks, a black vertical gap opens along the door's right edge (visible 101.99 to 102.19). It shows the empty void behind the door and wall pieces. The door looks like a separate card sitting in front of the wall.",
+   "fix": "Put a backing plane or matching wall colour behind the door. Or parent the door to the wall and keep the rock rotation pivot shared so no gap opens."
+  },
+  {
+   "t": 102.06,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The wall panels and door lift off the floor and tilt. A bright green floor wedge shows under the right wall panel and the door's bottom edge floats above the floor (102.03 to 102.13). The base no longer sits on the ground.",
+   "fix": "Pivot the rock at the wall base, or extend the wall geometry below the floor so the base stays hidden."
+  },
+  {
+   "t": 102,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The rock starts abruptly. The door and wall go from still at 101.99 to a clearly tilted pose by 102.03 to 102.06, with no anticipation. It matches the measured frame-difference spike.",
+   "fix": "Add one or two frames of anticipation and ease into the rock. Then overshoot and settle, rather than snapping."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4970,
+  "out": 1006
+ },
+ "cost": 0.02
+}

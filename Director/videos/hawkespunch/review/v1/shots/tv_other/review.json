@@ -1,0 +1,89 @@
+{
+ "id": "tv_other",
+ "f0": 4986,
+ "f1": 5062,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 166.2,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 166.4,
+   "why": "one patch jumps (cell 76.8, x4.1)",
+   "file": "spike-04992.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 166.733,
+   "why": "pose jumps and comes back (0.5)",
+   "file": "spike-05002.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 168.5,
+   "why": "one patch jumps (cell 78.9, x4.2)",
+   "file": "spike-05055.jpg"
+  }
+ ],
+ "hash": "fd24dfcc312c4dcd",
+ "summary": "The strip has real problems: the pointing arm is still tweening up after the cut, a flat dark bar covers his arm, the can arm snaps out of frame, and he ends in a stiff, symmetrical hang.",
+ "faults": [
+  {
+   "t": 166.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The cut is tweening. The pointing hand starts low at 166.23 and swings up to the lens only by 166.46. The shot's idea (the point down the lens) isn't there on the first frame.",
+   "fix": "Start the shot with the pointing pose already in place, or trim the first 6 frames."
+  },
+  {
+   "t": 166.43,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A flat, unshaded dark rectangle appears at 166.39 and widens through 166.46. It stays at left through 166.93 and covers his forearm and wrist. It looks like unlit confetti or a stray plane.",
+   "fix": "Find and remove or hide the stray plane or overlay, or move it out of the arm's area."
+  },
+  {
+   "t": 166.53,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The can arm snaps from hanging at 166.49-166.59 to a stiff horizontal reach by 166.69-166.79, within about 3 frames. The can swings away and leaves the frame at 166.76. The pose jumps and the prop vanishes.",
+   "fix": "Remove the arm swing, or retime it with anticipation and ease. Keep the can in the hand and in frame."
+  },
+  {
+   "t": 166.79,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The arm is straight out to the side and cut off by the frame edge from 166.76 to 166.93. The hand and can are off-screen. It reads as a stiff, rigid line, with a flat pose and no overlap.",
+   "fix": "Bring the arm in and down, or reframe so the hand stays visible."
+  },
+  {
+   "t": 166.3,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The can sits loosely against open, spread fingers at 166.26-166.46. The fingers don't wrap it, and the can dangles at an angle as if it were stuck to the palm.",
+   "fix": "Curl the fingers around the can and fix its grip offset."
+  },
+  {
+   "t": 168.56,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "From 168.49 to 168.69 both arms hang straight down in a near-symmetric, stiff pose. The pointing is gone, and the hand and can sit at the bottom edge. The pose is static and the held frames lack a clear line of action.",
+   "fix": "Add an asymmetric pose, or add some settle or weight shift."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7773,
+  "out": 1867
+ },
+ "cost": 0.0342
+}

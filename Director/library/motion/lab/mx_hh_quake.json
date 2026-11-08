@@ -1,0 +1,39 @@
+{
+ "clip": "mx_hh_quake",
+ "seconds": 12,
+ "popCount": 7,
+ "pops": [
+  "0.533s LeftHandIndex3 kink 0.088 m",
+  "0.633s LeftHandPinky2 kink 0.097 m",
+  "0.700s RightHandPinky3 kink 0.080 m",
+  "1.700s RightFoot kink 0.081 m",
+  "3.900s RightLowerLeg kink 0.102 m",
+  "9.333s RightToes kink 0.099 m"
+ ],
+ "feet": [
+  "left foot on floor moved 1.743 m, worst step 0.043 m at 1.80s",
+  "right foot on floor moved 6.067 m, worst step 0.047 m at 4.27s"
+ ],
+ "hipsTop": 0.8864408,
+ "hipsLow": 0.754124,
+ "hipsTravel": "(-0.02, 0.01, 0.01)",
+ "limits": {
+  "Chest": 17.4,
+  "groundHipsCm": 13.7,
+  "LeftFoot": 9.5,
+  "LeftLowerArm": 7.4,
+  "Head": 5.6,
+  "RightShoulder": 4.7,
+  "LeftShoulder": 3.3,
+  "Spine": 2.4,
+  "RightLowerArm": 0.2
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_hh_quake was rejected by admission: foot slide 4.76 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_quake_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_quake_three.mp4"
+ ]
+}

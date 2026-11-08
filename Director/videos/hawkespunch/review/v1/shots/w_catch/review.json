@@ -1,0 +1,83 @@
+{
+ "id": "w_catch",
+ "f0": 3402,
+ "f1": 3477,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 113.4,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 114.7,
+   "why": "one patch jumps (cell 46.1, x6.3)",
+   "file": "spike-03441.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 115.8,
+   "why": "one patch jumps (cell 81.8, x2.6)",
+   "file": "spike-03474.jpg"
+  }
+ ],
+ "hash": "1ba9e9efbb259783",
+ "summary": "The catch reads poorly: Saturn pops into frame at 114.69 and passes through his torso and arm, and the throw is not visible. Saturn then shrinks and flies off while the camera or character jumps.",
+ "faults": [
+  {
+   "t": 114.69,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Saturn appears fully formed beside his torso in a single frame (absent at 114.66, full size at 114.69) with no flight in. The catch has no incoming ball and no anticipation.",
+   "fix": "Animate Saturn flying in from the thrower and shrinking, arriving at his hands on the catch frame."
+  },
+  {
+   "t": 114.76,
+   "sev": "A",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "Saturn sits behind his torso and arm, and its ring cuts through his body at 114.73-114.89. At 114.89 his arm and fist overlap the planet. He never wraps the planet in his hands or gut, so it does not read as caught in the gut.",
+   "fix": "Parent Saturn to his hands or gut at the catch frame. Put it in front of the torso with the arms wrapping it, and fix the depth order."
+  },
+  {
+   "t": 114.86,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "His pose is a stiff, near-symmetrical hunch with his back to camera. The catch and the gut impact do not show in the silhouette, and there is no recoil.",
+   "fix": "Add a clear doubled-over recoil on impact, with the hips driving back."
+  },
+  {
+   "t": 115.76,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The framing jumps between 115.86 and 115.89. He moves from centre to the right edge, partly cut off, and the camera or background shifts. Saturn goes from large to tiny in 3 frames, and a dark blob appears at lower left at 115.89.",
+   "fix": "Keep the camera and character position continuous. Tween Saturn's scale and flight over more frames, and remove the dark blob."
+  },
+  {
+   "t": 115.99,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He is cropped by the right frame edge from 115.89 on, with a red planet entering and clipping at the edge. The hurl lands at a different angle from the throw and is hard to read.",
+   "fix": "Re-stage so he stays in frame and the hurl goes visibly past him into the dark."
+  },
+  {
+   "t": 115.83,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The throw itself is missing. His arms hang down and point at 115.79-115.86 while Saturn has already left, so the hurl is not sold with a wind-up or follow-through.",
+   "fix": "Add a throw wind-up and release on the frames where Saturn leaves his hands."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6400,
+  "out": 971
+ },
+ "cost": 0.0225
+}

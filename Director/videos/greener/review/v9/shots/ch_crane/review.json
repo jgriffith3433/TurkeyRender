@@ -1,0 +1,61 @@
+{
+ "id": "ch_crane",
+ "f0": 1455,
+ "f1": 1507,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 48.5,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 49.033,
+   "why": "flow spike x2.1",
+   "file": "spike-01471.jpg"
+  }
+ ],
+ "hash": "148e8cb23c85c876",
+ "summary": "The shot never shows the idea (he points at us): he stands with hands on hips or hanging arms, looks up and away, and his arms shift between poses with a quick drop around 49.06 to 49.09.",
+ "faults": [
+  {
+   "t": 48.63,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The beat should be him pointing at us from the floor. Through the opening frames he stands with both hands on his hips, a stiff, near-symmetrical akimbo pose. His gaze is up and off to the side, not at camera. No point is visible.",
+   "fix": "Key a clear point toward camera with the eyes locked on lens at the drop, and replace the akimbo pose."
+  },
+  {
+   "t": 49.09,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 49.06 and 49.09 his arms change quickly. The hand on the hip (viewer's right) drops to hang at his side, and the other hand slides across the belly. There is almost no transition, so it reads as a snap.",
+   "fix": "Smooth or retime the arm transition over more frames, or hold one pose through the beat."
+  },
+  {
+   "t": 49.16,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 48.99 to 49.23 the arms drift between hip, belly and hanging positions with no strong held pose. The motion is mushy and has no clear line of action, and he is not pointing.",
+   "fix": "Hold one strong pose, such as the point, and make the moves into and out of it quick."
+  },
+  {
+   "t": 49.23,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His gaze stays up and away through the whole strip. The expression is flat and doesn't engage the viewer, which weakens the drop.",
+   "fix": "Add a head turn and eye lead toward camera, with a blink on the turn."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4966,
+  "out": 1227
+ },
+ "cost": 0.0222
+}

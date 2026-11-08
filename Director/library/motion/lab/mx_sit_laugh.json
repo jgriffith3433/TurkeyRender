@@ -1,0 +1,23 @@
+{
+ "clip": "mx_sit_laugh",
+ "seconds": 8.433,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.453 m, worst step 0.009 m at 3.10s",
+  "right foot on floor moved 0.000 m, worst step 0.000 m at 0.00s"
+ ],
+ "hipsTop": 0.5777608,
+ "hipsLow": 0.5440035,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "Head": 22.5,
+  "groundHipsCm": 1.3
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_laugh_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_laugh_three.mp4"
+ ]
+}

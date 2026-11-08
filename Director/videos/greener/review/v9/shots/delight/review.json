@@ -1,0 +1,22 @@
+{
+ "id": "delight",
+ "f0": 1429,
+ "f1": 1455,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 47.633,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "5fac6f6c5f9f605f",
+ "summary": "The cut strip is clean: the camera is static, the framing is stable and the body moves smoothly with no pops or render flicker. The crop shows only the lower face, so the smile can't be judged here.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3555,
+  "out": 136
+ },
+ "cost": 0.0085
+}

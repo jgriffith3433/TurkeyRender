@@ -1,0 +1,31 @@
+{
+ "id": "dv_wide_2",
+ "f0": 2510,
+ "f1": 2561,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 83.667,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "5f7b82c2a356faf9",
+ "summary": "The cut strip is mostly clean, with no pops, flicker or clipping. The only note is that he is small and stands fairly upright, so the dancing barely reads.",
+ "faults": [
+  {
+   "t": 83.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He is small in frame and stands upright with legs close together and arms tucked near his torso. The silhouette is weak, and the dance idea barely reads in these first frames of the shot.",
+   "fix": "Start the shot on a stronger dance pose with arms or legs clearly apart, or push the camera in slightly."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3568,
+  "out": 554
+ },
+ "cost": 0.0127
+}

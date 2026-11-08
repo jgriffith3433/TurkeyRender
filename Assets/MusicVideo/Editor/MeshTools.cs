@@ -8,7 +8,7 @@ namespace TKShock.MV.EditorTools
     /// <summary>Meshes made at build time. Each is saved once under Generated/Meshes and reused.</summary>
     public static class MeshTools
     {
-        public const string Dir = ScoreCompiler.Gen + "/Meshes";
+        public static string Dir => ScoreCompiler.Gen + "/Meshes";
 
         public static void Folder()
         {

@@ -15,8 +15,10 @@ namespace TKShock.MV
         Vector3 Aim(double t)
         {
             float x = Mathf.Clamp((float)((t - aimStart) / aimStep), 0, aimPath.Length - 1.001f);
-            int i = (int)x; float k = x - i; k = k * k * (3 - 2 * k);
-            return Vector3.Lerp(aimPath[i], aimPath[i + 1], k);
+            // Through the points, not eased between them: easing stopped the camera dead every 0.2 s on a subject that kept moving.
+            int i = (int)x, n = aimPath.Length; float k = x - i;
+            Vector3 a = aimPath[Mathf.Max(i - 1, 0)], b = aimPath[i], c = aimPath[i + 1], d = aimPath[Mathf.Min(i + 2, n - 1)];
+            return .5f * (2 * b + (c - a) * k + (2 * a - 5 * b + 4 * c - d) * k * k + (3 * b - a - 3 * c + d) * k * k * k);
         }
 
         protected override void PostPipelineStageCallback(Unity.Cinemachine.CinemachineVirtualCameraBase vcam,
@@ -44,15 +46,25 @@ namespace TKShock.MV
                     + new Vector3(N(t * .9f, 4), N(t * 1.1f, 5), N(t * .7f, 6)) * (hh * .12f);
             var rot = new Vector3(N(t * MVClock.ShakeSpeed, 7), N(t * MVClock.ShakeSpeed, 8), 0) * (amp * 3f)
                     + new Vector3(N(t * .8f, 9), N(t, 10), 0) * (hh * 1.2f);
-            state.PositionCorrection += (state.RawOrientation * state.OrientationCorrection) * pos;
-            state.OrientationCorrection *= Quaternion.Euler(rot.x, rot.y, MVClock.Dutch);
             var lens = state.Lens;
+            float roll = 0;
+            if (MVEpic.Trauma > 0 || MVEpic.Heavy > 0)
+            {
+                // Trauma shake (Eiserloh): trauma squared times the maximum, smooth noise at 16 Hz on song time (it runs on through a hitstop, as the camera
+                // does), mostly rotation: roll 2.5 degrees, pitch and yaw worth 1.5% of the frame. Heavy: the slow 3.5 Hz sway of a planet's weight.
+                float tt = (float)MVClock.T, s = MVEpic.Trauma * MVEpic.Trauma, hv = MVEpic.Heavy * MVEpic.Heavy, fov = lens.FieldOfView;
+                rot += new Vector3(N(tt * 16, 11) * fov * .015f * s + N(tt * 3.5f, 14) * fov * .035f * hv, N(tt * 16, 12) * fov * .015f * s + N(tt * 3.1f, 16) * fov * .035f * hv, 0);
+                roll = N(tt * 16, 13) * 2.5f * s + N(tt * 2.7f, 15) * 1.6f * hv;
+            }
+            state.PositionCorrection += (state.RawOrientation * state.OrientationCorrection) * pos;
+            state.OrientationCorrection *= Quaternion.Euler(rot.x, rot.y, MVClock.Dutch + roll);
             if (fovTo > 0)
             {
                 float k = Ease.Apply(string.IsNullOrEmpty(fovEase) ? "linear" : fovEase, (float)((MVClock.T - fovStart) / System.Math.Max(fovEnd - fovStart, 1e-4)));
                 lens.FieldOfView = Mathf.LerpUnclamped(fovFrom, fovTo, k);
             }
             lens.FieldOfView = Mathf.Clamp(lens.FieldOfView * (1 + MVClock.Zoom), 2, 170);
+            if (MVEpic.Punch > 0) lens.FieldOfView = Mathf.Clamp(lens.FieldOfView * (1 - MVEpic.Punch), 2, 170);   // FOV punch: in, then back
             state.Lens = lens;
             if (vcam.IsLive)
             {

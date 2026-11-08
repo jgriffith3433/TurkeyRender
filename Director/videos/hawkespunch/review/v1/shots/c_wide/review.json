@@ -1,0 +1,39 @@
+{
+ "id": "c_wide",
+ "f0": 307,
+ "f1": 383,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 10.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "611cef7f605c6371",
+ "summary": "The strip has no pops, flicker or render faults and the camera is steady. The only issues are staging and story: her back covers him, and the stethoscope isn't visible.",
+ "faults": [
+  {
+   "t": 10.26,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "She stands with her back to camera, close in front of the seated man. Her torso and hair cover his upper body and face, so the 'he looks green' idea doesn't read. Both heads sit at the top edge of the crop.",
+   "fix": "Move her to the side of him or turn her three-quarters toward camera, so his face and torso are clear."
+  },
+  {
+   "t": 10.4,
+   "sev": "C",
+   "rule": "story",
+   "seen": "likely",
+   "what": "No stethoscope shows on her in any tile. Her arms hang straight at her sides, and the 'she beside him with her stethoscope' beat isn't there.",
+   "fix": "Put the stethoscope around her neck or in her hand, and angle her so it shows."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3576,
+  "out": 707
+ },
+ "cost": 0.0142
+}

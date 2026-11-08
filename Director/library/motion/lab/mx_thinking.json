@@ -1,0 +1,25 @@
+{
+ "clip": "mx_thinking",
+ "seconds": 4.332999999999999,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.359 m, worst step 0.017 m at 3.10s",
+  "right foot on floor moved 0.232 m, worst step 0.005 m at 0.20s"
+ ],
+ "hipsTop": 0.9210092,
+ "hipsLow": 0.9074636,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 2.6,
+  "Head": 1.7,
+  "Chest": 1.3,
+  "RightLowerArm": 0.1
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_thinking_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_thinking_three.mp4"
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "state": "rendering",
+ "shot": "s_tap",
+ "done": 32,
+ "of": 73,
+ "reused": 0,
+ "expected": {
+  "shots": 73,
+  "of": 73,
+  "frames": 6100,
+  "total": 6100,
+  "perFrame": 0.115,
+  "overhead": 3.3,
+  "minutes": 15,
+  "lastFinal": "2026-11-08T02:37:06.757Z"
+ },
+ "started": "2026-11-08T02:45:40.548Z",
+ "pid": 22488,
+ "updated": "2026-11-08T02:55:43.501Z"
+}

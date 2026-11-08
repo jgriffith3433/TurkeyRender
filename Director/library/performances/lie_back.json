@@ -1,0 +1,154 @@
+{
+ "name": "lie_back",
+ "about": "From sitting on the ground, leans back on his hands and lets himself down flat: legs out with one knee soft, arms easy on the grass, hands open, head level. `blend` 0.05 starts it on a cut, already sitting.",
+ "entry": "sit_ground",
+ "exit": "lie",
+ "length": "3.4s",
+ "min": "3.1s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": 0.01
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleSitToIdleLayDownCampfire",
+   "once": 1,
+   "blend": "$blend",
+   "start": 0.95
+  },
+  {
+   "at": 0.4,
+   "do": "gaze",
+   "toRel": [
+    0,
+    5,
+    1
+   ],
+   "for": "1.2s",
+   "ease": "inout",
+   "limit": 30
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.35,
+   "for": 0.01
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": 0.01
+  },
+  {
+   "at": "=for-1.15",
+   "do": "anim",
+   "clip": "DeadBack",
+   "blend": "0.75s"
+  },
+  {
+   "at": 0.02,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.2,
+     "root": {
+      "pos": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 2.2,
+     "ease": "inout",
+     "root": {
+      "pos": [
+       0,
+       -0.125,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=for-0.1",
+     "ease": "inout",
+     "bones": {
+      "leftUpperArm": [
+       0,
+       52,
+       0
+      ],
+      "rightUpperArm": [
+       0,
+       -46,
+       0
+      ],
+      "leftLowerArm": [
+       0,
+       10,
+       0
+      ],
+      "rightLowerArm": [
+       0,
+       -16,
+       0
+      ],
+      "leftUpperLeg": [
+       -9,
+       15,
+       0
+      ],
+      "leftLowerLeg": [
+       16,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       0,
+       -13,
+       0
+      ],
+      "head": [
+       10,
+       0,
+       0
+      ],
+      "neck": [
+       8,
+       0,
+       0
+      ],
+      "leftFoot": [
+       0,
+       0,
+       -26
+      ],
+      "rightFoot": [
+       0,
+       0,
+       28
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "test": {
+  "first": [
+   "sit_on_grass"
+  ],
+  "tail": 0.8
+ },
+ "params": {
+  "blend": 0.6
+ }
+}

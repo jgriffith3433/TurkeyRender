@@ -1,0 +1,22 @@
+{
+ "id": "sym_ghost_her",
+ "f0": 1321,
+ "f1": 1416,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 44.033,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "c4d33ac12b433b67",
+ "summary": "The strip is clean: the camera is static, the head turns down slowly and steadily across the frames, and no pops, clipping or render flicker are visible. The face is deadpan, which suits the shot.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3576,
+  "out": 136
+ },
+ "cost": 0.0085
+}

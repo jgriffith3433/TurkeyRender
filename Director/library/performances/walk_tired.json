@@ -1,0 +1,75 @@
+{
+ "name": "walk_tired",
+ "about": "A worn-out walk: head low, shoulders down, short slow steps. Straight ahead of where he faces. `dist` metres, or `pace` m/s for `for`. Eases in and out; follow with step_stop. The distance is rounded so the walk ends with the left foot just landed ahead, the default stand's stance, so step_stop slides nothing.",
+ "entry": "stand",
+ "exit": "walking_stopped",
+ "length": "4s",
+ "min": "2.2s",
+ "params": {
+  "dist": 0,
+  "pace": 0.32,
+  "stride": 0.335,
+  "clip": "Walk6"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.45,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "walk",
+   "clip": "$clip",
+   "to": [
+    0,
+    0,
+    "=stride*(Convert(IIF(dist>0,dist,for*pace)/stride-0.95,'System.Int32')+0.95)"
+   ],
+   "rel": 2,
+   "for": "$for",
+   "stride": "$stride",
+   "soft": 0.55,
+   "softOut": 0.9,
+   "blend": "0.4s",
+   "face": 0
+  },
+  {
+   "at": 0.7,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": "=for*0.55",
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": "=for-0.35",
+   "do": "overlap",
+   "amount": 0,
+   "for": "0.5s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "legs": 0,
+   "for": "0.35s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.05",
+   "do": "stance",
+   "legs": 1,
+   "for": "0.7s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "then": [
+   "step_stop"
+  ],
+  "tail": 0.6
+ }
+}

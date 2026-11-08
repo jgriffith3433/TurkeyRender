@@ -1,0 +1,8 @@
+about: Jazz square feet (warped to the beat), ribs popping in the arms, rumba hips added under it. Grade A groove, 4 beats, loops; 5 beats on chorus 2.
+kind: groove
+len: 4b
+cues:
+  - {at: 0b, do: anim, clip: mx_jazz_square, start: 0.1, speed: 1.19, warpTo: beat, maxRate: 1.25, blend: 0.14, for: $len}
+  - {at: 0b, do: layer, clip: mx_rib_pops, mask: arms, start: 0.2, speed: 1.1, warpTo: beat, maxRate: 1.25, weight: 1, for: $len, blend: 0.12}
+  - {at: 0b, do: layer, clip: mx_rumba, mask: lower, additive: 1, speed: 1.38, weight: $hips, for: $len, blend: 0.15}
+params: {hips: 0.6}

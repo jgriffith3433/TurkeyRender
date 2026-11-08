@@ -1,0 +1,45 @@
+{
+ "id": "dv_cu_3",
+ "f0": 2870,
+ "f1": 2921,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 95.667,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 96.767,
+   "why": "one patch jumps (cell 104.7, x3.5)",
+   "file": "spike-02903.jpg"
+  }
+ ],
+ "hash": "3b50550621bc57a4",
+ "summary": "The strip is mostly clean, with no pops or flicker, and the 96.767 s spike isn't visible. The face is cropped at the mouth or chin throughout, and the opening pose is stiff and symmetrical.",
+ "faults": [
+  {
+   "t": 95.69,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The face is cut off at the chin or mouth for the whole shot. The eyes never show, though the shot is meant to be 'down the lens, he means this'. In the 96.76–96.99 tiles only the mouth and nose are visible.",
+   "fix": "Tilt the camera up or reframe so the eyes and face sit in the upper third of the frame."
+  },
+  {
+   "t": 95.76,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "On the cut, both arms hang straight at his sides in near-mirror symmetry and barely move from 95.69 to 95.93. This reads as a stiff, idle pose with no clear line of action.",
+   "fix": "Start the shot on a stronger gesture, or offset the arms asymmetrically with a small anticipation before the move."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4966,
+  "out": 986
+ },
+ "cost": 0.0198
+}

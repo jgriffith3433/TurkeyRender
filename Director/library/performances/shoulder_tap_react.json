@@ -1,0 +1,177 @@
+{
+ "name": "shoulder_tap_react",
+ "about": "A tap on the shoulder in space: the shoulders jump, the eyes flick to `side` (1 his right, -1 his left), the head turns over that shoulder and the body follows, hands half up. Eyes wide, then the jaw drops on seeing him. No ground. Ends flying, turned. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "fly",
+ "exit": "fly",
+ "length": "1.9s",
+ "min": "1.4s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "side": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    "=side*2.5",
+    1.6,
+    -0.6
+   ],
+   "for": "0.12s",
+   "head": 0,
+   "ease": "out"
+  },
+  {
+   "at": 0.02,
+   "do": "face",
+   "eyesWide": 0.8,
+   "fear": 0.3,
+   "for": "0.08s",
+   "ease": "out"
+  },
+  {
+   "at": 0.05,
+   "do": "keys",
+   "anticipate": 0.1,
+   "successive": 0.03,
+   "keys": [
+    {
+     "t": 0.14,
+     "ease": "out",
+     "overshoot": 0.1,
+     "settle": "0.25s",
+     "hold": 0.1,
+     "bones": {
+      "leftShoulder": [
+       0,
+       0,
+       -12
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       12
+      ],
+      "leftLowerArm": [
+       -25,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -25,
+       0,
+       0
+      ],
+      "head": [
+       2,
+       "=side*12",
+       0
+      ]
+     }
+    },
+    {
+     "t": 0.6,
+     "ease": "inout",
+     "overshoot": 0.06,
+     "settle": "0.3s",
+     "hold": "=for-1.1",
+     "bones": {
+      "spine": [
+       0,
+       "=side*16",
+       0
+      ],
+      "chest": [
+       0,
+       "=side*24",
+       0
+      ],
+      "neck": [
+       2,
+       "=side*24",
+       0
+      ],
+      "head": [
+       4,
+       "=side*32",
+       0
+      ],
+      "leftShoulder": [
+       0,
+       0,
+       -6
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       6
+      ],
+      "leftLowerArm": [
+       -30,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       -30,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.15,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.1,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.15,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.7,
+   "do": "face",
+   "jawOpen": 0.5,
+   "eyesWide": 0.9,
+   "fear": 0.2,
+   "for": "0.15s",
+   "ease": "out"
+  },
+  {
+   "at": 1.2,
+   "do": "blink",
+   "for": "0.18s"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "drift_space",
+    "for": "2s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

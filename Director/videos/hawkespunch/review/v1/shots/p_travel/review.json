@@ -1,0 +1,73 @@
+{
+ "id": "p_travel",
+ "f0": 2224,
+ "f1": 2496,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 74.133,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 74.233,
+   "why": "one patch jumps (cell 147.6, x28.9)",
+   "file": "spike-02227.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 82.3,
+   "why": "flow spike x5.5",
+   "file": "spike-02469.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 83,
+   "why": "flow spike x2.2",
+   "file": "spike-02490.jpg"
+  }
+ ],
+ "hash": "f6d4a14abf22875b",
+ "summary": "The strip has two real faults: a black shape flashes in the top-left corner for one frame at 74.19, and he rides out of the top of the frame at about 82.43, leaving it empty. He is also close to a frozen pose at the start.",
+ "faults": [
+  {
+   "t": 74.19,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A black angular shape appears in the top-left corner for this one frame only. It is gone at 74.16 and at 74.23, so it reads as a stray object or flicker. It is probably what the 74.233 spike picked up.",
+   "fix": "Find the object that crosses the camera at this time and hide or remove it for these frames."
+  },
+  {
+   "t": 74.26,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 74.16 to 74.39 the body is almost frozen in the same spread-arm, striding pose while the debris dots drift around him. It looks like a pasted pose and not a character in motion. There is no visible settle or overshoot after the burst.",
+   "fix": "Add a small drift, rotation or limb overlap to the body during the debris burst."
+  },
+  {
+   "t": 82.43,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He climbs to the top edge from 82.26 and leaves the frame by 82.46 and 82.49. Only the speed line and empty blue remain, so the subject is lost. The shot idea is riding beside him.",
+   "fix": "Have the camera track upward with him, or lower his path so he stays in frame."
+  },
+  {
+   "t": 82.96,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He is a dark silhouette on dark blue, now horizontal and almost motionless across 82.96 to 83.16. The limbs barely read, and the pose has changed from the upright stride with no visible transition.",
+   "fix": "Add a rim light or lift the exposure on him, and give the tumble some visible rotation."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7759,
+  "out": 1236
+ },
+ "cost": 0.0279
+}

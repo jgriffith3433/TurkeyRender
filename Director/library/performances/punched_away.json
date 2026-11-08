@@ -1,0 +1,107 @@
+{
+ "name": "punched_away",
+ "about": "The hit and the flight. The hit reaction (GetHitFrontHeavyCombat, the head snapping back) for a quarter second, then a ragdoll with no gravity for `fly` seconds, spun by `spin` degrees a second and shoved by `impulse` (metres a second, in the world: keep it small; the travel across the sky is the flight path, not this), then the body gathers into a loose flying pose (Falling at a quarter speed, limbs alive on overlap). The ground is off from the first frame. Eyes wide, jaw open, no blink. Ends flying.",
+ "entry": "stand",
+ "exit": "fly",
+ "length": "3.2s",
+ "min": "2s",
+ "params": {
+  "fly": 1.5,
+  "impulse": [
+   0,
+   0.3,
+   -0.8
+  ],
+  "spin": 320,
+  "seed": 3
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "GetHitFrontHeavyCombat",
+   "once": 1,
+   "blend": "0.05s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "eyesWide": 1,
+   "jawOpen": 0.6,
+   "for": "0.08s",
+   "ease": "out"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.1,
+   "for": "0.15s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.1,
+   "for": "0.15s"
+  },
+  {
+   "at": 0.24,
+   "do": "ragdoll",
+   "for": "$fly",
+   "impulse": "$impulse",
+   "spin": "$spin",
+   "gravity": [
+    0,
+    0,
+    0
+   ],
+   "floor": -100,
+   "drag": 0.4,
+   "stiff": 1.2,
+   "drive": 0.12,
+   "blendIn": "0.06s",
+   "seed": "$seed"
+  },
+  {
+   "at": "=fly+0.24",
+   "do": "anim",
+   "clip": "Falling",
+   "speed": 0.25,
+   "blend": "0.7s"
+  },
+  {
+   "at": "=fly+0.3",
+   "do": "overlap",
+   "amount": 0.8,
+   "arms": 1,
+   "hands": 1,
+   "head": 0.6,
+   "for": "0.3s"
+  },
+  {
+   "at": "=fly+0.6",
+   "do": "face",
+   "eyesWide": 0.7,
+   "jawOpen": 0.4,
+   "for": "0.5s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.4
+ }
+}

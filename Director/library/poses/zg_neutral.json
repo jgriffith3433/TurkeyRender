@@ -1,0 +1,54 @@
+{
+  // The NASA neutral body posture (research/zero-g-acting.md 1.1-1.3): the base float for every floating body.
+  // Muscle values are Unity Humanoid muscles on his PersonAvatar (default limits: no overrides), seeded from mx_breathing_idle's
+  // first frame and checked as angles with `call posecheck` (library/poses/check/zg_neutral.json). Loops every 12 s.
+  "name": "zg_neutral",
+  "about": "NBP base float: hip ~30, knee ~48, ankle pointed, toes 0, neck down ~13, shoulder flex ~45 / abd ~32, elbow ~70, fingers 40% curled, spine a little rounded. Breath 4 s, limb float 6 s, root drift 12 s.",
+  "seed": { "clip": "mx_breathing_idle", "t": 0 },
+  "loop": true,
+  "length": 12,
+  "poses": {
+    "float": {
+      "muscles": {
+        "Left Upper Leg Front-Back": -0.09, "Right Upper Leg Front-Back": -0.1,
+        "Left Upper Leg In-Out": 0.15, "Right Upper Leg In-Out": 0.13,
+        "Left Upper Leg Twist In-Out": 0.25, "Right Upper Leg Twist In-Out": 0.22,
+        "Left Lower Leg Stretch": 0.34, "Right Lower Leg Stretch": 0.38,
+        "Left Foot Up-Down": 0.55, "Right Foot Up-Down": 0.55,
+        "Left Foot Twist In-Out": 0.0, "Right Foot Twist In-Out": 0.0, "Left Lower Leg Twist In-Out": 0.0, "Right Lower Leg Twist In-Out": 0.0,
+        "Left Toes Up-Down": 0, "Right Toes Up-Down": 0,
+        "Spine Front-Back": -0.05, "Chest Front-Back": -0.03, "UpperChest Front-Back": -0.02,
+        "Spine Left-Right": 0, "Chest Left-Right": 0, "Spine Twist Left-Right": 0, "Chest Twist Left-Right": 0,
+        "Neck Nod Down-Up": -0.2, "Head Nod Down-Up": -0.12, "Neck Tilt Left-Right": 0, "Head Tilt Left-Right": 0, "Neck Turn Left-Right": 0, "Head Turn Left-Right": 0,
+        "Left Shoulder Down-Up": -0.62, "Right Shoulder Down-Up": -0.58,
+        "Left Arm Down-Up": -0.03, "Right Arm Down-Up": -0.08,
+        "Left Arm Front-Back": -0.19, "Right Arm Front-Back": -0.14, "Left Arm Twist In-Out": 0.02, "Right Arm Twist In-Out": -0.05,
+        "Left Forearm Stretch": -0.02, "Right Forearm Stretch": -0.1,
+        "Left Hand Down-Up": -0.15, "Right Hand Down-Up": -0.15, "Left Hand In-Out": 0, "Right Hand In-Out": 0
+      },
+      "fingers": { "both": { "joints": [0.46, 0.4, 0.3], "spread": 0.0 }, "left.thumb": { "curl": 0.2, "spread": 0.1 }, "right.thumb": { "curl": 0.2, "spread": 0.1 } }
+    }
+  },
+  "keys": [
+    { "t": 0, "pose": "float" },
+    { "t": 12, "pose": "float" }
+  ],
+  "cycles": [
+    // breath, 4 s (15 a minute): chest opens, shoulders and arms lift a touch, the head answers
+    { "period": 4, "phase": 0, "muscles": { "Chest Front-Back": 0.03, "UpperChest Front-Back": 0.02, "Left Shoulder Down-Up": 0.05, "Right Shoulder Down-Up": 0.05, "Left Arm Down-Up": 0.015, "Right Arm Down-Up": 0.015, "Neck Nod Down-Up": -0.01 }, "root": { "pos": [0, 0.004, 0] } },
+    // limb float, 6 s, each limb on its own phase so nothing mirrors (about 3-4 degrees)
+    { "period": 6, "phase": 0.0, "muscles": { "Left Arm Down-Up": 0.06, "Left Arm Front-Back": -0.03, "Left Forearm Stretch": 0.04 } },
+    { "period": 6, "phase": 0.38, "muscles": { "Right Arm Down-Up": 0.05, "Right Arm Front-Back": -0.04, "Right Forearm Stretch": -0.04 } },
+    { "period": 6, "phase": 0.15, "muscles": { "Left Upper Leg Front-Back": -0.04, "Left Lower Leg Stretch": 0.05 } },
+    { "period": 6, "phase": 0.62, "muscles": { "Right Upper Leg Front-Back": -0.035, "Right Lower Leg Stretch": -0.05, "Right Upper Leg In-Out": 0.02 } },
+    // the whole body turns a degree or two over 12 s: nothing holds it still
+    { "period": 12, "phase": 0.0, "root": { "rot": [1.5, 2.0, 0.8] } }
+  ],
+  // four takes of the same float with small asymmetries, so two copies of him never mirror each other
+  "variants": {
+    "a": { "add": { "Right Arm Down-Up": 0.05, "Left Lower Leg Stretch": -0.06, "Head Turn Left-Right": 0.06, "Left Hand In-Out": 0.1, "Left Arm Twist In-Out": -0.08, "Left Forearm Stretch": 0.06 }, "cyclePhase": 0.13 },
+    "b": { "add": { "Left Upper Leg Front-Back": -0.08, "Right Upper Leg Front-Back": -0.1, "Left Lower Leg Stretch": -0.08, "Right Lower Leg Stretch": -0.06, "Left Arm Front-Back": -0.08, "Right Arm Front-Back": -0.06, "Spine Front-Back": -0.03 }, "cyclePhase": 0.37 },
+    "c": { "add": { "Left Upper Leg Front-Back": 0.1, "Right Upper Leg Front-Back": 0.12, "Left Lower Leg Stretch": 0.14, "Right Lower Leg Stretch": 0.12, "Left Arm Down-Up": -0.06, "Right Arm Down-Up": -0.04, "Neck Nod Down-Up": 0.08, "Right Forearm Stretch": 0.12, "Left Arm Twist In-Out": 0.06 }, "cyclePhase": 0.61 },
+    "d": { "add": { "Left Upper Leg Front-Back": 0.08, "Right Upper Leg Front-Back": -0.06, "Left Lower Leg Stretch": -0.08, "Spine Twist Left-Right": 0.05, "Head Tilt Left-Right": -0.05, "Left Forearm Stretch": -0.08, "Right Arm Front-Back": 0.05, "Right Arm Down-Up": 0.05 }, "cyclePhase": 0.84 }
+  }
+}

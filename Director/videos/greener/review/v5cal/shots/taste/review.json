@@ -1,0 +1,75 @@
+{
+ "id": "taste",
+ "f0": 1147,
+ "f1": 1198,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 38.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 38.467,
+   "why": "one patch jumps (cell 137.7, x5.6)",
+   "file": "spike-01154.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 39.367,
+   "why": "one patch jumps (cell 136.3, x3.4)",
+   "file": "spike-01181.jpg"
+  }
+ ],
+ "hash": "c1118aa413f7e40c",
+ "summary": "The hand sweeps the blade up to the mouth in about 10 frames and drops it just as fast, with no tasting beat, and the blade slips through the fingers in places.",
+ "faults": [
+  {
+   "t": 38.43,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The blade is not wrapped by the fingers. At 38.43 and 38.46 it passes behind or through the hand, and the fingers are loosely spread with no grip. At 38.50 the blade sticks out above and below an open hand.",
+   "fix": "Close the fingers around the blade with a thumb-and-finger pinch, and keep the blade layered consistently with the hand."
+  },
+  {
+   "t": 38.4,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "The hand enters from below the frame and reaches the mouth in about 8 frames (38.36 to 38.56). There is no anticipation, and the blade whips from lower right to vertical. The motion is fast and snappy, not weighted.",
+   "fix": "Add a short anticipation, slow the lift, and ease into the mouth."
+  },
+  {
+   "t": 38.6,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The 'tasting' is hidden. The forearm and fist cover the mouth and chin from 38.56 to 38.7, and the blade is barely visible. The shot is cropped so tightly that the face is cut off, so the idea of 'nothing happens' does not read.",
+   "fix": "Widen or reframe so the face and blade tip are visible at the mouth, and hold the pose for a beat."
+  },
+  {
+   "t": 39.36,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "certain",
+   "what": "After the taste the hand drops and the blade exits within about 5 frames (39.36 to 39.43). The arm returns to rest with no hold or reaction, so the 'nothing happens' beat is missing.",
+   "fix": "Hold the blade at the mouth for several frames with a small reaction, then lower it more slowly."
+  },
+  {
+   "t": 39.5,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The visible lower face and head hardly change from 39.46 to 39.6. The shot reads as a blank, stuck expression after the taste.",
+   "fix": "Add a small head tilt, a jaw movement or a blink to show a reaction."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6385,
+  "out": 818
+ },
+ "cost": 0.021
+}

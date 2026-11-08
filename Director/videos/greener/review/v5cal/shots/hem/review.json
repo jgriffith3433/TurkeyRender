@@ -1,0 +1,22 @@
+{
+ "id": "hem",
+ "f0": 118,
+ "f1": 221,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 3.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "274fa19cb896505b",
+ "summary": "The strip is clean: the framing and camera hold steady from the first frame, and neither hand pops, flickers or snaps between tiles.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4376,
+  "out": 448
+ },
+ "cost": 0.0132
+}

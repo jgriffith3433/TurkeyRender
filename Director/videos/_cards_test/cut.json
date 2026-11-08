@@ -1,0 +1,19 @@
+{
+  // The only place that holds shot order and length. Reorder, trim or drop a line and the rest follows.
+  // A shot without "at" follows the one before. "at" pins it to the song; "after" names the shot it follows.
+  "beats": { "street": "8:1" },
+  "shots": [
+    { "id": "alone", "seq": "room", "len": "4b" },
+    { "id": "his_face", "seq": "room", "len": "2b" },
+    { "id": "door_opens", "seq": "room", "len": "2b" },
+    { "id": "she_comes", "seq": "room", "len": "4b" },
+    { "id": "over_him", "seq": "room", "len": "2b" },
+    { "id": "over_her", "seq": "room", "len": "2b" },
+    { "id": "both", "seq": "room", "len": "4b", "take": "a" },
+    { "id": "hero", "seq": "room", "len": "4b" },
+    { "id": "cold_top", "seq": "room", "len": "4b" },
+    { "id": "out", "seq": "street", "at": "street", "len": "4b" },
+    { "id": "walk", "seq": "street", "len": "1bar" },
+    { "id": "lamp", "seq": "street", "len": "1bar" }
+  ]
+}

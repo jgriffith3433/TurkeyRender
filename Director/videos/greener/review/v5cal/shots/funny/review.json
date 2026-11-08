@@ -1,0 +1,53 @@
+{
+ "id": "funny",
+ "f0": 221,
+ "f1": 323,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 7.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 9.067,
+   "why": "one patch jumps (cell 54.4, x9.1)",
+   "file": "spike-00272.jpg"
+  }
+ ],
+ "hash": "33b8d94a69c0d6c9",
+ "summary": "The shot's first frames still move (the head slides and drops from 7.43 to 7.50) and the head is cropped at the top. The 9.07 spike shows no visible pop, but the face holds a blank, near-frozen stare.",
+ "faults": [
+  {
+   "t": 7.46,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The shot does not start settled. At 7.43 the head sits high and turned, at 7.46 it is still moving, and it only locks into the centred, camera-facing pose at 7.50. The head and shoulders slide and drop over about 3 frames, so it reads as the cut tweening.",
+   "fix": "Start the shot already on the settled pose (the 7.50 framing), or trim the first 3 frames."
+  },
+  {
+   "t": 7.5,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The top of the hair is cut off by the top edge of the frame from 7.50 on, while the lower frame holds a lot of empty shirt. The subject is framed too high.",
+   "fix": "Tilt the camera up or lower the framing slightly so the head has headroom."
+  },
+  {
+   "t": 9.2,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "From 7.50 to 9.30 the face stays almost frozen. There is a flat stare and a closed neutral mouth, with no visible blink, brow change or mouth shape for \"isn't it funny\". The one small head tilt barely registers, so \"he has us\" is not sold.",
+   "fix": "Add a blink, a brow lift and a small smirk, and make the head tilt clearer on the key word."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4978,
+  "out": 1033
+ },
+ "cost": 0.0203
+}

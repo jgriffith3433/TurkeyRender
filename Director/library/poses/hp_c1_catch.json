@@ -1,0 +1,242 @@
+{
+  // Hawkes Punch, hero moment 4 (the Jupiter catch): HIM (zg_neutral_b). v3 (coordinator 2026-11-08): reach wide and lean in, absorb with the elbows (head up), push-wall press for "Okay." with no tremble.
+
+ "name": "hp_c1_catch",
+ "about": "Catch Jupiter: lean in and reach wide (palms flat), brace with a small tremble, absorb (elbows give, chest back, legs swing forward), then the effortless push-wall press; HIM on zg_neutral_b.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 5.2,
+ "poses": {
+  "float": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   }
+  },
+  "reach": {
+   "from": "float",
+   "muscles": {
+    "Left Arm Down-Up": 0.32,
+    "Right Arm Down-Up": 0.32,
+    "Left Arm Front-Back": -0.38,
+    "Right Arm Front-Back": -0.38,
+    "Left Forearm Stretch": 0.6,
+    "Right Forearm Stretch": 0.6,
+    "Left Hand Down-Up": 0.65,
+    "Right Hand Down-Up": 0.65,
+    "Left Arm Twist In-Out": 0,
+    "Right Arm Twist In-Out": 0,
+    "Left Hand In-Out": 0,
+    "Right Hand In-Out": 0,
+    "Left Upper Leg Front-Back": 0.28,
+    "Right Upper Leg Front-Back": 0.08,
+    "Left Lower Leg Stretch": 0.45,
+    "Right Lower Leg Stretch": 0.25,
+    "Left Upper Leg In-Out": 0.1,
+    "Right Upper Leg In-Out": 0.1,
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Shoulder Front-Back": 0.3,
+    "Right Shoulder Front-Back": 0.3,
+    "Neck Nod Down-Up": 0.12,
+    "Head Nod Down-Up": 0.08
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.08,
+     "spread": 0.55
+    }
+   },
+   "root": {
+    "rot": [
+     15,
+     0,
+     0
+    ]
+   }
+  },
+  "brace": {
+   "from": "reach",
+   "add": {
+    "Spine Front-Back": -0.06,
+    "Left Shoulder Front-Back": 0.1,
+    "Right Shoulder Front-Back": 0.1
+   },
+   "root": {
+    "rot": [
+     19,
+     0,
+     0
+    ]
+   }
+  },
+  "brace_t": {
+   "from": "brace",
+   "add": {
+    "Left Hand Down-Up": 0.03,
+    "Right Hand Down-Up": -0.03,
+    "Left Forearm Stretch": 0.02,
+    "Right Forearm Stretch": -0.02
+   }
+  },
+  "absorb": {
+   "from": "float",
+   "muscles": {
+    "Left Arm Down-Up": -0.32,
+    "Right Arm Down-Up": -0.32,
+    "Left Arm Front-Back": -0.5,
+    "Right Arm Front-Back": -0.5,
+    "Left Forearm Stretch": 0.1,
+    "Right Forearm Stretch": 0.1,
+    "Left Hand Down-Up": 0.6,
+    "Right Hand Down-Up": 0.6,
+    "Left Arm Twist In-Out": 0,
+    "Right Arm Twist In-Out": 0,
+    "Left Hand In-Out": 0,
+    "Right Hand In-Out": 0,
+    "Left Upper Leg Front-Back": -0.35,
+    "Right Upper Leg Front-Back": -0.25,
+    "Left Lower Leg Stretch": 0.35,
+    "Right Lower Leg Stretch": 0.45,
+    "Left Foot Up-Down": 0.55,
+    "Right Foot Up-Down": 0.55,
+    "Neck Nod Down-Up": 0.12,
+    "Head Nod Down-Up": 0.05,
+    "Spine Front-Back": 0.08
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.12,
+     "spread": 0.5
+    }
+   },
+   "root": {
+    "rot": [
+     -8,
+     0,
+     0
+    ]
+   }
+  },
+  "press": {
+   "from": "float",
+   "muscles": {
+    "Left Arm Down-Up": 0.33,
+    "Right Arm Down-Up": 0.33,
+    "Left Arm Front-Back": -0.38,
+    "Right Arm Front-Back": -0.38,
+    "Left Forearm Stretch": 0.9,
+    "Right Forearm Stretch": 0.9,
+    "Left Hand Down-Up": 0.75,
+    "Right Hand Down-Up": 0.75,
+    "Left Arm Twist In-Out": 0,
+    "Right Arm Twist In-Out": 0,
+    "Left Hand In-Out": 0,
+    "Right Hand In-Out": 0,
+    "Left Upper Leg Front-Back": 0.38,
+    "Right Upper Leg Front-Back": 0.2,
+    "Left Lower Leg Stretch": 0.6,
+    "Right Lower Leg Stretch": 0.45,
+    "Left Foot Up-Down": 0.65,
+    "Right Foot Up-Down": 0.65,
+    "Left Shoulder Front-Back": 0.35,
+    "Right Shoulder Front-Back": 0.35,
+    "Neck Nod Down-Up": 0.2,
+    "Head Nod Down-Up": 0.15,
+    "Spine Front-Back": 0.02
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.05,
+     "spread": 0.5
+    }
+   },
+   "root": {
+    "rot": [
+     28,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "float",
+   "hold": "6f"
+  },
+  {
+   "t": "18f",
+   "pose": "reach",
+   "interp": "out",
+   "step": 2
+  },
+  {
+   "t": "24f",
+   "pose": "brace",
+   "interp": "ease",
+   "step": 2
+  },
+  {
+   "t": "28f",
+   "pose": "brace_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "32f",
+   "pose": "brace",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "36f",
+   "pose": "brace_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "40f",
+   "pose": "brace",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "44f",
+   "pose": "brace_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "48f",
+   "pose": "brace",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "50f",
+   "pose": "reach",
+   "interp": "linear"
+  },
+  {
+   "t": "62f",
+   "pose": "absorb",
+   "interp": "overshoot",
+   "overshoot": 0.08,
+   "settle": 0.3,
+   "hold": 0.9
+  },
+  {
+   "t": "106f",
+   "pose": "press",
+   "interp": "ease",
+   "step": 3,
+   "hold": 1.0
+  }
+ ]
+}

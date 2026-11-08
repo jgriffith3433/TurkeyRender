@@ -1,0 +1,81 @@
+{
+ "id": "tonight",
+ "f0": 1018,
+ "f1": 1095,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 33.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 34.167,
+   "why": "flow spike x2.5",
+   "file": "spike-01025.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 35.433,
+   "why": "flow spike x2.2",
+   "file": "spike-01063.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 36.3,
+   "why": "flow spike x2.1",
+   "file": "spike-01089.jpg"
+  }
+ ],
+ "hash": "050dd0c0bbaff2f5",
+ "summary": "Cut strip shows the head swinging and rotating quickly through frames 34.00-34.20 (cut tweening), and the shot ends on a wide reveal at 36.50 that doesn't match the close framing. The head/torso also drift constantly with a mushy, floaty feel.",
+ "faults": [
+  {
+   "t": 34.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "After the cut the head and torso keep moving sharply over frames 33.96 to 34.13: the head swings from upper left to centre and tilts, and the shoulder line shifts. It reads as the cut tweening, not a settled first frame.",
+   "fix": "Start the shot on the settled pose, or trim the first 5 frames of the move."
+  },
+  {
+   "t": 34.2,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Head and neck slide down and sideways across 34.16 to 34.40 and 35.39 to 35.63 with no anticipation, overshoot or hold. The torso looks like it floats and the motion is mushy.",
+   "fix": "Add a held pose at the lean's end and a quicker move into it, with a small settle."
+  },
+  {
+   "t": 35.43,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "At the flow spike the head jumps from low-left (35.39) to higher and right (35.46 to 35.49) within about 3 frames. The neck and collar shift with it and the hair volume changes.",
+   "fix": "Smooth the head translation with an ease, and remove the extra key between 35.39 and 35.46."
+  },
+  {
+   "t": 36.3,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The head pushes toward camera and rolls from 36.26 to 36.36, with the shoulders and neck snapping position. The face is stuck in the same open-mouth stare through 36.46.",
+   "fix": "Ease the head move, and add a blink or brow change on the turn."
+  },
+  {
+   "t": 36.5,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The last frame cuts to a wide shot of the full body with a hand on his hip and a green blade of grass. This breaks the tight, flat-look idea of the shot and may be an early cut into the next shot.",
+   "fix": "Hold the close framing to the end of the shot, or put the wide frame in the next shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7695,
+  "out": 823
+ },
+ "cost": 0.0236
+}

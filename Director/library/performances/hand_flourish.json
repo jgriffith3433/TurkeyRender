@@ -1,0 +1,31 @@
+{
+ "name": "hand_flourish",
+ "about": "A slow, playful flourish of one hand. Waves the world away. Mocap on the arm.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.7s",
+ "min": "1.2s",
+ "params": {
+  "clip": "Idle1Greet",
+  "mask": "rightArm",
+  "start": 0.3
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": "$start",
+   "weight": 0.95,
+   "for": "=for-0.3",
+   "blend": "0.3s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

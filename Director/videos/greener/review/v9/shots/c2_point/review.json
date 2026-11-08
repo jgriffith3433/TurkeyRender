@@ -1,0 +1,55 @@
+{
+ "id": "c2_point",
+ "f0": 3795,
+ "f1": 3847,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 126.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a63b3ecc21bf228e",
+ "summary": "The cut is clean and the camera and pose hold steady, but large flat unlit confetti squares sweep across the frame in the first frames of the shot.",
+ "faults": [
+  {
+   "t": 126.59,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A large flat orange square with no shading or lighting passes in front of the raised arm and shoulder. It reads as a pasted-on 2D shape, not 3D confetti. It also covers part of the arm silhouette.",
+   "fix": "Light and shade the confetti, or shrink it and keep it behind or away from the character."
+  },
+  {
+   "t": 126.63,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A huge flat orange square fills the lower left, with a flat blue square above it and a smaller orange one beside it. All are unshaded. They compete with the subject and the turkeys.",
+   "fix": "Use smaller shaded confetti, and cut the spawn size near the camera."
+  },
+  {
+   "t": 126.66,
+   "sev": "C",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat unshaded blue and orange squares are still crossing the lower left and bottom of the frame (blue square at 126.66, another blue at 126.69). They are distracting but do not hide him.",
+   "fix": "Fade or cull the near-camera confetti sooner."
+  },
+  {
+   "t": 126.53,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The raised hand is cropped off the top of the frame, so the point or wave gesture is not visible.",
+   "fix": "Tilt the camera up slightly or lower the arm so the hand stays in frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3555,
+  "out": 1096
+ },
+ "cost": 0.0181
+}

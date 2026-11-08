@@ -1,0 +1,65 @@
+{
+ "id": "vase_slides",
+ "f0": 3075,
+ "f1": 3127,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 102.5,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 102.6,
+   "why": "one patch jumps (cell 60.5, x5.7)",
+   "file": "spike-03078.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 103.133,
+   "why": "flow spike x4.5",
+   "file": "spike-03094.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 103.433,
+   "why": "flow spike x3.6",
+   "file": "spike-03103.jpg"
+  }
+ ],
+ "hash": "b0cd3edc5b47a664",
+ "summary": "The crop shows a static door and bed with no vase in view. The vase action is mostly offscreen at the right edge, and a feathered hand enters and exits at the lower left.",
+ "faults": [
+  {
+   "t": 103.46,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The idea is the vase jerking down the wall, but the only trace is a pale panel and shadow sliding at the right frame edge (103.43 to 103.56). The key action is cut off and the viewer sees a door.",
+   "fix": "Reframe or shift the crop so the vase is fully in frame during its three jerks."
+  },
+  {
+   "t": 102.56,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "A feathered or bandaged hand intrudes at the lower-left corner (102.53, 102.56 and again 103.13 to 103.19). It is partly cropped and pulls the eye from the wall action.",
+   "fix": "Move the hand fully out of frame or fully in, or keep it clear of the bottom-left corner."
+  },
+  {
+   "t": 102.63,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The door's top edge shifts and tilts (102.59 to 102.66), then snaps straight by 102.69 and 102.73. It reads as a jitter, not a deliberate shiver with anticipation and settle.",
+   "fix": "Lock the door static or key a clear anticipation and settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7741,
+  "out": 1066
+ },
+ "cost": 0.0261
+}

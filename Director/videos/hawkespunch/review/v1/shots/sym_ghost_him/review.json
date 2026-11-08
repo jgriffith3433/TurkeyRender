@@ -1,0 +1,22 @@
+{
+ "id": "sym_ghost_him",
+ "f0": 1416,
+ "f1": 1515,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 47.2,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "485617497e068cfb",
+ "summary": "The cut strip is clean: the framing, head pose and background stay steady across all eight frames, with only slight drift and no pops or render flicker.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 119
+ },
+ "cost": 0.0083
+}

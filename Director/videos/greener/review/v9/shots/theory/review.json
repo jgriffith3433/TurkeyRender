@@ -1,0 +1,61 @@
+{
+ "id": "theory",
+ "f0": 2818,
+ "f1": 2870,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 93.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 94.733,
+   "why": "frame difference x6.6 (20.29)",
+   "file": "spike-02842.jpg"
+  }
+ ],
+ "hash": "22962ff1a345b619",
+ "summary": "The veil disappears in about two frames at 94.73–94.79 with no one whipping it off, and the butler is mostly hidden behind the box and shows no crouch or anticipation.",
+ "faults": [
+  {
+   "t": 94.76,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The magenta veil over the chart shrinks from a wide panel at 94.73 to a thin strip at 94.76 and is gone at 94.79. It vanishes in place rather than being pulled off. The chart appears with no cloth in flight, and the turkey makes no pulling motion. This is the measured spike, and the shot's key beat reads as a cut.",
+   "fix": "Animate the cloth sliding or flying off, with the turkey's wing or beak pulling it. Otherwise hide the swap behind a fast sweep or a held pose."
+  },
+  {
+   "t": 94.73,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "No crouch or anticipation is visible before the reveal. At 94.73 the turkey is already upright with its head high above the box. The wind-up and whip the shot is meant to show are missing, so the move snaps from pose to pose.",
+   "fix": "Add a one- to two-frame dip and coil before the pull, then an overshoot and settle after it."
+  },
+  {
+   "t": 94,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "From 93.96 to 94.19 the turkey is mostly hidden behind the box, showing only a thin neck and head with the tail fan fanned around it. The figure barely changes across these frames, so the shot opens on a weak silhouette and nothing in it reads as stepping up to the chart.",
+   "fix": "Reframe or reposition the turkey so the body and its step-up are readable. Alternatively, trim the held opening."
+  },
+  {
+   "t": 94.86,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The sunglasses cover the eyes in 94.73–94.96. The expression is fixed, with no visible eye or head lead on the reveal word, and the head only bobs slightly.",
+   "fix": "Add a head turn or chin lift on the word, and a brow or glasses push."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4985,
+  "out": 1348
+ },
+ "cost": 0.0235
+}

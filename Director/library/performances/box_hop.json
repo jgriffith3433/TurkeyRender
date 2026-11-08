@@ -1,0 +1,24 @@
+{
+ "name": "box_hop",
+ "about": "A gift box hops: squash, up, a little in the air, land, squash, settle. For props and crowds; `stagger` per member.",
+ "entry": "any",
+ "exit": "any",
+ "length": "0.857s",
+ "min": "0.3s",
+ "params": {
+  "height": 0.35,
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "hop",
+   "height": "$height",
+   "for": "$for",
+   "stagger": "$stagger"
+  }
+ ],
+ "test": {
+  "model": "Assets/MusicVideo/Props/Estate/gift_pink.fbx"
+ }
+}

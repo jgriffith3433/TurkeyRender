@@ -1,0 +1,54 @@
+{
+ "id": "yard_wide",
+ "f0": 0,
+ "f1": 118,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "spike",
+   "t": 0.5,
+   "why": "one patch jumps (cell 181, x38.5)",
+   "file": "spike-00015.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 3.8,
+   "why": "one patch jumps (cell 48.5, x8.7)",
+   "file": "spike-00114.jpg"
+  }
+ ],
+ "hash": "aa00c31760608be2",
+ "summary": "The cut at 0.50 is clean and the camera holds, but the window reflection flips from sky to black at 3.80, and the man reads as standing in front of the chair rather than sitting in it.",
+ "faults": [
+  {
+   "t": 3.8,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The window glass jumps from a bright blue sky reflection (3.76) to flat black (3.80) in one frame and stays black. The wall around it is unchanged, so it reads as a reflection or material pop.",
+   "fix": "Lock the window reflection or probe so it doesn't switch, or fix the glass material to one state for the whole shot."
+  },
+  {
+   "t": 0.6,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The brief is a man sitting in a cheap lawn chair with his knees together. In the wide he stands upright with straight legs in front of or inside the chair, and his arms hang at the armrests. He doesn't read as seated, and the chair looks like it overlaps his legs.",
+   "fix": "Lower the hips onto the seat and bend the knees with the knees together. Otherwise move the chair out from behind him so the legs don't intersect it."
+  },
+  {
+   "t": 0.6,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The figure is frozen and symmetrical from 0.50 to 0.70. Both arms hang, and there is no visible weight shift, breath or head movement.",
+   "fix": "Add a small weight shift, breathing and a slight head tilt or eye change, while keeping the held look."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 5051,
+  "out": 1086
+ },
+ "cost": 0.021
+}

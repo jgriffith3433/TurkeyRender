@@ -1,0 +1,28 @@
+{
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.030 m, worst step 0.030 m at 4.67s",
+  "right foot on floor moved 0.014 m, worst step 0.014 m at 4.67s"
+ ],
+ "hipsTop": 1.09422672,
+ "hipsLow": 0.995767236,
+ "hipsMaxSpeed": 0.454384357,
+ "hipsTravel": "(0.01, -0.10, -0.01)",
+ "limits": {
+  "LeftLowerLeg": 12.8,
+  "RightLowerLeg": 6,
+  "LeftFoot": 2.6,
+  "Chest": 1.2,
+  "Spine": 0.6,
+  "RightFoot": 0
+ },
+ "reverse": 0,
+ "fresh": 0.000190771854,
+ "frames": 47,
+ "warnings": [
+  "person: the bake of 'stand' is stale, so it plays from source. Run: node Director/tools/bake.mjs stand"
+ ],
+ "from": 1.6,
+ "to": 4.7
+}

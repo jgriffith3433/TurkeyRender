@@ -1,0 +1,45 @@
+{
+ "id": "din_wide",
+ "f0": 2973,
+ "f1": 3024,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 99.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 99.3,
+   "why": "flicker: patches change and change straight back on 29% of the shot's frames (2 cells here)",
+   "file": "spike-02979.jpg"
+  }
+ ],
+ "hash": "1be5558639131e8a",
+ "summary": "The strip is mostly clean: a steady push-in down the table with no visible pops or large flicker, though the \"one man\" isn't readable and the turkeys sit stiff.",
+ "faults": [
+  {
+   "t": 99.36,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is one man alone at the end of the table. No figure is readable at the far end, only a tiny pink throne speck. The foreground candelabra and the turkeys on both sides take the focus, so the 'alone' feeling is weak.",
+   "fix": "Make the figure at the far end readable, or push the camera in until he clearly reads. Reduce the foreground turkey and candelabra clutter."
+  },
+  {
+   "t": 99.43,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The turkeys lining both sides sit in near-identical rigid poses. They look like copies and show no idle motion across the frames.",
+   "fix": "Vary the turkeys' head turns and idle timing, or add small head bobs on a few."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4994,
+  "out": 989
+ },
+ "cost": 0.0199
+}

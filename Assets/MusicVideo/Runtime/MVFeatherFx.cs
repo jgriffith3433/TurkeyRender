@@ -74,7 +74,7 @@ namespace TKShock.MV
             m.SetFloat("_Mode", crown ? 0 : 1);
             m.SetFloat("_Height", a.F("height", 11)); m.SetFloat("_Radius", a.F("radius", 7)); m.SetFloat("_Spread", a.F("spread", .18f));
             m.SetFloat("_Size", a.F("size", crown ? .42f : .22f)); m.SetFloat("_Life", life); m.SetFloat("_Floor", a.F("floor", -100000));
-            m.SetFloat("_Drag", a.F("drag", 1.6f)); m.SetFloat("_Swirl", a.F("swirl", 4));
+            m.SetFloat("_Drag", a.F("drag", 1.6f)); m.SetFloat("_Swirl", a.F("swirl", 4)); m.SetFloat("_Water", a.F("water"));
             m.SetColor("_ColorA", a.C("color", new Color(.96f, .96f, .98f))); m.SetColor("_ColorB", a.C("color2", new Color(.8f, .82f, .88f)));
             r.sharedMaterial = m; r.shadowCastingMode = a.F("shadows", 1) > 0 ? UnityEngine.Rendering.ShadowCastingMode.On : UnityEngine.Rendering.ShadowCastingMode.Off;
             return new Live { go = go, m = m, r = r };

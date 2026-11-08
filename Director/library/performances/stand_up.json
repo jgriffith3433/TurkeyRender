@@ -1,0 +1,130 @@
+{
+ "name": "stand_up",
+ "about": "From a chair: leans forward over his feet, pushes up, straightens. Weight first.",
+ "entry": "sit_chair",
+ "exit": "stand",
+ "length": "2.3s",
+ "min": "2.1s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "plant",
+   "foot": "both",
+   "for": "0.05s"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.2,
+    2.5
+   ],
+   "for": "0.3s",
+   "head": 0
+  },
+  {
+   "at": 0,
+   "do": "pose",
+   "bones": {
+    "spine": [
+     16,
+     0,
+     0
+    ],
+    "chest": [
+     20,
+     0,
+     0
+    ],
+    "head": [
+     -14,
+     0,
+     0
+    ]
+   },
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.2,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": 0.38,
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "1s"
+  },
+  {
+   "at": 0.38,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.95,
+     "ease": "inout",
+     "root": {
+      "pos": [
+       0,
+       0,
+       0.34
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "at": 1,
+   "do": "pose",
+   "bones": {
+    "spine": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.75s",
+   "ease": "inout",
+   "overshoot": 0.08,
+   "settle": "0.3s"
+  },
+  {
+   "at": 1.6,
+   "do": "gaze",
+   "weight": 0,
+   "for": "0.4s"
+  },
+  {
+   "at": "=for-0.4",
+   "do": "plant",
+   "foot": "both",
+   "weight": 0,
+   "for": "0.3s"
+  },
+  {
+   "at": "=for-0.8",
+   "do": "stance",
+   "arms": 1,
+   "legs": 1,
+   "for": "0.8s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   "sit_idle"
+  ],
+  "tail": 0.8
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "look_away",
+ "f0": 2021,
+ "f1": 2072,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 67.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 67.833,
+   "why": "one patch jumps (cell 58.1, x14.5)",
+   "file": "spike-02035.jpg"
+  }
+ ],
+ "hash": "bc488cb6fa4c4820",
+ "summary": "The turkeys' turn-away shows one visible snap at 67.83, and the tiny butler in the doorway barely moves.",
+ "faults": [
+  {
+   "t": 67.83,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The turkey groups on both sides change shape in one frame. At 67.83 the fans are lower and the bodies and legs are spread apart. At 67.86 the fans are larger and the group is bunched. The turn-away reads as a snap, not a continuous move. This matches the measured spike.",
+   "fix": "Smooth the turn on the turkey rigs around 67.8 s: key an in-between pose, or blend the animation over 2-3 frames so the fans and bodies don't jump."
+  },
+  {
+   "t": 67.5,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The butler in the doorway is tiny and nearly static (67.39-68.06). The 'all turn away' beat is carried only by the turkeys, and the 'we saw nothing' idea doesn't read at this size.",
+   "fix": "Give the figure a small turn or head-away action on the same beat, or push the camera in slightly."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4979,
+  "out": 987
+ },
+ "cost": 0.0198
+}

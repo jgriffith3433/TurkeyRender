@@ -1,0 +1,41 @@
+{
+ "name": "g_hands_up",
+ "about": "Both hands up by the head and pumping at the sky, a lean back with it, from mx_hh_raise_roof (0.2-2.3 s). Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "any",
+ "exit": "any",
+ "length": "2.1s",
+ "min": "0.8s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "clip": "mx_hh_raise_roof",
+  "mask": "upper",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.2,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

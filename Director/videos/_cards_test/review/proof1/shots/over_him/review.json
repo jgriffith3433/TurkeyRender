@@ -1,0 +1,39 @@
+{
+ "id": "over_him",
+ "f0": 262,
+ "f1": 304,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 8.733,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "cb03a4ab624748c6",
+ "summary": "The shot opens with the arms still travelling from a raised pose to hanging between 8.76 and 8.86, so the cut tweens, and the held pose then reads as a blank, level stare rather than looking down at him.",
+ "faults": [
+  {
+   "t": 8.8,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The first frames of the shot are not yet the shot. At 8.76 both hands are raised by the chin. They sweep outward at 8.80 and 8.83, then drop to the hanging pose at 8.86. Both arms move a large distance per frame for about 4 frames before settling at 8.90.",
+   "fix": "Start the shot on the settled hanging pose, or trim the first ~5 frames so the arm travel is not on screen after the cut."
+  },
+  {
+   "t": 8.93,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is 'she looks down at him', but from 8.76 to 9.00 the head stays level and faces the camera with no downward tilt or eye lead. The held pose has both arms hanging almost symmetrically, so it reads as neutral and blank rather than judging.",
+   "fix": "Tilt the head and chin down toward him, add an eye lead, and break the arm symmetry, for example with one hand lifted or one shoulder dropped."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3541,
+  "out": 955
+ },
+ "cost": 0.0166
+}

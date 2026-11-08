@@ -1,0 +1,22 @@
+{
+ "id": "m_moon",
+ "f0": 3119,
+ "f1": 3175,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 103.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "9b72a42c886aa1eb",
+ "summary": "The cut strip is stable: the camera is static and the moon and sky don't pop or flicker. The two tiny figures on the rim are too small to judge for pose or contact.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 128
+ },
+ "cost": 0.0084
+}

@@ -13,7 +13,7 @@ namespace TKShock.MV
     {
         static readonly string[] Reserved = { "every", "sharp", "fade" };
         // Numbers sent straight to the world-warp and stylize shaders.
-        static readonly string[] Style = { "suck", "twist", "wave", "toon", "pixel", "poster", "halftone", "ink", "scan", "rgb", "swirl", "pinch", "radial", "tear", "invert", "kaleido", "blur", "duo", "mirror", "mask", "eyePupil", "eyeTV", "wall", "neon", "hatch", "snow" };
+        static readonly string[] Style = { "suck", "twist", "wave", "toon", "pixel", "poster", "halftone", "ink", "scan", "rgb", "swirl", "pinch", "radial", "tear", "invert", "kaleido", "blur", "duo", "mirror", "mask", "eyePupil", "eyeTV", "wall", "neon", "hatch", "snow", "vhs", "split", "lift", "halation", "paper", "flicker", "weave", "inkWidth", "aspect", "clay", "haze", "veil", "leak", "dust", "curve", "skin", "sunRim", "faceFill", "catch" };
         static readonly Dictionary<string, int> Ids = new Dictionary<string, int>();
         static int Id(string k) { if (!Ids.TryGetValue(k, out var i)) Ids[k] = i = Shader.PropertyToID("_MV_" + char.ToUpper(k[0]) + k.Substring(1)); return i; }
         readonly Dictionary<string, float> _v = new Dictionary<string, float>();
@@ -41,9 +41,9 @@ namespace TKShock.MV
         public override void Apply(double t, object binding)
         {
             var st = binding as MVStage; if (st == null || st.volume == null) return;
-            Reset();
+            Reset(); MVEpic.BeginPost();
             Vector3 suckAt = st.suckPoint;
-            Color tint = Color.white, flashCol = Color.white, tintFrom, duoA = Color.black, duoB = Color.white, chMask = Color.white, neonA = Color.black, neonB = Color.white;
+            Color tint = Color.white, flashCol = Color.white, tintFrom, duoA = Color.black, duoB = Color.white, chMask = Color.white, neonA = Color.black, neonB = Color.white, splitA = Color.gray, splitB = Color.gray;
             foreach (var op in Ops)
             {
                 double tl = t - op.start; if (tl < 0) break;
@@ -59,6 +59,8 @@ namespace TKShock.MV
                     if (op.a.Col.TryGetValue("duoB", out var db)) duoB = Color.Lerp(duoB, db, k);
                     if (op.a.Col.TryGetValue("neonA", out var na)) neonA = Color.Lerp(neonA, na, k);
                     if (op.a.Col.TryGetValue("neonB", out var nb)) neonB = Color.Lerp(neonB, nb, k);
+                    if (op.a.Col.TryGetValue("splitA", out var spa)) splitA = Color.Lerp(splitA, spa, k);
+                    if (op.a.Col.TryGetValue("splitB", out var spb)) splitB = Color.Lerp(splitB, spb, k);
                     if (op.a.Col.TryGetValue("channel", out var cm)) chMask = cm;
                 }
                 else if (op.kind == "pulse" && tl <= op.Dur)
@@ -77,9 +79,12 @@ namespace TKShock.MV
                     }
                     if (op.a.Col.TryGetValue("flashColor", out var f)) flashCol = f;
                 }
+                else MVEpic.PostOp(op, t, tl);   // impactframe, speedlines, trauma (MVEpicFx.cs)
             }
+            MVEpic.Register(_v);   // the epic and plain registers move the grade (0 and 0: nothing changes)
 
             foreach (var k in Style) Shader.SetGlobalFloat(Id(k), Get(k));
+            MVEpic.EndPost(Get("plain"));
             Last.Clear(); foreach (var k in _v.Keys) Last[k] = Get(k);
             Shader.SetGlobalFloat("_MV_Radius", Get("suckRadius")); Shader.SetGlobalFloat("_MV_Stretch", Get("stretch"));
             Shader.SetGlobalVector("_MV_SuckPos", suckAt);
@@ -87,6 +92,7 @@ namespace TKShock.MV
             Shader.SetGlobalFloat("_MV_SceneTime", scene); Shader.SetGlobalFloat("_MV_Time", (float)t);
             Shader.SetGlobalFloat("_MV_BeatNow", (float)Song.BeatAt(t));
             Shader.SetGlobalVector("_MV_DuoA", duoA); Shader.SetGlobalVector("_MV_DuoB", duoB); Shader.SetGlobalVector("_MV_ChannelMask", chMask);
+            Shader.SetGlobalVector("_MV_SplitA", splitA); Shader.SetGlobalVector("_MV_SplitB", splitB);
             Shader.SetGlobalVector("_MV_NeonA", neonA); Shader.SetGlobalVector("_MV_NeonB", neonB);
             MVClock.SuckPoint = suckAt;
             MVClock.Suck = Get("suck"); MVClock.Twist = Get("twist"); MVClock.Wave = Get("wave"); MVClock.Radius = Get("suckRadius"); MVClock.Stretch = Get("stretch"); MVClock.SceneTime = scene;
@@ -119,7 +125,7 @@ namespace TKShock.MV
             if (_bloom) _bloom.highQualityFiltering.value = !MVClock.Preview;
 
             MVClock.Shake = Get("shake"); MVClock.Dutch = Get("dutch"); MVClock.Zoom = Get("zoom"); MVClock.Handheld = Get("handheld");
-            if (st.flash) { var c = flashCol; c.a = Mathf.Clamp01(Get("flash")); st.flash.color = c; st.flash.enabled = c.a > .001f; }
+            if (st.flash) { var c = MVEpic.FlashOn ? MVEpic.FlashColor : flashCol; c.a = Mathf.Clamp01(Mathf.Max(Get("flash"), MVEpic.FlashOn ? MVEpic.FlashColor.a : 0)); st.flash.color = c; st.flash.enabled = c.a > .001f; }
             float bars = Mathf.Clamp01(Get("bars")) * .11f;
             Shader.SetGlobalFloat("_MV_Bars", bars);
         }
@@ -139,6 +145,8 @@ namespace TKShock.MV
     public class LightDriver : Driver
     {
         static readonly int Top = Shader.PropertyToID("_Top"), Mid = Shader.PropertyToID("_Mid"), Bot = Shader.PropertyToID("_Bot");
+        static readonly int SunDirId = Shader.PropertyToID("_SunDir"), SunId = Shader.PropertyToID("_Sun"), SunSizeId = Shader.PropertyToID("_SunSize"), HazeId = Shader.PropertyToID("_Haze"),
+            CloudsId = Shader.PropertyToID("_Clouds"), CloudC = Shader.PropertyToID("_CloudColor"), CloudS = Shader.PropertyToID("_CloudShade"), CloudSc = Shader.PropertyToID("_CloudScale"), CloudV = Shader.PropertyToID("_CloudSpeed"), CloudSoft = Shader.PropertyToID("_CloudSoft"), StarsId = Shader.PropertyToID("_Stars");
         Color[] _c = new Color[0]; float[] _i = new float[0]; float[] _m = new float[0];
 
         public override void Apply(double t, object binding)
@@ -149,6 +157,9 @@ namespace TKShock.MV
             for (int j = 0; j < n; j++) { _c[j] = st.lightColors[j]; _i[j] = st.lightIntensities[j]; _m[j] = 1; }
             Color top = new Color(.05f, .06f, .12f), mid = new Color(.2f, .15f, .25f), bot = new Color(.02f, .02f, .03f);
             Color fog = new Color(.1f, .1f, .14f), ambient = new Color(.2f, .2f, .25f); float density = 0;
+            // Sun, clouds and stars. All off unless a sky cue asks. ambientTop and ambientBottom light from above and below, for outdoors.
+            Color sun = Color.black, cloudLit = new Color(1, .98f, .94f), cloudShade = new Color(.5f, .56f, .68f), ambTop = ambient, ambBot = ambient;
+            Vector3 sunDir = new Vector3(.4f, .5f, .6f); float sunSize = .03f, haze = 0, clouds = 0, cloudScale = 1, cloudSpeed = .012f, cloudSoft = .2f, stars = 0, hemi = 0;
 
             foreach (var op in Ops)
             {
@@ -159,6 +170,11 @@ namespace TKShock.MV
                     top = Color.Lerp(top, op.a.C("top", top), k); mid = Color.Lerp(mid, op.a.C("mid", mid), k); bot = Color.Lerp(bot, op.a.C("bottom", bot), k);
                     fog = Color.Lerp(fog, op.a.C("fog", fog), k); ambient = Color.Lerp(ambient, op.a.C("ambient", ambient), k);
                     density = Mathf.Lerp(density, op.a.F("density", density), k);
+                    sun = Color.Lerp(sun, op.a.C("sun", sun), k); cloudLit = Color.Lerp(cloudLit, op.a.C("cloudColor", cloudLit), k); cloudShade = Color.Lerp(cloudShade, op.a.C("cloudShade", cloudShade), k);
+                    sunDir = Vector3.Lerp(sunDir, op.a.V("sunDir", sunDir), k); sunSize = Mathf.Lerp(sunSize, op.a.F("sunSize", sunSize), k); haze = Mathf.Lerp(haze, op.a.F("haze", haze), k);
+                    clouds = Mathf.Lerp(clouds, op.a.F("clouds", clouds), k); cloudScale = Mathf.Lerp(cloudScale, op.a.F("cloudScale", cloudScale), k); cloudSpeed = Mathf.Lerp(cloudSpeed, op.a.F("cloudSpeed", cloudSpeed), k); cloudSoft = Mathf.Lerp(cloudSoft, op.a.F("cloudSoft", cloudSoft), k); stars = Mathf.Lerp(stars, op.a.F("stars", stars), k);
+                    if (op.a.Has("ambientTop") || op.a.Has("ambientBottom")) { ambTop = Color.Lerp(ambTop, op.a.C("ambientTop", ambTop), k); ambBot = Color.Lerp(ambBot, op.a.C("ambientBottom", ambBot), k); hemi = Mathf.Lerp(hemi, 1, k); }
+                    else if (op.a.Has("ambient")) hemi = Mathf.Lerp(hemi, 0, k);
                     continue;
                 }
                 int i = System.Array.IndexOf(st.lightNames, op.a.S("name", ""));
@@ -174,9 +190,20 @@ namespace TKShock.MV
                     _m[i] *= op.a.F("floor", 1) + Song.Env(op.a.S("band", "kick"), t) * op.a.F("amount", 3);
             }
             for (int j = 0; j < n; j++) if (st.lights[j]) { st.lights[j].color = _c[j]; st.lights[j].intensity = _i[j] * _m[j]; }
-            if (st.sky) { st.sky.SetColor(Top, top); st.sky.SetColor(Mid, mid); st.sky.SetColor(Bot, bot); }
+            if (st.sky)
+            {
+                st.sky.SetColor(Top, top); st.sky.SetColor(Mid, mid); st.sky.SetColor(Bot, bot);
+                st.sky.SetVector(SunDirId, sunDir); st.sky.SetColor(SunId, sun); st.sky.SetFloat(SunSizeId, sunSize); st.sky.SetFloat(HazeId, haze);
+                st.sky.SetFloat(CloudsId, clouds); st.sky.SetColor(CloudC, cloudLit); st.sky.SetColor(CloudS, cloudShade); st.sky.SetFloat(CloudSc, cloudScale); st.sky.SetFloat(CloudV, cloudSpeed); st.sky.SetFloat(CloudSoft, cloudSoft); st.sky.SetFloat(StarsId, stars);
+            }
+            Shader.SetGlobalVector("_MV_SunDirW", sunDir.normalized); Shader.SetGlobalColor("_MV_SunCol", sun);
             RenderSettings.fog = density > 0; RenderSettings.fogMode = FogMode.ExponentialSquared; RenderSettings.fogColor = fog; RenderSettings.fogDensity = density;
-            RenderSettings.ambientMode = AmbientMode.Flat; RenderSettings.ambientLight = ambient;
+            if (hemi > 0)
+            {
+                RenderSettings.ambientMode = AmbientMode.Trilight;
+                RenderSettings.ambientSkyColor = Color.Lerp(ambient, ambTop, hemi); RenderSettings.ambientEquatorColor = ambient; RenderSettings.ambientGroundColor = Color.Lerp(ambient, ambBot, hemi);
+            }
+            else { RenderSettings.ambientMode = AmbientMode.Flat; RenderSettings.ambientLight = ambient; }
         }
     }
 
@@ -199,6 +226,7 @@ namespace TKShock.MV
                 l.text = txt;
                 l.fontSize = op.a.F("size", 96);
                 var c = op.a.C("color", Color.white); c.a *= a; l.color = c;
+                Legible(l, op.a);
                 var anchor = op.a.V("pos", new Vector3(.5f, .15f));
                 var rt = l.rectTransform; rt.anchorMin = rt.anchorMax = new Vector2(anchor.x, anchor.y); rt.anchoredPosition = Vector2.zero;
                 float s = 1;
@@ -206,8 +234,68 @@ namespace TKShock.MV
                 else if (style == "slam") s = Mathf.Lerp(2.4f, 1, Ease.Apply("expo", Mathf.Clamp01(tl / Mathf.Max(inn, .001f))));
                 rt.localScale = Vector3.one * s;
                 rt.localEulerAngles = new Vector3(0, 0, op.a.F("tilt"));
+                Box(l, op.a, a, s);
             }
-            for (; used < st.labels.Length; used++) if (st.labels[used]) st.labels[used].gameObject.SetActive(false);
+            for (; used < st.labels.Length; used++) if (st.labels[used]) { st.labels[used].gameObject.SetActive(false); if (_boxes.TryGetValue(st.labels[used], out var b) && b) b.enabled = false; }
+        }
+
+        static readonly Dictionary<TextMeshProUGUI, Image> _boxes = new Dictionary<TextMeshProUGUI, Image>();
+
+        /// <summary>`box` (0-1, the opacity) draws a dark box behind a text cue, sized to the rendered text plus `boxPad` canvas pixels (`boxColor`,
+        /// default black): the subtitle box that reads on any background. 0 by default. The box is a DontSave sibling just before the label, sized and
+        /// shown from the cue alone each evaluation, so it scrubs like everything else.</summary>
+        static void Box(TextMeshProUGUI l, Args a, float alpha, float scale)
+        {
+            _boxes.TryGetValue(l, out var img);
+            float bx = a.F("box", 0);
+            if (bx <= 0) { if (img) img.enabled = false; return; }
+            if (!img)
+            {
+                var parent = l.transform.parent; var found = parent.Find(l.name + "_box");
+                if (found) img = found.GetComponent<Image>();
+                if (!img)
+                {
+                    var go = new GameObject(l.name + "_box", typeof(RectTransform)); go.hideFlags = HideFlags.DontSave;
+                    go.transform.SetParent(parent, false); img = go.AddComponent<Image>(); img.raycastTarget = false;
+                }
+                _boxes[l] = img;
+            }
+            if (img.transform.GetSiblingIndex() > l.transform.GetSiblingIndex()) img.transform.SetSiblingIndex(l.transform.GetSiblingIndex());
+            l.ForceMeshUpdate();
+            var b = l.textBounds; float pad = a.F("boxPad", 16);
+            var r = img.rectTransform; var lr = l.rectTransform;
+            r.anchorMin = lr.anchorMin; r.anchorMax = lr.anchorMax; r.pivot = new Vector2(.5f, .5f);
+            r.anchoredPosition = lr.anchoredPosition + (Vector2)b.center * scale; r.localScale = Vector3.one; r.localEulerAngles = lr.localEulerAngles;
+            r.sizeDelta = new Vector2(b.size.x + pad * 2.4f, b.size.y + pad * 1.4f) * scale;
+            var c = a.C("boxColor", Color.black); c.a = bx * alpha; img.color = c; img.enabled = b.size.x > 0;
+        }
+
+        static readonly int UnderlayColor = Shader.PropertyToID("_UnderlayColor"), UnderlayX = Shader.PropertyToID("_UnderlayOffsetX"),
+            UnderlayY = Shader.PropertyToID("_UnderlayOffsetY"), UnderlaySoft = Shader.PropertyToID("_UnderlaySoftness"), UnderlayDilate = Shader.PropertyToID("_UnderlayDilate");
+
+        /// <summary>Captions that read on any background (Hawkes Punch sound pass, 2026-11-08): `outline` (TMP SDF units, 0.2 about 3 px at 1080) in
+        /// `outlineColor`, and `shadow` (0/1) a soft drop shadow (`shadowColor`, `shadowX`/`shadowY` offset, `shadowSoft`, `shadowDilate`), the TMP
+        /// underlay. Both 0 by default, so text without them is drawn exactly as before; a label that had them is put back when the next cue has none.
+        /// Every value is set from the cue alone each evaluation (the label's own material instance), so it stays a pure function of time.</summary>
+        static void Legible(TextMeshProUGUI l, Args a)
+        {
+            float ol = a.F("outline", 0), sh = a.F("shadow", 0);
+            bool had = l.fontSharedMaterial != null && l.fontSharedMaterial != (l.font ? l.font.material : null);
+            if (ol <= 0 && sh <= 0 && !had) return;
+            var m = l.fontMaterial; // the label's own instance, made once
+            l.outlineWidth = ol; l.outlineColor = a.C("outlineColor", new Color(0, 0, 0, .9f));
+            if (sh > 0)
+            {
+                m.EnableKeyword("UNDERLAY_ON");
+                m.SetColor(UnderlayColor, a.C("shadowColor", new Color(0, 0, 0, .6f)));
+                m.SetFloat(UnderlayX, a.F("shadowX", .5f)); m.SetFloat(UnderlayY, a.F("shadowY", -.6f));
+                m.SetFloat(UnderlaySoft, a.F("shadowSoft", .45f)); m.SetFloat(UnderlayDilate, a.F("shadowDilate", .25f));
+            }
+            else m.DisableKeyword("UNDERLAY_ON");
+            // TMP sizes each glyph's quad from the material's padding; the underlay and outline were set on the material behind its back,
+            // so without this the shadow is clipped at the glyph's edge and the outline stays thin
+            ShaderUtilities.UpdateShaderRatios(m); // the SDF scale ratios that let outline and underlay reach past the glyph
+            l.UpdateMeshPadding();
         }
     }
 }

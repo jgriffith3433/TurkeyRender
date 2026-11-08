@@ -1,0 +1,64 @@
+{
+ "name": "verse_take_2",
+ "about": "Verse 2 back on the table after the long-table shot, 8 beats: hand on hip, hip bounce, then both hands on the hips.",
+ "entry": "any",
+ "exit": "stand",
+ "length": "3.429s",
+ "min": "3.429s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": 0.3,
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.55,
+    6
+   ],
+   "for": 0.3
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "mx_hh_booty_step",
+   "start": 2.4,
+   "speed": 1.05,
+   "blend": 0.05,
+   "for": 1.715
+  },
+  {
+   "at": 1.715,
+   "do": "anim",
+   "clip": "mx_hh_listening",
+   "start": 0.2,
+   "speed": 1.167,
+   "blend": 0.2,
+   "for": 1.715
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

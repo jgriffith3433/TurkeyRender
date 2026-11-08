@@ -1,0 +1,135 @@
+{
+ "name": "mx_head_no",
+ "fps": 30,
+ "frames": 56,
+ "seconds": 1.83,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.06,
+  "straightFrac": 0.5,
+  "moves": 2,
+  "flatness": 0.85,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 2,
+  "holdMedianS": 0.77,
+  "fastRunMedianS": null,
+  "dynRange": 1.65,
+  "handPeak": 0.23,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.57,
+  "lagMedianFrames": 2,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 3.95,
+  "plantedFrac": 0.98,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": null,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.75,
+  "twinnedFrac": 0.5,
+  "curlMedian": 9.35,
+  "spreadMedian": 25.3,
+  "fannedFrac": 0,
+  "bowMedian": 10.88,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 7.86,
+  "armOmegaP95": 16.11,
+  "legOmegaP95": 16.02,
+  "spineOmegaP50": 7.93,
+  "spineOmegaP95": 26.67,
+  "headOmegaP50": 52.76,
+  "headOmegaP95": 139.97,
+  "armAccP95": 348.25,
+  "spineAccP95": 315.76,
+  "handSpeedP50": 0.09,
+  "handSpeedP95": 0.22,
+  "spineToArm": 1.01,
+  "energyCV": 0.35,
+  "moveRate": 1.09
+ },
+ "principles": {
+  "arcs": {
+   "score": 2.8,
+   "note": "median bend 0.06 over 2 moves, 50% straight lines"
+  },
+  "ease": {
+   "score": 1,
+   "note": "speed shape 0.85 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "2 holds (median 0.77 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 9.9,
+   "note": "0 centre-of-mass jerks, planted feet slide 4 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 1.83 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 9.3,
+   "note": "4 key poses, readability 0.75 (best of front, side, three-quarter), 50% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 9 deg, spread 25 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.43,
+   "what": "LeftHand stops dead from 62% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.43,
+   "what": "LeftHand stops dead from 62% of its peak",
+   "also": []
+  }
+ ],
+ "total": 7.5,
+ "verdict": "passable, weak on ease and arcs (7.5/10)"
+}

@@ -1,0 +1,25 @@
+{
+ "clip": "mx_wave_aj",
+ "seconds": 1.5670000000000002,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.165 m, worst step 0.008 m at 0.37s",
+  "right foot on floor moved 0.192 m, worst step 0.012 m at 0.37s"
+ ],
+ "hipsTop": 0.916355968,
+ "hipsLow": 0.9023725,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "LeftFoot": 8.9,
+  "groundHipsCm": 6.5,
+  "LeftLowerLeg": 4.5,
+  "Chest": 0.8
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_wave_aj_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_wave_aj_three.mp4"
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "clip": "mx_wave",
+ "seconds": 0.633,
+ "popCount": 2,
+ "pops": [
+  "0.200s RightHandIndex3 kink 0.094 m",
+  "0.467s RightHandIndex3 kink 0.085 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.031 m, worst step 0.005 m at 0.23s",
+  "right foot on floor moved 0.039 m, worst step 0.003 m at 0.37s"
+ ],
+ "hipsTop": 0.9137834,
+ "hipsLow": 0.9124054,
+ "hipsTravel": "(0.01, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 4.9,
+  "LeftFoot": 4,
+  "LeftLowerLeg": 0.8
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_wave_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_wave_three.mp4"
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "clip": "mx_tough_walk",
+ "seconds": 1.367,
+ "popCount": 12,
+ "pops": [
+  "0.033s LeftLowerLeg kink 0.120 m",
+  "0.067s LeftLowerLeg kink 0.186 m",
+  "0.100s LeftLowerLeg kink 0.235 m",
+  "0.333s LeftLowerLeg kink 0.139 m",
+  "0.367s LeftLowerLeg kink 0.147 m",
+  "0.400s LeftLowerLeg kink 0.123 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.316 m, worst step 0.038 m at 0.23s",
+  "right foot on floor moved 0.476 m, worst step 0.053 m at 0.37s"
+ ],
+ "hipsTop": 0.9132525,
+ "hipsLow": 0.846709,
+ "hipsTravel": "(-0.01, -0.01, 1.53)",
+ "limits": {
+  "LeftLowerLeg": 50.1,
+  "RightLowerLeg": 35.4,
+  "LeftFoot": 26.2,
+  "groundHipsCm": 8.1
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_tough_walk was rejected by admission: foot slide 4.69 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_tough_walk_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_tough_walk_three.mp4"
+ ]
+}

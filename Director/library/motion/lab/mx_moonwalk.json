@@ -1,0 +1,29 @@
+{
+ "clip": "mx_moonwalk",
+ "seconds": 1.133,
+ "popCount": 1,
+ "pops": [
+  "0.867s RightLowerLeg kink 0.124 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.464 m, worst step 0.038 m at 0.73s",
+  "right foot on floor moved 0.393 m, worst step 0.049 m at 0.90s"
+ ],
+ "hipsTop": 0.916274965,
+ "hipsLow": 0.8831585,
+ "hipsTravel": "(0.00, 0.00, -1.03)",
+ "limits": {
+  "LeftLowerLeg": 28,
+  "LeftFoot": 13.8,
+  "groundHipsCm": 6,
+  "RightLowerLeg": 3.4
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_moonwalk was rejected by admission: joint limits moved LeftFoot 44.6 deg; foot slide 4.85 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_moonwalk_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_moonwalk_three.mp4"
+ ]
+}

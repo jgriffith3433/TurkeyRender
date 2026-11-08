@@ -1,0 +1,31 @@
+{
+ "id": "let_go",
+ "f0": 2227,
+ "f1": 2279,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 74.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "24540c6717e9bf36",
+ "summary": "The cut itself is fine, but the camera keeps sliding around him over the first frames of the new shot, and he is still in a stiff, near-symmetrical standing pose with no twirl started.",
+ "faults": [
+  {
+   "t": 74.39,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The background shifts a lot between 74.33 and 74.43: the staircase and the green globes slide sideways and the horizon changes while he stays put in frame. It reads as the camera still moving after the cut, not a settled first frame.",
+   "fix": "Start the new shot's camera move from the first frame, or hold the camera still for the first ~10 frames."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3558,
+  "out": 829
+ },
+ "cost": 0.0154
+}

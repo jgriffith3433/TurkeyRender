@@ -1,0 +1,27 @@
+{
+ "file": "C:\\Projects\\TKShock\\Director\\videos\\_fx_test\\output\\_fx_test-proof1.mp4",
+ "ok": true,
+ "fps": 24,
+ "frames": 4805,
+ "max": 3,
+ "transitions": [
+  {
+   "t": 2.375,
+   "sign": 1,
+   "area": 1,
+   "red": false
+  },
+  {
+   "t": 2.458,
+   "sign": -1,
+   "area": 0.86,
+   "red": false
+  }
+ ],
+ "worst": {
+  "t": 2.375,
+  "flashes": 1
+ },
+ "over": [],
+ "red": []
+}

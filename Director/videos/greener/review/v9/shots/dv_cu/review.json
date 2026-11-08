@@ -1,0 +1,47 @@
+{
+ "id": "dv_cu",
+ "f0": 2741,
+ "f1": 2818,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 91.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "176c88a0f75855be",
+ "summary": "The arms snap between poses over 91.39-91.53, which reads as the cut tweening into the pose, and the pose that settles is stiff and limp.",
+ "faults": [
+  {
+   "t": 91.46,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Both arms jump pose in about 2 frames. His left hand goes from the chest at 91.39 to out at the side at 91.43, then onto the hip at 91.46. His right arm swings from hanging at 91.43 to raised with a dangling wrist at 91.49. This is the cut tweening into the pose, and at speed it reads as a snap.",
+   "fix": "Start the shot already in the settled pose, or trim the first 5 frames of the clip so the arms don't travel."
+  },
+  {
+   "t": 91.53,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "From 91.53 to 91.63 his right forearm lies flat across the body with a limp, dangling hand and splayed fingers. The other hand is on his hip. The pose is a stiff, twinned akimbo shape and doesn't read as 'he means this'.",
+   "fix": "Lift the right hand into an open, purposeful gesture, or lift the elbow and give the fingers a clear shape."
+  },
+  {
+   "t": 91.56,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The face is nearly unchanged from 91.46 to 91.63. He stares down the lens with no blink or brow change while the body snaps, so the eyes and head don't lead the move.",
+   "fix": "Add a blink or a small brow and head lead on the first move."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3550,
+  "out": 1062
+ },
+ "cost": 0.0177
+}

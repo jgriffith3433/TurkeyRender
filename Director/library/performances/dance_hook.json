@@ -1,0 +1,152 @@
+{
+ "name": "dance_hook",
+ "about": "Signature move on every \"I'm your gateway drug, baby\": a slide step with the hip, ribs popping in the arms, ending on the left-hand point at the lens on \"baby\" (beat 5 of 8).",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "3.429s",
+ "min": "3.429s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "mx_snake",
+   "start": 0.27,
+   "speed": 1.32,
+   "blend": 0.12,
+   "for": 3.429
+  },
+  {
+   "at": 0.514,
+   "do": "pose",
+   "bones": {
+    "chest": [
+     -14,
+     -12,
+     6
+    ],
+    "spine": [
+     -8,
+     -6,
+     3
+    ]
+   },
+   "for": 0.386,
+   "ease": "inout"
+  },
+  {
+   "at": 2.023,
+   "do": "layer",
+   "clip": "Idle1PointOut",
+   "mask": "leftArm",
+   "start": 0.38,
+   "speed": 1.3,
+   "once": 1,
+   "weight": 1,
+   "for": 0.772,
+   "blend": 0.07
+  },
+  {
+   "at": 2.033,
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     28,
+     22,
+     0
+    ],
+    "chest": [
+     7,
+     0,
+     0
+    ],
+    "spine": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     -3,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "out",
+   "overshoot": 0.1,
+   "settle": "0.3s"
+  },
+  {
+   "at": 2.915,
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.2,
+   "ease": "inout"
+  },
+  {
+   "at": 2.103,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.8,
+   "for": 0.08
+  },
+  {
+   "at": 2.103,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.03,
+   "for": 0.08,
+   "finger": "index"
+  },
+  {
+   "at": 2.103,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.7,
+   "for": 0.08,
+   "finger": "thumb"
+  },
+  {
+   "at": 2.915,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.15
+  },
+  {
+   "at": 2.915,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.15,
+   "finger": "index"
+  },
+  {
+   "at": 2.915,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.15,
+   "finger": "thumb"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "clip": "mx_turn_quick_180",
+ "seconds": 1.4000000000000001,
+ "popCount": 5,
+ "pops": [
+  "0.367s RightToes kink 0.081 m",
+  "0.400s RightToes kink 0.114 m",
+  "0.567s LeftHandPinky1 kink 0.084 m",
+  "1.300s LeftLowerLeg kink 0.085 m",
+  "1.333s LeftLowerLeg kink 0.134 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.374 m, worst step 0.045 m at 0.77s",
+  "right foot on floor moved 0.615 m, worst step 0.058 m at 0.63s"
+ ],
+ "hipsTop": 0.9180837,
+ "hipsLow": 0.840091765,
+ "hipsTravel": "(-0.12, 0.00, -0.13)",
+ "limits": {
+  "Head": 21.4,
+  "groundHipsCm": 5,
+  "RightLowerArm": 2.1
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_quick_180_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_quick_180_three.mp4"
+ ]
+}

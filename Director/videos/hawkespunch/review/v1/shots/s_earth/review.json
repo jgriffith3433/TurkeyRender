@@ -1,0 +1,22 @@
+{
+ "id": "s_earth",
+ "f0": 2647,
+ "f1": 2703,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 88.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "1e77133a3f520f48",
+ "summary": "The strip is clean: the camera is still, the Earth, stars and floating capsule hold steady across all eight tiles, and the small figure lying on the globe's rim shows no pop, flicker or visible clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3550,
+  "out": 429
+ },
+ "cost": 0.0114
+}

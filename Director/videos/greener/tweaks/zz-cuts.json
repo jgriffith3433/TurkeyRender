@@ -1,0 +1,62 @@
+{
+ "big_deal": {
+  "cast": {
+   "person": {
+    "args": {
+     "settle": 0.01,
+     "blend": 0
+    }
+   }
+  }
+ },
+ "blade_up": {
+  "cast": {
+   "person": {
+    "args": {
+     "settle": 0.01,
+     "blend": 0
+    }
+   }
+  }
+ },
+ "snatch": {
+  "cast": {
+   "person": {
+    "args": {
+     "settle": 0.01,
+     "blend": 0
+    }
+   }
+  }
+ },
+ "he_looks": {
+  "cast": {
+   "person": {
+    "args": {
+     "settle": 0.01,
+     "blend": 0
+    }
+   }
+  }
+ },
+ "takes_it": {
+  "cast": {
+   "person": {
+    "args": {
+     "settle": 0.01,
+     "blend": 0
+    }
+   }
+  }
+ },
+ "alone_fog": {
+  "cast": {
+   "person": {
+    "args": {
+     "settle": 0.01,
+     "blend": 0
+    }
+   }
+  }
+ }
+}

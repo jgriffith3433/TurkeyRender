@@ -1,0 +1,28 @@
+{
+  "about": "The bake report as a hard stop (RETRO: 'make it a hard stop'). `video` limits are summed over every take use in the cut; `take` limits are per use. Numbers are the baked ('after') side of videos/<v>/bake-report.json. mv final and mv render refuse when the last report fails; --allow-bake overrides. Set so Greener v9's bakes pass (worst take: ankle over 167 frames, near-floor travel 2.0 m); tighten them as the bake improves.",
+  "video": {
+    "snaps": 5,
+    "jerk": 0,
+    "elbowFlip": 2,
+    "kneeFlip": 0,
+    "hyperKnee": 0,
+    "hyperElbow": 0
+  },
+  "ragdoll": ["punched_away"],
+  "elbowFlipAbout": "2 since Hawkes Punch (2026-11-07): the doctor (Person2) bakes of doctor_turn_cold and doctor_punch keep one flipped frame each that the cleaner does not take out; tighten back to 0 when the Person2 hinge axes are read from her skeleton.",
+  "ragdollAbout": "Takes built on a ragdoll (contorted by design, gallery B): their snaps and acceleration spikes are the fall itself and are left out of the video totals.",
+  "take": {
+    "ankleOver": 200,
+    "plantedTravelM": 2.5
+  },
+  "names": {
+    "snaps": "snaps",
+    "jerk": "acceleration spikes",
+    "elbowFlip": "elbow flips",
+    "kneeFlip": "knee flips",
+    "hyperKnee": "hyperextended knee frames",
+    "hyperElbow": "hyperextended elbow frames",
+    "ankleOver": "ankle over range, frames",
+    "plantedTravelM": "near-floor foot travel, m"
+  }
+}

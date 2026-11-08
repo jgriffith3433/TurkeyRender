@@ -1,0 +1,6 @@
+{
+  // The real-scale space set (space_epic): the sky is black and the ambient almost nothing (under 3% of the key, research/epic-anime-action.md 6.1).
+  // No lights here: MVSpace makes the sun (hard, shadows), the planet bounce and the rim per camera, from the far world.
+  "sky": { "top": "#000000", "mid": "#000000", "bottom": "#000000", "ambient": "#06070b", "fog": "#000000", "density": 0, "sun": "#000000", "stars": 0, "clouds": 0 },
+  "lights": {}
+}

@@ -1,0 +1,196 @@
+{
+  "gm_sit_thumbs_up": {
+    "grade": "B",
+    "uses": [
+      "thumbs-up",
+      "sit",
+      "gesture"
+    ],
+    "weak": [
+      "point",
+      "wave"
+    ],
+    "needs": [
+      "fingers: right hand index-pinky set 1 (fist), thumb set 0, 1.7-2.6 s; relaxed curl 0.4 on both hands outside that",
+      "start at 1.0 s to skip the wind-up"
+    ],
+    "line": "good for: a seated right-hand gesture on air (stool at seat height), hand rises from the knee to chest-shoulder height in front at 1.0-1.7 s, held raised 1.7-2.6 s (forearm angled up, palm inward), back to the knee 2.8-3.7 s, smooth, no face contact (closest 0.17 m), head up; weak at: a real thumbs-up by itself (generated with no finger motion: the hand stays flat and open) and toward-camera reads (the hand faces his left); needs: the fist-plus-thumb fingers cue 1.7-2.6 s, relaxed curl 0.4 elsewhere",
+    "hit": 1.8,
+    "watched": "strip 0-4 s at 15 fps, hands burst (30 fps) through the lowering, Blender previews of both takes (take 0 kept: the hand comes up in front; take 1 lays the forearm across the chest)"
+  },
+  "gm_zg_hold_ball": {
+    "grade": "B",
+    "uses": [
+      "float",
+      "sit",
+      "listen"
+    ],
+    "weak": [
+      "catch",
+      "throw",
+      "stand-idle"
+    ],
+    "needs": [
+      "fingers: relaxed curl 0.4 both hands, whole clip (generated hands are flat and open)",
+      "gaze at the ball (the head looks ahead, not down at the hands)",
+      "a ball attached between the hands at belly-chest height"
+    ],
+    "line": "good for: the best zero-g body in the kit, reclined as if sitting back in the air, knees bent and legs loose forward, both hands in front of the belly-chest with palms facing about a ball's width apart, head up and face to camera, slow sway, loops cleanly (3.7 s); weak at: anything standing or planted, and a look at the ball (the head stays ahead); needs: relaxed grip 0.4, a gaze cue to the ball, the ball as a prop",
+    "watched": "strip 0-3.7 s at 15 fps, Blender previews of both takes (take 0 kept: reclined float; take 1 stands with crossed bent legs)"
+  },
+  "gm_zg_search": {
+    "grade": "B",
+    "uses": [
+      "look-back",
+      "wave",
+      "float"
+    ],
+    "weak": [
+      "stand-idle",
+      "point"
+    ],
+    "needs": [
+      "start at 1.0 s, stop at 2.9 s (the forearms cross in a low X in front of the hips before and after, 12 frames of hand-in-body)",
+      "fingers: relaxed curl 0.4 both hands"
+    ],
+    "line": "good for: a hopeful search with one hand raised, knees soft and bent throughout, 1.0-1.5 s turns and reaches out, 1.5-2.6 s left hand up at head height to the side, palm out, as he looks out to his left (head yaw up to 70 deg), lowers 2.6-2.9 s; weak at: a hand shading the eyes (it is raised beside the head, not at the brow) and anything before 1.0 s or after 2.9 s (forearms crossed low); needs: start 1.0, stop 2.9, relaxed grip 0.4",
+    "hit": 1.6,
+    "watched": "strip 0-4.5 s at 15 fps, Blender previews of both takes (take 0 kept: the raised hand; take 1 brings a hand to the neck)"
+  },
+  "gm_zg_throw": {
+    "grade": "B",
+    "uses": [
+      "throw",
+      "float"
+    ],
+    "weak": [
+      "catch",
+      "stand-idle"
+    ],
+    "needs": [
+      "play once, stop at 1.6 s (after it he settles into a squat with hands on the knees)",
+      "fingers: relaxed curl 0.4 both hands; set the throwing hand 0.65 until release"
+    ],
+    "line": "good for: an overhand throw from a tuck, legs bent the whole time, rises 0.3-0.6 s with the right arm reaching overhead, arm cocked high 0.6-0.9 s, sweeps forward and down 0.9-1.2 s with release at about 1.05 s, body follows down into a crouch; weak at: a ground-free look after 1.6 s (he squats with hands on knees, reads planted) and the counter-rotation asked for (the hips barely turn); needs: once, stop 1.6, relaxed grip",
+    "hit": 1.05,
+    "watched": "strip 0-3 s at 15 fps, own 30 fps burst 0.8-1.3 s on the medium camera, Blender previews of both takes (take 0 kept: cleaner arc)"
+  },
+  "gm_zg_catch_gut": {
+    "grade": "C",
+    "uses": [
+      "hit-react"
+    ],
+    "weak": [
+      "catch",
+      "float"
+    ],
+    "needs": [
+      "start at 0.6 s if used at all"
+    ],
+    "line": "good for: little; 0-0.6 s the head snaps back as if hit in the face, he drops to his knees 0.6 s and folds forward 1.3-2.9 s; weak at: catching a ball at the gut (the arms go behind his back, never around the belly; 30 fps burst 1.0-1.5 s) and floating (kneels, head bowed through the fold); needs: a different source",
+    "hit": 0.4,
+    "watched": "strip 0-3 s at 15 fps, own 30 fps burst 1.0-1.5 s, Blender previews of both takes (both kneel and curl)"
+  },
+  "gm_zg_tumble": {
+    "grade": "C",
+    "uses": [
+      "fall"
+    ],
+    "weak": [
+      "float",
+      "fly"
+    ],
+    "needs": [
+      "root motion on, if used: the hips dip 12 cm under the floor"
+    ],
+    "line": "good for: little; a crouch into a forward roll with the head to the ground 0.2-0.9 s, stands, falls back into a backward roll 1.0-1.5 s, sits up cross-legged 1.6-3.4 s and crouches; weak at: one slow zero-g turn (two ground rolls, the head and back on the floor, lying and sitting reads planted, pitch swings 170 deg); needs: a different source",
+    "watched": "strip 0-4.5 s at 15 fps, Blender previews of both takes (take 1 has a foot 1 m under the ground and 2 joint jumps)"
+  },
+  "gm_zg_idle": {
+    "grade": "B",
+    "uses": [
+      "float",
+      "stand-idle",
+      "listen"
+    ],
+    "weak": [
+      "talk",
+      "gesture"
+    ],
+    "needs": [
+      "fingers: relaxed curl 0.4 both hands, whole clip (generated hands are flat and open)",
+      "for a looser float, play 2.0-3.4 s (arms drifting out) or add slow travel/rotation on the actor"
+    ],
+    "line": "good for: an upright weightless idle, head level and face to camera all loop (pitch -9 to 4 deg, yaw under 3 deg), knees soft, feet together with toes down, slight sway; hands loosely together in front of the hips 0-1.9 s, arms drift out from the sides 2.0-3.4 s, close back in 3.4-3.7 s; loops cleanly (seam 2.8 deg, the arms close over 0.3 s with no pop); weak at: reading as floating by itself in a wide (legs hang under him like a standing pose, just softer), talking; needs: relaxed grip 0.4, actor drift or a slow turn in wides",
+    "watched": "strip 0-3.7 s at 15 fps, 30 fps bursts at the loop seam 3.35-3.7 s and full body 1.8-2.1 s; retry j_31e36e11f8ef (astronaut prompt, 3 key poses with the head level, 3 takes): take 0 kept, takes 1-2 bend the knees more and tip the head back; the first try (kneeling, head to the sky) is in Director/gen/genmotion/takes/zg_idle_try1.fbx"
+  },
+  "gm_zg_breathless": {
+    "grade": "C",
+    "uses": [
+      "float"
+    ],
+    "weak": [
+      "sigh",
+      "talk",
+      "listen"
+    ],
+    "needs": [
+      "a native gaze ahead (limit 60) if used",
+      "fingers: relaxed curl 0.4"
+    ],
+    "line": "good for: little; kneels on air like zg_idle, head tipped back toward the sky (pitch 14-52 deg) until it comes level at 3.4 s, arms hang, no visible chest heave; weak at: out of breath and looking ahead (the head looks up, the breathing doesn't read); needs: a different source, or a gaze cue ahead",
+    "watched": "strip 0-3.7 s at 15 fps, Blender previews of both takes (take 0 lolls the head back and to the side); retry j_a76183899397 (upright, head level in every key pose, 3 takes) was worse: all three crouch or kneel with the head bowed (Blender previews, takes in Director/gen/genmotion/takes/zg_breathless3_*.fbx), so this clip stays"
+  },
+  "gm_zg_talk": {
+    "grade": "C",
+    "uses": [
+      "float"
+    ],
+    "weak": [
+      "talk",
+      "gesture",
+      "listen"
+    ],
+    "needs": [
+      "a native gaze ahead (limit 60) to level the head, if used",
+      "fingers: relaxed curl 0.4"
+    ],
+    "line": "good for: the legs, which now hang bent under him like a real float; weak at: talking (the hand gestures are small and at hip level, not the chest; the other hand sits behind his back, 113 frames hand-in-body by the measure) and the face (chin up 18-37 deg the whole loop); needs: a different source, or a gaze cue ahead and a layer for the arms",
+    "watched": "strip 0-3.7 s at 15 fps; retry j_9b0a6fa56e5a: take 2 kept (upright, small open-palm gestures), take 1 kneels, take 0 holds the arms behind; the first try (kneeling, head to the sky) is in Director/gen/genmotion/takes/zg_talk_try1.fbx"
+  },
+  "gm_zg_laugh": {
+    "grade": "C",
+    "uses": [
+      "laugh"
+    ],
+    "weak": [
+      "float",
+      "talk"
+    ],
+    "needs": [
+      "a different source"
+    ],
+    "line": "good for: little; kneels on air, laughs by folding forward with the head down and the face hidden 0.5-1.6 s, rocks back up to upright 1.7-2.4 s with the hands behind his back (31 frames hand-in-body), head level only after 2.4 s; weak at: a laugh to camera (face hidden at the peak) and floating (kneels); needs: a different source",
+    "hit": 0.9,
+    "watched": "strip 0-3 s at 15 fps; retry j_accbe8310b02: take 2 kept (the only take that rocks), take 0 kneels still, take 1 stands with the head bowed; the first try (full backbend, face to the sky) is in Director/gen/genmotion/takes/zg_laugh_try1.fbx"
+  },
+  "gm_zg_startle": {
+    "grade": "B",
+    "uses": [
+      "scared",
+      "react",
+      "float",
+      "hit-react"
+    ],
+    "weak": [
+      "fall"
+    ],
+    "needs": [
+      "play once",
+      "fingers: relaxed curl 0.4 both hands"
+    ],
+    "line": "good for: a jump-scare in the air, upright with soft knees, one arm loose out to the side 0-0.7 s, the flinch at 0.8 s (head snaps back, body arches back, a knee jerks up, arms fling out) 0.8-1.4 s, recovers upright 1.4-1.9 s, head level and face to camera from 2.0 s to the end; weak at: a flail big enough for a wide on its own (the arms open about 45 deg, not full spread), anything after 2.0 s is a quiet hold; needs: once, relaxed grip 0.4",
+    "hit": 0.8,
+    "watched": "strip 0-3 s at 15 fps; retry j_705278412b40 (upright, head level in every key pose, 3 takes): take 1 kept (biggest recoil), take 0 is a smaller lean-back, take 2 opens the arms with little body; the first try (crouch, then kneel) is in Director/gen/genmotion/takes/zg_startle_try1.fbx"
+  }
+}

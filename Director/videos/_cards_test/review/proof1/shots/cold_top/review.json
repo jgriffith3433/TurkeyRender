@@ -1,0 +1,31 @@
+{
+ "id": "cold_top",
+ "f0": 510,
+ "f1": 593,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 17,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "5ade266cbbfdaa61",
+ "summary": "The cut is clean and the camera is locked with no pops or flicker. The seated figure is nearly frozen and stiffly symmetrical across 17.03 to 17.23, but that is too short a window to judge hold or motion.",
+ "faults": [
+  {
+   "t": 17.03,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The seated figure is upright and symmetrical, with both arms hanging at his sides and both legs straight down. It reads as a stiff, twinned pose with no clear line of action. He also looks perched on the sofa rather than sunk into the cushion.",
+   "fix": "Tilt the head or shoulders, offset one arm or knee, and add a slight slump into the seat so the silhouette has one clear line."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3541,
+  "out": 686
+ },
+ "cost": 0.0139
+}

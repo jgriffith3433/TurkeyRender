@@ -29,6 +29,7 @@ namespace TKShock.MV.EditorTools
                 if (!File.Exists(ScoreCompiler.ScenePath)) return;
                 if (SceneManager.GetActiveScene().path != ScoreCompiler.ScenePath && !SceneManager.GetActiveScene().isDirty)
                     EditorSceneManager.OpenScene(ScoreCompiler.ScenePath, OpenSceneMode.Single);
+                SceneKeeper.EnsureBuilt();
                 Quality.Set(true);
                 Transport.ShowAll();
             };
@@ -54,8 +55,8 @@ namespace TKShock.MV.EditorTools
         /// <summary>Adds the Stylize full-screen pass to every URP renderer in the project.</summary>
         static string AddStylizePass()
         {
-            if (!AssetDatabase.IsValidFolder(ScoreCompiler.Gen)) AssetDatabase.CreateFolder("Assets/MusicVideo", "Generated");
-            var matPath = ScoreCompiler.Gen + "/Stylize.mat";
+            if (!AssetDatabase.IsValidFolder("Assets/MusicVideo/Generated")) AssetDatabase.CreateFolder("Assets/MusicVideo", "Generated");
+            var matPath = "Assets/MusicVideo/Generated/Stylize.mat"; // one pass for every video: it lives in the project's renderer
             var mat = AssetDatabase.LoadAssetAtPath<Material>(matPath);
             if (!mat) { mat = new Material(Shader.Find("MV/Stylize")); AssetDatabase.CreateAsset(mat, matPath); }
             int added = 0;
@@ -179,6 +180,8 @@ namespace TKShock.MV.EditorTools
                     parts = rs.Take(12).Select(r => new { r.name, mats = r.sharedMaterials.Select(x => x ? x.name + " [" + x.shader.name + "]" : "none").ToArray(), sz = new[] { r.bounds.size.x, r.bounds.size.y, r.bounds.size.z }, at = new[] { r.bounds.center.x, r.bounds.center.y, r.bounds.center.z } }).ToArray(),
                     animator = an ? new { human = an.isHuman, avatar = an.avatar ? an.avatar.name : null, controller = an.runtimeAnimatorController ? an.runtimeAnimatorController.name : null } : null,
                     lights = g.GetComponentsInChildren<Light>(true).Length,
+                    // "bones":["Head"]: where a Humanoid bone sits in the model's own frame at rest, and how it is turned (for attach offsets)
+                    bones = m["bones"] is JArray bl && an && an.isHuman ? bl.Select(x => { var t = an.GetBoneTransform((HumanBodyBones)System.Enum.Parse(typeof(HumanBodyBones), (string)x, true)); var q = Quaternion.Inverse(g.transform.rotation) * t.rotation; var p = g.transform.InverseTransformPoint(t.position); return new { bone = (string)x, pos = new[] { p.x, p.y, p.z }, euler = new[] { q.eulerAngles.x, q.eulerAngles.y, q.eulerAngles.z }, quat = new[] { q.x, q.y, q.z, q.w } }; }).ToArray() : null,
                 };
             }
             finally { Object.DestroyImmediate(g); }
@@ -189,13 +192,16 @@ namespace TKShock.MV.EditorTools
         static object Humanoid(JObject m)
         {
             string fbx = (string)m["fbx"], basePath = (string)m["base"], normal = (string)m["normal"], matPath = (string)m["mat"];
+            if (fbx == null || basePath == null || normal == null || matPath == null) throw new System.Exception("humanoid needs Assets/ paths: {\"fbx\":..,\"base\":<base colour texture>,\"normal\":<normal map>,\"mat\":<material to make>}");
             var imp = (ModelImporter)AssetImporter.GetAtPath(fbx);
+            if (!imp) throw new System.Exception("no model at " + fbx);
             imp.animationType = ModelImporterAnimationType.Human;
             imp.avatarSetup = ModelImporterAvatarSetup.CreateFromThisModel;
             imp.importAnimation = false; imp.materialImportMode = ModelImporterMaterialImportMode.None;
             imp.isReadable = true;
             imp.importNormals = ModelImporterNormals.Import; imp.importTangents = ModelImporterTangents.CalculateMikk; imp.importBlendShapes = true; imp.importBlendShapeNormals = ModelImporterNormals.Calculate;
             imp.SaveAndReimport();
+            MapEyes(imp, fbx);
             var ti = (TextureImporter)AssetImporter.GetAtPath(normal);
             ti.textureType = TextureImporterType.NormalMap; ti.SaveAndReimport();
             var mat = AssetDatabase.LoadAssetAtPath<Material>(matPath);
@@ -222,6 +228,23 @@ namespace TKShock.MV.EditorTools
             var fingers = an ? Enumerable.Range((int)HumanBodyBones.LeftThumbProximal, 30).Count(i => an.GetBoneTransform((HumanBodyBones)i)) : 0;
             Object.DestroyImmediate(inst);
             return new { human = av && av.isHuman, valid = av && av.isValid, keys = keys.Distinct().ToArray(), fingers };
+        }
+
+        /// <summary>Eye bones are optional in an avatar, and a model that already has one keeps its old map: add them if the model has them.</summary>
+        static void MapEyes(ModelImporter imp, string fbx)
+        {
+            var hd = imp.humanDescription; var go = AssetDatabase.LoadAssetAtPath<GameObject>(fbx);
+            var human = hd.human.ToList(); var skel = hd.skeleton.ToList(); bool changed = false;
+            foreach (var n in new[] { "LeftEye", "RightEye" })
+            {
+                var t = go.GetComponentsInChildren<Transform>(true).FirstOrDefault(x => x.name == n);
+                if (!t || human.Any(x => x.humanName == n)) continue;
+                human.Add(new HumanBone { boneName = n, humanName = n, limit = new HumanLimit { useDefaultValues = true } });
+                if (!skel.Any(x => x.name == n)) skel.Add(new SkeletonBone { name = n, position = t.localPosition, rotation = t.localRotation, scale = t.localScale });
+                changed = true;
+            }
+            if (!changed) return;
+            hd.human = human.ToArray(); hd.skeleton = skel.ToArray(); imp.humanDescription = hd; imp.SaveAndReimport();
         }
 
         static void Maps(Material mat, string normal, string gloss, string occ, float smooth)

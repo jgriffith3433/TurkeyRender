@@ -1,0 +1,55 @@
+{
+ "id": "hero",
+ "f0": 428,
+ "f1": 510,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 14.267,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a67784e89af823d0",
+ "summary": "The strip is stable with no pops, flicker or camera movement, but the figure is cropped at the head and stands in a stiff, symmetrical, motionless pose that doesn't read as \"she owns the room\".",
+ "faults": [
+  {
+   "t": 14.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The figure's head is cut off by the top of the frame in the opening tiles (14.26 to 14.36) and only just peeks in at the bottom of the frame in the later tiles. The hero's face is never readable, which defeats the power idea.",
+   "fix": "Tilt the camera up or lower the framing so the head and face sit fully inside the frame with some headroom."
+  },
+  {
+   "t": 14.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The figure stands in a stiff, near-symmetrical pose with both arms hanging straight and both fists clenched at the same height. There is no clear line of action and no power attitude, and the silhouette is dark against a dark wall.",
+   "fix": "Give her an asymmetrical power pose, such as a weight shift, one hand on the hip, or a chest-up stance. Add rim light so the silhouette separates from the wall."
+  },
+  {
+   "t": 14.43,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Across all 8 tiles the body barely changes. There is no breath, no hip shift and no settle after the cut, so she reads as a frozen model rather than a character taking the room.",
+   "fix": "Add a subtle weight shift or breathing, or a small hip-led move in the first half second."
+  },
+  {
+   "t": 14.3,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The coffee table cuts across her legs and the low camera angle hides her feet. Her contact with the floor can't be seen, and the table competes with her for attention.",
+   "fix": "Move the camera or the table so her feet and legs are visible, or raise the camera slightly."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3540,
+  "out": 1063
+ },
+ "cost": 0.0177
+}

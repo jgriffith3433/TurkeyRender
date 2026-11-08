@@ -1,11 +1,17 @@
 """Song analysis for the music video: beats, bars, sections, band envelopes -> Director/song.json.
-Run: uv run --python 3.12 --with librosa --with soundfile Director/tools/analyze_song.py Assets/Song/Audio.mp3 Director/song.json
+Run: uv run --python 3.12 --with librosa --with soundfile Director/tools/analyze_song.py Assets/Song/Audio.mp3 Director/song.json [--bpm 90 --offset 0]
+--bpm states the tempo: the grid is straight at that tempo from --offset (default: the best fit), bar 1 on the first beat. For a click, a placeholder, anything whose tempo is known.
 """
 import json, sys
 import numpy as np, librosa
 from scipy.ndimage import uniform_filter1d
 
-src, out = sys.argv[1], sys.argv[2]
+args = sys.argv[1:]
+def opt(name):
+    if name not in args: return None
+    i = args.index(name); v = float(args[i + 1]); del args[i:i + 2]; return v
+known_bpm, known_offset = opt('--bpm'), opt('--offset')
+src, out = args[0], args[1]
 y, sr = librosa.load(src, sr=22050, mono=True)
 dur = len(y) / sr
 hop = 256
@@ -27,7 +33,14 @@ for bpm in np.arange(max(40, tempo - 6), tempo + 6, 0.01):
         v = comb(ts)
         if v > best[0]: best = (v, float(bpm), float(off))
 print(f"tracked comb {tracked:.3f} straight comb {best[0]:.3f} at {best[1]:.2f} bpm offset {best[2]:.3f}")
-if best[0] >= tracked * 0.92:
+if known_bpm:
+    ibi = 60 / known_bpm
+    off = known_offset if known_offset is not None else max(np.arange(0, ibi, 0.005), key=lambda o: comb(np.arange(o, dur, ibi)))
+    tempo = float(known_bpm)
+    beats = np.arange(off, dur, ibi)
+    beat_frames = librosa.time_to_frames(beats, sr=sr, hop_length=hop)
+    print(f"tempo stated: {tempo} bpm from {off:.3f}")
+elif best[0] >= tracked * 0.92:
     tempo = best[1]
     beats = np.arange(best[2], dur, 60 / tempo)
     beat_frames = librosa.time_to_frames(beats, sr=sr, hop_length=hop)
@@ -50,7 +63,7 @@ rms = env(librosa.feature.rms(y=y, hop_length=hop, frame_length=2048)[0])
 
 # Downbeat: the beat phase (0-3) with the strongest kick accents.
 kick_at = np.interp(beats, t_grid, kick)
-phase = int(np.argmax([kick_at[i::4].mean() for i in range(4)]))
+phase = 0 if known_bpm else int(np.argmax([kick_at[i::4].mean() for i in range(4)]))
 
 # Onsets: separate kick / snare-ish hits for FX timing.
 def peaks(e, delta):
@@ -65,6 +78,7 @@ def band_peaks(e, thr):
     return [round(float(t_src[i]), 3) for i in idx]
 onset_kick = band_peaks(kick_raw, 0.35)
 onset_snare = band_peaks(band(1500, 6000), 0.35)
+onset_hat = band_peaks(band(7000, 11000), 0.35)
 
 # Sections: novelty on beat-synced MFCC + chroma, snapped to bars.
 mfcc = librosa.feature.mfcc(y=y, sr=sr, hop_length=hop, n_mfcc=13)
@@ -91,12 +105,12 @@ data = {
     "duration": round(dur, 3), "tempo": round(tempo, 2), "meter": 4, "downbeatPhase": phase,
     "beats": [round(float(b), 3) for b in beats],
     "sections": secs,
-    "onsets": {"all": onset_all, "kick": onset_kick, "snare": onset_snare},
+    "onsets": {"all": onset_all, "kick": onset_kick, "snare": onset_snare, "hat": onset_hat},
     "envelopes": {"fps": fps, **{k: [round(float(v), 3) for v in a] for k, a in
                   dict(kick=kick, bass=bass, mid=mid, high=high, rms=rms).items()}},
 }
 json.dump(data, open(out, "w"), separators=(",", ":"))
 ib = np.diff(beats)
 print(f"dur {dur:.2f}s tempo {tempo:.2f} beats {len(beats)} first {beats[0]:.3f} ibi {ib.mean():.4f}+-{ib.std():.4f} phase {phase}")
-print(f"onsets all {len(onset_all)} kick {len(onset_kick)} snare {len(onset_snare)}")
+print(f"onsets all {len(onset_all)} kick {len(onset_kick)} snare {len(onset_snare)} hat {len(onset_hat)}")
 for s in secs: print(s)

@@ -1,0 +1,39 @@
+{
+ "id": "c_steth",
+ "f0": 458,
+ "f1": 534,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 15.267,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "6ab5e67b2406dd1a",
+ "summary": "The strip is stable with no pops, flicker or camera move, but the woman is cropped at the right edge so her hand-at-chin idea isn't visible, and he is frozen with a blank face.",
+ "faults": [
+  {
+   "t": 15.33,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The woman, who carries the 'hmm, hand at chin' idea, is cut off by the right edge. Only the back of her head and shoulder show, and her face and hand are not visible. The stethoscope end hangs ambiguously beside her.",
+   "fix": "Reframe or pan the crop so her face and chin hand are in frame, or move her left in the shot."
+  },
+  {
+   "t": 15.43,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His head, eyes and expression are stuck across all eight tiles: a blank stare to the right, with no blink, eye lead or breath cue. He reads as a frozen mannequin rather than someone holding his breath.",
+   "fix": "Add a small chest or shoulder lift and release, an eye shift and a blink, with a slight head settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3570,
+  "out": 709
+ },
+ "cost": 0.0142
+}

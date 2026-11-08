@@ -1,0 +1,290 @@
+{
+ "name": "gm_zg_search",
+ "fps": 30,
+ "frames": 121,
+ "seconds": 4,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.27,
+  "straightFrac": 0,
+  "moves": 17,
+  "flatness": 0.74,
+  "abruptFrac": 0.38,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 2.08,
+  "handPeak": 2.3,
+  "bigMoves": 9,
+  "anticipFrac": 0,
+  "overshootFrac": 0.22,
+  "coherence": 0.54,
+  "lagMedianFrames": 1,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 15.91,
+  "plantedFrac": 0.89,
+  "zgSpeedChanges": 7.5,
+  "snapsPer10": 5,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.07,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.57,
+  "twinnedFrac": 0.38,
+  "curlMedian": 0.21,
+  "spreadMedian": 14.51,
+  "fannedFrac": 0,
+  "bowMedian": 24.58,
+  "selfPenFrac": 0.03,
+  "airReaches": 0,
+  "armOmegaP50": 28.85,
+  "armOmegaP95": 145.22,
+  "legOmegaP95": 68.33,
+  "spineOmegaP50": 16.08,
+  "spineOmegaP95": 90.89,
+  "headOmegaP50": 24.72,
+  "headOmegaP95": 177.54,
+  "armAccP95": 810.81,
+  "spineAccP95": 652.69,
+  "handSpeedP50": 0.27,
+  "handSpeedP95": 1.1,
+  "spineToArm": 0.56,
+  "energyCV": 0.52,
+  "moveRate": 1.25
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.27 over 10 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 5.8,
+   "note": "speed shape 0.74 (bell 0.6, constant 1.0), 38% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": 3.3,
+   "note": "9 big moves: 0 with anticipation, 2 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 6.1,
+   "note": "parts' speed profiles agree 0.54 (1 = everything moves as one); typical lag between parts 1 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 7.5,
+   "note": "0 centre-of-mass jerks, 3 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 3.8,
+   "note": "2 body snaps or pops in 4 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "7% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 9.4,
+   "note": "8 key poses, readability 0.57 (best of front, side, three-quarter), 38% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 0 deg, spread 15 deg, head level"
+  },
+  "contact": {
+   "score": 9.3,
+   "note": "hands inside the body 3% of the time (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 1.47,
+   "f": 44,
+   "kind": "snap",
+   "part": "Head",
+   "sev": 0.86,
+   "what": "Head jumps 9 deg in one frame"
+  },
+  {
+   "t": 3.1,
+   "f": 93,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.86,
+   "what": "LeftHand jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.79,
+   "what": "in zero-g the body changes speed by 0.29 m/s with nothing to push on"
+  },
+  {
+   "t": 1.8,
+   "f": 54,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.78,
+   "what": "in zero-g the body changes speed by 0.28 m/s with nothing to push on"
+  },
+  {
+   "t": 1.5,
+   "f": 45,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.77,
+   "what": "in zero-g the body changes speed by 0.27 m/s with nothing to push on"
+  },
+  {
+   "t": 0.87,
+   "f": 26,
+   "kind": "self-penetration",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand is inside the torso"
+  },
+  {
+   "t": 2.2,
+   "f": 66,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 69% of its peak speed in one frame"
+  },
+  {
+   "t": 2.4,
+   "f": 72,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 75% of its peak"
+  },
+  {
+   "t": 2.23,
+   "f": 67,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot starts at 67% of its peak speed in one frame"
+  },
+  {
+   "t": 2.5,
+   "f": 75,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 71% of its peak"
+  },
+  {
+   "t": 3.27,
+   "f": 98,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot starts at 65% of its peak speed in one frame"
+  },
+  {
+   "t": 3.63,
+   "f": 109,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 60% of its peak"
+  },
+  {
+   "t": 2.23,
+   "f": 67,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.43,
+   "what": "Head starts at 66% of its peak speed in one frame"
+  },
+  {
+   "t": 2.53,
+   "f": 76,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.43,
+   "what": "Head stops dead from 68% of its peak"
+  },
+  {
+   "t": 3.17,
+   "f": 95,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 81% of its peak speed in one frame"
+  },
+  {
+   "t": 3.37,
+   "f": 101,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot stops dead from 83% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 1.47,
+   "f": 44,
+   "kind": "snap",
+   "part": "Head",
+   "sev": 0.86,
+   "what": "Head jumps 9 deg in one frame",
+   "also": [
+    "speed-change"
+   ]
+  },
+  {
+   "t": 3.1,
+   "f": 93,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.86,
+   "what": "LeftHand jumps 9 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 1.8,
+   "f": 54,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.78,
+   "what": "in zero-g the body changes speed by 0.28 m/s with nothing to push on",
+   "also": []
+  },
+  {
+   "t": 0.87,
+   "f": 26,
+   "kind": "self-penetration",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand is inside the torso",
+   "also": []
+  },
+  {
+   "t": 2.2,
+   "f": 66,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 69% of its peak speed in one frame",
+   "also": []
+  }
+ ],
+ "total": 7.6,
+ "verdict": "passable, weak on anticipation and snaps (7.6/10)"
+}

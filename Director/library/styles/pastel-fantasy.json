@@ -1,0 +1,14 @@
+{
+  // Everything perfect, nothing real: pale pink, mint, baby blue, cream and gold, shot like an expensive 2000s pop video. A brochure of a life, in deep clean colour and real shadow.
+  // No lift, no veil, almost no haze. A strong key, a low fill, a hot rim and rich blacks do the gloss; the pastel is in the paint, not in a milky picture. Depth of field stays on the background, never a phone filter.
+  "about": "A glossy pastel fantasy: polished, symmetrical, too perfect, rich colour and deep clean blacks. Satire, luxury, anything that should look painted on.",
+  "light": "pastel_day",
+  "grade": {
+    "exposure": -0.08, "contrast": 22, "saturation": 18, "hue": 0, "vignette": 0.16, "grain": 0.012, "bloom": 0.3, "threshold": 1.2, "chroma": 0,
+    "split": 0.1, "splitA": "#6a4f9a", "splitB": "#ffe6cf", "lift": 0, "halation": 0.05,
+    "haze": 0.012, "veil": 0, "dust": 0, "curve": 0.1, "skin": 0.45, "sunRim": 0.7, "faceFill": 0.36, "catch": 1
+  },
+  "lens": { "close-up": 65, "medium": 40, "wide": 24, "over-shoulder": 50, "tracking": 35, "apertureScale": 1.5 },
+  "type": { "color": "#d9708d", "style": "fade", "size": 58, "pos": [0.5, 0.14, 0], "in": 0.3, "out": 0.3 },
+  "cues": [ { "at": 0, "light": "key", "intensity": 0 } ]
+}

@@ -16,8 +16,12 @@ namespace TKShock.MV
         /// <summary>Puts this actor at song time t, whatever order the tracks run in.</summary>
         public void Eval(double t) { if (_actor == null) return; if (History > 0) Dirty.Add(this); Apply(t, _actor); }
 
+        /// <summary>A native actor: Unity's Animator plays its clips from Timeline, so nothing here writes its bones.</summary>
+        bool Native => _actor != null && _actor.native;
+        static bool BoneCue(string k) => k == "pose" || k == "stance" || k == "plant";   // what a native actor ignores; reach, gaze, eyes and fingers run after the Animator
+
         struct Layer { public AnimationClip clip; public double time; public float w, tl; public Tree tree; }
-        class Tween { public Op from, to; public float k, w; }
+        class Tween { public Op from, to; public float k, w, w2; }
         readonly List<Layer> _layers = new List<Layer>();
         readonly Dictionary<Transform, Vector3> _pose = new Dictionary<Transform, Vector3>();
         readonly Dictionary<Transform, Vector3> _poseLocal = new Dictionary<Transform, Vector3>();
@@ -26,12 +30,14 @@ namespace TKShock.MV
         readonly Dictionary<string, Tween> _plant = new Dictionary<string, Tween>();
         Tween _gaze;
         readonly float[] _curl = new float[10]; bool _anyCurl;
+        readonly float[] _handSet = new float[10], _handW = new float[10];   // fingers "set": an absolute hand, measured from the rig's rest pose, so no clip can keep it shut
         readonly Dictionary<string, float> _face = new Dictionary<string, float>();
 
         void BeginBody()
         {
             _layers.Clear(); _pose.Clear(); _poseLocal.Clear(); _reach.Clear(); _plant.Clear(); _gaze = null; _face.Clear(); _anyCurl = false;
-            Array.Clear(_curl, 0, 10);
+            Array.Clear(_curl, 0, 10); Array.Clear(_handSet, 0, 10); Array.Clear(_handW, 0, 10);
+            _stArms = _stLegs = 0; _stShift = _stDrop = _stTilt = _stSway = _stNarrow = 0; _eyeYaw = _eyePitch = 0; _stPeriod = 5; _stBones.Clear();
             BeginExtras();
             BeginPerform();
         }
@@ -44,18 +50,21 @@ namespace TKShock.MV
         {
             if (op.a.Obj.ContainsKey("T")) { AddTree(actor, op, tl); return; }
             var clip = ClipOf(actor, op); if (clip == null) return;
-            double len = clip.length, local;
-            float cycle = op.a.F("beats"), speed = op.a.F("speed", 1);
+            double len = clip.length, local = ClipClock(clip, op, tl);
             bool once = op.a.F("once") > 0;
-            if (cycle > 0) local = (Song.BeatAt(op.start + tl) - Song.BeatAt(op.start)) / cycle * len;
-            else local = tl * speed;
-            local += op.a.F("offset") * len + op.a.F("start");
-            if (once) local = Math.Min(local, op.a.Has("stop") ? op.a.F("stop") : len);
-            else if (len > 0) local %= len;
+            if (!once && len > 0) local %= len;
             if (local < 0) local += len;
-            float blend = op.a.F("blend", .2f), w = blend > 0 ? Ease.Apply("inout", (float)(tl / blend)) : 1;
-            float ret = op.a.F("return");
-            if (ret > 0 && tl > op.WDur) w *= 1 - Ease.Apply("inout", (float)((tl - op.WDur) / ret));
+            float blend = op.a.F("blend", .2f), ret = op.a.F("return"), w;
+            if (Inert(op))
+            {
+                if (ret > 0 && Past(tl, op.WDur)) return;
+                w = 1;
+            }
+            else
+            {
+                w = blend > 0 ? Ease.Apply("inout", (float)(tl / blend)) : 1;
+                if (ret > 0 && tl > op.WDur) w *= 1 - Ease.Apply("inout", (float)((tl - op.WDur) / ret));
+            }
             if (w <= 0) return;
             _layers.Add(new Layer { clip = clip, time = local, w = w });
         }
@@ -66,8 +75,18 @@ namespace TKShock.MV
             float stride = op.a.F("stride", clip.averageSpeed.magnitude > .05f ? clip.averageSpeed.magnitude * clip.length : 1.4f);
             double local = (now - from).magnitude / Math.Max(stride, .01f) * clip.length;
             local = (local + op.a.F("offset") * clip.length) % Math.Max(clip.length, .001f);
-            float blend = op.a.F("blend", .2f), w = blend > 0 ? Ease.Apply("inout", (float)(tl / blend)) : 1;
+            float blend = op.a.F("blend", .2f), w = blend > 0 && !Inert(op) ? Ease.Apply("inout", (float)(tl / blend)) : 1;
             if (w > 0) _layers.Add(new Layer { clip = clip, time = local, w = w });
+        }
+
+        /// <summary>Walking pace: speeds up over the first share of the time, steady, slows over the last.</summary>
+        static float SoftRange(float x, float i, float o)
+        {
+            i = Mathf.Clamp(i, .001f, .9f); o = Mathf.Clamp(o, .001f, .95f - i); x = Mathf.Clamp01(x);
+            float v = 1 / (1 - i / 2 - o / 2);
+            if (x < i) return v * x * x / (2 * i);
+            if (x <= 1 - o) return v * (i / 2 + x - i);
+            return 1 - v * (1 - x) * (1 - x) / (2 * o);
         }
 
         static AnimationClip ClipOf(MVActor actor, Op op) => op.refs != null && op.refs.Length > 0 ? op.refs[0] as AnimationClip : actor.FindClip(op.a.S("clip", ""));
@@ -103,7 +122,8 @@ namespace TKShock.MV
         Tween Merge(Tween cur, Op op, float k)
         {
             float target = op.a.F("weight", 1);
-            return new Tween { from = cur?.to, to = target > 0 || cur == null ? op : cur.to, k = target > 0 ? k : 1, w = Mathf.Lerp(cur?.w ?? 0, target, k) };
+            float w = Mathf.LerpUnclamped(cur?.w ?? 0, target, k);
+            return new Tween { from = cur?.to, to = target > 0 || cur == null ? op : cur.to, k = target > 0 ? k : 1, w = w, w2 = w };
         }
 
         void PoseOne(MVActor actor, string name, Vector3 rot, float k, bool local)
@@ -140,7 +160,13 @@ namespace TKShock.MV
                         for (int i = 0; i < 5; i++)
                         {
                             if (f != null && Array.IndexOf(FingerNames[i], f.ToLowerInvariant()) < 0) continue;
-                            _curl[hand + i] = Mathf.Lerp(_curl[hand + i], curl, k);
+                            if (a.Has("release")) _handW[hand + i] = Mathf.Lerp(_handW[hand + i], 0, k);
+                            else if (a.Has("set"))
+                            {
+                                _handSet[hand + i] = _handW[hand + i] > 0 ? Mathf.Lerp(_handSet[hand + i], a.F("set"), k) : a.F("set");
+                                _handW[hand + i] = Mathf.Lerp(_handW[hand + i], 1, k);
+                            }
+                            else _curl[hand + i] = Mathf.Lerp(_curl[hand + i], curl, k);
                         }
                         _anyCurl = true; break;
                     }
@@ -148,9 +174,33 @@ namespace TKShock.MV
                     {
                         bool foot = a.Has("foot");
                         string key = (foot ? "foot" : "hand") + Side(a.S("hand") ?? a.S("foot"));
-                        _reach.TryGetValue(key, out var cur); _reach[key] = Merge(cur, op, k); break;
+                        _reach.TryGetValue(key, out var cur); _reach[key] = Merge(cur, op, k);
+                        // The forearm trails the upper arm by a frame, so a hand move starts at the shoulder.
+                        if (!foot) _reach[key].w2 = Mathf.LerpUnclamped(cur?.w2 ?? 0, a.F("weight", 1), Ease.Apply(a.S("ease"), (float)((tl - .036) / op.WDur)));
+                        break;
                     }
-                case "gaze": _gaze = Merge(_gaze, op, k); break;
+                case "stance":
+                    {
+                        if (a.Has("arms")) _stArms = Mathf.Lerp(_stArms, a.F("arms"), k);
+                        if (a.Has("legs")) _stLegs = Mathf.Lerp(_stLegs, a.F("legs"), k);
+                        if (a.Has("shift")) _stShift = Mathf.Lerp(_stShift, a.F("shift"), _stLegs > 0 ? k : 1);
+                        if (a.Has("drop")) _stDrop = Mathf.Lerp(_stDrop, a.F("drop"), _stLegs > 0 ? k : 1);
+                        if (a.Has("tilt")) _stTilt = Mathf.Lerp(_stTilt, a.F("tilt"), _stLegs > 0 ? k : 1);
+                        if (a.Has("sway")) _stSway = Mathf.Lerp(_stSway, a.F("sway"), _stLegs > 0 ? k : 1);
+                        if (a.Has("narrow")) _stNarrow = Mathf.Lerp(_stNarrow, a.F("narrow"), _stLegs > 0 ? k : 1);
+                        if (a.Has("period")) _stPeriod = a.F("period");
+                        if (a.Obj.TryGetValue("bones", out var sb))
+                            foreach (var kv in sb)
+                                if (kv.Value is Newtonsoft.Json.Linq.JArray r && r.Count == 3)
+                                {
+                                    var b = actor.Bone(kv.Key); if (!b) continue;
+                                    var v = new Vector3((float)r[0], (float)r[1], (float)r[2]);
+                                    _stBones[b] = _stBones.TryGetValue(b, out var c) ? Vector3.LerpUnclamped(c, v, k) : v;
+                                }
+                        break;
+                    }
+                case "eyes": _eyeYaw = Mathf.Lerp(_eyeYaw, a.F("yaw"), k); _eyePitch = Mathf.Lerp(_eyePitch, a.F("pitch"), k); break;
+                case "gaze": _gaze = Merge(_gaze, op, k); _gazeBk = a.F("bk") > 0; break;
                 case "plant":
                     {
                         if (_noPlant) break;
@@ -187,24 +237,72 @@ namespace TKShock.MV
         void EndBody(MVActor actor)
         {
             var go = actor.animRoot != null ? actor.animRoot : actor.gameObject;
+            if (Native) { if (!_raw && !_lite) { if (actor.human.Length > 0) { if (MVLate.Deferring && !MVLate.Flushing) MVLate.Native(this, actor, _appliedT); else if (!MVLate.Flushing) NativeActing(actor); } ApplyFace(actor); EndExtras(actor); } return; }   // Unity's Animator wrote the bones; only reach, gaze, eyes and grips go on top (MVNativeActing.cs)
             SampleLayers(go);
             if (_layerOps.Count > 0) ApplyLayers(actor, go);
             foreach (var (op, tl, ks) in _keyOps) ApplyKeys(actor, op, tl, ks);
+            if (_raw) return;
+            GateBaked();
+            if (!NoInertia) ApplyInertia();
+            if (_stArms > .001f || _stLegs > .001f) ApplyStance(actor, go);
             if (_pose.Count + _poseLocal.Count > 0) ApplyPose(go);
             if (actor.human.Length > 0 && _gaze != null && _gaze.w > .001f) ApplyGaze(actor);
-            if (_lite) { RecordTips(); return; }
+            if (actor.human.Length > 0 && (_eyeYaw != 0 || _eyePitch != 0)) ApplyEyes(actor);
+            if (_lite) { RecordTips(); if (actor.human.Length > 0) RecordFeet(actor); return; }
             ApplyOverlap(actor);
             if (actor.human.Length > 0)
             {
+                ApplyGround(actor);
                 if (_plant.Count > 0) ContactBody(actor);
                 if (_reach.Count > 0) ReachLean(actor);
                 foreach (var kv in _reach) if (kv.Value.w > .001f) ApplyReach(actor, kv.Key, kv.Value);
                 foreach (var kv in _plant) if (kv.Value.w > .001f) ApplyPlant(actor, kv.Key, kv.Value);
-                ApplyFingers(actor);
-                ApplyLimits(actor);
+                if (!NoFingers) ApplyFingers(actor);
+                ApplyLimits(actor); ReseatGround();
             }
+            ApplyLimbScale(actor);   // impact-frame bone scale, only on drivers with a limbscale cue (MVLimbScale.cs)
             ApplyFace(actor);
             EndExtras(actor);
+        }
+
+        // ---- stance: how he carries himself, whatever clip plays ----
+        // A cue that holds, like pose, but under every pose and performance, so a shot's own acting never replaces it.
+        // arms 0-1 scales "bones" (degrees in his own frame, as pose). legs 0-1 scales the weight shift: the hips move "shift" metres
+        // to the side (+x of the actor), sink by "drop", roll by "tilt" degrees with the spine taking it back, and sway by "sway" metres
+        // over "period" seconds on the scene's own clock. The feet stay where the clip put them. A pure function of time.
+        float _stArms, _stLegs, _stShift, _stDrop, _stTilt, _stSway, _stNarrow, _stPeriod = 5;
+        readonly Dictionary<Transform, Vector3> _stBones = new Dictionary<Transform, Vector3>();
+
+        void ApplyStance(MVActor actor, GameObject go)
+        {
+            if (actor.human.Length == 0) return;
+            var root = go.transform.rotation;
+            if (_stLegs > .001f)
+            {
+                Transform hips = actor.human[(int)HumanBodyBones.Hips], spine = actor.human[(int)HumanBodyBones.Spine], chest = actor.human[(int)HumanBodyBones.Chest];
+                Transform lu = actor.human[(int)HumanBodyBones.LeftUpperLeg], ll = actor.human[(int)HumanBodyBones.LeftLowerLeg], lf = actor.human[(int)HumanBodyBones.LeftFoot];
+                Transform ru = actor.human[(int)HumanBodyBones.RightUpperLeg], rl = actor.human[(int)HumanBodyBones.RightLowerLeg], rf = actor.human[(int)HumanBodyBones.RightFoot];
+                if (hips && lu && ll && lf && ru && rl && rf)
+                {
+                    Vector3 lp = lf.position, rp = rf.position; Quaternion lr = lf.rotation, rr = rf.rotation;
+                    double ph = _t * 2 * Math.PI / Mathf.Max(.5f, _stPeriod);
+                    float wave = (float)(Math.Sin(ph) + .35 * Math.Sin(ph * 2.3 + 1)), sx = _stSway * wave, sz = _stSway * .5f * (float)Math.Sin(ph * .7 + 2);
+                    hips.position += root * new Vector3((_stShift + sx) * _stLegs, -_stDrop * _stLegs, sz * _stLegs);
+                    float roll = _stTilt * (1 + .25f * wave) * _stLegs;
+                    hips.rotation = root * Quaternion.Euler(0, 0, roll) * Quaternion.Inverse(root) * hips.rotation;
+                    if (spine) spine.rotation = root * Quaternion.Euler(0, 0, -roll * .6f) * Quaternion.Inverse(root) * spine.rotation;
+                    if (chest) chest.rotation = root * Quaternion.Euler(0, 0, -roll * .6f) * Quaternion.Inverse(root) * chest.rotation;
+                    var inward = root * Vector3.right * (_stNarrow * _stLegs); lp += inward; rp -= inward;   // "narrow": each foot this much nearer the middle than the clip has it
+                    TwoBone(lu, ll, lf, lp, null, Bias(actor, "footleft")); lf.rotation = lr;
+                    TwoBone(ru, rl, rf, rp, null, Bias(actor, "footright")); rf.rotation = rr;
+                }
+            }
+            if (_stArms > .001f && _stBones.Count > 0)
+            {
+                _order.Clear(); _order.AddRange(_stBones.Keys);
+                _order.Sort((x, y) => Depth(x).CompareTo(Depth(y)));
+                foreach (var b in _order) b.rotation = root * Quaternion.Euler(_stBones[b] * _stArms) * Quaternion.Inverse(root) * b.rotation;
+            }
         }
 
         void ApplyPose(GameObject go)
@@ -233,6 +331,7 @@ namespace TKShock.MV
             if (op == null) return fallback;
             var a = op.a;
             if (a.Vec.TryGetValue("to", out var v)) return v;
+            if (a.Vec.TryGetValue("toRel", out var rel)) return self.transform.TransformPoint(rel);   // in his frame: [0,6,3] is up and ahead, wherever he stands
             var spec = a.S("to"); if (spec == null) return fallback;
             var tr = MVActor.Point(spec, _t, !spec.StartsWith(self.name + "."));
             return tr ? tr.position + tr.rotation * a.V("offset") : fallback;
@@ -240,26 +339,50 @@ namespace TKShock.MV
 
         static Vector3 Forward(MVActor actor, HumanBodyBones b) => actor.human[(int)b].rotation * Quaternion.Inverse(actor.humanRest[(int)b]) * Vector3.forward;
 
-        // Chest, neck and head share the turn; eye bones lead if the model has them.
+        // Chest, neck and head share the turn; the eyes get there first. "head":0 moves the eyes alone, "lead" is how much faster they are.
         void ApplyGaze(MVActor actor)
         {
             var head = actor.human[(int)HumanBodyBones.Head]; if (!head) return;
             var fb = head.position + Forward(actor, HumanBodyBones.Head);
-            var tgt = Vector3.Lerp(TargetPos(_gaze.from, actor, fb), TargetPos(_gaze.to, actor, fb), _gaze.k);
-            float max = _gaze.to.a.F("limit", 80);
-            for (int i = 0; i < 3; i++)
+            Vector3 p0 = TargetPos(_gaze.from, actor, fb), p1 = TargetPos(_gaze.to, actor, fb);
+            var tgt = Vector3.Lerp(p0, p1, _gaze.k);
+            float max = _gaze.to.a.F("limit", 80), lead = _gaze.to.a.F("lead", 2.6f);
+            float body = Mathf.Lerp(_gaze.from != null ? _gaze.from.a.F("head", 1) : _gaze.to.a.F("head", 1), _gaze.to.a.F("head", 1), _gaze.k);   // eyes-only after a head turn eases the head back
+            // Over a baked take no joint limits follow, and the shares below add up to 1.6 of the turn. So a gentle nudge there: the shares add to 1, the eyes do the rest, and a target behind him fades out rather than flip sides.
+            float gazeW = _gaze.w;
+            if (_bk > 0)
+            {
+                max = Mathf.Lerp(max, 32, _bk);
+                gazeW *= 1 - _bk * Rise(75, 125, Vector3.Angle(Forward(actor, HumanBodyBones.Head), tgt - head.position));
+            }
+            for (int i = 0; i < 3 && body > 0; i++)
             {
                 var bone = i == 0 ? HumanBodyBones.Chest : i == 1 ? HumanBodyBones.Neck : HumanBodyBones.Head;
-                float share = i == 0 ? .2f : i == 1 ? .4f : 1f;
+                float share = Mathf.Lerp(i == 0 ? .2f : i == 1 ? .4f : 1f, i == 0 ? .12f : i == 1 ? .25f : .63f, _bk);
                 var b = actor.human[(int)bone]; if (!b) continue;
                 var rot = Quaternion.RotateTowards(Quaternion.identity, Quaternion.FromToRotation(Forward(actor, HumanBodyBones.Head), (tgt - head.position).normalized), max);
-                b.rotation = Quaternion.Slerp(Quaternion.identity, rot, share * _gaze.w) * b.rotation;
+                b.rotation = Quaternion.Slerp(Quaternion.identity, rot, share * gazeW * body) * b.rotation;
             }
+            var eyes = Vector3.Lerp(p0, p1, Mathf.Clamp01(_gaze.k * lead));
+            float we = Mathf.Clamp01(_gaze.w * lead);
             foreach (var eb in new[] { HumanBodyBones.LeftEye, HumanBodyBones.RightEye })
             {
                 var e = actor.human[(int)eb]; if (!e) continue;
-                var rot = Quaternion.RotateTowards(Quaternion.identity, Quaternion.FromToRotation(Forward(actor, eb), (tgt - e.position).normalized), 28);
-                e.rotation = Quaternion.Slerp(Quaternion.identity, rot, _gaze.w) * e.rotation;
+                var rot = Quaternion.RotateTowards(Quaternion.identity, Quaternion.FromToRotation(Forward(actor, eb), (eyes - e.position).normalized), 28);
+                e.rotation = Quaternion.Slerp(Quaternion.identity, rot, we) * e.rotation;
+            }
+        }
+
+        // "eyes": degrees on top of wherever the gaze left them, in the head's frame, so a dart needs no target and never moves the head. yaw + to his right, pitch + up.
+        float _eyeYaw, _eyePitch;
+        void ApplyEyes(MVActor actor)
+        {
+            var head = actor.human[(int)HumanBodyBones.Head]; if (!head) return;
+            var frame = head.rotation * Quaternion.Inverse(actor.humanRest[(int)HumanBodyBones.Head]);
+            var turn = frame * Quaternion.Euler(-_eyePitch, _eyeYaw, 0) * Quaternion.Inverse(frame);
+            foreach (var eb in new[] { HumanBodyBones.LeftEye, HumanBodyBones.RightEye })
+            {
+                var e = actor.human[(int)eb]; if (e) e.rotation = turn * e.rotation;
             }
         }
 
@@ -287,14 +410,27 @@ namespace TKShock.MV
             l.rotation = Quaternion.FromToRotation(h.position - l.position, goal - l.position) * l.rotation;
         }
 
+        /// <summary>Weight moves the joints, not the hand: solve at full reach, then blend each joint from the clip's rotation. Blending the hand's position instead dragged it in a straight line through the body and flipped the elbow on the way.</summary>
+        void BlendTwoBone(Transform u, Transform l, Transform h, Vector3 goal, Vector3? hint, Vector3 bias, float w, float w2 = -1)
+        {
+            if (w2 < 0) w2 = w;
+            var q0 = u.localRotation; var q1 = l.localRotation;
+            TwoBone(u, l, h, goal, hint, bias);
+            if (w == 1 && w2 == 1) return;
+            u.localRotation = Quaternion.SlerpUnclamped(q0, u.localRotation, w);
+            l.localRotation = Quaternion.SlerpUnclamped(q1, l.localRotation, w2);
+        }
+
         void ApplyReach(MVActor actor, string key, Tween tw)
         {
             Limb(key, out var up, out var mid, out var end);
             Transform u = actor.human[(int)up], l = actor.human[(int)mid], h = actor.human[(int)end]; if (!u || !l || !h) return;
             var keep = h.rotation;
-            var goal = Vector3.Lerp(TargetPos(tw.from, actor, h.position), TargetPos(tw.to, actor, h.position), tw.k);
+            // From one target to the next the hand swings round the shoulder, keeping the arm's length, instead of a straight line through the air.
+            Vector3 g0 = TargetPos(tw.from, actor, h.position), g1 = TargetPos(tw.to, actor, h.position), sp = u.position;
+            var goal = sp + Vector3.SlerpUnclamped(g0 - sp, g1 - sp, tw.k);
             Vector3? hint = tw.to.a.Vec.TryGetValue("hint", out var hv) ? hv : (Vector3?)null;
-            TwoBone(u, l, h, Vector3.Lerp(h.position, goal, tw.w), hint, Bias(actor, key));
+            BlendTwoBone(u, l, h, goal, hint, Bias(actor, key), tw.w, tw.w2);
             if (tw.to.a.Vec.TryGetValue("handRot", out var hr)) h.rotation = Quaternion.Slerp(keep, (tw.to.a.F("worldRot") > 0 ? Quaternion.identity : actor.transform.rotation) * Quaternion.Euler(hr) * actor.humanRest[(int)end], tw.w);
             else if (tw.to.a.F("freeWrist", 1) <= 0) h.rotation = keep;   // freeWrist: the hand follows the forearm
         }
@@ -306,7 +442,7 @@ namespace TKShock.MV
             var keep = h.rotation;
             if (!ContactGoal(actor, side, tw.to, h, out var goal, out var rot, out var hasRot)) return;
             Vector3? hint = tw.to.a.Vec.TryGetValue("hint", out var hv) ? hv : (Vector3?)null;
-            TwoBone(u, l, h, Vector3.Lerp(h.position, goal, tw.w), hint, Bias(actor, side));
+            BlendTwoBone(u, l, h, goal, hint, Bias(actor, side), tw.w);
             if (hasRot) h.rotation = Quaternion.Slerp(keep, rot, tw.w); else if (tw.to.a.F("freeWrist", 1) <= 0) h.rotation = keep;   // freeWrist: the hand follows the forearm
         }
 
@@ -318,6 +454,7 @@ namespace TKShock.MV
             foreach (var op in Ops)
             {
                 if (op.kind != "plant" || op.a.Has("pos") || op.a.Vec.ContainsKey("to")) continue;
+                EnsureTrans(actor, Song.WarpRaw(op.start), InertBack);
                 _noPlant = true; _stamp = op.start; History++;
                 try
                 {
@@ -329,6 +466,7 @@ namespace TKShock.MV
         }
 
         static readonly float[] RestCurl = { .3f, .2f, .26f, .32f, .38f };
+        static readonly float[] SetFan = { .8f, .8f, 1f, 1.15f, 1.3f };   // fingers "set": one number curls the little finger more than the index, as a real hand does
 
         void ApplyFingers(MVActor actor)
         {
@@ -336,15 +474,36 @@ namespace TKShock.MV
             for (int f = 0; f < 10; f++)
             {
                 float rest = RestCurl[f % 5], curl = _curl[f] < 0 ? rest * (1 + _curl[f]) : Mathf.Max(_curl[f], rest); // a hand is never flat: relaxed fingers curl more toward the little finger. Negative curl opens past rest: -1 is straight, below that bent back.
+                float setW = _handW[f], setCurl = _handSet[f] * SetFan[f % 5];
                 bool thumb = f % 5 == 0;
+                if (_bk >= .999f && setW <= 0 && _curl[f] == 0) continue;   // a baked take has its own hands
                 int first = (int)HumanBodyBones.LeftThumbProximal + (f < 5 ? 0 : 15) + (f % 5) * 3;
                 for (int j = 0; j < 3; j++)
                 {
                     var b = actor.human[first + j]; if (!b) continue;
                     float ang = (thumb ? (j == 0 ? 15f : j == 1 ? 35f : 40f) : (j == 0 ? 60f : j == 1 ? 95f : 60f)) * curl;
-                    b.localRotation *= Quaternion.AngleAxis(ang, actor.curlAxis[first + j]);
+                    var q = b.localRotation * Quaternion.AngleAxis(ang, actor.curlAxis[first + j]);
+                    if (setW > 0)
+                    {
+                        float set = (thumb ? (j == 0 ? 15f : j == 1 ? 35f : 40f) : (j == 0 ? 60f : j == 1 ? 95f : 60f)) * setCurl;
+                        var abs = RestLocal(actor, first + j, j == 0, f < 5) * Quaternion.AngleAxis(set, actor.curlAxis[first + j]);
+                        if (thumb && j == 0 && b.childCount > 0)   // the rig's rest thumb stands out from the palm: bring it in alongside the index
+                        {
+                            var palm = Vector3.Cross(actor.curlAxis[first], actor.human[first + 1] ? actor.human[first + 1].localPosition.normalized : Vector3.up);
+                            abs *= Quaternion.AngleAxis((f < 5 ? 1 : -1) * 38f, palm.normalized);
+                        }
+                        q = Quaternion.Slerp(q, abs, setW);
+                    }
+                    b.localRotation = _bk > 0 && setW <= 0 && _curl[f] == 0 ? Quaternion.Slerp(q, b.localRotation, _bk) : q;
                 }
             }
+        }
+
+        // A finger bone's rotation against its parent at rest, from the rest pose FillHuman stored.
+        static Quaternion RestLocal(MVActor actor, int i, bool knuckle, bool left)
+        {
+            int parent = knuckle ? (int)(left ? HumanBodyBones.LeftHand : HumanBodyBones.RightHand) : i - 1;
+            return Quaternion.Inverse(actor.humanRest[parent]) * actor.humanRest[i];
         }
 
         // ---- face ----
@@ -422,11 +581,12 @@ namespace TKShock.MV
             switch (op.kind)
             {
                 case "fov": p.fov = Mathf.LerpUnclamped(p.fov > 0 ? p.fov : actor.fov, a.F("to", 40), k); break;
-                case "walk":
+                case "walk": case "rootwalk":
                     {
                         var to = a.Vec.TryGetValue("to", out var v) ? v : p.pos;
+                        if (a.F("rel") > 1) to = Quaternion.Euler(0, p.euler.y, 0) * to;   // rel 2: in his own frame, [0,0,3] is 3 m ahead
                         if (a.F("rel") > 0) to += p.pos;
-                        var from = p.pos; p.pos = Vector3.Lerp(from, to, Ease.Apply(a.S("ease", "inout"), raw));
+                        var from = p.pos; p.pos = Vector3.Lerp(from, to, a.Has("soft") ? SoftRange(raw, (float)(a.F("soft") / Math.Max(op.WDur, .001)), (float)(a.F("softOut", a.F("soft")) / Math.Max(op.WDur, .001))) : Ease.Apply(a.S("ease", "inout"), raw));
                         var d = to - from; d.y = 0;
                         if (a.F("face", 1) > 0 && d.sqrMagnitude > 1e-4f)
                             p.euler.y = Mathf.LerpAngle(p.euler.y, Mathf.Atan2(d.x, d.z) * Mathf.Rad2Deg, Clamp01(tl / Math.Max(a.F("turn", .25f), .001f)));

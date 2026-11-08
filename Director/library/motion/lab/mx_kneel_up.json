@@ -1,0 +1,36 @@
+{
+ "clip": "mx_kneel_up",
+ "seconds": 2.867,
+ "popCount": 8,
+ "pops": [
+  "0.033s RightToes kink 0.204 m",
+  "0.067s RightToes kink 0.189 m",
+  "0.167s RightToes kink 0.197 m",
+  "0.200s RightToes kink 0.199 m",
+  "0.400s RightToes kink 0.210 m",
+  "0.433s RightToes kink 0.181 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.000 m, worst step 0.000 m at 0.00s",
+  "right foot on floor moved 0.016 m, worst step 0.016 m at 0.03s"
+ ],
+ "hipsTop": 0.9095005,
+ "hipsLow": 0.331791341,
+ "hipsTravel": "(-0.05, 0.49, -0.10)",
+ "limits": {
+  "RightLowerLeg": 41.8,
+  "RightFoot": 36.8,
+  "Chest": 17.1,
+  "LeftLowerLeg": 10.9,
+  "groundHipsCm": 9.6,
+  "LeftShoulder": 1.5
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_kneel_up was rejected by admission: joint limits moved RightLowerLeg 41.8 deg; feet 0.131 m under the floor"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_kneel_up_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_kneel_up_three.mp4"
+ ]
+}

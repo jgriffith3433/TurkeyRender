@@ -1,0 +1,45 @@
+{
+ "id": "d_take",
+ "f0": 1741,
+ "f1": 1817,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 58.033,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 59.6,
+   "why": "pose jumps and comes back (0.8)",
+   "file": "spike-01788.jpg"
+  }
+ ],
+ "hash": "75415b9601ff1437",
+ "summary": "The cut in is clean, but the head and hair shift in a few frames around 59.6 and then settle, and the face holds almost the same expression throughout.",
+ "faults": [
+  {
+   "t": 59.6,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Head pose and hair silhouette change abruptly across 59.56 to 59.63. The hair clump and fringe change shape, and the head tilts and dips, with the chin tucking in at 59.63. By 59.66 to 59.70 the head is back up in the earlier pose. This reads as a twitch rather than a motivated move.",
+   "fix": "Smooth or delete the 2-3 frame head dip and hair change around 59.56-59.66 so the head moves in one continuous arc."
+  },
+  {
+   "t": 58.5,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The expression is a faint fixed smile and the gaze stays off-screen left in every tile. There is no blink, no eye dart and no expression change. The 'look at the can, then up at her' beat doesn't read.",
+   "fix": "Add a blink and an eye-lead shift to a clear gaze change, with a small brow or mouth change on the look-up."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4950,
+  "out": 862
+ },
+ "cost": 0.0185
+}

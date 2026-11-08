@@ -1,0 +1,53 @@
+{
+ "id": "vase_slides",
+ "f0": 3075,
+ "f1": 3127,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 102.5,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 103.133,
+   "why": "flow spike x4.5",
+   "file": "spike-03094.jpg"
+  }
+ ],
+ "hash": "39e5fe39c8df0411",
+ "summary": "The strip shows a static pink door, with no vase visibly shivering or sliding in these frames. A clawed foreground hand pops in and out at the lower left, and the door's tilt shifts slightly.",
+ "faults": [
+  {
+   "t": 102.59,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The bandaged or clawed hand at lower left is in 102.52 and 102.56, then is completely gone at 102.59 with no exit motion. It reads as a snap-out right after the cut.",
+   "fix": "Trim the hand's frames before the cut, or animate it out of frame over 3-4 frames."
+  },
+  {
+   "t": 103.19,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "A feathery claw hand sweeps in at lower left from 103.12 to 103.22, then vanishes by 103.26. It overlaps the bed post and rug as a distracting foreground element and matches the flow spike.",
+   "fix": "Move the hand out of the frame or hide it, so that only the vase beat moves."
+  },
+  {
+   "t": 102.62,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The door tilts slightly from 102.59 to 102.69 and shifts about 1-2px, but there is no clear anticipation, shiver or jerk. The beat 'vase shivers, comes down in three jerks' is not readable, and the shot looks like a held wall.",
+   "fix": "Exaggerate the shiver, then make three distinct drops with 2-3 frame holds between them, with a small overshoot on each."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4961,
+  "out": 1219
+ },
+ "cost": 0.0221
+}

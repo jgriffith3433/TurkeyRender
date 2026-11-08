@@ -307,29 +307,35 @@ namespace TKShock.MV
             _ball.SetFloat("_Pupil", face.ContainsKey("pupil") ? V("pupil") : .3f);
             _ball.SetFloat("_ReflGain", _gain * (face.ContainsKey("reflect") ? V("reflect") : 1));
             _ball.SetMatrix("_RigW2L", transform.worldToLocalMatrix);
-            if (see != null) { _from = see.S("from", _from); _to = see.S("to", _to); }
+            // What it sees comes from this moment's cue, over the actor's own setting: nothing is kept from the last eyesee reached.
+            string seeFrom = see != null ? see.S("from", _from) : _from, seeTo = see != null ? see.S("to", _to) : _to;
             Shape();
             _tvLight.color = new Color(MVClock.TvColor.r, MVClock.TvColor.g, MVClock.TvColor.b);
             _tvLight.intensity = MVClock.TvLevel * _lightPow * (1 + V("tvLight"));
             _tvLight.range = 16 * transform.lossyScale.x;
 
-            if (MVFeatherFx.Where(_from, t, out var from, out var fwd, out _))
+            if (MVFeatherFx.Where(seeFrom, t, out var from, out var fwd, out _))
             {
                 var to = from + fwd * 3;
                 if (see != null && see.Vec.TryGetValue("to", out var tv)) to = tv;
-                else if (MVFeatherFx.Where(_to, t, out var tw, out _, out _)) to = tw;
+                else if (MVFeatherFx.Where(seeTo, t, out var tw, out _, out _)) to = tw;
                 _cam.transform.position = from; _cam.transform.rotation = Quaternion.LookRotation(to - from + Vector3.forward * 1e-4f, Vector3.up);
             }
-            var main = Camera.main;
-            var rend = transform.Find("eye_ball")?.GetComponent<Renderer>();
-            bool close = main && rend && rend.enabled && Vector3.Distance(main.transform.position, transform.position) < 40 * transform.lossyScale.x;
-            _cam.enabled = close;
+            _cam.enabled = Close();
         }
 
-        /// <summary>Capture only renders the cameras it is told to: it calls this first.</summary>
+        /// <summary>Is the main camera near enough to see the reflection? Mid-frame the main camera can still be where the last frame left it, depending on which track ran first.</summary>
+        bool Close()
+        {
+            var main = Camera.main;
+            var rend = transform.Find("eye_ball")?.GetComponent<Renderer>();
+            return main && rend && rend.enabled && Vector3.Distance(main.transform.position, transform.position) < 40 * transform.lossyScale.x;
+        }
+
+        /// <summary>Capture only renders the cameras it is told to: it calls this first, with the whole frame in place, so the answer here doesn't depend on the frame before.</summary>
         public static void RenderAll()
         {
-            foreach (var r in Rigs) if (r._cam && r._cam.enabled) r._cam.Render();
+            foreach (var r in Rigs) { if (!r._cam) continue; r._cam.enabled = r.Close(); if (r._cam.enabled) r._cam.Render(); }
         }
     }
 }

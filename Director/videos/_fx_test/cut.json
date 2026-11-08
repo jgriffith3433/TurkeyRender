@@ -1,0 +1,9 @@
+{
+  // The proof in four shots, 10 s: the wind-up with its held pose and the strike, the hit (impact frame, hitstop, shockwave, debris, shake), the wide, the deadpan.
+  "shots": [
+    { "id": "windup", "at": "1:1", "len": "2.19s", "seq": "void" },
+    { "id": "hit", "len": "2.41s", "seq": "void" },
+    { "id": "wide", "len": "2.8s", "seq": "void" },
+    { "id": "deadpan", "len": "2.6s", "seq": "void" }
+  ]
+}

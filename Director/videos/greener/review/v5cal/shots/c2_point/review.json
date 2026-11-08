@@ -1,0 +1,37 @@
+{
+ "id": "c2_point",
+ "f0": 3795,
+ "f1": 3847,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 126.5,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 127.867,
+   "why": "one patch jumps (cell 115.4, x1.5)",
+   "file": "spike-03836.jpg"
+  }
+ ],
+ "hash": "946dd56ef96e96e1",
+ "summary": "Image 1 has large flat unlit confetti squares covering the frame and hiding the character at 126.56-126.69. Image 2 shows no clear pop: the head moves smoothly with the camera.",
+ "faults": [
+  {
+   "t": 126.59,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Giant flat, unshaded orange square fills the left half of the frame and covers his raised arm and the background. At 126.56 and 126.62 other large flat orange and blue squares cross in front of him. This is unlit confetti scaled up at the camera.",
+   "fix": "Shrink or delete the near-camera confetti, or give it lighting, depth fade and a max size. Keep it from crossing the camera plane during 126.55-126.70."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4963,
+  "out": 311
+ },
+ "cost": 0.013
+}

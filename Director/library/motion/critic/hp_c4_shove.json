@@ -1,0 +1,126 @@
+{
+ "name": "hp_c4_shove",
+ "fps": 30,
+ "frames": 61,
+ "seconds": 2,
+ "zerog": true,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 5,
+  "flatness": null,
+  "abruptFrac": null,
+  "deadFrac": 0,
+  "holds": 3,
+  "holdMedianS": 0.33,
+  "fastRunMedianS": 0.03,
+  "dynRange": 1.83,
+  "handPeak": 0.48,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.54,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 7.05,
+  "plantedFrac": 0.2,
+  "zgSpeedChanges": 0,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 180,
+  "frozenFrac": 0.09,
+  "deadJoints": 8,
+  "deadJointNames": [
+   "Spine",
+   "Chest",
+   "Neck",
+   "Head",
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperLeg",
+   "RightUpperLeg"
+  ],
+  "readability": 0.69,
+  "twinnedFrac": 1,
+  "curlMedian": 10.65,
+  "spreadMedian": 38.26,
+  "fannedFrac": 0.85,
+  "bowMedian": 20.99,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 11.11,
+  "armOmegaP95": 16.11,
+  "legOmegaP95": 11.31,
+  "spineOmegaP50": 11.62,
+  "spineOmegaP95": 13.69,
+  "headOmegaP50": 6.9,
+  "headOmegaP95": 6.9,
+  "armAccP95": 457.66,
+  "spineAccP95": 0,
+  "handSpeedP50": 0,
+  "handSpeedP95": 0.46,
+  "spineToArm": 1.05,
+  "energyCV": 0.38,
+  "moveRate": 1
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "3 holds (median 0.33 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": 3.4,
+   "note": "parts' speed profiles agree 0.54 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, 0 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops, 36 finger snaps in 2 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.5,
+   "note": "3 key poses, readability 0.69 (best of front, side, three-quarter), 100% twinned"
+  },
+  "hands": {
+   "score": 7,
+   "note": "fingers flat and splayed 85% of the time"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [],
+ "worst": [],
+ "total": 8.1,
+ "verdict": "passable, weak on overlap and hands (8.1/10)"
+}

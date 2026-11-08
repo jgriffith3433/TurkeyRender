@@ -1,0 +1,32 @@
+{
+ "name": "g_hand_cheek",
+ "about": "Right hand to the chin and cheek, head tilted, from mx_thinking (0.7-3.3 s).",
+ "entry": "any",
+ "exit": "any",
+ "length": "2.6s",
+ "min": "0.8s",
+ "params": {
+  "clip": "mx_thinking",
+  "mask": "rightArm,head",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.7,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

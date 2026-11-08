@@ -1,0 +1,171 @@
+{
+  "clip": "mx_pull_rope__clean",
+  "length": 14.75,
+  "contact": "C:\\Projects\\TKShock\\Director\\library/poses/check\\mx_pull_rope__clean_seed.png",
+  "keys": [
+    {
+      "key": "t",
+      "t": 5.0,
+      "interp": "",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": -6.2,
+            "hipAbd": 16.9,
+            "knee": 12.2,
+            "anklePF": 45.9,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 50.6,
+            "shAbd": 31.4,
+            "elbow": 88.5
+          },
+          "fingerCurl": 76.2
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 11.0,
+            "hipAbd": 15.1,
+            "knee": 4.7,
+            "anklePF": 19.3,
+            "toes": 2.0
+          },
+          "arm": {
+            "shFlex": 37.0,
+            "shAbd": 15.3,
+            "elbow": 70.1
+          },
+          "fingerCurl": 102.5
+        },
+        "neckFlex": 5.1,
+        "waistFlex": 25.3,
+        "torsoFromVertical": 10.2,
+        "headPitchWorld": -20.5
+      }
+    },
+    {
+      "key": "t",
+      "t": 5.5,
+      "interp": "",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": -10.3,
+            "hipAbd": 11.0,
+            "knee": 4.8,
+            "anklePF": 44.6,
+            "toes": 0.2
+          },
+          "arm": {
+            "shFlex": 60.5,
+            "shAbd": 62.7,
+            "elbow": 103.2
+          },
+          "fingerCurl": 105.0
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 27.9,
+            "hipAbd": 27.6,
+            "knee": 29.3,
+            "anklePF": 2.8,
+            "toes": 0.8
+          },
+          "arm": {
+            "shFlex": 55.8,
+            "shAbd": 51.2,
+            "elbow": 70.7
+          },
+          "fingerCurl": 14.8
+        },
+        "neckFlex": -11.7,
+        "waistFlex": 22.7,
+        "torsoFromVertical": 19.8,
+        "headPitchWorld": -18.1
+      }
+    },
+    {
+      "key": "t",
+      "t": 6.0,
+      "interp": "",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": -0.5,
+            "hipAbd": 13.6,
+            "knee": 4.8,
+            "anklePF": 45.0,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 70.4,
+            "shAbd": 55.4,
+            "elbow": 92.7
+          },
+          "fingerCurl": 105.2
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 26.5,
+            "hipAbd": 33.7,
+            "knee": 31.9,
+            "anklePF": 1.2,
+            "toes": 0.7
+          },
+          "arm": {
+            "shFlex": 103.1,
+            "shAbd": 103.7,
+            "elbow": 26.7
+          },
+          "fingerCurl": 102.9
+        },
+        "neckFlex": -12.8,
+        "waistFlex": 25.2,
+        "torsoFromVertical": 24.3,
+        "headPitchWorld": -22.9
+      }
+    },
+    {
+      "key": "t",
+      "t": 6.5,
+      "interp": "",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 5.8,
+            "hipAbd": 15.0,
+            "knee": 21.0,
+            "anklePF": 45.8,
+            "toes": 0.2
+          },
+          "arm": {
+            "shFlex": 63.2,
+            "shAbd": 48.5,
+            "elbow": 83.2
+          },
+          "fingerCurl": 105.5
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 7.7,
+            "hipAbd": 23.3,
+            "knee": 4.9,
+            "anklePF": 20.9,
+            "toes": 2.0
+          },
+          "arm": {
+            "shFlex": 72.4,
+            "shAbd": 76.1,
+            "elbow": 41.1
+          },
+          "fingerCurl": 102.2
+        },
+        "neckFlex": 2.9,
+        "waistFlex": 28.4,
+        "torsoFromVertical": 20.4,
+        "headPitchWorld": -28.6
+      }
+    }
+  ]
+}

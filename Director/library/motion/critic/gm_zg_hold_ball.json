@@ -1,0 +1,314 @@
+{
+ "name": "gm_zg_hold_ball",
+ "fps": 30,
+ "frames": 113,
+ "seconds": 3.73,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.29,
+  "straightFrac": 0,
+  "moves": 19,
+  "flatness": 0.74,
+  "abruptFrac": 0.77,
+  "deadFrac": 0,
+  "holds": 4,
+  "holdMedianS": 0.83,
+  "fastRunMedianS": 0.23,
+  "dynRange": 2.66,
+  "handPeak": 0.42,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.8,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 10.93,
+  "plantedFrac": 0.28,
+  "zgSpeedChanges": 0,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.05,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.54,
+  "twinnedFrac": 0.25,
+  "curlMedian": 0.21,
+  "spreadMedian": 14.61,
+  "fannedFrac": 0,
+  "bowMedian": 1.09,
+  "selfPenFrac": 0.15,
+  "airReaches": 0,
+  "armOmegaP50": 6.19,
+  "armOmegaP95": 20.42,
+  "legOmegaP95": 51.06,
+  "spineOmegaP50": 4.6,
+  "spineOmegaP95": 16.83,
+  "headOmegaP50": 10.83,
+  "headOmegaP95": 29.65,
+  "armAccP95": 355.66,
+  "spineAccP95": 337.73,
+  "handSpeedP50": 0.08,
+  "handSpeedP95": 0.24,
+  "spineToArm": 0.74,
+  "energyCV": 0.65,
+  "moveRate": 1.88
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.29 over 2 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 2.9,
+   "note": "speed shape 0.74 (bell 0.6, constant 1.0), 77% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "4 holds (median 0.83 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": 0.5,
+   "note": "parts' speed profiles agree 0.8 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, 0 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 3.73 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 9.6,
+   "note": "4 key poses, readability 0.54 (best of front, side, three-quarter), 25% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 0 deg, spread 15 deg, head level"
+  },
+  "contact": {
+   "score": 6.9,
+   "note": "hands inside the body 15% of the time (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 2.33,
+   "f": 70,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso"
+  },
+  {
+   "t": 2.67,
+   "f": 80,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso"
+  },
+  {
+   "t": 3,
+   "f": 90,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso"
+  },
+  {
+   "t": 3.33,
+   "f": 100,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso"
+  },
+  {
+   "t": 3.72,
+   "f": 112,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.46,
+   "what": "Head stops dead from 65% of its peak"
+  },
+  {
+   "t": 3.5,
+   "f": 105,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.45,
+   "what": "RightHand starts at 73% of its peak speed in one frame"
+  },
+  {
+   "t": 3.72,
+   "f": 112,
+   "kind": "abrupt-stop",
+   "part": "RightHand",
+   "sev": 0.45,
+   "what": "RightHand stops dead from 63% of its peak"
+  },
+  {
+   "t": 1.83,
+   "f": 55,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 83% of its peak speed in one frame"
+  },
+  {
+   "t": 2.03,
+   "f": 61,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 76% of its peak"
+  },
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot starts at 65% of its peak speed in one frame"
+  },
+  {
+   "t": 1.6,
+   "f": 48,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 60% of its peak"
+  },
+  {
+   "t": 0.37,
+   "f": 11,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.43,
+   "what": "Head starts at 72% of its peak speed in one frame"
+  },
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.43,
+   "what": "Head stops dead from 100% of its peak"
+  },
+  {
+   "t": 0.3,
+   "f": 9,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.42,
+   "what": "LeftHand starts at 76% of its peak speed in one frame"
+  },
+  {
+   "t": 0.5,
+   "f": 15,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.42,
+   "what": "LeftHand stops dead from 93% of its peak"
+  },
+  {
+   "t": 2.23,
+   "f": 67,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.42,
+   "what": "LeftHand starts at 89% of its peak speed in one frame"
+  },
+  {
+   "t": 2.37,
+   "f": 71,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.42,
+   "what": "LeftHand stops dead from 90% of its peak"
+  },
+  {
+   "t": 2.33,
+   "f": 70,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.42,
+   "what": "RightFoot starts at 89% of its peak speed in one frame"
+  },
+  {
+   "t": 2.47,
+   "f": 74,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.42,
+   "what": "RightFoot stops dead from 89% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 2.33,
+   "f": 70,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso",
+   "also": []
+  },
+  {
+   "t": 2.67,
+   "f": 80,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso",
+   "also": []
+  },
+  {
+   "t": 3,
+   "f": 90,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso",
+   "also": []
+  },
+  {
+   "t": 3.33,
+   "f": 100,
+   "kind": "self-penetration",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand is inside the torso",
+   "also": []
+  },
+  {
+   "t": 3.72,
+   "f": 112,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.46,
+   "what": "Head stops dead from 65% of its peak",
+   "also": []
+  }
+ ],
+ "total": 7.4,
+ "verdict": "passable, weak on overlap and ease (7.4/10)"
+}

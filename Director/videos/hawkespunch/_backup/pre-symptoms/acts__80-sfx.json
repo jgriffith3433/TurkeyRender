@@ -1,0 +1,110 @@
+// Hawkes Punch: sound effects and ambience (no music, J 2026-11-07). Every sound was made on Hawkes Gen audio.sfx (project tkshock) into Assets/MusicVideo/Sfx/punch/;
+// the bed_* and *_tag files are cut from those takes with ffmpeg. Times are the compiled events (acts/50-cards.json and the performances' own times).
+// Voices (acts/70-lines.json) play at 1: beds stay low under them. Card sfx (impact_big, glass_ring, couch_slam, frame_tick, feather_whoosh, turkey_gobble_2) stay and these layer on top.
+{
+ "cues": [
+  {"at":"0.000s","sfx":"Assets/MusicVideo/Sfx/punch/bed_clinic.mp3","volume":0.1}, // clinic: fluorescent hum to the turn, down when the room goes still (40.4), gone at the drums-out (49.85)
+  {"at":"0.250s","sfx":"Assets/MusicVideo/Sfx/punch/door_a.mp3","volume":0.3}, // w_clock: a door somewhere, nobody comes
+  {"at":"2.761s","sfx":"Assets/MusicVideo/Sfx/punch/chair_creak_a.mp3","volume":0.35}, // w_sits: he shifts on the waiting chair
+  {"at":"4.081s","sfx":"Assets/MusicVideo/Sfx/punch/cough_a.mp3","volume":0.55}, // w_sits: sit_bed_sick cough at 1.4 s
+  {"at":"6.140s","sfx":"Assets/MusicVideo/Sfx/punch/nurse_gobble_a.mp3","volume":0.45}, // w_nurse: she turns to him (1.5b), one bored gobble
+  {"at":"7.762s","sfx":"Assets/MusicVideo/Sfx/punch/paper_crinkle.mp3","volume":0.4}, // w_ahh: on the paper bed
+  {"at":"10.328s","sfx":"Assets/MusicVideo/Sfx/punch/paper_crinkle_2.mp3","volume":0.35}, // c_wide: she leans in, he shifts on the paper
+  {"at":"12.978s","sfx":"Assets/MusicVideo/Sfx/punch/stethoscope_a.mp3","volume":0.45}, // doctor_examine: the stethoscope on his chest (reach at 2.7 s)
+  {"at":"17.895s","sfx":"Assets/MusicVideo/Sfx/punch/knee_tap_2.mp3","volume":0.35}, // c_knee: the hammer lands (the card adds frame_tick at 0.5b)
+  {"at":"21.491s","sfx":"Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3","volume":0.22}, // c_sing: she writes at the desk
+  {"at":"26.922s","sfx":"Assets/MusicVideo/Sfx/punch/chair_creak_a.mp3","volume":0.25}, // c_sing_side: her chair at the desk
+  {"at":"29.291s","sfx":"Assets/MusicVideo/Sfx/punch/cough_b.mp3","volume":0.45}, // c_sing_side: sit_bed_sick cough at 9 s
+  {"at":"30.542s","sfx":"Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3","volume":0.4}, // d_pad: the prescription written
+  {"at":"36.135s","sfx":"Assets/MusicVideo/Sfx/punch/can_slide_a.mp3","volume":0.3}, // d_can: the can slides across under her hand (under her line)
+  {"at":"38.991s","sfx":"Assets/MusicVideo/Sfx/punch/can_clink.mp3","volume":0.35}, // d_take: his fingers close on the can
+  {"at":"40.467s","sfx":"Assets/MusicVideo/Sfx/punch/chair_creak_a.mp3","volume":0.3}, // l_turn: she turns
+  {"at":"40.517s","sfx":"Assets/MusicVideo/Sfx/punch/still_tone.mp3","volume":0.18}, // l_turn: the room goes still, a low swell under it
+  {"at":"49.871s","sfx":"Assets/MusicVideo/Sfx/punch/still_tone.mp3","volume":0.28}, // l_mouth: drums-out, the swell again into the punch
+  {"at":"50.295s","sfx":"Assets/MusicVideo/Sfx/punch/windup_a.mp3","volume":0.5}, // p_hit: her wind-up rising out of the stillness into the hit
+  {"at":"52.995s","sfx":"Assets/MusicVideo/Sfx/punch/punch_impact_2.mp3","volume":0.42}, // THE PUNCH, on top of the card impact_big
+  {"at":"53.000s","sfx":"Assets/MusicVideo/Sfx/punch/bed_sky.mp3","volume":0.55}, // sky: wind from the glass up to black
+  {"at":"53.005s","sfx":"Assets/MusicVideo/Sfx/punch/punch_impact.mp3","volume":0.35}, // the punch, second layer (bass)
+  {"at":"53.015s","sfx":"Assets/MusicVideo/Sfx/punch/glass_shatter.mp3","volume":0.35}, // the window goes (card glass_ring too)
+  {"at":"53.027s","sfx":"Assets/MusicVideo/Sfx/punch/roof_crash.mp3","volume":0.45}, // the roof plug pops
+  {"at":"53.624s","sfx":"Assets/MusicVideo/Sfx/punch/glass_shatter_2.mp3","volume":0.4}, // p_glass: from outside, the glass bursts toward us
+  {"at":"54.303s","sfx":"Assets/MusicVideo/Sfx/punch/rise_whoosh.mp3","volume":0.75}, // p_travel: up through the clouds
+  {"at":"57.553s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.35}, // p_travel: the can tumbles past
+  {"at":"60.600s","sfx":"Assets/MusicVideo/Sfx/punch/sonic_boom.mp3","volume":0.6}, // p_travel: out of the atmosphere as the sky goes black
+  {"at":"63.060s","sfx":"Assets/MusicVideo/Sfx/punch/bed_space.mp3","volume":0.2}, // space: deep drone, s_drift to the fold
+  {"at":"70.006s","sfx":"Assets/MusicVideo/Sfx/punch/shoulder_tap_a.mp3","volume":0.9}, // s_tap: tap
+  {"at":"70.176s","sfx":"Assets/MusicVideo/Sfx/punch/shoulder_tap_a.mp3","volume":0.9}, // s_tap: tap
+  {"at":"72.150s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.45}, // m_field: the other streaks off
+  {"at":"72.319s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip.mp3","volume":0.45}, // s_flick: he bolts
+  {"at":"72.363s","sfx":"Assets/MusicVideo/Sfx/punch/nose_boing_a.mp3","volume":0.25}, // s_flick: the flick (flick 0.5 s)
+  {"at":"73.264s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip_2.mp3","volume":0.45}, // m_field: he goes after him
+  {"at":"74.837s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.35}, // m_sat: bronco ride
+  {"at":"75.687s","sfx":"Assets/MusicVideo/Sfx/punch/satellite_beeps.mp3","volume":0.55}, // m_sat: the satellite
+  {"at":"78.202s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing_2.mp3","volume":0.45}, // m_sling: slingshot round Mars
+  {"at":"79.602s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip.mp3","volume":0.45}, // m_sling: out of the slingshot
+  {"at":"80.282s","sfx":"Assets/MusicVideo/Sfx/punch/windup_a.mp3","volume":0.35}, // m_tag: the spinning kick
+  {"at":"82.932s","sfx":"Assets/MusicVideo/Sfx/punch/kick_thud_a.mp3","volume":0.7}, // m_tag: tag you're it (card impact_big 0.5)
+  {"at":"83.032s","sfx":"Assets/MusicVideo/Sfx/punch/spin_top.mp3","volume":0.5}, // m_tag: he spins off like a top
+  {"at":"84.113s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip_2.mp3","volume":0.4}, // m_moon: pops up out of the crater
+  {"at":"84.963s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip.mp3","volume":0.3}, // m_moon: ducks back
+  {"at":"85.800s","sfx":"Assets/MusicVideo/Sfx/punch/comet_fizz.mp3","volume":0.4}, // m_boo: the comet tail
+  {"at":"87.175s","sfx":"Assets/MusicVideo/Sfx/punch/jump_scare_a.mp3","volume":0.65}, // m_boo: boo (jump_scare boom 0.3 s)
+  {"at":"88.615s","sfx":"Assets/MusicVideo/Sfx/punch/lasso_whirl.mp3","volume":0.5}, // w_lasso: the loop over his head
+  {"at":"89.851s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing.mp3","volume":0.65}, // w_swing: Saturn swung like a hammer
+  {"at":"90.115s","sfx":"Assets/MusicVideo/Sfx/punch/lasso_whirl.mp3","volume":0.4}, // w_lasso: still whirling
+  {"at":"90.365s","sfx":"Assets/MusicVideo/Sfx/punch/rope_snap_a.mp3","volume":0.75}, // w_lasso: the loop closes on the rings
+  {"at":"92.031s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing_2.mp3","volume":0.55}, // w_swing: second turn
+  {"at":"92.331s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.55}, // w_swing: let fly
+  {"at":"94.462s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.45}, // w_volley: Mars bowled
+  {"at":"94.561s","sfx":"Assets/MusicVideo/Sfx/punch/planet_impact.mp3","volume":0.6}, // w_catch: caught in the gut (catch_planet hit)
+  {"at":"94.611s","sfx":"Assets/MusicVideo/Sfx/punch/oof_a.mp3","volume":0.6}, // w_catch: oof
+  {"at":"94.758s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing.mp3","volume":0.55}, // w_catch: hurled straight back
+  {"at":"95.062s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip_2.mp3","volume":0.45}, // w_volley: he ducks Saturn
+  {"at":"98.090s","sfx":"Assets/MusicVideo/Sfx/punch/planet_impact_2.mp3","volume":0.8}, // w_volley: catch a planet in the gut (card couch_slam)
+  {"at":"98.150s","sfx":"Assets/MusicVideo/Sfx/punch/oof_b.mp3","volume":0.8}, // w_volley: oof
+  {"at":"98.878s","sfx":"Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3","volume":0.35}, // w_gut: winded
+  {"at":"100.794s","sfx":"Assets/MusicVideo/Sfx/punch/kick_thud_b.mp3","volume":0.55}, // w_earth: he catches the Earth without looking
+  {"at":"103.360s","sfx":"Assets/MusicVideo/Sfx/punch/careful_setdown.mp3","volume":0.6}, // w_earth_back: put back, carefully
+  {"at":"106.225s","sfx":"Assets/MusicVideo/Sfx/punch/lasso_whirl.mp3","volume":0.5}, // w_ch2_a: the other spins a lasso
+  {"at":"107.461s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing.mp3","volume":0.7}, // w_ch2_b: Jupiter swung
+  {"at":"107.725s","sfx":"Assets/MusicVideo/Sfx/punch/lasso_whirl.mp3","volume":0.4}, // w_ch2_a: still whirling
+  {"at":"107.975s","sfx":"Assets/MusicVideo/Sfx/punch/rope_snap_b.mp3","volume":0.85}, // w_ch2_a: Jupiter roped
+  {"at":"109.242s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.55}, // w_ch2_b: thrown
+  {"at":"109.641s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing_2.mp3","volume":0.6}, // w_ch2_b: second turn
+  {"at":"112.142s","sfx":"Assets/MusicVideo/Sfx/punch/planet_impact.mp3","volume":0.8}, // w_ch2_c: Jupiter in the gut
+  {"at":"112.192s","sfx":"Assets/MusicVideo/Sfx/punch/oof_a.mp3","volume":0.75}, // w_ch2_c: oof
+  {"at":"114.322s","sfx":"Assets/MusicVideo/Sfx/punch/fly_zip.mp3","volume":0.45}, // w_ch2_d: the other hops over it
+  {"at":"114.682s","sfx":"Assets/MusicVideo/Sfx/punch/planet_swing_2.mp3","volume":0.65}, // w_ch2_d: Jupiter bowled down the lane
+  {"at":"115.288s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.45}, // w_ch2_e: Mars bowled
+  {"at":"116.488s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh_2.mp3","volume":0.45}, // w_ch2_e: bowled back
+  {"at":"117.188s","sfx":"Assets/MusicVideo/Sfx/punch/planet_impact_2.mp3","volume":0.7}, // w_ch2_e: caught (card couch_slam)
+  {"at":"117.691s","sfx":"Assets/MusicVideo/Sfx/punch/windup_a.mp3","volume":0.4}, // w_ch2_f: both wind up, face to face
+  {"at":"119.088s","sfx":"Assets/MusicVideo/Sfx/punch/planet_impact.mp3","volume":0.7}, // w_ch2_e: caught (card couch_slam)
+  {"at":"119.304s","sfx":"Assets/MusicVideo/Sfx/punch/kick_thud_a.mp3","volume":0.4}, // w_ch2_f: Jupiter lands in his hand
+  {"at":"120.320s","sfx":"Assets/MusicVideo/Sfx/punch/fly_whoosh.mp3","volume":0.3}, // w_out: they let the worlds go
+  {"at":"121.220s","sfx":"Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3","volume":0.5}, // w_out: spent
+  {"at":"124.035s","sfx":"Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3","volume":0.4}, // st_close: out of breath, drifting together
+  {"at":"128.035s","sfx":"Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3","volume":0.28}, // st_close: slowing
+  {"at":"139.808s","sfx":"Assets/MusicVideo/Sfx/punch/panel_clack.mp3","volume":0.55}, // tv_fold: the floor pops, panels unfold
+  {"at":"140.088s","sfx":"Assets/MusicVideo/Sfx/punch/panel_clack_2.mp3","volume":0.55}, // tv_fold: more panels
+  {"at":"140.400s","sfx":"Assets/MusicVideo/Sfx/punch/bed_studio.mp3","volume":0.16}, // studio: soundstage air, halved under the announcer
+  {"at":"140.438s","sfx":"Assets/MusicVideo/Sfx/punch/panel_clack.mp3","volume":0.5}, // tv_fold: the sign lands
+  {"at":"141.046s","sfx":"Assets/MusicVideo/Sfx/punch/tv_jingle.mp3","volume":0.55}, // tv_wide: the jingle on the chorus
+  {"at":"141.096s","sfx":"Assets/MusicVideo/Sfx/punch/applause.mp3","volume":0.3}, // tv_wide: studio applause
+  {"at":"149.901s","sfx":"Assets/MusicVideo/Sfx/punch/can_psst_a.mp3","volume":0.55}, // tv_both: cans open
+  {"at":"150.851s","sfx":"Assets/MusicVideo/Sfx/punch/gulp_a.mp3","volume":0.5}, // tv_both: swallow one
+  {"at":"151.251s","sfx":"Assets/MusicVideo/Sfx/punch/gulp_b.mp3","volume":0.5}, // tv_both: swallow two
+  {"at":"151.651s","sfx":"Assets/MusicVideo/Sfx/punch/gulp_a.mp3","volume":0.45}, // tv_both: swallow three
+  {"at":"152.151s","sfx":"Assets/MusicVideo/Sfx/punch/ahh_a.mp3","volume":0.55}, // tv_both: ahh
+  {"at":"152.301s","sfx":"Assets/MusicVideo/Sfx/punch/ahh_b.mp3","volume":0.45}, // tv_both: the other ahh
+  {"at":"154.074s","sfx":"Assets/MusicVideo/Sfx/punch/ding_a.mp3","volume":0.55}, // tv_thumbs: the thumbs up
+  {"at":"154.124s","sfx":"Assets/MusicVideo/Sfx/punch/applause.mp3","volume":0.28}, // tv_thumbs: applause sweetener
+  {"at":"170.100s","sfx":"Assets/MusicVideo/Sfx/punch/tv_jingle_tag.mp3","volume":0.45}, // tv_sign: the jingle button, out before the cut
+  {"at":"172.592s","sfx":"Assets/MusicVideo/Sfx/punch/applause_tag.mp3","volume":0.28}, // tv_hold: applause tag, gone before the cut
+  {"at":"172.892s","sfx":"Assets/MusicVideo/Sfx/punch/ding_a.mp3","volume":0.45}, // tv_hold: last thumbs up
+  {"at":"173.740s","sfx":"Assets/MusicVideo/Sfx/punch/bed_clinic_button.mp3","volume":0.1}, // b_room: the clinic again, cut by the fist
+  {"at":"174.379s","sfx":"Assets/MusicVideo/Sfx/punch/punch_impact_2.mp3","volume":0.6}, // b_fist: the fist again (card impact_big 0.9), then nothing
+  {"at":"176.316s","sfx":"Assets/MusicVideo/Sfx/punch/can_roll.mp3","volume":0.55}, // b_can: the can rolls in on the tile
+  {"at":"178.066s","sfx":"Assets/MusicVideo/Sfx/punch/tiny_clink_a.mp3","volume":0.4} // b_can: it stops, one tiny clink
+ ]
+}

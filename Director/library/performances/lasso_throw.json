@@ -1,0 +1,691 @@
+{
+ "name": "lasso_throw",
+ "about": "The lasso: the right hand circles over the head `spins` times (a reach round a ring, 8 points a turn, `per` seconds a point, up to 4 turns), the loop gripped, the body leaning with it; at the end of the last turn the arm whips forward and down for the throw with the fingers opening; then both hands take the rope and he leans back and hauls. The rope is the card's (the right hand is where its end is). Standing or flying (no ground is set). Ends hauling. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "any",
+ "exit": "any",
+ "length": "4.6s",
+ "min": "3.4s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "spins": 3,
+  "per": 0.125
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.9,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.75,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    0.29
+   ],
+   "for": "0.35s",
+   "ease": "hand",
+   "lint": "point"
+  },
+  {
+   "at": 0.05,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.4,
+     "ease": "inout",
+     "hold": "=spins*per*8",
+     "bones": {
+      "spine": [
+       -4,
+       0,
+       -4
+      ],
+      "chest": [
+       -6,
+       0,
+       -6
+      ],
+      "head": [
+       -14,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=0.9+spins*per*8",
+     "ease": "out",
+     "overshoot": 0.12,
+     "settle": "0.3s",
+     "hold": 0.2,
+     "hips": [
+      0,
+      -0.04,
+      0.06
+     ],
+     "bones": {
+      "spine": [
+       14,
+       0,
+       0
+      ],
+      "chest": [
+       12,
+       0,
+       0
+      ],
+      "head": [
+       -8,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=1.7+spins*per*8",
+     "ease": "inout",
+     "hips": [
+      0,
+      -0.03,
+      -0.08
+     ],
+     "bones": {
+      "spine": [
+       -10,
+       0,
+       0
+      ],
+      "chest": [
+       -8,
+       0,
+       0
+      ],
+      "head": [
+       -6,
+       0,
+       0
+      ],
+      "leftUpperLeg": [
+       -6,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       6,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": "=0.4+per*0",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>0"
+  },
+  {
+   "at": "=0.4+per*1",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>1"
+  },
+  {
+   "at": "=0.4+per*2",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.46,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>2"
+  },
+  {
+   "at": "=0.4+per*3",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>3"
+  },
+  {
+   "at": "=0.4+per*4",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    -0.39
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>4"
+  },
+  {
+   "at": "=0.4+per*5",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>5"
+  },
+  {
+   "at": "=0.4+per*6",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.22,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>6"
+  },
+  {
+   "at": "=0.4+per*7",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>7"
+  },
+  {
+   "at": "=0.4+per*8",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>8"
+  },
+  {
+   "at": "=0.4+per*9",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>9"
+  },
+  {
+   "at": "=0.4+per*10",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.46,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>10"
+  },
+  {
+   "at": "=0.4+per*11",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>11"
+  },
+  {
+   "at": "=0.4+per*12",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    -0.39
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>12"
+  },
+  {
+   "at": "=0.4+per*13",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>13"
+  },
+  {
+   "at": "=0.4+per*14",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.22,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>14"
+  },
+  {
+   "at": "=0.4+per*15",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>15"
+  },
+  {
+   "at": "=0.4+per*16",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>16"
+  },
+  {
+   "at": "=0.4+per*17",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>17"
+  },
+  {
+   "at": "=0.4+per*18",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.46,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>18"
+  },
+  {
+   "at": "=0.4+per*19",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>19"
+  },
+  {
+   "at": "=0.4+per*20",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    -0.39
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>20"
+  },
+  {
+   "at": "=0.4+per*21",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>21"
+  },
+  {
+   "at": "=0.4+per*22",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.22,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>22"
+  },
+  {
+   "at": "=0.4+per*23",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>23"
+  },
+  {
+   "at": "=0.4+per*24",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>24"
+  },
+  {
+   "at": "=0.4+per*25",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>25"
+  },
+  {
+   "at": "=0.4+per*26",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.46,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>26"
+  },
+  {
+   "at": "=0.4+per*27",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.36,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>27"
+  },
+  {
+   "at": "=0.4+per*28",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.12,
+    2.08,
+    -0.39
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>28"
+  },
+  {
+   "at": "=0.4+per*29",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    -0.29
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>29"
+  },
+  {
+   "at": "=0.4+per*30",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.22,
+    2.08,
+    -0.05
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>30"
+  },
+  {
+   "at": "=0.4+per*31",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.12,
+    2.08,
+    0.19
+   ],
+   "for": "=per",
+   "ease": "linear",
+   "lint": "point",
+   "if": "=spins*8>31"
+  },
+  {
+   "at": "=0.4+spins*per*8",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.3,
+    1.35,
+    1.55
+   ],
+   "for": "0.22s",
+   "ease": "out",
+   "lint": "point"
+  },
+  {
+   "at": "=0.42+spins*per*8",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.05,
+   "for": "0.08s"
+  },
+  {
+   "at": "=0.9+spins*per*8",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.22,
+    1.2,
+    0.62
+   ],
+   "for": "0.5s",
+   "ease": "hand",
+   "lint": "point"
+  },
+  {
+   "at": "=0.95+spins*per*8",
+   "do": "reach",
+   "hand": "left",
+   "toRel": [
+    0.08,
+    1.08,
+    0.5
+   ],
+   "for": "0.5s",
+   "ease": "hand",
+   "lint": "point"
+  },
+  {
+   "at": "=1.1+spins*per*8",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.95,
+   "for": "0.2s"
+  },
+  {
+   "at": "=1.2+spins*per*8",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.95,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.1,
+   "do": "face",
+   "smile": 0.5,
+   "blink": 0.2,
+   "eyesWide": 0.2,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=0.4+spins*per*8",
+   "do": "face",
+   "jawOpen": 0.5,
+   "eyesWide": 0.5,
+   "smile": 0.3,
+   "for": "0.15s",
+   "ease": "out"
+  },
+  {
+   "at": "=1.5+spins*per*8",
+   "do": "face",
+   "jawOpen": 0.2,
+   "blink": 0.4,
+   "smile": 0,
+   "fear": 0,
+   "for": "0.4s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.5
+ }
+}

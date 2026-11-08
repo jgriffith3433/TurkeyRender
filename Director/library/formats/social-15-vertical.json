@@ -1,0 +1,13 @@
+{
+  // 15 seconds on a phone, held upright, often muted. Faces big and centred, type in the safe area, the point in the first second.
+  "about": "A 15 second vertical social cut, 9:16.",
+  "aspect": [9, 16], "render": [1080, 1920], "fps": 30, "length": 15, "fovScale": 1.28,
+  "safe": { "top": 0.14, "bottom": 0.2, "side": 0.06 },
+  "pacing": { "avgSeconds": [0.8, 2], "maxSeconds": 3.5, "shots": [8, 16] },
+  "beats": [
+    { "part": "hook", "seconds": 1.5, "job": "the most surprising frame comes first" },
+    { "part": "build", "seconds": 8, "job": "one idea, fast, reads with the sound off" },
+    { "part": "payoff", "seconds": 4, "job": "the laugh or the reveal" },
+    { "part": "loop", "seconds": 1.5, "job": "ends where it can start again" }
+  ]
+}

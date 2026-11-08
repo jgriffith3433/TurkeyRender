@@ -1,0 +1,7 @@
+{
+  // The joke's last light: the pastel house under a real sky. Heavy grey cloud over a bright model, as if the sun were a lamp somewhere else.
+  "sky": { "top": "#7f858d", "mid": "#a6aab0", "bottom": "#c4bfba", "ambient": "#b6b4b8", "ambientTop": "#a4a8ae", "ambientBottom": "#ccc4c4", "fog": "#b4b6ba", "density": 0.0007, "clouds": 0.95, "cloudColor": "#b0b4ba", "cloudShade": "#6a6f78", "cloudScale": 0.5, "cloudSoft": 0.4, "cloudSpeed": 0.02 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [6, 16, -12], "aim": "subject", "color": "#f0ecec", "intensity": 0.75, "shadows": true }
+  }
+}

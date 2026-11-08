@@ -1,0 +1,45 @@
+{
+ "id": "habits",
+ "f0": 2612,
+ "f1": 2664,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 87.067,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 88.367,
+   "why": "frame difference x11 (15.06)",
+   "file": "spike-02651.jpg"
+  }
+ ],
+ "hash": "ac11edbf3a78c736",
+ "summary": "The cut in is clean and the cloche holds steady, but the cloche's shadow races off the plate in about 3 frames at 88.36 to 88.46, and the lift itself happens out of frame.",
+ "faults": [
+  {
+   "t": 88.39,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The big soft cloche shadow covers the plate at 88.36, shrinks at 88.39 and is gone from the plate by 88.43. A dark patch then slides off the right edge by 88.46 to 88.59. The shadow moves much faster than anything the viewer can see, so the cloche seems to vanish instead of lifting. This matches the frame-difference spike.",
+   "fix": "Ease the cloche's lift so the shadow moves over about 8 to 10 frames, or keep the cloche visible while it rises."
+  },
+  {
+   "t": 88.36,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The cloche, the subject of the shot, is already out of frame at 88.36, so its lift and the single blade that supports it are not shown. The viewer sees only the empty plate and a shadow leaving.",
+   "fix": "Tilt the camera up or widen the crop so the lift is visible, or hold the cloche in frame for the first part of the rise."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 821,
+  "out": 934
+ },
+ "cost": 0.011
+}

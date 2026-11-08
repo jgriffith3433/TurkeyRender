@@ -1,0 +1,844 @@
+{
+ "name": "verse_take",
+ "about": "Verse 2 on the table, 46 beats on one mark, small and cool: hands on hips, the hip-hop step, house, a small groove, hand on hip. Gestures on manners, sleep and keep. Every camera sees this one performance.",
+ "entry": "any",
+ "exit": "stand",
+ "length": "19.719s",
+ "min": "19.719s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": 0.3,
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.55,
+    6
+   ],
+   "for": 0.3
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.4,
+   "head": 0.3,
+   "arms": 0.6,
+   "hands": 1,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "mx_hh_listening",
+   "start": 0.2,
+   "speed": 1.167,
+   "warpTo": "beat",
+   "maxRate": 1.25,
+   "blend": 0.05,
+   "for": 3.429
+  },
+  {
+   "at": 0.359,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     7
+    ],
+    "chest": [
+     0,
+     -7,
+     -8
+    ],
+    "head": [
+     -4,
+     0,
+     2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 0.629,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 1.216,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     -7
+    ],
+    "chest": [
+     0,
+     7,
+     8
+    ],
+    "head": [
+     -4,
+     0,
+     -2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 1.486,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 1.929,
+   "do": "pose",
+   "bones": {
+    "chest": [
+     8,
+     0,
+     0
+    ],
+    "head": [
+     10,
+     0,
+     -6
+    ]
+   },
+   "for": 0.214,
+   "ease": "out"
+  },
+  {
+   "at": 2.572,
+   "do": "pose",
+   "bones": {
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.429,
+   "ease": "inout"
+  },
+  {
+   "at": 3.429,
+   "do": "anim",
+   "clip": "mx_hh_step",
+   "start": 0.33,
+   "speed": 1.48,
+   "warpTo": "snare",
+   "maxRate": 1.35,
+   "blend": 0.16,
+   "for": 3.429
+  },
+  {
+   "at": 3.788,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     -7
+    ],
+    "chest": [
+     0,
+     7,
+     8
+    ],
+    "head": [
+     0,
+     0,
+     -2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 4.058,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 4.645,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     7
+    ],
+    "chest": [
+     0,
+     -7,
+     -8
+    ],
+    "head": [
+     0,
+     0,
+     2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 4.915,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 5.144,
+   "do": "layer",
+   "clip": "Idle1TouchCheek",
+   "mask": "rightArm",
+   "start": 0.4,
+   "speed": 1.2,
+   "once": 1,
+   "weight": 1,
+   "for": 1.286,
+   "blend": 0.15
+  },
+  {
+   "at": 5.273,
+   "do": "pose",
+   "bones": {
+    "head": [
+     0,
+     0,
+     -12
+    ]
+   },
+   "for": 0.3,
+   "ease": "inout"
+  },
+  {
+   "at": 6.43,
+   "do": "pose",
+   "bones": {
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.429,
+   "ease": "inout"
+  },
+  {
+   "at": 6.859,
+   "do": "anim",
+   "clip": "mx_northern_soul",
+   "start": 8.5,
+   "speed": 1,
+   "warpTo": "beat",
+   "maxRate": 1.25,
+   "blend": 0.16,
+   "for": 1.715
+  },
+  {
+   "at": 7.217,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     7
+    ],
+    "chest": [
+     0,
+     -7,
+     -8
+    ],
+    "head": [
+     -5,
+     0,
+     2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 7.487,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 8.075,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     -7
+    ],
+    "chest": [
+     0,
+     7,
+     8
+    ],
+    "head": [
+     -5,
+     0,
+     -2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 8.345,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 8.573,
+   "do": "anim",
+   "clip": "mx_house_2",
+   "start": 21.6,
+   "speed": 1.33,
+   "warpTo": "snare",
+   "maxRate": 1.35,
+   "blend": 0.16,
+   "for": 1.715
+  },
+  {
+   "at": 10.288,
+   "do": "anim",
+   "clip": "mx_hh_listening",
+   "start": 3,
+   "speed": 1.167,
+   "warpTo": "beat",
+   "maxRate": 1.25,
+   "blend": 0.16,
+   "for": 1.715
+  },
+  {
+   "at": 11.36,
+   "do": "layer",
+   "clip": "Idle1WhatMe",
+   "mask": "rightArm",
+   "start": 0.35,
+   "speed": 0.9,
+   "once": 1,
+   "weight": 1,
+   "for": 0.643,
+   "blend": 0.15
+  },
+  {
+   "at": 12.003,
+   "do": "anim",
+   "clip": "mx_jazz_square",
+   "start": 0.1,
+   "speed": 1.19,
+   "warpTo": "beat",
+   "maxRate": 1.25,
+   "blend": 0.15,
+   "for": 1.715
+  },
+  {
+   "at": 12.003,
+   "do": "layer",
+   "clip": "mx_hh_booty_step",
+   "mask": "arms",
+   "start": 2.5,
+   "weight": 1,
+   "for": 1.629,
+   "blend": 0.15
+  },
+  {
+   "at": 12.003,
+   "do": "layer",
+   "clip": "mx_rumba",
+   "mask": "lower",
+   "additive": 1,
+   "speed": 1.38,
+   "weight": 0.5,
+   "for": 1.715,
+   "blend": 0.15
+  },
+  {
+   "at": 12.361,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     -7
+    ],
+    "chest": [
+     0,
+     7,
+     8
+    ],
+    "head": [
+     0,
+     0,
+     -2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 12.631,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 13.219,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     7
+    ],
+    "chest": [
+     0,
+     -7,
+     -8
+    ],
+    "head": [
+     0,
+     0,
+     2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 13.489,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 13.717,
+   "do": "anim",
+   "clip": "mx_boogaloo",
+   "start": 12,
+   "speed": 1.2,
+   "warpTo": "beat",
+   "maxRate": 1.25,
+   "blend": 0.16,
+   "for": 1.715
+  },
+  {
+   "at": 15.432,
+   "do": "anim",
+   "clip": "mx_house_3",
+   "start": 16.9,
+   "speed": 1.1,
+   "warpTo": "beat",
+   "maxRate": 1.25,
+   "blend": 0.16,
+   "for": 1.715
+  },
+  {
+   "at": 15.791,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     5.6000000000000005
+    ],
+    "chest": [
+     0,
+     -5.6000000000000005,
+     -6.4
+    ],
+    "head": [
+     0,
+     0,
+     2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 16.061,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 16.648,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     -5.6000000000000005
+    ],
+    "chest": [
+     0,
+     5.6000000000000005,
+     6.4
+    ],
+    "head": [
+     0,
+     0,
+     -2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 16.918,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 17.147,
+   "do": "anim",
+   "clip": "mx_hh_booty_step",
+   "start": 2.4,
+   "speed": 1.05,
+   "blend": 0.16,
+   "for": 1.715
+  },
+  {
+   "at": 17.505,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     7
+    ],
+    "chest": [
+     0,
+     -7,
+     -8
+    ],
+    "head": [
+     0,
+     0,
+     2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 17.775,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 18.363,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     -7
+    ],
+    "chest": [
+     0,
+     7,
+     8
+    ],
+    "head": [
+     0,
+     0,
+     -2
+    ]
+   },
+   "for": 0.09,
+   "ease": "out",
+   "overshoot": 0.15,
+   "settle": "0.22s"
+  },
+  {
+   "at": 18.633,
+   "do": "pose",
+   "bones": {
+    "hips": [
+     0,
+     0,
+     0
+    ],
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": 0.16,
+   "ease": "inout"
+  },
+  {
+   "at": 18.861,
+   "do": "anim",
+   "clip": "mx_hh_listening",
+   "start": 0.2,
+   "speed": 1.167,
+   "blend": 0.16,
+   "for": 0.857
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

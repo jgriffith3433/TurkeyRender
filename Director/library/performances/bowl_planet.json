@@ -1,0 +1,234 @@
+{
+ "name": "bowl_planet",
+ "about": "Bowling a planet: the wind-up (a lean, the right arm swung back, the left out for balance, the hips low in a lunge) held a beat, then the release at `release`: the arm swings through low and forward with overshoot and the fingers open, the head following the ball down the lane, and he holds the follow-through watching it go. The planet is the card's: in the right hand until `release`. Standing or flying. Ends in the follow-through. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "any",
+ "exit": "any",
+ "length": "2.8s",
+ "min": "2s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "release": 1.3
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.55,
+   "for": "0.3s"
+  },
+  {
+   "at": 0.05,
+   "do": "keys",
+   "anticipate": 0.06,
+   "successive": 0.03,
+   "keys": [
+    {
+     "t": "=release-0.55",
+     "ease": "inout",
+     "hold": 0.3,
+     "hips": [
+      0,
+      -0.12,
+      0.1
+     ],
+     "bones": {
+      "spine": [
+       14,
+       0,
+       0
+      ],
+      "chest": [
+       10,
+       0,
+       0
+      ],
+      "head": [
+       -12,
+       0,
+       0
+      ],
+      "rightUpperArm": [
+       55,
+       0,
+       -8
+      ],
+      "rightLowerArm": [
+       -10,
+       0,
+       0
+      ],
+      "leftUpperArm": [
+       -45,
+       0,
+       25
+      ],
+      "leftLowerArm": [
+       -20,
+       0,
+       0
+      ],
+      "leftUpperLeg": [
+       -30,
+       0,
+       0
+      ],
+      "leftLowerLeg": [
+       45,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       20,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=release+0.12",
+     "ease": "out",
+     "overshoot": 0.15,
+     "settle": "0.35s",
+     "hold": "=for-release-0.4",
+     "hips": [
+      0,
+      -0.16,
+      0.22
+     ],
+     "bones": {
+      "spine": [
+       18,
+       0,
+       0
+      ],
+      "chest": [
+       10,
+       0,
+       0
+      ],
+      "head": [
+       -16,
+       0,
+       0
+      ],
+      "rightUpperArm": [
+       -75,
+       0,
+       -10
+      ],
+      "rightLowerArm": [
+       -5,
+       0,
+       0
+      ],
+      "leftUpperArm": [
+       35,
+       0,
+       30
+      ],
+      "leftLowerArm": [
+       -15,
+       0,
+       0
+      ],
+      "leftUpperLeg": [
+       -45,
+       0,
+       0
+      ],
+      "leftLowerLeg": [
+       60,
+       0,
+       0
+      ],
+      "rightUpperLeg": [
+       30,
+       0,
+       0
+      ],
+      "rightLowerLeg": [
+       10,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "release": "0.5s"
+  },
+  {
+   "at": "=release-0.05",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.05,
+   "for": "0.1s"
+  },
+  {
+   "at": "=release+0.4",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.1,
+   "do": "gaze",
+   "toRel": [
+    0,
+    1.2,
+    3
+   ],
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=release",
+   "do": "gaze",
+   "toRel": [
+    0,
+    0.5,
+    5
+   ],
+   "for": "0.5s",
+   "ease": "out"
+  },
+  {
+   "at": 0.1,
+   "do": "face",
+   "blink": 0.25,
+   "smile": 0.3,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=release",
+   "do": "face",
+   "blink": 0,
+   "eyesWide": 0.4,
+   "jawOpen": 0.3,
+   "smile": 0.6,
+   "for": "0.2s",
+   "ease": "out"
+  }
+ ],
+ "test": {
+  "tail": 0.4
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "id": "happens",
+ "f0": 107,
+ "f1": 138,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 3.567,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "e2487c7aaaac9201",
+ "summary": "The cut at 3.60 lands cleanly on a settled close-up with only a slight head drift afterwards, so I found no pops, render faults or other problems.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 124
+ },
+ "cost": 0.0084
+}

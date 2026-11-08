@@ -1,0 +1,37 @@
+{
+ "id": "alone_fog",
+ "f0": 4078,
+ "f1": 4181,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 135.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 136,
+   "why": "flow spike x4.1",
+   "file": "spike-04080.jpg"
+  }
+ ],
+ "hash": "5d7ae528856e8967",
+ "summary": "The shot fades in from a bright fog wash over about 8 frames, which reads as a deliberate fade, and the figure's pose and position stay continuous, with no pops or clipping. The pose is a little stiff and the face is hard to read at this size.",
+ "faults": [
+  {
+   "t": 136.12,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The figure stands nearly frontal and symmetrical, with the feet together and the arms hanging in a similar line. Little line of action in the tiny silhouette, and the arm swing drifts without a held pose.",
+   "fix": "Offset the hips or weight and hold a clearer arm pose for a beat."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4948,
+  "out": 282
+ },
+ "cost": 0.0127
+}

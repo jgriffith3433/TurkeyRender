@@ -1,0 +1,26 @@
+{
+ "id": "head",
+ "hash": "547002735ef44770",
+ "w": 1280,
+ "h": 720,
+ "fps": 24,
+ "f0": 0,
+ "f1": 4,
+ "parts": {
+  "engine": "a931ef591b8682a5",
+  "songData": "a07545f9b9b450d2",
+  "songAudio": "7157184:1794119054926",
+  "poses": "2a882b20e25a9be3",
+  "grips": "8ecf5ff005fc5408",
+  "stage": "7d141285320cb17a",
+  "shows": "74234e98afe7498f",
+  "videoFiles": "",
+  "frame": "1280x720@24 final",
+  "frames": "0-4",
+  "actor boulder": "296e411395c316bf",
+  "files boulder": "e904345a267fecd7",
+  "actor person": "8a0cf5f9ed79fe7b",
+  "files person": "5c3ba356f5747fae"
+ },
+ "rendered": "2026-11-08T09:21:44.610Z"
+}

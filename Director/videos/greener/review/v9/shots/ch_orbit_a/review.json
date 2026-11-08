@@ -1,0 +1,39 @@
+{
+ "id": "ch_orbit_a",
+ "f0": 1609,
+ "f1": 1661,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 53.633,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "0aa775b72b4a3705",
+ "summary": "The cut is clean and the camera orbit reads smoothly, but he drops from standing to a deep squat in about 0.17 s with no anticipation, and his feet are cropped at the bottom edge of the early frames.",
+ "faults": [
+  {
+   "t": 53.73,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 53.66 to 53.83 he goes from upright with arms out to a deep wide squat with arms tucked in. There is no anticipation, and the hips drop and the arms fold almost at once. It reads as a pose snap, not a weighted dip. It also begins in the first frames of the shot, so it could be read as the cut settling.",
+   "fix": "Add 2-3 frames of anticipation (a small rise or lean) before the drop, or start the shot already in the squat. Ease the arm fold so it follows the hips."
+  },
+  {
+   "t": 53.69,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "His feet sit at or below the bottom edge in tiles 53.66-53.76, so the planted feet are cropped while he is standing. The feet only come into view as he squats.",
+   "fix": "Raise the camera or tilt it down slightly, or pull back a little, so the feet stay in frame during the orbit."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3569,
+  "out": 1063
+ },
+ "cost": 0.0178
+}

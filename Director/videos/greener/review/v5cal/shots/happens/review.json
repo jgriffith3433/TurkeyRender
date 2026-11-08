@@ -1,0 +1,67 @@
+{
+ "id": "happens",
+ "f0": 606,
+ "f1": 684,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 20.2,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 20.367,
+   "why": "one patch jumps (cell 92.1, x23)",
+   "file": "spike-00611.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 22.2,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-00666.jpg"
+  }
+ ],
+ "hash": "27f9803a956a4c50",
+ "summary": "The cut strip has a clear head snap at 20.33, where the head whips to a right-facing profile for one frame and returns, and the rest is a stiff, blank hold with a minor head wobble near 22.2.",
+ "faults": [
+  {
+   "t": 20.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Head swings from looking left (20.19-20.26) to camera (20.29), then to a hard right-facing profile with the neck stretched at 20.33, then back to camera at 20.36. The turn reverses in about 3 frames with no anticipation or settle, so it reads as a snap rather than a performance. It is the cut tweening in frames 3-5 of the shot.",
+   "fix": "Start the shot on the camera-facing head pose, or delete the 20.26-20.36 head-turn keys and ease from the left look to the front in one smooth move."
+  },
+  {
+   "t": 20.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "In the profile frame the neck is twisted and elongated, with the jaw thrust out and the collar line pulled. The head turn is not backed by the shoulders or body, which stay planted.",
+   "fix": "Limit the head yaw at this moment or add some torso and shoulder follow-through."
+  },
+  {
+   "t": 20.5,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "From 20.43 to 20.60 the face is nearly frozen: the same stare, the same neutral mouth, and no blink or eye movement. It reads as a blank mannequin hold rather than 'he won't say and we can see it'.",
+   "fix": "Add a blink and a small eye dart or brow flicker during the hold."
+  },
+  {
+   "t": 22.2,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Head and jaw position shifts between 22.16-22.20 and 22.23-22.30: the head lifts and the mouth pops from open to flat, then the head drops lower by 22.30. The pose jumps and comes back instead of easing. The mouth shapes are tiny for the sung line.",
+   "fix": "Smooth the head height keys across 22.16-22.30 and ease the mouth open-to-closed transition."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6369,
+  "out": 1522
+ },
+ "cost": 0.028
+}

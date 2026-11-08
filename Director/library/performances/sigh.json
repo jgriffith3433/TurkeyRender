@@ -1,0 +1,117 @@
+{
+ "name": "sigh",
+ "about": "A small breath in, then everything drops: shoulders, chest, head, eyes.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "3s",
+ "min": "2.4s",
+ "cues": [
+  {
+   "at": 0,
+   "do": "keys",
+   "keys": [
+    {
+     "t": 0.55,
+     "ease": "inout",
+     "bones": {
+      "chest": [
+       -4,
+       0,
+       0
+      ],
+      "head": [
+       -4,
+       0,
+       0
+      ],
+      "leftShoulder": [
+       0,
+       0,
+       -4
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       4
+      ]
+     },
+     "hips": [
+      0,
+      0.006,
+      0
+     ]
+    },
+    {
+     "t": 1.5,
+     "ease": "inout",
+     "hold": 0.5,
+     "overshoot": 0.08,
+     "settle": "0.4s",
+     "bones": {
+      "spine": [
+       3,
+       0,
+       0
+      ],
+      "chest": [
+       7,
+       0,
+       0
+      ],
+      "neck": [
+       3,
+       0,
+       0
+      ],
+      "head": [
+       9,
+       0,
+       0
+      ],
+      "leftShoulder": [
+       0,
+       0,
+       5
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       -5
+      ]
+     },
+     "hips": [
+      0,
+      -0.012,
+      0
+     ]
+    }
+   ],
+   "release": "0.7s"
+  },
+  {
+   "at": 0.6,
+   "do": "face",
+   "blink": 0.75,
+   "jawOpen": 0.1,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.5,
+   "do": "face",
+   "jawOpen": 0,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.1,
+   "do": "face",
+   "blink": 0,
+   "for": "0.3s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 1.0
+ }
+}

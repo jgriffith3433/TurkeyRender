@@ -1,0 +1,67 @@
+// Hawkes Punch: foley for the clinic and the ad, the two punches, the ending (sound pass, 2026-11-08; CLINIC-AD-AUDIT.md N1-N9, P11, N2).
+// Files: Assets/MusicVideo/Sfx/punch/foley/ (made by Director/tools/punch_sfx_prep.mjs from Hawkes Gen audio.sfx takes and reused sounds).
+// Beds are acts/78-beds.json (tools/punch_beds.mjs). Hand-written: times are video seconds, moved by `mv cards insert/remove` like any act.
+// Frames are at 24 fps (frame = t * 24). The punch timings are keyed to the contact frames so the picture's impact frame and hitstop land on them.
+{
+ "cues": [
+  // ---- 1. reception (0-9.8): the turkey types, a phone rings somewhere, the clock (in the bed)
+  {"at":"0.800s","sfx":"Assets/MusicVideo/Sfx/punch/foley/turkey_keyboard_peck.wav","volume":0.22}, // s1_wide: the turkey typing at the counter
+  {"at":"4.600s","sfx":"Assets/MusicVideo/Sfx/punch/foley/wait_phone_muffled.wav","volume":0.3}, // s1_him: a phone two rooms away
+  {"at":"8.250s","sfx":"Assets/MusicVideo/Sfx/punch/foley/turkey_keyboard_peck.wav","volume":0.35}, // s1_gobble: pecking before the gobble at 8.55
+  {"at":"9.300s","sfx":"Assets/MusicVideo/Sfx/punch/foley/turkey_cluck.wav","volume":0.25}, // s1_gobble: a cluck after it
+
+  // ---- 2. the exam room: writing, the bed, the can
+  {"at":"12.600s","sfx":"Assets/MusicVideo/Sfx/punch/foley/patient_bed_creak.wav","volume":0.3}, // sym_ask: he shifts on the exam paper before "Okay. So."
+  {"at":"16.900s","sfx":"Assets/MusicVideo/Sfx/punch/foley/pen_scratch_stroke.wav","volume":0.3}, // sym_write1: she keeps writing
+  {"at":"19.500s","sfx":"Assets/MusicVideo/Sfx/punch/foley/pen_scratch_burst.wav","volume":0.18}, // sym_silence: off screen, still writing
+  {"at":"21.200s","sfx":"Assets/MusicVideo/Sfx/punch/foley/pen_scratch_burst.wav","volume":0.18}, // sym_silence
+  {"at":"25.460s","sfx":"Assets/MusicVideo/Sfx/punch/foley/pen_scratch_burst.wav","volume":0.35}, // sym_pen (frame 611): the pen moves... and stops on "In space." (25.51 + the word)
+  {"at":"28.200s","sfx":"Assets/MusicVideo/Sfx/punch/foley/patient_bed_creak.wav","volume":0.2}, // sym_vibe: he leans in for "she has, like..."
+  {"at":"30.300s","sfx":"Assets/MusicVideo/Sfx/punch/foley/paper_rustle_short.wav","volume":0.35}, // sym_drawing: the drawing held up
+  {"at":"38.900s","sfx":"Assets/MusicVideo/Sfx/punch/foley/doctor_coat_rustle.wav","volume":0.35}, // d_can: her arm on the toss
+  {"at":"39.200s","sfx":"Assets/MusicVideo/Sfx/punch/foley/can_catch_palm.wav","volume":0.6}, // d_can (frame 941): the can lands in his hand
+  {"at":"41.000s","sfx":"Assets/MusicVideo/Sfx/punch/foley/patient_bed_creak.wav","volume":0.18}, // s3_can: he turns the can over
+  {"at":"47.850s","sfx":"Assets/MusicVideo/Sfx/punch/foley/doctor_coat_rustle.wav","volume":0.3}, // s3_look: she squares up to him
+  {"at":"49.700s","sfx":"Assets/MusicVideo/Sfx/punch/foley/patient_bed_creak.wav","volume":0.3}, // s3_ohno: he shrinks back on the bed
+
+  // ---- 3. THE PUNCH (clinic r2: p_hit 61.00-63.79, p_face 63.79-64.29, p_ceiling 64.29-65.29, p_doc 65.29-66.59). Contact on frame 1531 = 63.792 s,
+  // the cut into p_face, where the impact frame and the 7-frame hitstop start. Order (research 3, rule 11):
+  // 61.0-62.8 she rolls her shoulders and takes her guard (cloth); 62.15-63.62 a rising charge with her breath under the guard and the coil
+  // (the coil holds 62.83-63.67); frames 1527-1530 (63.625-63.792) SILENCE, the whole mix: the strike (63.67-63.79, smear at 63.73) happens in it;
+  // frame 1531 the layered hit (low thump + crack + whoosh tail); frame 1536 (64.0) his yelp as he launches after the hitstop, pulled away upward;
+  // frame 1543 (64.29) the ceiling crash on the cut to p_ceiling, debris raining at us from 64.40, the roof far above at 64.75;
+  // p_doc: the room settles, the hum comes back (the bed), she shakes out her hand (cloth), one crumb of plaster ticks down. The scream is the sky shot (70.89).
+  {"at":"61.500s","sfx":"Assets/MusicVideo/Sfx/punch/foley/doctor_coat_rustle.wav","volume":0.35}, // p_hit: the shoulder roll
+  {"at":"62.300s","sfx":"Assets/MusicVideo/Sfx/punch/foley/doctor_coat_rustle.wav","volume":0.45}, // p_hit: up into her guard
+  {"at":"62.150s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch_charge_breath.wav","volume":0.55}, // p_hit: the charge and her breath, ends in the gap
+  {"at":"63.625s","do":"silence","for":"0.1667s"}, // frames 1527-1530: 4 frames of nothing; the strike is inside them
+  {"at":"63.792s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch_hit_layered.wav","volume":0.85}, // frame 1531: CONTACT (p_face)
+  {"at":"64.000s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch_launch_yelp.wav","volume":0.45}, // frame 1536: launched, his yelp going up
+  {"at":"64.292s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch_ceiling_crash.wav","volume":0.75}, // frame 1543: p_ceiling, through the tiles, on the cut
+  {"at":"64.400s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch_debris_rain.wav","volume":0.5}, // frame 1546: tiles and plaster rain down at us
+  {"at":"64.750s","sfx":"Assets/MusicVideo/Sfx/punch/roof_crash.mp3","volume":0.22}, // frame 1554: the roof, far above
+  {"at":"65.600s","sfx":"Assets/MusicVideo/Sfx/punch/foley/doctor_coat_rustle.wav","volume":0.3}, // p_doc +0.31: she shakes out her hand
+  {"at":"66.200s","sfx":"Assets/MusicVideo/Sfx/punch/space_epic/space_pebble_tick.wav","volume":0.25}, // p_doc +0.91: one crumb of plaster lands; the mundane sound after the boom
+  {"at":"68.600s","sfx":"Assets/MusicVideo/Sfx/punch/foley/turkey_keyboard_peck.wav","volume":0.35}, // p_turkey: back to typing, as if nothing happened
+
+  // ---- 4. the ad: small, placed audience reactions (never blanket applause), the end card's ding
+  {"at":"180.250s","sfx":"Assets/MusicVideo/Sfx/punch/foley/ad_audience_chuckle.wav","volume":0.3}, // tv_me: after "That's me!"
+  {"at":"184.200s","sfx":"Assets/MusicVideo/Sfx/punch/foley/doctor_coat_rustle.wav","volume":0.25}, // tv_both: arms up with the cans
+  {"at":"187.900s","sfx":"Assets/MusicVideo/Sfx/punch/foley/ad_audience_chuckle.wav","volume":0.3}, // tv_thumbs: after "Tastes like a fist!"
+  {"at":"189.950s","sfx":"Assets/MusicVideo/Sfx/punch/foley/ad_audience_ooh.wav","volume":0.25}, // tv_thumbs: after "A good fist"
+  {"at":"200.850s","sfx":"Assets/MusicVideo/Sfx/punch/ding_a.mp3","volume":0.4}, // tv_end: the end card (was the jingle tag: no music)
+
+  // ---- 5. the next day, and the second punch (contact on frame 5045 = 210.208 s: the glove lands at +2.36 s of b_him, impact fx at +2.38 s)
+  {"at":"204.350s","sfx":"Assets/MusicVideo/Sfx/punch/foley/turkey_keyboard_peck.wav","volume":0.3}, // b_turkey: typing, same as ever
+  {"at":"205.700s","sfx":"Assets/MusicVideo/Sfx/punch/foley/pen_scratch_stroke.wav","volume":0.25}, // b_room: she writes, doesn't look up
+  {"at":"207.000s","sfx":"Assets/MusicVideo/Sfx/punch/foley/patient_bed_creak.wav","volume":0.22}, // b_room: he settles on the bed
+  {"at":"210.000s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch_swish.wav","volume":0.6}, // b_him frame 5040: the glove comes in
+  {"at":"210.083s","do":"silence","for":"0.125s"}, // frames 5042-5044: 3 frames of nothing
+  {"at":"210.208s","sfx":"Assets/MusicVideo/Sfx/punch/foley/punch2_hit_layered.wav","volume":1.0}, // frame 5045: CONTACT, then the hard cut to space (210.278)
+
+  // ---- 6. the end: the end card, then the can rolls in on the dark floor and stops (b_can, 220.978-223.46)
+  {"at":"218.000s","sfx":"Assets/MusicVideo/Sfx/punch/ding_a.mp3","volume":0.35}, // b_end: the end card (was the jingle tag)
+  {"at":"221.028s","sfx":"Assets/MusicVideo/Sfx/punch/foley/can_roll_floor.wav","volume":0.55}, // b_can +0.05 s: the roll (move 1.7 s, ease out)
+  {"at":"222.750s","sfx":"Assets/MusicVideo/Sfx/punch/tiny_clink_a.mp3","volume":0.35} // b_can +1.77 s: it stops, one small tick
+ ]
+}

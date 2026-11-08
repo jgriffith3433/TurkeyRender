@@ -1,0 +1,35 @@
+{
+ "clip": "mx_catwalk_seq05",
+ "seconds": 10,
+ "popCount": 80,
+ "pops": [
+  "0.033s LeftLowerLeg kink 0.106 m",
+  "0.067s RightLowerLeg kink 0.283 m",
+  "0.100s RightLowerLeg kink 0.347 m",
+  "0.133s RightLowerLeg kink 0.112 m",
+  "0.167s RightLowerLeg kink 0.102 m",
+  "0.367s LeftLowerLeg kink 0.104 m"
+ ],
+ "feet": [
+  "left foot on floor moved 2.824 m, worst step 0.050 m at 7.03s",
+  "right foot on floor moved 3.090 m, worst step 0.050 m at 6.07s"
+ ],
+ "hipsTop": 0.922187746,
+ "hipsLow": 0.8306614,
+ "hipsTravel": "(-0.02, -0.02, 2.68)",
+ "limits": {
+  "LeftLowerLeg": 35.4,
+  "RightLowerLeg": 31.5,
+  "RightFoot": 28.7,
+  "LeftFoot": 23.7,
+  "groundHipsCm": 8.9
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_catwalk_seq05 was rejected by admission: foot slide 4.08 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_catwalk_seq05_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_catwalk_seq05_three.mp4"
+ ]
+}

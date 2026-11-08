@@ -1,0 +1,38 @@
+{
+ "clip": "mx_samba_pagode",
+ "seconds": 10,
+ "popCount": 38,
+ "pops": [
+  "0.200s LeftToes kink 0.092 m",
+  "0.300s RightHandIndex3 kink 0.087 m",
+  "0.333s RightHandIndex3 kink 0.110 m",
+  "0.400s RightHandMiddle3 kink 0.101 m",
+  "0.867s RightHandPinky2 kink 0.088 m",
+  "0.900s RightHandRing3 kink 0.110 m"
+ ],
+ "feet": [
+  "left foot on floor moved 3.718 m, worst step 0.050 m at 2.10s",
+  "right foot on floor moved 6.541 m, worst step 0.053 m at 2.33s"
+ ],
+ "hipsTop": 0.9222579,
+ "hipsLow": 0.8550807,
+ "hipsTravel": "(-0.02, -0.01, 0.11)",
+ "limits": {
+  "RightLowerLeg": 28,
+  "Spine": 21,
+  "LeftLowerLeg": 14.3,
+  "groundHipsCm": 14,
+  "Head": 13.1,
+  "LeftFoot": 6.7,
+  "Chest": 5.6,
+  "RightShoulder": 5.4
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_samba_pagode was rejected by admission: foot slide 4.98 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_samba_pagode_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_samba_pagode_three.mp4"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "m_field",
+ "f0": 2817,
+ "f1": 2874,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 93.9,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "5eae55e3189c81ac",
+ "summary": "The strip shows a dark asteroid cluster against a starfield with steady drift and no pops or flicker, but the chase subject (two streaks, two silhouettes) is not visible.",
+ "faults": [
+  {
+   "t": 93.93,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to be a chase with two streaks and two silhouettes, with the camera riding with him. The frames show only a dark asteroid blob, small tan rocks and stars. No character, streaks or chase subject is visible, and the main rock is nearly black against the dark blue sky.",
+   "fix": "Put the chaser and the chased in frame from the first frame of the shot, and light the asteroid rim so it reads as a shape."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4608,
+  "out": 621
+ },
+ "cost": 0.0154
+}

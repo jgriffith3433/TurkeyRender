@@ -22,12 +22,18 @@ namespace TKShock.MV.EditorTools
             if (!Mine(assetPath)) return;
             var m = (ModelImporter)assetImporter;
             var name = Path.GetFileNameWithoutExtension(assetPath); int at = name.IndexOf('@'); if (at >= 0) name = name.Substring(at + 1);
-            var clips = m.defaultClipAnimations;
+            // Settings already in the .meta stay (clipimport writes them); only a first import gets the defaults.
+            bool fresh = m.clipAnimations.Length == 0;
+            var clips = fresh ? m.defaultClipAnimations : m.clipAnimations;
             for (int i = 0; i < clips.Length; i++)
             {
                 clips[i].name = clips.Length == 1 ? name : name + i;
-                clips[i].lockRootRotation = false; clips[i].lockRootHeightY = false; clips[i].lockRootPositionXZ = false;
-                clips[i].keepOriginalOrientation = true; clips[i].keepOriginalPositionY = true; clips[i].keepOriginalPositionXZ = true;
+                if (fresh)
+                {
+                    clips[i].lockRootRotation = false; clips[i].lockRootHeightY = false; clips[i].lockRootPositionXZ = false;
+                    clips[i].keepOriginalOrientation = true; clips[i].keepOriginalPositionY = true; clips[i].keepOriginalPositionXZ = true;
+                }
+                MVClipImport.ApplyTo(clips[i]);   // the measured choice (Director/library/motion/import.json), when there is one
             }
             m.clipAnimations = clips;
         }

@@ -1,0 +1,22 @@
+{
+ "clip": "mx_turn_in_place",
+ "seconds": 3.767,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.470 m, worst step 0.021 m at 1.60s",
+  "right foot on floor moved 0.329 m, worst step 0.013 m at 3.70s"
+ ],
+ "hipsTop": 0.917534947,
+ "hipsLow": 0.9073081,
+ "hipsTravel": "(0.16, 0.00, 0.04)",
+ "limits": {
+  "groundHipsCm": 2.3
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_in_place_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_in_place_three.mp4"
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "id": "door_opens",
+ "f0": 138,
+ "f1": 180,
+ "faults": [],
+ "summary": "The strip is clean: the camera is locked, the figure stands almost still with no pops or flicker, though the hold is stiff.",
+ "model": "claude-sonnet-5-5",
+ "carried": "proof1",
+ "strips": []
+}

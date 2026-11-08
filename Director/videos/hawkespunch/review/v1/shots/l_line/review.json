@@ -1,0 +1,22 @@
+{
+ "id": "l_line",
+ "f0": 1892,
+ "f1": 2005,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 63.067,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "13f9baf5e8f16718",
+ "summary": "The strip is clean: the frames look the same across all eight tiles, with a still face and no pops, flicker or camera movement, which suits the flat, still shot.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3574,
+  "out": 124
+ },
+ "cost": 0.0084
+}

@@ -1,0 +1,22 @@
+{
+ "id": "she_comes",
+ "f0": 180,
+ "f1": 262,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 6,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "4424061254e4b3f6",
+ "summary": "Clean cut strip: the framing, the seated man and the couch hold steady across all eight frames, with no pops, flicker or contact faults.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4355,
+  "out": 471
+ },
+ "cost": 0.0134
+}

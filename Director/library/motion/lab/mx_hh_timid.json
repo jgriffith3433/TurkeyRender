@@ -1,0 +1,23 @@
+{
+ "clip": "mx_hh_timid",
+ "seconds": 12,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 1.047 m, worst step 0.009 m at 2.90s",
+  "right foot on floor moved 0.967 m, worst step 0.009 m at 0.20s"
+ ],
+ "hipsTop": 0.922365248,
+ "hipsLow": 0.9135192,
+ "hipsTravel": "(-0.01, 0.01, 0.01)",
+ "limits": {
+  "groundHipsCm": 5.2,
+  "Head": 0
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_timid_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_timid_three.mp4"
+ ]
+}

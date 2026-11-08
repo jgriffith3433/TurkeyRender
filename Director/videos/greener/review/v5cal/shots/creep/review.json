@@ -1,0 +1,47 @@
+{
+ "id": "creep",
+ "f0": 1275,
+ "f1": 1352,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 42.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "defcce23a06a376f",
+ "summary": "The pastel disc expands smoothly and reads as intended, but the chair behind his legs jumps between the first two tiles and intersects him, and his pose is stiff and symmetrical.",
+ "faults": [
+  {
+   "t": 42.53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The chair behind him is tilted, with its legs splayed left, at 42.49. By 42.53 it is upright and aligned with his legs, with nothing in between, so it looks like a prop snap on the cut.",
+   "fix": "Fix the chair's transform from the first frame of the shot, or hide it, so it does not settle in the opening frames."
+  },
+  {
+   "t": 42.63,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The chair frame overlaps his legs and hands. The chair legs pass through his calves and his hands sit on or in the chair sides, with no clear grip or gap.",
+   "fix": "Move the chair back or to the side so he stands clear of it, or remove it for this shot."
+  },
+  {
+   "t": 42.66,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "He stands frontal and symmetrical with his arms straight down, a stiff mannequin pose. There is no weight shift, no anticipation and no reaction to the disc spreading under his feet.",
+   "fix": "Add a small weight shift or a head or eye glance down at the ring on the beat."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3568,
+  "out": 1032
+ },
+ "cost": 0.0175
+}

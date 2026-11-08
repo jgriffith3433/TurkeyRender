@@ -1,0 +1,22 @@
+{
+ "id": "happens",
+ "f0": 606,
+ "f1": 684,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 20.2,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a3cd307c67691e64",
+ "summary": "The cut lands cleanly on a settled, nearly static head-and-shoulders frame with only slight drift, and I see no pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3580,
+  "out": 124
+ },
+ "cost": 0.0084
+}

@@ -1,0 +1,63 @@
+{
+ "id": "p_hit",
+ "f0": 2175,
+ "f1": 2195,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 72.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "960c217291edbae3",
+ "summary": "The strip has no hard pops or render faults, but the framing and camera drift in the first frames of the shot, and the pose reads as a guard rather than a hook wind-up.",
+ "faults": [
+  {
+   "t": 72.53,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The top of her head is cut off by the frame edge in the first tiles (72.53 to 72.63). The head only fits once the camera drops back in the later tiles.",
+   "fix": "Start the shot with the framing it settles into, with headroom, so the head is not cropped."
+  },
+  {
+   "t": 72.66,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The camera drifts and re-frames over tiles 3 to 5 (72.59 to 72.66). The subject shrinks and her head turns from three-quarter to near profile. This looks like the cut tweening, not a held shot.",
+   "fix": "Lock the camera and head angle from the first frame of the shot, or trim the first 4 frames."
+  },
+  {
+   "t": 72.59,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Her near fist sits against her mouth and chin, covering the lower face. The far hand is raised and open, then drifts down to hip level. This reads as a guard or a cough, not a hook winding up. There is no clear line of action.",
+   "fix": "Pull the fist away from the face and rotate the torso back to show the wind-up. Keep the far hand up as a counterbalance."
+  },
+  {
+   "t": 72.69,
+   "sev": "B",
+   "rule": "hold",
+   "seen": "certain",
+   "what": "From 72.66 to 72.76 the near fist and forearm hardly move, while the far hand sinks slowly. The motion is mushy and nothing builds toward the hook.",
+   "fix": "Hold the guard pose, then add a quick anticipation (a pull-back or a hip turn) before the swing."
+  },
+  {
+   "t": 72.66,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Her expression is blank and fixed, and her eyes stay on one spot. Nothing shows the 'oh no' feel.",
+   "fix": "Add a narrowed-eye or brow change and a head lead into the swing."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3573,
+  "out": 1540
+ },
+ "cost": 0.0225
+}

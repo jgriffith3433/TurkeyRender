@@ -1,0 +1,59 @@
+{
+ "id": "what_you_like",
+ "f0": 813,
+ "f1": 889,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 27.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 28.067,
+   "why": "pose jumps and comes back (0.5)",
+   "file": "spike-00842.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 28.967,
+   "why": "one patch jumps (cell 49, x3.3)",
+   "file": "spike-00869.jpg"
+  }
+ ],
+ "hash": "2ac72e1c4f73b35d",
+ "summary": "The strip is mostly clean, with no clear pops or clipping. The raised wave hand is held almost frozen, and his face stays on the same stare throughout.",
+ "faults": [
+  {
+   "t": 28.2,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The raised waving arm is nearly frozen from 28.06 to 28.30. The forearm and hand barely move, so the wave reads as a held pose, not a slow wave of the world away.",
+   "fix": "Add a slow, clear sweep of the forearm and hand, about 20-30 degrees side to side, with a small overshoot at each end."
+  },
+  {
+   "t": 28.97,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Between 28.96 and 29.03 the torso and arms change pose quickly after the long hold. The lowered arm and torso turn look abrupt, with little settle after the raised arm drops. This may be the measured spike.",
+   "fix": "Add 3-4 frames of ease and settle on the arm drop, or blend the torso turn."
+  },
+  {
+   "t": 28.5,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His face and eyes keep the same fixed stare at camera from 28.06 through 29.20, with no blink or expression change through the dismissive wave. This misses the 'oh, the nerve' feel.",
+   "fix": "Add a blink and a small head tilt or eyebrow raise as the hand rises, and lead the wave with the eyes."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6360,
+  "out": 1179
+ },
+ "cost": 0.0245
+}

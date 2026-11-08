@@ -1,0 +1,75 @@
+{
+  "clip": "mx_baseball_pitching",
+  "played": "mx_baseball_pitching__clean",
+  "clean": true,
+  "footIK": false,
+  "loop": true,
+  "length": 5.217,
+  "humanMotion": true,
+  "hipsY": {
+    "mean": 0.922,
+    "min": 0.815,
+    "max": 0.968
+  },
+  "stance": "standing",
+  "airborneFrac": 0.0,
+  "feetLowestM": 0.074,
+  "rootDriftM": 0.0,
+  "rootFarthestM": 0.54,
+  "handLeft": {
+    "curlMean": 13.8,
+    "curlMin": 13.8,
+    "curlP10": 13.8,
+    "spreadMean": 7.8,
+    "spreadMax": 8.0,
+    "openFrac": 1.0,
+    "fannedFrac": 0.0
+  },
+  "handRight": {
+    "curlMean": 57.0,
+    "curlMin": 11.0,
+    "curlP10": 31.7,
+    "spreadMean": 11.7,
+    "spreadMax": 17.7,
+    "openFrac": 0.04,
+    "fannedFrac": 0.0
+  },
+  "handToFaceMinM": {
+    "left": 0.374,
+    "right": 0.304
+  },
+  "handToFaceFrames": 0,
+  "handToTorsoAxisMinM": {
+    "left": 0.144,
+    "right": 0.195
+  },
+  "handInBodyFrames": 0,
+  "headYawDeg": [
+    -30.5,
+    75.7
+  ],
+  "headPitchDeg": [
+    -20.0,
+    20.0
+  ],
+  "leanFwdMaxDeg": 44.4,
+  "leanMeanDeg": 6.2,
+  "kneeBackwardMaxDeg": 88.2,
+  "kneeBackwardFrames": 5,
+  "peakHand": {
+    "side": "right",
+    "t": 2.1,
+    "mps": 6.48,
+    "farthestReachT": 2.23,
+    "reachM": 0.445
+  },
+  "peakFoot": {
+    "side": "right",
+    "t": 5.2,
+    "mps": 3.39
+  },
+  "frames": 158,
+  "previewSeconds": 5.23,
+  "previewFrom": 0.0,
+  "secondsToMake": 6.5
+}

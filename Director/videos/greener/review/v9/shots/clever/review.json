@@ -1,0 +1,45 @@
+{
+ "id": "clever",
+ "f0": 3024,
+ "f1": 3075,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 100.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 102,
+   "why": "frame difference x3.2 (5.64)",
+   "file": "spike-03060.jpg"
+  }
+ ],
+ "hash": "0da5634ce09beab9",
+ "summary": "The cut is clean, but the rock at 102 s opens a dark gap beside the door and a green floor wedge under the wall, and it snaps into and out of position with little easing.",
+ "faults": [
+  {
+   "t": 102.06,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "The rock exposes a hard black slit between the door's right edge and the wall. It is visible from 102.03 to 102.19. A green floor wedge also shows under the white wainscot on the right. The door and wall read as separate pieces pulling apart, and the flat looks hollow, not like one painted wall.",
+   "fix": "Fill the gap behind the door with wall colour or a backing plane, and keep the door and wainscot rotating together around a floor pivot so the base stays on the floor."
+  },
+  {
+   "t": 102,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The rock starts abruptly between 101.99 and 102.03 with no anticipation. The door tilts and the gap opens within about 2 frames. It then snaps shut between 102.19 and 102.23, with little overshoot or settle. This is the measured frame-difference spike.",
+   "fix": "Add a small counter-lean before the rock. Ease the tilt in and out over 4 to 6 frames, with a small overshoot and settle at the end."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4968,
+  "out": 975
+ },
+ "cost": 0.0197
+}

@@ -1,0 +1,32 @@
+{
+ "name": "g_shrug",
+ "about": "A shrug: both hands open wide and come back, from Idle1HaveNoClue (0.3-1.5 s). mx_shrug imports as a T-pose on our rig, so the local clip stands in.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.3s",
+ "min": "0.8s",
+ "params": {
+  "clip": "Idle1HaveNoClue",
+  "mask": "upper",
+  "weight": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "$mask",
+   "start": 0.3,
+   "once": 1,
+   "weight": "$weight",
+   "for": "=for-0.3",
+   "blend": "0.15s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "tail": 0.4
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "w_lasso",
+ "f0": 3251,
+ "f1": 3326,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 108.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "554250f7b00ca3fa",
+ "summary": "The strip is clean of pops, flicker and camera moves, but the figure is a tiny, static silhouette and no rope or spin shows in the first frames of the lasso shot.",
+ "faults": [
+  {
+   "t": 108.5,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to be the first lasso spun over his head. Across 108.39 to 108.63 the figure is a tiny, dark, unchanging silhouette on the ring. There is no rope, no loop, no raised arm and no wind-up, so the lasso idea doesn't read at the start of the shot.",
+   "fix": "Show a visible rope loop and a clear spin pose from frame 1, and scale the figure up or push the camera in so the action reads."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3588,
+  "out": 679
+ },
+ "cost": 0.014
+}

@@ -1,0 +1,162 @@
+{
+ "name": "flinch_small",
+ "about": "Something small makes him jump: shoulders up, head ducks away from the sound, eyes wide, then he comes down feeling silly. side 1 ducks away from his right, -1 from his left.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "1.9s",
+ "min": "1.5s",
+ "params": {
+  "side": 1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "plant",
+   "foot": "both",
+   "for": "0.05s"
+  },
+  {
+   "at": 0.02,
+   "do": "face",
+   "eyesWide": 0.8,
+   "for": "0.08s",
+   "ease": "out"
+  },
+  {
+   "at": 0.02,
+   "do": "keys",
+   "successive": 0.02,
+   "keys": [
+    {
+     "t": 0.14,
+     "ease": "out",
+     "overshoot": 0.08,
+     "settle": "0.2s",
+     "hold": 0.3,
+     "hips": [
+      0,
+      -0.03,
+      0
+     ],
+     "bones": {
+      "spine": [
+       5,
+       "=side*-5",
+       0
+      ],
+      "chest": [
+       9,
+       "=side*-7",
+       0
+      ],
+      "neck": [
+       9,
+       "=side*-8",
+       0
+      ],
+      "head": [
+       9,
+       "=side*-14",
+       "=side*5"
+      ],
+      "leftShoulder": [
+       0,
+       0,
+       -13
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       13
+      ],
+      "leftUpperArm": [
+       8,
+       0,
+       5
+      ],
+      "rightUpperArm": [
+       8,
+       0,
+       -5
+      ],
+      "leftLowerArm": [
+       12,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       12,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=for-0.45",
+     "ease": "inout",
+     "settle": "0.3s",
+     "bones": {}
+    }
+   ],
+   "release": "0.4s"
+  },
+  {
+   "at": 0.75,
+   "do": "blink",
+   "for": "0.18s"
+  },
+  {
+   "at": 0.8,
+   "do": "face",
+   "eyesWide": 0.1,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.35",
+   "do": "plant",
+   "foot": "both",
+   "weight": 0,
+   "for": "0.3s"
+  },
+  {
+   "at": 0.03,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.65,
+   "for": "0.12s"
+  },
+  {
+   "at": 0.9,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.35,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.03,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.65,
+   "for": "0.12s"
+  },
+  {
+   "at": 0.9,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": "0.5s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.8
+ }
+}

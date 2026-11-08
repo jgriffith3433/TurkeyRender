@@ -1,0 +1,15 @@
+{
+  // Hawkes Punch's commercial: 2000s daytime TV, bright, pastel, over-lit. Exposure up, contrast flat, saturation high, bloom soft and wide, a milky lift, strong faceFill
+  // so both faces are lit like a morning show. Short lenses, everything sharp. Type is the lower-third style: white on the brand pink, popped, bottom of frame.
+  // Lower thirds and the side-effects ticker are `gfx` cues: {"gfx":"lower","title":"HIM","sub":"Patient, 1 of a healthy amount","color":"#ff2a6a","for":"4b"},
+  // {"gfx":"ticker","text":"SIDE EFFECTS MAY INCLUDE ...","label":"IMPORTANT","speed":520,"color":"#ff2a6a","for":"8b"} (speed 520 is too fast to read, as the brief asks).
+  "about": "A bright pastel daytime-TV commercial: over-lit, soft, saturated, every face filled. Ads, talk shows, anything cheesy.",
+  "light": "daytime_tv",
+  "grade": {
+    "exposure": 0.3, "contrast": 0, "saturation": 22, "hue": 2, "vignette": 0, "grain": 0, "bloom": 0.6, "threshold": 0.9, "chroma": 0,
+    "split": 0.12, "splitA": "#b08cc8", "splitB": "#fff0d2", "lift": 0.03, "halation": 0.2, "haze": 0, "veil": 0, "dust": 0, "curve": 0, "skin": 0.5, "sunRim": 0.3, "faceFill": 0.7, "catch": 1
+  },
+  "lens": { "close-up": 60, "medium": 35, "wide": 22, "over-shoulder": 45, "two-shot": 30, "tracking": 28, "apertureScale": 0.9 },
+  "type": { "color": "#ffffff", "style": "pop", "size": 64, "pos": [0.5, 0.14, 0], "in": 0.15, "out": 0.15 },
+  "cues": [ { "at": 0, "light": "key", "intensity": 0 } ]
+}

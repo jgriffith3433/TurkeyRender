@@ -1,0 +1,5 @@
+about: Hands frame the head, chin up on the backbeat. 2 beats, plays once and holds. Pair with a pop on beat 2 (chin -7).
+kind: pose
+len: 2b
+cues:
+  - {at: 0b, do: anim, clip: mx_snake, start: 4.8, speed: 0.95, once: 1, blend: 0.1, for: $len}

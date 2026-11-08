@@ -1,0 +1,37 @@
+{
+ "name": "sit_lawn_chair_sing",
+ "about": "dress_sit with a knowing look held on the camera. Lip sync comes from tools/lipsync.py on its own.",
+ "entry": "sit_chair",
+ "exit": "sit_chair",
+ "length": "4s",
+ "min": "1s",
+ "params": {
+  "clip": "IdleSit14"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "perform",
+   "name": "dress_sit",
+   "clip": "$clip",
+   "for": "$for"
+  },
+  {
+   "at": 0.4,
+   "do": "eyes",
+   "yaw": 2,
+   "pitch": 0,
+   "for": "0.07s"
+  },
+  {
+   "at": 0.9,
+   "do": "eyes",
+   "yaw": 0,
+   "pitch": 0,
+   "for": "0.07s"
+  }
+ ],
+ "test": {
+  "tail": 0.1
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "clip": "mx_sad_walk",
+ "seconds": 1.5670000000000002,
+ "popCount": 4,
+ "pops": [
+  "0.033s LeftLowerLeg kink 0.088 m",
+  "0.100s LeftLowerLeg kink 0.084 m",
+  "0.133s LeftLowerLeg kink 0.121 m",
+  "1.000s LeftLowerLeg kink 0.096 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.370 m, worst step 0.048 m at 1.30s",
+  "right foot on floor moved 0.320 m, worst step 0.046 m at 0.53s"
+ ],
+ "hipsTop": 0.915074,
+ "hipsLow": 0.892329633,
+ "hipsTravel": "(0.00, 0.01, 1.25)",
+ "limits": {
+  "LeftLowerLeg": 18,
+  "LeftFoot": 13.2,
+  "RightLowerLeg": 12.6,
+  "groundHipsCm": 7.8
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_sad_walk was rejected by admission: foot slide 4.88 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sad_walk_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sad_walk_three.mp4"
+ ]
+}

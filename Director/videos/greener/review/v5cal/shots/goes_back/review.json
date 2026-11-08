@@ -1,0 +1,69 @@
+{
+ "id": "goes_back",
+ "f0": 3410,
+ "f1": 3461,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 113.667,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 115.3,
+   "why": "one patch jumps (cell 114.1, x1.5)",
+   "file": "spike-03459.jpg"
+  }
+ ],
+ "hash": "fb547949933db02a",
+ "summary": "He is cropped by the frame edges at the start of the shot, his arms never take up a skirt, and the washed-out pink end frames show him in a stiff hands-on-hips pose rather than gliding to the door.",
+ "faults": [
+  {
+   "t": 113.69,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The shot opens with his head cut off by the top edge and half his body cut off by the right edge. He is jammed against the frame edge, and the empty wall fills most of the picture.",
+   "fix": "Reframe the opening so his whole head and torso sit inside the frame with room in the direction he walks."
+  },
+  {
+   "t": 113.79,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "With the camera still, his head and shoulders drop about 60px over 113.69 to 113.86. He looks like he is sinking or bobbing, not gliding, so the move has no clear weight or intent.",
+   "fix": "Keep his height steady through the opening, or ease the drop in as a deliberate settle."
+  },
+  {
+   "t": 113.86,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "His arms hang loose at his sides and one hand is limp and open. He wears trousers. Nothing shows him taking up a skirt, so the idea of the shot does not read.",
+   "fix": "Add a clear hand gesture gathering the skirt, or change the idea to match what is shown."
+  },
+  {
+   "t": 115.36,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The shot jumps from a blurred close-up of his torso and wall to a very bright, washed-out pink frame. He is small, stiff and standing with both hands on his hips, gazing up. He is not gliding to a door, so the end of the shot does not follow from the start.",
+   "fix": "Hold on the glide to the door through the end of the shot, or make the pink frame a planned flash cut with a clearer pose."
+  },
+  {
+   "t": 115.39,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Both hands are on his hips in a symmetrical, twinned pose. His eyes and head look up with no change of expression across 115.36 to 115.53, so he does not look like he knows what he is doing.",
+   "fix": "Break the symmetry, for example one hand on the hip, and add a head turn or a blink."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4993,
+  "out": 1432
+ },
+ "cost": 0.0243
+}

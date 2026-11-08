@@ -1,0 +1,113 @@
+{
+  // Hawkes Punch's space (Assets/MusicVideo/Props/Punch; punch_tex.py paints the planets and the stars). Origin 300 m up and 1500 m out so nothing else is in the sky.
+  // A star sphere of radius 1400 (its own stars, painted, no twinkle: the sky cue keeps `stars` at 0), a sun ball far off at +x -z and high, with the directional
+  // `sun` of lighting/space_sun.json coming from the same place, so every planet and body is lit hard from one side and rimmed from behind.
+  // Heading 0 at `start` looks at +z: the Earth is behind him and down (-z), the Moon ahead and right, the asteroid field ahead, the comet further, Mars left, Saturn far left, Jupiter far right.
+  // Every planet is an actor with its pivot at its centre, so `move`, `scale`, `rotate`, `spin`, `jump` and the rope work on it as it is. Scales: a prim sphere is 1 m across, so `scale` is the diameter;
+  // the moon, comet, asteroids and satellite are built at radius 1, so `scale` is the radius. Saturn's ring is parented to Saturn and tilted.
+  // Marks are where each stunt starts; a card moves the planets from there. Small turkeys stand on the Moon's crater rim and on Mars (unparented: attach them when the planet is thrown).
+  "origin": [0, 300, 1500],
+  "bounds": [-650, -650, 650, 650],
+  "ceiling": 1400,
+  "light": "space_sun",
+  "solids": {},
+  "models": {
+    "star_dome": "Assets/MusicVideo/Props/Punch/star_dome.fbx", "moon": "Assets/MusicVideo/Props/Punch/moon.fbx", "saturn_ring": "Assets/MusicVideo/Props/Punch/saturn_ring.fbx",
+    "asteroid_a": "Assets/MusicVideo/Props/Punch/asteroid_a.fbx", "asteroid_b": "Assets/MusicVideo/Props/Punch/asteroid_b.fbx", "asteroid_c": "Assets/MusicVideo/Props/Punch/asteroid_c.fbx",
+    "comet": "Assets/MusicVideo/Props/Punch/comet.fbx", "satellite": "Assets/MusicVideo/Props/Punch/satellite.fbx",
+    "rope_unit": "Assets/MusicVideo/Props/Punch/rope_unit.fbx", "lasso_loop": "Assets/MusicVideo/Props/Punch/lasso_loop.fbx",
+    "can": "Assets/MusicVideo/Props/Punch/can.fbx"
+  },
+  "marks": {
+    "center": { "pos": [0, 0, 20], "kind": "stand", "face": 0 },
+    "subject": { "pos": [0, 0, 0], "kind": "stand", "face": 0 },
+    // him: he arrives falling in from -z and drifts
+    "start": { "pos": [0, 0, 0], "kind": "stand", "face": 0 },
+    "drift": { "pos": [4, 1, 10], "kind": "stand", "face": 20 },
+    "drift_other": { "pos": [6, 1.4, 11.5], "kind": "stand", "face": 200 },
+    "tap_cam": { "pos": [1.5, 1.6, 7.2], "kind": "camera" }, "tap_aim": { "pos": [4.5, 1.3, 10.5], "kind": "prop", "head": 0 },
+    // the Earth: behind and below the start, 60 m across, 180 m off
+    "earth": { "pos": [-40, -50, -170], "kind": "prop", "head": 0 },
+    "earth_top": { "pos": [-40, -19.5, -170], "kind": "stand", "face": 0 },
+    "earth_hold": { "pos": [0, -2, 36], "kind": "prop", "head": 0 },
+    // the Moon: radius 7, ahead and right. The big crater is on top (rot 17.4 about x): stand in it at `crater`, hide behind it at `moon_hide`
+    "moon": { "pos": [40, 5, 60], "kind": "prop", "head": 0 },
+    "crater": { "pos": [41.5, 11.1, 60], "kind": "stand", "face": -90, "head": 1.6 },
+    "crater_rim": { "pos": [38.8, 12.0, 60], "kind": "stand", "face": 90 },
+    "moon_hide": { "pos": [40, 5, 69.5], "kind": "stand", "face": 180 },
+    "moon_front": { "pos": [40, 5, 50], "kind": "stand", "face": 0 },
+    "moon_cam": { "pos": [30, 9, 46], "kind": "camera" }, "moon_aim": { "pos": [40, 8, 60], "kind": "prop", "head": 0 },
+    // the asteroid field, 60 rocks round `field`
+    "field": { "pos": [15, 0, 45], "kind": "stand", "face": 0 },
+    "field_in": { "pos": [8, 2, 25], "kind": "stand", "face": 20 },
+    "field_out": { "pos": [24, -3, 68], "kind": "stand", "face": 0 },
+    "field_cam": { "pos": [-12, 7, 12], "kind": "camera" },
+    // the comet, head at `comet`, tail trailing to -z: `comet_tail` is inside the tail 10 m back
+    "comet": { "pos": [30, -20, 120], "kind": "prop", "head": 0 },
+    "comet_tail": { "pos": [30, -20, 108], "kind": "stand", "face": 0 },
+    "comet_cam": { "pos": [24, -16, 96], "kind": "camera" },
+    // the satellite
+    "satellite": { "pos": [-25, 10, 35], "kind": "prop", "head": 0 },
+    "satellite_ride": { "pos": [-25, 11.36, 35], "kind": "stand", "face": 0 },
+    // Mars: 16 across, far left; `mars_round` is the slingshot path's far side
+    "mars": { "pos": [-90, 20, 90], "kind": "prop", "head": 0 },
+    "mars_near": { "pos": [-80, 20, 84], "kind": "stand", "face": -90 },
+    "mars_round": { "pos": [-100, 22, 96], "kind": "stand", "face": 90 },
+    "mars_top": { "pos": [-90, 28.2, 90], "kind": "stand", "face": 0 },
+    // Saturn: 40 across, rings to 46 m out, tilted; `saturn_ring_edge` is a point on the ring
+    "saturn": { "pos": [-150, 60, 260], "kind": "prop", "head": 0 },
+    "saturn_ring_edge": { "pos": [-110, 69, 260], "kind": "prop", "head": 0 },
+    "saturn_near": { "pos": [-105, 60, 235], "kind": "stand", "face": -120 },
+    // Jupiter: 90 across, far right
+    "jupiter": { "pos": [170, 40, 320], "kind": "prop", "head": 0 },
+    "jupiter_near": { "pos": [120, 40, 300], "kind": "stand", "face": 90 },
+    // the worlds volley: where the two stand to throw, and where a thrown world is caught
+    "throw_l": { "pos": [-12, 0, 150], "kind": "stand", "face": 90 },
+    "throw_r": { "pos": [12, 0, 150], "kind": "stand", "face": -90 },
+    "volley_cam": { "pos": [0, 3, 125], "kind": "camera" }, "volley_aim": { "pos": [0, 2, 150], "kind": "prop", "head": 0 },
+    "volley_side": { "pos": [-70, 10, 150], "kind": "camera" },
+    // the stop: forehead to forehead, the Earth put back behind them
+    "stop": { "pos": [0, 0, 200], "kind": "stand", "face": 90 },
+    "stop_other": { "pos": [1.0, 0, 200], "kind": "stand", "face": -90 },
+    "stop_cam": { "pos": [0.5, 1.5, 196.5], "kind": "camera" }, "stop_aim": { "pos": [0.5, 1.55, 200], "kind": "prop", "head": 0 },
+    "earth_back": { "pos": [-10, -30, 330], "kind": "prop", "head": 0 },
+    // the sun: a ball far off, where the key comes from. Shots that look into it get the glare
+    "sun": { "pos": [700, 420, -500], "kind": "prop", "head": 0 },
+    // Hawkes Punch's cut (2026-11-07, the cards agent): where the two stand for each stunt. Pairs are an arm apart for contact.
+    "flick_b": { "pos": [4.2, 1.05, 10.55], "kind": "stand", "face": 200 },
+    "chase_a": { "pos": [6, 1, 14], "kind": "stand", "face": 20 }, "chase_b": { "pos": [5.5, 3.8, 14.6], "kind": "stand", "face": 20 },
+    "sat_chase": { "pos": [-21, 10.5, 29], "kind": "stand", "face": -30 },
+    "sling_in": { "pos": [-60, 18, 70], "kind": "stand", "face": -60 }, "sling_cam": { "pos": [-66, 24, 110], "kind": "camera" },
+    "kick_a": { "pos": [52, -2, 47], "kind": "stand", "face": 90 }, "kick_b": { "pos": [53.1, -2, 47], "kind": "stand", "face": -90 }, "kick_cam": { "pos": [52.5, -1.1, 43.5], "kind": "camera" },
+    "peek_watch": { "pos": [36, 7, 54], "kind": "stand", "face": 40 },
+    "tap_b": { "pos": [3.4, 1.05, 8.95], "kind": "stand", "face": 20 }, "flick_cam": { "pos": [5.9, 1.45, 9.75], "kind": "camera" },
+    "boo_victim": { "pos": [30, -20, 104.5], "kind": "stand", "face": 0 },
+    "earth_hands": { "pos": [-11.5, 1.25, 150], "kind": "prop", "head": 0 }, "throw_l_face": { "pos": [-10.9, 0, 150], "kind": "stand", "face": -90 },
+    "earth_cam": { "pos": [-11.2, 1.35, 147.6], "kind": "camera" }, "earth_cam_aim": { "pos": [-11.4, 1.25, 150], "kind": "prop", "head": 0 },
+    "lane_cam": { "pos": [-16, 1.2, 148.5], "kind": "camera" }, "lane_cam_r": { "pos": [16, 1.2, 148.5], "kind": "camera" },
+    // cameras for the drift
+    "cam_alone": { "pos": [-6, 2.5, -8], "kind": "camera" }, "cam_alone_aim": { "pos": [0, 0.8, 2], "kind": "prop", "head": 0 },
+    "cam_earth_behind": { "pos": [3, 1.6, 9], "kind": "camera" }, "cam_earth_aim": { "pos": [-6, -8, -40], "kind": "prop", "head": 0 },
+    "cam_wide_field": { "pos": [-30, 12, 0], "kind": "camera" }, "cam_wide_aim": { "pos": [30, 0, 70], "kind": "prop", "head": 0 }
+  },
+  "actors": {
+    "star_dome": { "model": "star_dome", "material": "Assets/MusicVideo/Props/Punch/stars.mat", "pos": [0, 0, 0], "scale": 1400, "shadows": false },
+    "sun_ball": { "model": "prim:sphere", "pos": [700, 420, -500], "scale": 70, "color": "#fff3cf", "emission": "#fff0c0", "smooth": 0 },
+    "sun_halo": { "model": "prim:sphere", "pos": [700, 420, -500], "scale": 90, "color": "#ffe9a8", "emission": "#8a7a50", "smooth": 0 },
+    "earth": { "model": "prim:sphere", "pos": [-40, -50, -170], "scale": 60, "texture": "Assets/MusicVideo/Props/Punch/tex/earth.png", "smooth": 0.35, "rot": [0, 140, 23] },
+    "moon": { "model": "moon", "material": "Assets/MusicVideo/Props/Punch/moon.mat", "pos": [40, 5, 60], "scale": 7, "rot": [17.4, 0, 0], "shadows": true },
+    "moon_turkey_a": { "model": "turkey_brown", "pos": [39.2, 11.95, 60.6], "rot": [-14, 120, 0], "scale": 0.9 },
+    "moon_turkey_b": { "model": "turkey_white", "pos": [38.4, 11.75, 59.2], "rot": [-10, 60, 8], "scale": 0.8 },
+    "mars": { "model": "prim:sphere", "pos": [-90, 20, 90], "scale": 16, "texture": "Assets/MusicVideo/Props/Punch/tex/mars.png", "smooth": 0.12, "rot": [0, 60, 15] },
+    "mars_turkey": { "model": "turkey_black", "pos": [-90, 28.1, 90], "rot": [0, 200, 0], "scale": 0.9 },
+    "jupiter": { "model": "prim:sphere", "pos": [170, 40, 320], "scale": 90, "texture": "Assets/MusicVideo/Props/Punch/tex/jupiter.png", "smooth": 0.2, "rot": [0, 0, 5] },
+    "saturn": { "model": "prim:sphere", "pos": [-150, 60, 260], "scale": 40, "texture": "Assets/MusicVideo/Props/Punch/tex/saturn.png", "smooth": 0.2, "rot": [0, 0, 0] },
+    "saturn_ring": { "model": "saturn_ring", "material": "Assets/MusicVideo/Props/Punch/saturn_ring.mat", "parent": "saturn", "pos": [0, 0, 0], "rot": [26, 30, 0], "scale": 0.5, "shadows": true },
+    "comet": { "model": "comet", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [30, -20, 120], "rot": [10, 20, 0], "scale": 2, "shadows": false },
+    "asteroids_a": { "model": "asteroid_a", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "crowd": { "count": 22, "shape": "scatter", "radius": 32, "seed": 11, "modelScale": 1.6, "scaleVar": 0.7 }, "pos": [15, 0, 45] },
+    "asteroids_b": { "model": "asteroid_b", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "crowd": { "count": 20, "shape": "scatter", "radius": 30, "seed": 12, "modelScale": 1.2, "scaleVar": 0.8 }, "pos": [12, 3, 50] },
+    "asteroids_c": { "model": "asteroid_c", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "crowd": { "count": 18, "shape": "scatter", "radius": 34, "seed": 13, "modelScale": 2.4, "scaleVar": 0.6 }, "pos": [18, -4, 42] },
+    "satellite": { "model": "satellite", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-25, 10, 35], "rot": [15, -30, 10], "shadows": true },
+    "can_space": { "model": "can", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [2.5, 1.5, 3], "rot": [40, 0, 70] }
+  }
+}

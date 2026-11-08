@@ -1,0 +1,39 @@
+{
+ "id": "ch_orbit_b",
+ "f0": 1764,
+ "f1": 1816,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 58.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "135b8d5574eff81c",
+ "summary": "The camera arc drifts him to the right edge, where his far arm and shoulder are cropped from 58.93 on. His raised arm also moves very fast between 58.83 and 58.89, which may read as a snap.",
+ "faults": [
+  {
+   "t": 58.93,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The orbit pushes him against the right frame edge. His right arm and hand are cut off by the edge from 58.93 through 59.06, and the body sits tight to the border with empty space on the left.",
+   "fix": "Offset the orbit target or framing so he stays about a third in from the right edge, or shorten the arc so he doesn't end up at the border."
+  },
+  {
+   "t": 58.86,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "His arm goes from a raised, clawed hand at 58.83 to a straight horizontal reach at 58.86. It then drops to hanging at 58.89. That is a big change in one or two frames and may read as a snap at speed.",
+   "fix": "Smooth or retime the arm swing over a few more frames, or trim the clip start so the shot opens after the swing."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3559,
+  "out": 982
+ },
+ "cost": 0.0169
+}

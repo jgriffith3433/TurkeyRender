@@ -1,0 +1,12 @@
+{
+  // greener: the whole video as text. acts/*.json are added on top in name order. AGENTS.md has every cue.
+  "song": "Assets/Videos/greener/Song/audio.mp3",
+  // The models are shared with every video: this link reads the "models" list of TK Shock's score. Add your own below; yours win.
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {
+    "key": { "type": "directional", "rot": [50, -30, 0], "intensity": 1.2, "color": "#ffffff", "lint": "always" }
+  } },
+  // Cuts per bar by section name or kind (DROP, BREAK, section, intro). Going over is a lint error.
+  "targets": { "cutsPerBar": {} }
+}

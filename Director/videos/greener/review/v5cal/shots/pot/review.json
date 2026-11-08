@@ -1,0 +1,39 @@
+{
+ "id": "pot",
+ "f0": 4516,
+ "f1": 4541,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 150.533,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "0fd20cce06445ed0",
+ "summary": "The strip is mostly stable with no camera movement, but the pot is cropped at the top of the frame and the bow changes shape between 150.66 and 150.69.",
+ "faults": [
+  {
+   "t": 150.69,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The bow changes between 150.66 and 150.69. The ribbon tails and loops shift and the diamond knot appears, while the pot and camera stay put. It reads as a small snap in the bow or the lighting on it, not a motion.",
+   "fix": "Hold the bow pose steady across the cut, or check the bow's animation or lighting for a one-frame change."
+  },
+  {
+   "t": 150.56,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The pot is the subject of the shot, but the top of it and the bow are cut off by the top edge of the frame. Most of the frame is empty table.",
+   "fix": "Tilt the camera up or reframe so the whole pot and bow sit in frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 798
+ },
+ "cost": 0.0151
+}

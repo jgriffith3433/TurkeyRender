@@ -1,0 +1,91 @@
+{
+ "id": "ch_orbit_c",
+ "f0": 1970,
+ "f1": 2021,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 65.667,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 66.5,
+   "why": "one patch jumps (cell 180.5, x4)",
+   "file": "spike-01995.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 66.967,
+   "why": "one patch jumps (cell 68.3, x2)",
+   "file": "spike-02009.jpg"
+  }
+ ],
+ "hash": "ede752edcc83967e",
+ "summary": "The shot has a pop in the turkeys at 66.49 to 66.53, a smaller turkey change at 66.96, a cropped head and a camera shift in the opening frames, and the wide framing loses the hands-to-face idea.",
+ "faults": [
+  {
+   "t": 66.53,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 66.49 and 66.53 the turkeys on both sides change at once. At 66.49 they face the camera, with bow ties and the right-hand group visible. At 66.53 the left ones show their backs and the right group is gone. This reads as a pose or animation swap, not motion.",
+   "fix": "Hold the turkey animation continuous across this frame, or hide the swap with a cut or occluder."
+  },
+  {
+   "t": 66.99,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The left turkeys change shape between 66.96 and 66.99. A red wattle and head are visible at 66.96 and gone at 66.99, and the fan silhouettes shift, which suggests a turn or pose snap.",
+   "fix": "Smooth the turkey turn or blend the animation here."
+  },
+  {
+   "t": 65.83,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "From 65.79 to 65.83 the framing shifts. His head is cropped at the top through 65.79, then the camera drops and the background changes to balloons and gift boxes. The camera correction lands in frames 3 to 5 of the shot, so the cut looks like it is tweening.",
+   "fix": "Start the shot on the final framing, or begin the camera move from a settled composition."
+  },
+  {
+   "t": 65.73,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "His head is cut off at the top edge for the first frames of the shot, 65.69 to 65.79. The face is half out of frame.",
+   "fix": "Tilt the camera up or reframe so the head has headroom."
+  },
+  {
+   "t": 65.83,
+   "sev": "C",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Flat unlit yellow and orange confetti squares sit beside his torso and arm at 65.79 and 65.83. They are small and do not hide him.",
+   "fix": "Use shaded or soft-edged confetti, or reduce it near the character."
+  },
+  {
+   "t": 66.7,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The camera has pulled far back. He is a tiny figure in the doorway, so the hands-to-face idea cannot be read. This holds from 66.49 through 67.19, and the wide shot is dominated by the turkeys and the empty floor.",
+   "fix": "Keep the arc at medium or close framing so the hands and face stay readable."
+  },
+  {
+   "t": 65.9,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "At 65.83 to 65.93 both arms hang symmetrically and stiffly at his sides in a T-like stance. There is no anticipation of the hands rising to his face, and the pose is flat.",
+   "fix": "Add a settle or overshoot and start the hands rising toward the face earlier."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6368,
+  "out": 1748
+ },
+ "cost": 0.0302
+}

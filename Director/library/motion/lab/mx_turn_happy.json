@@ -1,0 +1,26 @@
+{
+ "clip": "mx_turn_happy",
+ "seconds": 0.833,
+ "popCount": 2,
+ "pops": [
+  "0.733s LeftLowerLeg kink 0.090 m",
+  "0.767s RightLowerLeg kink 0.150 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.349 m, worst step 0.046 m at 0.73s",
+  "right foot on floor moved 0.382 m, worst step 0.059 m at 0.73s"
+ ],
+ "hipsTop": 0.9157574,
+ "hipsLow": 0.9029767,
+ "hipsTravel": "(0.19, 0.00, 0.01)",
+ "limits": {
+  "groundHipsCm": 8.4,
+  "LeftLowerLeg": 3.9
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_happy_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_happy_three.mp4"
+ ]
+}

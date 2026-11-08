@@ -1,0 +1,61 @@
+{
+ "id": "m_tag",
+ "f0": 3024,
+ "f1": 3119,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 100.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 103.067,
+   "why": "frame difference x54.5 (141.15)",
+   "file": "spike-03092.jpg"
+  }
+ ],
+ "hash": "ce5e5b7efe41bea9",
+ "summary": "Cut strip is stable, but the kick impact at 103.06-103.13 has a white flash with a big pose pop, and the kick leg and the spinning body look stiff and sliding.",
+ "faults": [
+  {
+   "t": 103.06,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 103.03 and 103.09 the whole frame washes to a flat white-grey overlay. The kicker jumps from standing to a high leg while the red-shirt figure goes from upright to tipped over head-first. There are no in-between poses, and by 103.13 he is horizontal and far lower in the frame. The kick contact is never seen, so the hit does not read.",
+   "fix": "Add 2-3 in-between frames of the kick connecting and the victim's reaction. Make the flash a shorter, partial-opacity pulse instead of a full-frame wash."
+  },
+  {
+   "t": 103.13,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The kicker's leg stays rigidly straight and vertical from 103.13 to 103.26 with no follow-through or settle. The victim flies off flat and horizontal, with no anticipation or hip lead, and his limbs trail stiffly. It reads as a prop launched, not a spin like a top.",
+   "fix": "Add a body rotation or spin to the victim, with a little overshoot and settle on the kicker's leg."
+  },
+  {
+   "t": 103.23,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The victim is cut off at the right edge of the frame by 103.19-103.26. The orange rings and spark bursts overlap his head and torso and hide the silhouette, so the spin is hard to read.",
+   "fix": "Move the rings behind him or shrink them, and keep the victim inside the frame."
+  },
+  {
+   "t": 100.83,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "In the cut-in frames 100.83-101.06 the pair are nearly frozen in a stiff hands-pushing pose. Only tiny drift is visible, so it reads as mushy and not as a held beat. The left figure is also mostly out of frame and cut off.",
+   "fix": "Hold a clearer pose, or add a small anticipation move before the kick. Reframe so the kicker is in shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4980,
+  "out": 807
+ },
+ "cost": 0.018
+}

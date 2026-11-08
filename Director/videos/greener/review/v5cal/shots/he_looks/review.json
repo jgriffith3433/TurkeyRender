@@ -1,0 +1,31 @@
+{
+ "id": "he_looks",
+ "f0": 3255,
+ "f1": 3307,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 108.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "da33cb42aae3a5e4",
+ "summary": "The cut is clean and the first four tiles hold steadily, but the head turn toward camera at 108.66 to 108.72 snaps in about three frames with no anticipation.",
+ "faults": [
+  {
+   "t": 108.69,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The head goes from upright and still (108.62) to tilted and turned toward camera by 108.69 to 108.72. The jaw and mouth shift at the same time. There is no anticipation or eye lead, and the change reads as a snap rather than a look. The shot's key beat, 'he looks at the butler', loses its weight.",
+   "fix": "Add 3 to 4 frames of eye lead or a small anticipatory dip before the turn, then ease into the final head pose. Alternatively, start the turn a few frames earlier so the move is spread out."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3566,
+  "out": 868
+ },
+ "cost": 0.0158
+}

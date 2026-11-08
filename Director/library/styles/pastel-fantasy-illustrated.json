@@ -1,0 +1,15 @@
+{
+  // The same pastel world drawn on purpose: flat bands of light, a thin ink line round everything, glossy highlights, so he reads as an illustrated pop character and not a failed realistic one.
+  // A test beside pastel-fantasy: same rigs, same palette, only the picture changes.
+  "about": "A glossy illustrated take on pastel-fantasy: banded light, thin ink line, clean colour. For when a realistic read would fail.",
+  "light": "pastel_day",
+  "grade": {
+    "exposure": 0.02, "contrast": 16, "saturation": 22, "hue": 0, "vignette": 0.1, "grain": 0, "bloom": 0.35, "threshold": 1.15, "chroma": 0,
+    "split": 0.08, "splitA": "#6a4f9a", "splitB": "#ffe6cf", "lift": 0, "halation": 0.04,
+    "haze": 0.008, "veil": 0, "dust": 0, "curve": 0, "skin": 1, "sunRim": 1,
+    "toon": 0.38, "ink": 0.9, "inkWidth": 1.6, "poster": 0
+  },
+  "lens": { "close-up": 65, "medium": 40, "wide": 24, "over-shoulder": 50, "tracking": 35, "apertureScale": 2 },
+  "type": { "color": "#d9708d", "style": "fade", "size": 58, "pos": [0.5, 0.14, 0], "in": 0.3, "out": 0.3 },
+  "cues": [ { "at": 0, "light": "key", "intensity": 0 } ]
+}

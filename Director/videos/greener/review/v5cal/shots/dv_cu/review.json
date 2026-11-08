@@ -1,0 +1,61 @@
+{
+ "id": "dv_cu",
+ "f0": 2741,
+ "f1": 2818,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 91.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 93.1,
+   "why": "flow spike x4.3",
+   "file": "spike-02793.jpg"
+  }
+ ],
+ "hash": "b2e4301b0f90b3f7",
+ "summary": "The cut is clean, but his right arm swings down into a hand-on-hip pose mechanically, and in the second strip the same arm moves fast and its sleeve deforms oddly.",
+ "faults": [
+  {
+   "t": 91.46,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "His right arm (viewer's right) swings from hanging to a bent elbow over about 6 frames with no anticipation or settle. The hand lands on the candelabra and the arm reads as a mushy drift.",
+   "fix": "Hold the arm pose before the move, make the swing quicker, and add a settle on arrival."
+  },
+  {
+   "t": 91.63,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "His right hand lands on or overlaps the gold candelabra stem at the table edge and doesn't wrap it. It looks like it is resting through the prop.",
+   "fix": "Move the hand clear of the candelabra, or key it to grip the stem."
+  },
+  {
+   "t": 93.13,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 93.09 and 93.19 the right arm changes from a bent hand-on-hip pose to a swung-out elbow in 2-3 frames, which matches the flow spike. The sleeve also bulges and collapses as it goes, so the arm looks like it snaps.",
+   "fix": "Add in-between frames or ease the arm move. Smooth the sleeve and shoulder deformation."
+  },
+  {
+   "t": 93.09,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both arms are akimbo and mirror each other in a stiff, twinned silhouette.",
+   "fix": "Offset one elbow or drop one shoulder to break the symmetry."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4930,
+  "out": 627
+ },
+ "cost": 0.0161
+}

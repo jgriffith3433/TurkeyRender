@@ -1,0 +1,122 @@
+{
+ "name": "doctor_punch",
+ "about": "One clean right hand. From the cold stand: the clip PowerRightHandCombat winds up (the right arm back, weight onto the back foot), lands at `hit` seconds from the start (the clip hits 1.05 s in, so the clip starts at hit-1.05) and follows through, the fists closed just before; then IdleBreathe comes back over half a second and the stance returns, hands soft. The face never changes: the same stare. Put `hit` on the beat.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "3.4s",
+ "min": "2.6s",
+ "params": {
+  "hit": 1.4,
+  "clip": "PowerRightHandCombat",
+  "patient": "person"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "eyesWide": 0.15,
+   "smile": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.3,
+   "hands": 0.6,
+   "for": "0.1s"
+  },
+  {
+   "at": "=hit-1.05",
+   "do": "anim",
+   "clip": "$clip",
+   "once": 1,
+   "blend": "0.18s"
+  },
+  {
+   "at": "=hit-1.0",
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": "=hit-0.85",
+   "do": "fingers",
+   "hand": "right",
+   "set": 1,
+   "for": "0.18s"
+  },
+  {
+   "at": "=hit-0.85",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.85,
+   "for": "0.2s"
+  },
+  {
+   "at": "=hit-0.3",
+   "do": "gaze",
+   "weight": 0,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "=hit+0.95",
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "0.5s"
+  },
+  {
+   "at": "=hit+1.0",
+   "do": "stance",
+   "arms": 1,
+   "legs": 1,
+   "for": "0.7s"
+  },
+  {
+   "at": "=hit+1.1",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": "=hit+1.1",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.35,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": "=hit+1.2",
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=hit+1.6",
+   "do": "blink",
+   "for": "0.22s"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "doctor_turn_cold",
+    "for": "2.5s",
+    "turn": 0
+   }
+  ],
+  "tail": 0.5
+ }
+}

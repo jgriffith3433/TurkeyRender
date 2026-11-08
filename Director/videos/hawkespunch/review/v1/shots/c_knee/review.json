@@ -1,0 +1,61 @@
+{
+ "id": "c_knee",
+ "f0": 534,
+ "f1": 609,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 17.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 18,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-00540.jpg"
+  }
+ ],
+ "hash": "d6a0170be20654a3",
+ "summary": "The kick snaps through its arc in about 3 frames, and the kicking leg and shoe clip into the other character's leg and bare foot. The shot's look-down beat can't be checked because the heads are out of the crop.",
+ "faults": [
+  {
+   "t": 17.89,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The lower leg goes from hanging (17.86) to raised and crossing the other leg (17.89) in one frame. There is no anticipation, so the kick looks like a pose snap rather than a swing.",
+   "fix": "Add 2-3 in-between frames, or a small back-swing before the kick, so the leg accelerates into the tap."
+  },
+  {
+   "t": 17.93,
+   "sev": "A",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "At 17.93-17.96 and again at 18.00 the kicking shin and shoe pass through the standing character's lower leg. The sole shows on the far side while the shin is still in front.",
+   "fix": "Move the kicking leg's arc forward, or shorten the swing, so it clears the other character's shin."
+  },
+  {
+   "t": 18.03,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "At 18.00-18.06 the shoe sits on top of the other character's bare foot and overlaps it with no contact reaction.",
+   "fix": "Lift the kicking foot a few cm or shift it sideways so it doesn't intersect the bare foot."
+  },
+  {
+   "t": 18,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "The leg drops back from the high crossed position (17.96-18.00) to hanging by 18.03-18.10 with no overshoot or settle, and the pose is not held on the tap. The motion reads as a quick flick-and-return.",
+   "fix": "Hold the tap contact for 2-3 frames, then ease the leg back with a small overshoot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4965,
+  "out": 1177
+ },
+ "cost": 0.0217
+}

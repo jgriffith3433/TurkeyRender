@@ -1,0 +1,15 @@
+about: Chorus 1 on the stage mark (he faces -z, so `back` +z returns him to the mark during the spin), 48 beats from "I'm your": hook, groove, travel, attitude and the point on "you", hook, spin into a held pose on "know".
+length: 48b
+params: {back: 1.7}
+overlap: {amount: 0.5, head: 0.4, arms: 0.7, hands: 1}
+phrases:
+  - {at: 1:1, hook: hook_gateway}                                                        # "I'm your gateway drug, baby"
+  - {at: 3:1, phrase: snake_frame, accents: [{pop: 3:2, side: 1, chin: -7}]}             # hands frame the head
+  - {at: 3:3, phrase: jazz_square_ribs, accents: [{pop: 3:4, side: -1}, {pop: 4:2, side: 1}]}   # "a little taste"
+  - {at: 4:3, phrase: house_drop}                                                        # drops on "new"
+  - {at: 5:1, phrase: slide_hip, root: [-0.9, 0, 0]}                                     # "you say you're only"
+  - {at: 6:1, phrase: walk_down_lens, root: [0.9, 0, 0], accents: [{pop: 6:2, side: 1}, {pop: 6:4, side: -1}]}   # "passing through"
+  - {at: 7:1, phrase: arm_push}                                                          # "But darling"
+  - {at: 7:4.5, phrase: house_point, accents: [{pop: 8:2, side: -1}, {point: 8:4, off: 9:1, x: 0, y: 0, aim: [400.24, 1.22, 2.22]}]}   # point on "you"
+  - {at: 9:1, hook: hook_gateway}
+  - {at: 11:1, phrase: spin_hold, root: [0, 0, $back]}                                   # "don't pretend you didn't know"

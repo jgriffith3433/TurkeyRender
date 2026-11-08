@@ -42,3 +42,35 @@ client.json
 /Assets/Scenes/MusicVideo.unity
 /Assets/MusicVideo/Generated/
 /Assets/MusicVideo/Generated.meta
+/Assets/Videos/*/Generated/
+/Assets/Videos/*/Generated.meta
+/Assets/Videos/*/*.unity
+/Assets/Videos/*/*.unity.meta
+/Director/videos/*/shots/
+/Director/videos/*/captures/
+/Director/videos/*/stems/
+/Director/videos/*/output/
+/Director/videos/*/previs.mp4
+/Director/current-video
+
+# QA pictures; qa.json stays
+/Director/videos/*/shots/*/*.jpg
+/Director/videos/*/shots/*.mp4
+/Director/videos/*/shots/*.png
+
+# mv choreo play renders (the take yaml and report.md stay)
+Director/videos/*/choreo/out/
+
+# Too big for GitHub, and rebuilt by tools (added 2026-11-08 for the push)
+# `mv call cleanclips` makes these from the Humanoid@*.fbx sources (4.1 GB)
+/Assets/MusicVideo/Motion/Clean/*__clean.anim
+/Assets/MusicVideo/Motion/Clean/*__clean.anim.meta
+# Asset Store pack's 4K textures (one is over GitHub's 100 MB limit); re-import from the Asset Store
+/Assets/AtmosphericHouse/Textures/
+# Renders, review strips, bone dumps and audio copies in backups
+/Director/videos/**/*.mp4
+/Director/videos/**/*.mov
+/Director/videos/**/*.webm
+/Director/videos/*/review-strips/
+/Director/videos/**/_backup/**/*.wav
+/Director/videos/**/*.bones.json

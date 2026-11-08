@@ -1,0 +1,31 @@
+{
+ "id": "c2_orbit_a",
+ "f0": 3642,
+ "f1": 3693,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 121.4,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "0712c7ddb2158fa9",
+ "summary": "The cut strip is mostly clean, with no pops or flicker and a smooth orbit, but a second dancer in an identical pose is stuck behind the lead and reads as a twinned, overlapping silhouette.",
+ "faults": [
+  {
+   "t": 121.52,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "A second dark-clad dancer stays directly behind the lead in a near-identical pose (arms folded up across the chest, same stance). Their head and shoulder overlap the lead's, so the two silhouettes merge into one muddled shape. This reads as a twinned clone rather than a clear line of action, and the shot is meant to be about one man.",
+   "fix": "Remove the clone from this shot, or offset its timing and pose and move it away from the lead so the silhouettes separate."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3574,
+  "out": 1018
+ },
+ "cost": 0.0173
+}

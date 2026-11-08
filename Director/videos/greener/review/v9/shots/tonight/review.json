@@ -1,0 +1,51 @@
+{
+ "id": "tonight",
+ "f0": 1018,
+ "f1": 1095,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 33.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 35.433,
+   "why": "one patch jumps (cell 79.4, x1.8)",
+   "file": "spike-01063.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 35.867,
+   "why": "one patch jumps (cell 92.8, x2.1)",
+   "file": "spike-01076.jpg"
+  }
+ ],
+ "hash": "4de3ec892173341a",
+ "summary": "The shot mostly holds as a flat look, but the head and torso snap around 35.46 to 35.53, and there is a smaller body shift over the first frames after the cut.",
+ "faults": [
+  {
+   "t": 35.46,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "From 35.43 to 35.53 the head drops and tilts hard over about three frames. The torso and collar shift down, and the neck looks stretched and long at 35.46-35.49. It reads as a snap, not a move with anticipation and settle.",
+   "fix": "Smooth or retime the head and spine keys across 35.40-35.55 and add an ease into the tilt. Shorten the neck stretch."
+  },
+  {
+   "t": 34.1,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "After the cut, the body keeps shifting over frames 3 to 6 (34.03-34.20). The collar rises, the shoulders widen and the arm swings into frame. The shot is not settled on its first frames.",
+   "fix": "Start the shot on the settled pose, or trim the first 5 frames of the move."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6371,
+  "out": 1341
+ },
+ "cost": 0.0262
+}

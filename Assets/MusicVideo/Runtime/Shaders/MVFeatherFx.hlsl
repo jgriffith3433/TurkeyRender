@@ -4,7 +4,7 @@
 // Loose feathers. No particle system: each one's position is written down as a function of time, so slow motion and scrubbing are free.
 CBUFFER_START(UnityPerMaterial)
 float4 _ColorA, _ColorB, _P0, _P1, _P2;
-float _Mode, _Age, _Dur, _Height, _Radius, _Spread, _Size, _Life, _Thin, _Floor, _Drag, _Swirl;
+float _Mode, _Age, _Dur, _Height, _Radius, _Spread, _Size, _Life, _Thin, _Floor, _Drag, _Swirl, _Water;
 CBUFFER_END
 
 struct A { float4 p : POSITION; float2 uv : TEXCOORD0; float4 d : TEXCOORD1; };   // d: four seeds
@@ -73,6 +73,7 @@ half4 FragForward(MVF i, bool front : SV_IsFrontFace) : SV_Target
 {
     half4 t = SAMPLE_TEXTURE2D(_FeatherTex, sampler_FeatherTex, i.uv);
     clip(t.a - .5);
+    if (_Water > 0) return half4(i.col.rgb * _Water, 1);
     float3 n = normalize(i.nw); if (!front) n = -n;
     return MVLight(i.ws, n, i.col.rgb * t.r, i.col.a, _Thin, .2, i.pos);
 }

@@ -1,0 +1,63 @@
+{
+ "name": "walk_plain",
+ "about": "A plain man's walk with no hips and no skirt, Walk1, narrow feet and hanging arms, that stops cleanly on its mark and settles into the plain stand. For the dip. `to` comes from the card's a>b.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "2.57s",
+ "min": "1.7s",
+ "params": {
+  "to": [
+   0,
+   0,
+   0
+  ],
+  "dist": 0,
+  "clip": "Walk1",
+  "stride": 1.4
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "legs": 0,
+   "arms": 0,
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "walk",
+   "clip": "$clip",
+   "to": "$to",
+   "for": "=for-0.45",
+   "stride": "$stride",
+   "soft": 0.25,
+   "softOut": 0.5,
+   "blend": 0.2
+  },
+  {
+   "at": "=for-0.5",
+   "do": "perform",
+   "name": "stand",
+   "blend": 0.45,
+   "settle": 0.4
+  }
+ ],
+ "test": {
+  "tail": 0.4
+ }
+}

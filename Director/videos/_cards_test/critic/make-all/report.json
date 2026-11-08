@@ -1,0 +1,173 @@
+{
+ "name": "_cards_test 0-204.196 s",
+ "video": "_cards_test",
+ "from": 0,
+ "to": 204.196,
+ "actors": [
+  "person"
+ ],
+ "fps": 30,
+ "frames": 6125,
+ "seconds": 204.13,
+ "zerog": false,
+ "cuts": 12,
+ "principles": {
+  "arcs": {
+   "score": 0,
+   "note": "median bend 0 over 3 moves, 100% straight lines",
+   "partial": false
+  },
+  "ease": {
+   "score": 2.3,
+   "note": "speed shape 0.77 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame",
+   "partial": false
+  },
+  "timing": {
+   "score": 9.7,
+   "note": "11 holds (median 2.6 s), 1% of frames dead still, fast parts median 0.3 s",
+   "partial": false
+  },
+  "anticipation": {
+   "score": 0,
+   "note": "3 big moves: 0 with anticipation, 0 with overshoot and settle",
+   "partial": false
+  },
+  "overlap": {
+   "score": 9.1,
+   "note": "parts' speed profiles agree 0.38 (1 = everything moves as one); typical lag between parts 5 frames",
+   "partial": false
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 0 cm/s",
+   "partial": false
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 204.13 s",
+   "partial": false
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.6,
+   "note": "11 key poses, readability 0.65 (best of front, side, three-quarter), 91% twinned",
+   "partial": false
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 46 deg, spread 31 deg, head level",
+   "partial": false
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "total": 6.7,
+ "events": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.LeftHand",
+   "sev": 0.88,
+   "what": "LeftHand travels 38 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.RightHand",
+   "sev": 0.88,
+   "what": "RightHand travels 38 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.Head",
+   "sev": 0.88,
+   "what": "Head travels 38 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.LeftHand",
+   "sev": 0.64,
+   "what": "LeftHand travels 38 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.RightHand",
+   "sev": 0.64,
+   "what": "RightHand travels 38 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.Head",
+   "sev": 0.64,
+   "what": "Head travels 38 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.RightHand",
+   "sev": 0.6,
+   "what": "RightHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.Head",
+   "sev": 0.6,
+   "what": "Head starts at 100% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.LeftHand",
+   "sev": 0.88,
+   "what": "LeftHand travels 38 cm in a straight line (bend 0)",
+   "also": [
+    "straight",
+    "no-prep",
+    "abrupt-start"
+   ]
+  }
+ ],
+ "perActor": {
+  "person": {
+   "total": 6.7,
+   "verdict": "looks animated, not acted: arcs and anticipation give it away (6.7/10)"
+  }
+ },
+ "verdict": "looks animated, not acted: arcs and anticipation give it away (6.7/10)"
+}

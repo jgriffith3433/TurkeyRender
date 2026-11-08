@@ -1,0 +1,13 @@
+{
+  // 30 seconds: problem, turn, product, line. The product is in the last third and the logo holds for 2 seconds.
+  "about": "A 30 second spot.",
+  "aspect": [16, 9], "render": [1920, 1080], "fps": 24, "length": 30,
+  "pacing": { "avgSeconds": [1.5, 3.5], "maxSeconds": 6, "shots": [10, 18] },
+  "beats": [
+    { "part": "hook", "seconds": 3, "job": "stop the thumb in the first 3 seconds" },
+    { "part": "problem", "seconds": 8, "job": "a small truth everyone knows" },
+    { "part": "turn", "seconds": 7, "job": "the idea arrives" },
+    { "part": "proof", "seconds": 7, "job": "see it work" },
+    { "part": "line", "seconds": 5, "job": "the line and the logo, held" }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "sparrow_away",
+ "f0": 478,
+ "f1": 529,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 15.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "eff98370239f8162",
+ "summary": "The strip has no pops or flicker, but the sparrow sits against the left edge with its head cut off, and its feet look to float above the fence top.",
+ "faults": [
+  {
+   "t": 15.96,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The sparrow is pushed against the left and top edge. Its head and face are cropped off, so the 'looks at us' beat can't be read. This holds across all tiles.",
+   "fix": "Move the bird or camera so the whole head is inside the frame, with some room on the left."
+  },
+  {
+   "t": 16.1,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The bird's thin feet sit at about the horizon line, well above the fence tops. There is a visible gap, so it reads as floating or standing behind the fence, not perched on it.",
+   "fix": "Lower the bird so its feet press onto the fence top, or move the fence so it covers the feet."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3578,
+  "out": 747
+ },
+ "cost": 0.0146
+}

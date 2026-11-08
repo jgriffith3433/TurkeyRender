@@ -1,0 +1,45 @@
+{
+ "id": "ch_glide",
+ "f0": 1713,
+ "f1": 1764,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 57.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 57.933,
+   "why": "one patch jumps (cell 106.9, x2.6)",
+   "file": "spike-01738.jpg"
+  }
+ ],
+ "hash": "91be2aee92953a9c",
+ "summary": "The cut strip is mostly clean, with a stiff twinned arm pose in the crouch. The close-up has a head-turn snap between 58.03 and 58.06.",
+ "faults": [
+  {
+   "t": 58.06,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 58.03 and 58.06 the head goes from near front-facing to a three-quarter turn with eyes looking off right in one frame. There is no in-between, so it reads as a snap rather than a turn leading with the eyes. The neck and hair shift at the same time. The 57.93 to 57.96 hair and head jitter is the same kind of fault but smaller.",
+   "fix": "Add 2-3 in-between frames on the head yaw, or smooth the head rotation curve. Lead with the eyes and add a blink on the turn."
+  },
+  {
+   "t": 57.29,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "In the crouch he holds both arms straight out in front, nearly parallel and symmetrical. The silhouette is stiff with no clear line of action, and the hands are barely articulated.",
+   "fix": "Offset the two arms, with one higher and one trailing. Add a wrist or hand shape and a small overshoot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4964,
+  "out": 1054
+ },
+ "cost": 0.0205
+}

@@ -1,0 +1,22 @@
+{
+ "id": "tv_can",
+ "f0": 5137,
+ "f1": 5175,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 171.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a7fff0f346f4f899",
+ "summary": "The can turns slowly and steadily through the strip, the framing and lighting stay consistent across the cut, and I can't see a pop, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3556,
+  "out": 479
+ },
+ "cost": 0.0119
+}

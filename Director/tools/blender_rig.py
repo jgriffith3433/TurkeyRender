@@ -1,10 +1,12 @@
 """Builds the person: blender -b -P blender_rig.py -- unused.glb outdir [stages]
-Stages (comma list, default all): build, rig, maps, paint, hair, final, and check:t+face+hand+down+sit+run+tv+expr+grip. Each saves its .blend in gen/person_work.
+Stages (comma list, default all): build, rig, maps, paint, hair, final, and check:t+face+hand+down+sit+run+tv+expr+close+grip. Each saves its .blend in gen/person_work.
 
 He is no longer a remeshed scan. The clean surfaces come from artist-modelled Mixamo parts already in
 phoriginsassets/models (head with real ears and eyelids, hands with real fingers, a crew-neck top, trousers), refitted to
 the man in the reference images. Their skin weights are artist-made, so shoulders and hips deform properly.
-The face comes from gen/face_tex.png and gen/person_work/tex/side_left.png; cloth and skin colour are flat albedo."""
+The face comes from gen/face_tex.png and gen/person_work/tex/side_left.png; cloth and skin colour are flat albedo.
+The hands are rebuilt from anatomy on the Mixamo mesh (sculpt_hand, hand_weights, paint_hand) and take their own strip of the Body maps (hand_uv).
+Judge them with tools/person_hands.py: five poses, four angles, a hero close-up."""
 import bpy, bmesh, sys, os, math, json
 import numpy as np
 from mathutils import Vector, Matrix
@@ -19,6 +21,7 @@ TEX = os.path.join(WORK, "tex")
 MODELS = r"C:\Projects\phoriginsassets\models"
 os.makedirs(OUT, exist_ok=True)
 SIDES = (("Left", 1), ("Right", -1))   # he faces -Y, so his left is +X
+FINGERS = ("Thumb", "Index", "Middle", "Ring", "Pinky")
 SKIN_TONE = np.array([.737, .595, .506])   # the cheek in face_tex.png, as stage_paint prints it (CHEEK TONE): arms, hands, feet and neck all match it
 JAW_LINE = np.array([(0, 1.527), (.036, 1.542), (.063, 1.582), (.075, 1.60), (.2, 1.60)])   # |x|, z of the jaw's edge from the front
 NECK_HOLE = (-.008, .078, .063)        # the crew neck: centre y, half width, half depth
@@ -345,9 +348,9 @@ def make_arm(hand, J, n):
     for d in D[1:]:
         ry = np.interp(d, prof[:, 0], prof[:, 1]); rz = np.interp(d, prof[:, 0], prof[:, 2])
         c = c0 + axis * d
-        c = c + (wr + axis * d - c) * float(smoothstep(0, .1, np.array(d)))
+        c = c + (wr + axis * d - c) * float(smoothstep(0, .13, np.array(d)))
         ell = 1 / np.sqrt((np.cos(th) / ry) ** 2 + (np.sin(th) / rz) ** 2)
-        k = float(smoothstep(0, .06, np.array(d)))
+        k = float(smoothstep(0, .10, np.array(d)))
         rr = r0 * (ry / prof[0, 1] * .5 + rz / prof[0, 2] * .5) * (1 - k) + ell * k
         rr = rr + .007 * np.exp(-((d - L_fore) / .022) ** 2) * np.exp(-(th / .7) ** 2)       # the point of the elbow, on the +Y side
         rr = rr + .004 * np.exp(-((d - (L_fore - .09)) / .05) ** 2) * np.cos(th - 2.2) ** 2  # forearm muscle
@@ -367,44 +370,54 @@ def make_arm(hand, J, n):
     bm.to_mesh(hand.data); bm.free(); hand.data.update()
     m_ = np.zeros(len(hand.data.vertices)); m_[n0:] = 1
     vv_ = co(hand)
-    m_[:n0] = smoothstep(.04, .015, np.linalg.norm(vv_[:n0] - c0, axis=1))    # the last of the hand relaxes into the arm too
-    set_co(hand, laplace(vv_, edges_of(hand), 12, .5, m_))
+    m_[:n0] = smoothstep(.065, .018, np.linalg.norm(vv_[:n0] - c0, axis=1))    # the last of the hand relaxes into the arm too
+    set_co(hand, laplace(vv_, edges_of(hand), 18, .5, m_))
 
 
 def make_foot(J, side, n, name):
-    """A bare foot: heel-to-ball loft and five toes as one voxel-remeshed surface, sole flat on the floor."""
+    """A low sneaker on the foot: a lofted upper over a wider, flat rubber sole with a small heel and toe spring, a collar at the
+    ankle, and a sock tube into the jeans; one voxel-remeshed surface. Everything on it is part 2; the paint tells the sole
+    from the upper by height (SOLE_TOP). Laces, eyelets and the toe bumper are painted, so the mesh stays light."""
     an = J[n + "Foot"]
     bm = bmesh.new()
-    # Stations from heel to ball: y from the ankle (forward is -Y), half width, height of the top, centre shift.
-    st = [(.070, .012, .012, 0), (.062, .028, .040, 0), (.040, .033, .062, 0), (.010, .033, .078, 0), (-.030, .035, .072, .002), (-.075, .041, .052, .004), (-.115, .047, .036, .004), (-.145, .047, .027, .004), (-.165, .040, .020, .004)]
-    N = 28; rings = []
-    for y, w, h, cx in st:
-        ring = []
-        for i in range(N):
-            t = i / N * 2 * math.pi
-            x = cx + w * math.copysign(abs(math.cos(t)) ** .7, math.cos(t))
-            sn = math.sin(t)
-            z = (sn * h if sn > 0 else sn * .006) + .007
-            ring.append(bm.verts.new((x, y, max(z, .001))))
-        rings.append(ring)
-    for r0, r1 in zip(rings, rings[1:]):
-        for i in range(N):
-            j = (i + 1) % N
-            bm.faces.new((r0[i], r0[j], r1[j], r1[i]))
-    bm.faces.new(rings[0][::-1]); bm.faces.new(rings[-1])
-    # The ankle: a tube into the jeans.
-    for z0, z1, r0_, r1_ in ((.03, .13, .036, .032), (.13, .20, .032, .030)):
-        bmesh.ops.create_cone(bm, cap_ends=True, segments=24, radius1=r0_, radius2=r1_, depth=z1 - z0, matrix=Matrix.Translation((0, .012, (z0 + z1) / 2)))
-    # Toes: x, y start, y end, radius, height. +x is the big-toe side.
-    for x, y0, y1, r, h in ((.031, -.15, -.215, .0135, .019), (.0065, -.16, -.205, .0095, .015), (-.0125, -.155, -.197, .0088, .014), (-.029, -.148, -.186, .0082, .013), (-.043, -.135, -.170, .0078, .012)):
-        for f, rr in ((0, r), (.5, r * .94), (1, r)):
-            bmesh.ops.create_uvsphere(bm, u_segments=14, v_segments=10, radius=rr, matrix=Matrix.Translation((x, y0 + (y1 - y0) * f, h - .004 * f)))
-        bmesh.ops.create_cone(bm, cap_ends=True, segments=12, radius1=r * .96, radius2=r * .96, depth=abs(y1 - y0), matrix=Matrix.Translation((x, (y0 + y1) / 2, h - .002)) @ Matrix.Rotation(math.pi / 2, 4, "X"))
+    N = 32
+    def loft(st, z0_of, zh_of, cap0=True, cap1=True):
+        rings = []
+        for y, w, h, cx in st:
+            ring = []
+            for i in range(N):
+                t = i / N * 2 * math.pi
+                x = cx + w * math.copysign(abs(math.cos(t)) ** .72, math.cos(t))
+                sn = math.sin(t)
+                z = z0_of(y) + (sn * h if sn > 0 else sn * zh_of(y))
+                ring.append(bm.verts.new((x, y, z)))
+            rings.append(ring)
+        for r0, r1 in zip(rings, rings[1:]):
+            for i in range(N):
+                j = (i + 1) % N
+                bm.faces.new((r0[i], r0[j], r1[j], r1[i]))
+        if cap0: bm.faces.new(rings[0][::-1])
+        if cap1: bm.faces.new(rings[-1])
+    # The sole: y from the ankle (forward is -Y), half width, how far the top sits above its bottom, centre shift.
+    sole = [(.090, .016, .018, 0), (.086, .032, .022, 0), (.075, .040, .025, 0), (.050, .043, .026, 0), (.015, .043, .025, .001), (-.030, .044, .023, .002),
+            (-.075, .049, .021, .003), (-.115, .055, .020, .004), (-.150, .057, .019, .004), (-.185, .053, .019, .004), (-.215, .044, .018, .003), (-.240, .028, .016, .002), (-.250, .012, .012, .002)]
+    def sole_bottom(y): return .009 * float(smoothstep(-.17, -.25, np.array(y))) ** 1.5 + .004 * float(smoothstep(.06, .09, np.array(y)))   # toe spring, the heel's rounded edge
+    loft(sole, sole_bottom, lambda y: .0)
+    # The upper: sits on the sole, its bottom edge tucked inside the sole's wall.
+    up = [(.084, .020, .034, 0), (.078, .034, .068, 0), (.060, .039, .086, 0), (.035, .040, .092, .001), (.005, .040, .090, .001), (-.030, .041, .082, .002),
+          (-.070, .045, .068, .003), (-.110, .051, .054, .004), (-.150, .053, .043, .004), (-.185, .049, .035, .003), (-.215, .040, .028, .003), (-.238, .022, .019, .002)]
+    loft(up, lambda y: sole_bottom(y) + .016, lambda y: .006)
+    # The collar and the sock into the jeans.
+    for z0, z1, r0_, r1_ in ((.075, .13, .037, .033), (.13, .20, .033, .031)):
+        bmesh.ops.create_cone(bm, cap_ends=True, segments=24, radius1=r0_, radius2=r1_, depth=z1 - z0, matrix=Matrix.Translation((.001, .018, (z0 + z1) / 2)))
+    # The heel counter and the toe box read as real volume: two soft blobs inside the upper.
+    bmesh.ops.create_uvsphere(bm, u_segments=16, v_segments=10, radius=.030, matrix=Matrix.Translation((0, .062, .055)) @ Matrix.Diagonal((1.15, .9, 1.25, 1)))
+    bmesh.ops.create_uvsphere(bm, u_segments=16, v_segments=10, radius=.024, matrix=Matrix.Translation((.004, -.205, .034)) @ Matrix.Diagonal((1.7, 1.3, .9, 1)))
     me = bpy.data.meshes.new(name); bm.to_mesh(me); bm.free()
     o = bpy.data.objects.new(name, me); bpy.context.scene.collection.objects.link(o)
-    m = o.modifiers.new("v", "REMESH"); m.mode = "VOXEL"; m.voxel_size = .0052; m.use_smooth_shade = True
+    m = o.modifiers.new("v", "REMESH"); m.mode = "VOXEL"; m.voxel_size = .0042; m.use_smooth_shade = True
     activate(o); bpy.ops.object.modifier_apply(modifier="v")
-    v = laplace(co(o), edges_of(o), 5, .5)
+    v = laplace(co(o), edges_of(o), 4, .5)
     # The big toe goes on the inner side: toward -X on his left foot, +X on his right.
     if side > 0: v[:, 0] *= -1
     t = math.radians(9) * side          # feet turned out a little
@@ -419,13 +432,25 @@ def make_foot(J, side, n, name):
     gF = o.vertex_groups.new(name=n + "Foot"); gT = o.vertex_groups.new(name=n + "ToeBase"); gL = o.vertex_groups.new(name=n + "Leg")
     f = (toe - an)[:2]; fl = float(np.linalg.norm(f)); f = f / fl
     along = (v[:, :2] - an[:2]) @ f
-    wt = smoothstep(fl - .025, fl + .02, along)
+    wt = smoothstep(fl - .025, fl + .02, along) * smoothstep(.07, .035, v[:, 2])   # the sole flexes at the ball; the collar stays with the foot
     wl = smoothstep(an[2] + .01, an[2] + .06, v[:, 2])
     for i in range(len(v)):
         if wl[i] > 0: gL.add([i], float(wl[i]), "REPLACE")
         if wt[i] > 0: gT.add([i], float(wt[i] * (1 - wl[i])), "REPLACE")
         gF.add([i], float((1 - wt[i]) * (1 - wl[i])), "REPLACE")
     return o
+
+
+SOLE_TOP = .0265     # below this (plus the toe spring) the shoe is sole rubber, in the paint
+
+
+def shoe_local(P, J, n, s):
+    """Foot-frame coordinates of world points: x across (+ the big-toe side), y along (forward negative), z up."""
+    an = np.array(J[n + "Foot"]); t = math.radians(9) * s; c, s_ = math.cos(t), math.sin(t)
+    q = P[:, :2] - an[:2]
+    x = c * q[:, 0] + s_ * q[:, 1]; y = -s_ * q[:, 0] + c * q[:, 1]
+    if s > 0: x = -x
+    return x, y, P[:, 2]
 
 
 # Sculpted cloth. Each crease is drawn by hand as a line on the front or back of him (x, z in metres), the way a sculptor
@@ -470,6 +495,440 @@ def apply_folds(o, folds, width, amp):
     fm = smoothstep(.0, .3, -n[:, 1]); bk = smoothstep(.0, .3, n[:, 1])
     h = fold_field(P, folds["front"], width, amp) * fm + fold_field(P, folds["back"], width, amp) * bk
     return v, n, h
+
+
+# ---- Hands. The Mixamo hand gives the topology, the wrist ring and a clean web between the fingers; everything that reads in a
+# close-up is rebuilt on it from a man's anatomy. One function of position (hand_coords, finger_coords) is shared by the sculpt,
+# the weights and the paint, so creases, nails and the geometry can't drift apart.
+# Lengths are phalanx lengths in metres, joint to joint: the proximal one is the longest, as in a real finger. The Mixamo fingers are
+# three equal segments with the knuckle too far down the hand, which is why they read as tubes. (lengths, width, back, web)
+HAND_SPEC = {"Index": ((.0440, .0265, .0235), .91, .0085, .0225), "Middle": ((.0475, .0295, .0245), .94, .0075, .0245),
+             "Ring": ((.0445, .0285, .0240), .89, .0150, .0230), "Pinky": ((.0345, .0205, .0200), .79, .0145, .0200),
+             "Thumb": ((.0430, .0330, .0290), 1.07, 0, .0360)}   # widths 6% under the first build: his hands read thick in a close-up
+HAND_WEB_OLD = {"Index": .012, "Middle": .010, "Ring": .006, "Pinky": .014, "Thumb": .034}
+THUMB_DORSAL = np.array([0, -.72, .69])      # the thumb's nail faces out and up; the other four face straight back from the palm
+NAIL_LEN = .0118                             # root to free edge, on the middle finger
+
+
+def unit(x): return x / np.linalg.norm(x, axis=-1, keepdims=True)
+
+
+def hand_chain(J, n, f, s):
+    return np.array([J[f"{n}Hand{f}{i}"] for i in (1, 2, 3, 4)]) * np.array([s, 1, 1.])
+
+
+def hand_frame(J, n, s):
+    """Mirrored into the left hand's space. a along the hand from the wrist, b across toward the little finger, z out of its back."""
+    m = np.array([s, 1, 1.]); W = np.array(J[n + "Hand"]) * m
+    ex = unit(np.array(J[n + "HandMiddle1"]) * m - W)
+    ey = (np.array(J[n + "HandPinky1"]) - np.array(J[n + "HandIndex1"])) * m; ey = unit(ey - ex * (ey @ ex))
+    return W, np.array([ex, ey, np.cross(ex, ey)])
+
+
+def chain_project(P, Q):
+    """Nearest point on a joint chain. Returns arc length (running past both ends), the point and the tangent."""
+    seg = Q[1:] - Q[:-1]; L = np.linalg.norm(seg, axis=1); T = seg / L[:, None]; S0 = np.concatenate([[0], np.cumsum(L)[:-1]])
+    best = np.full(len(P), 1e9); sb = np.zeros(len(P)); Cb = np.zeros_like(P); Tb = np.zeros_like(P)
+    for i in range(len(L)):
+        t = (P - Q[i]) @ T[i]
+        tc = np.clip(t, -1 if i == 0 else 0, 1 if i == len(L) - 1 else L[i])
+        c = Q[i] + tc[:, None] * T[i]; d = np.linalg.norm(P - c, axis=1)
+        k = d < best
+        best[k] = d[k]; sb[k] = (S0[i] + tc)[k]; Cb[k] = c[k]; Tb[k] = T[i]
+    return sb, Cb, Tb
+
+
+def chain_at(s, Q):
+    """Point and smoothed tangent at arc length s."""
+    seg = Q[1:] - Q[:-1]; L = np.linalg.norm(seg, axis=1); T = seg / L[:, None]; K = np.concatenate([[0], np.cumsum(L)])
+    i = np.clip(np.searchsorted(K, s, side="right") - 1, 0, len(L) - 1)
+    C = Q[i] + (s - K[i])[:, None] * T[i]
+    mid = (K[:-1] + K[1:]) / 2
+    return C, unit(np.array([np.interp(s, mid, T[:, j]) for j in range(3)]).T)
+
+
+def finger_axes(T, f, ez):
+    up = THUMB_DORSAL if f == "Thumb" else ez
+    u = unit(up - T * (T @ up)[:, None]); return u, np.cross(T, u)
+
+
+def finger_coords(P, Q, f, ez):
+    """s along the finger, theta round it (0 the nail side, pi the pad), r from its axis."""
+    s, C, T = chain_project(P, Q)
+    u, w = finger_axes(T, f, ez)
+    rel = P - C
+    return s, np.arctan2((rel * w).sum(1), (rel * u).sum(1)), np.linalg.norm(rel, axis=1)
+
+
+def joint_arcs(Q):
+    L = np.linalg.norm(Q[1:] - Q[:-1], axis=1); return L[0], L[0] + L[1], L.sum()
+
+
+def finger_shape(f, Q, s):
+    """Half width, half depth to the back and half depth to the pad at s. The joints are the widest part, the phalanges waist between
+    them, and each pad bulges on the palm side and falls into the crease at the joint."""
+    j1, j2, j3 = joint_arcs(Q); k = HAND_SPEC[f][1]
+    S_ = [j1 * .35, j1 * .68, j1 - .002, j1 + (j2 - j1) * .5, j2 - .001, j2 + (j3 - j2) * .42, j3 - .0095]
+    if f == "Thumb":
+        S_ = [j1 * .55, j1 * .85, j1 + (j2 - j1) * .1, j1 + (j2 - j1) * .55, j2 - .001, j2 + (j3 - j2) * .45, j3 - .0105]; k = 1
+    A = [.0103, .0098, .0105, .0090, .0092, .0088, .0079]; D = [.0086, .0081, .0097, .0078, .0084, .0066, .0060]; B = [.0100, .0098, .0084, .0091, .0076, .0092, .0086]
+    if f == "Thumb": A = [.0140, .0128, .0120, .0104, .0110, .0106, .0094]; D = [.0108, .0100, .0107, .0090, .0096, .0076, .0068]; B = [.0125, .0115, .0100, .0105, .0090, .0108, .0100]
+    return tuple(np.interp(s, S_, x) * k for x in (A, D, B))
+
+
+def finger_surface(f, Q, s, th):
+    a_, d_, b_ = finger_shape(f, Q, s)
+    c, si = np.cos(th), np.sin(th)
+    b = b_ + (d_ - b_) * smoothstep(-.4, .4, c)
+    p = 2.25
+    r = (np.abs(c / b) ** p + np.abs(si / a_) ** p) ** (-1 / p)
+    end = joint_arcs(Q)[2]; L_d = .0100 * HAND_SPEC[f][1]
+    t = np.clip((s - (end - L_d)) / L_d, 0, 1)
+    return r * np.sqrt(np.maximum(1 - t ** 2.3, 0))
+
+
+def nail_field(f, Q, s, th):
+    """Distance inside the nail's edge in metres (negative outside it), and the share from root to free edge."""
+    k = HAND_SPEC[f][1]; end = joint_arcs(Q)[2]
+    s1 = end - .0012 * k; s0 = s1 - NAIL_LEN * k; hw = .0069 * k; rc = hw * .62
+    x = np.abs(th) * .0078 * k                                                  # across the nail, measured round the finger
+    y = np.abs(s - (s0 + s1) / 2); hl = (s1 - s0) / 2
+    q = np.maximum(x - hw + rc, 0); e = np.maximum(y - hl + rc, 0)
+    d = np.where((q > 0) | (e > 0), rc - np.hypot(q, e), np.minimum(hw - x, hl - y))
+    return d, (s - s0) / (s1 - s0)
+
+
+def hand_coords(P, W, F):
+    q = (P - W) @ F.T; return q[:, 0], q[:, 1], q[:, 2]
+
+
+def gauss(x, y, x0, y0, sx, sy): return np.exp(-((x - x0) / sx) ** 2 - ((y - y0) / sy) ** 2)
+
+
+def line_dist(a, b, p0, p1):
+    """Distance from points (a, b) to a segment, and how far along it."""
+    d = np.array(p1) - np.array(p0); L2 = d @ d
+    t = np.clip(((a - p0[0]) * d[0] + (b - p0[1]) * d[1]) / L2, 0, 1)
+    return np.hypot(a - (p0[0] + t * d[0]), b - (p0[1] + t * d[1])), t
+
+
+def tendon_lines(J, n, s, W, F):
+    """Each extensor tendon, from its knuckle to the middle of the wrist, in hand coordinates."""
+    out = []
+    for f in FINGERS[1:]:
+        a_, b_, _ = hand_coords(hand_chain(J, n, f, s)[None, 0], W, F)
+        out.append(((float(a_[0]) - .004, float(b_[0])), (.010, float(b_[0]) * .32 + .004)))
+    return out
+
+
+def sculpt_hand(h, J, n, s):
+    """Rebuilds one hand on its own mesh, before the arm grows from it. Updates the finger joints in J."""
+    subdivide(h, 1)
+    m = np.array([s, 1, 1.])
+    OLD = {f: hand_chain(J, n, f, s) for f in FINGERS}
+    # New joints: same directions, so the rest pose and every clip keep their meaning; real lengths.
+    NEW = {}
+    for f in FINGERS:
+        Q = OLD[f]; d = unit(Q[1:] - Q[:-1]); L, _, back, _ = HAND_SPEC[f]
+        q = [Q[0] - d[0] * back]
+        for i in range(3): q.append(q[-1] + d[i] * L[i])
+        NEW[f] = np.array(q)
+        for i in (1, 2, 3, 4): J[f"{n}Hand{f}{i}"] = NEW[f][i - 1] * m
+    W, F = hand_frame(J, n, s); ez = F[2]
+    v0 = co(h) * m; n_v = len(v0)
+    # who owns each vertex
+    G = np.zeros((n_v, len(FINGERS)), np.float32); gi = {g.index: g.name for g in h.vertex_groups}
+    for vx in h.data.vertices:
+        for g in vx.groups:
+            nm = gi[g.group]
+            for i_, f in enumerate(FINGERS):
+                if nm.startswith(f"{n}Hand{f}"): G[vx.index, i_] += g.weight
+    own = G.argmax(1); on_finger = G.max(1) > .5
+    bm = bmesh.new(); bm.from_mesh(h.data); bm.normal_update(); bm.verts.ensure_lookup_table()
+    nor = np.array([q.normal[:] for q in bm.verts]) * m; bm.free()
+    a_, b_, z_ = hand_coords(v0, W, F)
+    v = v0.copy(); done = np.zeros(n_v, np.float32); side = (nor @ ez > 0).astype(np.int32)
+    moved = {}
+    for i_, f in enumerate(FINGERS):
+        Qo, Qn = OLD[f], NEW[f]; web_o = HAND_WEB_OLD[f]; web_n = HAND_SPEC[f][3]
+        so, C, T = chain_project(v0, Qo)
+        u, w_ = finger_axes(T, f, ez)
+        rel = v0 - C
+        th = np.arctan2((rel * w_).sum(1), (rel * u).sum(1))
+        end_o = joint_arcs(Qo)[2]; jn = joint_arcs(Qn); end_n = jn[2]
+        dome_o, dome_n = .0080, .0100 * HAND_SPEC[f][1]
+        # rings bunch at the joints, where the bend needs them
+        grid = np.linspace(web_n, end_n - dome_n, 400)
+        rho = 1 + 1.6 * sum(np.exp(-((grid - j_) / .0055) ** 2) for j_ in jn[:2])
+        cum = np.cumsum(rho); cum = (cum - cum[0]) / (cum[-1] - cum[0])
+        sn = np.interp((so - web_o) / (end_o - dome_o - web_o), cum, grid)
+        far = so > end_o - dome_o
+        sn[far] = (end_n - dome_n) + (so[far] - (end_o - dome_o)) / dome_o * dome_n
+        sn = np.minimum(sn, end_n)
+        Cn, Tn = chain_at(sn, Qn)
+        un, wn = finger_axes(Tn, f, ez)
+        rn = finger_surface(f, Qn, sn, th)
+        # Creases on the pad side, the nail's groove and plate on the back: small, but they are in the silhouette.
+        crease = sum(np.exp(-((sn - j_) / .0013) ** 2) for j_ in (jn[0] - .0005, jn[1] - .0004)) * smoothstep(.2, -.5, np.cos(th))
+        fn, _ = nail_field(f, Qn, sn, th)
+        back = np.cos(th) > 0
+        rn = rn - .00055 * crease - .00030 * np.exp(-(fn / .0008) ** 2) * back + .00016 * smoothstep(-.0002, .0005, fn) * back
+        p = Cn + un * (np.cos(th) * rn)[:, None] + wn * (np.sin(th) * rn)[:, None]
+        mine = (own == i_) & on_finger
+        wide = .010 if f == "Thumb" else .004                      # the thumb grows out of the thenar over a longer run
+        wt = smoothstep(web_o - wide, web_o + wide + .003, so) * mine
+        delta = chain_at(np.array([web_n]), Qn)[0][0] - chain_at(np.array([web_o]), Qo)[0][0]
+        moved[f] = delta
+        v[mine] = v0[mine] * (1 - wt[mine])[:, None] + p[mine] * wt[mine][:, None]
+        if f == "Thumb": v[mine] += (delta[None] * ((1 - wt) * smoothstep(web_o - .03, web_o, so))[:, None])[mine]
+        done = np.maximum(done, wt)
+        side = np.where(wt > .5, back.astype(np.int32), side)
+    # The palm follows the knuckles, finger by finger, and fades out toward the wrist.
+    lat = np.array([float(hand_coords(hand_chain(J, n, f, s)[None, 0], W, F)[1][0]) for f in FINGERS[1:]])
+    wl = np.exp(-((b_[:, None] - lat[None]) / .012) ** 2) + 1e-6; wl /= wl.sum(1, keepdims=True)
+    g = (smoothstep(.02, .08, a_) * (1 - done))[:, None] * (wl @ np.array([moved[f] for f in FINGERS[1:]]))
+    free = ~(on_finger & (own == 0))
+    v[free] += g[free]
+    # Bone and pad under the skin, as height off the old surface.
+    a_, b_, z_ = hand_coords(v, W, F)
+    sd = smoothstep(-.35, .35, nor @ ez)
+    dors = np.zeros(n_v); palm = np.zeros(n_v)
+    for f in FINGERS[1:]:
+        q = hand_coords(NEW[f][None, 0], W, F); ak, bk = float(q[0][0]), float(q[1][0]); kf = HAND_SPEC[f][1]
+        dors += .0030 * kf * gauss(a_, b_, ak - .001, bk, .0095, .0078)                # the knuckle
+        dors -= .0009 * gauss(a_, b_, ak + .004, bk + .0115, .012, .0034)              # the valley beside it
+        palm += .0028 * kf * gauss(a_, b_, ak + .0115, bk, .0085, .0095)               # the pad at the base of each finger
+    for p0, p1 in tendon_lines(J, n, s, W, F):
+        d, t = line_dist(a_, b_, p0, p1)
+        dors += .00085 * np.exp(-(d / .0030) ** 2) * smoothstep(1., .35, t)
+    dors += .0034 * np.clip(1 - ((b_ - .006) / .052) ** 2, 0, 1) * smoothstep(.0, .03, a_) * smoothstep(.1, .07, a_)   # the arch of the metacarpals
+    dors += .0020 * gauss(a_, b_, .004, .030, .011, .010)                              # the end of the ulna
+    palm += .0072 * gauss(a_, b_, .038, -.022, .027, .0155)                            # the ball of the thumb
+    palm += .0058 * gauss(a_, b_, .034, .035, .033, .0125)                             # the heel under the little finger
+    palm -= .0058 * gauss(a_, b_, .052, .004, .021, .0150)                             # the hollow of the palm
+    palm -= .0006 * gauss(a_, b_, .006, .004, .007, .03)                               # the wrist crease, soft
+    fade = (1 - done) * smoothstep(-.012, .012, a_)
+    v += F[2][None] * ((dors * sd - palm * (1 - sd)) * fade)[:, None]
+    e = edges_of(h)
+    v = laplace(v, e, 6, .5, np.exp(-((done - .5) / .42) ** 2) * (done > 0) * .9)
+    set_co(h, v * m)
+    for _ in range(3):           # no stray specks in the back and palm sides: they become the two UV islands
+        acc = np.zeros(n_v); cnt = np.zeros(n_v)
+        np.add.at(acc, e[:, 0], side[e[:, 1]]); np.add.at(acc, e[:, 1], side[e[:, 0]]); np.add.at(cnt, e[:, 0], 1); np.add.at(cnt, e[:, 1], 1)
+        side = (acc / np.maximum(cnt, 1) > .5).astype(np.int32)
+    at = h.data.attributes.new("hand", "INT", "POINT")
+    at.data.foreach_set("value", (side + 1).tolist())     # 1 palm, 2 back; everything else on him is 0
+    hand_weights(h, J, n, s, own, on_finger)
+
+
+def hand_weights(h, J, n, s, own, on_finger):
+    """Skin weights from the same coordinates: every joint hinges on a short band across its own ring of faces, tighter on the back of
+    the finger, where a long blend would flatten the knuckle, than across the crease on the palm side."""
+    m = np.array([s, 1, 1.]); v = co(h) * m; n_v = len(v)
+    W, F = hand_frame(J, n, s); ez = F[2]
+    a_, b_, z_ = hand_coords(v, W, F)
+    fore = np.zeros(n_v, np.float32); gi = {g.index: g.name for g in h.vertex_groups}
+    for vx in h.data.vertices:
+        for g in vx.groups:
+            if gi[g.group] == n + "ForeArm": fore[vx.index] = g.weight
+    hw = smoothstep(-.006, .022, a_)      # past this the wrist is all hand; before it the Mixamo blend stands
+    Wt = {}
+    lat = np.array([float(hand_coords(hand_chain(J, n, f, s)[None, 0], W, F)[1][0]) for f in FINGERS[1:]])
+    wl = np.exp(-((b_[:, None] - lat[None]) / .0095) ** 2) + 1e-6; wl /= wl.sum(1, keepdims=True)
+    for i_, f in enumerate(FINGERS):
+        Q = hand_chain(J, n, f, s)
+        sc, th, r = finger_coords(v, Q, f, ez)
+        j1, j2, _ = joint_arcs(Q)
+        hb = (.0052 + (.0028 - .0052) * smoothstep(-.3, .3, np.cos(th))) * HAND_SPEC[f][1]
+        w2 = smoothstep(j1 - hb, j1 + hb, sc); w3 = smoothstep(j2 - hb, j2 + hb, sc)
+        mine = (own == i_) & on_finger
+        if f == "Thumb":
+            d_ = unit(Q[1] - Q[0]); t = (v - Q[0]) @ d_
+            d = np.linalg.norm(v - (Q[0] + np.clip(t, 0, j1)[:, None] * d_), axis=1)
+            base = np.where(mine, 1., smoothstep(.040, .017, d)) * smoothstep(-.012, .012, t) * (~(on_finger & ~mine))
+        else:
+            a1 = float(hand_coords(Q[None, 0], W, F)[0][0])
+            base = smoothstep(a1 - .017, a1 + .011, a_) * wl[:, i_ - 1] * (~(on_finger & ~mine))
+            base = np.where(mine, np.maximum(base, smoothstep(-.012, .010, sc)), base)
+        Wt[f"{n}Hand{f}1"] = base * (1 - w2); Wt[f"{n}Hand{f}2"] = base * (w2 - w3); Wt[f"{n}Hand{f}3"] = base * w3
+    names = list(Wt); A = np.array([Wt[k] for k in names]).T
+    tot = A.sum(1); over = tot > 1; A[over] /= tot[over][:, None]
+    e = edges_of(h); wm = smoothstep(.128, .110, a_)      # the palm and the webs: a share per finger, so one finger bending can't tear them
+    for _ in range(6):
+        acc = np.zeros_like(A); cnt = np.zeros(n_v, np.float32)
+        np.add.at(acc, e[:, 0], A[e[:, 1]]); np.add.at(acc, e[:, 1], A[e[:, 0]]); np.add.at(cnt, e[:, 0], 1); np.add.at(cnt, e[:, 1], 1)
+        A += (acc / np.maximum(cnt, 1)[:, None] - A) * (wm * .5)[:, None]
+    for g in list(h.vertex_groups): h.vertex_groups.remove(g)
+    gs = {k: h.vertex_groups.new(name=k) for k in names}; gh = h.vertex_groups.new(name=n + "Hand"); gf = h.vertex_groups.new(name=n + "ForeArm")
+    keep = fore * (1 - hw)                 # the wrist: Mixamo's forearm share stands, everything else is the hand and fingers
+    for i in range(n_v):
+        rest = 1 - float(keep[i]); row = A[i] * rest
+        top = np.argsort(-row)[:3]
+        for j in top:
+            if row[j] > .004: gs[names[j]].add([i], float(row[j]), "REPLACE")
+        hv = rest - float(row[top].sum())
+        if hv > .004: gh.add([i], hv, "REPLACE")
+        if keep[i] > .004: gf.add([i], float(keep[i]), "REPLACE")
+
+
+def wrist_weights(h, J, n, s):
+    """The arm grows from the mesh's ring, which sits behind the joint, so its blend hinged the wrist on the forearm and pinched it.
+    The band goes back across the joint itself."""
+    W, F = hand_frame(J, n, s); a_ = hand_coords(co(h) * np.array([s, 1, 1.]), W, F)[0]
+    t = smoothstep(-.024, .018, a_); gi = {g.index: g for g in h.vertex_groups}
+    gf = h.vertex_groups[n + "ForeArm"]; gh = h.vertex_groups[n + "Hand"]; up = n + "Arm"
+    for vx in h.data.vertices:
+        i = vx.index
+        if not -.07 < a_[i] < .024: continue
+        rest = [(gi[g.group], g.weight) for g in vx.groups if gi[g.group].name not in (n + "ForeArm", up)]
+        tot = sum(w for _, w in rest)
+        if tot > .001:
+            for g, w in rest: g.add([i], w * t[i] / tot, "REPLACE")
+        elif t[i] > .001: gh.add([i], float(t[i]), "REPLACE")
+        gf.add([i], float(1 - t[i]), "REPLACE")
+
+
+# The hands take their own part of the Body atlas: a close-up needs far more texels than the shirt does.
+HAND_ATLAS = .76     # everything else on the Body maps fits in this share of each side; the hands get the strip around it
+
+
+def hand_uv(ob, hand_f, side_f):
+    """Each hand unwraps into two islands, back and palm, cut along the side of the fingers and the edge of the palm, and each island
+    is turned along its length and laid in its own box of the strip."""
+    me = ob.data
+    bm = bmesh.new(); bm.from_mesh(me); bm.edges.ensure_lookup_table()
+    n_seam = 0
+    seams = np.zeros(len(me.edges), bool)
+    for e in bm.edges:
+        lf = e.link_faces
+        if len(lf) == 2 and (hand_f[lf[0].index] or hand_f[lf[1].index]):
+            if hand_f[lf[0].index] != hand_f[lf[1].index] or side_f[lf[0].index] != side_f[lf[1].index]: seams[e.index] = True; n_seam += 1
+    bm.free()
+    me.edges.foreach_set("use_seam", seams.tolist())
+    activate(ob)
+    bpy.ops.object.mode_set(mode="EDIT"); bpy.ops.mesh.select_all(action="DESELECT"); bpy.ops.object.mode_set(mode="OBJECT")
+    me.polygons.foreach_set("select", hand_f.tolist()); me.update()
+    bpy.ops.object.mode_set(mode="EDIT")
+    bpy.ops.uv.unwrap(method="ANGLE_BASED", margin=.02)
+    bpy.ops.object.mode_set(mode="OBJECT")
+    me.edges.foreach_set("use_seam", [False] * len(me.edges))
+    k = HAND_ATLAS; pad = 10 / 2048
+    boxes = {(1, 2): (k, 0, 1, .5), (1, 1): (k, .5, 1, 1), (-1, 2): (0, k, k / 2, 1), (-1, 1): (k / 2, k, k, 1)}
+    uv = np.zeros(len(me.loops) * 2); me.uv_layers[0].data.foreach_get("uv", uv); uv = uv.reshape(-1, 2)
+    lv = np.zeros(len(me.loops), int); me.loops.foreach_get("vertex_index", lv)
+    lf = np.zeros(len(me.loops), int)
+    for p in me.polygons: lf[p.loop_start:p.loop_start + p.loop_total] = p.index
+    vx = co(ob)[:, 0]
+    for (sgn, sd), (x0, y0, x1, y1) in boxes.items():
+        L = np.where(hand_f[lf] & (side_f[lf] == sd) & (np.sign(vx[lv]) == sgn))[0]
+        q = uv[L]; c = q.mean(0); q = q - c
+        w, V = np.linalg.eigh(np.cov(q.T)); along = V[:, 1]; across = V[:, 0]
+        q = np.stack([q @ across, q @ along], 1)
+        if x1 - x0 > y1 - y0: q = q[:, ::-1]
+        lo, hi = q.min(0), q.max(0)
+        sc = min((x1 - x0 - 2 * pad) / (hi[0] - lo[0]), (y1 - y0 - 2 * pad) / (hi[1] - lo[1]))
+        uv[L] = (q - (lo + hi) / 2) * sc + np.array([(x0 + x1) / 2, (y0 + y1) / 2])
+        print("HAND UV", sgn, sd, len(L), "scale", round(float(sc), 3))
+    me.uv_layers[0].data.foreach_set("uv", uv.flatten())
+
+
+def paint_hand(Pm, Nm, J, n, s, c, seed):
+    """Albedo, height and smoothness for one hand. Everything is measured off the same joints as the sculpt, so a crease lies in its fold."""
+    m_ = np.array([s, 1, 1.]); p = Pm * m_
+    W, F = hand_frame(J, n, s); ez = F[2]
+    a_, b_, z_ = hand_coords(p, W, F)
+    N_ = Nm * m_; nz = N_ @ ez
+    wob = wave_noise(p, 170, seed) * .0009; wob2 = wave_noise(p, 420, seed + 1) * .0004
+    h = np.zeros(len(p), np.float32); red = np.zeros(len(p), np.float32); gl = np.full(len(p), .30, np.float32)
+    # which finger each texel is on
+    best = np.full(len(p), 9.); S = np.zeros(len(p)); TH = np.zeros(len(p)); who = np.full(len(p), -1)
+    for i_, f in enumerate(FINGERS):
+        Q = hand_chain(J, n, f, s)
+        sc, th, r = finger_coords(p, Q, f, ez)
+        fit = r / np.maximum(finger_surface(f, Q, np.maximum(sc, .02), th), .004)
+        k = (fit < best) & (fit < 1.5) & (sc > HAND_SPEC[f][3] - .004)
+        best[k] = fit[k]; S[k] = sc[k]; TH[k] = th[k]; who[k] = i_
+    nail = np.zeros(len(p), np.float32); lun = np.zeros(len(p), np.float32); free = np.zeros(len(p), np.float32); rim_ = np.zeros(len(p), np.float32)
+    for i_, f in enumerate(FINGERS):
+        o = who == i_
+        if not o.any(): continue
+        Q = hand_chain(J, n, f, s); j1, j2, j3 = joint_arcs(Q); kf = HAND_SPEC[f][1]
+        sc, th = S[o] + wob[o] * .45, TH[o]
+        back = np.cos(th) > 0; bk = smoothstep(1.3, .9, np.abs(th)); pd = smoothstep(1.75, 2.2, np.abs(th))
+        def lines(arcs, wid, amp, mask): return sum(amp * np.exp(-((sc + .0016 * (th / 1.2) ** 2 * (1 if bent else 0) - x) / wid) ** 2) * mask for x in arcs)
+        # the pad side: a double crease at each joint and at the root of the finger
+        bent = False
+        h[o] -= lines((HAND_SPEC[f][3] + .0014, HAND_SPEC[f][3] + .0040), .00062, .00030, pd)
+        h[o] -= lines((j1 - .0021, j1 + .0012), .00058, .00034, pd) + lines((j2 - .0007, j2 + .0016), .00055, .00028, pd)
+        # the back: rings of slack skin over the two finger joints, stronger in the middle of the knuckle
+        bent = True
+        mid = bk * np.exp(-(th / .85) ** 2) * (.72 + .55 * wave_noise(p[o], 130, seed + 11 + i_))      # no two rings alike
+        h[o] -= lines([j1 + x * kf for x in (-.0058, -.0035, -.0013, .0009, .0032, .0054)], .00042, .00032, mid)
+        h[o] -= lines([j2 + x * kf for x in (-.0028, -.0008, .0012, .0031)], .00036, .00023, mid)
+        h[o] += .00048 * np.exp(-((S[o] - j1) / .0062) ** 2) * mid
+        red[o] = np.maximum(red[o], .75 * np.exp(-((S[o] - j1) / .0085) ** 2) * mid)
+        red[o] = np.maximum(red[o], .55 * np.exp(-((S[o] - j2) / .0060) ** 2) * mid)
+        red[o] = np.maximum(red[o], .70 * smoothstep(j3 - .019, j3 - .004, S[o]))      # the blood in the fingertip
+        # the nail
+        fn, ln = nail_field(f, Q, S[o], th)
+        pl = smoothstep(-.00012, .00022, fn) * back
+        rim = np.exp(-(fn / .00038) ** 2) * back
+        cur = np.exp(-((ln - .03) / .05) ** 2) * rim
+        h[o] += .00022 * pl - .00030 * rim + .00018 * smoothstep(-.0011, -.0003, fn) * smoothstep(.0002, -.0002, fn) * back
+        h[o] += pl * .000022 * np.sin((np.abs(th) * .0078 * kf) * 2300 + wob[o] * 900)   # the faint lengthwise ridges in the plate
+        nail[o] = pl; rim_[o] = rim
+        q = (ln - .0) / .30; lat = th * .0078 * kf / (.0069 * kf)
+        lun[o] = pl * smoothstep(1.0, .7, np.hypot(q, lat * 1.1))
+        free[o] = pl * smoothstep(.905, .935, ln + .05 * lat ** 2)
+    # The back of the hand: knuckles, tendons fanning from them, a few veins over the bones, the slack skin at each knuckle.
+    pm = who < 0
+    tn = np.zeros(len(p), np.float32)
+    for p0, p1 in tendon_lines(J, n, s, W, F):
+        d, t = line_dist(a_, b_, p0, p1)
+        tn = np.maximum(tn, np.exp(-(d / .0021) ** 2) * smoothstep(1., .4, t))
+    dorsal = smoothstep(-.1, .25, nz)
+    h += (.00046 * tn * dorsal).astype(np.float32)
+    vein = np.zeros(len(p), np.float32)
+    for poly in (((.006, .020), (.032, .023), (.052, .015), (.070, .010)), ((.040, .021), (.058, .030), (.075, .033)), ((.012, -.008), (.036, -.007), (.058, -.012), (.073, -.016))):
+        d = np.min([line_dist(a_ + wob * 1.6, b_ + wob2 * 2, poly[i], poly[i + 1])[0] for i in range(len(poly) - 1)], axis=0)
+        vein = np.maximum(vein, np.exp(-(d / .0026) ** 2))
+    vein = vein * dorsal * (1 - tn * .6) * smoothstep(.005, .03, a_) * (.55 + .45 * wave_noise(p, 55, seed + 5))
+    h += (.00048 * vein).astype(np.float32)
+    for f in FINGERS[1:]:
+        q = hand_coords(hand_chain(J, n, f, s)[None, 0], W, F); ak, bk_ = float(q[0][0]), float(q[1][0])
+        g = gauss(a_, b_, ak - .001, bk_, .0105, .0095) * dorsal
+        red = np.maximum(red, .62 * g)
+        h += (.00040 * gauss(a_, b_, ak - .001, bk_, .0060, .0052) * dorsal).astype(np.float32)      # the bone of the knuckle itself
+        for x in (-.0062, -.0034, -.0008, .0018, .0046):
+            h -= (.00020 * g * np.exp(-((a_ + wob * .6 - ak - x) / .00042) ** 2)).astype(np.float32)
+    # The palm: the three great lines, the wrist's folds, and the fine lines they gather.
+    palmar = smoothstep(.1, -.25, nz) * pm
+    lines_ = (((.070, .062), (.075, .035), (.081, .012), (.085, -.006), (.094, -.018)), ((.063, -.042), (.058, -.016), (.054, .010), (.045, .034)),
+              ((.064, -.040), (.047, -.020), (.028, -.013), (.008, -.014)), ((.001, -.035), (.002, .0), (.001, .045)), ((.008, -.030), (.0085, .0), (.007, .04)))
+    for j_, poly in enumerate(lines_):
+        d = np.min([line_dist(a_ + wob, b_ + wob2, poly[i], poly[i + 1])[0] for i in range(len(poly) - 1)], axis=0)
+        fade = .62 + .38 * wave_noise(p, 90, seed + 7 + j_)
+        amp = 1. if j_ < 3 else .35 * smoothstep(.3, .8, wave_noise(p, 140, seed + 20 + j_))     # the wrist folds: faint and broken, never a ring
+        h -= (amp * (.00027 * fade * np.exp(-(d / .00075) ** 2) * palmar + .00010 * np.exp(-(d / .0026) ** 2) * palmar)).astype(np.float32)
+        red = np.maximum(red, .30 * fade * np.exp(-(d / .0012) ** 2) * palmar)
+    for g_ in (np.sin(p @ np.array([310., 120, 40]) + wob * 4200), np.sin(p @ np.array([-90., 330, 70]) + wob * 4800)):
+        h -= (.00005 * np.exp(-(g_ / .14) ** 2) * palmar * smoothstep(.1, .7, wave_noise(p, 60, seed + 3))).astype(np.float32)
+    # the grain of skin, broken up so it never reads as a pattern
+    gr = np.abs(np.sin(p @ np.array([980., 720, 300]) + wob * 6000 + wob2 * 9000)) + np.abs(np.sin(p @ np.array([-640., 980, 220]) + wob * 7000 - wob2 * 8000))
+    h += ((gr - 1.3) * .000022 * (1 - nail) * smoothstep(-.2, .5, wave_noise(p, 80, seed + 4))).astype(np.float32)
+    # colour: the forearm's skin, warmer where blood sits close, paler in the palm
+    col = c.copy()
+    pal = smoothstep(.05, -.3, nz) * (1 - nail)
+    col = col * (1 + pal[:, None] * np.array([.035, -.012, -.02]))
+    col = col * (1 - red[:, None] * np.array([.0, .085, .105]) * .82)
+    col = col * (1 - (vein * .035)[:, None] * np.array([1, .7, .3]))
+    nc = np.array([.80, .56, .52]) + wob[:, None] * 6
+    nc = nc * (1 - lun[:, None] * .7) + np.array([.87, .72, .68]) * lun[:, None] * .7
+    nc = nc * (1 - free[:, None]) + np.array([.86, .77, .66]) * free[:, None]
+    col = col * (1 - nail[:, None]) + nc * nail[:, None]
+    col = col * (1 - (rim_ * .10)[:, None] * np.array([.6, 1, 1.1]))
+    gl = gl + nail * .25 + pal * .03
+    return col, h, gl
 
 
 def stage_build():
@@ -555,7 +1014,9 @@ def stage_build():
     arms = {}
     for side, sign in SIDES:
         h = split(body, lambda c: c.x * sign > .3, "Hand" + side)
+        sculpt_hand(h, J, side, sign)
         make_arm(h, J, side)
+        wrist_weights(h, J, side, sign)
         arms[side] = co(h)
 
     # The top: smooth away the sweater's pocket and rib, then lengthen it to a T-shirt that hangs to the hip.
@@ -736,7 +1197,6 @@ def quick(name, cams, res=(700, 900)):
 
 
 # ---- Rig: one skinned mesh, two materials, the Humanoid bone names the video already uses.
-FINGERS = ("Thumb", "Index", "Middle", "Ring", "Pinky")
 
 
 def bone_table():
@@ -905,10 +1365,10 @@ def stage_rig():
 
 
 # ---- UVs and the maps the textures are painted from. Nothing here is lit: position, normal and part per texel.
-def smart_uv(ob, idx):
+def smart_uv(ob, idx, skip=None):
     activate(ob)
     bpy.ops.object.mode_set(mode="EDIT"); bpy.ops.mesh.select_all(action="DESELECT"); bpy.ops.object.mode_set(mode="OBJECT")
-    for p in ob.data.polygons: p.select = p.material_index == idx
+    for p in ob.data.polygons: p.select = p.material_index == idx and (skip is None or not skip[p.index])
     bpy.ops.object.mode_set(mode="EDIT")
     bpy.ops.uv.smart_project(angle_limit=math.radians(58), island_margin=.006, area_weight=.3, scale_to_bounds=True)
     bpy.ops.object.mode_set(mode="OBJECT")
@@ -921,13 +1381,19 @@ def stage_maps():
     if not me.uv_layers: me.uv_layers.new(name="UVMap")
     while len(me.uv_layers) > 1: me.uv_layers.remove(me.uv_layers[1])
     me.uv_layers[0].name = "UVMap"
-    smart_uv(ob, 0); smart_uv(ob, 1)
+    hv = np.zeros(len(me.vertices), int); me.attributes["hand"].data.foreach_get("value", hv)
+    fv = np.array([hv[list(p.vertices)].mean() for p in me.polygons])
+    hand_f = np.array([hv[list(p.vertices)].min() > 0 for p in me.polygons]); side_f = (fv > 1.5).astype(int) + 1
+    smart_uv(ob, 0, hand_f); smart_uv(ob, 1)
     # The head's islands use the lower 80% of its texture. The strip above them is the hair.
     uv = np.zeros(len(me.loops) * 2); me.uv_layers[0].data.foreach_get("uv", uv); uv = uv.reshape(-1, 2)
     for p in me.polygons:
         if p.material_index == 1:
             for l in p.loop_indices: uv[l, 1] *= .8
+        elif not hand_f[p.index]:
+            for l in p.loop_indices: uv[l] *= HAND_ATLAS
     me.uv_layers[0].data.foreach_set("uv", uv.flatten())
+    hand_uv(ob, hand_f, side_f)
     s = bpy.context.scene; s.render.engine = "CYCLES"; s.cycles.samples = 1; s.cycles.device = "CPU"; s.render.bake.margin = 6; s.cycles.use_denoising = False
     R = 2048
     res = {}
@@ -1058,6 +1524,9 @@ def stage_paint():
     speck = wave_noise(P[m], 90, 3)[:, None]
     col[m] = np.array([.545, .545, .55]) + hp * .38 + speck * .004
     hgt[m] = (hp[:, 0] * .0007 + .0006 * wave_noise(P[m], 260, 5) * (.5 + .5 * wave_noise(P[m], 40, 6)))
+    # the knit itself: columns of loops, about 0.7 mm, that a close-up reads as jersey and a wide shot never sees
+    kn = np.abs(np.sin(P[m] @ np.array([1500., 400, 1100]) + wave_noise(P[m], 300, 8) * 3)) * np.abs(np.sin(P[m] @ np.array([-300., 1700, 600]) + wave_noise(P[m], 240, 12) * 3))
+    hgt[m] += (kn - .4) * .00022
     cj = json.load(open(os.path.join(WORK, "collar.json")))
     rr = np.hypot(P[m, 0] - cj["c"][0], P[m, 1] - cj["c"][1]); th_ = np.arctan2(P[m, 1] - cj["c"][1], P[m, 0] - cj["c"][0])
     TH_ = np.linspace(-math.pi, math.pi, 73)[:-1] + math.pi / 72
@@ -1109,8 +1578,8 @@ def stage_paint():
     # cuffs
     cuff = np.exp(-((z - .108) / .0012) ** 2); hgt[m] -= cuff * .0005; col[m] += cuff[:, None] * np.array([.10, .085, .06])
     smo[m] = .16
-    # skin: hands, arms, feet
-    m = (part == 1) | (part == 2)
+    # skin: hands, arms
+    m = part == 1
     hp = tri(tl["skin_hp"], P[m], N[m], .10)
     c = SKIN_TONE * np.array([1.04, 1.03, 1.03]) + hp * .8
     blot = wave_noise(P[m], 22, 21)
@@ -1118,27 +1587,51 @@ def stage_paint():
     # warm, blood-rich extremities and joints, as an albedo tint
     def warm(mask, k): return c * (1 - (mask * k)[:, None] * np.array([.0, .08, .10]))
     ax = np.abs(P[m, 0])
-    c = warm(smoothstep(.73, .86, ax) * (part[m] == 1), .9)
-    c = warm(np.exp(-((ax - .46) / .03) ** 2) * (part[m] == 1), .5)
-    c = warm(smoothstep(.09, .04, P[m, 2]) * (part[m] == 2), .9)
+    c = warm(np.exp(-((ax - .46) / .03) ** 2), .5)
     col[m] = c
-    hgt[m] = hp[:, 0] * .0007
-    smo[m] = .30
-    # nails: flat pale plates on the back of each fingertip
-    pm = P[m]; nm = N[m]; nail = np.zeros(len(pm), np.float32)
+    # pores: cells about a millimetre across, broken so they never tile, and a little hair-follicle stipple on the forearm
+    pore = np.abs(np.sin(P[m] @ np.array([1150., 830, 410]) + wave_noise(P[m], 200, 23) * 9)) * np.abs(np.sin(P[m] @ np.array([-620., 1040, 900]) + wave_noise(P[m], 180, 24) * 9))
+    pore = pore * (.55 + .45 * wave_noise(P[m], 70, 26))                                   # drifts in and out, so it never reads as a weave
+    hgt[m] = hp[:, 0] * .0007 - (pore ** 3) * .00007
+    smo[m] = .30 + .05 * wave_noise(P[m], 110, 25) - .03 * pore ** 2
+    # the hands: their own anatomy, on top of the same skin as the forearm
+    ids = np.where(m)[0]
+    for sd_, (n_, s_) in enumerate(SIDES):
+        hm = (part[m] == 1) & (P[m, 0] * s_ > .655)
+        q_, h_, g_ = paint_hand(P[m][hm], N[m][hm], J, n_, s_, col[m][hm], 40 + sd_ * 10)
+        k_ = smoothstep(.655, .675, np.abs(P[m][hm][:, 0]))[:, None]     # nothing starts at a line on the forearm
+        sel = ids[hm]
+        col[sel] = col[sel] * (1 - k_) + q_ * k_; hgt[sel] += h_ * k_[:, 0]; smo[sel] = smo[sel] * (1 - k_[:, 0]) + g_ * k_[:, 0]
+    # shoes: a dark canvas low-top on a pale rubber sole, laces and eyelets over the instep, a rubber bumper over the toe
+    m = part == 2
+    sx = np.zeros(m.sum()); sy = np.zeros(m.sum()); sz = P[m, 2]
     for n_, s_ in SIDES:
-        for f in FINGERS:
-            tip = np.array(J[f"{n_}Hand{f}4"]); mid = np.array(J[f"{n_}Hand{f}3"])
-            d_ = (tip - mid); L = np.linalg.norm(d_); d_ /= L
-            up = np.array([0, .0, 1.]) if f != "Thumb" else np.array([0, -.45, .9])
-            if f == "Thumb": up = up / np.linalg.norm(up)
-            c0 = tip - d_ * .006
-            r_ = pm - c0
-            al = r_ @ d_; ac = r_ - al[:, None] * d_ - (r_ @ up)[:, None] * up
-            q = (al / .0068) ** 2 + ((ac ** 2).sum(1) / .0056 ** 2)
-            nail = np.maximum(nail, smoothstep(1.15, .85, q) * smoothstep(.15, .45, nm @ up))
-    col[m] = col[m] * (1 - nail[:, None]) + np.array([.90, .74, .70]) * nail[:, None]
-    hgt[m] += nail * .00035; smo[m] += nail * .22
+        k_ = (P[m, 0] * s_ > 0)
+        x_, y_, _ = shoe_local(P[m][k_], J, n_, s_); sx[k_] = x_; sy[k_] = y_
+    spring = .009 * smoothstep(-.17, -.25, sy) ** 1.5 + .004 * smoothstep(.06, .09, sy)
+    sole = smoothstep(SOLE_TOP + .003, SOLE_TOP - .003, sz - spring)
+    bumper = smoothstep(-.19, -.215, sy) * smoothstep(.052, .040, sz - spring) * (N[m, 2] > -.5)
+    rubber = np.maximum(sole, bumper)
+    foxing = np.exp(-((sz - spring - SOLE_TOP - .0025) / .0012) ** 2)                      # the stitched line where the sole meets the canvas
+    sock = smoothstep(.085, .10, sz)
+    hp = tri(tl["cotton_hp"], P[m], N[m], .16)
+    canvas = np.array([.040, .046, .062]) * (1 + hp[:, :1] * 2.2 + .10 * wave_noise(P[m], 60, 41)[:, None])
+    rub = np.array([.60, .58, .54]) * (1 + .08 * wave_noise(P[m], 150, 42)[:, None] + hp[:, :1] * .4)
+    # laces: five bars across the instep, eyelets at their ends
+    ins = (N[m, 2] > .25) & (sy < -.02) & (sy > -.15)
+    lace = np.zeros(m.sum()); eye = np.zeros(m.sum())
+    for i_, yb in enumerate((-.045, -.068, -.091, -.114, -.135)):
+        wdt = .011 + .0025 * i_
+        tilt = (sx - .0035) * (.9 if i_ % 2 else -.9)
+        lace = np.maximum(lace, np.exp(-((sy - yb - tilt * .25) / .0022) ** 2) * (np.abs(sx - .0035) < wdt) * ins)
+        for sg in (-1, 1): eye = np.maximum(eye, np.exp(-(((sx - .0035 - sg * (wdt + .002)) ** 2 + (sy - yb) ** 2) / .0022 ** 2)) * ins)
+    tongue = ins * (np.abs(sx - .0035) < .013) * smoothstep(-.03, -.045, sy) * smoothstep(-.145, -.13, sy)
+    c = canvas * (1 - rubber[:, None]) + rub * rubber[:, None]
+    c = c * (1 + .18 * tongue[:, None]) * (1 - .35 * eye[:, None]) + np.array([.52, .52, .50]) * lace[:, None]
+    c = c * (1 + .14 * foxing[:, None] * (1 - rubber)[:, None]) * (1 - .12 * sock[:, None])
+    col[m] = c
+    hgt[m] = hp[:, 0] * .0004 * (1 - rubber) + lace * .0012 - eye * .0009 + foxing * (1 - rubber) * .0004 + tongue * .0008 + (rubber * .00025 * wave_noise(P[m], 420, 43))
+    smo[m] = .20 + .14 * rubber + .12 * lace - .05 * sock
     img = np.zeros((R, R, 3), np.float32); img.reshape(-1, 3)[idx] = col
     save_png(dilate(img, valid)[:, :, :3], os.path.join(OUT, "Body_BaseMap.png"))
     H = np.zeros((R, R), np.float32); H.reshape(-1)[idx] = hgt
@@ -1214,18 +1707,53 @@ def stage_paint():
     # keep the skin matte and pored; the 1024 px photos get fine detail from the same skin tile
     hp = tri(tl["skin_hp"], P, N, .09)
     col = col + hp * .35
+    skin0 = (part == 0).astype(np.float32)
+    front = smoothstep(.1, .6, nf) * skin0
+    ax = np.abs(P[:, 0]); z = P[:, 2]
+    # pores: finer on the lids and lips, largest beside the nose and on the forehead
+    pore = np.abs(np.sin(P @ np.array([1250., 900, 450]) + wave_noise(P, 220, 51) * 9)) * np.abs(np.sin(P @ np.array([-700., 1150, 950]) + wave_noise(P, 190, 52) * 9))
+    pore = pore * (.55 + .45 * wave_noise(P, 70, 56))
+    tzone = np.maximum(np.exp(-((ax - .018) / .016) ** 2 - ((z - 1.615) / .03) ** 2), np.exp(-(ax / .035) ** 2 - ((z - 1.70) / .03) ** 2)) * front
+    lips = np.exp(-((ax / .026) ** 4) - ((z - 1.577) / .0105) ** 4) * front
+    eyeh = np.exp(-((ax - .033) / .024) ** 2 - ((z - 1.655) / .012) ** 2) * front
+    psize = (.6 + .9 * tzone) * (1 - lips) * (1 - .8 * eyeh)
+    hh = hp[:, 0] * .0005 - (pore ** 3) * .00010 * psize
+    # the lid crease above each eye, and a soft fold under it
+    for ex in (EYE_L[0], EYE_R[0]):
+        dx = (P[:, 0] - ex) / .019; dz = z - 1.6685 - .0025 * (1 - dx ** 2)
+        hh -= .00040 * np.exp(-(dz / .0015) ** 2) * np.exp(-dx ** 4) * front
+        hh -= .00016 * np.exp(-((z - 1.6395) / .0016) ** 2) * np.exp(-dx ** 4) * front
+    # brows: short hairs laid along the arc, each a tiny ridge, denser in the middle
+    for sg in (1, -1):
+        bx = P[:, 0] * sg; arc = 1.6665 + .0075 * (1 - ((bx - .036) / .02) ** 2)
+        onb = np.exp(-((z - arc) / .0036) ** 2) * smoothstep(.012, .02, bx) * smoothstep(.058, .050, bx) * front
+        strands = np.abs(np.sin((bx * 7 + z) * 1700 + wave_noise(P, 400, 53) * 6))
+        hh += onb * (strands - .5) * .00030
+        col = col * (1 - (onb * .10 * strands)[:, None])
+    # lips: vertical lines, a lifted edge, a little blood
+    lipline = np.abs(np.sin(P[:, 0] * 2300 + wave_noise(P, 300, 54) * 5)) * np.exp(-((z - 1.577) / .009) ** 2)
+    hh -= lips * lipline * .00018
+    hh += .00022 * np.exp(-((np.abs(z - 1.577) - .0095) / .0015) ** 2) * np.exp(-(ax / .024) ** 4) * front    # the vermilion border
+    hh -= .00030 * np.exp(-((z - 1.577) / .0012) ** 2) * np.exp(-(ax / .025) ** 4) * front                  # the line between the lips
+    col = col * (1 + (lips * .9)[:, None] * np.array([.06, -.05, -.03]))
+    gl_ = .31 + .09 * tzone + .17 * lips - .035 * pore ** 2 + .035 * wave_noise(P, 130, 55)
+    gl_ = np.where(part == 6, .93, gl_)
     img = np.zeros((R, R, 3), np.float32); img.reshape(-1, 3)[idx] = col
-    H = np.zeros((R, R), np.float32); H.reshape(-1)[idx] = hp[:, 0] * .0005
-    G = np.zeros((R, R), np.float32); G.reshape(-1)[idx] = np.where(part == 6, .93, .32)
+    H = np.zeros((R, R), np.float32); H.reshape(-1)[idx] = hh
+    G = np.zeros((R, R), np.float32); G.reshape(-1)[idx] = gl_
     img = dilate(img, valid, 10)
     H = dilate(np.dstack([H] * 3), valid, 10)[:, :, 0]
     gm = dilate(np.dstack([G] * 3), valid, 10)[:, :, 0]
     # The hair strip: real strands, top of the texture.
     top = int(R * .81)
     hs = sample(tl["hair"], np.tile(np.linspace(0, 1, R, endpoint=False), R - top), np.repeat(np.linspace(0, .5, R - top, endpoint=False), R)).reshape(R - top, R, 3)
-    img[top:] = hs * .5
-    H[top:] = (hs.mean(2) - hs.mean()) * .004
-    gm[top:] = .28
+    g_ = hs.mean(2); lo_, hi_ = np.percentile(g_, 5), np.percentile(g_, 95)
+    n_ = np.clip((g_ - lo_) / (hi_ - lo_), 0, 1)
+    uu = np.linspace(0, 1, R, endpoint=False)[None, :]; vv = np.linspace(0, 1, R - top, endpoint=False)[:, None]
+    fine = np.sin(uu * 2 * np.pi * 690 + np.sin(vv * 40 + uu * 90) * 1.3) * (.55 + .45 * np.sin(uu * 2 * np.pi * 97 + vv * 11))
+    img[top:] = hs * .46 + (n_[:, :, None] - .5) * np.array([.09, .07, .055]) + np.array([.015, .010, .006])    # dark brown, lit strands pick up a warm sheen
+    H[top:] = (g_ - g_.mean()) * .0028 + fine * .00032                                                   # the strands' own relief, and fine grooves along each strand
+    gm[top:] = .40 + .24 * n_ + .05 * fine
     alpha = np.ones((R, R), np.float32)
     g_ = hs.mean(2); lo_, hi_ = np.percentile(g_, 5), np.percentile(g_, 95)
     n_ = np.clip((g_ - lo_) / (hi_ - lo_), 0, 1)
@@ -1348,6 +1876,13 @@ def stage_checks(tag="c", poses=("t",), res=(640, 800)):
                 shot(f"{tag}_x_{ctag}_{k}", (.14, -.72, 1.63), (0, 0, 1.635), 85, lpos=(.32, -1.5, 1.42), r=(640, 640))
                 if ctag == "blue" and k in ("jawOpen", "fear"):
                     shot(f"{tag}_x34_{k}", (.5, -.56, 1.62), (0, 0, 1.625), 85, lpos=(.4, -1.5, 1.42), r=(640, 640))
+        keys_set()
+        s.render.resolution_x, s.render.resolution_y = res
+    if "close" in poses:
+        pose({})
+        for k, val in (("neutral", 0), ("blink", 1), ("blink", .5), ("smile", .5), ("smile", 1)):
+            keys_set(k, val)
+            shot(f"{tag}_cl_{k}{int(val * 100)}", (.14, -.62, 1.63), (0, 0, 1.635), 85, lpos=(.32, -1.5, 1.6), r=(560, 560))
         keys_set()
         s.render.resolution_x, s.render.resolution_y = res
     if "grip" in poses:
@@ -1705,38 +2240,47 @@ def face_keys(ob, zm, lip):
     bm = bmesh.new(); bm.from_mesh(me); bm.faces.ensure_lookup_table()
     pl = bm.verts.layers.int.get("part")
     tree = BVHTree.FromBMesh(bm)
-    up = np.zeros(len(v)); lo = np.zeros(len(v)); ey_shut = np.zeros_like(v)
+    up = np.zeros(len(v)); lo = np.zeros(len(v)); ey_shut = np.zeros_like(v); band = np.zeros(len(v)); inside = np.zeros(len(v), bool)
     for ex, ez in (EYE_R, EYE_L):
-        xs = []; zu_ = []; zl_ = []
-        for qx in np.arange(ex - .021, ex + .021, .0008):
-            hits = []
-            for qz in np.arange(ez - .012, ez + .012, .0003):
-                h = tree.ray_cast(Vector((qx, -.25, qz)), Vector((0, 1, 0)), .3)
-                if h[0] is not None and bm.faces[h[2]].verts[0][pl] == 6: hits.append(qz)
-            if len(hits) > 1:
-                xs.append(qx); zu_.append(max(hits)); zl_.append(min(hits))
-        print("EYE OPENING", round(float(ex), 3), "x", round(xs[0], 4), round(xs[-1], 4), "height", round(max(a_ - b_ for a_, b_ in zip(zu_, zl_)), 4))
-        xs = np.array(xs); zu_ = np.array(zu_); zl_ = np.array(zl_)
-        for _ in range(3):
-            zu_[1:-1] = (zu_[:-2] + zu_[1:-1] * 2 + zu_[2:]) / 4; zl_[1:-1] = (zl_[:-2] + zl_[1:-1] * 2 + zl_[2:]) / 4
-        mid = (zu_[0] + zl_[0] + zu_[-1] + zl_[-1]) / 4
+        xs, zu_, zl_ = eye_opening(bm, tree, pl, ex, ez)
+        print("EYE OPENING", round(float(ex), 3), "x", round(xs[0], 4), round(xs[-1], 4), "height", round(float((zu_ - zl_).max()), 4))
+        c0, c1 = (zu_[0] + zl_[0]) / 2, (zu_[-1] + zl_[-1]) / 2     # the two corners of the eye
         xp = np.r_[xs[0] - .0015, xs, xs[-1] + .0015]
-        ru = np.interp(x, xp, np.r_[mid, zu_, mid]); rl = np.interp(x, xp, np.r_[mid, zl_, mid])
+        ru = np.interp(x, xp, np.r_[c0, zu_, c1]); rl = np.interp(x, xp, np.r_[c0, zl_, c1])
         span = (xs[-1] - xs[0]) / 2 + .006; cx = (xs[0] + xs[-1]) / 2
         side = (np.abs(x - cx) < span + .004) & skin & (y < -.07)
         fade = smoothstep(span + .004, span - .0045, np.abs(x - cx))
         zu = z - ru; zd = rl - z
-        wu = side * fade * np.where(zu >= -.0004, np.clip(1 - zu / .0130, 0, 1) ** 1.3, 0)
-        wl = side * fade * np.where(zd >= -.0004, np.clip(1 - zd / .0075, 0, 1) ** 1.3, 0)
+        # Everything past the lid's edge, inside the socket, goes with the edge: left behind, it tears open a dark gap when he blinks.
+        half = z > (ru + rl) / 2
+        wu = side * fade * half * np.clip(1 - zu / .0160, 0, 1) ** 1.1
+        wl = side * fade * ~half * np.clip(1 - zd / .0075, 0, 1) ** 1.3
         up += wu; lo += wl
-        meet = rl + .0026
-        ey_shut[:, 2] += wu * (meet - ru) + wl * .0026
+        # The lids seal on one smooth line from corner to corner, a little below straight.
+        meet = lid_line(x, xs, zu_, zl_)
+        ey_shut[:, 2] += wu * (meet - .0022 - ru) + wl * (meet - rl)      # the upper lid comes down just past the lower one, in front of it
+        band = band + wu * smoothstep(.0045, .0015, np.abs(zu))
+        inside |= ((wu > 0) & (zu < -.0004)) | ((wl > 0) & (zd < -.0004))
         # the lid rides over the eyeball as it closes
-        zn = z + wu * (meet - ru)
+        zn = z + wu * (meet - .0022 - ru)
         ball = EYE_Y - np.sqrt(np.clip((EYE_RAD + .0011) ** 2 - (x - ex) ** 2 - (zn - ez) ** 2, 0, None)) - .0013
-        ey_shut[:, 1] += wu * np.minimum(ball - y, 0) * (np.abs(x - ex) < .0125)
+        # What was inside the socket stays behind the ball, or its dark skin would slide out over the eye.
+        ride = np.where(zu >= -.0004, np.minimum(ball - y, 0), np.maximum(ball + .0025 - y, 0))
+        ey_shut[:, 1] += wu * ride * smoothstep(.0135, .0105, np.abs(x - ex))
     bm.free()
     ey_shut = laplace(ey_shut, e, 5, .5, skin * smoothstep(.0, .05, up + lo) * smoothstep(1.0, .5, up))
+    # The closed edge itself: smooth where it lands, not only in how far it moved. Then nothing outside may sink into the ball.
+    ey_shut = laplace(v + ey_shut, e, 12, .5, np.clip(band, 0, 1) * skin) - v
+    lid = (up + lo > .02) & skin & ~inside
+    P_ = v + ey_shut
+    for ex, ez in (EYE_R, EYE_L):
+        R_ = EYE_RAD + .0011
+        q = lid & (np.hypot(P_[:, 0] - ex, P_[:, 2] - ez) < R_)
+        P_[q, 1] = np.minimum(P_[q, 1], EYE_Y - np.sqrt(R_ ** 2 - (P_[q, 0] - ex) ** 2 - (P_[q, 2] - ez) ** 2) - .0014)
+        q = inside & (np.hypot(P_[:, 0] - ex, P_[:, 2] - ez) < EYE_RAD)
+        P_[q, 1] = np.maximum(P_[q, 1], EYE_Y - np.sqrt(EYE_RAD ** 2 - (P_[q, 0] - ex) ** 2 - (P_[q, 2] - ez) ** 2) + .0030)
+    ey_shut = P_ - v
+    ey_shut[part == 11, 1] = -LID_HIDE
     def lids(k_up, k_lo):
         d = np.zeros_like(v); d[:, 2] = up * k_up + lo * k_lo
         return d
@@ -1768,6 +2312,27 @@ def face_keys(ob, zm, lip):
             w_ = skin * np.exp(-(((x - s * .052) / .022) ** 2 + ((z - 1.578) / .026) ** 2)) * smoothstep(.0, -.05, y)
             d[:, 0] -= w_ * k * s
         return d
+    def smile_fold(k):
+        # The line from the nose to past the mouth corner: a groove on it, the cheek fat bunched up on its outside.
+        d = np.zeros_like(v)
+        a0, a1 = np.array([.023, 1.622]), np.array([.050, 1.562])
+        u0 = (a1 - a0) / np.linalg.norm(a1 - a0); n0 = np.array([u0[1], -u0[0]])
+        if n0[0] < 0: n0 = -n0
+        for s in (1, -1):
+            r = np.c_[x * s, z] - a0
+            along = np.clip(r @ u0 / np.linalg.norm(a1 - a0), 0, 1); off = r @ n0
+            ends = smoothstep(0, .2, along) * smoothstep(1, .75, along)
+            mask = skin * (x * s > 0) * smoothstep(.0, -.05, y) * ends
+            d[:, 1] += mask * k * np.exp(-(off / .0042) ** 2)
+            d[:, 1] -= mask * k * 1.3 * np.exp(-((off - .012) / .010) ** 2)
+        return d
+    def crinkle(k):
+        # Crow's feet: the skin at the outer corner of each eye gathers toward it.
+        d = np.zeros_like(v)
+        for s in (1, -1):
+            w_ = skin * (x * s > 0) * np.exp(-(((x - s * .058) / .012) ** 2 + ((z - 1.654) / .014) ** 2)) * smoothstep(.0, -.03, y)
+            d[:, 0] -= w_ * k * s
+        return d
     upper_lip = skin * smoothstep(.034, .004, np.abs(x)) * np.exp(-((z - (zm + .005)) / .008) ** 2) * (y < -.1)
     ulip = np.zeros_like(v); ulip[:, 2] = upper_lip * .0035
     # The upper lip stays down over the teeth when he speaks: it relaxes and comes forward a little, it never lifts.
@@ -1776,7 +2341,8 @@ def face_keys(ob, zm, lip):
         "jawOpen": jaw(14) + usoft + corners(-.0042, -.0024, .0010, .028, .024) + cheek_in(.0012),
         "blink": ey_shut,
         "eyesWide": lids(.0042, -.0024) + brows(.0045, .0035),
-        "smile": jaw(3) + corners(.0075, .0105, .0085, .023, .024) + cheek_up(.0062) + lids(-.0012, .0026) + ulip * .3,
+        # A closed, warm smile: the mouth stays shut and curves, the cheeks lift and fold, the lower lids come up, the eyes crinkle.
+        "smile": corners(.0080, .0120, .0075, .021, .020) + cheek_up(.0080) + smile_fold(.0026) + lids(-.0009, .0030) + brows(-.0006, -.0014) + crinkle(.0016),
         "fear": jaw(6) + lids(.0030, -.0014) + brows(.0058, .0005) + corners(.0036, -.0030, .0010, .026, .023) + usoft * .7,
     }
     ob.shape_key_add(name="Basis", from_mix=False)
@@ -1787,6 +2353,89 @@ def face_keys(ob, zm, lip):
         print("KEY", k, "max move", round(float(np.linalg.norm(d, axis=1).max()), 4))
     ob.active_shape_key_index = 0
     me.update()
+
+
+def extra_face_keys(ob):
+    """The acting shapes on top of these keys (narrowed eyes, squint, brows, pressed and closed lips, smirk, frown, cheeks, sneer):
+    face_shapes.py, shared with her. Landmarks come from the keys above and the head map."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import face_shapes
+    face_shapes.add(ob, os.path.join(OUT, "Head_BaseMap.png"))
+
+
+def eye_opening(bm, tree, pl, ex, ez):
+    """Columns across one eye: x, and the lid edges above and below it, found by looking straight at the ball."""
+    xs = []; zu_ = []; zl_ = []
+    for qx in np.arange(ex - .021, ex + .021, .0008):
+        hits = []
+        for qz in np.arange(ez - .012, ez + .012, .0003):
+            h = tree.ray_cast(Vector((qx, -.25, qz)), Vector((0, 1, 0)), .3)
+            if h[0] is not None and bm.faces[h[2]].verts[0][pl] == 6: hits.append(qz)
+        if len(hits) > 1:
+            xs.append(qx); zu_.append(max(hits)); zl_.append(min(hits))
+    xs = np.array(xs); zu_ = np.array(zu_); zl_ = np.array(zl_)
+    for _ in range(3):
+        zu_[1:-1] = (zu_[:-2] + zu_[1:-1] * 2 + zu_[2:]) / 4; zl_[1:-1] = (zl_[:-2] + zl_[1:-1] * 2 + zl_[2:]) / 4
+    return xs, zu_, zl_
+
+
+def lid_line(x, xs, zu_, zl_):
+    """Where the lids seal: one smooth line from corner to corner, a little below straight."""
+    c0, c1 = (zu_[0] + zl_[0]) / 2, (zu_[-1] + zl_[-1]) / 2
+    tx = np.clip((x - (xs[0] + xs[-1]) / 2) / ((xs[-1] - xs[0]) / 2 + .0015), -1, 1)
+    return c0 + (c1 - c0) * (tx + 1) / 2 - .0016 * (1 - tx ** 2)
+
+
+LID_HIDE = .007   # how far behind its closed place the seal sits when the eye is open: inside the ball
+
+
+def lid_strips(ob):
+    """The lids of a remade head don't meet cleanly: what lands on the seam is 1 mm of torn socket lining. A thin dark strip, the lash line,
+    sits inside each eyeball, and `blink` brings it out over the seam in the last third of the close. Part 11."""
+    bm = bmesh.new(); bm.from_mesh(ob.data); bm.verts.ensure_lookup_table(); bm.faces.ensure_lookup_table()
+    pl = bm.verts.layers.int.get("part"); uvl = bm.loops.layers.uv.active; dv = bm.verts.layers.deform.verify()
+    gi = ob.vertex_groups["Head"].index
+    tree = BVHTree.FromBMesh(bm)
+    N = 22; rows = (.0016, .0009, .0002, -.0007, -.0012)
+    openings = [(ex, ez) + eye_opening(bm, tree, pl, ex, ez) for ex, ez in (EYE_R, EYE_L)]
+    for ex, ez, xs, zu_, zl_ in openings:
+        grid = []
+        for i in range(N + 1):
+            f_ = i / N; px = xs[0] - .0006 + (xs[-1] - xs[0] + .0012) * f_
+            m_ = float(lid_line(np.array([px]), xs, zu_, zl_)[0]); taper = np.sin(f_ * np.pi) ** .45
+            col = []
+            for r_, dz in enumerate(rows):
+                pz = m_ + dz * taper
+                d2 = (EYE_RAD + .0031) ** 2 - (px - ex) ** 2 - (pz - ez) ** 2
+                py = EYE_Y - math.sqrt(max(d2, 0)) + LID_HIDE
+                n_ = bm.verts.new((px, py, pz)); n_[pl] = 11; n_[dv][gi] = 1.0
+                col.append((n_, Vector((SWATCH["mouth"], SWATCH_V))))
+            grid.append(col)
+        for i in range(N):
+            for r_ in range(len(rows) - 1):
+                q = [grid[i][r_], grid[i + 1][r_], grid[i + 1][r_ + 1], grid[i][r_ + 1]]
+                f = bm.faces.new([c[0] for c in q]); f.material_index = 1; f.smooth = True
+                for l, c in zip(f.loops, q): l[uvl].uv = c[1]
+    bm.normal_update(); bm.to_mesh(ob.data); bm.free(); ob.data.update()
+
+
+def eye_bones(ob):
+    """LeftEye and RightEye, children of Head, at the centres of the eyeballs, pointing out of the face. Each ball (part 6) goes wholly
+    to its bone, so it turns in the socket under the lids. The Humanoid avatar maps them by name, and `gaze` drives them."""
+    arm = bpy.data.objects["Armature"]
+    if "LeftEye" not in arm.data.bones:
+        activate(arm); bpy.ops.object.mode_set(mode="EDIT")
+        for n, (ex, ez) in (("LeftEye", EYE_L), ("RightEye", EYE_R)):
+            e = arm.data.edit_bones.new(n); e.head = Vector((ex, EYE_Y, ez)); e.tail = Vector((ex, EYE_Y - .03, ez))
+            e.parent = arm.data.edit_bones["Head"]
+        bpy.ops.object.mode_set(mode="OBJECT"); activate(ob)
+    part = np.zeros(len(ob.data.vertices), int); ob.data.attributes["part"].data.foreach_get("value", part)
+    ids = np.where(part == 6)[0]; v = co(ob)
+    if "Head" in ob.vertex_groups: ob.vertex_groups["Head"].remove(ids.tolist())
+    for n, sel in (("LeftEye", v[ids, 0] > 0), ("RightEye", v[ids, 0] < 0)):
+        g = ob.vertex_groups.get(n) or ob.vertex_groups.new(name=n)
+        g.add(ids[sel].tolist(), 1.0, "REPLACE")
+    print("EYE BONES", len(ids), "verts")
 
 
 def shirt_lining(ob):
@@ -1819,10 +2468,18 @@ def stage_final():
     me = ob.data
     zm, lip = build_mouth(ob)
     print("FINAL TRIS", sum(len(p.vertices) - 2 for p in me.polygons), "UV", [u.name for u in me.uv_layers], "MATS", [m.name for m in me.materials])
+    eye_bones(ob)
     if FAST:
         shirt_lining(ob)
+        lid_strips(ob)
         face_keys(ob, zm, lip)
+        extra_face_keys(ob)
         bpy.ops.wm.save_as_mainfile(filepath=os.path.join(WORK, "final.blend"))
+        if os.environ.get("PERSON_EXPORT"):   # rig or key changes only: the bakes in gen/rigged still fit, so it exports without them
+            for mat in me.materials:
+                mat.use_nodes = True; mat.node_tree.nodes.clear()
+            textured(ob, lit=False)
+            export_fbx()
         return
     s = bpy.context.scene; s.render.engine = "CYCLES"; s.cycles.device = "CPU"; s.cycles.samples = 1; s.cycles.use_denoising = False
     R = 2048
@@ -1859,7 +2516,9 @@ def stage_final():
     for mat in me.materials: mat.node_tree.nodes.clear()
     textured(ob, lit=False)
     shirt_lining(ob)
+    lid_strips(ob)
     face_keys(ob, zm, lip)
+    extra_face_keys(ob)
     bpy.ops.wm.save_as_mainfile(filepath=os.path.join(WORK, "final.blend"))
     export_fbx()
 

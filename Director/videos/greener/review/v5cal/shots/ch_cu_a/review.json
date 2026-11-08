@@ -1,0 +1,75 @@
+{
+ "id": "ch_cu_a",
+ "f0": 1558,
+ "f1": 1610,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 51.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 52.967,
+   "why": "one patch jumps (cell 137.6, x2.5)",
+   "file": "spike-01589.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 53.467,
+   "why": "one patch jumps (cell 104.3, x1.9)",
+   "file": "spike-01604.jpg"
+  }
+ ],
+ "hash": "8c2f7522e8e0a46b",
+ "summary": "The shot has a pop in the first frames, big unlit confetti squares over his torso, a pose snap near 53.0, and a late push-in that crops his eyes out, so it does not read as a slow push into a face singing down the lens.",
+ "faults": [
+  {
+   "t": 52.1,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Right after the cut the framing and body jump between 52.06 and 52.10. The head drops and re-centres, the raised arm is gone, and both hands are in new places with no in-between. This reads as the cut tweening, not a held first frame.",
+   "fix": "Start the shot on the settled framing and pose, or trim the first 4 frames so the shot starts at 52.10."
+  },
+  {
+   "t": 52.03,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Large flat red and green confetti squares with no shading cross in front of his torso and arm from 52.00 to 52.13. The red one is as big as his hand. They look like unlit cards, not lit confetti.",
+   "fix": "Give the confetti the lit material, shrink it, and keep it out of the foreground in front of his torso."
+  },
+  {
+   "t": 53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 52.96 and 53.00 the hand on his chest and the lower arm are gone. The torso and head shift sideways in one step with no settle. This matches the measured spike.",
+   "fix": "Smooth or key the arm and torso through 52.93-53.03, or hold the 52.96 pose until the move is done."
+  },
+  {
+   "t": 53.5,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "From 53.46 to 53.60 the camera has dropped so that the frame cuts off his eyes and top of the head. He is meant to sing down the lens, but the face and eyes are not visible. Only the mouth and chin remain.",
+   "fix": "Keep the eyes in frame at the end of the push, with the lens at eye level, or stop the push earlier."
+  },
+  {
+   "t": 53.56,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Both hands fuss at the shirt on his chest with small pinching fingers. At 53.56 they are twinned and mirrored, and the move is mushy with no clear line of action. It distracts from the face and the line he is singing.",
+   "fix": "Use one clear gesture, such as one hand to the chest held as a pose, and drop the second hand's fiddling."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6384,
+  "out": 1813
+ },
+ "cost": 0.0309
+}

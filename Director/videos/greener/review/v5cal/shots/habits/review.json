@@ -1,0 +1,37 @@
+{
+ "id": "habits",
+ "f0": 2612,
+ "f1": 2664,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 87.067,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 88.367,
+   "why": "frame difference x11 (15.06)",
+   "file": "spike-02651.jpg"
+  }
+ ],
+ "hash": "ac11edbf3a78c736",
+ "summary": "The cut-in strip is clean and the cloche holds with a slight tremble, but around 88.36 the cloche's shadow sweeps off the plate in about three frames, which reads as a snap.",
+ "faults": [
+  {
+   "t": 88.39,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The cloche is already out of frame and only its shadow shows. The shadow crosses the plate and leaves it in about 3 frames (88.36 to 88.43), so the lift reads as a snap with no anticipation or ease-out. This matches the 88.367 spike.",
+   "fix": "Ease the cloche's lift-off over 6 to 8 frames, or keep it in frame for a beat so the shadow doesn't whip away."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4959,
+  "out": 781
+ },
+ "cost": 0.0177
+}

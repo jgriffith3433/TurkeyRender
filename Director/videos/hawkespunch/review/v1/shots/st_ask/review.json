@@ -1,0 +1,55 @@
+{
+ "id": "st_ask",
+ "f0": 4647,
+ "f1": 4798,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 154.9,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "698133a858fe2e0a",
+ "summary": "The cut is clean, with no camera lurch or flicker, but both heads snap round in about three frames and the two men hold twinned, stiff poses, with the left man's black outfit lost against the dark globe.",
+ "faults": [
+  {
+   "t": 155.06,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Both heads turn from facing the camera to nearly profile within about 3 frames (155.03 to 155.09). There is no anticipation or ease, so the 'look between them' snaps instead of reading as a look. The heads also seem to shift position slightly between tiles.",
+   "fix": "Add 4 to 6 frames of ease-in and ease-out on the head turn, or key the eyes to lead the head. Alternatively, start the shot already in the look pose."
+  },
+  {
+   "t": 154.93,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Both men hold the same pose: arms straight out, forearms parallel and hands flat on the globe, with matching hunched torsos. This is twinned and stiff, with no clear line of action. The hands hover on the globe surface rather than pressing in.",
+   "fix": "Vary the arm heights and angles between the two characters. Give the hands a visible press into the globe, or a small weight shift."
+  },
+  {
+   "t": 154.96,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The left man's black clothes and legs merge into the dark blue shadowed side of the globe. His silhouette is lost, so the 'look between them' reads mainly through the right man.",
+   "fix": "Add a rim light on the left character or brighten the globe's shadow side behind him."
+  },
+  {
+   "t": 155.13,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "After the turn, both faces hold a neutral, near-identical expression. Neither blinks or changes expression on the turn.",
+   "fix": "Add a blink on the turn and a small brow or mouth change on one character."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 1129
+ },
+ "cost": 0.0184
+}

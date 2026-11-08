@@ -1,0 +1,85 @@
+# greener final: greener-v9.mp4
+
+1 of 78 shots rendered, 77 reused from saved renders (103 of 4643 frames), 2.8 min. 1280x720, 30 fps.
+Join: clean, 4643 of 4643 frames, 0 uneven, 0 clicks at seams.
+
+| Shot | Time | Frames | Action | Why |
+|---|---|---|---|---|
+| head | 0:00.0 | 15 | reused | unchanged |
+| yard_wide | 0:00.5 | 103 | reused | unchanged |
+| hem | 0:03.9 | 103 | reused | unchanged |
+| funny | 0:07.4 | 102 | reused | unchanged |
+| secret | 0:10.8 | 103 | reused | unchanged |
+| lips | 0:14.2 | 52 | reused | unchanged |
+| sparrow_away | 0:15.9 | 51 | reused | unchanged |
+| weakness | 0:17.6 | 77 | reused | unchanged |
+| happens | 0:20.2 | 78 | reused | unchanged |
+| happens_2 | 0:22.8 | 51 | reused | unchanged |
+| irresponsible | 0:24.5 | 77 | reused | unchanged |
+| what_you_like | 0:27.1 | 77 | reused | unchanged |
+| glide | 0:29.6 | 77 | reused | unchanged |
+| curtsy | 0:32.2 | 52 | reused | unchanged |
+| tonight | 0:33.9 | 77 | reused | unchanged |
+| big_deal | 0:36.5 | 51 | reused | unchanged |
+| taste | 0:38.2 | 52 | reused | unchanged |
+| sparrow_pastel | 0:39.9 | 77 | reused | unchanged |
+| creep | 0:42.5 | 77 | reused | unchanged |
+| fence_one | 0:45.1 | 52 | reused | unchanged |
+| fence_two | 0:46.8 | 25 | reused | unchanged |
+| delight | 0:47.6 | 26 | reused | unchanged |
+| ch_crane | 0:48.5 | 52 | reused | unchanged |
+| gift_pop | 0:50.2 | 51 | reused | unchanged |
+| ch_cu_a | 0:51.9 | 51 | reused | unchanged |
+| ch_orbit_a | 0:53.6 | 52 | reused | unchanged |
+| doors | 0:55.4 | 51 | reused | unchanged |
+| ch_glide | 0:57.1 | 52 | reused | unchanged |
+| ch_orbit_b | 0:58.8 | 51 | reused | unchanged |
+| ch_cu_2 | 1:00.5 | 52 | reused | unchanged |
+| ch_low | 1:02.2 | 51 | reused | unchanged |
+| balloon_butler | 1:03.9 | 51 | reused | unchanged |
+| ch_orbit_c | 1:05.6 | 52 | reused | unchanged |
+| look_away | 1:07.4 | 51 | reused | unchanged |
+| blade_up | 1:09.1 | 52 | reused | unchanged |
+| wobble | 1:10.8 | 51 | reused | unchanged |
+| side_eye | 1:12.5 | 52 | reused | unchanged |
+| let_go | 1:14.2 | 51 | reused | unchanged |
+| snatch | 1:15.9 | 52 | reused | unchanged |
+| hall_empty | 1:17.7 | 51 | reused | unchanged |
+| dv_wide | 1:19.4 | 51 | reused | unchanged |
+| dv_cu_4 | 1:21.1 | 78 | reused | unchanged |
+| dv_wide_2 | 1:23.7 | 51 | reused | unchanged |
+| dv_cu_2 | 1:25.4 | 51 | reused | unchanged |
+| habits | 1:27.1 | 52 | reused | unchanged |
+| dv_low_2 | 1:28.8 | 77 | reused | unchanged |
+| dv_cu | 1:31.4 | 77 | reused | unchanged |
+| theory | 1:33.9 | 52 | reused | unchanged |
+| dv_cu_3 | 1:35.7 | 51 | reused | unchanged |
+| plan | 1:37.4 | 52 | reused | unchanged |
+| din_wide | 1:39.1 | 51 | reused | unchanged |
+| clever | 1:40.8 | 51 | reused | unchanged |
+| vase_slides | 1:42.5 | 52 | reused | unchanged |
+| push | 1:44.2 | 51 | reused | unchanged |
+| grey_wide | 1:45.9 | 77 | reused | unchanged |
+| he_looks | 1:48.5 | 52 | reused | unchanged |
+| holds_out | 1:50.2 | 51 | reused | unchanged |
+| takes_it | 1:51.9 | 52 | reused | unchanged |
+| goes_back | 1:53.7 | 51 | reused | unchanged |
+| hook_3 | 1:55.4 | 52 | reused | unchanged |
+| descend | 1:57.1 | 51 | reused | unchanged |
+| descend_b | 1:58.8 | 77 | reused | unchanged |
+| c2_orbit_a | 2:01.4 | 52 | reused | unchanged |
+| c2_cu_a | 2:03.1 | 51 | reused | unchanged |
+| c2_sil | 2:04.8 | 52 | reused | unchanged |
+| c2_point | 2:06.5 | 51 | reused | unchanged |
+| c2_low | 2:08.2 | 77 | reused | unchanged |
+| c2_orbit_b | 2:10.8 | 77 | reused | unchanged |
+| c2_med | 2:13.4 | 77 | reused | unchanged |
+| alone_fog | 2:15.9 | 103 | reused | unchanged |
+| hand_opens | 2:19.4 | 103 | **rendered** | changed: camera |
+| rise | 2:22.8 | 52 | reused | unchanged |
+| ribbon_far | 2:24.5 | 51 | reused | unchanged |
+| tv_pull | 2:26.2 | 52 | reused | unchanged |
+| darling | 2:28.0 | 77 | reused | unchanged |
+| pot | 2:30.5 | 25 | reused | unchanged |
+| better | 2:31.4 | 78 | reused | unchanged |
+| click_off | 2:34.0 | 24 | reused | unchanged |

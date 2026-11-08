@@ -1,0 +1,22 @@
+{
+ "clip": "mx_head_no",
+ "seconds": 1.9000000000000001,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.095 m, worst step 0.003 m at 1.13s",
+  "right foot on floor moved 0.047 m, worst step 0.002 m at 0.47s"
+ ],
+ "hipsTop": 0.9176115,
+ "hipsLow": 0.914612651,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 4.9
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_head_no_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_head_no_three.mp4"
+ ]
+}

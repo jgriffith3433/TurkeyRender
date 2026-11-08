@@ -1,0 +1,22 @@
+{
+ "id": "weakness",
+ "f0": 30,
+ "f1": 107,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 1,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "18295af43827d29b",
+ "summary": "The cut strip looks clean: the framing holds steady, the head turns gradually from 1.06 to 1.23, and I can't point to any pop, clip or render flicker.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3565,
+  "out": 556
+ },
+ "cost": 0.0127
+}

@@ -1,0 +1,9 @@
+{
+  // Everything here can be swapped to pivot the whole video.
+  "mood": "calm",
+  "camera": { "side": "right" },
+  // mv make: this is the pipeline's test video (12 short shots on a 27 s song, legacy engine, stock clips), so its gates are looser than a real
+  // video's: board rules for the short cut, critic 6.5 (stock IdleSit14 scores 6.7: straight-line hands), the sofa, carpet and coffee table the
+  // seated clips sit inside. Not a video for J. A real video keeps the defaults.
+  "make": { "board": { "avgMin": 2.0, "calmLen": 2.5, "calmShare": 0.2 }, "critic": 6.5, "motion": { "ignoreProps": ["Sofa_3seat", "Carpet_persian_A", "Table_coffee"] }, "test": { "w": 320, "h": 180 } }
+}

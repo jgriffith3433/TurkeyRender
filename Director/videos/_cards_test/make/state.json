@@ -1,0 +1,114 @@
+{
+ "version": 1,
+ "stages": {
+  "board": {
+   "status": "fail",
+   "key": "eced04b1986a6579",
+   "took": 0.01,
+   "problems": [
+    {
+     "what": "the board has not been turned into cards yet (no cards/board.yaml)",
+     "fix": "Run: node tools/board2cards.mjs   (it writes cut.json, cards/board.yaml and lines.json from the board), then mv cards check",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\cards\\board.yaml"
+    }
+   ],
+   "stats": {
+    "shots": 12,
+    "seconds": 27.6,
+    "avg": 2.3,
+    "bursts": 2,
+    "calmShare": 0.8
+   },
+   "at": "2026-11-08T19:47:23.773Z"
+  },
+  "cards": {
+   "status": "pass",
+   "key": "73b6a649a3513ca3",
+   "took": 1.25,
+   "summary": "cards check ok, lint 0 errors, 1 warnings (no clip-banned)",
+   "at": "2026-11-08T19:24:04.838Z"
+  },
+  "build": {
+   "status": "pass",
+   "key": "7c92a09f25d4651f",
+   "took": 452.32,
+   "summary": "built 2026-11-08T19:31:55.344Z, compile clean, bake gate PASS",
+   "builtAt": "2026-11-08T19:31:55.344Z",
+   "at": "2026-11-08T19:31:59.144Z"
+  },
+  "motion": {
+   "status": "fail",
+   "key": "76538f50b193bf82",
+   "took": 848.37,
+   "problems": [
+    {
+     "what": "critic: the motion scores 6.7/10, the threshold is 7",
+     "fix": "Fix the worst moments below (clip choice: mv clips <use>; keyed poses: posederive/posecheck; a bad take: re-bake), then mv make. Per actor: person 6.7. Or set make.critic in style.json with a reason",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\critic",
+     "field": "total"
+    },
+    {
+     "what": "critic worst: 0:00.0: person.LeftHand: LeftHand travels 38 cm in a straight line (bend 0) (also straight, no-prep, abrupt-start)",
+     "fix": "Look at it in motion (mv shot <id>, then the strips), not in a still",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\cards"
+    },
+    {
+     "what": "contact: 4:4.73 006 over_her: person prop living_room_sofa/Sofa_3seat (4.54 cm deep, 2.6 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "006 over_her"
+    },
+    {
+     "what": "contact: 5:3.92 007 both: person prop living_room_sofa/Sofa_3seat (4.53 cm deep, 5.47 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "007 both"
+    },
+    {
+     "what": "contact: 3:1.05 004 she_comes: person prop living_room_sofa/Sofa_3seat (4.53 cm deep, 4.17 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "004 she_comes"
+    },
+    {
+     "what": "contact: 1:4.12 001 alone: person prop living_room_sofa/Sofa_3seat (4.54 cm deep, 5.47 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "001 alone"
+    },
+    {
+     "what": "contact: 3:2.79 004 she_comes: her prop living_room_sofa/Sofa_3seat (14.37 cm deep, 0.83 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "004 she_comes"
+    },
+    {
+     "what": "contact: 7:4.19 009 cold_top: person prop living_room_sofa/Sofa_3seat (4.53 cm deep, 5.4 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "009 cold_top"
+    },
+    {
+     "what": "contact: 3:3.66 004 she_comes: her prop living_room_table/Table_coffee (14.62 cm deep, 0.53 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "004 she_comes"
+    },
+    {
+     "what": "contact: 6:2.97 008 hero: her prop living_room_carpet/Carpet_persian_A (2.01 cm deep, 2.77 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "008 hero"
+    },
+    {
+     "what": "contact: 3:2.64 004 she_comes: her prop living_room_carpet/Carpet_persian_A (2.01 cm deep, 0.6 s)",
+     "fix": "A body passes through a set piece or prop: move the mark or the piece (library/sets), or the clip (mv clips <use>)",
+     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\captures\\motioncheck-report.md",
+     "field": "004 she_comes"
+    }
+   ],
+   "critic": "critic 6.7/10 (videos/_cards_test/critic/make-all/report.md)",
+   "at": "2026-11-08T19:46:08.049Z"
+  }
+ }
+}

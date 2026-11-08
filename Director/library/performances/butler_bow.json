@@ -1,0 +1,26 @@
+{
+ "name": "butler_bow",
+ "about": "A turkey butler's bow: a small lift, down from the hips, a hold, up with a touch of overshoot. On a row it is one clip for all, so they stay in perfect unison; `stagger` is seconds between members.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.71s",
+ "min": "0.6s",
+ "params": {
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "blend": "0.08s",
+   "for": "$for",
+   "return": "0.15s",
+   "stagger": "$stagger"
+  }
+ ],
+ "test": {
+  "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "id": "alone_fog",
+ "f0": 4076,
+ "f1": 4181,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 135.867,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 135.933,
+   "why": "one patch jumps (cell 158.2, x13.1)",
+   "file": "spike-04078.jpg"
+  }
+ ],
+ "hash": "d6d06863daa87a1c",
+ "summary": "The shot opens from a heavy white fog and fades in smoothly over about six frames with no pops. The figure holds nearly still, so the spike at 135.933 is just the fog fade, not a fault.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4980,
+  "out": 138
+ },
+ "cost": 0.0113
+}

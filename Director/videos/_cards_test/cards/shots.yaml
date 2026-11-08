@@ -1,0 +1,82 @@
+- id: alone
+  idea: he is alone with the TV
+  feel: small
+  cast: {person: sofa clip:IdleSit14}
+  camera: wide person
+
+- id: his_face
+  idea: nothing on it reaches him
+  feel: numb
+  cast: {person: clip:IdleSit14}
+  camera: close-up person
+  use: {reaction_cut: {at: 0.5b}, crash_zoom: {to: 12, for: 1b}}
+
+- id: door_opens
+  idea: someone is at the door
+  feel: a held breath
+  cast: {person: clip:IdleSit14, her: door clip:Idle1}
+  camera: {preset: spot, from: corner_cam, on: her}
+
+- id: she_comes
+  idea: she walks in and stops by the TV
+  feel: he can't ignore this
+  cast: {person: clip:IdleSit14, her: door>by_tv clip:WalkForwardScared}
+  camera: tracking her left
+
+- id: over_him
+  idea: she looks down at him
+  feel: judged
+  cast: {person: clip:IdleSit14, her: {look: person, clip: Idle1}}
+  camera: over-shoulder person her
+
+- id: over_her
+  idea: he finally looks up
+  feel: caught
+  cast: {person: {look: her, clip: IdleSit14}, her: clip:Idle1}
+  camera: over-shoulder her person left
+  use: {rack_focus: {to: her.head, at: 1b}}
+
+- id: both
+  idea: they share a room and nothing else
+  feel: the gap
+  cast: {person: clip:IdleSit14, her: clip:Idle1}
+  camera: two-shot person her
+  note: Take b tries it from high up.
+  takes:
+    a: {}
+    b: {camera: high-lonely her}
+
+- id: hero
+  idea: she owns the room now
+  feel: power
+  cast: {her: center clip:Idle1}
+  camera: low-hero her
+  mood: warm
+  light: evening_lamp
+  use: hero_reveal
+  events: [{on: kick, pulse: {zoom: 0.01}}]
+
+- id: cold_top
+  idea: he is what is left
+  feel: lonely
+  cast: {person: clip:IdleSit14}
+  camera: high-lonely person
+  mood: lonely
+
+- id: out
+  idea: outside, she takes one breath
+  feel: free, and it is cold
+  cast: {her: start clip:Idle1}
+  camera: wide her
+
+- id: walk
+  idea: she leaves him behind
+  feel: moving on
+  cast: {her: start>lamp clip:WalkForwardScared}
+  camera: tracking her
+
+- id: lamp
+  idea: she stops under the lamp
+  feel: alone by choice
+  cast: {her: clip:Idle1}
+  camera: medium her

@@ -1,0 +1,35 @@
+{
+ "clip": "mx_happy_walk",
+ "seconds": 1.2000000000000002,
+ "popCount": 15,
+ "pops": [
+  "0.033s LeftLowerLeg kink 0.243 m",
+  "0.067s LeftLowerLeg kink 0.235 m",
+  "0.100s LeftLowerLeg kink 0.199 m",
+  "0.200s LeftLowerLeg kink 0.089 m",
+  "0.233s LeftLowerLeg kink 0.148 m",
+  "0.267s LeftLowerLeg kink 0.215 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.295 m, worst step 0.047 m at 0.87s",
+  "right foot on floor moved 0.295 m, worst step 0.033 m at 0.27s"
+ ],
+ "hipsTop": 0.9187896,
+ "hipsLow": 0.810399055,
+ "hipsTravel": "(0.00, -0.02, 1.90)",
+ "limits": {
+  "LeftLowerLeg": 33.6,
+  "LeftFoot": 29.8,
+  "RightLowerLeg": 22,
+  "groundHipsCm": 7.1,
+  "RightLowerArm": 3.4
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_happy_walk was rejected by admission: foot slide 4.91 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_happy_walk_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_happy_walk_three.mp4"
+ ]
+}

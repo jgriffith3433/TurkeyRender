@@ -1,0 +1,75 @@
+{
+ "id": "w_volley",
+ "f0": 3477,
+ "f1": 3553,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 115.9,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 116.267,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-03488.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 118.233,
+   "why": "frame difference x160.1 (160.12)",
+   "file": "spike-03547.jpg"
+  }
+ ],
+ "hash": "d86907dbfed1987f",
+ "summary": "Mars never visibly hits his gut; it flies up and out of frame and he is hit by a flash cut, with a hard white flash and a jump to a different scene at the end.",
+ "faults": [
+  {
+   "t": 116.03,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "Mars is a huge sphere that swings across his head and shoulder. His head and the dark hair clip into and through the planet, and the planet surface shows a black tear or gap as it passes (115.99-116.13).",
+   "fix": "Fix the planet's path so it clears his head, and remove the dark cutout or mesh hole on its surface."
+  },
+  {
+   "t": 116.13,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Mars jumps in scale and position between tiles. It is cut off at the top at 116.06-116.09, then sits behind his head at 116.13 and beside his torso at 116.16, so it reads as a teleport rather than a continuous arc. His torso also bends sharply at 116.06, and his arm and head snap.",
+   "fix": "Key the planet on a smooth arc with consistent scale, and ease his duck pose."
+  },
+  {
+   "t": 116.26,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The beat is meant to be 'he ducks Saturn', but Saturn is only a tiny dot that grows slowly. Mars exits upward and he stands upright and unaffected. Nothing reads as dodging.",
+   "fix": "Add a clear duck pose and have Saturn pass close to him."
+  },
+  {
+   "t": 118.23,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Two frames at 118.23 and 118.26 wash out to flat grey and then snap back to the dark scene at 118.29. This is a full-frame flash that reads as a glitch, not an impact. Mars is a tiny planet and far from his gut, so the 'gut' hit is not shown.",
+   "fix": "Shorten the flash to one frame with a bright white colour, and move Mars into his midsection on the impact frame."
+  },
+  {
+   "t": 118.43,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The last frame cuts to a different scene with a different character, in blue, and an Earth, with fragments and rings. It breaks continuity with the red-shirt character and the setup, and Mars never lands.",
+   "fix": "Show the impact on him in this shot before the cut, or keep the cut clean."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6384,
+  "out": 861
+ },
+ "cost": 0.0214
+}

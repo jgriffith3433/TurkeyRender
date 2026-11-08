@@ -1,0 +1,63 @@
+{
+ "id": "w_ch2_d",
+ "f0": 4081,
+ "f1": 4156,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 136.033,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "942562eae3ed967e",
+ "summary": "Cut strip shows Jupiter shrinking and sliding behind the character with the arm clipping it, and the figure holds a near-frozen T-pose-like stance while the planet moves.",
+ "faults": [
+  {
+   "t": 136.06,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "certain",
+   "what": "Jupiter sits half inside the character's torso and legs; his body and arm pass through the sphere with no wrap or contact.",
+   "fix": "Offset the planet's path so it stays clear of his body, or put it clearly in front of or behind him in depth."
+  },
+  {
+   "t": 136.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 136.06 and 136.09 the planet jumps from the lower-right of the figure to a larger size up behind his shoulders. Its position and scale snap in one frame, and it then shrinks quickly.",
+   "fix": "Start the planet at the 136.09 position and size, or tween it from the previous frame so the move is continuous."
+  },
+  {
+   "t": 136.16,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The character holds a stiff, symmetrical T-pose with both arms straight out. It barely changes from 136.09 to 136.29. There is no wind-up or bowling action, so the idea of throwing the planet is not read.",
+   "fix": "Key a real wind-up and release pose for the arms, with the hand leading toward the planet."
+  },
+  {
+   "t": 136.26,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The right hand pushes into the planet's surface and sinks into it at 136.26-136.29, with no grip or release.",
+   "fix": "Place the hand on the sphere surface, or open it so it releases the planet."
+  },
+  {
+   "t": 136.19,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The legs hang and float with no ground contact or weight shift while the torso stays frozen.",
+   "fix": "Add hip-led motion and a planted or hopping foot with anticipation and settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3580,
+  "out": 716
+ },
+ "cost": 0.0143
+}

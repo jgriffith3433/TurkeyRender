@@ -1,0 +1,32 @@
+{
+ "id": "head",
+ "hash": "32c9453ee5b66629",
+ "w": 1280,
+ "h": 720,
+ "fps": 30,
+ "f0": 0,
+ "f1": 5,
+ "parts": {
+  "engine": "85280fcce88b94c0",
+  "songData": "53a605bc7106fb65",
+  "songAudio": "6512691:1794100201966",
+  "poses": "2a882b20e25a9be3",
+  "grips": "8ecf5ff005fc5408",
+  "stage": "6983fc95c78e4834",
+  "shows": "74234e98afe7498f",
+  "videoFiles": "Props:a1e71aee8ab63961",
+  "frame": "1280x720@30 final",
+  "frames": "0-5",
+  "actor aim_flick": "0d6426a6d95ec05d",
+  "actor aim_lens_a": "47d7c1c5494a21dd",
+  "actor aim_lens_cu_l": "11980fac6c217742",
+  "actor aim_lens_cu_r": "c869e0466746e31b",
+  "actor aim_punch": "cbfae4da6333646d",
+  "actor aim_roof": "c5d59a62bc2b8914",
+  "actor aim_sky": "3506dfc96c45d776",
+  "actor aim_toss": "2f1823b56d2b1f54",
+  "actor aim_volley": "651ffb72c7e3593e",
+  "actor nurse": "3110672b6637bf12"
+ },
+ "rendered": "2026-11-08T02:25:08.391Z"
+}

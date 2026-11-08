@@ -1,0 +1,10 @@
+{
+  // Space: one hard sun from the right, behind and high (where the set's sun ball is), real shadows, nothing else but a faint blue earthlight from below and behind so the
+  // dark side of a body is not a hole. The sky is black with no stars of its own: the set's star sphere has them, painted, so they never twinkle. `stars` stays 0 here.
+  "sky": { "top": "#03040a", "mid": "#04050c", "bottom": "#020309", "ambient": "#1a2040", "ambientTop": "#181e38", "ambientBottom": "#20284c", "fog": "#000000", "density": 0, "sun": "#fff2d0", "sunDir": [0.7, 0.42, -0.5], "sunSize": 0.0, "stars": 0, "clouds": 0 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [700, 420, -500], "aim": "subject", "color": "#fff1d2", "intensity": 2.3, "shadows": true },
+    "rim": { "type": "directional", "pos": [-200, 80, 400], "aim": "subject", "color": "#9fb6ff", "intensity": 0.7 },
+    "fill": { "type": "directional", "pos": [-40, -60, -170], "aim": "subject", "color": "#6f8ad8", "intensity": 0.9 }
+  }
+}

@@ -1,0 +1,66 @@
+# Hawkes Punch draft 2, the ad's new shots (tv_fold, tv_doc, tv_both, tv_thumbs are in commercial.yaml)
+
+- id: tv_q
+  idea: him to the lens, the cheesy host: Is it right for me?
+  feel: morning show
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_cu_l, on: person, lens: 50}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0.1s, do: face, on: person, smile: 0.7, for: 0.3s}
+
+- id: tv_a
+  idea: the double points down the lens: It's right for everyone like you.
+  feel: you
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, blend: 0, look: lens_cu_r, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_cu_r, on: other, lens: 50}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0.02s, do: attach, on: tv_can_b, to: other.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90]}
+    - {at: 0.4s, do: layer, on: other, clip: mx_point_vegas, mask: leftArm, start: 0.1, once: 1, weight: 1, for: 1.3s, blend: 0.25s}
+    - {at: 0.3s, do: face, on: other, smile: 0.6, eyesWide: 0.2, for: 0.3s}
+
+- id: tv_me
+  idea: him, delighted realisation: That's me!
+  feel: sold
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_cu_l, on: person, lens: 50}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0.1s, do: face, on: person, smile: 0.95, eyesWide: 0.3, for: 0.2s}
+
+- id: tv_card
+  idea: a full-frame safety card, held so it can be read, while the announcer reads it fast and deadpan
+  feel: legally required
+  tags: [dark]
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_crane, on: sign, lens: 30}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, gfx: image, path: Assets/Videos/hawkespunch/Props/side_effects_1.png, pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 3.02s}   # sound pass 2026-11-08: hard cuts, page 2 overlaps by 0.02 s so no frame is bare
+    - {at: 3.0s, gfx: image, path: Assets/Videos/hawkespunch/Props/side_effects_2.png, pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 3.05s}
+
+- id: tv_end
+  idea: the end card, HAWKES PUNCH. Ask your doctor.
+  feel: the ad
+  tags: [dark]
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_crane, on: sign, lens: 30}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, gfx: image, path: Assets/Videos/hawkespunch/Props/end_card.png, pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 2.05s}   # held to the cut, no dissolve

@@ -1,0 +1,37 @@
+{
+ "id": "m_sat",
+ "f0": 2874,
+ "f1": 2949,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 95.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 95.9,
+   "why": "flow spike x15.7",
+   "file": "spike-02877.jpg"
+  }
+ ],
+ "hash": "00f9409cde58ab48",
+ "summary": "The cut itself is clean and there is no pop or flicker, but the new shot shows a stiff, static character standing with hands on hips, not riding a satellite like a bronco.",
+ "faults": [
+  {
+   "t": 95.93,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The idea is a bronco ride with whooping, but he stands upright with his back to camera and hands on hips. There is no bucking, no lasso or arm swing, and no sign of riding. The pose is frozen across 95.89 to 96.06.",
+   "fix": "Re-time or replace the clip with a riding mocap: knees bent, one arm up, torso rocking with the satellite."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4959,
+  "out": 869
+ },
+ "cost": 0.0186
+}

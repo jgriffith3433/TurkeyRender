@@ -71,6 +71,8 @@ namespace TKShock.MV.EditorTools
         {
             if (a["successive"] != null) a["successive"] = a["successive"].Type == JTokenType.Boolean ? ((bool)a["successive"] ? Successive : 0) : Dur(a["successive"], t, Successive);
             if (a["settle"] != null) a["settle"] = Dur(a["settle"], t, .4);
+            if (PunchCue(name, actor, kind, c, a, t, len)) return true;
+            if (kind == "perform") { PerformCue(name, c, t); return true; }
             if (kind == "ragdoll") { RagdollCue(name, c, a, t, len); return true; }
             if (kind == "layer") { LayerCue(name, actor, c, a, t, len); return true; }
             bool wholeBody = kind == "pose" && (c["pose"] != null || c["from"] != null);
@@ -116,6 +118,82 @@ namespace TKShock.MV.EditorTools
             return true;
         }
 
+        // ---- performances: Director/library/performances/<name>.json, named actions that expand to cues here ----
+
+        int _performDepth;
+
+        /// <summary>{"do":"perform","on":"person","name":"walk_tired","for":"2bars","dist":3}. Every other key of the cue is a parameter.
+        /// In the file, "$x" is a parameter (or `for`, in seconds), "=for-0.4" is arithmetic on them and gives seconds, "if":"$x" drops a cue
+        /// when x is 0 or false, and `at` and all lengths are seconds from the start of the cue. See Director/library/performances/README.md.</summary>
+        void PerformCue(string name, JObject c, double t)
+        {
+            var file = (string)c["name"] ?? (string)c["performance"];
+            var path = Path.Combine(Bridge.Root, "library", "performances", file + ".json");
+            if (file == null || !File.Exists(path)) { _warn.Add($"{name}: no performance '{file}' in Director/library/performances"); return; }
+            if (_performDepth > 4) { _warn.Add($"{name}: performances nested too deep at '{file}'"); return; }
+            var perf = JObject.Parse(File.ReadAllText(path));
+            var vars = new Dictionary<string, JToken>();
+            if (perf["params"] is JObject defs) foreach (var kv in defs) vars[kv.Key] = kv.Value;
+            var skip = new[] { "do", "on", "at", "name", "performance", "for", "until", "lead" };
+            foreach (var kv in c) if (!kv.Key.StartsWith("__") && Array.IndexOf(skip, kv.Key) < 0) vars[kv.Key] = kv.Value;
+            double natural = Dur(perf["length"], t, 1);
+            double len = c["for"] != null ? Dur(c["for"], t, natural) : c["until"] != null ? T(c["until"], t) - t : natural;
+            vars["for"] = len; vars["length"] = natural;
+            if (perf["min"] != null && len < Dur(perf["min"], t, 0) - .001) _warn.Add($"{name}: '{file}' wants at least {perf["min"]}, got {len:0.##} s");
+            // "lead":"2b" joins the take that far in: a take that started under the shot before. Clips start further on, nothing before it plays.
+            double lead = c["lead"] != null ? Dur(c["lead"], t, 0) : 0;
+            bool baked = BakeStart(name, file, vars, t, len, lead); if (baked) _bakeHide++;
+            double keep = _prev; _performDepth++;
+            try
+            {
+                foreach (var src in (perf["cues"] as JArray ?? new JArray()).OfType<JObject>())
+                {
+                    if (!(Fill(src, vars) is JObject inner)) continue;
+                    if (inner["if"] != null) { var w = inner["if"]; if (w.Type == JTokenType.Null || w.Type == JTokenType.Boolean && !(bool)w || (w.Type == JTokenType.Float || w.Type == JTokenType.Integer) && Math.Abs((double)w) < 1e-6) continue; inner.Remove("if"); }
+                    if (_bakeHide > 0 && !BakeKeep(inner)) continue;
+                    double at0 = Dur(inner["at"], t, 0), late = lead - at0;
+                    if (late > 1e-6)
+                    {
+                        var kind = (string)inner["do"];
+                        double dur = inner["for"] != null ? Dur(inner["for"], t, 0) : -1;
+                        if (kind == "perform") inner["lead"] = late;
+                        else if (kind == "anim" || kind == "layer")
+                        {
+                            if (dur >= 0 && dur <= late) continue;
+                            inner["start"] = ((double?)inner["start"] ?? 0) + late * ((double?)inner["speed"] ?? 1);
+                            if (dur >= 0) inner["for"] = dur - late;
+                        }
+                        else if (dur >= 0) inner["for"] = Math.Max(.05, dur - late);
+                        inner["at"] = t;
+                    }
+                    else inner["at"] = t + at0 - lead;
+                    if (inner["on"] == null) inner["on"] = name;
+                    _prev = t; Cue(inner, null);
+                }
+            }
+            finally { _performDepth--; _prev = keep; if (baked) _bakeHide--; }
+        }
+
+        static readonly System.Data.DataTable Calc = new System.Data.DataTable();
+
+        static JToken Fill(JToken v, Dictionary<string, JToken> vars)
+        {
+            if (v is JObject o) { var n = new JObject(); foreach (var kv in o) n[kv.Key] = Fill(kv.Value, vars); return n; }
+            if (v is JArray a) return new JArray(a.Select(x => Fill(x, vars)));
+            if (v.Type != JTokenType.String) return v.DeepClone();
+            var s = (string)v;
+            if (s.StartsWith("=")) return Convert.ToDouble(Calc.Compute(Words(s.Substring(1), vars), ""), System.Globalization.CultureInfo.InvariantCulture);
+            if (s.StartsWith("$") && vars.TryGetValue(s.Substring(1), out var whole)) return whole.DeepClone();
+            return s.Contains("$") ? Words(s, vars, true) : s;
+        }
+
+        static string Words(string s, Dictionary<string, JToken> vars, bool dollar = false) =>
+            System.Text.RegularExpressions.Regex.Replace(s, dollar ? @"\$([A-Za-z_]\w*)" : @"\$?([A-Za-z_]\w*)", m =>
+            {
+                if (!vars.TryGetValue(m.Groups[1].Value, out var x)) return m.Value;
+                return x.Type == JTokenType.Float || x.Type == JTokenType.Integer ? ((double)x).ToString("0.######", System.Globalization.CultureInfo.InvariantCulture) : (string)x;
+            });
+
         // ---- layers and blend trees ----
 
         AnimationClip Named(MVActor actor, string who, string clip)
@@ -138,6 +216,8 @@ namespace TKShock.MV.EditorTools
             var clip = Named(actor, name, (string)c["clip"]); if (!clip) return;
             if (c["weight"] is JArray keyed) { a.Remove("weight"); a["W"] = new JObject { ["list"] = KeyList(keyed, t) }; }
             if (c["for"] == null && c["until"] == null) a["hold"] = 1;
+            CheckAdmitted(name, actor, clip);
+            if (c["warpTo"] != null) WarpCue(name, actor, c, a, clip, t, len);
             Op(Track(name), "layer", t, len, a, clip);
         }
 

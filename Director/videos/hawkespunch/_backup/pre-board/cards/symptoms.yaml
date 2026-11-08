@@ -1,0 +1,147 @@
+# Hawkes Punch, part 2a: the symptoms (J, 2026-11-07). "She's asking him to describe his symptoms and he talks about how he always is listening to
+# music and can't stop and is in love with a space ghost. Make that kinda funny." Played straight: he overshares from the paper bed, she sits at the
+# desk with her back half to him, eyes on the pad, writing, and never blinks or looks up. 9:1-21:1, 12 bars, then the prescription.
+# Voices: tools/punch_lines.mjs (symptoms/*.mp3), each with its jaw. His long line runs from 10:1 (22.87 s); every cut to or from her sits in one of its pauses.
+# Native path: the doctor writes for real (mx_writing_seated), a gaze to the pad. Him: seated clips on the bed mark (mx_sitting_talking, mx_sit_point, mx_sit_still).
+
+- id: sym_ask
+  idea: the wide: he sits on the paper bed waiting; she asks for his symptoms without looking up from the pad
+  feel: routine
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 26}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.1s, sfx: Assets/MusicVideo/Sfx/punch/chair_creak_a.mp3, volume: 0.25}
+    - {at: 0, do: attach, on: clinic_pen, to: doctor.rightHand, pos: [0.0, 0.03, 0.04], rot: [0, 0, 90], blend: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.6, for: 0}
+    - {at: 0, do: fingers, on: doctor, hand: left, set: 0.3, for: 0}
+
+- id: sym_music
+  idea: I can't stop listening to music: his single, the camera starts creeping in
+  feel: oh no, he's going to tell her everything
+  cast: {person: {at: bed, clip: IdleSit13Explain, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 45}
+  shot: {dolly: [[700.6, 1.35, 2.2], [700.6, 1.38, 2.62]], ease: linear}
+
+- id: sym_write1
+  idea: in the shower, in my sleep: cut to her, eyes on the pad, writing it all down, not a blink
+  feel: she has heard worse
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor, lens: 75}
+  shot: {pos: [700.75, 1.5, 1.2], look: doctor.chest, rot: null, fov: 36, screen: [0, -0.06], deadzone: false}
+  raw:
+    - {at: 0.3s, sfx: Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3, volume: 0.4}
+    - {at: 0, do: face, on: doctor, blink: 0, eyesWide: 0.05, smile: 0, for: 0}
+
+- id: sym_silence
+  idea: I tried silence once, and it was just... more music: back on him, a finger wagging the point home
+  feel: he means it
+  cast: {person: {at: bed, clip: IdleSit13Explain, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 42}
+  shot: {deadzone: false}
+  raw:
+    - {at: 2.2b, do: layer, on: person, clip: mx_point_vegas, mask: leftArm, start: 0.1, once: 1, weight: 1, for: 1.3s, blend: 0.25s}
+
+- id: sym_love
+  idea: I'm in love. With a ghost. In space.: he goes still and soft, the camera pushes in slowly
+  feel: wait, what
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 50}
+  shot: {dolly: [[700.62, 1.38, 2.45], [700.62, 1.42, 2.95]], ease: linear}
+  events:
+    - {on: 2.2b, who: person, do: face, smile: 0.25, eyesWide: 0.15, for: 0.8s}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+
+- id: sym_write2
+  idea: she doesn't have a face: her again, writing it down, exactly as before
+  feel: she is writing "face" on a prescription
+  cast: {person: {at: bed, clip: mx_sit_still, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor, lens: 65}
+  shot: {pos: [700.75, 1.5, 1.2], look: doctor.chest, rot: null, fov: 36, screen: [0, -0.06], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0.1s, do: gaze, on: doctor, to: person.head, limit: 40, for: 0.35s, ease: inout}
+    - {at: 0.05s, do: anim, on: doctor, clip: mx_sit_still, blend: 0.3}
+    - {at: 0.15s, sfx: Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3, volume: 0.4}
+    - {at: 0, do: face, on: doctor, blink: 0, eyesWide: 0.05, smile: 0, for: 0}
+
+- id: sym_vibe
+  idea: but she has, like... a vibe: tight on him, the hand searching for the word, then nothing
+  feel: he is gone
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 50}
+  shot: {pos: [700.62, 1.45, 2.85], look: person.head, rot: null, deadzone: false}
+  events:
+    - {on: 2.6b, who: person, do: face, smile: 0.3, for: 0.6s}
+  raw:
+    - {at: 0, do: show, on: drawing}
+    - {at: 0, do: set, on: drawing, pos: [700.62, 1.22, 3.36], rot: [-10, 0, 0]}
+    - {at: 0, do: reach, on: person, hand: right, to: drawing, offset: [-0.1, -0.11, 0.02], for: 0.3s, ease: hand}
+    - {at: 0, do: reach, on: person, hand: left, to: drawing, offset: [0.1, -0.11, 0.02], for: 0.3s, ease: hand}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+
+- id: sym_ghost_her
+  idea: the pen stops; she looks up at him, blank, and holds it; then back down to the pad: A space ghost.
+  feel: deadpan
+  cast: {person: {at: bed, clip: mx_sit_still, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor, lens: 75}
+  shot: {pos: [700.6, 1.32, 1.35], look: doctor.head, rot: null, fov: 30, screen: [0, -0.05], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: face, on: doctor, blink: 0, eyesWide: 0.08, smile: 0, for: 0}
+    - {at: 2.9s, sfx: Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3, volume: 0.3}
+    - {at: 0.05s, do: anim, on: doctor, clip: mx_sit_still, blend: 0.6}
+    - {at: 0.2s, do: gaze, on: doctor, to: person.head, limit: 40, for: 0.5s, ease: inout}
+    - {at: 1.75s, do: gaze, on: doctor, to: rx_spot, limit: 40, for: 0.25s, ease: inout}
+    - {at: 1.95s, do: anim, on: doctor, clip: mx_writing_seated, blend: 0.3}
+
+- id: sym_ghost_him
+  idea: ...Space ghost.: tight on him, eyes drifting up and away, the smile of a man in love
+  feel: dreamy
+  cast: {person: {at: bed, clip: mx_sit_still, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 55}
+  shot: {pos: [700.62, 1.45, 2.85], look: person.head, rot: null, deadzone: false}
+  raw:
+    - {at: 0.25s, do: gaze, on: person, toRel: [-1.2, 2.4, 3], for: 0.8s, ease: inout}
+    - {at: 0.3s, do: face, on: person, smile: 0.55, fear: 0, for: 0.9s, ease: inout}
+    - {at: 2.6s, do: blink, on: person, for: 0.3s}
+
+- id: sym_pen
+  idea: insert, her pen stops mid-word on "In space."
+  feel: wait
+  tags: [insert, ecu]
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs}, doctor: {at: desk_doc, clip: mx_writing_seated, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor.rightHand, lens: 85}
+  shot: {pos: [701.55, 1.3, 1.95], look: clinic_rx_pad, rot: null, fov: 30, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.45s, do: anim, on: doctor, clip: mx_sit_still, blend: 0.6}
+
+- id: sym_drawing
+  idea: insert, his drawing of her held up to the doctor, a white sheet ghost with no face, a heart
+  feel: she has, like, a vibe
+  tags: [insert]
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs}, doctor: {at: desk_doc, clip: mx_sit_still, look: person}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 60}
+  shot: {pos: [700.62, 1.24, 2.72], look: drawing, rot: null, fov: 30, deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: show, on: drawing}
+    - {at: 0, do: set, on: drawing, pos: [700.62, 1.22, 3.36], rot: [-10, 0, 0]}
+    - {at: 0, do: reach, on: person, hand: right, to: drawing, offset: [-0.1, -0.11, 0.02], for: 0, lint: point}
+    - {at: 0, do: reach, on: person, hand: left, to: drawing, offset: [0.1, -0.11, 0.02], for: 0, lint: point}
+    - {at: end, do: reach, on: person, hand: right, weight: 0, for: 0}
+    - {at: end, do: reach, on: person, hand: left, weight: 0, for: 0}
+    - {at: end, do: hide, on: drawing}
+

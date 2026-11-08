@@ -1,0 +1,47 @@
+{
+ "id": "hook_3",
+ "f0": 3461,
+ "f1": 3513,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 115.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "8c9f9d9510c96a8e",
+ "summary": "The new shot opens with the dancer's head and upper chest cut off by the top of the frame, and his arms snap from hands-on-hips to hands-at-thighs between 115.49 and 115.53. The washed-out opening fades to full colour over about 5 frames.",
+ "faults": [
+  {
+   "t": 115.46,
+   "sev": "A",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The character is cropped at the chest in every tile from 115.46 to 115.63, so his head and face are never visible. The hook's main subject is headless and the low camera shows mostly empty pink stairs.",
+   "fix": "Tilt the camera up or pull it back so the full figure, head included, sits in frame at the top of the stairs."
+  },
+  {
+   "t": 115.53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Both arms jump from hands-on-hips at 115.49 to hands hanging at the thighs at 115.53. There are no in-between frames, which reads as a pose snap just after the cut.",
+   "fix": "Blend or retime the arm pose on the first frames of the shot, or start the clip already in the hands-down pose."
+  },
+  {
+   "t": 115.46,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The picture starts heavily washed out, with a pale pink-white veil over the figure and set. It clears over about 5 frames until 115.56, and the figure's contrast and the stair saturation change with it. The opening frames lose the dancer against the background.",
+   "fix": "Shorten the exposure fade, or start at full exposure so the first frame already reads as the shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3553,
+  "out": 1159
+ },
+ "cost": 0.0187
+}

@@ -1,0 +1,53 @@
+{
+ "id": "ch_orbit_b",
+ "f0": 1764,
+ "f1": 1816,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 58.8,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 59.633,
+   "why": "flow spike x6.8",
+   "file": "spike-01789.jpg"
+  }
+ ],
+ "hash": "6f6192790a23675b",
+ "summary": "The strip has two visible faults: a dark band at the top edge as the camera arcs in, and a pink balloon intersecting his torso. The 59.63 spike looks like a fast arm and camera move, not a clear break.",
+ "faults": [
+  {
+   "t": 59.03,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "A dark brown band with streaky vertical lines shows along the top edge at 59.03 and 59.06. The arcing camera has moved past the set ceiling and shows the void or backdrop.",
+   "fix": "Raise or tilt the camera a little, or extend or fill the ceiling geometry, so the arc stays inside the set."
+  },
+  {
+   "t": 58.99,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "From 58.96 to 59.06 a pink balloon sits against his torso and hip, overlapping the body as the camera moves. It reads as a balloon passing through him.",
+   "fix": "Move that balloon a metre away from his path, or hide it for this shot."
+  },
+  {
+   "t": 59.63,
+   "sev": "C",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Around 59.63 to 59.66 the framing and his hand-to-ear arm shift sharply between tiles. This is the flow spike, with a quick arm hit and camera lurch. The arm then swings out fast from 59.76 to 59.83.",
+   "fix": "Smooth the camera speed here and add one in-between pose on the arm change."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4940,
+  "out": 1089
+ },
+ "cost": 0.0208
+}

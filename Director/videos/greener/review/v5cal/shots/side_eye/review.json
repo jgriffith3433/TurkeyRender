@@ -1,0 +1,53 @@
+{
+ "id": "side_eye",
+ "f0": 2176,
+ "f1": 2227,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 72.533,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 73.367,
+   "why": "flow spike x8.3",
+   "file": "spike-02201.jpg"
+  }
+ ],
+ "hash": "3bd2cb808bfa3c8f",
+ "summary": "The close-up has a head and framing snap at about 73.47 s, where he turns from side-looking to facing the camera in one frame, which also contradicts the \"never look straight\" idea. The wide cut-in is stiff but has no clear pop.",
+ "faults": [
+  {
+   "t": 73.49,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 73.46 and 73.49 the head snaps from a turned, side-looking pose to facing the camera. The head tilt, hair silhouette and face angle all change in one frame. The head and shoulders also drop slightly in frame, as if the camera or rig jumped. There is no in-between, anticipation or settle.",
+   "fix": "Add 3-4 in-between frames of the head and eye return, with a small overshoot. Lock the camera or rig so the head and shoulders do not shift."
+  },
+  {
+   "t": 73.53,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "After the snap he looks straight into the lens and holds it, which contradicts 'never look at them straight'. The idea was an eye flick toward the butler and a snap back, but here the whole head swings and then stares at the camera.",
+   "fix": "Keep the head mostly still and make the eyes do the glance. Snap back to a clearly off-axis gaze rather than a straight-on stare."
+  },
+  {
+   "t": 72.66,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "In the wide shot he stands stiff and frontal, with both arms hanging symmetrically and almost no motion over 6 frames. There is no sign of the over-the-shoulder look or any weight shift.",
+   "fix": "Add a weight shift and a slight shoulder turn so the over-the-shoulder stare reads in the wide."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4963,
+  "out": 1190
+ },
+ "cost": 0.0218
+}

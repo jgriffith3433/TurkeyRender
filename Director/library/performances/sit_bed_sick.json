@@ -1,0 +1,371 @@
+{
+ "name": "sit_bed_sick",
+ "about": "Slumped on the paper bed, small: shoulders down, chest folded, eyes heavy under a raised brow. A cough at `cough` (two jolts, a loose fist to the mouth), then at `look` his head comes up to the poster (`poster`, a point in his own frame: up and to his right by default). Pale is the grade, not the body. Seat about 0.45 m; starts on a cut.",
+ "entry": "sit_chair",
+ "exit": "sit_chair",
+ "length": "6s",
+ "min": "3s",
+ "params": {
+  "clip": "IdleSit13",
+  "cough": 2.2,
+  "look": 3.8,
+  "poster": [
+   1.3,
+   1.5,
+   2.2
+  ]
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$clip",
+   "blend": "0.4s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.35,
+   "head": 0.3,
+   "arms": 0.5,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "toRel": [
+    0.15,
+    0.55,
+    1.4
+   ],
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "fear": 0.18,
+   "blink": 0.22,
+   "for": "0.8s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.05,
+   "do": "keys",
+   "successive": true,
+   "keys": [
+    {
+     "t": 0.7,
+     "ease": "inout",
+     "hold": "=for-1.6",
+     "hips": [
+      0,
+      -0.012,
+      0.02
+     ],
+     "bones": {
+      "spine": [
+       9,
+       0,
+       0
+      ],
+      "chest": [
+       8,
+       0,
+       0
+      ],
+      "neck": [
+       7,
+       0,
+       0
+      ],
+      "head": [
+       5,
+       0,
+       -4
+      ],
+      "leftShoulder": [
+       0,
+       0,
+       7
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       -7
+      ],
+      "leftUpperArm": [
+       6,
+       0,
+       3
+      ],
+      "rightUpperArm": [
+       6,
+       0,
+       -3
+      ],
+      "leftLowerArm": [
+       8,
+       0,
+       0
+      ],
+      "rightLowerArm": [
+       8,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": "=for-0.5",
+     "ease": "inout",
+     "bones": {
+      "spine": [
+       6,
+       0,
+       0
+      ],
+      "chest": [
+       5,
+       0,
+       0
+      ],
+      "neck": [
+       4,
+       0,
+       0
+      ],
+      "head": [
+       2,
+       0,
+       -2
+      ],
+      "leftShoulder": [
+       0,
+       0,
+       5
+      ],
+      "rightShoulder": [
+       0,
+       0,
+       -5
+      ]
+     }
+    }
+   ],
+   "release": "0.6s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.4,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.4,
+   "for": "0.3s"
+  },
+  {
+   "at": 1.1,
+   "do": "blink",
+   "for": "0.24s"
+  },
+  {
+   "at": "=cough-0.55",
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    0.07,
+    1.08,
+    0.2
+   ],
+   "for": "0.45s",
+   "ease": "hand"
+  },
+  {
+   "at": "=cough-0.5",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.82,
+   "for": "0.3s"
+  },
+  {
+   "at": "=cough",
+   "do": "pose",
+   "bones": {
+    "chest": [
+     13,
+     0,
+     0
+    ],
+    "neck": [
+     8,
+     0,
+     0
+    ],
+    "head": [
+     9,
+     0,
+     0
+    ]
+   },
+   "for": "0.09s",
+   "ease": "out"
+  },
+  {
+   "at": "=cough",
+   "do": "face",
+   "jawOpen": 0.45,
+   "blink": 1,
+   "for": "0.08s",
+   "ease": "out"
+  },
+  {
+   "at": "=cough+0.14",
+   "do": "pose",
+   "bones": {
+    "chest": [
+     4,
+     0,
+     0
+    ],
+    "neck": [
+     2,
+     0,
+     0
+    ],
+    "head": [
+     3,
+     0,
+     0
+    ]
+   },
+   "for": "0.12s",
+   "ease": "inout"
+  },
+  {
+   "at": "=cough+0.14",
+   "do": "face",
+   "jawOpen": 0.1,
+   "for": "0.1s"
+  },
+  {
+   "at": "=cough+0.3",
+   "do": "pose",
+   "bones": {
+    "chest": [
+     15,
+     0,
+     0
+    ],
+    "neck": [
+     9,
+     0,
+     0
+    ],
+    "head": [
+     10,
+     0,
+     0
+    ]
+   },
+   "for": "0.09s",
+   "ease": "out"
+  },
+  {
+   "at": "=cough+0.3",
+   "do": "face",
+   "jawOpen": 0.5,
+   "for": "0.08s",
+   "ease": "out"
+  },
+  {
+   "at": "=cough+0.45",
+   "do": "pose",
+   "bones": {
+    "chest": [
+     0,
+     0,
+     0
+    ],
+    "neck": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=cough+0.45",
+   "do": "face",
+   "jawOpen": 0,
+   "blink": 0.22,
+   "for": "0.35s",
+   "ease": "inout"
+  },
+  {
+   "at": "=cough+0.75",
+   "do": "reach",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": "=cough+0.8",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.4,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=look",
+   "do": "gaze",
+   "toRel": "$poster",
+   "for": "0.9s",
+   "ease": "inout"
+  },
+  {
+   "at": "=look+0.45",
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": "=look+0.7",
+   "do": "face",
+   "blink": 0.1,
+   "eyesWide": 0.18,
+   "fear": 0.12,
+   "for": "0.6s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "sit_idle",
+    "for": "1s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

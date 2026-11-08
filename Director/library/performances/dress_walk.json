@@ -1,0 +1,115 @@
+{
+ "name": "dress_walk",
+ "about": "The pop-star walk: mocap strut (real hip roll and stride, a step every two beats) at his own speed, soft hands. `skirt` 1 holds the invisible skirt up in both hands. Ends mid-step: chain dress_stand, a dance, or a cut.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "3.43s",
+ "min": "0.86s",
+ "params": {
+  "dist": 0,
+  "pace": 0.8,
+  "stride": 1.37,
+  "clip": "mx_strut",
+  "skirt": 0
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "legs": 0,
+   "arms": 0,
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "if": "$skirt",
+   "do": "layer",
+   "clip": "IdleBreathe",
+   "mask": "arms",
+   "weight": 0.92,
+   "for": "$for",
+   "blend": "0.25s"
+  },
+  {
+   "at": 0,
+   "if": "$skirt",
+   "do": "stance",
+   "legs": 0,
+   "arms": 1,
+   "bones": {
+    "leftUpperArm": [
+     -2,
+     0,
+     14
+    ],
+    "rightUpperArm": [
+     -2,
+     0,
+     -14
+    ],
+    "leftLowerArm": [
+     -16,
+     0,
+     -16
+    ],
+    "rightLowerArm": [
+     -16,
+     0,
+     16
+    ]
+   },
+   "for": "0.3s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.22,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.22,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "walk",
+   "clip": "$clip",
+   "to": [
+    0,
+    0,
+    "=IIF(dist>0,dist,for*pace)"
+   ],
+   "rel": 2,
+   "for": "$for",
+   "stride": "$stride",
+   "soft": 0.2,
+   "softOut": 0.3,
+   "blend": 0.25,
+   "face": 0
+  },
+  {
+   "at": 0.6,
+   "do": "blink",
+   "for": "0.18s"
+  }
+ ],
+ "test": {
+  "first": [
+   "dress_stand"
+  ],
+  "then": [
+   "dress_stand"
+  ],
+  "args": {
+   "dist": 2.6,
+   "for": "3.43s"
+  },
+  "tail": 0.5
+ }
+}

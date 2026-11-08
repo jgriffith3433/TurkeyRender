@@ -1,0 +1,47 @@
+{
+ "id": "st_look",
+ "f0": 4534,
+ "f1": 4647,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 151.133,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "ef5887fa3c66acb9",
+ "summary": "The strip is stable with no pops, flicker or camera movement, but both characters stay in profile looking at each other with near-frozen faces, not turning their eyes to the lens, and their arms are stiff and twinned.",
+ "faults": [
+  {
+   "t": 151.16,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot idea is both characters turning their eyes to the lens, but in all eight tiles (151.16 to 151.39) both are in profile looking at each other. Neither head nor eyes move toward the camera, so the 'they know we are here' feel is missing at the start of the shot.",
+   "fix": "Start the head and eye turn to the lens on the first frames of the shot, or cut in with the eyes already on the lens."
+  },
+  {
+   "t": 151.26,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Both faces are nearly frozen across the strip, with no blink, eye shift or expression change. The cut-in reads as a held, blank mutual stare.",
+   "fix": "Add a blink and a quick eye-lead toward the lens, with the heads following."
+  },
+  {
+   "t": 151.29,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "Both characters hold stiff, near-symmetrical forward arms with similar loose hands at the same height. The arms read as twinned, with no clear line of action, and the hands almost overlap in the middle.",
+   "fix": "Vary the arm heights and angles, and separate the hands so each silhouette reads clearly."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3568,
+  "out": 864
+ },
+ "cost": 0.0158
+}

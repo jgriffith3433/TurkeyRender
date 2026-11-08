@@ -1,0 +1,15 @@
+{
+  // Cut to the song. Performance and story cross-cut, and the song sets the length.
+  "about": "A song, start to end.",
+  "aspect": [16, 9], "render": [1920, 1080], "fps": 30, "length": null,
+  "pacing": { "avgSeconds": [1.8, 5], "maxSeconds": 12, "shotBeats": { "verse": [4, 8], "chorus": [2, 4], "bridge": [6, 12] } },
+  "beats": [
+    { "part": "hook", "share": 0.08, "job": "the image the video is remembered for" },
+    { "part": "verse 1", "share": 0.22, "job": "who, where, what is wrong" },
+    { "part": "chorus 1", "share": 0.14, "job": "the promise: energy and the big idea" },
+    { "part": "verse 2", "share": 0.2, "job": "it gets worse or stranger" },
+    { "part": "chorus 2", "share": 0.14, "job": "bigger than chorus 1, something new" },
+    { "part": "bridge", "share": 0.1, "job": "stillness, the turn" },
+    { "part": "last chorus", "share": 0.12, "job": "pay off the hook image" }
+  ]
+}

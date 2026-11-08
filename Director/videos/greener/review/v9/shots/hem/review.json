@@ -1,0 +1,39 @@
+{
+ "id": "hem",
+ "f0": 118,
+ "f1": 221,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 3.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "5bd5169767c64195",
+ "summary": "The cut is clean with no pops, flicker or camera movement, but the cup grip looks weak and the shot doesn't yet show the skirt-smoothing idea.",
+ "faults": [
+  {
+   "t": 3.96,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The mug sits on top of the right hand's curled fingers. The handle faces outward and the fingers don't visibly wrap the body. It reads as balanced on the palm rather than gripped, and it stays like that through 4.20.",
+   "fix": "Close the fingers and thumb around the mug body, or pass them through the handle. Lock the mug to the hand bone so it doesn't float."
+  },
+  {
+   "t": 4.1,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to be him smoothing an invisible skirt over his knees. In these frames his left hand rests loosely on the chair arm and his right hand holds a mug. Nothing starts a smoothing gesture, so the idea is unclear and the arm looks frozen.",
+   "fix": "Free the mug hand, or drop the mug. Start the first smoothing stroke across the knees within the first few frames, with a small anticipation."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3576,
+  "out": 885
+ },
+ "cost": 0.016
+}

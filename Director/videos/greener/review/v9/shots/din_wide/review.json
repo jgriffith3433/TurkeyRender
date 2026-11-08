@@ -1,0 +1,22 @@
+{
+ "id": "din_wide",
+ "f0": 2973,
+ "f1": 3024,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 99.1,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "5abe632b058c686f",
+ "summary": "The strip is clean: the camera pushes steadily down the table, the candelabra and goblets move smoothly with no pops, flicker or clipping.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3561,
+  "out": 417
+ },
+ "cost": 0.0113
+}

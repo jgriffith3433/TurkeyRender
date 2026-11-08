@@ -1,0 +1,26 @@
+{
+  // 90 BPM placeholder. Lengths are in beats, so a new song only reflows this list: `mv song <file>`, then `mv cards`.
+  "beats": {},
+  "shots": [
+    { "id": "door_opens", "seq": "yard", "len": "6b" },
+    { "id": "in_doorway", "seq": "yard", "len": "4b" },
+    { "id": "sun_blink", "seq": "yard", "len": "6b" },
+    { "id": "the_yard", "seq": "yard", "len": "4b" },
+    { "id": "first_step", "seq": "yard", "len": "4b" },
+    { "id": "sparrow", "seq": "yard", "len": "3b" },
+    { "id": "flinch_bird", "seq": "yard", "len": "3b" },
+    { "id": "check_behind", "seq": "yard", "len": "5b" },
+    { "id": "cross_wide", "seq": "yard", "len": "9b" },
+    { "id": "sprinkler_on", "seq": "yard", "len": "3b" },
+    { "id": "flinch_water", "seq": "yard", "len": "3b" },
+    { "id": "go_on", "seq": "yard", "len": "6b" },
+    { "id": "stop_breathe", "seq": "yard", "len": "8b" },
+    { "id": "kneels", "seq": "yard", "len": "5b" },
+    { "id": "hand", "seq": "yard", "len": "8b" },
+    { "id": "smile", "seq": "yard", "len": "11b" },
+    { "id": "lies_back", "seq": "yard", "len": "6b" },
+    { "id": "sky", "seq": "yard", "len": "4b" },
+    { "id": "clouds_face", "seq": "yard", "len": "6b" },
+    { "id": "watching", "seq": "yard", "len": "8.5b" }
+  ]
+}

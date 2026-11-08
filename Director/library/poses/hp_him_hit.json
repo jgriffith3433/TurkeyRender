@@ -1,0 +1,102 @@
+{
+  // Hawkes Punch, hero moment 1 (the doctor's punch), HIS reaction: seated on the bed; the hit lands at 67f on both sheets. Seeded from sit_hit_snap.
+
+ "name": "hp_him_hit",
+ "about": "His hit reaction: seated still until the contact (67f, matching hp_doc_punch), the head snaps away on the hit frame (sit_hit_snap 0.07) and keeps going (0.3) through the hitstop, then the launch: thrown back 35 deg, arms and legs flung forward and open, mouth wide; seated on the exam table.",
+ "seed": {
+  "clip": "mx_sit_still",
+  "t": 0
+ },
+ "length": 5.0,
+ "poses": {
+  "sit": {
+   "from": {
+    "clip": "mx_sit_still",
+    "t": 0
+   }
+  },
+  "snap": {
+   "from": {
+    "clip": "sit_hit_snap",
+    "t": 0.07
+   },
+   "add": {
+    "Head Turn Left-Right": 0.25,
+    "Neck Turn Left-Right": 0.15
+   }
+  },
+  "snap_far": {
+   "from": {
+    "clip": "sit_hit_snap",
+    "t": 0.3
+   },
+   "add": {
+    "Head Turn Left-Right": 0.3,
+    "Neck Turn Left-Right": 0.2,
+    "Head Nod Down-Up": 0.1
+   }
+  },
+  "launch": {
+   "from": {
+    "clip": "sit_hit_snap",
+    "t": 0.3
+   },
+   "muscles": {
+    "Left Arm Front-Back": -0.5,
+    "Right Arm Front-Back": -0.45,
+    "Left Arm Down-Up": 0.35,
+    "Right Arm Down-Up": 0.4,
+    "Left Forearm Stretch": 0.6,
+    "Right Forearm Stretch": 0.65,
+    "Left Upper Leg Front-Back": -0.55,
+    "Right Upper Leg Front-Back": -0.45,
+    "Left Lower Leg Stretch": 0.75,
+    "Right Lower Leg Stretch": 0.7,
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Spine Front-Back": 0.25,
+    "Chest Front-Back": 0.2,
+    "Neck Nod Down-Up": 0.2,
+    "Head Nod Down-Up": 0.15
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.1,
+     "spread": 0.6
+    }
+   },
+   "root": {
+    "rot": [
+     -35,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "sit",
+   "hold": "60f"
+  },
+  {
+   "t": "67f",
+   "pose": "snap",
+   "interp": "step"
+  },
+  {
+   "t": "73f",
+   "pose": "snap_far",
+   "interp": "out",
+   "hold": "6f"
+  },
+  {
+   "t": "83f",
+   "pose": "launch",
+   "interp": "out",
+   "step": 2,
+   "hold": 1.2
+  }
+ ]
+}

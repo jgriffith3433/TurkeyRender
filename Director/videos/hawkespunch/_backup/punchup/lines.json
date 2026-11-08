@@ -1,0 +1,54 @@
+{
+ "about": "Hawkes Punch spoken lines: start in video seconds, the mp3 under Assets/MusicVideo/Sfx/punch, mouth = whose jaw follows it, duck = how far the song drops. tools/punch_lines.mjs reads this.",
+ "lines": [
+  {
+   "file": "symptoms/doctor_ask.mp3",
+   "start": 20.54,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "symptoms/him_symptoms_tight.mp3",
+   "start": 22.866,
+   "mouth": "person",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "symptoms/doctor_space_ghost.mp3",
+   "start": 45.133,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "symptoms/him_space_ghost.mp3",
+   "start": 47.526,
+   "mouth": "person",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "doctor_rx_a.mp3",
+   "start": 55.125,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.45
+  },
+  {
+   "file": "doctor_line_a.mp3",
+   "start": 63.315,
+   "mouth": "doctor",
+   "volume": 1,
+   "duck": 0.35
+  },
+  {
+   "file": "announcer_a.mp3",
+   "start": 176.725,
+   "mouth": null,
+   "volume": 0.95,
+   "duck": 0.45
+  }
+ ]
+}

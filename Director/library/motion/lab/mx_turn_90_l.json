@@ -1,0 +1,24 @@
+{
+ "clip": "mx_turn_90_l",
+ "seconds": 1.0330000000000001,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.596 m, worst step 0.046 m at 0.27s",
+  "right foot on floor moved 0.315 m, worst step 0.030 m at 0.63s"
+ ],
+ "hipsTop": 0.91710794,
+ "hipsLow": 0.9037213,
+ "hipsTravel": "(-0.01, 0.00, -0.05)",
+ "limits": {
+  "groundHipsCm": 2.5
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_turn_90_l was rejected by admission: foot slide 4.31 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_90_l_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_turn_90_l_three.mp4"
+ ]
+}

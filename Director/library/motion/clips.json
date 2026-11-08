@@ -1,0 +1,1913 @@
+{
+ "about": "The motion library: Mixamo clips on our rig (Assets/MusicVideo/Motion/Humanoid@mx_*.fbx), each watched at real speed through `mv lab` renders (front and three-quarter, 30 fps) and stepped frame by frame. Written by hand after watching; `node Director/tools/motion_lib.mjs gallery` turns it into gallery.md. Times are clip seconds at speed 1. `speed140`/`speed100` put the clip's own pulse on the beat at those tempos (beat 0.4286 s / 0.6 s). `masks` are the layer masks worth taking. Verdict A build on it, B a moment or a masked part, C don't use.",
+ "categories": {
+  "groove": "Grooves on the spot",
+  "step": "Steps, slides and travel",
+  "turn": "Turns and spins",
+  "pose": "Poses and freezes",
+  "walk": "Walks",
+  "sit": "Sits, stands and kneels",
+  "gesture": "Lyric gestures",
+  "reaction": "Reactions and idles",
+  "transition": "Stairs and transitions"
+ },
+ "clips": {
+  "mx_point_bent": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A bent-arm point at the lens, right hand, elbow stays bent, no weight shift",
+   "segments": [
+    {
+     "start": 0.4,
+     "stop": 2.3,
+     "bars": "1 at 140",
+     "what": "hand up, aims, holds, drops",
+     "use": "the point on a lyric; cut at 2.1 to hold it"
+    }
+   ],
+   "good": "right arm and the small head lift",
+   "masks": [
+    "rightArm",
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "point",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_point"
+  },
+  "mx_thankful": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Right hand to the heart, a bow of the head, a second of holding it, release",
+   "segments": [
+    {
+     "start": 0.4,
+     "stop": 2.4,
+     "bars": "1.2",
+     "what": "hand to chest 0.5-0.9, hold 1.0-1.9, release",
+     "use": "hand on heart"
+    }
+   ],
+   "good": "right arm, head, a little chest",
+   "masks": [
+    "rightArm",
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 0.85,
+   "tags": [
+    "heart",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_hand_heart"
+  },
+  "mx_blow_kiss": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Hand to the lips, a kiss blown out to the side, arm opens, drops",
+   "segments": [
+    {
+     "start": 0.6,
+     "stop": 1.9,
+     "bars": "0.75",
+     "what": "hand at the mouth",
+     "use": "finger to lips, shh, with the hand shut to one finger"
+    },
+    {
+     "start": 0.6,
+     "stop": 3.4,
+     "bars": "1.6",
+     "what": "the whole kiss",
+     "use": "blow a kiss"
+    }
+   ],
+   "good": "right arm and head; the arm opens wide at 2.6-3.0 so cut before that for a small moment",
+   "masks": [
+    "rightArm",
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "avoid": "the open-arm end if arms must stay in",
+   "tags": [
+    "kiss",
+    "shh",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_finger_lips"
+  },
+  "mx_sigh": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Shoulders rise and drop, a small head turn; barely reads from the front",
+   "segments": [
+    {
+     "start": 0.4,
+     "stop": 1.8,
+     "bars": "0.8",
+     "what": "breath in, shoulders drop",
+     "use": "an additive upper layer under a sung line"
+    }
+   ],
+   "good": "shoulders and chest only",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "as a whole-body cue; too small",
+   "tags": [
+    "sigh",
+    "reaction",
+    "in-place",
+    "quiet"
+   ]
+  },
+  "mx_thinking": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Right hand to the chin and cheek, head tilts into it, holds, releases",
+   "segments": [
+    {
+     "start": 0.7,
+     "stop": 3.3,
+     "bars": "1.5",
+     "what": "hand to chin 0.9-1.1, hold to 2.8, release",
+     "use": "hand to cheek, thinking, coy"
+    }
+   ],
+   "good": "right arm and head",
+   "masks": [
+    "rightArm",
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "tags": [
+    "cheek",
+    "chin",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_hand_cheek"
+  },
+  "mx_secret": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Leans in with a cupped hand at the mouth, as if whispering, for six seconds, then back",
+   "segments": [
+    {
+     "start": 1.6,
+     "stop": 3,
+     "bars": "0.8",
+     "what": "lean in and hand to mouth",
+     "use": "a whispered line; the lean is big, shoot front-on"
+    }
+   ],
+   "good": "right arm and the lean of the spine",
+   "masks": [
+    "rightArm",
+    "spine",
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "the long hold past 3 s; the lean reads as leaning on something",
+   "tags": [
+    "whisper",
+    "secret",
+    "gesture",
+    "in-place"
+   ]
+  },
+  "mx_wave": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "C",
+   "style": "Half a second of a wave; too short to read, two pops",
+   "segments": [],
+   "good": "nothing a longer wave does not do better",
+   "masks": [
+    "rightArm"
+   ],
+   "avoid": "it",
+   "tags": [
+    "wave",
+    "gesture"
+   ]
+  },
+  "mx_wave_aj": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A big quick hello wave with the shoulders in it, 1.5 s",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 1.5,
+     "bars": "0.75",
+     "what": "arm up 0.3-0.5, wave 0.5-1.0, down",
+     "use": "wave to the lens"
+    }
+   ],
+   "good": "right arm, shoulders, head",
+   "masks": [
+    "rightArm",
+    "head",
+    "spine"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "tags": [
+    "wave",
+    "gesture",
+    "in-place",
+    "high-energy"
+   ],
+   "performance": "g_wave"
+  },
+  "mx_greeting": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Right hand rises open beside the head and holds there, a hello or a hand through the hair",
+   "segments": [
+    {
+     "start": 1.3,
+     "stop": 3.8,
+     "bars": "1.5",
+     "what": "hand up 1.3-1.7, held at head height to 3.4, drops",
+     "use": "hello; at speed 1.5 from 1.2 s it is the nearest thing to a hair flick"
+    }
+   ],
+   "good": "right arm and head",
+   "masks": [
+    "rightArm",
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "the first 1.3 s of standing",
+   "tags": [
+    "hello",
+    "hair",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_hair_flick"
+  },
+  "mx_bow_formal": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A quick bow from the waist, about 30 degrees, hands at the sides, up again",
+   "segments": [
+    {
+     "start": 0.3,
+     "stop": 1.8,
+     "bars": "0.9",
+     "what": "down 0.5-0.9, hold to 1.2, up by 1.6",
+     "use": "a stage bow on a hit"
+    }
+   ],
+   "good": "spine and head; the legs do nothing",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 0.85,
+   "tags": [
+    "bow",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_bow"
+  },
+  "mx_head_no": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A shake of the head, no, with a little turn of the chest",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 1.4,
+     "bars": "0.7",
+     "what": "the shake",
+     "use": "no"
+    }
+   ],
+   "good": "head and a little spine",
+   "masks": [
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "no",
+    "head",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_head_no"
+  },
+  "mx_nod": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A slow yes: chin up, then down",
+   "segments": [
+    {
+     "start": 0.4,
+     "stop": 1.8,
+     "bars": "0.8",
+     "what": "up 0.5-0.9, down 1.0-1.6",
+     "use": "yes, a nod on a word"
+    }
+   ],
+   "good": "head",
+   "masks": [
+    "head"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "yes",
+    "nod",
+    "head",
+    "gesture",
+    "in-place"
+   ],
+   "performance": "g_nod"
+  },
+  "mx_excited": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Fists pumping at the chest, bouncing, turning side to side",
+   "segments": [
+    {
+     "start": 0.5,
+     "stop": 3,
+     "bars": "1.5",
+     "what": "fist pumps",
+     "use": "an upper layer for excitement; the feet travel 1.6 m if the whole body plays"
+    }
+   ],
+   "good": "arms and chest",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "the legs; he turns away about 2 s",
+   "tags": [
+    "excited",
+    "reaction",
+    "in-place",
+    "high-energy"
+   ]
+  },
+  "mx_point_vegas": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "A big showman point with a step into it; feet travel 0.8 m and the lab found 4 pops",
+   "segments": [
+    {
+     "start": 0.3,
+     "stop": 1.9,
+     "bars": "0.9",
+     "what": "step and point",
+     "use": "a big point with root motion, after a look at the bake"
+    }
+   ],
+   "good": "right arm",
+   "masks": [
+    "rightArm"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "unbaked; pops in the hand",
+   "tags": [
+    "point",
+    "gesture",
+    "travelling"
+   ]
+  },
+  "mx_shrug": {
+   "category": "gesture",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "C",
+   "style": "Imports as a T-pose on our rig (the FBX plays nothing). Use Idle1HaveNoClue for a shrug",
+   "segments": [],
+   "masks": [],
+   "avoid": "it until re-exported",
+   "tags": [
+    "shrug",
+    "broken"
+   ]
+  },
+  "mx_hh_raise_roof": {
+   "category": "groove",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Hands up by the head pumping at the sky, a lean back and a hip bounce under it",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 2.3,
+     "bars": "1.2",
+     "what": "two pumps",
+     "use": "hands up; loop 0.2-2.3"
+    }
+   ],
+   "good": "arms, chest, the lean; the feet shuffle",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1.24,
+   "speed100": 0.88,
+   "tags": [
+    "hands-up",
+    "groove",
+    "in-place",
+    "high-energy"
+   ],
+   "performance": "g_hands_up"
+  },
+  "mx_salsa_side": {
+   "category": "groove",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Side-to-side salsa steps, hands sweeping at waist and chest height, one big lunge",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 2.27,
+     "bars": "1.3",
+     "what": "the loop",
+     "use": "a Latin side step; arms go wide at 0.5-1.0 so mask them if arms must stay in"
+    }
+   ],
+   "good": "legs and hips",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1.32,
+   "speed100": 0.95,
+   "avoid": "the wide arms at 0.5-1.0",
+   "tags": [
+    "salsa",
+    "step",
+    "in-place",
+    "loop"
+   ]
+  },
+  "mx_hh_timid": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "B",
+   "style": "A shy bounce on the spot: knees give on the beat, head bobs, hands hang at the hips, elbows a little out",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 4,
+     "bars": "2.3",
+     "what": "the bounce",
+     "use": "a quiet verse under-layer, or lower only under a gesture"
+    }
+   ],
+   "good": "legs, hips, head",
+   "masks": [
+    "lower",
+    "head"
+   ],
+   "speed140": 1.71,
+   "speed100": 1.22,
+   "avoid": "as a chorus: nothing happens above the waist",
+   "tags": [
+    "hip-hop",
+    "groove",
+    "in-place",
+    "quiet",
+    "loop"
+   ]
+  },
+  "mx_house_4": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "B",
+   "style": "Travelling house: jacking chest, deep steps and lunges, arms thrown up to shoulder height, the body angled off front",
+   "segments": [
+    {
+     "start": 1,
+     "stop": 4,
+     "bars": "1.7",
+     "what": "house footwork",
+     "use": "legs only under a tighter upper body; he turns to profile"
+    }
+   ],
+   "good": "legs and hips",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1.63,
+   "speed100": 1.17,
+   "avoid": "the arms past 4 s (wide) and the whole body facing off front",
+   "tags": [
+    "house",
+    "groove",
+    "travelling"
+   ]
+  },
+  "mx_samba_pocoto": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "B",
+   "style": "Samba: bouncing feet and hips, with arms sweeping wide at shoulder height in the first two seconds and throws after",
+   "segments": [
+    {
+     "start": 2,
+     "stop": 5,
+     "bars": "1.7",
+     "what": "the hips and feet",
+     "use": "lower only; the arms are the wide look the brief rules out"
+    }
+   ],
+   "good": "hips and feet",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1.17,
+   "speed100": 0.83,
+   "avoid": "arms 0-2 s (wide) and the throws after 5 s",
+   "tags": [
+    "samba",
+    "groove",
+    "in-place",
+    "loop"
+   ]
+  },
+  "mx_salsa_f": {
+   "category": "groove",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Female salsa: shifting steps with arms sweeping across at chest height and out to the side",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 2.3,
+     "bars": "1.3",
+     "what": "the step",
+     "use": "lower only; the arms sweep wide"
+    }
+   ],
+   "good": "hips and feet",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1.4,
+   "speed100": 1,
+   "avoid": "the arms at 1.0-1.5 and 3.0-3.5",
+   "tags": [
+    "salsa",
+    "groove",
+    "in-place"
+   ]
+  },
+  "mx_twist": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "A",
+   "style": "The twist: knees together, hips twisting, arms pumping low at the waist; a lean-back with one arm up in the middle",
+   "segments": [
+    {
+     "start": 0.5,
+     "stop": 2.3,
+     "bars": "1",
+     "what": "the twist",
+     "use": "retro groove, arms stay in"
+    },
+    {
+     "start": 4,
+     "stop": 5.5,
+     "bars": "0.9",
+     "what": "twist again, arms low",
+     "use": "loop with the first"
+    },
+    {
+     "start": 2.3,
+     "stop": 3.8,
+     "bars": "0.9",
+     "what": "lean back, arm up",
+     "use": "a pose on a hit, B"
+    }
+   ],
+   "good": "hips, knees, arms",
+   "masks": [
+    "lower",
+    "arms"
+   ],
+   "speed140": 1.71,
+   "speed100": 1.22,
+   "avoid": "the lean back unless it is the point",
+   "tags": [
+    "twist",
+    "retro",
+    "groove",
+    "in-place"
+   ]
+  },
+  "mx_hh_wave_1": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "C",
+   "style": "An arm wave that runs through both arms held out at shoulder height: the wide-armed look",
+   "segments": [],
+   "masks": [],
+   "avoid": "it",
+   "tags": [
+    "hip-hop",
+    "wide"
+   ]
+  },
+  "mx_hh_tut": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "C",
+   "style": "Tutting with the arms out at shoulder height, then he turns his back from 3 s",
+   "segments": [],
+   "masks": [],
+   "avoid": "it",
+   "tags": [
+    "hip-hop",
+    "wide"
+   ]
+  },
+  "mx_hh_robot": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "B",
+   "style": "Robot: an arm locked out forward, a crouch, hands to the face, then a stiff bend with arms hanging",
+   "segments": [
+    {
+     "start": 2,
+     "stop": 3.5,
+     "bars": "0.9",
+     "what": "hands to the face then out",
+     "use": "a robot moment, once"
+    }
+   ],
+   "good": "arms",
+   "masks": [
+    "arms"
+   ],
+   "speed140": 1.47,
+   "speed100": 1.05,
+   "avoid": "the bend at 5-6 s",
+   "tags": [
+    "robot",
+    "hip-hop",
+    "in-place"
+   ]
+  },
+  "mx_hh_quake": {
+   "category": "groove",
+   "watched": "front and three-quarter at 15 fps, the first 7 s",
+   "verdict": "C",
+   "style": "Wide stance with arms raised and out through the whole clip",
+   "segments": [],
+   "masks": [],
+   "avoid": "it",
+   "tags": [
+    "hip-hop",
+    "wide"
+   ]
+  },
+  "mx_hh_arms": {
+   "category": "groove",
+   "watched": "rendered and stripped, not read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_maraschino": {
+   "category": "groove",
+   "watched": "rendered and stripped, not read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_thriller_1": {
+   "category": "groove",
+   "watched": "rendered and stripped, not read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_hh_running_man": {
+   "category": "groove",
+   "watched": "rendered and stripped, not read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_feminine_walk": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Feminine walk: feet cross the centre line, hips roll, small arm swing, chin up",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.12,
+   "speed100": 0.8,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_sad_walk": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Sad walk: head down, shoulders slumped, slow dragging steps",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.7,
+   "speed100": 1.22,
+   "tags": [
+    "walk",
+    "sad",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_happy_walk": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Happy walk: bouncy, chest up, elbows bent and swinging",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.28,
+   "speed100": 0.92,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_walk_f": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Plain female walk, relaxed arms; nothing wrong, nothing said",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.35,
+   "speed100": 0.97,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_tough_walk": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "Cowgirl swagger: wide steps, arms held a touch out, shoulders rolling",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.47,
+   "speed100": 1.05,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ],
+   "avoid": "arms if they read wide in frame"
+  },
+  "mx_catwalk_walk": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Runway walk: feet cross, arms swing behind, shoulders back",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.35,
+   "speed100": 0.97,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_catwalk_fwd": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Female runway walk, one stride, feet crossing",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.4,
+   "speed100": 1,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_catwalk_crossed": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Female runway walk with the legs crossing hard, hips rolling",
+   "segments": [
+    {
+     "start": 0,
+     "stop": null,
+     "bars": "loop",
+     "what": "one stride",
+     "use": "through `walk` with the stride measured, or `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1.4,
+   "speed100": 1,
+   "tags": [
+    "walk",
+    "travelling",
+    "loop"
+   ]
+  },
+  "mx_catwalk_stop": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "Two runway steps into a stop with the feet apart and the arms settling",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 1.9,
+     "bars": "1.1",
+     "what": "walk to a stop",
+     "use": "the end of a walk-in, feet planted by 1.3"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "tags": [
+    "walk",
+    "stop",
+    "transition",
+    "travelling"
+   ]
+  },
+  "mx_catwalk_start": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "From a stand into the first runway step",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 1.3,
+     "bars": "0.75",
+     "what": "the first step",
+     "use": "the start of a walk-in; follow with mx_catwalk_fwd"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "tags": [
+    "walk",
+    "start",
+    "transition",
+    "travelling"
+   ]
+  },
+  "mx_walk_start": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "A plain start from standing: the push-off is at 0.8 s, then an ordinary stride",
+   "segments": [
+    {
+     "start": 0.6,
+     "stop": 2.2,
+     "bars": "0.9",
+     "what": "push off and the first stride",
+     "use": "a plain walk-in"
+    }
+   ],
+   "good": "legs",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 0.85,
+   "tags": [
+    "walk",
+    "start",
+    "transition",
+    "travelling"
+   ]
+  },
+  "mx_walk_stop": {
+   "category": "walk",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "A plain walk to a stop at 1.3 s with a shuffle as it settles",
+   "segments": [
+    {
+     "start": 0.3,
+     "stop": 1.8,
+     "bars": "0.9",
+     "what": "the stop",
+     "use": "a plain walk-out end; cut before the shuffle"
+    }
+   ],
+   "good": "legs",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 0.85,
+   "avoid": "the shuffle after 1.8",
+   "tags": [
+    "walk",
+    "stop",
+    "transition",
+    "travelling"
+   ]
+  },
+  "mx_turn_in_place": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "A slow turn to the left by small steps, 90 degrees over two seconds",
+   "segments": [
+    {
+     "start": 0.5,
+     "stop": 2.5,
+     "bars": "1.2",
+     "what": "the turn",
+     "use": "a lazy pivot; `root:1` for the heading"
+    }
+   ],
+   "good": "legs",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_turn_180_r": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A clean 180 to the right by two steps",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 1.4,
+     "bars": "0.7",
+     "what": "the turn",
+     "use": "turn away, `root:1`"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_turn_180_l": {
+   "category": "turn",
+   "watched": "rendered; the mirror of turn_180_r by its numbers",
+   "verdict": "A",
+   "style": "The left-hand 180, same as turn_180_r",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 1.4,
+     "bars": "0.7",
+     "what": "the turn",
+     "use": "turn away to the left"
+    }
+   ],
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_turn_90_r": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A quick quarter turn to the right, one step",
+   "segments": [
+    {
+     "start": 0.1,
+     "stop": 0.9,
+     "bars": "0.5",
+     "what": "the turn",
+     "use": "a quarter turn on a beat"
+    }
+   ],
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_turn_90_l": {
+   "category": "turn",
+   "watched": "rendered; the mirror of turn_90_r by its numbers",
+   "verdict": "A",
+   "style": "The left-hand quarter turn",
+   "segments": [
+    {
+     "start": 0.1,
+     "stop": 0.9,
+     "bars": "0.5",
+     "what": "the turn",
+     "use": "a quarter turn on a beat"
+    }
+   ],
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_turn_happy": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A perky quarter turn with elbows bent, 0.7 s",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 0.7,
+     "bars": "0.4",
+     "what": "the turn",
+     "use": "a bright turn on a beat"
+    }
+   ],
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "happy",
+    "in-place"
+   ]
+  },
+  "mx_turn_f": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A smooth female quarter turn to the right",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 1,
+     "bars": "0.6",
+     "what": "the turn",
+     "use": "a quarter turn"
+    }
+   ],
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_turn_quick_180": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "B",
+   "style": "A snappy 180 with the hands up at the chest like a guard",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 1.1,
+     "bars": "0.5",
+     "what": "the turn",
+     "use": "legs only; the hands are a boxing guard"
+    }
+   ],
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "the arms",
+   "tags": [
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_walk_turn_180": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps",
+   "verdict": "A",
+   "style": "A walking about-turn in one second",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 1,
+     "bars": "0.6",
+     "what": "the turn",
+     "use": "turn round mid-walk, `root:1`"
+    }
+   ],
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "turn",
+    "walk",
+    "travelling"
+   ]
+  },
+  "mx_catwalk_seq02": {
+   "category": "turn",
+   "watched": "rendered; the walk and 360 travel so far the lab camera lost him",
+   "verdict": "?",
+   "style": "Female sequence: twist left and right, then a walking 360 spin",
+   "segments": [],
+   "masks": [],
+   "avoid": "ungraded; render with `dist` set",
+   "tags": [
+    "turn",
+    "catwalk",
+    "travelling"
+   ]
+  },
+  "mx_stand_to_sit": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "A",
+   "style": "Turns a quarter to the left while sitting down, hands feeling for the seat behind, seated by 1.7 s",
+   "segments": [
+    {
+     "start": 0.2,
+     "stop": 2.2,
+     "bars": "1.2",
+     "what": "the sit",
+     "use": "sit on a chair mark; he turns left as he goes down, so face the mark 90 right of the chair"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "tags": [
+    "sit",
+    "transition",
+    "in-place"
+   ]
+  },
+  "mx_sit_to_stand": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "B",
+   "style": "Up from the floor: rolls onto hands and knees and pushes up, 6 s; a floor rise, not a chair",
+   "segments": [
+    {
+     "start": 1.5,
+     "stop": 4.5,
+     "bars": "1.7",
+     "what": "hands down, push up, straighten",
+     "use": "rise from sitting on the ground"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "as a chair stand (use mx_sit_to_stand_2); admission says feet under the floor, which the ground pass handles",
+   "tags": [
+    "sit",
+    "floor",
+    "transition",
+    "in-place"
+   ]
+  },
+  "mx_sit_to_stand_2": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "A",
+   "style": "A plain stand from a chair: leans in, rises by 1.5 s, settles standing",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 2,
+     "bars": "1.2",
+     "what": "the rise",
+     "use": "stand up from a seat mark"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "lower",
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 0.9,
+   "tags": [
+    "sit",
+    "stand",
+    "transition",
+    "in-place"
+   ]
+  },
+  "mx_sit_idle": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "A",
+   "style": "Seated breathing, hands on the thighs, knees a little apart, small weight shifts",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 4.3,
+     "bars": "loop",
+     "what": "the sit",
+     "use": "a quiet seated hold under gestures"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "sit",
+    "idle",
+    "loop",
+    "quiet"
+   ]
+  },
+  "mx_sit_still": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "A",
+   "style": "Seated with the hands on the knees, breathing, knees apart",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 3,
+     "bars": "loop",
+     "what": "the sit",
+     "use": "the stillest seat; put life on top with layers"
+    }
+   ],
+   "good": "whole body",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "sit",
+    "idle",
+    "loop",
+    "quiet"
+   ]
+  },
+  "mx_sit_look": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "A",
+   "style": "Seated, head and chest turning side to side, a hand on the knee",
+   "segments": [
+    {
+     "start": 0,
+     "stop": 4,
+     "bars": "2.3",
+     "what": "the look round",
+     "use": "a seated look-around; head and spine as a layer over another sit"
+    }
+   ],
+   "good": "head, spine",
+   "masks": [
+    "head",
+    "spine"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "sit",
+    "look",
+    "reaction"
+   ]
+  },
+  "mx_sit_laugh": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "B",
+   "style": "A broad seated laugh: head thrown back, then forward with the hands to the knees, the body rocking",
+   "segments": [
+    {
+     "start": 2,
+     "stop": 4.5,
+     "bars": "1.5",
+     "what": "the laugh",
+     "use": "a reaction, once; it is big"
+    }
+   ],
+   "good": "upper body",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "looping it",
+   "tags": [
+    "sit",
+    "laugh",
+    "reaction"
+   ]
+  },
+  "mx_sit_disbelief": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "B",
+   "style": "Seated, both hands fly to the head and he leans right back",
+   "segments": [
+    {
+     "start": 0.5,
+     "stop": 2.5,
+     "bars": "1.2",
+     "what": "hands to the head, lean back",
+     "use": "a drama reaction, once"
+    }
+   ],
+   "good": "upper body",
+   "masks": [
+    "upper"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "the hold with the hands on the head past 3 s",
+   "tags": [
+    "sit",
+    "disbelief",
+    "reaction"
+   ]
+  },
+  "mx_sit_point": {
+   "category": "sit",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "A",
+   "style": "Seated, the right hand comes up and points forward with a wag of the finger",
+   "segments": [
+    {
+     "start": 0.4,
+     "stop": 1.8,
+     "bars": "0.8",
+     "what": "the point",
+     "use": "a seated point on a lyric; rightArm over any sit"
+    }
+   ],
+   "good": "right arm",
+   "masks": [
+    "rightArm"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "tags": [
+    "sit",
+    "point",
+    "gesture"
+   ]
+  },
+  "mx_ns_spin": {
+   "category": "turn",
+   "watched": "front and three-quarter, every frame at 15 fps; no chair in the lab, so seated poses float at seat height",
+   "verdict": "B",
+   "style": "Northern soul spin: a fast 360 on one foot with the arms out at shoulder height, then settling steps",
+   "segments": [
+    {
+     "start": 0.3,
+     "stop": 1.4,
+     "bars": "0.65",
+     "what": "the spin",
+     "use": "a real one-second spin; mask the arms with something held in"
+    }
+   ],
+   "good": "legs and the turn",
+   "masks": [
+    "lower"
+   ],
+   "speed140": 1,
+   "speed100": 1,
+   "avoid": "the arms (wide) and the shuffle after 2 s",
+   "tags": [
+    "spin",
+    "turn",
+    "in-place"
+   ]
+  },
+  "mx_sit_floor": {
+   "category": "sit",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "sit"
+   ]
+  },
+  "mx_sit_to_stand_pump": {
+   "category": "sit",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "sit"
+   ]
+  },
+  "mx_kneel_down": {
+   "category": "sit",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "sit"
+   ]
+  },
+  "mx_kneel_up": {
+   "category": "sit",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "sit"
+   ]
+  },
+  "mx_kneel_idle": {
+   "category": "sit",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "sit"
+   ]
+  },
+  "mx_catwalk_idle": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_catwalk_twist_l": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_catwalk_twist_r": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_catwalk_to_twist_r": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_catwalk_twist_r_l": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_bboy_pose_to_idle": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_weight_shift": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_side_step": {
+   "category": "step",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "step"
+   ]
+  },
+  "mx_slide_walk": {
+   "category": "step",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "step"
+   ]
+  },
+  "mx_moonwalk": {
+   "category": "step",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "step"
+   ]
+  },
+  "mx_idle_weight_shift": {
+   "category": "pose",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "pose"
+   ]
+  },
+  "mx_neck_stretch": {
+   "category": "reaction",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "reaction"
+   ]
+  },
+  "mx_shake_off": {
+   "category": "reaction",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "reaction"
+   ]
+  },
+  "mx_stairs_down": {
+   "category": "transition",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "transition"
+   ]
+  },
+  "mx_stairs_up": {
+   "category": "transition",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "transition"
+   ]
+  },
+  "mx_stairs_up_2": {
+   "category": "transition",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "transition"
+   ]
+  },
+  "mx_jazz_around_world": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_samba_pagode": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_shim_sham": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_charleston": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_african_rainbow": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_hh_arm_wave": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_hh_listening_2": {
+   "category": "groove",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "groove"
+   ]
+  },
+  "mx_catwalk_seq05": {
+   "category": "walk",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "walk"
+   ]
+  },
+  "mx_catwalk_stop_twist": {
+   "category": "walk",
+   "watched": "rendered (or queued) in the second pass, not yet read",
+   "verdict": "?",
+   "style": "",
+   "segments": [],
+   "masks": [],
+   "tags": [
+    "walk"
+   ]
+  }
+ }
+}

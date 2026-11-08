@@ -1,0 +1,31 @@
+{
+ "id": "fence_two",
+ "f0": 1404,
+ "f1": 1429,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 46.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "36f6b49e57c239a1",
+ "summary": "The strip has no pops, flicker or clipping, and the fence panels drop smoothly; the one issue is that the seated man's head is cropped by the top edge, which may be an effect of the crop.",
+ "faults": [
+  {
+   "t": 46.93,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The seated man's head is cut off by the top edge in every tile, and it gets worse as the framing drifts right and up. His back is turned, so the shot has no face and no eyes for the 'delight and a little dread' feel.",
+   "fix": "Tilt the camera up or pull it back a little so the head and the top of the fence sit inside the frame."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3574,
+  "out": 1078
+ },
+ "cost": 0.0179
+}

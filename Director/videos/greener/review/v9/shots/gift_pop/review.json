@@ -1,0 +1,89 @@
+{
+ "id": "gift_pop",
+ "f0": 1507,
+ "f1": 1558,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 50.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 50.367,
+   "why": "one patch jumps (cell 68.8, x2.1)",
+   "file": "spike-01511.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 50.7,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-01521.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 51.1,
+   "why": "one patch jumps (cell 98.9, x3.3)",
+   "file": "spike-01533.jpg"
+  }
+ ],
+ "hash": "21b02ad9e3178991",
+ "summary": "The gift box jumps up, lands and the lid pops with confetti, but the cut-in frames show the box jumping sharply, there is no visible crouch or shiver anticipation, and the lid and bow have a few snaps.",
+ "faults": [
+  {
+   "t": 50.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Box is low and wide in 50.29 (lid hovering above a squat base), then in 50.33 it is a tall, large box filling the frame with the bow above. Scale and shape change in one frame with no in-between, so it reads as a swap rather than a hop.",
+   "fix": "Add 1-2 in-between frames of the box stretching up, or hide the swap with a cut or dust puff, and keep the box's proportions consistent."
+  },
+  {
+   "t": 50.26,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "certain",
+   "what": "At the start the lid floats detached above the base with the bow beneath it. This reads as a lid hovering, not a crouch, so there is no real anticipation before the hop.",
+   "fix": "Keep the lid on the box during the crouch and squash the whole box down before the hop."
+  },
+  {
+   "t": 50.69,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 50.69 to 50.93 the box sits almost perfectly still. The requested shiver is barely visible, so the hold is dead and there is no landing overshoot or settle. The box drops from 50.36 to 50.59 smoothly with no bounce.",
+   "fix": "Add a squash on landing and a small, fast shake of 2-4 px during the hold."
+  },
+  {
+   "t": 51.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "At 51.09 the lid is already thrown high and tilted with confetti and the butler is visible. In 50.93 the lid was closed. The burst starts on a frame with no visible build-up.",
+   "fix": "Add 2-3 frames of the lid lifting and the box bulging before the burst."
+  },
+  {
+   "t": 51.13,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The lid's underside is dark maroon at 51.09-51.13 and then pink at 51.16, so its shading flips. The confetti is flat and unshaded squares that cover part of the butler.",
+   "fix": "Fix the lid's normals or lighting, and thin out the confetti in front of the butler."
+  },
+  {
+   "t": 51.33,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The butler stays in the same stiff, symmetrical pose from 51.13 to 51.33. He is half hidden in the box with no bow, and the bow-tie ribbon ornaments sit around him. The lid ends up edge-on near the frame edge.",
+   "fix": "Have him rise and bow with a clear line of action, and move the lid out of frame sooner."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7788,
+  "out": 985
+ },
+ "cost": 0.0254
+}

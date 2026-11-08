@@ -1,0 +1,22 @@
+{
+ "id": "pot",
+ "f0": 4516,
+ "f1": 4541,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 150.533,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "9a4e50f503f03aec",
+ "summary": "The strip is clean: the pot and bow sit still on the table, the camera doesn't move, and I can't see any pop, clipping or flicker.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3563,
+  "out": 412
+ },
+ "cost": 0.0112
+}

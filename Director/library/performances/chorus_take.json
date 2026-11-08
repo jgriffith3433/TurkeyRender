@@ -1,0 +1,150 @@
+{
+ "name": "chorus_take",
+ "about": "The whole of a chorus as one take, on one mark: hook, groove, hook, groove, 12 bars at 140 BPM. Every camera sees this same performance, so the cut is only choosing cameras. Written in this song's beats; the clips warp to its beat. Mocap only.",
+ "entry": "any",
+ "exit": "stand",
+ "length": "18.857s",
+ "min": "18s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.35,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": 0.2
+  },
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "mx_hh_side_to_side",
+   "start": 9.7,
+   "speed": 1.167,
+   "warpTo": "beat",
+   "blend": 0.05,
+   "for": 1.1142857142857143
+  },
+  {
+   "at": 1.1142857142857143,
+   "do": "anim",
+   "clip": "mx_point_aj",
+   "once": 1,
+   "start": 0.2,
+   "blend": 0.2,
+   "for": 0.9857142857142855
+  },
+  {
+   "at": 1.1142857142857143,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.85,
+   "for": 0.15
+  },
+  {
+   "at": 1.1142857142857143,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.05,
+   "for": 0.15
+  },
+  {
+   "at": 2.1,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": 0.2
+  },
+  {
+   "at": 2.1,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.35,
+   "for": 0.2
+  },
+  {
+   "at": 2.1,
+   "do": "stance",
+   "arms": 1,
+   "legs": 0,
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     9
+    ],
+    "rightUpperArm": [
+     0,
+     0,
+     -9
+    ]
+   },
+   "for": 0.4,
+   "ease": "inout"
+  },
+  {
+   "at": 2.1,
+   "do": "anim",
+   "clip": "mx_hh_side_to_side",
+   "start": 7.2,
+   "speed": 1.167,
+   "warpTo": "beat",
+   "blend": 0.3,
+   "for": 9.9
+  },
+  {
+   "at": 12.0,
+   "do": "perform",
+   "name": "dance_hook",
+   "blend": 0.2
+  },
+  {
+   "at": 15.428571428571427,
+   "do": "stance",
+   "arms": 1,
+   "legs": 0,
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     9
+    ],
+    "rightUpperArm": [
+     0,
+     0,
+     -9
+    ]
+   },
+   "for": 0.4,
+   "ease": "inout"
+  },
+  {
+   "at": 15.428571428571427,
+   "do": "anim",
+   "clip": "mx_hh_side_to_side",
+   "start": 7.2,
+   "speed": 1.167,
+   "warpTo": "beat",
+   "blend": 0.3,
+   "for": 3.4285714285714284
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

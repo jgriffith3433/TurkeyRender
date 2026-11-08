@@ -1,0 +1,47 @@
+{
+ "id": "ch_crane",
+ "f0": 1455,
+ "f1": 1507,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 48.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "ba2181e5d43ea895",
+ "summary": "The cut is mostly clean, but the shot opens with his head cropped and no point at camera, so it misses the \"he points at us\" idea.",
+ "faults": [
+  {
+   "t": 48.49,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "His head is cut off by the top of frame from 48.49 to 48.59, so the opening frames have a headless subject. The face only enters at 48.63. The opening is also washed out with a white fade over the first 3 tiles.",
+   "fix": "Start the camera lower or tilted up so the head is in frame on the first frame, or trim the washed-out frames."
+  },
+  {
+   "t": 48.69,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The idea is that he points at us. Through 48.73 both hands are on his hips and no point appears. The arms form a near-symmetrical, twinned akimbo pose with a stiff, flat line of action.",
+   "fix": "Put the point on the beat of the drop, with one arm extended toward camera. Break the symmetry with a hip shift and a head tilt."
+  },
+  {
+   "t": 48.63,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 48.59 to 48.63 the torso drops in frame while the background holds, which reads as a fast settle with no anticipation. The legs stay planted and stiff.",
+   "fix": "Add a short dip before the rise, or ease the torso move over 2 to 3 more frames."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3583,
+  "out": 1100
+ },
+ "cost": 0.0182
+}

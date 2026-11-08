@@ -1,0 +1,34 @@
+{
+ "clip": "mx_feminine_walk",
+ "seconds": 1.067,
+ "popCount": 6,
+ "pops": [
+  "0.033s LeftLowerLeg kink 0.080 m",
+  "0.100s LeftLowerLeg kink 0.136 m",
+  "0.133s LeftLowerLeg kink 0.124 m",
+  "0.167s LeftLowerLeg kink 0.100 m",
+  "0.633s LeftLowerLeg kink 0.278 m",
+  "0.667s LeftLowerLeg kink 0.267 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.298 m, worst step 0.049 m at 0.80s",
+  "right foot on floor moved 0.248 m, worst step 0.039 m at 0.80s"
+ ],
+ "hipsTop": 0.9158113,
+ "hipsLow": 0.8307132,
+ "hipsTravel": "(-0.01, -0.01, 1.75)",
+ "limits": {
+  "LeftFoot": 26.5,
+  "LeftLowerLeg": 21.9,
+  "groundHipsCm": 9.7,
+  "RightLowerLeg": 7.7
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_feminine_walk was rejected by admission: foot slide 3.69 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_feminine_walk_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_feminine_walk_three.mp4"
+ ]
+}

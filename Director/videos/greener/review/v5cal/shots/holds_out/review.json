@@ -1,0 +1,75 @@
+{
+ "id": "holds_out",
+ "f0": 3307,
+ "f1": 3358,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 110.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 110.6,
+   "why": "one patch jumps (cell 79.7, x9)",
+   "file": "spike-03318.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 111.1,
+   "why": "frame difference x54.8 (54.75)",
+   "file": "spike-03333.jpg"
+  }
+ ],
+ "hash": "3bd7e28892b63289",
+ "summary": "Shot shows a turkey rear/tail fanning with a long spiky feather sweep in the cut, then a tail fan opening at 110.6, and a clean view of the head and tray at 111.1; there are a few real faults, including a camera or view change at 111.1 and a tail fan that pops open.",
+ "faults": [
+  {
+   "t": 110.59,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Tail fan between 110.49 and 110.59 goes from a dark, narrow grey spiked blade of feathers to a full wide white fan in a different, brighter look. The feathers change colour, shape and size with no in-between frames. This reads as a swap, not a move.",
+   "fix": "Add in-between frames for the fan opening, or hold one feather state until the cut. Check that the grey blade mesh is not a different LOD or material."
+  },
+  {
+   "t": 111.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Image 3 is a completely different framing from image 2: a wide view with the head, plate and a green blade, where image 2 was a tight close-up of the rear. The measured x54.8 difference at 111.1 matches a hard cut or camera jump inside the shot, which breaks the one-idea shot.",
+   "fix": "Make this a deliberate cut or keep one camera for the shot. Check that the cut lands on the beat and the subject is in the same place."
+  },
+  {
+   "t": 111.09,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is that the butler offers a blade of grass on a tray. The frames show a turkey, a plate edge and a thin green stalk standing up from the plate. No butler hand is seen holding the tray, and the blade is cut off at the top of the frame and stands rigid and vertical.",
+   "fix": "Frame the butler's hand on the tray, and show the blade lying or held on it, fully in the frame."
+  },
+  {
+   "t": 111.09,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Through 111.09-111.33 the turkey's head and body barely change. The head only dips a little and the plate slides left out of the frame, so the beat feels mushy and drifty and has no clear hold and move.",
+   "fix": "Hold the head pose, then make a quick head turn to the blade."
+  },
+  {
+   "t": 111.16,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "The green blade, which is the key prop, goes out of the frame between 111.19 and 111.23 as the plate slides away to the left. The offering is lost from the shot.",
+   "fix": "Keep the plate and blade in frame, or reframe so the blade stays visible."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6359,
+  "out": 922
+ },
+ "cost": 0.0219
+}

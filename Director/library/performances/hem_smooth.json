@@ -1,0 +1,119 @@
+{
+ "name": "hem_smooth",
+ "about": "Both hands run down the top of his thighs, smoothing a skirt that is not there, then settle back. For dress_sit.",
+ "entry": "sit_chair",
+ "exit": "sit_chair",
+ "length": "1.7s",
+ "min": "1s",
+ "params": {},
+ "cues": [
+  {
+   "at": 0,
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     16,
+     0,
+     6
+    ],
+    "rightUpperArm": [
+     16,
+     0,
+     -6
+    ],
+    "leftLowerArm": [
+     -34,
+     0,
+     0
+    ],
+    "rightLowerArm": [
+     -34,
+     0,
+     0
+    ],
+    "head": [
+     10,
+     0,
+     0
+    ]
+   },
+   "for": "=for*0.3",
+   "ease": "inout"
+  },
+  {
+   "at": "=for*0.34",
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     30,
+     0,
+     6
+    ],
+    "rightUpperArm": [
+     30,
+     0,
+     -6
+    ],
+    "leftLowerArm": [
+     -20,
+     0,
+     0
+    ],
+    "rightLowerArm": [
+     -20,
+     0,
+     0
+    ],
+    "head": [
+     12,
+     0,
+     0
+    ]
+   },
+   "for": "=for*0.34",
+   "ease": "inout"
+  },
+  {
+   "at": "=for*0.72",
+   "do": "pose",
+   "bones": {
+    "leftUpperArm": [
+     0,
+     0,
+     0
+    ],
+    "rightUpperArm": [
+     0,
+     0,
+     0
+    ],
+    "leftLowerArm": [
+     0,
+     0,
+     0
+    ],
+    "rightLowerArm": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "=for*0.28",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "dress_sit",
+    "for": "1s"
+   }
+  ],
+  "tail": 0.2
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "clip": "mx_nod",
+ "seconds": 2.7,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.043 m, worst step 0.002 m at 1.07s",
+  "right foot on floor moved 0.043 m, worst step 0.001 m at 1.27s"
+ ],
+ "hipsTop": 0.9159491,
+ "hipsLow": 0.9145172,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "groundHipsCm": 4.9
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_nod_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_nod_three.mp4"
+ ]
+}

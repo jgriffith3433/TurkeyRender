@@ -1,0 +1,67 @@
+{
+ "op": "insert",
+ "video": "hawkespunch",
+ "at": "end",
+ "length": "10b",
+ "beat": 323,
+ "beats": 10,
+ "T": 203.306,
+ "seconds": 6.29,
+ "ibi": 0.629,
+ "bar": "81:4",
+ "files": {
+  "acts/80-sfx.json": {
+   "moved": 3,
+   "dropped": 0,
+   "changes": [
+    {
+     "at": "acts/80-sfx.json:55",
+     "key": "at",
+     "old": "205.839s",
+     "new": "212.129s"
+    },
+    {
+     "at": "acts/80-sfx.json:56",
+     "key": "at",
+     "old": "205.889s",
+     "new": "212.179s"
+    },
+    {
+     "at": "acts/80-sfx.json:57",
+     "key": "at",
+     "old": "207.589s",
+     "new": "213.879s"
+    }
+   ],
+   "drops": []
+  },
+  "song.json": {
+   "beats": "323 -> 333",
+   "duration": "203.332 -> 209.622"
+  }
+ },
+ "warnings": [
+  "acts/70-lines.json is made by tools/punch_lines.mjs from lines.json: both are moved, so running the tool again gives the same times",
+  "acts/80-sfx.json:53: the sound Assets/MusicVideo/Sfx/punch/script2/bed_space_5.mp3 starts at 199.34 s and plays 6.5 s, over the point: it plays on unchanged (splice it, as bed_clinic_long was, if it must follow)",
+  "bass.wav is 183.17 s, shorter than the point: nothing to splice",
+  "drums.wav is 183.17 s, shorter than the point: nothing to splice",
+  "other.wav is 183.17 s, shorter than the point: nothing to splice",
+  "vocals.wav is 183.17 s, shorter than the point: nothing to splice"
+ ],
+ "blockers": [],
+ "audio": [
+  "Assets/Videos/hawkespunch/Song/audio.mp3",
+  "Director/videos/hawkespunch/audio.mp3",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/bass.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/drums.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/other.wav",
+  "Director/videos/hawkespunch/stems/htdemucs/audio/vocals.wav"
+ ],
+ "proof": {
+  "cards": 73,
+  "checked": 73,
+  "bad": []
+ },
+ "map": "t >= 203.306 s -> t + 6.29 s; beat >= 323 -> beat + 10",
+ "backup": "videos/hawkespunch/_backup/insert-81_4-10b-2026-11-08T03-52-47"
+}

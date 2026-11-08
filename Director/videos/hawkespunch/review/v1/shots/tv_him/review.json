@@ -1,0 +1,75 @@
+{
+ "id": "tv_him",
+ "f0": 4911,
+ "f1": 4986,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 163.7,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 163.867,
+   "why": "one patch jumps (cell 74.5, x2.7)",
+   "file": "spike-04916.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 165.967,
+   "why": "one patch jumps (cell 77.3, x2.2)",
+   "file": "spike-04979.jpg"
+  }
+ ],
+ "hash": "018fb7bd9f2d64bc",
+ "summary": "Dark translucent rectangles cross the frame at the left over his extended hand at the cut and again around 165.9; the can's grip is loose and the hand slides over the can at 166.0 to 166.16.",
+ "faults": [
+  {
+   "t": 163.86,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A flat dark translucent rectangle appears at the left edge, grows wider across frames 163.86 to 164.06 and overlaps his extended hand and forearm. It looks like an unlit overlay or caption box, it has no shading and it hides part of his hand.",
+   "fix": "Remove or hide the stray overlay or bar quad, or confirm it is an intended lower-third and keep it clear of his hand."
+  },
+  {
+   "t": 165.93,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "The dark rectangle is still crossing in front of his left hand at 165.93 and shrinks away by 165.96. The same flat shape shows up again in the shot.",
+   "fix": "Cull the overlay quad for the whole shot."
+  },
+  {
+   "t": 163.93,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The can appears from below the frame at 163.83 to 164.06. His right hand is open and under or beside it, not wrapped around it, and the can seems to swing up beside the hand. It does not read as gripped.",
+   "fix": "Snap the fingers around the can body and parent the can to the hand."
+  },
+  {
+   "t": 166.06,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "From 165.99 to 166.16 the can is tilted and low, and his hand sits on top of it with fingers flat. The can swings and flips between tiles and the hand does not wrap it. The can also drops from chest height at 165.93 to the belly. The can is not up to the lens as the idea says.",
+   "fix": "Hold the can upright at chest height with a wrapped grip and lock it to the hand."
+  },
+  {
+   "t": 165.99,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 165.96 and 165.99 the can's position and tilt jump, from upright at chest to tilted lower. The right hand moves from a fist to over the can in one tile. This matches the measured spike at 165.967.",
+   "fix": "Add in-between frames or smooth the can and hand transition."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6394,
+  "out": 820
+ },
+ "cost": 0.021
+}

@@ -1,0 +1,197 @@
+{
+  // Hawkes Punch, hero moment 2 (the moon crater), SPACE-EPIC m7_flinch / m7_impact: HIM (the chaser, zg_neutral_b).
+  // v2 (coordinator 2026-11-08): the strike and its breakdown are seeded from mx_hook_punch (0.95 cocked, 1.0 the hit), legs set to a zero-g trail.
+
+ "name": "hp_s3_strike",
+ "about": "Startle starfish, then the fist drives into the moon (seeded from mx_hook_punch's hit frame, legs trailing in zero-g); HIM on zg_neutral_b, the chaser.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 2.6,
+ "poses": {
+  "float": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   }
+  },
+  "starfish": {
+   "from": "float",
+   "add": {
+    "Left Arm Down-Up": 0.7,
+    "Right Arm Down-Up": 0.7,
+    "Left Arm Front-Back": 0.8,
+    "Right Arm Front-Back": 0.8,
+    "Left Forearm Stretch": 0.75,
+    "Right Forearm Stretch": 0.8,
+    "Left Upper Leg In-Out": 0.3,
+    "Right Upper Leg In-Out": 0.3,
+    "Left Upper Leg Front-Back": 0.1,
+    "Right Upper Leg Front-Back": 0.1,
+    "Left Lower Leg Stretch": 0.45,
+    "Right Lower Leg Stretch": 0.45,
+    "Spine Front-Back": 0.25,
+    "Chest Front-Back": 0.2,
+    "Head Nod Down-Up": 0.15,
+    "Neck Nod Down-Up": 0.1
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.05,
+     "spread": 0.7
+    }
+   }
+  },
+  "windup": {
+   "from": {
+    "clip": "mx_hook_punch",
+    "t": 0.95
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": 0.18,
+    "Right Upper Leg Front-Back": 0.28,
+    "Left Upper Leg In-Out": 0.12,
+    "Right Upper Leg In-Out": 0.1,
+    "Left Lower Leg Stretch": 0.35,
+    "Right Lower Leg Stretch": 0.3,
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Twist In-Out": 0.2,
+    "Right Upper Leg Twist In-Out": 0.2,
+    "Left Foot Twist In-Out": 0,
+    "Right Foot Twist In-Out": 0,
+    "Right Arm Down-Up": 0.45,
+    "Right Arm Front-Back": 0.55,
+    "Right Forearm Stretch": -0.75,
+    "Right Shoulder Front-Back": -0.4,
+    "Right Hand Down-Up": 0
+   },
+   "fingers": {
+    "both": {
+     "curl": 1.0,
+     "spread": 0
+    }
+   },
+   "root": {
+    "rot": [
+     8,
+     0,
+     0
+    ]
+   },
+   "add": {
+    "Spine Twist Left-Right": 0.35,
+    "Chest Twist Left-Right": 0.3,
+    "UpperChest Twist Left-Right": 0.2,
+    "Neck Turn Left-Right": -0.35,
+    "Head Turn Left-Right": -0.3
+   }
+  },
+  "strike": {
+   "from": {
+    "clip": "mx_hook_punch",
+    "t": 1.0
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": 0.18,
+    "Right Upper Leg Front-Back": 0.28,
+    "Left Upper Leg In-Out": 0.12,
+    "Right Upper Leg In-Out": 0.1,
+    "Left Lower Leg Stretch": 0.35,
+    "Right Lower Leg Stretch": 0.3,
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Twist In-Out": 0.2,
+    "Right Upper Leg Twist In-Out": 0.2,
+    "Left Foot Twist In-Out": 0,
+    "Right Foot Twist In-Out": 0,
+    "Right Forearm Stretch": 1.0,
+    "Right Arm Down-Up": 0.05,
+    "Right Arm Front-Back": -0.5,
+    "Right Shoulder Front-Back": 0.3,
+    "Right Arm Twist In-Out": 0.0,
+    "Right Hand Down-Up": 0,
+    "Right Hand In-Out": 0
+   },
+   "add": {
+    "Neck Nod Down-Up": -0.1
+   },
+   "fingers": {
+    "both": {
+     "curl": 1.0,
+     "spread": 0
+    }
+   },
+   "root": {
+    "rot": [
+     18,
+     0,
+     0
+    ]
+   }
+  },
+  "recoil": {
+   "from": "strike",
+   "add": {
+    "Spine Front-Back": 0.12,
+    "Chest Front-Back": 0.08,
+    "Left Upper Leg Front-Back": -0.12,
+    "Right Upper Leg Front-Back": -0.12,
+    "Left Lower Leg Stretch": -0.15,
+    "Right Lower Leg Stretch": -0.1
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.7,
+     "spread": 0
+    }
+   },
+   "root": {
+    "rot": [
+     10,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "float",
+   "hold": "10f"
+  },
+  {
+   "t": "14f",
+   "pose": "starfish",
+   "interp": "out",
+   "step": 2,
+   "hold": "4f"
+  },
+  {
+   "t": "19.5f",
+   "pose": "windup",
+   "interp": "linear"
+  },
+  {
+   "t": "21f",
+   "pose": "strike",
+   "interp": "overshoot",
+   "overshoot": 0.1,
+   "settle": 0.25,
+   "hold": 1.0
+  },
+  {
+   "t": "57f",
+   "pose": "recoil",
+   "interp": "out",
+   "step": 2,
+   "hold": 0.6
+  }
+ ]
+}

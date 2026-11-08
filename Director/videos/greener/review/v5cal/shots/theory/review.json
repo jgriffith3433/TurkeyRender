@@ -1,0 +1,45 @@
+{
+ "id": "theory",
+ "f0": 2818,
+ "f1": 2870,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 93.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 94.733,
+   "why": "frame difference x6.6 (20.29)",
+   "file": "spike-02842.jpg"
+  }
+ ],
+ "hash": "04b32713da4ac0a4",
+ "summary": "The cut in is clean, but the veil vanishes in about two frames at 94.72-94.79 instead of being whipped off.",
+ "faults": [
+  {
+   "t": 94.76,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The veil over the chart is the payoff of the shot, and it doesn't travel. At 94.72 it is a big dark-red slab beside the head. At 94.76 it has shrunk to a small red stub at the top. At 94.79 it is gone and the chart is fully revealed. There is no cloth in the air, no trailing edge and no arm pulling it. It reads as a pop-out, not a whip-off.",
+   "fix": "Animate the cloth leaving: a flying, trailing sheet that travels off-frame over 4-6 frames, driven by the turkey's pull. Or hide the swap behind a clear cloth-over-lens frame."
+  },
+  {
+   "t": 94.76,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The turkey's body and tail shift position and size between 94.72 and 94.79 with no visible anticipation or follow-through for the pull. The reveal has no effort or overshoot.",
+   "fix": "Add a quick wind-up and a pull-through with a settle after the reveal."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4985,
+  "out": 1095
+ },
+ "cost": 0.0209
+}

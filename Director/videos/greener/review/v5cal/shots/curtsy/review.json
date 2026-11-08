@@ -1,0 +1,39 @@
+{
+ "id": "curtsy",
+ "f0": 966,
+ "f1": 1018,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 32.2,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "c7ea2cc017e168a1",
+ "summary": "No pops or render flicker at the cut, but he is jammed against the right edge with his body cropped, which doesn't suit a full curtsy to the fence.",
+ "faults": [
+  {
+   "t": 32.23,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He stands at the far right edge. His right shoulder and torso are cut off by the frame, and most of the frame is empty fence. The shot is meant to be a full curtsy to the fence, but the subject is cropped and off-balance in the composition.",
+   "fix": "Move the camera or the character so he sits inside the frame with room for the curtsy, or reframe on him."
+  },
+  {
+   "t": 32.33,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His expression and gaze stay fixed on the camera across the opening frames, with no eye lead toward the fence and no change. It reads as a blank stare rather than 'total dignity'.",
+   "fix": "Turn the eyes and head toward the fence at the start and add a small expression change."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3563,
+  "out": 773
+ },
+ "cost": 0.0149
+}

@@ -1,0 +1,61 @@
+{
+ "name": "look_at_clouds",
+ "about": "Lying on his back, watches the sky drift: slow eye darts, long soft blinks, breath in the chest. The smile comes in late and stays small. Needs lie_back before it (it holds that pose).",
+ "entry": "any",
+ "exit": "any",
+ "length": "5s",
+ "min": "3s",
+ "params": {
+  "smile": 0.4
+ },
+ "cues": [
+  {
+   "at": 0.2,
+   "do": "gaze",
+   "toRel": [
+    1.2,
+    6,
+    0.8
+   ],
+   "for": "0.5s",
+   "head": 0,
+   "ease": "inout"
+  },
+  {
+   "at": 1.6,
+   "do": "blink",
+   "for": "0.28s"
+  },
+  {
+   "at": 1.7,
+   "do": "gaze",
+   "toRel": [
+    -1.5,
+    6,
+    1.2
+   ],
+   "for": "0.9s",
+   "head": 0,
+   "ease": "inout"
+  },
+  {
+   "at": 2.4,
+   "do": "face",
+   "smile": "$smile",
+   "for": "1.2s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-1",
+   "do": "blink",
+   "for": "0.3s"
+  }
+ ],
+ "test": {
+  "first": [
+   "sit_on_grass",
+   "lie_back"
+  ],
+  "tail": 0.4
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "clip": "mx_twist",
+ "seconds": 9.533,
+ "popCount": 4,
+ "pops": [
+  "5.000s LeftLowerLeg kink 0.092 m",
+  "9.233s RightLowerLeg kink 0.093 m",
+  "9.267s RightLowerLeg kink 0.266 m",
+  "9.300s RightLowerLeg kink 0.120 m"
+ ],
+ "feet": [
+  "left foot on floor moved 3.399 m, worst step 0.040 m at 5.00s",
+  "right foot on floor moved 3.872 m, worst step 0.041 m at 6.03s"
+ ],
+ "hipsTop": 0.9158177,
+ "hipsLow": 0.827246547,
+ "hipsTravel": "(0.00, -0.01, 0.01)",
+ "limits": {
+  "Head": 23.7,
+  "LeftLowerLeg": 20.8,
+  "LeftFoot": 19.8,
+  "RightLowerArm": 11.3,
+  "LeftShoulder": 11.2,
+  "groundHipsCm": 7.9,
+  "RightLowerLeg": 6.5,
+  "Chest": 5.2,
+  "LeftLowerArm": 4,
+  "RightShoulder": 2.4
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_twist was rejected by admission: joint limits moved LeftFoot 42.5 deg"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_twist_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_twist_three.mp4"
+ ]
+}

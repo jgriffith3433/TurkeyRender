@@ -1,0 +1,22 @@
+{
+ "clip": "mx_point_bent",
+ "seconds": 2.867,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.080 m, worst step 0.003 m at 0.63s",
+  "right foot on floor moved 0.063 m, worst step 0.002 m at 0.67s"
+ ],
+ "hipsTop": 0.9134454,
+ "hipsLow": 0.91154784,
+ "hipsTravel": "(0.00, 0.00, -0.01)",
+ "limits": {
+  "groundHipsCm": 5.2
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_point_bent_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_point_bent_three.mp4"
+ ]
+}

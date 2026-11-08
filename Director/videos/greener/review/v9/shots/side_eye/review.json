@@ -1,0 +1,22 @@
+{
+ "id": "side_eye",
+ "f0": 2175,
+ "f1": 2227,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 72.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a9914c0626524922",
+ "summary": "The strip is clean: the man and the turkey drift smoothly with no pops, flicker or clipping, and the camera holds still.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3574,
+  "out": 527
+ },
+ "cost": 0.0124
+}

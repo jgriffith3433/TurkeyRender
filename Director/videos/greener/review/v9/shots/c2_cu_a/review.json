@@ -1,0 +1,53 @@
+{
+ "id": "c2_cu_a",
+ "f0": 3693,
+ "f1": 3744,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 123.1,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 123.933,
+   "why": "one patch jumps (cell 113.7, x2.8)",
+   "file": "spike-03718.jpg"
+  }
+ ],
+ "hash": "4aff31941a0e43d8",
+ "summary": "The cut strip is mostly clean, with one stiff T-pose at the start. The second strip has a washed-out, low-contrast look at 123.93 that clears by 124.16, and a small camera or pose jump at 124.03 to 124.06.",
+ "faults": [
+  {
+   "t": 123.93,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The frame is washed out and low-contrast, like a ghosted dissolve or exposure lift. Contrast and saturation then build over about 8 frames until 124.16. This matches the measured spike and reads as a flash or fade rather than a deliberate look.",
+   "fix": "Remove the stray fade or exposure ramp at 123.9 to 124.1, or make it a deliberate quick hit."
+  },
+  {
+   "t": 124.06,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 124.03 and 124.06 the background shifts (gift boxes and turkeys move). The head and torso also change position and scale and the raised hand drops, with no in-between. It reads as a camera or framing hop rather than a smooth push-in.",
+   "fix": "Smooth the camera push-in keys around 124.0 to 124.06, and check the pose blend at that point."
+  },
+  {
+   "t": 123.13,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "On the first frames of the shot both arms are held out in a stiff, symmetrical T-shape with limp, dangling hands. The line of action is weak. The arms then fold down quickly with no anticipation.",
+   "fix": "Start on a clearer asymmetric pose, or add a small anticipation before the arm drop."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4970,
+  "out": 1144
+ },
+ "cost": 0.0214
+}

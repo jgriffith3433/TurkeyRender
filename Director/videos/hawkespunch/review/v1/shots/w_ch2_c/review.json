@@ -1,0 +1,61 @@
+{
+ "id": "w_ch2_c",
+ "f0": 4005,
+ "f1": 4081,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 133.5,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 134.8,
+   "why": "frame difference x7.1 (94.68)",
+   "file": "spike-04044.jpg"
+  }
+ ],
+ "hash": "5a72a77ab74b9813",
+ "summary": "The planet jumps from a sliver at the frame edge (134.76) to filling the whole frame (134.79) with no in-between, and it then hides him for the rest of the strip. The opening frames are also nearly frozen.",
+ "faults": [
+  {
+   "t": 134.79,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Jupiter jumps from a sliver at the right edge in 134.76 to a full-frame close-up of its surface in 134.79. There are no in-between frames, so it reads as a teleport or camera lurch. It also matches the measured spike.",
+   "fix": "Add 3-4 frames of the planet growing toward the camera or an ease-in, or hide the jump with a deliberate cut or flash."
+  },
+  {
+   "t": 134.83,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The planet covers almost the whole frame from 134.79 to 134.99. His body and the gut hit are hidden, with only his head peeking over the top, so the 'ow' beat doesn't read.",
+   "fix": "Pull the camera back or offset the planet so his torso and the impact stay visible. Show the doubled-over reaction before the planet fills the frame."
+  },
+  {
+   "t": 134.86,
+   "sev": "B",
+   "rule": "render",
+   "seen": "likely",
+   "what": "The planet's pole shows a pinched, faceted polygon in the texture with a jagged dark ring and low-res smeared bands. It reads as a texture-mapping artifact at close range.",
+   "fix": "Rotate the planet so the pole faces away from the camera, or use a higher-res texture or smoother UVs."
+  },
+  {
+   "t": 133.6,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "Across 133.53-133.76 the pose is almost frozen. The torso, both arms and the hand shapes barely change over 8 frames, so it reads as a dead hold, not a held pose with life in it.",
+   "fix": "Add a small drift or breathing motion, or a clear anticipation move before the impact."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4979,
+  "out": 1179
+ },
+ "cost": 0.0217
+}

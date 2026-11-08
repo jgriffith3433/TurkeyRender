@@ -1,0 +1,69 @@
+{
+ "id": "w_nurse",
+ "f0": 156,
+ "f1": 232,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 5.2,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 6.2,
+   "why": "flow spike x4.8",
+   "file": "spike-00186.jpg"
+  }
+ ],
+ "hash": "3f162116c07f6f3b",
+ "summary": "The turn at 6.16-6.26 is a fast spin that snaps, and the head is cropped by the top of the frame from 6.16 on. The shot also doesn't read as a nurse looking round, and the cut strip is clean.",
+ "faults": [
+  {
+   "t": 6.2,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The bird turns about 180° in roughly 3 frames. At 6.16 the tail is on the left, at 6.20 the body is face-on with the tail fanned both sides, and at 6.23 the tail is on the right. The body and tail snap round with no anticipation or settle. This is the flow spike.",
+   "fix": "Spread the turn over 10-15 frames with a slight anticipation and a settle. Or cut the spin and use a simple head turn."
+  },
+  {
+   "t": 6.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "From 6.16 to 6.40 the head and beak sit at or above the top edge of the frame and are partly cut off. The head is the focus of the 'looks round' idea.",
+   "fix": "Tilt the camera up or lower the framing so the whole head stays in shot."
+  },
+  {
+   "t": 6.3,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is a nurse who looks round and does not blink. What is shown is a turkey that spins its whole body, and the head is down and turned away with the beak pointing left. There is no clear look-round at the viewer and no steady, unblinking stare.",
+   "fix": "Hold the head turning toward camera, with the eyes visible, and keep the body still."
+  },
+  {
+   "t": 6.33,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "After the spin the pose barely changes from 6.30 to 6.40, with a small drift and no settle or overshoot. It looks mushy and frozen after the quick snap.",
+   "fix": "Add a small overshoot and settle after the turn, then hold the pose."
+  },
+  {
+   "t": 5.33,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "In the opening frames the head and neck drop a few pixels at 5.33 while the body stays still. The motion is small and has no lead-in.",
+   "fix": "Hold the head steady, or give the drop an ease so the neck leads."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 5750,
+  "out": 1469
+ },
+ "cost": 0.0262
+}

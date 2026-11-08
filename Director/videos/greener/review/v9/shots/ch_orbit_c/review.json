@@ -1,0 +1,39 @@
+{
+ "id": "ch_orbit_c",
+ "f0": 1969,
+ "f1": 2021,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 65.633,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "de86114e2d26dd50",
+ "summary": "The cut strip is mostly clean, but the camera or background appears to shift abruptly between 65.76 and 65.79, and his arms hang stiffly in the opening frames.",
+ "faults": [
+  {
+   "t": 65.79,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 65.76 and 65.79 the background shifts noticeably: the stairs, balloons and turkeys change position and scale more than in the earlier frame steps, and he moves left in frame. This reads as the orbit lurching, or the cut tweening, in frames 3 to 5.",
+   "fix": "Smooth the camera orbit's ease-in over the first frames, or start the orbit already at speed so there is no jump at 65.76 to 65.79."
+  },
+  {
+   "t": 65.73,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "In the opening frames his arms hang loose and near-parallel at his sides with a stiff torso. The shot's idea is hands to his face, but nothing in this strip shows an arm starting toward it, so the pose is flat and has no clear line of action.",
+   "fix": "Start the arm lift toward the face earlier, or give the held pose an asymmetric arm line."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 915
+ },
+ "cost": 0.0163
+}

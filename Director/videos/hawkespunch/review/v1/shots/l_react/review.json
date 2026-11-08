@@ -1,0 +1,22 @@
+{
+ "id": "l_react",
+ "f0": 2005,
+ "f1": 2100,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 66.833,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "a3b599035e5c1af7",
+ "summary": "The strip is clean: the head and the louvered backdrop stay steady across all eight frames with no pops, flicker or camera lurch.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3559,
+  "out": 117
+ },
+ "cost": 0.0083
+}

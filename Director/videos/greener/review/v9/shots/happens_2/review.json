@@ -1,0 +1,22 @@
+{
+ "id": "happens_2",
+ "f0": 684,
+ "f1": 735,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 22.8,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "812c13f505cf7e54",
+ "summary": "Camera is steady and the face drifts with small continuous motion across the strip; the mouth opens at 23.03 as speech begins, with no pops or render faults.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3556,
+  "out": 125
+ },
+ "cost": 0.0084
+}

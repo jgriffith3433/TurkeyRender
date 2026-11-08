@@ -1,0 +1,10 @@
+{
+ "id": "alone",
+ "f0": 0,
+ "f1": 97,
+ "faults": [],
+ "summary": "The spike is a fade-up from black (0.43 to 0.46) at the start of the shot, which is a cut and not a fault. The held pose after it is steady with no pops.",
+ "model": "claude-sonnet-5-5",
+ "carried": "proof1",
+ "strips": []
+}

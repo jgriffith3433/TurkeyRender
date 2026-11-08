@@ -1,0 +1,28 @@
+{
+ "id": "sym_love",
+ "f0": 1029,
+ "f1": 1166,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 34.3,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 38.633,
+   "why": "pose jumps and comes back (0.5)",
+   "file": "spike-01159.jpg"
+  }
+ ],
+ "hash": "8405a813b8d8bcc2",
+ "summary": "Both strips look mostly clean: the cut strip is steady, and the 38.63 spike shows only a small mouth and jaw change with no torso or camera pop.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4980,
+  "out": 126
+ },
+ "cost": 0.0112
+}

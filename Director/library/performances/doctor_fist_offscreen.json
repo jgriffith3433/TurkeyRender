@@ -1,0 +1,45 @@
+{
+ "name": "doctor_fist_offscreen",
+ "about": "The button: a short right hook from the guard, for a fist that enters from off screen. RightHook1 trimmed to its last 0.8 s, the hit at `hit` seconds from the start (the clip hits 0.57 s in), fists closed from the first frame; holds the last frame. Frame her out and let the arm come in.",
+ "entry": "any",
+ "exit": "any",
+ "length": "1.2s",
+ "min": "0.7s",
+ "params": {
+  "hit": 0.4
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 1,
+   "for": "0.05s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.9,
+   "for": "0.05s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": "=hit-0.37",
+   "do": "anim",
+   "clip": "RightHook1",
+   "start": 0.2,
+   "once": 1,
+   "blend": "0.08s"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

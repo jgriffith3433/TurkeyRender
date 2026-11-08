@@ -1,0 +1,57 @@
+{
+ "id": "tv_doc",
+ "f0": 5062,
+ "f1": 5137,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 168.733,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 168.9,
+   "why": "one patch jumps (cell 41.1, x6)",
+   "file": "spike-05067.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 170.167,
+   "why": "frame difference x2.4 (4.18)",
+   "file": "spike-05105.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 171,
+   "why": "one patch jumps (cell 71.7, x7.5)",
+   "file": "spike-05130.jpg"
+  }
+ ],
+ "hash": "6c7bddee4164cb6d",
+ "summary": "The strip is mostly clean, with no visible pops or render flicker. The doctor is a near-static, mushy hold with a stuck expression and an unchanging open left hand, though that suits the deadpan idea.",
+ "faults": [
+  {
+   "t": 170,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The pose barely changes across the shot. The fist, the open hand and the downcast gaze all hold with only a slow drift, so it reads as mushy mocap with no beat. The writing action is not clearly legible.",
+   "fix": "Add a small writing motion on the fist hand, or a brief head or eye shift, so the deadpan hold has a visible beat."
+  },
+  {
+   "t": 169,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The open left hand stays in a stiff claw shape, and the arms form a similar V on each side. The silhouette is flat and twinned.",
+   "fix": "Relax the left hand finger spread and offset the two arm angles."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7794,
+  "out": 389
+ },
+ "cost": 0.0195
+}

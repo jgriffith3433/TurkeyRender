@@ -1,0 +1,183 @@
+{
+ "name": "sit_hit_snap",
+ "fps": 30,
+ "frames": 90,
+ "seconds": 2.97,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.05,
+  "straightFrac": 0.5,
+  "moves": 4,
+  "flatness": 0.29,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 2.87,
+  "fastRunMedianS": 0.17,
+  "dynRange": 2.85,
+  "handPeak": 2.5,
+  "bigMoves": 2,
+  "anticipFrac": 0,
+  "overshootFrac": 0,
+  "coherence": 0.88,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0.5,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 1.59,
+  "plantedFrac": 0.97,
+  "zgSpeedChanges": null,
+  "snapsPer10": 10.11,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.09,
+  "deadJoints": 6,
+  "deadJointNames": [
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperArm",
+   "RightUpperArm",
+   "LeftUpperLeg",
+   "RightUpperLeg"
+  ],
+  "readability": 0.64,
+  "twinnedFrac": 1,
+  "curlMedian": 3.84,
+  "spreadMedian": 6.44,
+  "fannedFrac": 0,
+  "bowMedian": -53.29,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 0,
+  "armOmegaP95": 11.01,
+  "legOmegaP95": 12.4,
+  "spineOmegaP50": 0,
+  "spineOmegaP95": 23.37,
+  "headOmegaP50": 0,
+  "headOmegaP95": 35.9,
+  "armAccP95": 241.74,
+  "spineAccP95": 356.21,
+  "handSpeedP50": 0,
+  "handSpeedP95": 0.13,
+  "spineToArm": 0,
+  "energyCV": 2.1,
+  "moveRate": 0.67
+ },
+ "principles": {
+  "arcs": {
+   "score": 1.4,
+   "note": "median bend 0.05 over 4 moves, 50% straight lines"
+  },
+  "ease": {
+   "score": 5,
+   "note": "speed shape 0.29 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 2.87 s), 0% of frames dead still, fast parts median 0.17 s"
+  },
+  "anticipation": {
+   "score": 0,
+   "note": "2 big moves: 0 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 0,
+   "note": "parts' speed profiles agree 0.88 (1 = everything moves as one); typical lag between parts 0 frames; 50% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 2 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "3 body snaps or pops in 2.97 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.5,
+   "note": "6 key poses, readability 0.64 (best of front, side, three-quarter), 100% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 4 deg, spread 6 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "snap",
+   "part": "Chest",
+   "sev": 0.88,
+   "what": "Chest jumps 11 deg in one frame"
+  },
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "snap",
+   "part": "Hips",
+   "sev": 0.86,
+   "what": "Hips jumps 10 deg in one frame"
+  },
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "snap",
+   "part": "Spine",
+   "sev": 0.85,
+   "what": "Spine jumps 9 deg in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.7,
+   "what": "LeftHand starts at 69% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.7,
+   "what": "RightHand starts at 69% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)",
+   "also": [
+    "snap",
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 4.8,
+ "verdict": "wrong to an animator's eye: anticipation and overlap (4.8/10)"
+}

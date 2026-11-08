@@ -1,0 +1,93 @@
+[
+ {
+  "id": "p_speck",
+  "idea": "he is a speck against Saturn's rings",
+  "feel": "tiny",
+  "take": null,
+  "at": "0:4.3478",
+  "end": "1:4.6971",
+  "t": 0,
+  "tEnd": 3,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ },
+ {
+  "id": "p_jupiter_cu",
+  "idea": "Jupiter fills everything behind his face",
+  "feel": "enormous",
+  "take": null,
+  "at": "1:4.6971",
+  "end": "3:1.0478",
+  "t": 3,
+  "tEnd": 6,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ },
+ {
+  "id": "p_wall",
+  "idea": "he is metres from Jupiter's cloud wall",
+  "feel": "the wall of the world",
+  "take": null,
+  "at": "3:1.0478",
+  "end": "4:1.3971",
+  "t": 6,
+  "tEnd": 9,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ },
+ {
+  "id": "p_earth_night",
+  "idea": "Earth's night side, the city lights",
+  "feel": "people live there",
+  "take": null,
+  "at": "4:1.3971",
+  "end": "5:1.7478",
+  "t": 9,
+  "tEnd": 12,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ },
+ {
+  "id": "p_crater",
+  "idea": "a crater the size of a city blooms on the small moon",
+  "feel": "oops",
+  "take": null,
+  "at": "5:1.7478",
+  "end": "7:2.4478",
+  "t": 12,
+  "tEnd": 18,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ },
+ {
+  "id": "p_hoop",
+  "idea": "the outer ring comes off Saturn like a hoop",
+  "feel": "the impossible, casually",
+  "take": null,
+  "at": "7:2.4478",
+  "end": "9:3.1478",
+  "t": 18,
+  "tEnd": 24,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ },
+ {
+  "id": "p_atlas_night",
+  "idea": "the double holds the Earth overhead, its night side to him, the terminator and the city lights in frame",
+  "feel": "people live there",
+  "take": null,
+  "at": "9:3.1478",
+  "end": "10:3.4971",
+  "t": 24,
+  "tEnd": 27,
+  "set": "space_epic",
+  "seq": "space",
+  "note": null
+ }
+]

@@ -1,0 +1,47 @@
+{
+ "id": "ch_low",
+ "f0": 1867,
+ "f1": 1918,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 62.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "cba037447813efbf",
+ "summary": "The strip has no hard pops, but his head is cropped out of frame throughout and he darkens over the last frames, and the hands-on-hips pose is stiff.",
+ "faults": [
+  {
+   "t": 62.26,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The framing cuts off his head at the top edge in every tile. The shot is meant to show a star who is enormous, but the face never shows and the hook reads as a headless torso. The crop gets slightly worse by 62.39 to 62.49.",
+   "fix": "Tilt the camera up or lower it a little so the head and face sit inside the frame."
+  },
+  {
+   "t": 62.43,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "His shirt and trousers get steadily darker from 62.39 to 62.49 and lose their form. The silhouette gets muddy against the pink set. The background lighting does not change, so it looks like a lighting or exposure drift on him.",
+   "fix": "Lock the key and rim light on him for the whole shot so the exposure stays constant."
+  },
+  {
+   "t": 62.39,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both hands sit on his hips with the elbows out, an almost mirror-symmetrical akimbo pose. The legs are also close together and parallel. The silhouette is stiff and has no clear line of action.",
+   "fix": "Offset one arm or hip and widen or angle the stance so the pose has one diagonal line."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3555,
+  "out": 1178
+ },
+ "cost": 0.0189
+}

@@ -17,6 +17,26 @@ namespace TKShock.MV
             bug.gameObject.SetActive(false); bugBox.gameObject.SetActive(false); channel.gameObject.SetActive(false);
             foreach (var i in images) i.gameObject.SetActive(false);
         }
+
+        /// <summary>
+        /// Puts each graphics canvas far enough from its camera for TMP text to draw. The canvas is Screen Space Camera, a plane in front of the lens; at
+        /// 0.12 m the canvas is so small in the world that TMP's text stops rendering once plane distance times tan(fov/2) drops under about 0.05 (measured,
+        /// `call gfxvariants`: tv_doc at 65 mm lost every line while its bars drew; a 115 mm lens needed 0.5 m, 230 mm 1 m). So the plane follows the lens:
+        /// 0.08 / tan(fov/2), never under 0.12. Anything nearer the lens than that covers the graphics, as it would a real camera's lens: under 0.5 m below 80 mm.
+        /// Called before every render (Capture) and on every gfx evaluation, so it is a pure function of the camera.
+        /// </summary>
+        public static void FitCanvases(MVStage st)
+        {
+            if (st == null || st.gfx == null) return;
+            foreach (var g in st.gfx)
+            {
+                if (!g) continue;
+                var c = g.GetComponentInParent<Canvas>(); if (!c || c.renderMode != RenderMode.ScreenSpaceCamera || !c.worldCamera) continue;
+                float d = Mathf.Max(.12f, .08f / Mathf.Tan(Mathf.Clamp(c.worldCamera.fieldOfView, 1, 170) * .5f * Mathf.Deg2Rad));
+                if (Mathf.Abs(c.planeDistance - d) > 1e-4f) c.planeDistance = d;
+            }
+        }
+        public static MVStage Stage;   // the stage the last gfx evaluation drew on
     }
 
     /// <summary>Everything is read from the op's start and end, so graphics scrub backward like the rest.</summary>
@@ -31,6 +51,7 @@ namespace TKShock.MV
         public override void Apply(double t, object binding)
         {
             var st = binding as MVStage; if (st == null) return;
+            MVGfx.Stage = st; MVGfx.FitCanvases(st);
             foreach (var g in st.gfx) if (g) g.Clear();
             int img0 = 0, img1 = 0;
             foreach (var op in Ops)

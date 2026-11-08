@@ -1,0 +1,22 @@
+{
+ "id": "sym_ask",
+ "f0": 609,
+ "f1": 685,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 20.3,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "f634122d3aee2784",
+ "summary": "The cut strip is clean: the camera is static, both characters are already in their poses from the first frame, and I can see no pops, clipping or flicker.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3581,
+  "out": 510
+ },
+ "cost": 0.0123
+}

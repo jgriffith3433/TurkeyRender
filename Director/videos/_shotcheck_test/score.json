@@ -1,0 +1,14 @@
+{
+  // _shotcheck_test: the shot checks' proof (MotionCheck.cs: frame, gesture, mark, readable, camin, propat). Each card reproduces one fault class from
+  // the Hawkes Punch slice, beside a control card that should pass. Hawkes Punch's song (its clock only, no music), sets and cast, native like it.
+  // Run: node Director/mv.mjs --video _shotcheck_test cards --no-shotcheck, then mv --video _shotcheck_test shotcheck. Not a video for J.
+  "song": "Assets/Videos/hawkespunch/Song/audio.mp3",
+  "music": 0,
+  "native": true,
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {
+    "key": { "type": "directional", "rot": [50, -30, 0], "intensity": 1.2, "color": "#ffffff", "lint": "always" }
+  } },
+  "targets": { "cutsPerBar": {} }
+}

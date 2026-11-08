@@ -1,0 +1,46 @@
+{
+ "name": "wave_small",
+ "about": "A small shy wave from the elbow, right hand. Eyes on whoever it is. The legs and hips stay as they are.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "2.9s",
+ "min": "2.6s",
+ "params": {
+  "weight": 0.85,
+  "clip": "Idle1Greet"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "layer",
+   "clip": "$clip",
+   "mask": "upper",
+   "once": 1,
+   "blend": "0.3s",
+   "for": "=for-0.3",
+   "weight": "$weight"
+  },
+  {
+   "at": 0.1,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": 0.25,
+   "do": "face",
+   "smile": 0.5,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.7",
+   "do": "face",
+   "smile": 0.15,
+   "for": "0.6s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.8
+ }
+}

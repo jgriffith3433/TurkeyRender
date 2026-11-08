@@ -1,0 +1,201 @@
+{
+ "name": "_cards_test person 0-204.196 s",
+ "fps": 30,
+ "frames": 6125,
+ "seconds": 204.13,
+ "zerog": false,
+ "features": {
+  "arcBend": 0,
+  "straightFrac": 1,
+  "moves": 3,
+  "flatness": 0.77,
+  "abruptFrac": 1,
+  "deadFrac": 0.01,
+  "holds": 11,
+  "holdMedianS": 2.6,
+  "fastRunMedianS": 0.3,
+  "dynRange": 1.54,
+  "handPeak": 1.35,
+  "bigMoves": 3,
+  "anticipFrac": 0,
+  "overshootFrac": 0,
+  "coherence": 0.38,
+  "lagMedianFrames": 5,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 0,
+  "plantedFrac": 0,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.45,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.65,
+  "twinnedFrac": 0.91,
+  "curlMedian": 46.06,
+  "spreadMedian": 31.13,
+  "fannedFrac": 0,
+  "bowMedian": 7.05,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 1.4,
+  "armOmegaP95": 12.51,
+  "legOmegaP95": 13.08,
+  "spineOmegaP50": 0,
+  "spineOmegaP95": 12.56,
+  "headOmegaP50": 4.94,
+  "headOmegaP95": 12.6,
+  "armAccP95": 321.33,
+  "spineAccP95": 325.55,
+  "handSpeedP50": 0,
+  "handSpeedP95": 0.01,
+  "spineToArm": 0,
+  "energyCV": 0.66,
+  "moveRate": 0.01
+ },
+ "principles": {
+  "arcs": {
+   "score": 0,
+   "note": "median bend 0 over 3 moves, 100% straight lines"
+  },
+  "ease": {
+   "score": 2.3,
+   "note": "speed shape 0.77 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 9.7,
+   "note": "11 holds (median 2.6 s), 1% of frames dead still, fast parts median 0.3 s"
+  },
+  "anticipation": {
+   "score": 0,
+   "note": "3 big moves: 0 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 9.1,
+   "note": "parts' speed profiles agree 0.38 (1 = everything moves as one); typical lag between parts 5 frames"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 0 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 204.13 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 8.6,
+   "note": "11 key poses, readability 0.65 (best of front, side, three-quarter), 91% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 46 deg, spread 31 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "LeftHand",
+   "sev": 0.88,
+   "what": "LeftHand travels 38 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "RightHand",
+   "sev": 0.88,
+   "what": "RightHand travels 38 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "Head",
+   "sev": 0.88,
+   "what": "Head travels 38 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.64,
+   "what": "LeftHand travels 38 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.64,
+   "what": "RightHand travels 38 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.64,
+   "what": "Head travels 38 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.6,
+   "what": "Head starts at 100% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "straight",
+   "part": "LeftHand",
+   "sev": 0.88,
+   "what": "LeftHand travels 38 cm in a straight line (bend 0)",
+   "also": [
+    "straight",
+    "no-prep",
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 6.7,
+ "verdict": "looks animated, not acted: arcs and anticipation give it away (6.7/10)"
+}

@@ -1,0 +1,19 @@
+{
+ "set": "estate",
+ "light": "pastel_interior",
+ "mood": "din_blue",
+ "cast": {
+  "person": {
+   "at": "din_table",
+   "perform": "verse_take"
+  },
+  "butlers_din_l": {
+   "at": "row_din_l",
+   "perform": "butler_verse"
+  },
+  "butlers_din_r": {
+   "at": "row_din_r",
+   "perform": "butler_verse"
+  }
+ }
+}

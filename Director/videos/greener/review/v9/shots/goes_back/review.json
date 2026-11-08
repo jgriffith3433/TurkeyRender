@@ -1,0 +1,69 @@
+{
+ "id": "goes_back",
+ "f0": 3410,
+ "f1": 3461,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 113.667,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 115.3,
+   "why": "one patch jumps (cell 114.2, x1.5)",
+   "file": "spike-03459.jpg"
+  }
+ ],
+ "hash": "a7877a737096e9df",
+ "summary": "The cut strip shows a back-turned character who is mostly stable but sits cropped at the right edge, and the 115.3 s spike is a hard cut to a washed-out pink shot, with a pop right before it.",
+ "faults": [
+  {
+   "t": 113.76,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Right after the cut the character's torso, head and arm shift sideways and vertically between tiles 113.73, 113.76 and 113.79: he drops low, then rises again by 113.83, so the first frames of the shot still tween instead of landing as the shot.",
+   "fix": "Trim the first 4-5 frames of the shot or start the move from the settled pose so the first frame is already the shot."
+  },
+  {
+   "t": 113.69,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He is jammed against the right edge, with his shoulder, arm and half of his body cut off by the frame. His head is cropped at the top in 113.69-113.79. The subject is poorly framed for a character who 'knows exactly what he is doing'.",
+   "fix": "Pan or reframe so he sits inside the frame with room on the side he walks toward."
+  },
+  {
+   "t": 113.83,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The back view is stiff and symmetrical with both arms hanging. There is no skirt grab or clear intent, so the idea of taking up his skirt is not readable.",
+   "fix": "Add the hand lifting the skirt hem and a clear lean into the walk."
+  },
+  {
+   "t": 115.36,
+   "sev": "A",
+   "rule": "render",
+   "seen": "certain",
+   "what": "At 115.36 the picture swaps from the dark wooden yard close-up to a heavily washed-out pink room, which is a different set and a different character scale. It reads as a blown-out flash or a wrong-shot cut, not the glide to the door. The 115.29-115.33 close-up is also whipped with heavy blur beforehand.",
+   "fix": "Remove the stray cut or lower the pink bloom so the door shot reads as a clean continuation of the move."
+  },
+  {
+   "t": 115.39,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "In the pink frames he stands with a hand on his hip, looking up, with almost no movement from 115.36 to 115.53. This is a stuck, blank pose rather than gliding to the door by choice.",
+   "fix": "Show him moving toward the door with an eye lead and weight shift, or cut this hold."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4994,
+  "out": 866
+ },
+ "cost": 0.0186
+}

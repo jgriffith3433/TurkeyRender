@@ -1,0 +1,6 @@
+about: Walks back across and down at the lens (root: the travel). Arms come from the phrase before (slide_hip leaves the hand on the hip) or a mask.
+kind: walk
+len: 4b
+cues:
+  - {at: 0b, do: anim, clip: mx_sexy_walk, speed: 0.8, root: 1, blend: 0.18, for: $len}
+  - {at: 0b, do: move, pos: $root, rel: 1, for: $len, ease: inout, lint: slide}

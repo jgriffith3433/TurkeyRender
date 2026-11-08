@@ -1,0 +1,219 @@
+{
+  // Hawkes Punch, hero moment 1 (the doctor's punch), clinic p_hit: the DOCTOR, standing (ground, not zero-g). Contact at 67f. Seeded from mx_hook_punch.
+
+ "name": "hp_doc_punch",
+ "about": "The doctor's punch: shoulder roll, guard, the tight coil (fist by the cheek) held 20f with a tremble, then a straight cross (mx_cross_punch 1.07 breakdown, 1.15 contact, arm locked out, rear heel up) in 3 frames with a 10% overshoot, held 24f; standing in the clinic.",
+ "seed": {
+  "clip": "IdleBreathe",
+  "t": 0
+ },
+ "length": 5.0,
+ "poses": {
+  "stand": {
+   "from": {
+    "clip": "IdleBreathe",
+    "t": 0
+   }
+  },
+  "roll_up": {
+   "from": "stand",
+   "add": {
+    "Left Shoulder Down-Up": 0.35,
+    "Right Shoulder Down-Up": 0.35,
+    "Neck Nod Down-Up": -0.08
+   }
+  },
+  "roll_back": {
+   "from": "stand",
+   "add": {
+    "Left Shoulder Front-Back": -0.4,
+    "Right Shoulder Front-Back": -0.4,
+    "Chest Front-Back": 0.1
+   }
+  },
+  "guard": {
+   "from": {
+    "clip": "mx_hook_punch",
+    "t": 0.6
+   },
+   "fingers": {
+    "both": {
+     "curl": 1.0,
+     "spread": 0
+    }
+   },
+   "add": {
+    "Neck Nod Down-Up": -0.15
+   }
+  },
+  "coil": {
+   "from": "guard",
+   "fingers": {
+    "both": {
+     "curl": 1.0,
+     "spread": 0
+    }
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": -0.15,
+    "Right Upper Leg Front-Back": 0.05,
+    "Left Lower Leg Stretch": 0.8,
+    "Right Lower Leg Stretch": 0.85,
+    "Left Upper Leg In-Out": 0.08,
+    "Right Upper Leg In-Out": 0.06,
+    "Right Arm Down-Up": 0.4,
+    "Right Arm Front-Back": 0.0,
+    "Right Forearm Stretch": -0.8,
+    "Right Hand Down-Up": 0,
+    "Left Arm Down-Up": 0.0,
+    "Left Arm Front-Back": -0.4,
+    "Left Forearm Stretch": -0.4,
+    "Spine Twist Left-Right": 0.3,
+    "Chest Twist Left-Right": 0.22,
+    "Neck Nod Down-Up": -0.25,
+    "Head Nod Down-Up": -0.08,
+    "Neck Turn Left-Right": -0.25,
+    "Head Turn Left-Right": -0.2,
+    "Spine Front-Back": 0.02
+   },
+   "root": {
+    "rot": [
+     0,
+     12,
+     0
+    ]
+   }
+  },
+  "coil_t": {
+   "from": "coil",
+   "add": {
+    "Right Forearm Stretch": 0.02,
+    "Right Arm Down-Up": -0.01
+   }
+  },
+  "break": {
+   "from": {
+    "clip": "mx_cross_punch",
+    "t": 1.07
+   },
+   "fingers": {
+    "both": {
+     "curl": 1.0,
+     "spread": 0
+    }
+   }
+  },
+  "hit": {
+   "from": {
+    "clip": "mx_cross_punch",
+    "t": 1.15
+   },
+   "fingers": {
+    "both": {
+     "curl": 1.0,
+     "spread": 0
+    }
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0,
+    "Right Shoulder Front-Back": 0.6,
+    "Right Arm Down-Up": 0.35,
+    "Neck Nod Down-Up": -0.2,
+    "Right Foot Up-Down": 0.5
+   }
+  },
+  "follow": {
+   "from": "hit",
+   "add": {
+    "Right Shoulder Front-Back": 0.1,
+    "Spine Twist Left-Right": -0.08
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "stand",
+   "hold": "6f"
+  },
+  {
+   "t": "12f",
+   "pose": "roll_up",
+   "interp": "ease",
+   "step": 3
+  },
+  {
+   "t": "18f",
+   "pose": "roll_back",
+   "interp": "ease",
+   "step": 3
+  },
+  {
+   "t": "24f",
+   "pose": "stand",
+   "interp": "ease",
+   "step": 3
+  },
+  {
+   "t": "34f",
+   "pose": "guard",
+   "interp": "out",
+   "step": 2,
+   "hold": "4f"
+  },
+  {
+   "t": "44f",
+   "pose": "coil",
+   "interp": "ease",
+   "step": 2
+  },
+  {
+   "t": "48f",
+   "pose": "coil_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "52f",
+   "pose": "coil",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "56f",
+   "pose": "coil_t",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "60f",
+   "pose": "coil",
+   "interp": "linear",
+   "step": 2
+  },
+  {
+   "t": "65.5f",
+   "pose": "break",
+   "interp": "linear"
+  },
+  {
+   "t": "67f",
+   "pose": "hit",
+   "interp": "overshoot",
+   "overshoot": 0.1,
+   "settle": 0.2
+  },
+  {
+   "t": "76f",
+   "pose": "follow",
+   "interp": "ease",
+   "hold": "24f"
+  },
+  {
+   "t": "112f",
+   "pose": "stand",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

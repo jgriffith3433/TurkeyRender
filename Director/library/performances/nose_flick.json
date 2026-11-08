@@ -1,0 +1,119 @@
+{
+ "name": "nose_flick",
+ "about": "He flicks the other one's nose: the right hand goes to the face (`target`, an actor: the fingertip stops just in front of the nose), the index flicks off the thumb at `flick`, and the hand snaps back. A wide grin the whole way, a lean in with the arm. For the one being flicked: nose_flicked. No ground. Ends flying. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "fly",
+ "exit": "fly",
+ "length": "1.4s",
+ "min": "1s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "target": "person",
+  "flick": 0.5
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "ground",
+   "amount": 0,
+   "for": "0.1s"
+  },
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$target.head",
+   "for": "0.25s",
+   "ease": "out"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "smile": 0.85,
+   "eyesWide": 0.3,
+   "for": "0.25s",
+   "ease": "out"
+  },
+  {
+   "at": 0.02,
+   "do": "reach",
+   "hand": "right",
+   "to": "$target.head",
+   "offset": [
+    0,
+    -0.01,
+    0.14
+   ],
+   "for": "=flick-0.04",
+   "ease": "hand"
+  },
+  {
+   "at": 0.02,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.85,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.05,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "thumb",
+   "set": 0.55,
+   "for": "0.2s"
+  },
+  {
+   "at": "=flick-0.02",
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0,
+   "for": "0.05s",
+   "ease": "out"
+  },
+  {
+   "at": "=flick+0.06",
+   "do": "reach",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.35s",
+   "ease": "out"
+  },
+  {
+   "at": "=flick+0.1",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.3s"
+  },
+  {
+   "at": "=flick+0.1",
+   "do": "face",
+   "smile": 1,
+   "eyesWide": 0.1,
+   "jawOpen": 0.25,
+   "for": "0.2s",
+   "ease": "out"
+  },
+  {
+   "at": "=flick+0.5",
+   "do": "blink",
+   "for": "0.18s"
+  }
+ ],
+ "test": {
+  "first": [
+   {
+    "name": "drift_space",
+    "for": "1.5s"
+   }
+  ],
+  "tail": 0.3
+ }
+}

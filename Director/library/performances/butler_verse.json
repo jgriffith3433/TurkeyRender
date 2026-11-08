@@ -1,0 +1,265 @@
+{
+ "name": "butler_verse",
+ "about": "Verse 2, both dining rows in unison: a slow bow on the bar, then a bar of two hops.",
+ "entry": "any",
+ "exit": "any",
+ "length": "27.4s",
+ "min": "26s",
+ "params": {
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": 1.286,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 2.659,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 3.516,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 4.714,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 6.087,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 6.944,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 8.143,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 9.516,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 10.373,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 11.571,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 12.944,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 13.801,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 15,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 16.373,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 17.23,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 18.429,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 19.801,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 20.659,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 21.857,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 23.23,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 24.087,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 25.286,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "speed": 0.85,
+   "blend": "0.08s",
+   "for": 1.5,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 26.659,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 27.516,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  }
+ ],
+ "test": {
+  "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx",
+  "tail": 0.4
+ }
+}

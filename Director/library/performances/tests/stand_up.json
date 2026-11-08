@@ -1,0 +1,21 @@
+{
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.056 m, worst step 0.053 m at 6.50s",
+  "right foot on floor moved 0.235 m, worst step 0.159 m at 6.50s"
+ ],
+ "hipsTop": 0.9002471,
+ "hipsLow": 0.60941416,
+ "hipsMaxSpeed": 0.6197767,
+ "hipsTravel": "(0.03, 0.29, 0.34)",
+ "limits": {
+  "Chest": 13.1
+ },
+ "reverse": 0,
+ "fresh": 0,
+ "frames": 36,
+ "warnings": [],
+ "from": 4.1,
+ "to": 7.6
+}

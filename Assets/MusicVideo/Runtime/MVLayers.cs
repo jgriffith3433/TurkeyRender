@@ -73,8 +73,13 @@ namespace TKShock.MV
         void AddTree(MVActor actor, Op op, double tl)
         {
             var t = TreeOf(op); double u = TreeClock(t, op, tl); if (op.a.F("once") <= 0) u -= Math.Floor(u);
-            float blend = op.a.F("blend", .2f), w = blend > 0 ? Ease.Apply("inout", (float)(tl / blend)) : 1, ret = op.a.F("return");
-            if (ret > 0 && tl > op.WDur) w *= 1 - Ease.Apply("inout", (float)((tl - op.WDur) / ret));
+            float blend = op.a.F("blend", .2f), ret = op.a.F("return"), w;
+            if (Inert(op)) { if (ret > 0 && Past(tl, op.WDur)) return; w = 1; }
+            else
+            {
+                w = blend > 0 ? Ease.Apply("inout", (float)(tl / blend)) : 1;
+                if (ret > 0 && tl > op.WDur) w *= 1 - Ease.Apply("inout", (float)((tl - op.WDur) / ret));
+            }
             if (w <= 0) return;
             _layers.Add(new Layer { clip = t.c[0], time = u, w = w, tree = t, tl = (float)tl });
         }

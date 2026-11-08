@@ -1,0 +1,77 @@
+{
+ "id": "c2_sil",
+ "f0": 3745,
+ "f1": 3795,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 124.833,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 125.667,
+   "why": "one patch jumps (cell 125.2, x2.4)",
+   "file": "spike-03770.jpg"
+  }
+ ],
+ "hash": "d5e00047a1f814b2",
+ "summary": "The first strip shows the twinned figure vanishing and the camera still moving after the cut, and the second strip shows a single static figure that doesn't match the \"three of him dancing\" brief, with no visible pop at 125.667.",
+ "faults": [
+  {
+   "t": 124.96,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The second figure (the twin behind him) is in the tiles at 124.86, 124.89 and 124.93, then is gone at 124.96. The remaining figure also jumps larger and closer in frame, and the background shifts at the same moment.",
+   "fix": "Keep all three dancers in the shot, or cut cleanly on the first frame so the clone doesn't vanish. Lock the camera at the cut."
+  },
+  {
+   "t": 125.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "From 124.96 to 125.06 the camera keeps swinging. The room and the dancer change scale and angle between tiles, which looks like the cut tweening instead of a settled first frame.",
+   "fix": "Start the shot on its final camera framing and drop the first few frames of the move."
+  },
+  {
+   "t": 124.89,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The opening frames show a bright pastel room with turkeys and a lit dancer from the side. The brief is a black silhouette from behind against bright doors, and the two twins overlap into one muddy shape.",
+   "fix": "Match the framing to the brief, with the three figures separated and read as silhouettes against the doors."
+  },
+  {
+   "t": 125.66,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "Only one figure is visible, seen from behind against a dark stormy sky with a topiary. There are no three dancers and no bright front doors, and he stands with hands on hips and barely moves. This doesn't read as 'hollow joy, louder'.",
+   "fix": "Put the three dancers in frame and give the hands-on-hips pose a bigger move, or replace it."
+  },
+  {
+   "t": 125.76,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The hands-on-hips pose is stiff and near-symmetrical. The elbows jut out in a flat line, and the figure is almost unlit against the dark background, so the silhouette is hard to read.",
+   "fix": "Break the symmetry with one arm lifted or the torso tilted, and rim-light the figure."
+  },
+  {
+   "t": 125.86,
+   "sev": "C",
+   "rule": "render",
+   "seen": "likely",
+   "what": "Flat, unshaded red confetti squares drift in at the top right and left (125.73 to 125.89). They are small and don't hide him, but they read as unlit.",
+   "fix": "Give the confetti shading or remove it from this shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4979,
+  "out": 1635
+ },
+ "cost": 0.0263
+}

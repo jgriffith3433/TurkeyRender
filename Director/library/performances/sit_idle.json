@@ -1,0 +1,32 @@
+{
+ "name": "sit_idle",
+ "about": "Sitting on a chair or sofa, alive: small shifts and breathing. The seat is about 0.45 m high.",
+ "entry": "sit_chair",
+ "exit": "sit_chair",
+ "length": "4s",
+ "min": "1s",
+ "params": {
+  "clip": "IdleSit14"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$clip",
+   "blend": "0.4s"
+  },
+  {
+   "at": 0.9,
+   "do": "blink",
+   "for": "0.2s"
+  },
+  {
+   "at": "=for*0.7",
+   "do": "blink",
+   "for": "0.22s"
+  }
+ ],
+ "test": {
+  "tail": 0.1
+ }
+}

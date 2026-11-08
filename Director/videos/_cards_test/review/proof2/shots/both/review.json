@@ -1,0 +1,10 @@
+{
+ "id": "both",
+ "f0": 345,
+ "f1": 428,
+ "faults": [],
+ "summary": "The strip is clean: a static camera and a standing figure at the right edge with only slight drift, and no pops, flicker or clipping visible.",
+ "model": "claude-sonnet-5-5",
+ "carried": "proof1",
+ "strips": []
+}

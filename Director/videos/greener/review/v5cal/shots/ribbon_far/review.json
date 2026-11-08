@@ -1,0 +1,28 @@
+{
+ "id": "ribbon_far",
+ "f0": 4336,
+ "f1": 4387,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 144.533,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 145.367,
+   "why": "frame difference x9.3 (33.03)",
+   "file": "spike-04361.jpg"
+  }
+ ],
+ "hash": "23646d78a87e0778",
+ "summary": "Clean strip: the cut frames hold the shot and the 145.367 spike shows only smooth drift with no visible pop.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6289,
+  "out": 763
+ },
+ "cost": 0.0202
+}

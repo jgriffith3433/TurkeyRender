@@ -1,0 +1,53 @@
+{
+ "id": "walk",
+ "f0": 677,
+ "f1": 759,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 22.567,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 22.667,
+   "why": "flow spike x2.7",
+   "file": "spike-00680.jpg"
+  }
+ ],
+ "hash": "64b50f5f3664c62c",
+ "summary": "The arm snaps from hanging to raised in about 4 frames right after the cut, and from 22.70 the forearm sits across the face and stays there, which doesn't read as walking away.",
+ "faults": [
+  {
+   "t": 22.63,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 22.56 and 22.66 the near arm goes from hanging at the side to raised and extended in about 4 frames, and the torso shifts at the same time. This is the start of the shot, so it looks like the cut tweening into the pose rather than a motion that starts already underway.",
+   "fix": "Start the shot with the arm already in or close to the raised pose, or trim the first 5 frames of the clip."
+  },
+  {
+   "t": 22.73,
+   "sev": "A",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "From 22.70 to 22.83 the upper arm and forearm lie across the head and face, like a dab. The face is hidden and the silhouette is a muddle of arm and head. The hand held out the other side is stiff and doesn't move between frames.",
+   "fix": "Lift the elbow and open the arm away from the head, or replace the pose with a clear walk swing so the face and silhouette read."
+  },
+  {
+   "t": 22.76,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is 'she leaves him behind', but the body is hunched with arms raised in a zombie or dab shape and the legs are crouched. It doesn't read as walking away, and the held pose is nearly frozen across 22.70 to 22.83.",
+   "fix": "Use a upright walking-away pose with a natural arm swing and hips leading, and keep any hold brief."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4928,
+  "out": 917
+ },
+ "cost": 0.019
+}

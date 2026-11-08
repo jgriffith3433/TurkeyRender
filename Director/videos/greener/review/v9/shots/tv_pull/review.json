@@ -1,0 +1,31 @@
+{
+ "id": "tv_pull",
+ "f0": 4387,
+ "f1": 4439,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 146.233,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "d32ab690b45a8c10",
+ "summary": "The first frames of the shot hold nearly still, then the camera starts a quick pull-back or pan over frames 3 to 5 (146.33 to 146.39) that reveals the wall beside the TV, which reads as the cut tweening. I saw no flicker or other faults.",
+ "faults": [
+  {
+   "t": 146.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "The TV bezel is almost stationary between 146.26 and 146.29, then slides left by about 20 to 30 px per frame from 146.33 on. The camera starts moving sharply right after the cut, and the wall to the right of the TV appears suddenly. This looks like the cut tweening into the move instead of a shot that is already established.",
+   "fix": "Hold the first shot framing for the first few frames, or start the camera move already at speed on the first frame of the shot. Alternatively, trim the first 3 to 4 frames so the shot begins mid-move."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3561,
+  "out": 856
+ },
+ "cost": 0.0157
+}

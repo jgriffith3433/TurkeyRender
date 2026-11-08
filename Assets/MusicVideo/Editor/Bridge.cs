@@ -29,6 +29,7 @@ namespace TKShock.MV.EditorTools
         static readonly string Inbox = Path.Combine(Root, "inbox"), Outbox = Path.Combine(Root, "outbox");
         static readonly Dictionary<string, MethodInfo> Commands = new Dictionary<string, MethodInfo>();
         static readonly List<string> Log = new List<string>();
+        static readonly string[] NoScene = { "ping", "status", "marks", "render-status", "render-cancel", "refresh", "packages", "build", "mark", "marks-clear" }; // these never need the video's scene open first
         static double _next, _lastBeat;
         static bool _running;
 
@@ -95,6 +96,7 @@ namespace TKShock.MV.EditorTools
             {
                 var msg = JObject.Parse(text);
                 string cmd = (string)msg["cmd"];
+                Video.Use((string)msg["video"], Array.IndexOf(NoScene, cmd) < 0);
                 if (!Commands.TryGetValue(cmd, out var m)) throw new Exception("no such command: " + cmd);
                 var result = m.Invoke(null, new object[] { msg });
                 reply["ok"] = true;

@@ -1,0 +1,55 @@
+{
+ "id": "st_forehead",
+ "f0": 4458,
+ "f1": 4534,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 148.6,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "ec15bc0fdb7c5776",
+ "summary": "The strip has no pops, flicker or camera movement, but the hands are malformed and the heads are not forehead to forehead as the shot idea says.",
+ "faults": [
+  {
+   "t": 148.63,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The right character's hands are flattened and stacked, and one stiff finger or thumb hangs straight down like a stick. It reads as a broken hand and stays that way through every tile.",
+   "fix": "Fix the finger curl on the right hand so it relaxes or wraps, and remove the downward-pointing digit."
+  },
+  {
+   "t": 148.63,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The left character's hands are a tangled clump with fingers knotted together and overlapping. The forearms seem to merge, and the arm tone is olive and different from the face.",
+   "fix": "Separate the hands and clean up the finger interpenetration. Check that the arm material matches the face."
+  },
+  {
+   "t": 148.76,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to be forehead to forehead. The two heads are separated by a clear gap and are in profile, and the foreheads never meet.",
+   "fix": "Move the heads closer so the foreheads touch, or retime the lean-in."
+  },
+  {
+   "t": 148.7,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Both faces hold nearly the same expression across the frames, with little eye or head change, so they read as a stare.",
+   "fix": "Add a small eye shift or a blink, and a slight head settle."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3554,
+  "out": 1031
+ },
+ "cost": 0.0174
+}

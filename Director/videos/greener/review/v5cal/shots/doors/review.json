@@ -1,0 +1,73 @@
+{
+ "id": "doors",
+ "f0": 1661,
+ "f1": 1713,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 55.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 55.433,
+   "why": "one patch jumps (cell 87.3, x2.1)",
+   "file": "spike-01663.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 55.767,
+   "why": "one patch jumps (cell 89.2, x2.1)",
+   "file": "spike-01673.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 56.533,
+   "why": "one patch jumps (cell 99.5, x2.3)",
+   "file": "spike-01696.jpg"
+  }
+ ],
+ "hash": "a7bc1321f12277f1",
+ "summary": "The door-opening sequence has a few real problems: the first door's panel jumps, a pillar-like beige shape stays in front of the doors, and a door knob glitches. The dancer is only visible at the end, in a stiff and symmetric pose.",
+ "faults": [
+  {
+   "t": 55.43,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The cream door jumps from filling the frame to a narrow sliver at the right edge with the knob visible. Between 55.39 and 55.46 it snaps open with no in-between motion, and the upper panel outline shifts and looks broken at 55.43.",
+   "fix": "Add in-between frames or ease the door swing so the first door does not teleport open."
+  },
+  {
+   "t": 55.46,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "A large beige cylindrical pillar stays in the left foreground across 55.36-55.63. It blocks about a third of the frame and the door action, and it reads as a stray object rather than a door.",
+   "fix": "Move the camera or the pillar so the view through the doors is clear."
+  },
+  {
+   "t": 55.83,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "A second small gold knob appears next to the main knob at 55.79-55.83. It looks like a duplicated or clipping knob, and the main knob then sits on the green bush at 55.89-55.96, so the door and bush appear to overlap.",
+   "fix": "Remove the duplicate knob and move the bush so it clears the door."
+  },
+  {
+   "t": 56.53,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The dancer is cropped at the right edge, and his arms hang in a stiff, symmetric pose with little line of action. His expression is blank.",
+   "fix": "Re-center him in frame and give him a stronger pose and a facial expression."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7799,
+  "out": 663
+ },
+ "cost": 0.0222
+}

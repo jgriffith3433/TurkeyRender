@@ -1,0 +1,7 @@
+// Hawkes Punch: brighter space rim and fill from the playground on.
+{
+ "cues": [
+  {"at": "73.390s", "light": "space_space_sun_rim", "intensity": 1.8, "for": 0},
+  {"at": "73.390s", "light": "space_space_sun_fill", "intensity": 1.4, "for": 0}
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "clip": "mx_sit_point",
+ "seconds": 3.1,
+ "popCount": 0,
+ "pops": [],
+ "feet": [
+  "left foot on floor moved 0.246 m, worst step 0.016 m at 2.43s",
+  "right foot on floor moved 0.205 m, worst step 0.009 m at 0.30s"
+ ],
+ "hipsTop": 0.573064268,
+ "hipsLow": 0.501195431,
+ "hipsTravel": "(0.00, 0.00, 0.00)",
+ "limits": {
+  "RightLowerArm": 3.9,
+  "LeftShoulder": 0.8
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_point_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_point_three.mp4"
+ ]
+}

@@ -1,0 +1,2275 @@
+{
+ "version": 1,
+ "entries": {
+  "4162efa854b4aa93": {
+   "id": "w_clock",
+   "f0": 0,
+   "f1": 81,
+   "faults": [],
+   "summary": "Clean strip: the spike is the cut from dark frames into the reception shot, and the camera, counter and turkey stay put afterward.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "b87e53ebec9fe0d4": {
+   "id": "w_sits",
+   "f0": 81,
+   "f1": 156,
+   "faults": [
+    {
+     "t": 4.03,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Head snaps from facing camera to a chin-up turn to the side within 2 frames (4.00 to 4.06), and the torso and arms shift sideways at the same time. The cough has no anticipation and reads as a pose pop rather than a slumped cough.",
+     "fix": "Add 3-4 frames of ease-in (a head dip or chest draw-back) before the cough, and ease the head and torso over more frames."
+    },
+    {
+     "t": 4.36,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Head returns from the up-and-side turn (4.29-4.33) to facing front by 4.36, and the torso and arms jump back with it. The second cough reads as the same snap, repeated.",
+     "fix": "Smooth the return over 4-6 frames with a settle, and vary the second cough's size or direction."
+    },
+    {
+     "t": 2.8,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Between coughs (2.69-2.93) both arms hang in a stiff, near-symmetrical pose with the fists on the thighs and almost no motion. The pose does not read as slumped or sick.",
+     "fix": "Add a slump in the spine and shoulders, offset the arms, and add subtle breathing."
+    }
+   ],
+   "summary": "The cut is clean, but the head and torso twitch sharply at 4.03-4.09 and the arms turn stiff and twinned with a near-static body for the rest of the strip.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "be017c6d539a718e": {
+   "id": "w_nurse",
+   "f0": 156,
+   "f1": 232,
+   "faults": [
+    {
+     "t": 6.2,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The bird turns about 180° in roughly 3 frames. At 6.16 the tail is on the left, at 6.20 the body is face-on with the tail fanned both sides, and at 6.23 the tail is on the right. The body and tail snap round with no anticipation or settle. This is the flow spike.",
+     "fix": "Spread the turn over 10-15 frames with a slight anticipation and a settle. Or cut the spin and use a simple head turn."
+    },
+    {
+     "t": 6.26,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "From 6.16 to 6.40 the head and beak sit at or above the top edge of the frame and are partly cut off. The head is the focus of the 'looks round' idea.",
+     "fix": "Tilt the camera up or lower the framing so the whole head stays in shot."
+    },
+    {
+     "t": 6.3,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is a nurse who looks round and does not blink. What is shown is a turkey that spins its whole body, and the head is down and turned away with the beak pointing left. There is no clear look-round at the viewer and no steady, unblinking stare.",
+     "fix": "Hold the head turning toward camera, with the eyes visible, and keep the body still."
+    },
+    {
+     "t": 6.33,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "After the spin the pose barely changes from 6.30 to 6.40, with a small drift and no settle or overshoot. It looks mushy and frozen after the quick snap.",
+     "fix": "Add a small overshoot and settle after the turn, then hold the pose."
+    },
+    {
+     "t": 5.33,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "In the opening frames the head and neck drop a few pixels at 5.33 while the body stays still. The motion is small and has no lead-in.",
+     "fix": "Hold the head steady, or give the drop an ease so the neck leads."
+    }
+   ],
+   "summary": "The turn at 6.16-6.26 is a fast spin that snaps, and the head is cropped by the top of the frame from 6.16 on. The shot also doesn't read as a nurse looking round, and the cut strip is clean.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "330cc746a1b26cf6": {
+   "id": "w_ahh",
+   "f0": 232,
+   "f1": 307,
+   "faults": [
+    {
+     "t": 7.76,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "certain",
+     "what": "From 7.76 to 7.96 he is almost frozen: head, shoulders and closed mouth barely change for about 7 frames, so he reads as a stiff, mushy hold with no anticipation or eye/head life before the ahh.",
+     "fix": "Add a small anticipation (breath-in, head dip or eye flick) before the jaw opens, or add a subtle head drift."
+    },
+    {
+     "t": 8,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "At 8.00 the mouth snaps from closed (7.96) to open with teeth showing in a single frame, and the head angle shifts slightly. There is no in-between or anticipation, so it reads as a pose snap rather than a jaw drop.",
+     "fix": "Add 2-3 in-between frames with anticipation, then overshoot the jaw and settle."
+    }
+   ],
+   "summary": "The frames are nearly static, with the head tilted up and the mouth barely open until a sudden jaw drop at 8.00, and the shot's ahh gag is not yet visible in this strip.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "f1e228cd4b083a86": {
+   "id": "c_wide",
+   "f0": 307,
+   "f1": 383,
+   "faults": [
+    {
+     "t": 10.26,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "She stands with her back to camera, close in front of the seated man. Her torso and hair cover his upper body and face, so the 'he looks green' idea doesn't read. Both heads sit at the top edge of the crop.",
+     "fix": "Move her to the side of him or turn her three-quarters toward camera, so his face and torso are clear."
+    },
+    {
+     "t": 10.4,
+     "sev": "C",
+     "rule": "story",
+     "seen": "likely",
+     "what": "No stethoscope shows on her in any tile. Her arms hang straight at her sides, and the 'she beside him with her stethoscope' beat isn't there.",
+     "fix": "Put the stethoscope around her neck or in her hand, and angle her so it shows."
+    }
+   ],
+   "summary": "The strip has no pops, flicker or render faults and the camera is steady. The only issues are staging and story: her back covers him, and the stethoscope isn't visible.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "e0839259ccb94cf5": {
+   "id": "c_eyes",
+   "f0": 383,
+   "f1": 458,
+   "faults": [
+    {
+     "t": 12.89,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "From 12.89 to 13.00 his head dips and his eyes look down and away at the floor, and the expression doesn't change. This reads as downcast, not wary tracking of her, and the eyes aren't leading the head.",
+     "fix": "Raise the eye line toward her, off-screen, with eyes leading the head. Keep the head level, and save the slow blink for after the settle."
+    }
+   ],
+   "summary": "The strip has no big pops or render faults. The head moves continuously, but from 12.89 on his eyes drop and stay down, which doesn't fit the \"eyes follow her, wary\" idea.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "0670602159e14df7": {
+   "id": "c_steth",
+   "f0": 458,
+   "f1": 534,
+   "faults": [
+    {
+     "t": 15.33,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The woman, who carries the 'hmm, hand at chin' idea, is cut off by the right edge. Only the back of her head and shoulder show, and her face and hand are not visible. The stethoscope end hangs ambiguously beside her.",
+     "fix": "Reframe or pan the crop so her face and chin hand are in frame, or move her left in the shot."
+    },
+    {
+     "t": 15.43,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "His head, eyes and expression are stuck across all eight tiles: a blank stare to the right, with no blink, eye lead or breath cue. He reads as a frozen mannequin rather than someone holding his breath.",
+     "fix": "Add a small chest or shoulder lift and release, an eye shift and a blink, with a slight head settle."
+    }
+   ],
+   "summary": "The strip is stable with no pops, flicker or camera move, but the woman is cropped at the right edge so her hand-at-chin idea isn't visible, and he is frozen with a blank face.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "3310487934519a95": {
+   "id": "c_knee",
+   "f0": 534,
+   "f1": 609,
+   "faults": [
+    {
+     "t": 17.89,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The lower leg goes from hanging (17.86) to raised and crossing the other leg (17.89) in one frame. There is no anticipation, so the kick looks like a pose snap rather than a swing.",
+     "fix": "Add 2-3 in-between frames, or a small back-swing before the kick, so the leg accelerates into the tap."
+    },
+    {
+     "t": 17.93,
+     "sev": "A",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "At 17.93-17.96 and again at 18.00 the kicking shin and shoe pass through the standing character's lower leg. The sole shows on the far side while the shin is still in front.",
+     "fix": "Move the kicking leg's arc forward, or shorten the swing, so it clears the other character's shin."
+    },
+    {
+     "t": 18.03,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "At 18.00-18.06 the shoe sits on top of the other character's bare foot and overlaps it with no contact reaction.",
+     "fix": "Lift the kicking foot a few cm or shift it sideways so it doesn't intersect the bare foot."
+    },
+    {
+     "t": 18,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "The leg drops back from the high crossed position (17.96-18.00) to hanging by 18.03-18.10 with no overshoot or settle, and the pose is not held on the tap. The motion reads as a quick flick-and-return.",
+     "fix": "Hold the tap contact for 2-3 frames, then ease the leg back with a small overshoot."
+    }
+   ],
+   "summary": "The kick snaps through its arc in about 3 frames, and the kicking leg and shoe clip into the other character's leg and bare foot. The shot's look-down beat can't be checked because the heads are out of the crop.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "0564a06e59a29662": {
+   "id": "sym_ask",
+   "f0": 609,
+   "f1": 685,
+   "faults": [],
+   "summary": "The cut strip is clean: the camera is static, both characters are already in their poses from the first frame, and I can see no pops, clipping or flicker.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "3d9e790eb6236bc6": {
+   "id": "sym_music",
+   "f0": 685,
+   "f1": 774,
+   "faults": [
+    {
+     "t": 22.9,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "On the first frames of the shot both arms hang straight down, mirrored and stiff, with no pose or line of action. The viewer's-right arm stays frozen through 23.10 while the other hand lifts.",
+     "fix": "Give the static arm a slight bend or drift, or start the shot on a stronger pose."
+    },
+    {
+     "t": 25.36,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "During the fast gesture the viewer's-right hand sits at the right edge and is partly cropped (25.26 to 25.36). The left hand is also cut off at the left edge. From 25.40 both hands drop out of the bottom of the frame, so the gesture is hard to read.",
+     "fix": "Pull the camera back or narrow the gesture so both hands stay inside the frame."
+    }
+   ],
+   "summary": "The cut is clean and the right hand rises smoothly with no pop, but his arms hang stiff on the first frames and both hands are cropped by the frame edges in the gesture at 25.3 s.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "1164f6139615cb1d": {
+   "id": "sym_write1",
+   "f0": 774,
+   "f1": 883,
+   "faults": [
+    {
+     "t": 26.8,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Between 26.76 and 26.80 the torso, shoulder and near arm jump in one frame. The torso shifts right and down, the elbow changes angle and the shirt silhouette changes. The hands stay roughly in place. It reads as a loop restart or a pose snap, not a move.",
+     "fix": "Blend or retime the mocap loop seam over 6-8 frames, or hide the loop point. Start the next cycle from the pose where the last one ended."
+    },
+    {
+     "t": 27.73,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The same snap repeats between 27.69 and 27.73. The torso and arm lurch to a new position in one frame, about 0.93 s after the previous one. The regular interval confirms a looping clip with an unblended seam.",
+     "fix": "Remove the loop or lengthen it. Cross-blend the seam, or replace it with a non-repeating take."
+    },
+    {
+     "t": 25.93,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The shot's first frames (25.79-25.89) hold a pose, then at 25.93 the body drops and shifts left. The head, neck and hand all move lower in frame over about 2 frames. This is the same loop snap, and it reads as the cut tweening after the shot has started.",
+     "fix": "Start the shot on the settled pose, or trim the first 5 frames so the move happens after a hold."
+    },
+    {
+     "t": 26.7,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "Between snaps (26.66-26.76 and 27.59-27.69) the body barely changes. The far hand stays frozen in the same open claw shape and the near hand keeps the same splayed shape on the thigh. Then it all jumps. The poses are mushy and static, and there is no writing action, no pad visible and no wrist motion.",
+     "fix": "Animate a small repeating pen stroke in the near hand and a pad in frame. Give the far hand a purpose, such as holding the pad."
+    },
+    {
+     "t": 26.7,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "Her head is down and her eyes stay low and unchanged across all strips. There is no eye movement, no expression change and no head follow-through on the snaps. The 'not a blink' idea reads as a blank stare, not 'she has heard worse'.",
+     "fix": "Add small eye darts along the writing line, a subtle brow or mouth beat, and a head settle on each line break."
+    }
+   ],
+   "summary": "The shot has a repeating one-frame torso and arm snap, with the same jump at about 25.9, 26.8 and 27.7 s, and the pose doesn't read as writing.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "80c4b7910052545d": {
+   "id": "sym_silence",
+   "f0": 883,
+   "f1": 1029,
+   "faults": [
+    {
+     "t": 30.06,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "The arm swings up from rest into frame in about 4 frames (29.99 to 30.09), with no anticipation and no body lead. The torso and shoulders stay frozen while the forearm whips in, so the arm looks driven on its own.",
+     "fix": "Add a small shoulder and torso lean or drop before the lift. Ease the arm in over about 8 to 10 frames and let it settle."
+    },
+    {
+     "t": 30.13,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The gesturing hand is cut off by the left frame edge from 30.13 to 30.23. The hand, which is the point of the shot, is mostly out of frame.",
+     "fix": "Reframe wider or shift the camera left. Alternatively, pull the gesture in so the hand stays inside the frame."
+    },
+    {
+     "t": 30.19,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is a wagging finger that drives the point home. The hand reads as a loose fist or open claw at the frame edge, and no finger point or wag is visible.",
+     "fix": "Pose the hand with the index finger extended. Bring it inside the frame and add a clear side-to-side wag."
+    },
+    {
+     "t": 33.57,
+     "sev": "B",
+     "rule": "story",
+     "seen": "certain",
+     "what": "Frames 33.49 to 33.73 repeat 29.99 to 30.23 exactly: same arm path, same head tilt, same framing. The gesture is a copied loop, so it reads as canned rather than emphatic. It lands as a repeat instead of building a point.",
+     "fix": "Vary the second gesture with a different amplitude, timing or hand. Alternatively, hold a stronger pose and cut the repeat."
+    },
+    {
+     "t": 29.53,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "Before the gesture (29.46 to 29.70), the body drifts slightly with a stiff, near-symmetrical stance and the arms hanging. There is no clear held pose and little face change, so the character looks idle and blank rather than meaning it.",
+     "fix": "Hold a stronger pose with a head or eye shift and a blink. Start the gesture earlier."
+    }
+   ],
+   "summary": "The shot is a locked, static torso with one arm gesture that pops in fast, leaves the frame, and repeats identically 3.5 s later. The wagging finger the idea calls for never reads.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "c79cfb3bc6c30af4": {
+   "id": "sym_love",
+   "f0": 1029,
+   "f1": 1166,
+   "faults": [],
+   "summary": "Both strips look mostly clean: the cut strip is steady, and the 38.63 spike shows only a small mouth and jaw change with no torso or camera pop.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "5e2c2cf794489d9d": {
+   "id": "sym_write2",
+   "f0": 1166,
+   "f1": 1222,
+   "faults": [],
+   "summary": "The strip is clean: the cut is stable, the pose is nearly identical across tiles with only slight drift, and I see no pops, clipping or render flicker.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "1820070c27fc4872": {
+   "id": "sym_vibe",
+   "f0": 1222,
+   "f1": 1321,
+   "faults": [
+    {
+     "t": 40.76,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The crop cuts the face off at the right edge and top, leaving only the ear, jaw, neck and shoulder. The shot idea is a hand searching for the word, but no hand is visible and the eye is barely in frame. The face can't carry the expression.",
+     "fix": "Reframe so the face and the searching hand are in frame, or shift the camera left and down."
+    }
+   ],
+   "summary": "The strip is mostly clean: a tight static crop of the neck and shoulder with a slow drift and no pops or flicker. The only issue is that the face is cropped to the chin, so the idea of the hand searching for the word isn't visible.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "035b15e9542dfba9": {
+   "id": "sym_ghost_her",
+   "f0": 1321,
+   "f1": 1416,
+   "faults": [],
+   "summary": "The strip is clean: the camera is static, the head turns down slowly and steadily across the frames, and no pops, clipping or render flicker are visible. The face is deadpan, which suits the shot.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "620e24b791e9168f": {
+   "id": "sym_ghost_him",
+   "f0": 1416,
+   "f1": 1515,
+   "faults": [],
+   "summary": "The cut strip is clean: the framing, head pose and background stay steady across all eight frames, with only slight drift and no pops or render flicker.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "2c48b492b5c61e67": {
+   "id": "d_pad",
+   "f0": 1515,
+   "f1": 1590,
+   "faults": [
+    {
+     "t": 50.63,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "The shot idea is writing on a page, but the hand, pen and page are not visible. Only the forearm edge shows at the bottom, so the action doesn't read in the opening frames.",
+     "fix": "Reframe or tilt down a little so the writing hand and page are in shot, or cut to an insert of the hand."
+    }
+   ],
+   "summary": "The cut is clean: the head lowers slowly and steadily with no pops, flicker or camera lurch, though the writing hand and page are out of frame in these tiles.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "0600ac4bea4e3e91": {
+   "id": "d_face",
+   "f0": 1590,
+   "f1": 1666,
+   "faults": [],
+   "summary": "The strip is clean: the head, shoulders and background hold steady across all eight tiles with only a slight drift, and no pops, flicker or clipping show.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "7b170a1ff504ab38": {
+   "id": "d_can",
+   "f0": 1666,
+   "f1": 1741,
+   "faults": [
+    {
+     "t": 55.7,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 55.66 and 55.70 her torso and arm change suddenly. After four near-frozen frames the shirt silhouette changes, the arm swings back and the hand moves to a new place. The torso then keeps turning toward camera through 55.80, with the shirt shading going greyer. It reads as the pose starting abruptly (a snap) with no wind-up, not as a motion that eases in.",
+     "fix": "Add 2-3 frames of anticipation (a hip and shoulder wind-up) before 55.70, or start the clip already mid-move so the cut lands on motion, not a held stand."
+    }
+   ],
+   "summary": "The first four frames are a near-static side-on stand, then she abruptly starts turning and swinging her arm at 55.70 with no anticipation, so there is one noticeable snap.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "93b8e0a1099378ce": {
+   "id": "d_take",
+   "f0": 1741,
+   "f1": 1817,
+   "faults": [
+    {
+     "t": 59.6,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Head pose and hair silhouette change abruptly across 59.56 to 59.63. The hair clump and fringe change shape, and the head tilts and dips, with the chin tucking in at 59.63. By 59.66 to 59.70 the head is back up in the earlier pose. This reads as a twitch rather than a motivated move.",
+     "fix": "Smooth or delete the 2-3 frame head dip and hair change around 59.56-59.66 so the head moves in one continuous arc."
+    },
+    {
+     "t": 58.5,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The expression is a faint fixed smile and the gaze stays off-screen left in every tile. There is no blink, no eye dart and no expression change. The 'look at the can, then up at her' beat doesn't read.",
+     "fix": "Add a blink and an eye-lead shift to a clear gaze change, with a small brow or mouth change on the look-up."
+    }
+   ],
+   "summary": "The cut in is clean, but the head and hair shift in a few frames around 59.6 and then settle, and the face holds almost the same expression throughout.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "7eaf80ada7f1239b": {
+   "id": "l_turn",
+   "f0": 1817,
+   "f1": 1892,
+   "faults": [
+    {
+     "t": 60.69,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "Her face is a blank, neutral stare in profile from the first frame; there is no visible change of expression or eye movement to show the smile going off, so the 'something changed' beat is not readable.",
+     "fix": "Add a small eye shift or brow and mouth change plus a slight head turn in the first half second of the shot."
+    }
+   ],
+   "summary": "Static camera and a nearly still standing woman across the cut strip, with no visible pops, flicker or clipping; only a minor stiff-pose note.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "a999728f1f957c53": {
+   "id": "l_line",
+   "f0": 1892,
+   "f1": 2005,
+   "faults": [],
+   "summary": "The strip is clean: the frames look the same across all eight tiles, with a still face and no pops, flicker or camera movement, which suits the flat, still shot.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "f183c1503f340fef": {
+   "id": "l_react",
+   "f0": 2005,
+   "f1": 2100,
+   "faults": [],
+   "summary": "The strip is clean: the head and the louvered backdrop stay steady across all eight frames with no pops, flicker or camera lurch.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "c2f3e709dcaa6558": {
+   "id": "l_mouth",
+   "f0": 2100,
+   "f1": 2175,
+   "faults": [],
+   "summary": "The strip is clean: the head, camera and background hold steady across all eight tiles, with only slight drift and no pops, flicker or clipping.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "2e2494f6d3a29868": {
+   "id": "p_hit",
+   "f0": 2175,
+   "f1": 2195,
+   "faults": [
+    {
+     "t": 72.53,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The top of her head is cut off by the frame edge in the first tiles (72.53 to 72.63). The head only fits once the camera drops back in the later tiles.",
+     "fix": "Start the shot with the framing it settles into, with headroom, so the head is not cropped."
+    },
+    {
+     "t": 72.66,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The camera drifts and re-frames over tiles 3 to 5 (72.59 to 72.66). The subject shrinks and her head turns from three-quarter to near profile. This looks like the cut tweening, not a held shot.",
+     "fix": "Lock the camera and head angle from the first frame of the shot, or trim the first 4 frames."
+    },
+    {
+     "t": 72.59,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "Her near fist sits against her mouth and chin, covering the lower face. The far hand is raised and open, then drifts down to hip level. This reads as a guard or a cough, not a hook winding up. There is no clear line of action.",
+     "fix": "Pull the fist away from the face and rotate the torso back to show the wind-up. Keep the far hand up as a counterbalance."
+    },
+    {
+     "t": 72.69,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "certain",
+     "what": "From 72.66 to 72.76 the near fist and forearm hardly move, while the far hand sinks slowly. The motion is mushy and nothing builds toward the hook.",
+     "fix": "Hold the guard pose, then add a quick anticipation (a pull-back or a hip turn) before the swing."
+    },
+    {
+     "t": 72.66,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "Her expression is blank and fixed, and her eyes stay on one spot. Nothing shows the 'oh no' feel.",
+     "fix": "Add a narrowed-eye or brow change and a head lead into the swing."
+    }
+   ],
+   "summary": "The strip has no hard pops or render faults, but the framing and camera drift in the first frames of the shot, and the pose reads as a guard rather than a hook wind-up.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "ce2e91838a98ead5": {
+   "id": "p_face",
+   "f0": 2195,
+   "f1": 2224,
+   "faults": [
+    {
+     "t": 73.29,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Flat, unshaded dark brown squares cover his neck and jaw and grow in number and size. They look like unlit confetti and hide the face and neck at the moment of impact.",
+     "fix": "Shade the debris squares or replace them with lit or textured shards. Make them smaller and keep them off the face."
+    },
+    {
+     "t": 73.36,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Dozens of large flat dark squares fill the frame over his body and the smoke. They are unlit and read as placeholder geometry, and they hide the subject.",
+     "fix": "Cut the particle count and size, shade them, and keep the silhouette clear."
+    },
+    {
+     "t": 73.36,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The camera and subject jump between 73.33 and 73.36. A close shot of the face becomes a wide shot of the head and body tilted back, with a different shirt colour and white hair. At 73.39 it jumps again to a low view of a raised arm and torso, then at 73.43 to a boot sole. The framing changes every frame, so the throw is not readable.",
+     "fix": "Hold one camera framing through the throw, or cut once cleanly to the wide shot. Keep the character and lighting consistent."
+    },
+    {
+     "t": 73.39,
+     "sev": "B",
+     "rule": "render",
+     "seen": "likely",
+     "what": "The shirt turns from dark navy to bright violet-white and the lighting changes between 73.33 and 73.39. The look is inconsistent and flickers.",
+     "fix": "Lock the lighting and material across the shot."
+    },
+    {
+     "t": 73.43,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "A large boot sole fills the right side and hides the thrown body. The idea says her fist is never in it, but this reads as a kick or a foreground object, and the subject is unclear.",
+     "fix": "Move the boot out of frame or make it read as his own leg flying. Keep the body as the subject."
+    },
+    {
+     "t": 73.26,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "His eyes glow flat white-yellow and the mouth is open, but the face does not change across 73.26 to 73.33 and it stays fixed upward. The reaction is a stuck expression, not a snap and settle.",
+     "fix": "Add a quick head overshoot and an expression change, such as eyes squeezing shut, across these frames."
+    }
+   ],
+   "summary": "The hit cut works on the head snap, but unlit flat brown squares cover his neck and body from 73.23 to 73.43, and the shot jumps from a close face view to a wide thrown body at 73.36-73.39.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "8f7b6518ee8c55cf": {
+   "id": "p_travel",
+   "f0": 2224,
+   "f1": 2496,
+   "faults": [
+    {
+     "t": 74.19,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A black angular shape appears in the top-left corner for this one frame only. It is gone at 74.16 and at 74.23, so it reads as a stray object or flicker. It is probably what the 74.233 spike picked up.",
+     "fix": "Find the object that crosses the camera at this time and hide or remove it for these frames."
+    },
+    {
+     "t": 74.26,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "From 74.16 to 74.39 the body is almost frozen in the same spread-arm, striding pose while the debris dots drift around him. It looks like a pasted pose and not a character in motion. There is no visible settle or overshoot after the burst.",
+     "fix": "Add a small drift, rotation or limb overlap to the body during the debris burst."
+    },
+    {
+     "t": 82.43,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "He climbs to the top edge from 82.26 and leaves the frame by 82.46 and 82.49. Only the speed line and empty blue remain, so the subject is lost. The shot idea is riding beside him.",
+     "fix": "Have the camera track upward with him, or lower his path so he stays in frame."
+    },
+    {
+     "t": 82.96,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "He is a dark silhouette on dark blue, now horizontal and almost motionless across 82.96 to 83.16. The limbs barely read, and the pose has changed from the upright stride with no visible transition.",
+     "fix": "Add a rim light or lift the exposure on him, and give the tumble some visible rotation."
+    }
+   ],
+   "summary": "The strip has two real faults: a black shape flashes in the top-left corner for one frame at 74.19, and he rides out of the top of the frame at about 82.43, leaving it empty. He is also close to a frozen pose at the start.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "70b28446c97ca21a": {
+   "id": "s_drift",
+   "f0": 2496,
+   "f1": 2534,
+   "faults": [
+    {
+     "t": 83.33,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The torso and legs are almost black against the dark blue Earth. Only the hands and forearms read, so the line of action is lost. The arms are spread wide and nearly symmetrical, which looks stiff.",
+     "fix": "Rim-light the body or shift the Earth so he sits against the lighter space background. Break the arm symmetry."
+    },
+    {
+     "t": 83.39,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "Across 83.23 to 83.46 the pose hardly changes. The idea is loose, slow tumbling, but he reads as a rigid cutout pasted on the planet with no rotation or limb drift.",
+     "fix": "Add a slow roll and a slight offset in the arms and legs so he visibly tumbles."
+    }
+   ],
+   "summary": "No pops, flicker or camera moves in the strip, but the near-black body sits on the dark blue Earth and is hard to read, and he looks stiff and barely tumbles.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "671c97fb6e1aa27c": {
+   "id": "s_drift_cu",
+   "f0": 2534,
+   "f1": 2647,
+   "faults": [
+    {
+     "t": 86.76,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The head jumps in one frame. At 86.73 it is tilted sideways with the hair hiding the face. At 86.76 it is in a turned profile looking left, and the neck and shoulders have shifted with it. There is no in-between pose.",
+     "fix": "Add 3-4 in-between frames for the head turn, or retime the key so the turn eases in. Alternatively, cut the 86.73 frame so the head is already in profile."
+    },
+    {
+     "t": 86.83,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The idea calls for eyes that go up to listen. He looks left and slightly down in profile, and the eyes never lift. The head turn reads as a glance aside, not listening to music.",
+     "fix": "Tilt the head and eyes up on the 'Nope. More music.' beat, and add a blink on the turn."
+    },
+    {
+     "t": 84.63,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The head is bowed with a flat, stern face. There is no whisper or small relieved smile, so the 'peace' half of the shot doesn't read.",
+     "fix": "Add a soft smile and relaxed eyelids on the first held pose, and lift the chin slightly."
+    },
+    {
+     "t": 84.59,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The pose is stiff and near-symmetrical. Both arms stick out sideways in a T-pose with the forearm hanging flat. The left hand rests splayed on the planet's edge, with fingers apparently overlapping the surface. The right hand is cut off at the frame edge.",
+     "fix": "Break the symmetry. Bend the elbows and relax the shoulders. Rest one hand on the planet with the fingers wrapped over the surface, and keep the other hand inside the frame."
+    },
+    {
+     "t": 86.89,
+     "sev": "C",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The left hand and forearm sit against the planet with no clear contact. The hand hovers or clips into the surface edge. The right hand floats out at frame right, pale and detached from the dark sleeve.",
+     "fix": "Adjust the arm IK so the palm sits on the planet surface, and bring the right arm inward."
+    }
+   ],
+   "summary": "The head snaps between 86.73 and 86.76, which is the measured spike and breaks the shot. The held pose is a stiff T-pose with the hand sitting on the planet, and the face doesn't show the smile or the eyes-up beat.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "f90bd1b1adf13120": {
+   "id": "s_earth",
+   "f0": 2647,
+   "f1": 2703,
+   "faults": [],
+   "summary": "The strip is clean: the camera is still, the Earth, stars and floating capsule hold steady across all eight tiles, and the small figure lying on the globe's rim shows no pop, flicker or visible clipping.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "2538998fcfa74a84": {
+   "id": "s_tap",
+   "f0": 2703,
+   "f1": 2760,
+   "faults": [
+    {
+     "t": 91.76,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Between 91.73 and 91.76 the picture jumps. The blue man is in front and facing us at 91.73. At 91.76 the red man is large in the foreground with his back to camera, and the blue man is small behind him. There is no in-between motion, so it reads as a swap or teleport.",
+     "fix": "Make the swap a deliberate cut or a motivated turn. Otherwise keep the same camera and blocking across these frames."
+    },
+    {
+     "t": 90.33,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "From 90.29 to 90.36 a red patch sits at the blue man's chin and jaw. It looks like the red man's hand or shirt poking through his face or neck as he turns.",
+     "fix": "Move the red man back or lower his arm, or hide the overlap with the turn."
+    },
+    {
+     "t": 90.29,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The blue man's arms go to akimbo, with both hands on his hips and elbows out. This is a stiff, twinned pose and does not read as turning in surprise. The red man's arm also overlaps his hip.",
+     "fix": "Give the blue man a asymmetric reaction pose, such as one hand up or a shoulder-led turn, and keep the red man's arm clear."
+    },
+    {
+     "t": 90.13,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "No tap on the shoulder is visible. The red man stands still behind the blue man with his hands down. The blue man turns without a cause, so the 'wait, what' beat does not land.",
+     "fix": "Add a clear reach and tap from the red man, followed by the blue man's reaction turn."
+    },
+    {
+     "t": 91.86,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "From 91.76 to 91.96 the red man's back and head cover the reveal. The blue man's face is a small sliver behind the red man's shoulder, with his head tucked behind the red man's head. The grin on the 'man with his face' is never readable. The blue man's arm also shows through beside the red man's torso at 91.76 to 91.83.",
+     "fix": "Offset the characters or the camera so the turning face is clear and unblocked, and fix the arm overlap."
+    },
+    {
+     "t": 91.83,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The red man stands rigid and symmetrical with both arms hanging and fingers pointing at the floor. He is nearly frozen with only small drift, so the silhouette is weak.",
+     "fix": "Add a clear action pose, such as a hand reaching or a shoulder shrug, and hold it briefly."
+    }
+   ],
+   "summary": "The strip has a hard pop at 91.73 to 91.76, where the framing flips to a view from behind the red man. It also shows a red patch clipping at the blue man's jaw, heads overlapping, a stiff pose, and no visible tap.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "03f25df6327c6383": {
+   "id": "s_flick",
+   "f0": 2760,
+   "f1": 2817,
+   "faults": [
+    {
+     "t": 93.23,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Black-shirt character jumps from beside the red character at 93.19 to above and behind him at 93.23, then to the top edge at 93.26 with legs cut off. The red character also snaps from upright to tilted forward. No in-between motion, so it reads as a teleport.",
+     "fix": "Add in-between frames or ease the launch over 4-6 frames. Keep the black-shirt character's path continuous."
+    },
+    {
+     "t": 93.26,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "Black-shirt character is cropped by the top edge at 93.26 and 93.39, with only dark legs visible. The key action of the bolt is lost.",
+     "fix": "Reframe or retime so the bolting character stays in frame, or cut once he has left."
+    },
+    {
+     "t": 93.29,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "The red character goes from upright at 93.19 to a horizontal, rigid body by 93.29. He then floats stiffly with no overshoot or settle. At 93.33-93.39 the body is a flat plank with arms hanging.",
+     "fix": "Add anticipation and a bend, with limbs trailing the torso, before the horizontal drift."
+    },
+    {
+     "t": 92.03,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "certain",
+     "what": "The two characters stand nearly frozen face to face for the first 6 frames of the shot. There is no nose flick, no anticipation and no readable head or eye change. The idea 'he flicks his nose' is not visible.",
+     "fix": "Animate the nose flick with a hand raised to the face and a head reaction, then the anticipation crouch."
+    },
+    {
+     "t": 93.49,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The red character's body overlaps the dark blue asteroid mass in the foreground, and his legs merge into it. At 93.53-93.73 he drifts inside the rock silhouette, so it reads as clipping.",
+     "fix": "Move him in front of or clear of the asteroid, or put the rock behind him in depth."
+    },
+    {
+     "t": 93.49,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The sudden change to a rotated, tumbling view with a huge dark rock hides the subject. The red shirt is the only readable part against the dark shapes.",
+     "fix": "Lighten the foreground rock or rim-light the character so the silhouette reads."
+    }
+   ],
+   "summary": "The shot has a real pop at 93.2-93.26 where the black-shirt character teleports up and out of frame, plus a stiff, nearly static hold before the bolt with no anticipation and a body that flies off rigidly.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "74f3352a7bb510e4": {
+   "id": "m_field",
+   "f0": 2817,
+   "f1": 2874,
+   "faults": [
+    {
+     "t": 93.93,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot is meant to be a chase with two streaks and two silhouettes, with the camera riding with him. The frames show only a dark asteroid blob, small tan rocks and stars. No character, streaks or chase subject is visible, and the main rock is nearly black against the dark blue sky.",
+     "fix": "Put the chaser and the chased in frame from the first frame of the shot, and light the asteroid rim so it reads as a shape."
+    }
+   ],
+   "summary": "The strip shows a dark asteroid cluster against a starfield with steady drift and no pops or flicker, but the chase subject (two streaks, two silhouettes) is not visible.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "d6ab5ad02847d88c": {
+   "id": "m_sat",
+   "f0": 2874,
+   "f1": 2949,
+   "faults": [
+    {
+     "t": 95.93,
+     "sev": "A",
+     "rule": "story",
+     "seen": "certain",
+     "what": "The idea is a bronco ride with whooping, but he stands upright with his back to camera and hands on hips. There is no bucking, no lasso or arm swing, and no sign of riding. The pose is frozen across 95.89 to 96.06.",
+     "fix": "Re-time or replace the clip with a riding mocap: knees bent, one arm up, torso rocking with the satellite."
+    }
+   ],
+   "summary": "The cut itself is clean and there is no pop or flicker, but the new shot shows a stiff, static character standing with hands on hips, not riding a satellite like a bronco.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "8e315882189e3cd2": {
+   "id": "m_sling",
+   "f0": 2949,
+   "f1": 3024,
+   "faults": [
+    {
+     "t": 100.13,
+     "sev": "A",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The frame is filled with giant dark navy and black curved slabs and a red wedge. It looks like the camera passing through or inside geometry. The next tile (100.16) jumps to a red ridge, Jupiter and a beige sky with no transition.",
+     "fix": "Move the camera path or the terrain and shell meshes so the lens never enters them. Otherwise cut this frame out."
+    },
+    {
+     "t": 98.43,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "After the cut, the hero is a tiny flat black silhouette hugging the edge of Mars. Mars fills the frame and the character is hard to find. The turkey on top is a few pixels of red and black, so 'watching from the top' doesn't read.",
+     "fix": "Push in on the hero and the turkey, or frame them larger, so the subject and the turkey are readable."
+    },
+    {
+     "t": 98.53,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "From 98.46 to 98.63 the silhouette keeps the same stiff, spread-limb pose. It drifts across the face of Mars with no bank, lean, anticipation or arc, so it doesn't look like a hard slingshot turn.",
+     "fix": "Bank the figure into the curve, add a pose change or lean through the turn, and move it along a clear arc around the planet."
+    },
+    {
+     "t": 98.56,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "Mars is almost static and only swells slightly across the shot. The speed streaks on the right are the only sense of motion, so the whoosh feels weak.",
+     "fix": "Add a camera sweep or parallax, or make Mars slide and rotate faster as the hero passes, to sell the speed."
+    },
+    {
+     "t": 100.29,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "likely",
+     "what": "From 100.26 to 100.36 the blue sphere and its cluster of rock chunks sit at the right edge, half cropped and almost still, in a flat beige empty frame.",
+     "fix": "Recompose so the subject sits inside the frame and add motion to the debris."
+    }
+   ],
+   "summary": "The 98.43 spike is just the cut, so it isn't a fault. The slingshot barely reads: the figure is a tiny, stiff silhouette on Mars. At 100.13 the camera clips through huge dark geometry.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "6153ee1e865d4880": {
+   "id": "m_tag",
+   "f0": 3024,
+   "f1": 3119,
+   "faults": [
+    {
+     "t": 103.06,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Between 103.03 and 103.09 the whole frame washes to a flat white-grey overlay. The kicker jumps from standing to a high leg while the red-shirt figure goes from upright to tipped over head-first. There are no in-between poses, and by 103.13 he is horizontal and far lower in the frame. The kick contact is never seen, so the hit does not read.",
+     "fix": "Add 2-3 in-between frames of the kick connecting and the victim's reaction. Make the flash a shorter, partial-opacity pulse instead of a full-frame wash."
+    },
+    {
+     "t": 103.13,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "The kicker's leg stays rigidly straight and vertical from 103.13 to 103.26 with no follow-through or settle. The victim flies off flat and horizontal, with no anticipation or hip lead, and his limbs trail stiffly. It reads as a prop launched, not a spin like a top.",
+     "fix": "Add a body rotation or spin to the victim, with a little overshoot and settle on the kicker's leg."
+    },
+    {
+     "t": 103.23,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The victim is cut off at the right edge of the frame by 103.19-103.26. The orange rings and spark bursts overlap his head and torso and hide the silhouette, so the spin is hard to read.",
+     "fix": "Move the rings behind him or shrink them, and keep the victim inside the frame."
+    },
+    {
+     "t": 100.83,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "In the cut-in frames 100.83-101.06 the pair are nearly frozen in a stiff hands-pushing pose. Only tiny drift is visible, so it reads as mushy and not as a held beat. The left figure is also mostly out of frame and cut off.",
+     "fix": "Hold a clearer pose, or add a small anticipation move before the kick. Reframe so the kicker is in shot."
+    }
+   ],
+   "summary": "Cut strip is stable, but the kick impact at 103.06-103.13 has a white flash with a big pose pop, and the kick leg and the spinning body look stiff and sliding.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "693cbf36bdbba6c6": {
+   "id": "m_moon",
+   "f0": 3119,
+   "f1": 3175,
+   "faults": [],
+   "summary": "The cut strip is stable: the camera is static and the moon and sky don't pop or flicker. The two tiny figures on the rim are too small to judge for pose or contact.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "1ef83378768f0839": {
+   "id": "m_boo",
+   "f0": 3175,
+   "f1": 3251,
+   "faults": [
+    {
+     "t": 105.86,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot idea is a comet tail and something bursting out at his face. In these 6 frames of the shot there is no comet, tail or second character, only a tiny figure drifting past stars. The idea does not read at the start.",
+     "fix": "Bring the comet tail into frame from the first frame, or open just before the reveal so the burst lands in view."
+    },
+    {
+     "t": 105.96,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The figure is very small and dark against a dark background. The silhouette barely reads, and the planet at top left draws the eye more than he does.",
+     "fix": "Push the camera in or scale him up, and add a rim light so the pose reads."
+    },
+    {
+     "t": 106.03,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The pose is almost frozen across all 8 tiles, with a stiff outstretched arm and legs and little secondary motion. It looks like a static cutout sliding.",
+     "fix": "Add a slow limb sway or slight rotation to the drift."
+    }
+   ],
+   "summary": "The strip is a clean, steady drift with no pops or flicker, but the comet and the \"boo\" burst are not visible yet and the small dark figure barely reads.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "ccd88ec87c0b74dc": {
+   "id": "w_lasso",
+   "f0": 3251,
+   "f1": 3326,
+   "faults": [
+    {
+     "t": 108.5,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot is meant to be the first lasso spun over his head. Across 108.39 to 108.63 the figure is a tiny, dark, unchanging silhouette on the ring. There is no rope, no loop, no raised arm and no wind-up, so the lasso idea doesn't read at the start of the shot.",
+     "fix": "Show a visible rope loop and a clear spin pose from frame 1, and scale the figure up or push the camera in so the action reads."
+    }
+   ],
+   "summary": "The strip is clean of pops, flicker and camera moves, but the figure is a tiny, static silhouette and no rope or spin shows in the first frames of the lasso shot.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "9c7ed767dfaf8fa4": {
+   "id": "w_swing",
+   "f0": 3326,
+   "f1": 3402,
+   "faults": [
+    {
+     "t": 110.89,
+     "sev": "A",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "The ring of Saturn slices straight across the tiny figure's body and the planet sits behind him, so the ring and body overlap. He is not holding Saturn at all. The figure is a tiny static silhouette with no grip or hauling pose.",
+     "fix": "Put the figure in front of the planet and ring, or move the ring clear of him. Add hands gripping the ring or planet."
+    },
+    {
+     "t": 111.86,
+     "sev": "A",
+     "rule": "story",
+     "seen": "certain",
+     "what": "From 111.86 to 112.69 the frames show only stars, a thin orange line and a faint orbit arc. Saturn is gone and the figure is a speck. The 'hauls it in and swings it round him like a hammer' idea cannot be read. The shot is nearly empty, with no huge or absurd feel.",
+     "fix": "Keep Saturn large in frame and the figure readable throughout. Frame the swing so the planet visibly arcs around him."
+    },
+    {
+     "t": 111.89,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The orbit arc and a grey fragment at the right edge change sharply between tiles. At 111.86 a grey bit of planet shows, at 111.89 the arc is larger, and at 111.96 both are gone. Saturn exits abruptly with no follow-through.",
+     "fix": "Smooth Saturn's path off-screen, or keep it in frame."
+    },
+    {
+     "t": 112.76,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Saturn is huge at the left edge at 112.76, then small and distant at 112.79 and 112.83. Its scale changes by a large factor in one frame, so it looks like it teleports or jumps depth. At 112.86 it also loses its ring, and at 112.89 it is suddenly at the right edge.",
+     "fix": "Make Saturn's distance and scale change continuous along the swing path."
+    },
+    {
+     "t": 113.09,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "A full-frame ring or planet surface fills the lower half at 113.09 and is gone at 113.13. The thin orange tether also flips direction between 113.06 and 113.13. The frame difference is x13.4, so this is a one-frame flash.",
+     "fix": "Remove or smooth the near pass of the ring, and keep the tether direction continuous."
+    },
+    {
+     "t": 113.29,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "Saturn reappears small at the left with a different orbit arc, and the figure is a barely visible speck. The throw 'at the other one' has no target and no clear release, so the shot ends without a payoff.",
+     "fix": "Show the release and the target, and keep the figure larger."
+    }
+   ],
+   "summary": "The shot barely shows the idea: Saturn is tiny or absent for most of it, the figure is a tiny silhouette, and Saturn's ring passes through him in the opening frames.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "d82409d19b160cbc": {
+   "id": "w_catch",
+   "f0": 3402,
+   "f1": 3477,
+   "faults": [
+    {
+     "t": 114.69,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Saturn appears fully formed beside his torso in a single frame (absent at 114.66, full size at 114.69) with no flight in. The catch has no incoming ball and no anticipation.",
+     "fix": "Animate Saturn flying in from the thrower and shrinking, arriving at his hands on the catch frame."
+    },
+    {
+     "t": 114.76,
+     "sev": "A",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "Saturn sits behind his torso and arm, and its ring cuts through his body at 114.73-114.89. At 114.89 his arm and fist overlap the planet. He never wraps the planet in his hands or gut, so it does not read as caught in the gut.",
+     "fix": "Parent Saturn to his hands or gut at the catch frame. Put it in front of the torso with the arms wrapping it, and fix the depth order."
+    },
+    {
+     "t": 114.86,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "His pose is a stiff, near-symmetrical hunch with his back to camera. The catch and the gut impact do not show in the silhouette, and there is no recoil.",
+     "fix": "Add a clear doubled-over recoil on impact, with the hips driving back."
+    },
+    {
+     "t": 115.76,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The framing jumps between 115.86 and 115.89. He moves from centre to the right edge, partly cut off, and the camera or background shifts. Saturn goes from large to tiny in 3 frames, and a dark blob appears at lower left at 115.89.",
+     "fix": "Keep the camera and character position continuous. Tween Saturn's scale and flight over more frames, and remove the dark blob."
+    },
+    {
+     "t": 115.99,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "He is cropped by the right frame edge from 115.89 on, with a red planet entering and clipping at the edge. The hurl lands at a different angle from the throw and is hard to read.",
+     "fix": "Re-stage so he stays in frame and the hurl goes visibly past him into the dark."
+    },
+    {
+     "t": 115.83,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The throw itself is missing. His arms hang down and point at 115.79-115.86 while Saturn has already left, so the hurl is not sold with a wind-up or follow-through.",
+     "fix": "Add a throw wind-up and release on the frames where Saturn leaves his hands."
+    }
+   ],
+   "summary": "The catch reads poorly: Saturn pops into frame at 114.69 and passes through his torso and arm, and the throw is not visible. Saturn then shrinks and flies off while the camera or character jumps.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "8f8da9cb55dd1e8b": {
+   "id": "w_volley",
+   "f0": 3477,
+   "f1": 3553,
+   "faults": [
+    {
+     "t": 116.03,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "Mars is a huge sphere that swings across his head and shoulder. His head and the dark hair clip into and through the planet, and the planet surface shows a black tear or gap as it passes (115.99-116.13).",
+     "fix": "Fix the planet's path so it clears his head, and remove the dark cutout or mesh hole on its surface."
+    },
+    {
+     "t": 116.13,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Mars jumps in scale and position between tiles. It is cut off at the top at 116.06-116.09, then sits behind his head at 116.13 and beside his torso at 116.16, so it reads as a teleport rather than a continuous arc. His torso also bends sharply at 116.06, and his arm and head snap.",
+     "fix": "Key the planet on a smooth arc with consistent scale, and ease his duck pose."
+    },
+    {
+     "t": 116.26,
+     "sev": "B",
+     "rule": "story",
+     "seen": "certain",
+     "what": "The beat is meant to be 'he ducks Saturn', but Saturn is only a tiny dot that grows slowly. Mars exits upward and he stands upright and unaffected. Nothing reads as dodging.",
+     "fix": "Add a clear duck pose and have Saturn pass close to him."
+    },
+    {
+     "t": 118.23,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Two frames at 118.23 and 118.26 wash out to flat grey and then snap back to the dark scene at 118.29. This is a full-frame flash that reads as a glitch, not an impact. Mars is a tiny planet and far from his gut, so the 'gut' hit is not shown.",
+     "fix": "Shorten the flash to one frame with a bright white colour, and move Mars into his midsection on the impact frame."
+    },
+    {
+     "t": 118.43,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The last frame cuts to a different scene with a different character, in blue, and an Earth, with fragments and rings. It breaks continuity with the red-shirt character and the setup, and Mars never lands.",
+     "fix": "Show the impact on him in this shot before the cut, or keep the cut clean."
+    }
+   ],
+   "summary": "Mars never visibly hits his gut; it flies up and out of frame and he is hit by a flash cut, with a hard white flash and a jump to a different scene at the end.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "eba013bb2f034ffb": {
+   "id": "w_gut",
+   "f0": 3553,
+   "f1": 3628,
+   "faults": [
+    {
+     "t": 120.63,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "A red-shirted figure with black trousers appears at the left edge, overlapping Mars, in a single frame. At 120.59 there is only a blue figure. The new figure holds for the rest of the strip with no transition.",
+     "fix": "Fade or animate the red figure in over several frames, or place it offscreen before this moment."
+    },
+    {
+     "t": 120.66,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "The man's hands and forearms sink into the Mars surface, which clips through them. Skin-coloured arms vanish into the sphere with no wrap or grip. At 120.73-120.83 the arm is buried in the sphere edge.",
+     "fix": "Move the hands to the sphere surface and wrap the fingers, or pull Mars back out of the arms."
+    },
+    {
+     "t": 118.53,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The flat white cut face of the Mars sphere sits against his chest and belly. Mars and his torso overlap, so it reads as passing through him rather than hitting him.",
+     "fix": "Offset Mars so it only touches his torso, or add a body-fold reaction at the impact."
+    },
+    {
+     "t": 118.46,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Through the whole burst (118.46-118.69) he stands upright and stiff in profile, with no fold, hunch or recoil. This doesn't show winded or folded over round Mars.",
+     "fix": "Add a quick fold at the spine and a head drop on impact, with a short settle after."
+    },
+    {
+     "t": 120.59,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Through 120.59-120.83 he is nearly frozen upright, with arms barely moving and no anticipation. There is no visible reaching toward the next world coming down.",
+     "fix": "Add a lean and a hand reach toward the incoming world, plus breathing motion."
+    }
+   ],
+   "summary": "The cut strip shows the man's pose and the debris burst holding steady, but the Mars sphere clips through his torso and, at 120.63, a red-clothed figure pops in. His hands stay inside Mars with no wrap, and his pose is stiff and doesn't read as winded.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "4470af57ddcee57f": {
+   "id": "w_earth",
+   "f0": 3628,
+   "f1": 3703,
+   "faults": [
+    {
+     "t": 121.03,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "The grabbing hand hovers at the Earth's right edge with fingers dangling, and the globe overlaps or sits behind the forearm. He is not gripping it, so the grab doesn't read as contact.",
+     "fix": "Put the fingers around the globe's surface and set the globe in front of or behind the hand consistently."
+    },
+    {
+     "t": 121.09,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "certain",
+     "what": "From 121.06 to 121.09 the Earth jumps left and grows larger, while his arm and body hardly move. The globe slides against the hand instead of being held, and there is no stop-dead hold.",
+     "fix": "Lock the Earth to the hand and hold it still for the hit, with no scale or position drift."
+    },
+    {
+     "t": 121.16,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "At 121.13–121.19 white shards and dark squares burst off the Earth, and a ring pulses around it. This is busy and loud for a 'careful, hush' beat where both are meant to stop dead, and the dark chunks look like unlit confetti.",
+     "fix": "Remove or soften the burst, or shade the debris and time it to the hit."
+    },
+    {
+     "t": 120.96,
+     "sev": "C",
+     "rule": "render",
+     "seen": "likely",
+     "what": "The cut frame is a washed-out overlay with an orange planet, then a bright glow at 120.99–121.03, so the first frame of the shot isn't clean.",
+     "fix": "Start the shot on the Earth frame and shorten the flash."
+    }
+   ],
+   "summary": "The cut lands cleanly on the Earth, but the hand doesn't wrap it and the Earth drifts and bursts into debris, which fights the \"stop dead\" idea.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "576dd664c6f3b0d9": {
+   "id": "w_earth_back",
+   "f0": 3703,
+   "f1": 3854,
+   "faults": [
+    {
+     "t": 125.03,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The red-shirt figure's pose changes abruptly between 124.99 and 125.03. Legs swing from hanging down to a tucked, kicked-up pose and the head and arms jump, with no in-between frames. This matches the frame-difference spike.",
+     "fix": "Add in-between frames or a blend over 4-6 frames, or hide the change under the cut."
+    },
+    {
+     "t": 125.16,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The red-shirt figure's head tips back with the chin up and mouth open, and his torso arches. It reads as a limp, odd contortion, not a careful 'phew' reaction. The dark-suited man's arm pushes across the Earth and the red-shirt figure's torso at 125.16-125.23, and it looks stiff and clips into the Earth's edge.",
+     "fix": "Keep the red-shirt figure's head level and looking at the Earth. Move the dark-suited man's arm clear of the Earth and the other figure's body."
+    },
+    {
+     "t": 126.16,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "At 126.13 the frame still holds the previous warm backdrop with a striped planet edge at the bottom right. At 126.16 the whole background changes to a different blue sky with new star positions. The Earth is alone and has jumped from the figures' hands to the frame centre, and the figures are gone.",
+     "fix": "Cut cleanly on one frame and keep the background the same. Remove the leftover planet edge at 126.13."
+    },
+    {
+     "t": 123.46,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The Earth sits against the dark-suited man's side and the red-shirt figure's arm cuts across it. No hands wrap it, so it looks stuck to the torso and not carefully held. The red-shirt figure's legs float with no weight.",
+     "fix": "Put both hands around the Earth with fingers visible, or separate the Earth from the torso."
+    },
+    {
+     "t": 123.46,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "The dark-suited man is seen from behind with his head turned down. The red-shirt figure's face is a fixed look, with no change from 'okay okay' to relief.",
+     "fix": "Add a blink and a clear expression change, such as relief at the end of the move."
+    }
+   ],
+   "summary": "Earth is held against the dark-suited man's chest while the red-shirt figure floats beside it, with a pose snap and a Earth pop in the last frames; the shot never shows the Earth being carefully placed.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "56d861f85c01d0b1": {
+   "id": "w_ch2_a",
+   "f0": 3854,
+   "f1": 3930,
+   "faults": [
+    {
+     "t": 128.63,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The character's hair and head sit right on Jupiter's lower rim, so the silhouette tangents and merges with the planet's dark brown band. The head does not read cleanly against the background.",
+     "fix": "Shift the character or the planet a little so the head sits clearly against the starfield or clearly overlaps the planet."
+    },
+    {
+     "t": 128.66,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "From 128.56 to 128.73 the character is a near-static, symmetrical straight-legged stand with arms hanging. There is no anticipation or weight shift before the whip-round the shot promises.",
+     "fix": "Add a small crouch or weight shift and an arm wind-up in the first frames so the whip reads as motivated."
+    }
+   ],
+   "summary": "The cut is clean with no pops, flicker or camera movement, but the character's head tangents Jupiter's lower edge and the stiff, near-static stance shows no anticipation for the coming whip.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "adb862c0bd5c3e09": {
+   "id": "w_ch2_b",
+   "f0": 3930,
+   "f1": 4005,
+   "faults": [
+    {
+     "t": 133.36,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "At 133.33 there is only a faint curved orbit line and no rope. At 133.36 a thick straight rope appears from his hand and Jupiter pops in at the top-left corner. The prop appears with no lead-in.",
+     "fix": "Have Jupiter enter from off-frame over several frames and keep the rope visible and attached from before this point."
+    },
+    {
+     "t": 133.41,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Jupiter is upper-left of Earth at 133.39 and upper-right at 133.43, a jump of about 400 px in one frame. It reads as a teleport rather than a swing, with no arc or motion blur in between.",
+     "fix": "Add in-between positions along the orbit, or blur or ease the swing so Jupiter travels a continuous arc."
+    },
+    {
+     "t": 133.43,
+     "sev": "A",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "The rope points straight down off-frame while Jupiter is at the upper right, so it is not attached to Jupiter. It swings from right to down-right to straight down. By 133.46 it has vanished while Jupiter is still beside him. The hammer-throw reads as broken.",
+     "fix": "Constrain the rope end to Jupiter's position every frame, and keep it taut until the release."
+    },
+    {
+     "t": 133.46,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "Jupiter has no visible mass in the swing. There is no anticipation or drag, and the figure on Earth does not move. Jupiter just slides past with no sense of effort or pull.",
+     "fix": "Add a lean and brace on the figure, and have Earth react slightly to the pull."
+    },
+    {
+     "t": 131.1,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The figure is tiny at the planet's edge and almost nothing moves across all eight frames. The rope is a hairline that runs off-frame attached to nothing. For a 'bigger' feel and a hauling idea, the subject and the action are unclear.",
+     "fix": "Push in on the figure or show Jupiter on the rope, and animate the rope and a haul pose from the first frame."
+    },
+    {
+     "t": 133.53,
+     "sev": "B",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "In the cut to the close-up from 133.49 to 133.56, the man hangs almost frozen. The hands are loose and the left fist is half closed on nothing, with no sign of gripping or throwing. The head and eyes stay in the same downward gaze with a stuck expression.",
+     "fix": "Give him a clear throw or release pose, with the hands gripping a rope and the eyes tracking the thrown planet."
+    },
+    {
+     "t": 133.49,
+     "sev": "C",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The left hand and forearm are cropped at the bottom-left edge of frame, and the pose is lopsided toward the corner.",
+     "fix": "Reframe a little wider or lower so both hands stay in shot."
+    }
+   ],
+   "summary": "The Jupiter swing has several visible breaks: the rope pops in and points the wrong way, Jupiter jumps across the frame, and the figure is tiny, which works against the \"bigger\" feel.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "1bea9510a0f707eb": {
+   "id": "w_ch2_c",
+   "f0": 4005,
+   "f1": 4081,
+   "faults": [
+    {
+     "t": 134.79,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Jupiter jumps from a sliver at the right edge in 134.76 to a full-frame close-up of its surface in 134.79. There are no in-between frames, so it reads as a teleport or camera lurch. It also matches the measured spike.",
+     "fix": "Add 3-4 frames of the planet growing toward the camera or an ease-in, or hide the jump with a deliberate cut or flash."
+    },
+    {
+     "t": 134.83,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The planet covers almost the whole frame from 134.79 to 134.99. His body and the gut hit are hidden, with only his head peeking over the top, so the 'ow' beat doesn't read.",
+     "fix": "Pull the camera back or offset the planet so his torso and the impact stay visible. Show the doubled-over reaction before the planet fills the frame."
+    },
+    {
+     "t": 134.86,
+     "sev": "B",
+     "rule": "render",
+     "seen": "likely",
+     "what": "The planet's pole shows a pinched, faceted polygon in the texture with a jagged dark ring and low-res smeared bands. It reads as a texture-mapping artifact at close range.",
+     "fix": "Rotate the planet so the pole faces away from the camera, or use a higher-res texture or smoother UVs."
+    },
+    {
+     "t": 133.6,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "Across 133.53-133.76 the pose is almost frozen. The torso, both arms and the hand shapes barely change over 8 frames, so it reads as a dead hold, not a held pose with life in it.",
+     "fix": "Add a small drift or breathing motion, or a clear anticipation move before the impact."
+    }
+   ],
+   "summary": "The planet jumps from a sliver at the frame edge (134.76) to filling the whole frame (134.79) with no in-between, and it then hides him for the rest of the strip. The opening frames are also nearly frozen.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "dea02f03d765dd45": {
+   "id": "w_ch2_d",
+   "f0": 4081,
+   "f1": 4156,
+   "faults": [
+    {
+     "t": 136.06,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "certain",
+     "what": "Jupiter sits half inside the character's torso and legs; his body and arm pass through the sphere with no wrap or contact.",
+     "fix": "Offset the planet's path so it stays clear of his body, or put it clearly in front of or behind him in depth."
+    },
+    {
+     "t": 136.09,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Between 136.06 and 136.09 the planet jumps from the lower-right of the figure to a larger size up behind his shoulders. Its position and scale snap in one frame, and it then shrinks quickly.",
+     "fix": "Start the planet at the 136.09 position and size, or tween it from the previous frame so the move is continuous."
+    },
+    {
+     "t": 136.16,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The character holds a stiff, symmetrical T-pose with both arms straight out. It barely changes from 136.09 to 136.29. There is no wind-up or bowling action, so the idea of throwing the planet is not read.",
+     "fix": "Key a real wind-up and release pose for the arms, with the hand leading toward the planet."
+    },
+    {
+     "t": 136.26,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The right hand pushes into the planet's surface and sinks into it at 136.26-136.29, with no grip or release.",
+     "fix": "Place the hand on the sphere surface, or open it so it releases the planet."
+    },
+    {
+     "t": 136.19,
+     "sev": "B",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "The legs hang and float with no ground contact or weight shift while the torso stays frozen.",
+     "fix": "Add hip-led motion and a planted or hopping foot with anticipation and settle."
+    }
+   ],
+   "summary": "Cut strip shows Jupiter shrinking and sliding behind the character with the arm clipping it, and the figure holds a near-frozen T-pose-like stance while the planet moves.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "cd87cdb92b83d94e": {
+   "id": "w_ch2_f",
+   "f0": 4156,
+   "f1": 4231,
+   "faults": [
+    {
+     "t": 138.63,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Right after the cut the figure goes from upright (138.56) to tilted (138.63), then fully horizontal and curled (138.69). That is a fast rotation over about 4 frames, so the cut is tweening into the pose. It reads as a snap or tumble, not a held shot.",
+     "fix": "Start the shot already on the horizontal pose, or hold the upright pose and cut so no rotation shows in frames 1-6."
+    },
+    {
+     "t": 138.69,
+     "sev": "A",
+     "rule": "story",
+     "seen": "certain",
+     "what": "The shot should show two figures face to face, each with a world in hand, in a standoff. Only one tiny figure is visible, drifting alone in the starfield, with no second character and no props or worlds in its hands.",
+     "fix": "Frame both characters facing each other with the props visible, or check that the correct camera and shot are playing."
+    },
+    {
+     "t": 138.73,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The subject is only a few pixels tall and its silhouette is lost among the stars. The planet at lower left pulls the eye, and the figure stays small and unclear throughout the strip.",
+     "fix": "Move the camera in or scale the figure up so the pose reads as the main subject, and keep the planet out of the focal area."
+    },
+    {
+     "t": 138.76,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The body is a flat horizontal clump with no clear line of action or visible arms winding up. It does not read as a wind-up or as holding anything.",
+     "fix": "Use a clearer wind-up silhouette with open arms and the props visible."
+    }
+   ],
+   "summary": "The figure is tiny and flips from upright to horizontal in about four frames right after the cut, and the shot's standoff idea (two figures, a world in each hand) is not visible.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "27a613f3ec32b1df": {
+   "id": "w_out",
+   "f0": 4231,
+   "f1": 4307,
+   "faults": [
+    {
+     "t": 141.06,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The character is a tiny speck at mid-right, with the planet taking the frame. The 'bent double, spent' pose can't be read. Across all 8 tiles the figure barely moves, with no drift, breathing or settle.",
+     "fix": "Push the camera in on the character or enlarge him, and add a slow drift and a heave of breath so the out-of-breath idea reads."
+    }
+   ],
+   "summary": "The strip is stable with no pops or flicker, but the shot's idea (a bent-over, spent character) isn't readable because the figure is a tiny, static speck at this scale.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "eaf723d71e86fc7b": {
+   "id": "st_close",
+   "f0": 4307,
+   "f1": 4458,
+   "faults": [
+    {
+     "t": 143.73,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Both heads change between 143.69 and 143.73. The black-shirt man's head drops and turns down in a single step, and the red-shirt man's head shifts at the same time. Nothing leads into it, and the rest of the strip barely moves, so it reads as a snap.",
+     "fix": "Add in-between head frames, or ease the head tilt over 4-6 frames at the start of the shot."
+    },
+    {
+     "t": 143.66,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The two men's hands and forearms overlap at the centre. The fingers cross and interpenetrate with no clear contact, and the curled fingers look tangled.",
+     "fix": "Offset the hands a few cm so they either touch cleanly or stay apart, and tidy the finger curls."
+    },
+    {
+     "t": 143.59,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Both men hold near-mirrored, stiff arms-forward poses with the same crouch. This reads as a pushing or globe-holding gesture, not out-of-breath drifting in toward a forehead touch. The silhouettes are twinned and the idea is not clear.",
+     "fix": "Vary the arms. Let one hang loose or rest on the knee, and add a forward lean toward the other man."
+    },
+    {
+     "t": 143.76,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The bodies are almost frozen across all the tiles, with only tiny drift. There is no breathing or weight shift to sell 'out of breath'.",
+     "fix": "Add a small chest and shoulder breathing cycle and a slow weight sway."
+    }
+   ],
+   "summary": "The strip is mostly steady with no camera or render problems, but the black-shirt man's head drops abruptly at 143.73, and the two sets of hands overlap awkwardly in a stiff, mirrored pose.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "932a6db0e7be6b55": {
+   "id": "st_forehead",
+   "f0": 4458,
+   "f1": 4534,
+   "faults": [
+    {
+     "t": 148.63,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "The right character's hands are flattened and stacked, and one stiff finger or thumb hangs straight down like a stick. It reads as a broken hand and stays that way through every tile.",
+     "fix": "Fix the finger curl on the right hand so it relaxes or wraps, and remove the downward-pointing digit."
+    },
+    {
+     "t": 148.63,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The left character's hands are a tangled clump with fingers knotted together and overlapping. The forearms seem to merge, and the arm tone is olive and different from the face.",
+     "fix": "Separate the hands and clean up the finger interpenetration. Check that the arm material matches the face."
+    },
+    {
+     "t": 148.76,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot is meant to be forehead to forehead. The two heads are separated by a clear gap and are in profile, and the foreheads never meet.",
+     "fix": "Move the heads closer so the foreheads touch, or retime the lean-in."
+    },
+    {
+     "t": 148.7,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "Both faces hold nearly the same expression across the frames, with little eye or head change, so they read as a stare.",
+     "fix": "Add a small eye shift or a blink, and a slight head settle."
+    }
+   ],
+   "summary": "The strip has no pops, flicker or camera movement, but the hands are malformed and the heads are not forehead to forehead as the shot idea says.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "1048ff0872aa4a91": {
+   "id": "st_look",
+   "f0": 4534,
+   "f1": 4647,
+   "faults": [
+    {
+     "t": 151.16,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot idea is both characters turning their eyes to the lens, but in all eight tiles (151.16 to 151.39) both are in profile looking at each other. Neither head nor eyes move toward the camera, so the 'they know we are here' feel is missing at the start of the shot.",
+     "fix": "Start the head and eye turn to the lens on the first frames of the shot, or cut in with the eyes already on the lens."
+    },
+    {
+     "t": 151.26,
+     "sev": "B",
+     "rule": "face",
+     "seen": "likely",
+     "what": "Both faces are nearly frozen across the strip, with no blink, eye shift or expression change. The cut-in reads as a held, blank mutual stare.",
+     "fix": "Add a blink and a quick eye-lead toward the lens, with the heads following."
+    },
+    {
+     "t": 151.29,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "Both characters hold stiff, near-symmetrical forward arms with similar loose hands at the same height. The arms read as twinned, with no clear line of action, and the hands almost overlap in the middle.",
+     "fix": "Vary the arm heights and angles, and separate the hands so each silhouette reads clearly."
+    }
+   ],
+   "summary": "The strip is stable with no pops, flicker or camera movement, but both characters stay in profile looking at each other with near-frozen faces, not turning their eyes to the lens, and their arms are stiff and twinned.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "04cb7babcf7c6871": {
+   "id": "st_ask",
+   "f0": 4647,
+   "f1": 4798,
+   "faults": [
+    {
+     "t": 155.06,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Both heads turn from facing the camera to nearly profile within about 3 frames (155.03 to 155.09). There is no anticipation or ease, so the 'look between them' snaps instead of reading as a look. The heads also seem to shift position slightly between tiles.",
+     "fix": "Add 4 to 6 frames of ease-in and ease-out on the head turn, or key the eyes to lead the head. Alternatively, start the shot already in the look pose."
+    },
+    {
+     "t": 154.93,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "Both men hold the same pose: arms straight out, forearms parallel and hands flat on the globe, with matching hunched torsos. This is twinned and stiff, with no clear line of action. The hands hover on the globe surface rather than pressing in.",
+     "fix": "Vary the arm heights and angles between the two characters. Give the hands a visible press into the globe, or a small weight shift."
+    },
+    {
+     "t": 154.96,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "The left man's black clothes and legs merge into the dark blue shadowed side of the globe. His silhouette is lost, so the 'look between them' reads mainly through the right man.",
+     "fix": "Add a rim light on the left character or brighten the globe's shadow side behind him."
+    },
+    {
+     "t": 155.13,
+     "sev": "C",
+     "rule": "face",
+     "seen": "likely",
+     "what": "After the turn, both faces hold a neutral, near-identical expression. Neither blinks or changes expression on the turn.",
+     "fix": "Add a blink on the turn and a small brow or mouth change on one character."
+    }
+   ],
+   "summary": "The cut is clean, with no camera lurch or flicker, but both heads snap round in about three frames and the two men hold twinned, stiff poses, with the left man's black outfit lost against the dark globe.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "9afddd5ff527a542": {
+   "id": "tv_fold",
+   "f0": 4798,
+   "f1": 4835,
+   "faults": [
+    {
+     "t": 159.99,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The set pieces appear with no in-between: a wall box and a white slab are suddenly there at 159.99, then at 160.03 and 160.06 the walls change angle and size in big steps. Frames 160.09 to 160.19 show panels jumping position the same way. The fold looks like a step-cut, not a continuous move.",
+     "fix": "Add 2-3 in-between frames, or ease the pieces in from scale 0 or from off-screen, so each piece travels instead of appearing."
+    },
+    {
+     "t": 160.13,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Flat pink, blue and yellow panels with a thin outline and no shading pass in front of and behind the dancers. At 160.13 the pink panel overlaps the purple dancer's shoulder and a pale slab cuts across his body. At 160.16 the blue panel covers his upper body.",
+     "fix": "Keep the panels behind the dancers in depth, or move them off the dancers' silhouettes. Light them like the walls."
+    },
+    {
+     "t": 160.49,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "A black light fixture jumps between positions at 160.46, 160.49 and 160.53. A second black piece appears at the can's edge at 160.49 and is gone by 160.53. The fixture then turns into a tall stand that wobbles over 160.56 to 160.66, and a small grey object drops through the foreground at 160.56 to 160.63. It reads as debris, not a planned prop.",
+     "fix": "Hide the rig until it is fully built, or give it a clean ease-in. Remove the stray foreground object."
+    },
+    {
+     "t": 160.43,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Both dancers sit on stools in near-identical, symmetrical poses with hands at the same level. The twinning flattens the ta-da beat.",
+     "fix": "Offset one dancer's timing, or give the dancers different arm poses on the landing."
+    }
+   ],
+   "summary": "The fold-up reads mostly as intended, but the walls and panels pop in with big jumps and the lighting rig flies through the frame with a prop teleport, and both dancers loop the same pose.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "29ef12ff8f8e1e44": {
+   "id": "tv_wide",
+   "f0": 4835,
+   "f1": 4911,
+   "faults": [],
+   "summary": "Clean strip: both flagged spikes are the lower third wiping in and out, which is intended, and the seated man moves smoothly with no pops, flicker or clipping.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "a5cd666ecc64ce11": {
+   "id": "tv_him",
+   "f0": 4911,
+   "f1": 4986,
+   "faults": [
+    {
+     "t": 163.86,
+     "sev": "A",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A flat dark translucent rectangle appears at the left edge, grows wider across frames 163.86 to 164.06 and overlaps his extended hand and forearm. It looks like an unlit overlay or caption box, it has no shading and it hides part of his hand.",
+     "fix": "Remove or hide the stray overlay or bar quad, or confirm it is an intended lower-third and keep it clear of his hand."
+    },
+    {
+     "t": 165.93,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "The dark rectangle is still crossing in front of his left hand at 165.93 and shrinks away by 165.96. The same flat shape shows up again in the shot.",
+     "fix": "Cull the overlay quad for the whole shot."
+    },
+    {
+     "t": 163.93,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The can appears from below the frame at 163.83 to 164.06. His right hand is open and under or beside it, not wrapped around it, and the can seems to swing up beside the hand. It does not read as gripped.",
+     "fix": "Snap the fingers around the can body and parent the can to the hand."
+    },
+    {
+     "t": 166.06,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "From 165.99 to 166.16 the can is tilted and low, and his hand sits on top of it with fingers flat. The can swings and flips between tiles and the hand does not wrap it. The can also drops from chest height at 165.93 to the belly. The can is not up to the lens as the idea says.",
+     "fix": "Hold the can upright at chest height with a wrapped grip and lock it to the hand."
+    },
+    {
+     "t": 165.99,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Between 165.96 and 165.99 the can's position and tilt jump, from upright at chest to tilted lower. The right hand moves from a fist to over the can in one tile. This matches the measured spike at 165.967.",
+     "fix": "Add in-between frames or smooth the can and hand transition."
+    }
+   ],
+   "summary": "Dark translucent rectangles cross the frame at the left over his extended hand at the cut and again around 165.9; the can's grip is loose and the hand slides over the can at 166.0 to 166.16.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "c323a222ccba6537": {
+   "id": "tv_other",
+   "f0": 4986,
+   "f1": 5062,
+   "faults": [
+    {
+     "t": 166.36,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The cut is tweening. The pointing hand starts low at 166.23 and swings up to the lens only by 166.46. The shot's idea (the point down the lens) isn't there on the first frame.",
+     "fix": "Start the shot with the pointing pose already in place, or trim the first 6 frames."
+    },
+    {
+     "t": 166.43,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A flat, unshaded dark rectangle appears at 166.39 and widens through 166.46. It stays at left through 166.93 and covers his forearm and wrist. It looks like unlit confetti or a stray plane.",
+     "fix": "Find and remove or hide the stray plane or overlay, or move it out of the arm's area."
+    },
+    {
+     "t": 166.53,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The can arm snaps from hanging at 166.49-166.59 to a stiff horizontal reach by 166.69-166.79, within about 3 frames. The can swings away and leaves the frame at 166.76. The pose jumps and the prop vanishes.",
+     "fix": "Remove the arm swing, or retime it with anticipation and ease. Keep the can in the hand and in frame."
+    },
+    {
+     "t": 166.79,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The arm is straight out to the side and cut off by the frame edge from 166.76 to 166.93. The hand and can are off-screen. It reads as a stiff, rigid line, with a flat pose and no overlap.",
+     "fix": "Bring the arm in and down, or reframe so the hand stays visible."
+    },
+    {
+     "t": 166.3,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "The can sits loosely against open, spread fingers at 166.26-166.46. The fingers don't wrap it, and the can dangles at an angle as if it were stuck to the palm.",
+     "fix": "Curl the fingers around the can and fix its grip offset."
+    },
+    {
+     "t": 168.56,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "From 168.49 to 168.69 both arms hang straight down in a near-symmetric, stiff pose. The pointing is gone, and the hand and can sit at the bottom edge. The pose is static and the held frames lack a clear line of action.",
+     "fix": "Add an asymmetric pose, or add some settle or weight shift."
+    }
+   ],
+   "summary": "The strip has real problems: the pointing arm is still tweening up after the cut, a flat dark bar covers his arm, the can arm snaps out of frame, and he ends in a stiff, symmetrical hang.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "540c7c72d1e3f3fa": {
+   "id": "tv_doc",
+   "f0": 5062,
+   "f1": 5137,
+   "faults": [
+    {
+     "t": 170,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The pose barely changes across the shot. The fist, the open hand and the downcast gaze all hold with only a slow drift, so it reads as mushy mocap with no beat. The writing action is not clearly legible.",
+     "fix": "Add a small writing motion on the fist hand, or a brief head or eye shift, so the deadpan hold has a visible beat."
+    },
+    {
+     "t": 169,
+     "sev": "C",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "The open left hand stays in a stiff claw shape, and the arms form a similar V on each side. The silhouette is flat and twinned.",
+     "fix": "Relax the left hand finger spread and offset the two arm angles."
+    }
+   ],
+   "summary": "The strip is mostly clean, with no visible pops or render flicker. The doctor is a near-static, mushy hold with a stuck expression and an unchanging open left hand, though that suits the deadpan idea.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "de51fc1b84bfad54": {
+   "id": "tv_can",
+   "f0": 5137,
+   "f1": 5175,
+   "faults": [],
+   "summary": "The can turns slowly and steadily through the strip, the framing and lighting stay consistent across the cut, and I can't see a pop, flicker or clipping.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "593d74b2a551779d": {
+   "id": "tv_both",
+   "f0": 5175,
+   "f1": 5288,
+   "faults": [
+    {
+     "t": 172.66,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "Purple's can arm travels from hip to out at shoulder height in about 4 frames (172.63 to 172.73). The first frames of the shot show the cut tweening into the pose instead of already being the shot.",
+     "fix": "Start the shot with the arm already in its raised or anticipation pose, or trim the first 6 frames so the lift isn't visible."
+    },
+    {
+     "t": 172.73,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "likely",
+     "what": "Purple's forearm and can are held straight out sideways at shoulder height rather than travelling toward the mouth. The line of action is awkward and points away from his face, which doesn't read as drinking.",
+     "fix": "Re-aim the arm so the can goes up to the mouth, with the elbow in and the head tipping back."
+    },
+    {
+     "t": 172.73,
+     "sev": "B",
+     "rule": "contact",
+     "seen": "likely",
+     "what": "Orange's hand sweeps across his belly (172.69 to 172.76) and sits on or in the shirt. He has no can and the fingers are pointing, so it looks like an empty gesture.",
+     "fix": "Put the can in his hand, or move the hand clear of the torso."
+    },
+    {
+     "t": 172.69,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The shot idea is that both drink, but orange holds no can and isn't lifting anything while purple is already moving. Two red cups sit on the table, so it is unclear which cups are being drunk.",
+     "fix": "Give orange a can, or retime his drink to start with purple's."
+    }
+   ],
+   "summary": "The cut strip shows purple's can arm swinging up fast over frames 3 to 6, and orange's hands empty and drifting into his belly, so the \"both drink\" idea isn't reading yet.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "0b72b8988a58c677": {
+   "id": "tv_thumbs",
+   "f0": 5288,
+   "f1": 5401,
+   "faults": [
+    {
+     "t": 176.43,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A flat, unshaded dark grey rectangle appears at the bottom left and slides right across the floor. It crosses in front of the stool legs and the table base, going semi-transparent over the table. It reads as a stray unlit card or overlay and not as part of the set.",
+     "fix": "Find and hide or remove the stray plane or overlay, or put it behind the set and give it proper shading."
+    },
+    {
+     "t": 176.5,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The bar's right edge jumps in big steps between tiles (176.43 to 176.46 to 176.49 to 176.53), so it lurches across the frame. It then freezes at about 176.6 and stays put through 178.9.",
+     "fix": "Remove the bar. If it is meant to be there, ease it in and out smoothly."
+    },
+    {
+     "t": 179.83,
+     "sev": "C",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "The bar shrinks and vanishes within about 3 frames (179.83, 179.86, 179.89), after sitting static for over 3 seconds. This is the spike at 179.867.",
+     "fix": "Remove the bar for the whole shot."
+    }
+   ],
+   "summary": "A flat dark translucent bar slides in over the floor, stool and table base from 176.43 to 179.86, which is a render fault. The body motion in the visible crop is otherwise clean, and the arm action is mostly out of the crop.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "fb0e5dd7a0169c64": {
+   "id": "tv_ticker",
+   "f0": 5401,
+   "f1": 5685,
+   "faults": [
+    {
+     "t": 180.16,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The announcer's near hand goes from a mid-chest gesture at 180.13 to raised at the shoulder at 180.19 in about three frames. It reads as a quick snap rather than a eased move. The seated figure on the left stays almost rigid with legs wide and no weight shift.",
+     "fix": "Add one or two in-between frames or an ease on the arm raise. Give the left figure a small nod or weight shift."
+    }
+   ],
+   "summary": "The cut is clean with a static camera and no flicker or snapping, though the announcer's near arm moves quickly between 180.13 and 180.19 and the seated figure on the left is frozen.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "409e543bec2570c2": {
+   "id": "tv_ahh3",
+   "f0": 5685,
+   "f1": 5741,
+   "faults": [
+    {
+     "t": 189.63,
+     "sev": "B",
+     "rule": "pop",
+     "seen": "likely",
+     "what": "The first frames of the new shot are not settled. Both arms keep travelling from the gesture pose (189.56) to a lowered, elbows-out pose (189.66). That reads as the cut tweening rather than a held first pose.",
+     "fix": "Start the shot already in the akimbo pose, or trim the first 5 to 6 frames of the clip so the arms are at rest on the first frame."
+    },
+    {
+     "t": 189.69,
+     "sev": "B",
+     "rule": "pose",
+     "seen": "certain",
+     "what": "Both hands rest on the hips or thighs with the elbows flared out evenly. The silhouette is symmetrical and stiff, with no clear line of action, and it holds as the mouth opens at 189.73.",
+     "fix": "Offset the arms, for example one hand lifted toward the lens and one resting, or add a small lean or head tilt for the 'ahh'."
+    },
+    {
+     "t": 189.66,
+     "sev": "B",
+     "rule": "frame",
+     "seen": "certain",
+     "what": "The shot is meant to show both characters together, but the second character (red) is cropped to a sliver at the right edge. Only one is readable.",
+     "fix": "Reframe or shift the camera so both characters are fully in frame, or move the second character in."
+    }
+   ],
+   "summary": "The strip has no big pops or render faults, but the arms are still moving between poses during frames 3 to 5 after the cut, and the second character is cut off at the right edge in a shot about \"both, together\".",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "19d4ea1dd317771e": {
+   "id": "tv_sign",
+   "f0": 5741,
+   "f1": 5798,
+   "faults": [],
+   "summary": "The cut strip is clean: the camera and sign stay still, the can and the two small figures barely move, and I can't point to a pop, flicker or clip in any tile.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "954739ff828665b6": {
+   "id": "tv_hold",
+   "f0": 5798,
+   "f1": 5816,
+   "faults": [
+    {
+     "t": 193.5,
+     "sev": "C",
+     "rule": "staging",
+     "seen": "likely",
+     "what": "In the wide shot the seated man is small in the top-right corner, with the red-clad figure cut off at the edge. The lower-third bar is the dominant element and the large pale floor is empty. The smile hold and thumbs-up can't be read at this size.",
+     "fix": "Reframe so the seated man is larger and more central, or put the title bar lower or smaller so it doesn't outweigh him."
+    }
+   ],
+   "summary": "The two spikes are the \"ASK YOUR DOCTOR\" lower-third wiping in and out, which is intended graphics, so I found no pops or render faults. The one minor point is that the subject is tiny and cropped at the top-right edge, so I can't confirm the thumbs-up.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "a29a4b057ed76816": {
+   "id": "b_room",
+   "f0": 5816,
+   "f1": 5930,
+   "faults": [],
+   "summary": "Clean strip: the framing, pose and expression stay steady across all eight frames, with no pop, flicker or clipping.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "94d20bc916743a7c": {
+   "id": "b_fist",
+   "f0": 5930,
+   "f1": 5949,
+   "faults": [],
+   "summary": "All eight tiles are the same flat dark frame, which matches the black-out the shot intends, so I found no faults.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "811478621a57d945": {
+   "id": "b_black",
+   "f0": 5949,
+   "f1": 5986,
+   "faults": [],
+   "summary": "All eight tiles are the same flat dark frame with no change, which fits the \"black\" held-breath shot, so I found no faults.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  },
+  "ba8843a61f11ba5e": {
+   "id": "b_can",
+   "f0": 5986,
+   "f1": 6100,
+   "faults": [
+    {
+     "t": 203.23,
+     "sev": "A",
+     "rule": "pop",
+     "seen": "certain",
+     "what": "Between 203.19 and 203.23 the clinic floor, wall and bench vanish and the frame becomes a flat featureless grey. The can stays put on the same screen spot. It reads as a camera or background pop, or a wall or card in front of the lens, and the can is left floating in a void.",
+     "fix": "Find what fills the frame at 203.23 (camera clipping into a wall or a stray backdrop plane) and remove it or move the camera. The floor and clinic backdrop should stay visible behind the can."
+    },
+    {
+     "t": 199.56,
+     "sev": "B",
+     "rule": "story",
+     "seen": "likely",
+     "what": "The idea is that the can rolls into frame and stops. In 199.56-199.79 the can is already in frame and holds the same screen position and pose while the pillars and walls slide past behind it. It looks locked to the camera, not rolling on the floor, so the roll and stop never read.",
+     "fix": "Animate the can travelling across the floor from off-screen, with the camera held still or only following loosely, and let it decelerate to a stop with a small wobble."
+    },
+    {
+     "t": 199.66,
+     "sev": "C",
+     "rule": "weight",
+     "seen": "likely",
+     "what": "The can shows almost no rotation or travel in these frames. Only its screen position stays fixed while the background moves, so it seems to slide with no roll and has no weight.",
+     "fix": "Add roll rotation that matches its speed, and a settle wobble as it stops."
+    }
+   ],
+   "summary": "The can is already in frame at the cut and stays at the same screen spot while the background slides past, so it never rolls in or stops; at 203.23 the clinic background swaps to a flat grey wall in one frame.",
+   "model": "claude-sonnet-5-5",
+   "label": "v1",
+   "when": "2026-11-08T02:41:05.846Z"
+  }
+ }
+}

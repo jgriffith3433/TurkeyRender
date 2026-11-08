@@ -1,0 +1,74 @@
+{
+  // Hawkes Punch C4: the calm shove that sends Jupiter home.
+
+ "name": "hp_c4_shove",
+ "about": "C4 shove (w7_shove): from the push-wall press, a small effortless shove (3f, elbows extend), then a 24f hold, then the arms drift down; HIM on zg_neutral_b.",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "length": 2.0,
+ "poses": {
+  "press": {
+   "from": {
+    "clip": "hp_c1_catch",
+    "t": 4.5
+   },
+   "root": {
+    "rot": [
+     28,
+     0,
+     0
+    ]
+   }
+  },
+  "shove": {
+   "from": "press",
+   "add": {
+    "Left Forearm Stretch": 0.1,
+    "Right Forearm Stretch": 0.1,
+    "Left Shoulder Front-Back": 0.1,
+    "Right Shoulder Front-Back": 0.1
+   },
+   "root": {
+    "rot": [
+     4,
+     0,
+     0
+    ]
+   }
+  },
+  "after": {
+   "from": "shove",
+   "add": {
+    "Left Arm Down-Up": -0.1,
+    "Right Arm Down-Up": -0.1
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.3,
+     "spread": 0.3
+    }
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "press",
+   "hold": "8f"
+  },
+  {
+   "t": "11f",
+   "pose": "shove",
+   "interp": "linear",
+   "hold": "24f"
+  },
+  {
+   "t": "40f",
+   "pose": "after",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

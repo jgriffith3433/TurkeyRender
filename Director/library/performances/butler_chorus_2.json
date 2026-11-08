@@ -1,0 +1,157 @@
+{
+ "name": "butler_chorus_2",
+ "about": "The butlers' side of chorus 2: butler_chorus picked up 16 beats in.",
+ "entry": "any",
+ "exit": "any",
+ "length": "14.57s",
+ "min": "14s",
+ "params": {
+  "stagger": 0
+ },
+ "cues": [
+  {
+   "at": -0.0,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 0.857,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 1.714,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 2.572,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 3.429,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "blend": "0.08s",
+   "for": 1.714,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 5.143,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 6.0,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 7.286,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 8.143,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 9.0,
+   "do": "anim",
+   "clip": "butler_bow",
+   "once": 1,
+   "blend": "0.08s",
+   "for": 1.714,
+   "return": "0.15s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 10.714,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 11.572,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 12.429,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  },
+  {
+   "at": 13.286,
+   "do": "anim",
+   "clip": "butler_hop",
+   "once": 1,
+   "blend": "0.05s",
+   "for": 0.857,
+   "return": "0.1s",
+   "stagger": "$stagger"
+  }
+ ],
+ "test": {
+  "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx",
+  "tail": 0.4
+ }
+}

@@ -1,0 +1,113 @@
+{
+  // Hawkes Punch R1: tearing the ring off Saturn.
+
+ "name": "hp_r1_pull",
+ "about": "R1 ring pull (w7_ring): both hands grip the ring edge low in front, crouch 8f, heave up and back 4f, follow through 16f as the ring lifts; the DOUBLE on zg_neutral_a.",
+ "seed": {
+  "clip": "zg_neutral_a",
+  "t": 0
+ },
+ "length": 2.25,
+ "poses": {
+  "grip": {
+   "from": {
+    "clip": "zg_neutral_a",
+    "t": 0
+   },
+   "muscles": {
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Arm Down-Up": -0.35,
+    "Right Arm Down-Up": -0.35,
+    "Left Arm Front-Back": -0.55,
+    "Right Arm Front-Back": -0.55,
+    "Left Forearm Stretch": 0.7,
+    "Right Forearm Stretch": 0.7,
+    "Left Upper Leg Front-Back": -0.4,
+    "Right Upper Leg Front-Back": -0.35,
+    "Left Lower Leg Stretch": 0.2,
+    "Right Lower Leg Stretch": 0.25,
+    "Spine Front-Back": -0.25,
+    "Neck Nod Down-Up": 0.2
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.95
+    }
+   },
+   "root": {
+    "rot": [
+     25,
+     0,
+     0
+    ]
+   }
+  },
+  "crouch": {
+   "from": "grip",
+   "muscles": {
+    "Left Upper Leg Front-Back": -0.6,
+    "Right Upper Leg Front-Back": -0.55,
+    "Left Lower Leg Stretch": -0.05,
+    "Right Lower Leg Stretch": 0.0,
+    "Spine Front-Back": -0.35
+   },
+   "root": {
+    "rot": [
+     32,
+     0,
+     0
+    ]
+   }
+  },
+  "heave": {
+   "from": "grip",
+   "muscles": {
+    "Left Arm Down-Up": 0.55,
+    "Right Arm Down-Up": 0.55,
+    "Left Arm Front-Back": -0.25,
+    "Right Arm Front-Back": -0.25,
+    "Left Forearm Stretch": 0.4,
+    "Right Forearm Stretch": 0.4,
+    "Left Upper Leg Front-Back": 0.15,
+    "Right Upper Leg Front-Back": 0.2,
+    "Left Lower Leg Stretch": 0.85,
+    "Right Lower Leg Stretch": 0.85,
+    "Spine Front-Back": 0.25,
+    "Chest Front-Back": 0.15,
+    "Neck Nod Down-Up": 0.3
+   },
+   "root": {
+    "rot": [
+     -18,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "grip",
+   "hold": "6f"
+  },
+  {
+   "t": "14f",
+   "pose": "crouch",
+   "interp": "ease",
+   "step": 2,
+   "hold": "4f"
+  },
+  {
+   "t": "22f",
+   "pose": "heave",
+   "interp": "overshoot",
+   "overshoot": 0.1,
+   "settle": 0.3,
+   "hold": "16f"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "w_clock",
+ "f0": 0,
+ "f1": 81,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "spike",
+   "t": 0.167,
+   "why": "frame difference x148.1 (148.05)",
+   "file": "spike-00005.jpg"
+  }
+ ],
+ "hash": "f56a90274e517fcd",
+ "summary": "Clean strip: the spike is the cut from dark frames into the reception shot, and the camera, counter and turkey stay put afterward.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4450,
+  "out": 781
+ },
+ "cost": 0.0167
+}

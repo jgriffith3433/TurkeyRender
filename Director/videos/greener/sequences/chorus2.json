@@ -1,0 +1,43 @@
+{
+ "set": "estate",
+ "light": "pastel_interior",
+ "mood": "c2_hot",
+ "sing": "person",
+ "cast": {
+  "clone_l": { "at": "clone_l", "perform": "dance_chorus_2" },
+  "clone_r": { "at": "clone_r", "perform": "dance_chorus_2" },
+  "person": {
+   "at": "stage",
+   "perform": "dance_chorus_2"
+  },
+  "butlers_hall_l": {
+   "at": "rank_1",
+   "perform": "butler_chorus_2_a"
+  },
+  "butlers_hall_r": {
+   "at": "rank_2",
+   "perform": "butler_chorus_2_b"
+  },
+  "butlers_hall_l2": {
+   "at": "rank_3",
+   "perform": "butler_chorus_2_a"
+  },
+  "butlers_hall_r2": {
+   "at": "rank_4",
+   "perform": "butler_chorus_2_b"
+  },
+  "balloons": {
+   "at": "balloons_hall"
+  },
+  "gifts_a": {
+   "at": "gifts_l"
+  },
+  "gifts_b": {
+   "at": "gifts_r"
+  },
+  "butler_a": {
+   "at": "rank_solo",
+   "clip": "butler_idle"
+  }
+ }
+}

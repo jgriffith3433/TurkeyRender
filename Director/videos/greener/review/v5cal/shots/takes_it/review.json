@@ -1,0 +1,55 @@
+{
+ "id": "takes_it",
+ "f0": 3358,
+ "f1": 3410,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 111.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "729c887159d8b1b8",
+ "summary": "The cut strip has a hard pose pop at 112.13, and the reach never gets to the blade: his arm swings up over his head instead.",
+ "faults": [
+  {
+   "t": 112.13,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "From 112.09 to 112.13 the pose changes in one frame. At 112.09 he leans forward with the arm reaching out low toward the tray. At 112.13 the torso is turned and hunched, the head is down, and that arm is raised high above his head. The arm and torso snap with no in-between frames.",
+   "fix": "Key or blend the arm path across 3-4 frames so the reach travels from the hip to the blade, and remove the one-frame jump in torso rotation."
+  },
+  {
+   "t": 112.16,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The idea is that he takes the blade from the tray. In 112.13-112.19 his hand is raised in the air behind his head, and the green blade is still upright in the tray untouched. The beat reads as a stretch or wave, not a choice to take the blade.",
+   "fix": "Retarget the reaching hand to the blade hilt, with the fingers closing on it. Lift the blade out on the following frames."
+  },
+  {
+   "t": 112.06,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From the standing pose at 112.03 he abruptly turns the torso and tucks the arm behind the body at 112.06. There is no anticipation, and the lean at 112.09 follows one frame later. It reads as pose snapping, not hips leading.",
+   "fix": "Add 2-3 frames of weight shift or hip lead before the reach, then ease into the lean."
+  },
+  {
+   "t": 112.19,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "112.13, 112.16 and 112.19 are almost identical. The awkward raised-arm pose is held with the head down, so it reads as a stuck pose, not a strong held beat.",
+   "fix": "Replace the hold with the grab and withdraw, or add slight settle motion."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3570,
+  "out": 1290
+ },
+ "cost": 0.02
+}

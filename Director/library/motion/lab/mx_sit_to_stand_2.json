@@ -1,0 +1,28 @@
+{
+ "clip": "mx_sit_to_stand_2",
+ "seconds": 4.933,
+ "popCount": 2,
+ "pops": [
+  "4.833s RightToes kink 0.389 m",
+  "4.867s RightToes kink 0.399 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.613 m, worst step 0.383 m at 4.87s",
+  "right foot on floor moved 0.228 m, worst step 0.008 m at 1.87s"
+ ],
+ "hipsTop": 0.9087372,
+ "hipsLow": 0.78862673,
+ "hipsTravel": "(0.02, 0.00, 0.33)",
+ "limits": {
+  "groundHipsCm": 13.1,
+  "LeftFoot": 12.9,
+  "LeftLowerLeg": 9.4,
+  "RightLowerLeg": 4
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_to_stand_2_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_to_stand_2_three.mp4"
+ ]
+}

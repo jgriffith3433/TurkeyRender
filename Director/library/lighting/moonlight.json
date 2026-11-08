@@ -1,0 +1,10 @@
+{
+  // Night through glass or over a lawn: cold key, nearly no fill, a silver rim, one warm window far off.
+  "sky": { "top": "#070c1a", "mid": "#141e34", "bottom": "#03050a", "ambient": "#10161f", "ambientTop": "#1a2438", "ambientBottom": "#080a0e", "fog": "#0c1422", "density": 0.012, "stars": 1, "clouds": 0.3, "cloudColor": "#2c3a54", "cloudShade": "#080c16" },
+  "lights": {
+    "sun": { "type": "directional", "pos": [5, 7, -3], "aim": "subject", "color": "#a9bfe6", "intensity": 0.9, "shadows": true },
+    "key": { "type": "spot", "at": "window", "offset": [0, 0.7, 0], "pos": [2.3, 2.5, -1.2], "aim": "subject", "color": "#b4c8ec", "intensity": 16, "range": 11, "angle": 58, "shadows": true },
+    "rim": { "type": "spot", "pos": [-1.2, 2.6, -2.2], "aim": "subject", "color": "#cfe2ff", "intensity": 4.5, "range": 7, "angle": 50 },
+    "practical": { "type": "point", "at": "practical", "pos": [-2, 1, 2], "color": "#ffa860", "intensity": 3, "range": 6 }
+  }
+}

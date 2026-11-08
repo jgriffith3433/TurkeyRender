@@ -1,0 +1,55 @@
+{
+ "id": "tv_both",
+ "f0": 5175,
+ "f1": 5288,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 172.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "1638d1a7b37acc1a",
+ "summary": "The cut strip shows purple's can arm swinging up fast over frames 3 to 6, and orange's hands empty and drifting into his belly, so the \"both drink\" idea isn't reading yet.",
+ "faults": [
+  {
+   "t": 172.66,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Purple's can arm travels from hip to out at shoulder height in about 4 frames (172.63 to 172.73). The first frames of the shot show the cut tweening into the pose instead of already being the shot.",
+   "fix": "Start the shot with the arm already in its raised or anticipation pose, or trim the first 6 frames so the lift isn't visible."
+  },
+  {
+   "t": 172.73,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Purple's forearm and can are held straight out sideways at shoulder height rather than travelling toward the mouth. The line of action is awkward and points away from his face, which doesn't read as drinking.",
+   "fix": "Re-aim the arm so the can goes up to the mouth, with the elbow in and the head tipping back."
+  },
+  {
+   "t": 172.73,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "Orange's hand sweeps across his belly (172.69 to 172.76) and sits on or in the shirt. He has no can and the fingers are pointing, so it looks like an empty gesture.",
+   "fix": "Put the can in his hand, or move the hand clear of the torso."
+  },
+  {
+   "t": 172.69,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot idea is that both drink, but orange holds no can and isn't lifting anything while purple is already moving. Two red cups sit on the table, so it is unclear which cups are being drunk.",
+   "fix": "Give orange a can, or retime his drink to start with purple's."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3570,
+  "out": 1114
+ },
+ "cost": 0.0183
+}

@@ -1,0 +1,75 @@
+{
+ "id": "w_earth_back",
+ "f0": 3703,
+ "f1": 3854,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 123.433,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 125.033,
+   "why": "frame difference x8.5 (8.53)",
+   "file": "spike-03751.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 126.167,
+   "why": "one patch jumps (cell 95.7, x2)",
+   "file": "spike-03785.jpg"
+  }
+ ],
+ "hash": "8ef2f5cabb2b39cf",
+ "summary": "Earth is held against the dark-suited man's chest while the red-shirt figure floats beside it, with a pose snap and a Earth pop in the last frames; the shot never shows the Earth being carefully placed.",
+ "faults": [
+  {
+   "t": 125.03,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The red-shirt figure's pose changes abruptly between 124.99 and 125.03. Legs swing from hanging down to a tucked, kicked-up pose and the head and arms jump, with no in-between frames. This matches the frame-difference spike.",
+   "fix": "Add in-between frames or a blend over 4-6 frames, or hide the change under the cut."
+  },
+  {
+   "t": 125.16,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The red-shirt figure's head tips back with the chin up and mouth open, and his torso arches. It reads as a limp, odd contortion, not a careful 'phew' reaction. The dark-suited man's arm pushes across the Earth and the red-shirt figure's torso at 125.16-125.23, and it looks stiff and clips into the Earth's edge.",
+   "fix": "Keep the red-shirt figure's head level and looking at the Earth. Move the dark-suited man's arm clear of the Earth and the other figure's body."
+  },
+  {
+   "t": 126.16,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "At 126.13 the frame still holds the previous warm backdrop with a striped planet edge at the bottom right. At 126.16 the whole background changes to a different blue sky with new star positions. The Earth is alone and has jumped from the figures' hands to the frame centre, and the figures are gone.",
+   "fix": "Cut cleanly on one frame and keep the background the same. Remove the leftover planet edge at 126.13."
+  },
+  {
+   "t": 123.46,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The Earth sits against the dark-suited man's side and the red-shirt figure's arm cuts across it. No hands wrap it, so it looks stuck to the torso and not carefully held. The red-shirt figure's legs float with no weight.",
+   "fix": "Put both hands around the Earth with fingers visible, or separate the Earth from the torso."
+  },
+  {
+   "t": 123.46,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The dark-suited man is seen from behind with his head turned down. The red-shirt figure's face is a fixed look, with no change from 'okay okay' to relief.",
+   "fix": "Add a blink and a clear expression change, such as relief at the end of the move."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6374,
+  "out": 921
+ },
+ "cost": 0.022
+}

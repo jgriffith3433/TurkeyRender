@@ -1,0 +1,36 @@
+{
+ "clip": "mx_hh_robot",
+ "seconds": 12,
+ "popCount": 7,
+ "pops": [
+  "2.567s RightToes kink 0.095 m",
+  "2.600s RightLowerLeg kink 0.103 m",
+  "2.933s LeftLowerLeg kink 0.087 m",
+  "9.267s LeftLowerLeg kink 0.081 m",
+  "9.567s LeftLowerLeg kink 0.124 m",
+  "9.600s LeftLowerLeg kink 0.104 m"
+ ],
+ "feet": [
+  "left foot on floor moved 4.016 m, worst step 0.071 m at 8.87s",
+  "right foot on floor moved 3.951 m, worst step 0.061 m at 8.47s"
+ ],
+ "hipsTop": 0.918628335,
+ "hipsLow": 0.717033744,
+ "hipsTravel": "(0.05, -0.01, -0.08)",
+ "limits": {
+  "LeftLowerLeg": 11,
+  "Head": 8.2,
+  "groundHipsCm": 7.6,
+  "Spine": 4.4,
+  "LeftLowerArm": 0,
+  "LeftFoot": 0
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_hh_robot was rejected by admission: foot slide 3.54 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_robot_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_hh_robot_three.mp4"
+ ]
+}

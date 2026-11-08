@@ -1,0 +1,1246 @@
+{
+ "about": "Every clip in Assets/MusicVideo/Motion that was made outside Unity (motion_admit.py): where it came from, how, and its scores. ps_ physics sim (motion_sim.py), mm_ motion match over the mocap libraries (motion_match.mjs), vm_ motion from video (Hawkes Gen motion.from-video).",
+ "clips": {
+  "mm_cross_punch_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@mm_cross_punch_a.fbx",
+   "source": "match",
+   "from": "gen/motion/match/cmu_13_18_2p6.npz",
+   "seconds": 1.83,
+   "frames": 55,
+   "grounded": true,
+   "meta": {
+    "scale": 0.04694412336862723,
+    "retargeted": true,
+    "rootScale": 1.0179023936653722,
+    "cut": [
+     78,
+     133
+    ],
+    "source": "cmu",
+    "clip": "13_18",
+    "start": 2.6,
+    "end": 4.4,
+    "grounded": -0.0477
+   },
+   "measures": {
+    "frames": 55,
+    "seconds": 1.833,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 33.9,
+    "jitterReversals": 3,
+    "meanAccel": 8.3,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 150.2,
+     "RightElbow": 138.7,
+     "LeftKnee": 55.1,
+     "RightKnee": 60.4
+    },
+    "peakSpeed": {
+     "LeftHand": 3.18,
+     "RightHand": 3.26,
+     "LeftFoot": 1.06,
+     "RightFoot": 0.95,
+     "Head": 0.95,
+     "Hips": 0.64
+    },
+    "belowFloorCm": 0.0,
+    "loopGapDeg": 13.8,
+    "hipsTravelM": 0.12,
+    "chairSeconds": 0.0,
+    "score": 9.85
+   },
+   "note": "CMU 13_18 boxing 2.6-4.4 s, matched to mx_cross_punch 0.5-1.5 s (dist 0.579)",
+   "admitted": "2026-11-08 11:35",
+   "unity": true
+  },
+  "mm_cross_punch_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@mm_cross_punch_b.fbx",
+   "source": "match",
+   "from": "gen/motion/match/cmu_13_17_1p2.npz",
+   "seconds": 1.43,
+   "frames": 43,
+   "grounded": true,
+   "meta": {
+    "scale": 0.04694412336862723,
+    "retargeted": true,
+    "rootScale": 1.0179023936653722,
+    "cut": [
+     36,
+     79
+    ],
+    "source": "cmu",
+    "clip": "13_17",
+    "start": 1.2,
+    "end": 2.6,
+    "grounded": -0.0322
+   },
+   "measures": {
+    "frames": 43,
+    "seconds": 1.433,
+    "fps": 30.0,
+    "snaps": 1,
+    "peakStepDeg": 70.7,
+    "jitterReversals": 4,
+    "meanAccel": 15.43,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 149.4,
+     "RightElbow": 142.0,
+     "LeftKnee": 70.1,
+     "RightKnee": 71.0
+    },
+    "peakSpeed": {
+     "LeftHand": 2.05,
+     "RightHand": 6.38,
+     "LeftFoot": 1.84,
+     "RightFoot": 2.78,
+     "Head": 1.64,
+     "Hips": 0.88
+    },
+    "belowFloorCm": 0.0,
+    "loopGapDeg": 11.6,
+    "hipsTravelM": 0.07,
+    "chairSeconds": 0.0,
+    "score": 9.0
+   },
+   "note": "CMU 13_17 boxing 1.2-2.6 s, matched to mx_cross_punch (dist 0.633)",
+   "admitted": "2026-11-08 11:35",
+   "unity": true
+  },
+  "mm_lift_heavy_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@mm_lift_heavy_a.fbx",
+   "source": "match",
+   "from": "gen/motion/match/cmu_69_71_2p4.npz",
+   "seconds": 2.43,
+   "frames": 73,
+   "grounded": true,
+   "meta": {
+    "scale": 0.049049518558282955,
+    "retargeted": true,
+    "rootScale": 1.017195822492562,
+    "cut": [
+     72,
+     145
+    ],
+    "source": "cmu",
+    "clip": "69_71",
+    "start": 2.4,
+    "end": 4.8,
+    "grounded": -0.0102
+   },
+   "measures": {
+    "frames": 73,
+    "seconds": 2.433,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 14.6,
+    "jitterReversals": 0,
+    "meanAccel": 3.53,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 83.2,
+     "RightElbow": 83.6,
+     "LeftKnee": 161.9,
+     "RightKnee": 167.4
+    },
+    "peakSpeed": {
+     "LeftHand": 1.58,
+     "RightHand": 1.42,
+     "LeftFoot": 1.07,
+     "RightFoot": 1.98,
+     "Head": 1.28,
+     "Hips": 1.06
+    },
+    "belowFloorCm": 0.1,
+    "loopGapDeg": 17.3,
+    "hipsTravelM": 0.37,
+    "chairSeconds": 0.7,
+    "score": 10.0
+   },
+   "note": "CMU 69_71 squat, pick up object 2.4-4.8 s, matched to mx_lift_heavy (dist 0.715)",
+   "admitted": "2026-11-08 11:35",
+   "unity": true
+  },
+  "mm_flinch_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@mm_flinch_a.fbx",
+   "source": "match",
+   "from": "gen/motion/match/cmu_79_73_2p5.npz",
+   "seconds": 2.13,
+   "frames": 64,
+   "grounded": true,
+   "meta": {
+    "scale": 0.049240450932651635,
+    "retargeted": true,
+    "rootScale": 1.0170233156956983,
+    "cut": [
+     75,
+     139
+    ],
+    "source": "cmu",
+    "clip": "79_73",
+    "start": 2.5,
+    "end": 4.6,
+    "grounded": 0.0397
+   },
+   "measures": {
+    "frames": 64,
+    "seconds": 2.133,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 18.7,
+    "jitterReversals": 0,
+    "meanAccel": 2.08,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 122.2,
+     "RightElbow": 133.1,
+     "LeftKnee": 38.9,
+     "RightKnee": 28.0
+    },
+    "peakSpeed": {
+     "LeftHand": 0.59,
+     "RightHand": 0.6,
+     "LeftFoot": 0.33,
+     "RightFoot": 0.18,
+     "Head": 0.34,
+     "Hips": 0.5
+    },
+    "belowFloorCm": 0.2,
+    "loopGapDeg": 17.6,
+    "hipsTravelM": 0.03,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "CMU 79_73 scared 2.5-4.6 s, matched to mx_hit_reaction (dist 0.536)",
+   "admitted": "2026-11-08 11:35",
+   "unity": true
+  },
+  "mm_flinch_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@mm_flinch_b.fbx",
+   "source": "match",
+   "from": "gen/motion/match/cmu_142_16_11p8.npz",
+   "seconds": 1.53,
+   "frames": 46,
+   "grounded": true,
+   "meta": {
+    "scale": 0.05166026625441423,
+    "retargeted": true,
+    "rootScale": 1.0160445337706299,
+    "cut": [
+     354,
+     400
+    ],
+    "source": "cmu",
+    "clip": "142_16",
+    "start": 11.8,
+    "end": 13.3,
+    "grounded": 0.0099
+   },
+   "measures": {
+    "frames": 46,
+    "seconds": 1.533,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 5.2,
+    "jitterReversals": 0,
+    "meanAccel": 0.98,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 80.7,
+     "RightElbow": 80.3,
+     "LeftKnee": 46.4,
+     "RightKnee": 66.5
+    },
+    "peakSpeed": {
+     "LeftHand": 0.6,
+     "RightHand": 0.57,
+     "LeftFoot": 0.44,
+     "RightFoot": 1.26,
+     "Head": 0.59,
+     "Hips": 0.31
+    },
+    "belowFloorCm": 2.0,
+    "loopGapDeg": 9.1,
+    "hipsTravelM": 0.1,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "CMU 142_16 Scared 11.8-13.3 s, matched to mx_hit_reaction (dist 0.574)",
+   "admitted": "2026-11-08 11:36",
+   "unity": true
+  },
+  "vm_box_cross": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@vm_box_cross.fbx",
+   "source": "video",
+   "from": "gen/refvideo/gen/vm_box_cross/vm_box_cross.bvh",
+   "seconds": 6.0,
+   "frames": 180,
+   "grounded": true,
+   "meta": {
+    "scale": 0.01,
+    "prependedRest": true,
+    "retargeted": true,
+    "rootScale": 0.8981341784776561,
+    "cut": [
+     1,
+     181
+    ],
+    "grounded": -0.0734
+   },
+   "measures": {
+    "frames": 180,
+    "seconds": 6.0,
+    "fps": 30.0,
+    "snaps": 2,
+    "peakStepDeg": 79.4,
+    "jitterReversals": 27,
+    "meanAccel": 10.44,
+    "hingeFlips": 2,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 122.4,
+     "RightElbow": 133.1,
+     "LeftKnee": 57.0,
+     "RightKnee": 49.4
+    },
+    "peakSpeed": {
+     "LeftHand": 15.1,
+     "RightHand": 10.1,
+     "LeftFoot": 7.81,
+     "RightFoot": 3.07,
+     "Head": 1.93,
+     "Hips": 1.1
+    },
+    "belowFloorCm": 0.2,
+    "loopGapDeg": 21.5,
+    "hipsTravelM": 0.73,
+    "chairSeconds": 0.0,
+    "score": 6.45
+   },
+   "note": "straight cross on a heavy bag; https://commons.wikimedia.org/wiki/File:Boxing_Heavy_Bag_Analysis.webm (CC BY 4.0); Gen job j_ba5085a34f8b",
+   "admitted": "2026-11-08 11:36",
+   "unity": true
+  },
+  "vm_box_hooks": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@vm_box_hooks.fbx",
+   "source": "video",
+   "from": "gen/refvideo/gen/vm_box_hooks/vm_box_hooks.bvh",
+   "seconds": 6.0,
+   "frames": 180,
+   "grounded": true,
+   "meta": {
+    "scale": 0.01,
+    "prependedRest": true,
+    "retargeted": true,
+    "rootScale": 0.8981341784776561,
+    "cut": [
+     1,
+     181
+    ],
+    "grounded": -0.0578
+   },
+   "measures": {
+    "frames": 180,
+    "seconds": 6.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 19.9,
+    "jitterReversals": 72,
+    "meanAccel": 11.32,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 121.6,
+     "RightElbow": 126.9,
+     "LeftKnee": 62.4,
+     "RightKnee": 49.5
+    },
+    "peakSpeed": {
+     "LeftHand": 6.76,
+     "RightHand": 6.61,
+     "LeftFoot": 1.29,
+     "RightFoot": 3.09,
+     "Head": 2.64,
+     "Hips": 0.89
+    },
+    "belowFloorCm": 0.3,
+    "loopGapDeg": 10.0,
+    "hipsTravelM": 0.3,
+    "chairSeconds": 0.0,
+    "score": 8.5
+   },
+   "note": "hooks on a heavy bag; https://commons.wikimedia.org/wiki/File:Boxing_Heavy_Bag_Analysis.webm (CC BY 4.0); Gen job j_364091447435",
+   "admitted": "2026-11-08 11:36",
+   "unity": true
+  },
+  "vm_zg_float_turn": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@vm_zg_float_turn.fbx",
+   "source": "video",
+   "from": "gen/refvideo/gen/vm_zg_float_turn/vm_zg_float_turn.bvh",
+   "seconds": 8.0,
+   "frames": 240,
+   "grounded": false,
+   "meta": {
+    "scale": 0.01,
+    "prependedRest": true,
+    "retargeted": true,
+    "rootScale": 0.8981341784776561,
+    "cut": [
+     1,
+     241
+    ]
+   },
+   "measures": {
+    "frames": 240,
+    "seconds": 8.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 19.3,
+    "jitterReversals": 24,
+    "meanAccel": 12.96,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 41.4,
+     "RightElbow": 117.1,
+     "LeftKnee": 109.6,
+     "RightKnee": 116.2
+    },
+    "peakSpeed": {
+     "LeftHand": 1.38,
+     "RightHand": 2.57,
+     "LeftFoot": 2.53,
+     "RightFoot": 3.13,
+     "Head": 1.29,
+     "Hips": 1.08
+    },
+    "loopGapDeg": 11.2,
+    "hipsTravelM": 3.57,
+    "chairSeconds": 0.0,
+    "score": 8.8
+   },
+   "note": "astronaut floating and turning in a module; https://images.nasa.gov/details/Step_Inside_the_Station-4K-Clean (Public domain (NASA material is not prot); Gen job j_b36de0fc509f",
+   "admitted": "2026-11-08 11:36",
+   "unity": true
+  },
+  "ps_punched_launch_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_punched_launch_a.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/punched_launch/keep/ps_punched_launch_a.npz",
+   "seconds": 3.6,
+   "frames": 108,
+   "grounded": false,
+   "meta": {
+    "beat": "punched_launch",
+    "seed": 3,
+    "params": {
+     "impulse": 612.1033,
+     "elevation": 71.5291,
+     "side": -0.6392,
+     "flailStiff": 0.1714,
+     "flailDamp": 0.9416,
+     "flailDeg": 44.4398
+    }
+   },
+   "measures": {
+    "frames": 108,
+    "seconds": 3.6,
+    "fps": 30.0,
+    "snaps": 2,
+    "peakStepDeg": 82.4,
+    "jitterReversals": 2,
+    "meanAccel": 20.2,
+    "hingeFlips": 4,
+    "hyper": 1,
+    "maxBend": {
+     "LeftElbow": 53.8,
+     "RightElbow": 69.0,
+     "LeftKnee": 136.1,
+     "RightKnee": 136.6
+    },
+    "peakSpeed": {
+     "LeftHand": 13.62,
+     "RightHand": 12.35,
+     "LeftFoot": 13.9,
+     "RightFoot": 13.96,
+     "Head": 9.85,
+     "Hips": 8.3
+    },
+    "loopGapDeg": 15.0,
+    "hipsTravelM": 7.32,
+    "chairSeconds": 1.1,
+    "score": 7.07
+   },
+   "note": "punched_launch seed 3",
+   "admitted": "2026-11-08 11:46",
+   "unity": false,
+   "score": 7.07,
+   "params": {
+    "impulse": 612.1033,
+    "elevation": 71.5291,
+    "side": -0.6392,
+    "flailStiff": 0.1714,
+    "flailDamp": 0.9416,
+    "flailDeg": 44.4398
+   },
+   "checks": {
+    "reachedCeiling": true,
+    "ceilingBrokeAt": 1.056,
+    "gravityOffAt": 1.241,
+    "launchSpeed": 7.29,
+    "launchSpeedOk": true,
+    "peakHeadY": 7.2,
+    "spinAfterLeaving": 201.9,
+    "pass": true
+   }
+  },
+  "ps_punched_launch_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_punched_launch_b.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/punched_launch/keep/ps_punched_launch_b.npz",
+   "seconds": 3.6,
+   "frames": 108,
+   "grounded": false,
+   "meta": {
+    "beat": "punched_launch",
+    "seed": 1,
+    "params": {
+     "impulse": 573.3648,
+     "elevation": 58.3027,
+     "side": 0.484,
+     "flailStiff": 0.1278,
+     "flailDamp": 1.3258,
+     "flailDeg": 37.9802
+    }
+   },
+   "measures": {
+    "frames": 108,
+    "seconds": 3.6,
+    "fps": 30.0,
+    "snaps": 1,
+    "peakStepDeg": 82.9,
+    "jitterReversals": 7,
+    "meanAccel": 24.81,
+    "hingeFlips": 3,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 125.6,
+     "RightElbow": 126.5,
+     "LeftKnee": 136.1,
+     "RightKnee": 136.6
+    },
+    "peakSpeed": {
+     "LeftHand": 13.55,
+     "RightHand": 14.56,
+     "LeftFoot": 13.9,
+     "RightFoot": 13.96,
+     "Head": 10.79,
+     "Hips": 7.32
+    },
+    "loopGapDeg": 24.4,
+    "hipsTravelM": 0.47,
+    "chairSeconds": 0.4,
+    "score": 7.95
+   },
+   "note": "punched_launch seed 1",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 5.45,
+   "params": {
+    "impulse": 573.3648,
+    "elevation": 58.3027,
+    "side": 0.484,
+    "flailStiff": 0.1278,
+    "flailDamp": 1.3258,
+    "flailDeg": 37.9802
+   },
+   "checks": {
+    "reachedCeiling": false,
+    "ceilingBrokeAt": null,
+    "gravityOffAt": null,
+    "launchSpeed": 6.34,
+    "launchSpeedOk": true,
+    "peakHeadY": 2.15,
+    "spinAfterLeaving": 36.7,
+    "pass": false
+   }
+  },
+  "ps_zg_drift_idle_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_drift_idle_a.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_drift_idle/keep/ps_zg_drift_idle_a.npz",
+   "seconds": 12.0,
+   "frames": 360,
+   "grounded": false,
+   "meta": {
+    "loopBlended": 1.0,
+    "beat": "zg_drift_idle",
+    "seed": 0,
+    "params": {
+     "variant": -0.2442,
+     "wanderDeg": 4.2645,
+     "breath": 4.2637,
+     "stiff": 0.7655,
+     "damp": 1.5675
+    }
+   },
+   "measures": {
+    "frames": 360,
+    "seconds": 12.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 0.4,
+    "jitterReversals": 0,
+    "meanAccel": 0.04,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 81.7,
+     "RightElbow": 81.5,
+     "LeftKnee": 42.0,
+     "RightKnee": 42.4
+    },
+    "peakSpeed": {
+     "LeftHand": 0.08,
+     "RightHand": 0.08,
+     "LeftFoot": 0.07,
+     "RightFoot": 0.06,
+     "Head": 0.02,
+     "Hips": 0.01
+    },
+    "loopGapDeg": 1.4,
+    "hipsTravelM": 0.0,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "zg_drift_idle seed 0",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 10.0,
+   "params": {
+    "variant": -0.2442,
+    "wanderDeg": 4.2645,
+    "breath": 4.2637,
+    "stiff": 0.7655,
+    "damp": 1.5675
+   },
+   "checks": {
+    "hipFlexMean": 25.7,
+    "kneeFlexMean": 40.6,
+    "neckDownMean": 20.1,
+    "nbpOk": true,
+    "loopGapDeg": 1.4,
+    "hipsDriftM": 0.005,
+    "pass": true
+   }
+  },
+  "ps_zg_drift_idle_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_drift_idle_b.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_drift_idle/keep/ps_zg_drift_idle_b.npz",
+   "seconds": 12.0,
+   "frames": 360,
+   "grounded": false,
+   "meta": {
+    "loopBlended": 1.0,
+    "beat": "zg_drift_idle",
+    "seed": 1,
+    "params": {
+     "variant": 0.1829,
+     "wanderDeg": 4.3361,
+     "breath": 4.2957,
+     "stiff": 0.5085,
+     "damp": 1.5808
+    }
+   },
+   "measures": {
+    "frames": 360,
+    "seconds": 12.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 0.6,
+    "jitterReversals": 0,
+    "meanAccel": 0.05,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 83.6,
+     "RightElbow": 81.6,
+     "LeftKnee": 47.6,
+     "RightKnee": 47.8
+    },
+    "peakSpeed": {
+     "LeftHand": 0.09,
+     "RightHand": 0.1,
+     "LeftFoot": 0.12,
+     "RightFoot": 0.06,
+     "Head": 0.02,
+     "Hips": 0.01
+    },
+    "loopGapDeg": 1.3,
+    "hipsTravelM": 0.01,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "zg_drift_idle seed 1",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 10.0,
+   "params": {
+    "variant": 0.1829,
+    "wanderDeg": 4.3361,
+    "breath": 4.2957,
+    "stiff": 0.5085,
+    "damp": 1.5808
+   },
+   "checks": {
+    "hipFlexMean": 31.5,
+    "kneeFlexMean": 46.9,
+    "neckDownMean": 20.1,
+    "nbpOk": true,
+    "loopGapDeg": 1.3,
+    "hipsDriftM": 0.007,
+    "pass": true
+   }
+  },
+  "ps_zg_startle_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_startle_a.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_startle/keep/ps_zg_startle_a.npz",
+   "seconds": 6.0,
+   "frames": 180,
+   "grounded": false,
+   "meta": {
+    "beat": "zg_startle",
+    "seed": 0,
+    "params": {
+     "variant": 0.0496,
+     "impulse": 8.4943,
+     "flinchStiff": 2.3364
+    }
+   },
+   "measures": {
+    "frames": 180,
+    "seconds": 6.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 23.4,
+    "jitterReversals": 0,
+    "meanAccel": 1.03,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 80.8,
+     "RightElbow": 81.1,
+     "LeftKnee": 45.9,
+     "RightKnee": 46.3
+    },
+    "peakSpeed": {
+     "LeftHand": 3.97,
+     "RightHand": 3.03,
+     "LeftFoot": 1.53,
+     "RightFoot": 1.34,
+     "Head": 0.38,
+     "Hips": 0.77
+    },
+    "loopGapDeg": 5.7,
+    "hipsTravelM": 0.52,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "zg_startle seed 0",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 10.0,
+   "params": {
+    "variant": 0.0496,
+    "impulse": 8.4943,
+    "flinchStiff": 2.3364
+   },
+   "checks": {
+    "spinDegPerS": 23.3,
+    "spinOk": true,
+    "flinchArmDeg": 70.0,
+    "flinchOk": true,
+    "hipFlexMean": 29.6,
+    "kneeFlexMean": 45.0,
+    "neckDownMean": 20.3,
+    "nbpOk": true,
+    "pass": true
+   }
+  },
+  "ps_zg_startle_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_startle_b.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_startle/keep/ps_zg_startle_b.npz",
+   "seconds": 6.0,
+   "frames": 180,
+   "grounded": false,
+   "meta": {
+    "beat": "zg_startle",
+    "seed": 2,
+    "params": {
+     "variant": -0.3164,
+     "impulse": 5.6786,
+     "flinchStiff": 2.1658
+    }
+   },
+   "measures": {
+    "frames": 180,
+    "seconds": 6.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 22.4,
+    "jitterReversals": 0,
+    "meanAccel": 1.0,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 80.8,
+     "RightElbow": 80.7,
+     "LeftKnee": 40.4,
+     "RightKnee": 39.6
+    },
+    "peakSpeed": {
+     "LeftHand": 3.94,
+     "RightHand": 3.04,
+     "LeftFoot": 1.56,
+     "RightFoot": 1.44,
+     "Head": 0.29,
+     "Hips": 0.65
+    },
+    "loopGapDeg": 3.9,
+    "hipsTravelM": 0.35,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "zg_startle seed 2",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 10.0,
+   "params": {
+    "variant": -0.3164,
+    "impulse": 5.6786,
+    "flinchStiff": 2.1658
+   },
+   "checks": {
+    "spinDegPerS": 15.6,
+    "spinOk": true,
+    "flinchArmDeg": 68.7,
+    "flinchOk": true,
+    "hipFlexMean": 24.9,
+    "kneeFlexMean": 39.1,
+    "neckDownMean": 20.3,
+    "nbpOk": true,
+    "pass": true
+   }
+  },
+  "ps_zg_shove_tumble_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_shove_tumble_a.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_shove_tumble/keep/ps_zg_shove_tumble_a.npz",
+   "seconds": 8.0,
+   "frames": 240,
+   "grounded": false,
+   "meta": {
+    "beat": "zg_shove_tumble",
+    "seed": 1,
+    "params": {
+     "variant": -0.2065,
+     "impulse": 49.0527,
+     "lever": 0.2552,
+     "looseStiff": 0.4744
+    }
+   },
+   "measures": {
+    "frames": 240,
+    "seconds": 8.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 5.0,
+    "jitterReversals": 0,
+    "meanAccel": 3.02,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 82.4,
+     "RightElbow": 82.8,
+     "LeftKnee": 41.4,
+     "RightKnee": 41.2
+    },
+    "peakSpeed": {
+     "LeftHand": 1.99,
+     "RightHand": 2.14,
+     "LeftFoot": 2.47,
+     "RightFoot": 2.7,
+     "Head": 1.78,
+     "Hips": 0.86
+    },
+    "loopGapDeg": 10.1,
+    "hipsTravelM": 4.85,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "zg_shove_tumble seed 1",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 7.5,
+   "params": {
+    "variant": -0.2065,
+    "impulse": 49.0527,
+    "lever": 0.2552,
+    "looseStiff": 0.4744
+   },
+   "checks": {
+    "rotationDeg": 984.3,
+    "oneTurn": false,
+    "driftMps": 0.66,
+    "driftOk": true,
+    "pass": false
+   }
+  },
+  "ps_zg_shove_tumble_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_shove_tumble_b.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_shove_tumble/keep/ps_zg_shove_tumble_b.npz",
+   "seconds": 8.0,
+   "frames": 240,
+   "grounded": false,
+   "meta": {
+    "beat": "zg_shove_tumble",
+    "seed": 2,
+    "params": {
+     "variant": 0.2233,
+     "impulse": 44.2902,
+     "lever": 0.2751,
+     "looseStiff": 0.3731
+    }
+   },
+   "measures": {
+    "frames": 240,
+    "seconds": 8.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 4.8,
+    "jitterReversals": 0,
+    "meanAccel": 2.65,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 83.6,
+     "RightElbow": 84.7,
+     "LeftKnee": 48.1,
+     "RightKnee": 47.5
+    },
+    "peakSpeed": {
+     "LeftHand": 1.74,
+     "RightHand": 1.93,
+     "LeftFoot": 2.51,
+     "RightFoot": 2.52,
+     "Head": 1.69,
+     "Hips": 0.82
+    },
+    "loopGapDeg": 10.0,
+    "hipsTravelM": 4.26,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "zg_shove_tumble seed 2",
+   "admitted": "2026-11-08 11:47",
+   "unity": false,
+   "score": 7.5,
+   "params": {
+    "variant": 0.2233,
+    "impulse": 44.2902,
+    "lever": 0.2751,
+    "looseStiff": 0.3731
+   },
+   "checks": {
+    "rotationDeg": 930.0,
+    "oneTurn": false,
+    "driftMps": 0.58,
+    "driftOk": true,
+    "pass": false
+   }
+  },
+  "ps_catch_slide_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_catch_slide_a.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/catch_slide/keep/ps_catch_slide_a.npz",
+   "seconds": 3.5,
+   "frames": 105,
+   "grounded": true,
+   "meta": {
+    "beat": "catch_slide",
+    "seed": 0,
+    "params": {
+     "mass": 50.5488,
+     "speed": 2.5067,
+     "mu": 0.0697,
+     "brace": 673.3051,
+     "stiff": 1.0557
+    },
+    "grounded": -0.0481
+   },
+   "measures": {
+    "frames": 105,
+    "seconds": 3.5,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 26.0,
+    "jitterReversals": 0,
+    "meanAccel": 2.16,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 42.4,
+     "RightElbow": 40.2,
+     "LeftKnee": 41.8,
+     "RightKnee": 41.7
+    },
+    "peakSpeed": {
+     "LeftHand": 1.72,
+     "RightHand": 2.09,
+     "LeftFoot": 1.0,
+     "RightFoot": 1.0,
+     "Head": 1.6,
+     "Hips": 1.08
+    },
+    "belowFloorCm": 2.0,
+    "loopGapDeg": 10.5,
+    "hipsTravelM": 0.81,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "catch_slide seed 0",
+   "admitted": "2026-11-08 11:48",
+   "unity": false,
+   "score": 6.62,
+   "params": {
+    "mass": 50.5488,
+    "speed": 2.5067,
+    "mu": 0.0697,
+    "brace": 673.3051,
+    "stiff": 1.0557
+   },
+   "checks": {
+    "contactAt": 0.573,
+    "stopAfterS": null,
+    "decelOk": false,
+    "slideBackM": 0.69,
+    "stayedUp": false,
+    "boxMass": 50.5,
+    "boxSpeed": 2.51,
+    "pass": false
+   }
+  },
+  "ps_catch_slide_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_catch_slide_b.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/catch_slide/keep/ps_catch_slide_b.npz",
+   "seconds": 3.5,
+   "frames": 105,
+   "grounded": true,
+   "meta": {
+    "beat": "catch_slide",
+    "seed": 1,
+    "params": {
+     "mass": 65.1474,
+     "speed": 3.9142,
+     "mu": 0.0995,
+     "brace": 1074.3728,
+     "stiff": 1.1151
+    },
+    "grounded": -0.0485
+   },
+   "measures": {
+    "frames": 105,
+    "seconds": 3.5,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 44.5,
+    "jitterReversals": 0,
+    "meanAccel": 2.83,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 40.5,
+     "RightElbow": 40.2,
+     "LeftKnee": 41.8,
+     "RightKnee": 41.6
+    },
+    "peakSpeed": {
+     "LeftHand": 2.36,
+     "RightHand": 3.72,
+     "LeftFoot": 0.99,
+     "RightFoot": 0.99,
+     "Head": 2.37,
+     "Hips": 1.63
+    },
+    "belowFloorCm": 2.0,
+    "loopGapDeg": 9.3,
+    "hipsTravelM": 0.15,
+    "chairSeconds": 0.0,
+    "score": 10.0
+   },
+   "note": "catch_slide seed 1",
+   "admitted": "2026-11-08 11:48",
+   "unity": false,
+   "score": 6.62,
+   "params": {
+    "mass": 65.1474,
+    "speed": 3.9142,
+    "mu": 0.0995,
+    "brace": 1074.3728,
+    "stiff": 1.1151
+   },
+   "checks": {
+    "contactAt": 0.357,
+    "stopAfterS": null,
+    "decelOk": false,
+    "slideBackM": 0.12,
+    "stayedUp": false,
+    "boxMass": 65.1,
+    "boxSpeed": 3.91,
+    "pass": false
+   }
+  },
+  "ps_zg_throw_recoil_a": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_throw_recoil_a.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_throw_recoil/keep/ps_zg_throw_recoil_a.npz",
+   "seconds": 5.0,
+   "frames": 150,
+   "grounded": false,
+   "meta": {
+    "beat": "zg_throw_recoil",
+    "seed": 0,
+    "params": {
+     "mass": 6.0708,
+     "swing": 0.2982,
+     "releaseAt": 0.7929,
+     "throwStiff": 6.9311
+    }
+   },
+   "measures": {
+    "frames": 150,
+    "seconds": 5.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 22.9,
+    "jitterReversals": 2,
+    "meanAccel": 0.66,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 80.8,
+     "RightElbow": 127.1,
+     "LeftKnee": 44.2,
+     "RightKnee": 43.9
+    },
+    "peakSpeed": {
+     "LeftHand": 1.92,
+     "RightHand": 1.39,
+     "LeftFoot": 0.44,
+     "RightFoot": 0.71,
+     "Head": 0.19,
+     "Hips": 0.13
+    },
+    "loopGapDeg": 8.9,
+    "hipsTravelM": 0.22,
+    "chairSeconds": 0.0,
+    "score": 9.9
+   },
+   "note": "zg_throw_recoil seed 0",
+   "admitted": "2026-11-08 11:48",
+   "unity": false,
+   "score": 9.9,
+   "params": {
+    "mass": 6.0708,
+    "swing": 0.2982,
+    "releaseAt": 0.7929,
+    "throwStiff": 6.9311
+   },
+   "checks": {
+    "releasedAt": 1.037,
+    "recoilMps": 0.058,
+    "recoilOk": true,
+    "turnDeg": 33.1,
+    "turnOk": true,
+    "pass": true
+   }
+  },
+  "ps_zg_throw_recoil_b": {
+   "file": "Assets/MusicVideo/Motion/Humanoid@ps_zg_throw_recoil_b.fbx",
+   "source": "sim",
+   "from": "gen/motion/sim/zg_throw_recoil/keep/ps_zg_throw_recoil_b.npz",
+   "seconds": 5.0,
+   "frames": 150,
+   "grounded": false,
+   "meta": {
+    "beat": "zg_throw_recoil",
+    "seed": 5,
+    "params": {
+     "mass": 6.6727,
+     "swing": 0.195,
+     "releaseAt": 0.756,
+     "throwStiff": 8.9847
+    }
+   },
+   "measures": {
+    "frames": 150,
+    "seconds": 5.0,
+    "fps": 30.0,
+    "snaps": 0,
+    "peakStepDeg": 27.0,
+    "jitterReversals": 2,
+    "meanAccel": 0.89,
+    "hingeFlips": 0,
+    "hyper": 0,
+    "maxBend": {
+     "LeftElbow": 80.8,
+     "RightElbow": 127.7,
+     "LeftKnee": 45.8,
+     "RightKnee": 43.9
+    },
+    "peakSpeed": {
+     "LeftHand": 2.88,
+     "RightHand": 1.43,
+     "LeftFoot": 0.69,
+     "RightFoot": 1.1,
+     "Head": 0.26,
+     "Hips": 0.15
+    },
+    "loopGapDeg": 8.1,
+    "hipsTravelM": 0.23,
+    "chairSeconds": 0.0,
+    "score": 9.9
+   },
+   "note": "zg_throw_recoil seed 5",
+   "admitted": "2026-11-08 11:48",
+   "unity": false,
+   "score": 9.9,
+   "params": {
+    "mass": 6.6727,
+    "swing": 0.195,
+    "releaseAt": 0.756,
+    "throwStiff": 8.9847
+   },
+   "checks": {
+    "releasedAt": 0.948,
+    "recoilMps": 0.062,
+    "recoilOk": true,
+    "turnDeg": 43.1,
+    "turnOk": true,
+    "pass": true
+   }
+  }
+ }
+}

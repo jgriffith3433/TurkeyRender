@@ -1,0 +1,39 @@
+{
+ "id": "sparrow_away",
+ "f0": 478,
+ "f1": 529,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 15.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "4c4118ad7ec3fbf7",
+ "summary": "The strip is mostly static: the bird sits cropped at the top-left edge and barely moves across 15.96 to 16.20, with no pops or flicker, but the bird is badly framed and the shot's idea isn't readable.",
+ "faults": [
+  {
+   "t": 15.96,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The sparrow, the subject of the shot, is jammed in the top-left corner with its head cut off by the frame edge. The fence and leaves take up most of the picture, so the subject is unclear and the look-at-us moment isn't visible.",
+   "fix": "Reframe or shift the camera so the whole bird, head included, sits inside the frame with room to turn."
+  },
+  {
+   "t": 16.1,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "From 15.96 to 16.20 the bird is almost frozen, with only a slight head and body drift. There is no clear pose change and no tail flick starting, so it reads as a mushy hold.",
+   "fix": "Hold a clear look-at-camera pose, then add a quick tail flick with anticipation before the hop."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3581,
+  "out": 427
+ },
+ "cost": 0.0114
+}

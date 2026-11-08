@@ -1,0 +1,61 @@
+{
+ "id": "delight",
+ "f0": 1429,
+ "f1": 1455,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 47.633,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 48.3,
+   "why": "one patch jumps (cell 187.3, x4.4)",
+   "file": "spike-01449.jpg"
+  }
+ ],
+ "hash": "f9b6604175640a9e",
+ "summary": "The framing crops him at the mouth, so the \"first and last smile\" is never visible, and at 48.30 the picture jumps to a different framing before the camera whips up to empty sky.",
+ "faults": [
+  {
+   "t": 47.66,
+   "sev": "A",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "From 47.66 to 48.26 the top of the frame cuts him off at the mouth. The eyes and most of the face are out of frame. The lips are only slightly parted, with no visible smile, so the shot's idea of delight is not readable.",
+   "fix": "Tilt the camera up or pull back so the full face and eyes are in frame, and hold on the smile."
+  },
+  {
+   "t": 47.66,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The mouth reads as mid-speech or neutral across the strip, with no clear smile build. The torso is almost static, with no lift or relaxation of the shoulders to signal delight.",
+   "fix": "Add a clear smile pose with a small shoulder and chest release, and hold it for a few frames."
+  },
+  {
+   "t": 48.3,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 48.26 and 48.30 the picture jumps from the chest close-up to a blurred, much smaller head against siding and fence. The head then slides down and out of frame by 48.36. This is a hard jump with no in-between frames, and a viewer would read it as a glitch.",
+   "fix": "Remove the jump, or make it a deliberate cut. Start the tilt-up from the 48.26 framing with easing instead of snapping to a new position."
+  },
+  {
+   "t": 48.4,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "From 48.40 to 48.46 the camera rushes past the eaves and roof into empty sky. The subject leaves the frame during the payoff beat, and the move ends on a flat blue frame.",
+   "fix": "Keep him in frame on the smile, or shorten the sky whip to one or two frames that land cleanly on the next shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4965,
+  "out": 1224
+ },
+ "cost": 0.0222
+}

@@ -1,7 +1,7 @@
 // Measures real playback speed of the Timeline: scene seconds per wall-clock second, at several points of the video.
 import { execFileSync as x } from 'node:child_process';
 const mv = (...a) => x('node', ['Director/mv.mjs', ...a], { stdio: ['ignore', 'pipe', 'ignore'] }).toString();
-const now = () => JSON.parse(mv('status')).time;
+const now = () => JSON.parse(mv('unity')).time;
 for (const start of process.argv.slice(2).map(Number)) {
   mv('play', `${start}s`);
   const a = now(), t0 = Date.now();

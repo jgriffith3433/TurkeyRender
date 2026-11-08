@@ -1,0 +1,11 @@
+about: Spin into a held pose (root: where the spin takes him back to, [0, 0, $back] returns him to the mark as he faces -z), then hand on hip. 8 beats: 3 spin, 3 hold, 2 settle.
+kind: turn
+len: 8b
+cues:
+  - {at: 0b, do: gaze, weight: 0, for: 0.15}
+  - {at: 0b, do: anim, clip: mx_spin_in_place, start: 0.15, stop: 1.0, speed: 0.72, root: 1, once: 1, blend: 0.12, for: 3b}
+  - {at: 0b, do: layer, clip: IdleBreathe, mask: arms, weight: 1, for: 2.8b, blend: 0.12}
+  - {at: 0.2b, do: move, pos: $root, rel: 1, for: 2.7b, ease: inout, lint: slide}
+  - {at: 3b, do: gaze, toRel: [0, 1.55, 6], for: 0.2}
+  - {at: 3b, do: anim, clip: mx_spin_in_place, start: 2.0, stop: 3.2, speed: 0.9, once: 1, blend: 0.15, for: 3b}
+  - {at: 6b, do: anim, clip: mx_hh_booty_step, start: 3.0, speed: 1.15, blend: 0.15, for: 2b}

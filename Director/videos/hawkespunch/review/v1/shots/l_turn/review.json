@@ -1,0 +1,31 @@
+{
+ "id": "l_turn",
+ "f0": 1817,
+ "f1": 1892,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 60.567,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "0ae6ebd836bb5fc4",
+ "summary": "Static camera and a nearly still standing woman across the cut strip, with no visible pops, flicker or clipping; only a minor stiff-pose note.",
+ "faults": [
+  {
+   "t": 60.69,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "Her face is a blank, neutral stare in profile from the first frame; there is no visible change of expression or eye movement to show the smile going off, so the 'something changed' beat is not readable.",
+   "fix": "Add a small eye shift or brow and mouth change plus a slight head turn in the first half second of the shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3569,
+  "out": 252
+ },
+ "cost": 0.0097
+}

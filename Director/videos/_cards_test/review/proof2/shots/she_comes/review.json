@@ -1,0 +1,10 @@
+{
+ "id": "she_comes",
+ "f0": 180,
+ "f1": 262,
+ "faults": [],
+ "summary": "Clean cut strip: the framing, the seated man and the couch hold steady across all eight frames, with no pops, flicker or contact faults.",
+ "model": "claude-sonnet-5-5",
+ "carried": "proof1",
+ "strips": []
+}

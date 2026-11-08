@@ -1,0 +1,47 @@
+{
+ "id": "m_boo",
+ "f0": 3175,
+ "f1": 3251,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 105.833,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "d880bf1520b7e104",
+ "summary": "The strip is a clean, steady drift with no pops or flicker, but the comet and the \"boo\" burst are not visible yet and the small dark figure barely reads.",
+ "faults": [
+  {
+   "t": 105.86,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot idea is a comet tail and something bursting out at his face. In these 6 frames of the shot there is no comet, tail or second character, only a tiny figure drifting past stars. The idea does not read at the start.",
+   "fix": "Bring the comet tail into frame from the first frame, or open just before the reveal so the burst lands in view."
+  },
+  {
+   "t": 105.96,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The figure is very small and dark against a dark background. The silhouette barely reads, and the planet at top left draws the eye more than he does.",
+   "fix": "Push the camera in or scale him up, and add a rim light so the pose reads."
+  },
+  {
+   "t": 106.03,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The pose is almost frozen across all 8 tiles, with a stiff outstretched arm and legs and little secondary motion. It looks like a static cutout sliding.",
+   "fix": "Add a slow limb sway or slight rotation to the drift."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4951,
+  "out": 1021
+ },
+ "cost": 0.0201
+}

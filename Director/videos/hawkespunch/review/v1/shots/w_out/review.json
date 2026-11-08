@@ -1,0 +1,31 @@
+{
+ "id": "w_out",
+ "f0": 4231,
+ "f1": 4307,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 141.033,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "55570be418a093a0",
+ "summary": "The strip is stable with no pops or flicker, but the shot's idea (a bent-over, spent character) isn't readable because the figure is a tiny, static speck at this scale.",
+ "faults": [
+  {
+   "t": 141.06,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The character is a tiny speck at mid-right, with the planet taking the frame. The 'bent double, spent' pose can't be read. Across all 8 tiles the figure barely moves, with no drift, breathing or settle.",
+   "fix": "Push the camera in on the character or enlarge him, and add a slow drift and a heave of breath so the out-of-breath idea reads."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3565,
+  "out": 282
+ },
+ "cost": 0.01
+}

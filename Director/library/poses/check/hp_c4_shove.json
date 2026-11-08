@@ -1,0 +1,366 @@
+{
+  "clip": "hp_c4_shove",
+  "length": 2.0,
+  "derived": {
+    "clip": "hp_c4_shove",
+    "file": "Assets/MusicVideo/Motion/Keyed/hp_c4_shove.anim",
+    "length": 2.0,
+    "loop": false,
+    "keys": 3,
+    "samples": 98,
+    "stepped": 5,
+    "additive": false,
+    "seed": "zg_neutral_b",
+    "humanScale": 1.0403,
+    "warnings": []
+  },
+  "contact": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_c4_shove.png",
+  "keys": [
+    {
+      "key": "press",
+      "t": 0.0,
+      "interp": "ease",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 5.8,
+            "hipAbd": 13.8,
+            "knee": 31.3,
+            "anklePF": 28.4,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 84.8,
+            "shAbd": 82.7,
+            "elbow": 13.3
+          },
+          "fingerCurl": 11.2
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 14.8,
+            "hipAbd": 13.3,
+            "knee": 42.9,
+            "anklePF": 28.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 85.2,
+            "shAbd": 83.3,
+            "elbow": 13.1
+          },
+          "fingerCurl": 10.2
+        },
+        "neckFlex": -14.0,
+        "waistFlex": 7.7,
+        "torsoFromVertical": 25.2,
+        "headPitchWorld": -16.5
+      }
+    },
+    {
+      "key": "shove",
+      "t": 0.458,
+      "interp": "linear",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 5.8,
+            "hipAbd": 13.8,
+            "knee": 31.3,
+            "anklePF": 28.4,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 84.1,
+            "shAbd": 82.2,
+            "elbow": 5.6
+          },
+          "fingerCurl": 11.2
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 14.8,
+            "hipAbd": 13.3,
+            "knee": 42.9,
+            "anklePF": 28.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 84.6,
+            "shAbd": 82.8,
+            "elbow": 5.5
+          },
+          "fingerCurl": 10.1
+        },
+        "neckFlex": -14.0,
+        "waistFlex": 7.7,
+        "torsoFromVertical": 29.6,
+        "headPitchWorld": -20.8
+      }
+    },
+    {
+      "key": "after",
+      "t": 1.667,
+      "interp": "ease on 3s",
+      "angles": {
+        "left": {
+          "leg": {
+            "hipFlex": 5.8,
+            "hipAbd": 13.8,
+            "knee": 31.2,
+            "anklePF": 28.4,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 78.1,
+            "shAbd": 72.7,
+            "elbow": 5.5
+          },
+          "fingerCurl": 20.1
+        },
+        "right": {
+          "leg": {
+            "hipFlex": 14.9,
+            "hipAbd": 13.3,
+            "knee": 42.9,
+            "anklePF": 28.5,
+            "toes": 0.0
+          },
+          "arm": {
+            "shFlex": 78.5,
+            "shAbd": 73.3,
+            "elbow": 5.2
+          },
+          "fingerCurl": 21.2
+        },
+        "neckFlex": -14.0,
+        "waistFlex": 7.7,
+        "torsoFromVertical": 29.7,
+        "headPitchWorld": -21.0
+      }
+    }
+  ],
+  "muscles": [
+    {
+      "name": "press",
+      "t": 0.0,
+      "interp": "ease",
+      "hold": 0.3333,
+      "step": 0,
+      "show": 0.0,
+      "muscles": {
+        "Spine Front-Back": 0.02,
+        "Neck Nod Down-Up": 0.2,
+        "Head Nod Down-Up": 0.15,
+        "Left Upper Leg Front-Back": 0.38,
+        "Left Lower Leg Stretch": 0.6,
+        "Left Foot Up-Down": 0.65,
+        "Right Upper Leg Front-Back": 0.2,
+        "Right Lower Leg Stretch": 0.45,
+        "Right Foot Up-Down": 0.65,
+        "Left Shoulder Front-Back": 0.35,
+        "Left Arm Down-Up": 0.33,
+        "Left Arm Front-Back": -0.38,
+        "Left Arm Twist In-Out": 0.0,
+        "Left Forearm Stretch": 0.9,
+        "Left Hand Down-Up": 0.75,
+        "Right Shoulder Front-Back": 0.35,
+        "Right Arm Down-Up": 0.33,
+        "Right Arm Front-Back": -0.38,
+        "Right Arm Twist In-Out": 0.0,
+        "Right Forearm Stretch": 0.9,
+        "Right Hand Down-Up": 0.75,
+        "Left Thumb 1 Stretched": 0.9,
+        "Left Thumb Spread": 0.5,
+        "Left Thumb 2 Stretched": 0.9,
+        "Left Thumb 3 Stretched": 0.9,
+        "Left Index 1 Stretched": 0.9,
+        "Left Index Spread": 0.5,
+        "Left Index 2 Stretched": 0.9,
+        "Left Index 3 Stretched": 0.9,
+        "Left Middle 1 Stretched": 0.9,
+        "Left Middle Spread": 0.5,
+        "Left Middle 2 Stretched": 0.9,
+        "Left Middle 3 Stretched": 0.9,
+        "Left Ring 1 Stretched": 0.9,
+        "Left Ring Spread": 0.5,
+        "Left Ring 2 Stretched": 0.9,
+        "Left Ring 3 Stretched": 0.9,
+        "Left Little 1 Stretched": 0.9,
+        "Left Little Spread": 0.5,
+        "Left Little 2 Stretched": 0.9,
+        "Left Little 3 Stretched": 0.9,
+        "Right Thumb 1 Stretched": 0.9,
+        "Right Thumb Spread": 0.5,
+        "Right Thumb 2 Stretched": 0.9,
+        "Right Thumb 3 Stretched": 0.9,
+        "Right Index 1 Stretched": 0.9,
+        "Right Index Spread": 0.5,
+        "Right Index 2 Stretched": 0.9,
+        "Right Index 3 Stretched": 0.9,
+        "Right Middle 1 Stretched": 0.9,
+        "Right Middle Spread": 0.5,
+        "Right Middle 2 Stretched": 0.9,
+        "Right Middle 3 Stretched": 0.9,
+        "Right Ring 1 Stretched": 0.9,
+        "Right Ring Spread": 0.5,
+        "Right Ring 2 Stretched": 0.9,
+        "Right Ring 3 Stretched": 0.9,
+        "Right Little 1 Stretched": 0.9,
+        "Right Little Spread": 0.5,
+        "Right Little 2 Stretched": 0.9,
+        "Right Little 3 Stretched": 0.9
+      }
+    },
+    {
+      "name": "shove",
+      "t": 0.4583,
+      "interp": "linear",
+      "hold": 1.0,
+      "step": 0,
+      "show": 0.4583,
+      "muscles": {
+        "Spine Front-Back": 0.02,
+        "Neck Nod Down-Up": 0.2,
+        "Head Nod Down-Up": 0.15,
+        "Left Upper Leg Front-Back": 0.38,
+        "Left Lower Leg Stretch": 0.6,
+        "Left Foot Up-Down": 0.65,
+        "Right Upper Leg Front-Back": 0.2,
+        "Right Lower Leg Stretch": 0.45,
+        "Right Foot Up-Down": 0.65,
+        "Left Shoulder Front-Back": 0.45,
+        "Left Arm Down-Up": 0.33,
+        "Left Arm Front-Back": -0.38,
+        "Left Arm Twist In-Out": 0.0,
+        "Left Forearm Stretch": 1.0,
+        "Left Hand Down-Up": 0.75,
+        "Right Shoulder Front-Back": 0.45,
+        "Right Arm Down-Up": 0.33,
+        "Right Arm Front-Back": -0.38,
+        "Right Arm Twist In-Out": 0.0,
+        "Right Forearm Stretch": 1.0,
+        "Right Hand Down-Up": 0.75,
+        "Left Thumb 1 Stretched": 0.9,
+        "Left Thumb Spread": 0.5,
+        "Left Thumb 2 Stretched": 0.9,
+        "Left Thumb 3 Stretched": 0.9,
+        "Left Index 1 Stretched": 0.9,
+        "Left Index Spread": 0.5,
+        "Left Index 2 Stretched": 0.9,
+        "Left Index 3 Stretched": 0.9,
+        "Left Middle 1 Stretched": 0.9,
+        "Left Middle Spread": 0.5,
+        "Left Middle 2 Stretched": 0.9,
+        "Left Middle 3 Stretched": 0.9,
+        "Left Ring 1 Stretched": 0.9,
+        "Left Ring Spread": 0.5,
+        "Left Ring 2 Stretched": 0.9,
+        "Left Ring 3 Stretched": 0.9,
+        "Left Little 1 Stretched": 0.9,
+        "Left Little Spread": 0.5,
+        "Left Little 2 Stretched": 0.9,
+        "Left Little 3 Stretched": 0.9,
+        "Right Thumb 1 Stretched": 0.9,
+        "Right Thumb Spread": 0.5,
+        "Right Thumb 2 Stretched": 0.9,
+        "Right Thumb 3 Stretched": 0.9,
+        "Right Index 1 Stretched": 0.9,
+        "Right Index Spread": 0.5,
+        "Right Index 2 Stretched": 0.9,
+        "Right Index 3 Stretched": 0.9,
+        "Right Middle 1 Stretched": 0.9,
+        "Right Middle Spread": 0.5,
+        "Right Middle 2 Stretched": 0.9,
+        "Right Middle 3 Stretched": 0.9,
+        "Right Ring 1 Stretched": 0.9,
+        "Right Ring Spread": 0.5,
+        "Right Ring 2 Stretched": 0.9,
+        "Right Ring 3 Stretched": 0.9,
+        "Right Little 1 Stretched": 0.9,
+        "Right Little Spread": 0.5,
+        "Right Little 2 Stretched": 0.9,
+        "Right Little 3 Stretched": 0.9
+      }
+    },
+    {
+      "name": "after",
+      "t": 1.6667,
+      "interp": "ease",
+      "hold": 0.0,
+      "step": 3,
+      "show": 1.6667,
+      "muscles": {
+        "Spine Front-Back": 0.02,
+        "Neck Nod Down-Up": 0.2,
+        "Head Nod Down-Up": 0.15,
+        "Left Upper Leg Front-Back": 0.38,
+        "Left Lower Leg Stretch": 0.6,
+        "Left Foot Up-Down": 0.65,
+        "Right Upper Leg Front-Back": 0.2,
+        "Right Lower Leg Stretch": 0.45,
+        "Right Foot Up-Down": 0.65,
+        "Left Shoulder Front-Back": 0.45,
+        "Left Arm Down-Up": 0.23,
+        "Left Arm Front-Back": -0.38,
+        "Left Arm Twist In-Out": 0.0,
+        "Left Forearm Stretch": 1.0,
+        "Left Hand Down-Up": 0.75,
+        "Right Shoulder Front-Back": 0.45,
+        "Right Arm Down-Up": 0.23,
+        "Right Arm Front-Back": -0.38,
+        "Right Arm Twist In-Out": 0.0,
+        "Right Forearm Stretch": 1.0,
+        "Right Hand Down-Up": 0.75,
+        "Left Thumb 1 Stretched": 0.4,
+        "Left Thumb Spread": 0.3,
+        "Left Thumb 2 Stretched": 0.4,
+        "Left Thumb 3 Stretched": 0.4,
+        "Left Index 1 Stretched": 0.4,
+        "Left Index Spread": 0.3,
+        "Left Index 2 Stretched": 0.4,
+        "Left Middle 1 Stretched": 0.4,
+        "Left Middle Spread": 0.3,
+        "Left Middle 2 Stretched": 0.4,
+        "Left Ring 1 Stretched": 0.4,
+        "Left Ring Spread": 0.3,
+        "Left Ring 2 Stretched": 0.4,
+        "Left Little 1 Stretched": 0.4,
+        "Left Little Spread": 0.3,
+        "Left Little 2 Stretched": 0.4,
+        "Right Thumb 1 Stretched": 0.4,
+        "Right Thumb Spread": 0.3,
+        "Right Thumb 2 Stretched": 0.4,
+        "Right Thumb 3 Stretched": 0.4,
+        "Right Index 1 Stretched": 0.4,
+        "Right Index Spread": 0.3,
+        "Right Index 2 Stretched": 0.4,
+        "Right Middle 1 Stretched": 0.4,
+        "Right Middle Spread": 0.3,
+        "Right Middle 2 Stretched": 0.4,
+        "Right Ring 1 Stretched": 0.4,
+        "Right Ring Spread": 0.3,
+        "Right Ring 2 Stretched": 0.4,
+        "Right Little 1 Stretched": 0.4,
+        "Right Little Spread": 0.3,
+        "Right Little 2 Stretched": 0.4
+      }
+    }
+  ],
+  "playback": {
+    "mp4": "C:\\Projects\\TKShock\\Director\\library/poses/check\\hp_c4_shove.mp4",
+    "fps": 24.0,
+    "frames": 48,
+    "worstBoneStepDeg": 6.2,
+    "worstBone": "RightUpperArm",
+    "worstAt": 1.625,
+    "toeAngleRange": [
+      0.0,
+      0.0
+    ],
+    "neckFlexRange": [
+      -14.0,
+      -14.0
+    ]
+  }
+}

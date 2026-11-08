@@ -1,0 +1,861 @@
+{
+ "video": "greener",
+ "notes": [
+  {
+   "id": "n1",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "taste|A|394",
+   "text": "Review A (v9): The arm and hand fall from chest height at 39.36 to low in the frame at 39.40 and fully out of frame at 39.43. That is about 3 frames with no anticipation or settle. The blade disappears with the hand, so it reads as the arm and prop snapping away. Fix: Spread the drop over 8–10 frames with an ease-out. Keep the hand in frame until the blade is clearly lowered, or cut away from the drop.",
+   "t": 39.4,
+   "at": "23:3.8",
+   "bar": 23,
+   "beat": 3.8,
+   "section": "s4",
+   "shot": {
+    "index": 16,
+    "name": "taste",
+    "t": 38.2,
+    "end": 39.914,
+    "at": "23:1",
+    "act": "50-cards.json",
+    "line": 404
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 1182,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.037Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.039Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.039Z"
+  },
+  {
+   "id": "n2",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "gift_pop|A|503",
+   "text": "Review A (v9): Box is low and wide in 50.29 (lid hovering above a squat base), then in 50.33 it is a tall, large box filling the frame with the bow above. Scale and shape change in one frame with no in-between, so it reads as a swap rather than a hop. Fix: Add 1-2 in-between frames of the box stretching up, or hide the swap with a cut or dust puff, and keep the box's proportions consistent.",
+   "t": 50.33,
+   "at": "30:1.3",
+   "bar": 30,
+   "beat": 1.3,
+   "section": "s6",
+   "shot": {
+    "index": 23,
+    "name": "gift_pop",
+    "t": 50.202,
+    "end": 51.916,
+    "at": "30:1",
+    "act": "50-cards.json",
+    "line": 516
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 1510,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.046Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.046Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.046Z"
+  },
+  {
+   "id": "n3",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "gift_pop|A|511",
+   "text": "Review A (v9): At 51.09 the lid is already thrown high and tilted with confetti and the butler is visible. In 50.93 the lid was closed. The burst starts on a frame with no visible build-up. Fix: Add 2-3 frames of the lid lifting and the box bulging before the burst.",
+   "t": 51.09,
+   "at": "30:3.07",
+   "bar": 30,
+   "beat": 3.07,
+   "section": "s6",
+   "shot": {
+    "index": 23,
+    "name": "gift_pop",
+    "t": 50.202,
+    "end": 51.916,
+    "at": "30:1",
+    "act": "50-cards.json",
+    "line": 516
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 1533,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.050Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.050Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.050Z"
+  },
+  {
+   "id": "n4",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "dv_cu|A|915",
+   "text": "Review A (v9): Both arms jump pose in about 2 frames. His left hand goes from the chest at 91.39 to out at the side at 91.43, then onto the hip at 91.46. His right arm swings from hanging at 91.43 to raised with a dangling wrist at 91.49. This is the cut tweening into the pose, and at speed it reads as a snap. Fix: Start the shot already in the settled pose, or trim the first 5 frames of the clip so the arms don't travel.",
+   "t": 91.46,
+   "at": "54:1.25",
+   "bar": 54,
+   "beat": 1.25,
+   "section": "s9",
+   "shot": {
+    "index": 46,
+    "name": "dv_cu",
+    "t": 91.352,
+    "end": 93.924,
+    "at": "54:1",
+    "act": "50-cards.json",
+    "line": 735
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 2744,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.056Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.056Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.056Z"
+  },
+  {
+   "id": "n5",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "theory|A|948",
+   "text": "Review A (v9): The magenta veil over the chart shrinks from a wide panel at 94.73 to a thin strip at 94.76 and is gone at 94.79. It vanishes in place rather than being pulled off. The chart appears with no cloth in flight, and the turkey makes no pulling motion. This is the measured spike, and the shot's key beat reads as a cut. Fix: Animate the cloth sliding or flying off, with the turkey's wing or beak pulling it. Otherwise hide the swap behind a fast sweep or a held pose.",
+   "t": 94.76,
+   "at": "55:4.95",
+   "bar": 55,
+   "beat": 4.95,
+   "section": "s9",
+   "shot": {
+    "index": 47,
+    "name": "theory",
+    "t": 93.924,
+    "end": 95.639,
+    "at": "55:3",
+    "act": "50-cards.json",
+    "line": 745
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 2843,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.060Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.060Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.060Z"
+  },
+  {
+   "id": "n6",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "plan|A|982",
+   "text": "Review A (v9): The magenta cloth, a thin strip at x≈150-190 in 98.16 and 98.19, is gone in 98.23. The green striped chart appears fully revealed with no travelling cloth and no anticipation. The 'whip off' reads as a teleport and a swap, which matches the measured spike. Fix: Animate the cloth sweeping off over 4-6 frames with a fast arc and overshoot, or hide the swap with a motion-blurred cloth wipe across the frame.",
+   "t": 98.21,
+   "at": "57:5",
+   "bar": 57,
+   "beat": 5,
+   "section": "s9",
+   "shot": {
+    "index": 49,
+    "name": "plan",
+    "t": 97.353,
+    "end": 99.068,
+    "at": "57:3",
+    "act": "50-cards.json",
+    "line": 769
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 2946,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.064Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.064Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.064Z"
+  },
+  {
+   "id": "n7",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "push|A|1053",
+   "text": "Review A (v9): Door goes from closed pale pink to a dark open doorway in one frame, with a white wall panel appearing in front. At 105.29 the door is closed; at 105.33 it is already open. There is no swing between them, so the key beat of the shot snaps. Fix: Key the door swinging open over 6-10 frames starting at the hand contact, or add a motion blur or smear in between.",
+   "t": 105.33,
+   "at": "62:1.61",
+   "bar": 62,
+   "beat": 1.61,
+   "section": "s9",
+   "shot": {
+    "index": 53,
+    "name": "push",
+    "t": 104.212,
+    "end": 105.926,
+    "at": "61:3",
+    "act": "50-cards.json",
+    "line": 814
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3160,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.068Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.069Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.069Z"
+  },
+  {
+   "id": "n8",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "holds_out|A|1103",
+   "text": "Review A (v9): The tray jerks left. Its right edge moves from about x=168 to 145 to 130 over 110.29–110.36. The green blade, which was fixed at the left edge, shifts and is gone by 110.36. This is the measured spike. The motion is a fast slide, then a stop, with no settle. Fix: Ease the tray in rather than snapping it, and keep it and the blade in frame. Hold the tray still while the blade is offered.",
+   "t": 110.33,
+   "at": "65:1.27",
+   "bar": 65,
+   "beat": 1.27,
+   "section": "s10",
+   "shot": {
+    "index": 56,
+    "name": "holds_out",
+    "t": 110.213,
+    "end": 111.927,
+    "at": "65:1",
+    "act": "50-cards.json",
+    "line": 846
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3310,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.073Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.073Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.073Z"
+  },
+  {
+   "id": "n9",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "holds_out|A|1104",
+   "text": "Review A (v9): The blade of grass, the whole point of the shot, is not visible from 110.36 on. The viewer sees only an empty silver plate beside the turkey, so there is nothing to offer and nothing to react to. Fix: Reframe or reposition the tray so the blade stays visible on the plate through the hold.",
+   "t": 110.36,
+   "at": "65:1.34",
+   "bar": 65,
+   "beat": 1.34,
+   "section": "s10",
+   "shot": {
+    "index": 56,
+    "name": "holds_out",
+    "t": 110.213,
+    "end": 111.927,
+    "at": "65:1",
+    "act": "50-cards.json",
+    "line": 846
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3311,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.077Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.077Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.077Z"
+  },
+  {
+   "id": "n10",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "takes_it|A|1121",
+   "text": "Review A (v9): The cut strip is not settled. From 112.06 to 112.09 the framing jumps: the head goes from cropped at the top to showing the chin, and the torso and arms change position and lean abruptly between tiles. Fix: Hold the first frames of the shot on a stable pose and remove the 2-frame jump after the cut.",
+   "t": 112.09,
+   "at": "66:1.38",
+   "bar": 66,
+   "beat": 1.38,
+   "section": "s10",
+   "shot": {
+    "index": 57,
+    "name": "takes_it",
+    "t": 111.927,
+    "end": 113.642,
+    "at": "66:1",
+    "act": "50-cards.json",
+    "line": 854
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3363,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.082Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.082Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.082Z"
+  },
+  {
+   "id": "n11",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "takes_it|A|1124",
+   "text": "Review A (v9): By 112.39 he is bent hard over to the right with the left arm flung up out of frame, and the pose differs completely from 112.19. The arm goes from raised to across the body in one frame at 112.43-112.46. There is no anticipation or travel in between. Fix: Add in-between frames or smooth the arm path from raised to reach, and add anticipation.",
+   "t": 112.39,
+   "at": "66:2.08",
+   "bar": 66,
+   "beat": 2.08,
+   "section": "s10",
+   "shot": {
+    "index": 57,
+    "name": "takes_it",
+    "t": 111.927,
+    "end": 113.642,
+    "at": "66:1",
+    "act": "50-cards.json",
+    "line": 854
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3372,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.086Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.086Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.086Z"
+  },
+  {
+   "id": "n12",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "takes_it|A|1125",
+   "text": "Review A (v9): The blade leaves the tray and is flying in the air, tilted, near the hand. At 112.46 it was upright on the tray. At 112.53 it is held horizontally at the hand with no grasp in between. The blade teleports into the grip. Fix: Parent the blade to the hand from the frame the fingers close, with a clean pickup.",
+   "t": 112.49,
+   "at": "66:2.31",
+   "bar": 66,
+   "beat": 2.31,
+   "section": "s10",
+   "shot": {
+    "index": 57,
+    "name": "takes_it",
+    "t": 111.927,
+    "end": 113.642,
+    "at": "66:1",
+    "act": "50-cards.json",
+    "line": 854
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3375,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.091Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.091Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.091Z"
+  },
+  {
+   "id": "n13",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "takes_it|A|1136",
+   "text": "Review A (v9): At 113.59 the upper arm detaches from the sleeve, leaving a hole at the shoulder, and the arm becomes a floating sausage shape. The blade is dragged down toward the plate. At 113.63 the arm and blade vanish, and the hand is empty. Fix: Fix the shoulder deformation and keep the blade in the hand through the pull-back, or hide the blade cleanly.",
+   "t": 113.59,
+   "at": "66:4.88",
+   "bar": 66,
+   "beat": 4.88,
+   "section": "s10",
+   "shot": {
+    "index": 57,
+    "name": "takes_it",
+    "t": 111.927,
+    "end": 113.642,
+    "at": "66:1",
+    "act": "50-cards.json",
+    "line": 854
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3408,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.095Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.095Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.095Z"
+  },
+  {
+   "id": "n14",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "goes_back|A|1154",
+   "text": "Review A (v9): At 115.36 the picture swaps from the dark wooden yard close-up to a heavily washed-out pink room, which is a different set and a different character scale. It reads as a blown-out flash or a wrong-shot cut, not the glide to the door. The 115.29-115.33 close-up is also whipped with heavy blur beforehand. Fix: Remove the stray cut or lower the pink bloom so the door shot reads as a clean continuation of the move.",
+   "t": 115.36,
+   "at": "68:1.01",
+   "bar": 68,
+   "beat": 1.01,
+   "section": "s11",
+   "shot": {
+    "index": 59,
+    "name": "hook_3",
+    "t": 115.356,
+    "end": 117.071,
+    "at": "68:1",
+    "act": "50-cards.json",
+    "line": 882
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3461,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.099Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.099Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.099Z"
+  },
+  {
+   "id": "n15",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "hook_3|A|1155",
+   "text": "Review A (v9): The character is cropped at the chest in every tile from 115.46 to 115.63, so his head and face are never visible. The hook's main subject is headless and the low camera shows mostly empty pink stairs. Fix: Tilt the camera up or pull it back so the full figure, head included, sits in frame at the top of the stairs.",
+   "t": 115.46,
+   "at": "68:1.24",
+   "bar": 68,
+   "beat": 1.24,
+   "section": "s11",
+   "shot": {
+    "index": 59,
+    "name": "hook_3",
+    "t": 115.356,
+    "end": 117.071,
+    "at": "68:1",
+    "act": "50-cards.json",
+    "line": 882
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3464,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.103Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.103Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.103Z"
+  },
+  {
+   "id": "n16",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "descend|A|1189",
+   "text": "Review A (v9): A hard-edged dark shadow patch appears on his torso and hip, then grows and changes shape between 118.83 and 118.96. It reads as a shading or shadow glitch on the shirt, and the shirt colour is not stable. Fix: Fix the self-shadow or light on the torso (bias or cascade), or lock the lighting through the descent.",
+   "t": 118.86,
+   "at": "70:1.17",
+   "bar": 70,
+   "beat": 1.17,
+   "section": "s11",
+   "shot": {
+    "index": 61,
+    "name": "descend_b",
+    "t": 118.786,
+    "end": 121.358,
+    "at": "70:1",
+    "act": "50-cards.json",
+    "line": 894
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3566,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.107Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.107Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.107Z"
+  },
+  {
+   "id": "n17",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "c2_sil|A|1263",
+   "text": "Review A (v9): A flat, unshaded blue square crosses the frame: it starts above the head at 126.19-126.23, then sits over his head and back at 126.26-126.29 and falls past his side at 126.33-126.36. It covers part of the silhouette and looks like a UI sticker, not confetti. Fix: Shade the confetti, or remove or shrink the big blue cube. Keep it from crossing the dancer's body.",
+   "t": 126.26,
+   "at": "74:2.44",
+   "bar": 74,
+   "beat": 2.44,
+   "section": "s11",
+   "shot": {
+    "index": 64,
+    "name": "c2_sil",
+    "t": 124.787,
+    "end": 126.501,
+    "at": "73:3",
+    "act": "50-cards.json",
+    "line": 927
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3788,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.112Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.112Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.112Z"
+  },
+  {
+   "id": "n18",
+   "status": "new",
+   "source": "review",
+   "reviewLabel": "v9",
+   "reviewKey": "c2_orbit_b|A|1315",
+   "text": "Review A (v9): Large flat, unshaded confetti squares (red, orange, teal) cross in front of the head and torso at 131.53 to 131.56. They are unlit and hide part of his face, then another sits over his hand at 131.63 to 131.66. Fix: Shade or shrink the confetti, or keep it from passing between the camera and his head and torso.",
+   "t": 131.53,
+   "at": "77:2.73",
+   "bar": 77,
+   "beat": 2.73,
+   "section": "s12",
+   "shot": {
+    "index": 67,
+    "name": "c2_orbit_b",
+    "t": 130.788,
+    "end": 133.36,
+    "at": "77:1",
+    "act": "50-cards.json",
+    "line": 936
+   },
+   "render": "greener-v9.mp4",
+   "version": null,
+   "frame": 3946,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:35:18.117Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:35:18.117Z",
+     "status": "new",
+     "by": "review"
+    }
+   ],
+   "updated": "2026-11-07T19:35:18.117Z"
+  },
+  {
+   "id": "n19",
+   "status": "needs J",
+   "source": "room",
+   "text": "Framing: his head is cut off at the top of the frame for the whole hook. Tilt up or pull back so the whole figure is in frame on the stairs, head included.",
+   "t": 115.9,
+   "at": "68:2.27",
+   "bar": 68,
+   "beat": 2.27,
+   "section": "s11",
+   "shot": {
+    "index": 59,
+    "name": "hook_3",
+    "t": 115.356,
+    "end": 117.071,
+    "at": "68:1",
+    "act": "50-cards.json",
+    "line": 882
+   },
+   "frame": 3477,
+   "render": "greener-v9.mp4",
+   "version": 9,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:36:14.045Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:36:14.045Z",
+     "status": "new",
+     "by": "J"
+    },
+    {
+     "when": "2026-11-07T19:36:14.156Z",
+     "status": "in progress",
+     "by": "claude"
+    },
+    {
+     "when": "2026-11-07T19:37:41.414Z",
+     "status": "needs J",
+     "by": "claude",
+     "text": "Fix is in and rendered, but it fails QA (5.9 of 10): Opening is washed out by a bright pink bloom and the figure is tiny and faint against the white door, so the subject barely reads. Camera p…"
+    },
+    {
+     "when": "2026-11-07T19:40:05.449Z",
+     "status": "needs J",
+     "by": "J",
+     "text": "Change taken out"
+    }
+   ],
+   "updated": "2026-11-07T19:40:05.449Z",
+   "auto": {
+    "state": "left",
+    "step": null,
+    "updated": "2026-11-07T19:37:41.414Z",
+    "qa": {
+     "score": 5.9,
+     "pass": false,
+     "worst": "Opening is washed out by a bright pink bloom and the figure is tiny and faint against the white door, so the subject barely reads. Camera p…"
+    },
+    "past": [
+     {
+      "what": "Widened the lens so the whole figure, head included, fits on the stairs through the hook.",
+      "when": "2026-11-07T19:37:41.408Z"
+     }
+    ]
+   },
+   "clip": {
+    "after": "videos/greener/notes/n19-after1.mp4",
+    "before": "videos/greener/notes/n19-before.mp4",
+    "from": 115.356,
+    "to": 117.071
+   },
+   "question": "The change is out. Say what you want instead."
+  },
+  {
+   "id": "n20",
+   "status": "needs J",
+   "source": "room",
+   "text": "Timing: the look to the house comes too early, it lands before the word. Hold the eyes forward about half a beat longer, then go to the house.",
+   "t": 18.4,
+   "at": "11:2.81",
+   "bar": 11,
+   "beat": 2.81,
+   "section": "s2",
+   "shot": {
+    "index": 7,
+    "name": "weakness",
+    "t": 17.625,
+    "end": 20.196,
+    "at": "11:1",
+    "act": "50-cards.json",
+    "line": 348
+   },
+   "frame": 552,
+   "render": "greener-v9.mp4",
+   "version": 9,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:36:14.170Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:36:14.170Z",
+     "status": "new",
+     "by": "J"
+    },
+    {
+     "when": "2026-11-07T19:37:41.458Z",
+     "status": "in progress",
+     "by": "claude"
+    },
+    {
+     "when": "2026-11-07T19:39:05.511Z",
+     "status": "fixed",
+     "by": "claude",
+     "text": "The look to the house now starts half a beat later, and the look away moves back by the same amount, so the glance keeps its length."
+    },
+    {
+     "when": "2026-11-07T19:40:05.571Z",
+     "status": "needs J",
+     "by": "J",
+     "text": "Change taken out"
+    }
+   ],
+   "updated": "2026-11-07T19:40:05.571Z",
+   "auto": {
+    "state": "left",
+    "step": null,
+    "updated": "2026-11-07T19:39:05.511Z",
+    "qa": {
+     "score": 7.4,
+     "pass": true,
+     "worst": "The idea is eyes go to the house, then away, fast. His gaze stays down and to the side the whole shot, with no clear look up at the house a…"
+    },
+    "past": [
+     {
+      "what": "The look to the house now starts half a beat later, and the look away moves back by the same amount, so the glance keeps its length.",
+      "when": "2026-11-07T19:38:54.901Z"
+     }
+    ],
+    "review": {
+     "a": 0,
+     "aNearby": 0,
+     "b": 0,
+     "c": 0,
+     "worst": null,
+     "report": "videos/greener/review/note-n20/report.md",
+     "cost": 0.021
+    }
+   },
+   "clip": {
+    "after": "videos/greener/notes/n20-after1.mp4",
+    "before": "videos/greener/notes/n20-before.mp4",
+    "from": 17.625,
+    "to": 20.196
+   },
+   "question": "The change is out. Say what you want instead."
+  },
+  {
+   "id": "n21",
+   "status": "needs J",
+   "source": "room",
+   "text": "this looks bad",
+   "t": 37.2,
+   "at": "22:2.67",
+   "bar": 22,
+   "beat": 2.67,
+   "section": "s3",
+   "shot": {
+    "index": 15,
+    "name": "big_deal",
+    "t": 36.485,
+    "end": 38.2,
+    "at": "22:1",
+    "act": "50-cards.json",
+    "line": 394
+   },
+   "frame": 1116,
+   "render": "greener-v9.mp4",
+   "version": 9,
+   "frameImage": null,
+   "images": [],
+   "created": "2026-11-07T19:36:14.309Z",
+   "history": [
+    {
+     "when": "2026-11-07T19:36:14.309Z",
+     "status": "new",
+     "by": "J"
+    },
+    {
+     "when": "2026-11-07T19:39:05.520Z",
+     "status": "in progress",
+     "by": "claude"
+    },
+    {
+     "when": "2026-11-07T19:39:12.138Z",
+     "status": "needs J",
+     "by": "claude",
+     "text": "\"This looks bad\" doesn't say what's wrong (light, framing, pose, mood?), so any change would be a guess. Tell me what bothers you in this frame."
+    }
+   ],
+   "updated": "2026-11-07T19:39:12.138Z",
+   "auto": {
+    "state": "left",
+    "step": null,
+    "updated": "2026-11-07T19:39:12.138Z"
+   },
+   "question": "\"This looks bad\" doesn't say what's wrong (light, framing, pose, mood?), so any change would be a guess. Tell me what bothers you in this frame."
+  }
+ ]
+}

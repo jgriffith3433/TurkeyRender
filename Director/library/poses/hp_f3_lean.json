@@ -1,0 +1,71 @@
+{
+  // Hawkes Punch flight pose hp_f3_lean (zero-g 6.3), a 2 s loop to hold under a fly cue.
+
+ "name": "hp_f3_lean",
+ "about": "F3 anime lean flight: pitched 38 deg into the travel, arms trailing at the sides, legs trailing together; casual superhuman travel (both men in c7_side).",
+ "seed": {
+  "clip": "zg_neutral_b",
+  "t": 0
+ },
+ "loop": true,
+ "length": 2.0,
+ "poses": {
+  "fly": {
+   "from": {
+    "clip": "zg_neutral_b",
+    "t": 0
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": 0.15,
+    "Right Upper Leg Front-Back": 0.2,
+    "Left Lower Leg Stretch": 0.65,
+    "Right Lower Leg Stretch": 0.55,
+    "Left Upper Leg In-Out": 0.02,
+    "Right Upper Leg In-Out": 0.02,
+    "Left Foot Up-Down": 0.7,
+    "Right Foot Up-Down": 0.7,
+    "Left Arm Down-Up": -0.5,
+    "Right Arm Down-Up": -0.5,
+    "Left Arm Front-Back": 0.3,
+    "Right Arm Front-Back": 0.3,
+    "Left Forearm Stretch": 0.8,
+    "Right Forearm Stretch": 0.8,
+    "Neck Nod Down-Up": 0.15,
+    "Head Nod Down-Up": 0.1
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.4
+    }
+   },
+   "root": {
+    "rot": [
+     38,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "fly"
+  },
+  {
+   "t": 2.0,
+   "pose": "fly"
+  }
+ ],
+ "cycles": [
+  {
+   "period": 1.0,
+   "phase": 0,
+   "muscles": {
+    "Left Lower Leg Stretch": 0.03,
+    "Right Lower Leg Stretch": -0.03,
+    "Chest Front-Back": 0.01
+   }
+  }
+ ]
+}

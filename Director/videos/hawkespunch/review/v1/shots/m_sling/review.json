@@ -1,0 +1,75 @@
+{
+ "id": "m_sling",
+ "f0": 2949,
+ "f1": 3024,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 98.3,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 98.433,
+   "why": "one patch jumps (cell 133.3, x3.1)",
+   "file": "spike-02953.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 100.167,
+   "why": "one patch jumps (cell 147.8, x2.1)",
+   "file": "spike-03005.jpg"
+  }
+ ],
+ "hash": "c079b09fa51cb02a",
+ "summary": "The 98.43 spike is just the cut, so it isn't a fault. The slingshot barely reads: the figure is a tiny, stiff silhouette on Mars. At 100.13 the camera clips through huge dark geometry.",
+ "faults": [
+  {
+   "t": 100.13,
+   "sev": "A",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The frame is filled with giant dark navy and black curved slabs and a red wedge. It looks like the camera passing through or inside geometry. The next tile (100.16) jumps to a red ridge, Jupiter and a beige sky with no transition.",
+   "fix": "Move the camera path or the terrain and shell meshes so the lens never enters them. Otherwise cut this frame out."
+  },
+  {
+   "t": 98.43,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "After the cut, the hero is a tiny flat black silhouette hugging the edge of Mars. Mars fills the frame and the character is hard to find. The turkey on top is a few pixels of red and black, so 'watching from the top' doesn't read.",
+   "fix": "Push in on the hero and the turkey, or frame them larger, so the subject and the turkey are readable."
+  },
+  {
+   "t": 98.53,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "From 98.46 to 98.63 the silhouette keeps the same stiff, spread-limb pose. It drifts across the face of Mars with no bank, lean, anticipation or arc, so it doesn't look like a hard slingshot turn.",
+   "fix": "Bank the figure into the curve, add a pose change or lean through the turn, and move it along a clear arc around the planet."
+  },
+  {
+   "t": 98.56,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "Mars is almost static and only swells slightly across the shot. The speed streaks on the right are the only sense of motion, so the whoosh feels weak.",
+   "fix": "Add a camera sweep or parallax, or make Mars slide and rotate faster as the hero passes, to sell the speed."
+  },
+  {
+   "t": 100.29,
+   "sev": "C",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "From 100.26 to 100.36 the blue sphere and its cluster of rock chunks sit at the right edge, half cropped and almost still, in a flat beige empty frame.",
+   "fix": "Recompose so the subject sits inside the frame and add motion to the debris."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 9151,
+  "out": 2253
+ },
+ "cost": 0.0408
+}

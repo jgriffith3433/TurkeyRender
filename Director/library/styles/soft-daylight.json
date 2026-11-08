@@ -1,0 +1,14 @@
+{
+  // A warm, gentle animated short at golden hour: the sun-lit Pixar short, the Ghibli morning. Low sun, cool shade, filmic curve, no neon.
+  "about": "A warm, gentle morning at golden hour, like a sun-lit animated short. Commercials, comedy, anything that should feel kind.",
+  "light": "golden_morning",
+  "grade": {
+    "exposure": 0.2, "contrast": 6, "saturation": 2, "hue": 0, "vignette": 0.2, "grain": 0.05, "bloom": 0.55, "threshold": 0.95, "chroma": 0,
+    "split": 0.3, "splitA": "#7a8796", "splitB": "#f6d6a6", "lift": 0.012, "halation": 0.25,
+    "haze": 0.6, "veil": 0.5, "dust": 0.8, "curve": 0.8, "skin": 1, "sunRim": 1.1
+  },
+  "lens": { "close-up": 85, "medium": 50, "wide": 32, "apertureScale": 0.45 },
+  "type": { "color": "#3a3026", "style": "fade", "size": 58, "pos": [0.5, 0.14, 0], "in": 0.4, "out": 0.4 },
+  // A new video's score has a plain white stage key. It would flatten this rig, so the rig starts by putting it out.
+  "cues": [ { "at": 0, "light": "key", "intensity": 0 } ]
+}

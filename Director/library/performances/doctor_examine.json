@@ -1,0 +1,410 @@
+{
+ "name": "doctor_examine",
+ "about": "The doctor looks him over, standing in front of the seated patient (`patient`, an actor): leans in to his eyes (the eyes dart left and right between his), the left hand lifts his chin, then the right hand holds the stethoscope on his chest while her head tilts to listen, then she straightens, holds the pad up in the left hand and writes with the right. Props (stethoscope, pad, pen) are the set's, attached to her hands by the card. Calm and kind: small smile, slow blinks.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "9s",
+ "min": "5s",
+ "params": {
+  "patient": "person"
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "overlap",
+   "amount": 0.4,
+   "head": 0.3,
+   "arms": 0.6,
+   "for": "0.1s"
+  },
+  {
+   "at": 0.1,
+   "do": "face",
+   "smile": 0.3,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.2,
+   "do": "keys",
+   "successive": true,
+   "keys": [
+    {
+     "t": 1,
+     "ease": "inout",
+     "hold": 3.1,
+     "hips": [
+      0,
+      -0.03,
+      0.06
+     ],
+     "bones": {
+      "spine": [
+       9,
+       0,
+       0
+      ],
+      "chest": [
+       10,
+       0,
+       0
+      ],
+      "neck": [
+       -6,
+       0,
+       0
+      ],
+      "head": [
+       -5,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "t": 5,
+     "ease": "inout",
+     "bones": {}
+    }
+   ],
+   "release": "0.4s"
+  },
+  {
+   "at": 0.6,
+   "do": "reach",
+   "hand": "left",
+   "to": "$patient.head",
+   "offset": [
+    0,
+    -0.14,
+    0.09
+   ],
+   "for": "0.8s",
+   "ease": "hand"
+  },
+  {
+   "at": 0.6,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": "0.5s"
+  },
+  {
+   "at": 1.55,
+   "do": "reach",
+   "hand": "left",
+   "to": "$patient.head",
+   "offset": [
+    0,
+    -0.1,
+    0.1
+   ],
+   "for": "0.45s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.7,
+   "do": "eyes",
+   "yaw": -4,
+   "pitch": 0,
+   "for": "0.07s"
+  },
+  {
+   "at": 2.05,
+   "do": "eyes",
+   "yaw": 4,
+   "pitch": 0,
+   "for": "0.07s"
+  },
+  {
+   "at": 2.4,
+   "do": "eyes",
+   "yaw": 0,
+   "pitch": 0,
+   "for": "0.07s"
+  },
+  {
+   "at": 1.3,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": 2.5,
+   "do": "reach",
+   "hand": "left",
+   "weight": 0,
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.6,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.4,
+   "for": "0.5s"
+  },
+  {
+   "at": 2.7,
+   "do": "reach",
+   "hand": "right",
+   "to": "$patient.chest",
+   "offset": [
+    0.04,
+    0.04,
+    0.13
+   ],
+   "for": "0.9s",
+   "ease": "hand"
+  },
+  {
+   "at": 2.8,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.55,
+   "for": "0.5s"
+  },
+  {
+   "at": 3.3,
+   "do": "gaze",
+   "to": "$patient.chest",
+   "for": "0.5s",
+   "ease": "inout",
+   "head": 0.5
+  },
+  {
+   "at": 3.5,
+   "do": "pose",
+   "bones": {
+    "neck": [
+     0,
+     -8,
+     10
+    ],
+    "head": [
+     2,
+     -10,
+     12
+    ]
+   },
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": 4,
+   "do": "blink",
+   "for": "0.24s"
+  },
+  {
+   "at": 4.5,
+   "do": "pose",
+   "bones": {
+    "neck": [
+     0,
+     0,
+     0
+    ],
+    "head": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 4.6,
+   "do": "reach",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": 4.6,
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 4.8,
+   "do": "face",
+   "smile": 0.45,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 5.3,
+   "do": "layer",
+   "clip": "Idle1CheckTime",
+   "mask": "upper",
+   "start": 0.7,
+   "speed": 0.9,
+   "once": 1,
+   "weight": 1,
+   "for": "=for-5.5",
+   "blend": "0.35s"
+  },
+  {
+   "at": 5.6,
+   "do": "gaze",
+   "toRel": [
+    -0.12,
+    1.15,
+    0.33
+   ],
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 5.5,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.7,
+   "for": "0.4s"
+  },
+  {
+   "at": 5.5,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.4,
+   "for": "0.4s"
+  },
+  {
+   "at": 5.6,
+   "do": "reach",
+   "hand": "right",
+   "toRel": [
+    -0.06,
+    1.12,
+    0.36
+   ],
+   "for": "0.5s",
+   "ease": "hand"
+  },
+  {
+   "at": 6.2,
+   "do": "pose",
+   "bones": {
+    "rightHand": [
+     0,
+     6,
+     0
+    ]
+   },
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": 6.4,
+   "do": "pose",
+   "bones": {
+    "rightHand": [
+     0,
+     -5,
+     0
+    ]
+   },
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": 6.6,
+   "do": "pose",
+   "bones": {
+    "rightHand": [
+     0,
+     6,
+     0
+    ]
+   },
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": 6.8,
+   "do": "pose",
+   "bones": {
+    "rightHand": [
+     0,
+     -5,
+     0
+    ]
+   },
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": 7,
+   "do": "pose",
+   "bones": {
+    "rightHand": [
+     0,
+     5,
+     0
+    ]
+   },
+   "for": "0.14s",
+   "ease": "inout"
+  },
+  {
+   "at": 7.2,
+   "do": "pose",
+   "bones": {
+    "rightHand": [
+     0,
+     0,
+     0
+    ]
+   },
+   "for": "0.2s",
+   "ease": "inout"
+  },
+  {
+   "at": 6.9,
+   "do": "blink",
+   "for": "0.22s"
+  },
+  {
+   "at": "=for-1.1",
+   "do": "reach",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.6s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-1.0",
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=for-0.9",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.4,
+   "for": "0.5s"
+  },
+  {
+   "at": "=for-0.8",
+   "do": "face",
+   "smile": 0.5,
+   "for": "0.5s",
+   "ease": "inout"
+  }
+ ],
+ "test": {
+  "tail": 0.4
+ }
+}

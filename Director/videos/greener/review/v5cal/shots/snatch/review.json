@@ -1,0 +1,39 @@
+{
+ "id": "snatch",
+ "f0": 2279,
+ "f1": 2330,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 75.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "07c6b5ac3dde7181",
+ "summary": "The shot opens with the hand and blade moving fast up into his face, then the blade sits across his eye and nose, so he can't read as looking at it.",
+ "faults": [
+  {
+   "t": 76.09,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The first frames of the shot are still moving. From 76.06 to 76.13 the hand and blade swing up from chest height to the face and the head dips. That reads as the cut tweening into the pose, not a shot that starts settled.",
+   "fix": "Start the shot on the held pose with the blade already raised, or trim the first 5 frames so the move is over before the shot begins."
+  },
+  {
+   "t": 76.13,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The blade lies diagonally across his face and covers his left eye and the bridge of his nose from 76.09 to 76.23. The line of action cuts through the face, and his eyes are hidden when he should be looking at the blade.",
+   "fix": "Move the hand lower and out to the side, so the blade sits beside the face or below the eyeline, with both eyes visible and aimed at the blade."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3561,
+  "out": 888
+ },
+ "cost": 0.016
+}

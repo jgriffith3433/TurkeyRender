@@ -1,0 +1,39 @@
+{
+ "id": "sparrow_pastel",
+ "f0": 1198,
+ "f1": 1275,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 39.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "35ef782946e4914f",
+ "summary": "The strip is stable with no pops or flicker, but the sparrow, which is the subject, sits jammed in the top-left corner and is cut off by the frame edge.",
+ "faults": [
+  {
+   "t": 40,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The sparrow is the subject of the shot but is pushed into the top-left corner. Its body and head are cropped by the left edge, and it stays cropped in every tile from 39.96 to 40.20. The viewer cannot read the shiver or puff-up from a clipped bird.",
+   "fix": "Reframe or shift the camera or bird so the whole sparrow sits inside the frame with some margin, ideally near the centre or on a third."
+  },
+  {
+   "t": 40.1,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "Dense dark foliage and the large wooden blocks take up most of the frame and draw the eye away from the small bird. Leaves overlap the bird's upper edge, so the silhouette is not clear.",
+   "fix": "Move the foliage off the bird or lower its contrast, and give the bird a clear backdrop."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3581,
+  "out": 685
+ },
+ "cost": 0.014
+}

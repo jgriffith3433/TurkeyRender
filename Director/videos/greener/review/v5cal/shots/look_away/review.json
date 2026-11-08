@@ -1,0 +1,67 @@
+{
+ "id": "look_away",
+ "f0": 2021,
+ "f1": 2072,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 67.367,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 68.233,
+   "why": "flow spike x5.5",
+   "file": "spike-02047.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 68.667,
+   "why": "flow spike x6.4",
+   "file": "spike-02060.jpg"
+  }
+ ],
+ "hash": "481ec5c59c1fd910",
+ "summary": "Cut strip shows the head and torso swinging and the right arm drifting through the first frames, and the idea of turning away together with the butlers is not clear in the frames; the wide shots read mostly smooth with no clear pops.",
+ "faults": [
+  {
+   "t": 67.53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "In the first frames of the shot the character's torso and head shift across the frame and the camera framing changes noticeably between 67.46 and 67.53 (body slides left/lower, head tilts), reading as the cut still settling.",
+   "fix": "Start the shot on the settled framing and pose so frames 3-5 hold still."
+  },
+  {
+   "t": 67.59,
+   "sev": "B",
+   "rule": "face",
+   "seen": "certain",
+   "what": "Eyes are squeezed shut or half closed for 67.56-67.63 with a flat, slack mouth, so he looks blank or asleep instead of watching or knowing something.",
+   "fix": "Time the blink to the head turn and open the eyes onto the butlers, with a clear sly expression."
+  },
+  {
+   "t": 68.5,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The wide shots show the butlers staying in the same lined-up pose, with no visible simultaneous turn away, so the 'all turn away at once' beat is not readable. The character's loose, noodly arm swings also read as dance rather than 'we saw nothing'.",
+   "fix": "Add a clear synchronised butler turn at the beat and give the character a sharp hold pose."
+  },
+  {
+   "t": 68.76,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The arm is bent across the chest and then swings out stiffly. The forearm lines up with the torso, so the silhouette is muddy in 68.66-68.76.",
+   "fix": "Open the arm away from the body so the line of action reads."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6330,
+  "out": 663
+ },
+ "cost": 0.0193
+}

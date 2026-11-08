@@ -1,0 +1,53 @@
+{
+ "id": "b_can",
+ "f0": 5986,
+ "f1": 6100,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 199.533,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 203.233,
+   "why": "frame difference x21.8 (21.84)",
+   "file": "spike-06097.jpg"
+  }
+ ],
+ "hash": "f87c07eb885f8f4b",
+ "summary": "The can is already in frame at the cut and stays at the same screen spot while the background slides past, so it never rolls in or stops; at 203.23 the clinic background swaps to a flat grey wall in one frame.",
+ "faults": [
+  {
+   "t": 203.23,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 203.19 and 203.23 the clinic floor, wall and bench vanish and the frame becomes a flat featureless grey. The can stays put on the same screen spot. It reads as a camera or background pop, or a wall or card in front of the lens, and the can is left floating in a void.",
+   "fix": "Find what fills the frame at 203.23 (camera clipping into a wall or a stray backdrop plane) and remove it or move the camera. The floor and clinic backdrop should stay visible behind the can."
+  },
+  {
+   "t": 199.56,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is that the can rolls into frame and stops. In 199.56-199.79 the can is already in frame and holds the same screen position and pose while the pillars and walls slide past behind it. It looks locked to the camera, not rolling on the floor, so the roll and stop never read.",
+   "fix": "Animate the can travelling across the floor from off-screen, with the camera held still or only following loosely, and let it decelerate to a stop with a small wobble."
+  },
+  {
+   "t": 199.66,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The can shows almost no rotation or travel in these frames. Only its screen position stays fixed while the background moves, so it seems to slide with no roll and has no weight.",
+   "fix": "Add roll rotation that matches its speed, and a settle wobble as it stops."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4966,
+  "out": 1163
+ },
+ "cost": 0.0216
+}

@@ -1,0 +1,40 @@
+{
+ "clip": "mx_sit_to_stand",
+ "seconds": 6.167,
+ "popCount": 12,
+ "pops": [
+  "2.033s RightToes kink 0.084 m",
+  "2.067s LeftToes kink 0.200 m",
+  "2.100s LeftToes kink 0.211 m",
+  "2.300s RightLowerLeg kink 0.699 m",
+  "2.333s RightLowerLeg kink 0.694 m",
+  "2.400s RightLowerLeg kink 0.725 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.084 m, worst step 0.009 m at 0.47s",
+  "right foot on floor moved 0.000 m, worst step 0.000 m at 0.00s"
+ ],
+ "hipsTop": 1.19036782,
+ "hipsLow": 0.10320615,
+ "hipsTravel": "(-0.08, 0.95, 0.05)",
+ "limits": {
+  "RightUpperLeg": 122.5,
+  "LeftLowerLeg": 41.2,
+  "Chest": 22.2,
+  "RightFoot": 15.3,
+  "groundHipsCm": 13.9,
+  "LeftFoot": 9.6,
+  "LeftUpperLeg": 7.9,
+  "LeftLowerArm": 2.1,
+  "Spine": 1,
+  "RightLowerArm": 0.6
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_sit_to_stand was rejected by admission: joint limits moved RightUpperLeg 122.1 deg; pop: RightLowerLeg kinks 0.804 m at 2.39s"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_to_stand_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_sit_to_stand_three.mp4"
+ ]
+}

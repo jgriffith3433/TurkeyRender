@@ -1,0 +1,13 @@
+{
+  // _fx_test: the epic toolkit's proof (Runtime/MVEpicFx.cs, Editor/MVEpicScore.cs). Ten seconds: a punch with an anticipation hold, a 2-4 frame
+  // strike, a smear, the impact frame, hitstop, shockwave, debris and shake, then the plain look's deadpan face held 2 s. 24 fps, his rig, native.
+  // Hawkes Punch's song for its clock only (no music). Render: mv --video _fx_test final --w 1280 --h 720 --fps 24. Not a video for J.
+  "song": "Assets/Videos/hawkespunch/Song/audio.mp3",
+  "music": 0,
+  "native": true,
+  "fps": 24,
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {} },
+  "targets": { "cutsPerBar": {} }
+}

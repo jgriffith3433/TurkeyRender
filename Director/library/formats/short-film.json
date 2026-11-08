@@ -1,0 +1,14 @@
+{
+  // A short: one want, one obstacle, one change. Long takes are allowed; the cut breathes.
+  "about": "A 3 to 8 minute short film.",
+  "aspect": [2, 1], "render": [1920, 960], "fps": 24, "length": 300,
+  "pacing": { "avgSeconds": [4, 9], "maxSeconds": 40 },
+  "beats": [
+    { "part": "setup", "share": 0.2, "job": "who and what they want" },
+    { "part": "inciting", "share": 0.1, "job": "the thing that will not go away" },
+    { "part": "try and fail", "share": 0.35, "job": "three attempts, each costs more" },
+    { "part": "crisis", "share": 0.15, "job": "the worst moment, the choice" },
+    { "part": "climax", "share": 0.12, "job": "the choice in action" },
+    { "part": "after", "share": 0.08, "job": "the new normal, a last image" }
+  ]
+}

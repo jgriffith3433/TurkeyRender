@@ -1,0 +1,47 @@
+{
+ "id": "dv_cu_2",
+ "f0": 2561,
+ "f1": 2612,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 85.367,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "12b294136c82bcf1",
+ "summary": "The face is cropped at the nose or mouth in every tile, and the framing drifts after 85.49, which looks like the cut settling.",
+ "faults": [
+  {
+   "t": 85.39,
+   "sev": "A",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The head is cut off at the nose or mouth in every tile, so his eyes are never visible. The brief is 'he means this', down the lens, and that needs his eyes.",
+   "fix": "Tilt the camera up or lower it so the eyes and full face are in frame."
+  },
+  {
+   "t": 85.53,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "From 85.49 to 85.53 the framing shifts. The head rises further out of frame, the torso looks larger, and the turkey and background slide away. This reads as the camera or body settling after the cut, not a held first frame.",
+   "fix": "Lock the camera framing from the first frame of the shot, or trim the first 5 frames."
+  },
+  {
+   "t": 85.59,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The raised hand is limp and curled beside the shoulder with no clear gesture, and it drops and drifts through 85.56 to 85.63. The line of action is weak and the pose is mushy.",
+   "fix": "Hold a clear gesture pose, such as an open hand or point, then move quickly to the next one."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3555,
+  "out": 1094
+ },
+ "cost": 0.0181
+}

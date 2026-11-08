@@ -3,8 +3,9 @@
   Director/SONG.md     a plain-English map: section by section, bar by bar, where it builds, breaks and drops
   Director/song-map.png   the energy of each stem across the whole song
 Run: uv run --python 3.12 --with librosa --with soundfile --with matplotlib Director/tools/analyze_deep.py
+For another video: ... analyze_deep.py --dir Director/videos/<name> --audio <song file>. Stems come from <dir>/stems/htdemucs/<song name>.
 """
-import json, os, re
+import argparse, json, os, re
 import numpy as np, librosa
 from scipy.signal import find_peaks
 from scipy.ndimage import uniform_filter1d, gaussian_filter1d
@@ -13,12 +14,14 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-D = os.path.join(HERE, "..")
-STEMS = os.path.join(D, "stems", "htdemucs", "Audio")
+ap = argparse.ArgumentParser(); ap.add_argument("--dir"); ap.add_argument("--audio"); args = ap.parse_args()
+D = args.dir or os.path.join(HERE, "..")
+AUDIO = args.audio or os.path.join(D, "..", "Assets", "Song", "Audio.mp3")
+STEMS = os.path.join(D, "stems", "htdemucs", os.path.splitext(os.path.basename(AUDIO))[0])
 SR, HOP, FPS = 22050, 256, 60
 
 def load(n): return librosa.load(os.path.join(STEMS, n + ".wav"), sr=SR, mono=True)[0]
-mix = librosa.load(os.path.join(D, "..", "Assets", "Song", "Audio.mp3"), sr=SR, mono=True)[0]
+mix = librosa.load(AUDIO, sr=SR, mono=True)[0]
 drums, bass, vocals, other = load("drums"), load("bass"), load("vocals"), load("other")
 n = min(map(len, (mix, drums, bass, vocals, other)))
 mix, drums, bass, vocals, other = mix[:n], drums[:n], bass[:n], vocals[:n], other[:n]
@@ -28,8 +31,11 @@ t_grid = np.arange(0, dur, 1 / FPS)
 # ---- beats: the drums sit on one exact tempo (87 BPM, a 3-3-2 kick pattern), so fit one straight grid to them
 oenv = librosa.onset.onset_strength(y=drums + .25 * bass, sr=SR, hop_length=HOP)
 ft = librosa.frames_to_time(np.arange(len(oenv)), sr=SR, hop_length=HOP)
-best = (-1e9, 87.0, 0.0)
-for bpm in np.arange(86.7, 87.3, .005):
+# TK Shock is known to be 87. Another song: estimate, then fit closely around that.
+guess = 87.0 if not args.dir else float(np.atleast_1d(librosa.feature.tempo(onset_envelope=oenv, sr=SR, hop_length=HOP))[0])
+while guess > 140: guess /= 2  # beat trackers read double time; a wrong half is easier to direct against than a wrong double
+best = (-1e9, guess, 0.0)
+for bpm in np.arange(guess - .3, guess + .3, .005):
     ib = 60 / bpm
     for off in np.arange(0, ib, .005):
         v = float(np.interp(np.arange(off, dur, ib), ft, oenv).mean())

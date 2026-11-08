@@ -1,0 +1,179 @@
+# Hawkes Punch, the commercial: 2000s daytime TV folding out of the stars. Commercial origin is [900,0,0]. Marks: library/sets/commercial.json.
+# He is on stool_l, the other on stool_r; both pitch to the lens. Native path: mx_sitting_talking, mx_sit_point, mx_sitting_drinking, mx_thumbs_up on the right arm, mx_nod on the head. Lower thirds and the side-effects ticker are gfx cues. The announcer is acts/70-lines.json (156.6-170 s).
+
+- id: tv_fold
+  idea: the set folds up out of the stars around them, piece by piece on the fill, and lands on the chorus
+  feel: ta-da
+  mood: tv_cheese
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: fold_cam, on: fold_aim, lens: 28}
+  raw:
+    - {at: 0, sky: {top: "#03040a", mid: "#04050c", bottom: "#020309", stars: 1, ambient: "#1a1424", density: 0}, for: 0}
+    - {at: 0.75s, sky: {top: "#ffd9ec", mid: "#fff2f7", bottom: "#e9d6ff", stars: 0, ambient: "#b9a7b6", density: 0}, for: 0.4s}
+    - {at: 0.02s, do: attach, on: tv_can_a, to: person.leftHand, pos: [-0.004, 0.072, -0.05], rot: [0, 0, -90]}
+    - {at: 0.02s, do: attach, on: tv_can_b, to: other.leftHand, pos: [-0.004, 0.072, -0.05], rot: [0, 0, -90]}
+    - {at: 0.02s, do: show, on: tv_can_a}
+    - {at: 0.02s, do: show, on: tv_can_b}
+    - {at: 0, do: hide, on: commercial_can_a}
+    - {at: 0, do: hide, on: commercial_can_b}
+    - {at: 0, do: pop, on: commercial_floor, for: 0.4b}
+    - {at: 0, do: pop, on: commercial_floor_edge, for: 0.4b}
+    - {at: 0.05s, do: fold, on: [commercial_backdrop_c, commercial_backdrop_l, commercial_backdrop_r, commercial_flat_pink, commercial_flat_blue, commercial_flat_yellow, commercial_sign, commercial_stool_l, commercial_stool_r, commercial_can_big, commercial_light_fl, commercial_light_fr, commercial_light_bl, commercial_light_br, commercial_boom, commercial_tv_cam_a, commercial_tv_cam_b], pivot: [0, 0, 0], axis: [1, 0, 0], angle: -90, for: 0.45s, stagger: 0.04s, ease: back, sfx: wood_scrape, sfxVolume: 0.5}
+
+- id: tv_wide
+  idea: the whole set: pastel, the sign, two stools, a giant can, and the two of them smiling at us; a lower third
+  feel: cheesy, bright
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_wide, on: set_aim, lens: 28}
+  raw:
+    - {at: 0.3b, gfx: lower, title: "HAWKES PUNCH", sub: "Ask your doctor", color: "#ff2a6a", for: 3.4b}
+
+- id: tv_him
+  idea: he pitches it to the lens, can up, the big smile, "swallow the sky"
+  feel: morning show
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_cu_l, on: person, lens: 50}
+  raw:
+    - {at: 0.2b, gfx: lower, title: "HIM", sub: "Patient. 1 of a healthy amount", color: "#ff2a6a", for: 3.5b}
+
+- id: tv_other
+  idea: the other one points right down the lens: "you're just one in a healthy amount"
+  feel: you
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, blend: 0, look: lens_cu_r, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_cu_r, on: other, lens: 50}
+  raw:
+    - {at: 0.02s, do: attach, on: tv_can_b, to: other.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90]}
+    - {at: 0.3b, do: layer, on: other, clip: mx_point_vegas, mask: leftArm, start: 0.1, once: 1, weight: 1, for: 1.3s, blend: 0.25s}
+    - {at: 0.3b, do: face, on: other, smile: 0.6, eyesWide: 0.2, for: 0.3s}
+    - {at: 0.2b, gfx: lower, title: "ALSO HIM", sub: "Also a patient", color: "#ff2a6a", for: 3.5b}
+
+- id: tv_doc
+  tags: [insert]
+  idea: the doctor's testimonial, "I've prescribed it to a healthy amount of people." Flat, writing, never looks up
+  feel: deadpan endorsement
+  set: clinic
+  mood: tv_hot
+  cast: {doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor, lens: 65}
+  shot: {pos: [700.6, 1.42, 1.25], look: doctor.rightHand, rot: null, fov: 34, screen: [0, 0.12], deadzone: false}
+  raw:
+    - {at: 0, do: fingers, on: doctor, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: face, on: doctor, blink: 0, eyesWide: 0.05, smile: 0, for: 0}
+    - {at: 0.2s, sfx: Assets/MusicVideo/Sfx/punch/pen_scratch_a.mp3, volume: 0.35}
+    - {at: 0.2b, gfx: lower, title: "A REAL DOCTOR", sub: "Not looking up", color: "#ff2a6a", for: 3.5b}
+
+- id: tv_can
+  idea: the giant can, turning slowly, lit like a car
+  feel: product
+  mood: tv_hot
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_can, on: can_aim, lens: 35}
+  raw:
+    - {at: 0, do: rotate, on: commercial_can_big, rot: [0, -20, 0], for: 0}
+    - {at: 0.01s, do: rotate, on: commercial_can_big, rot: [0, 30, 0], for: 2b, ease: linear}
+    - {at: 0.5b, do: attach, on: tv_can_a, to: person.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90]}
+    - {at: 0.5b, do: attach, on: tv_can_b, to: other.rightHand, pos: [0.004, 0.072, -0.05], rot: [0, 0, 90]}
+    - {at: 0.3b, gfx: bug, text: "HAWKES PUNCH", box: "#ff2a6a", for: 35.5b}
+
+- id: tv_both
+  idea: "here comes the floor": both drink, heads back, three swallows, ahh
+  feel: refreshing
+  cast: {person: {at: stool_l, clip: mx_sit_still, blend: 0, look: lens_a}, other: {at: stool_r, clip: mx_sit_still, blend: 0, look: lens_a}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 35}
+  raw:
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: layer, on: person, clip: mx_sitting_drinking, mask: "rightArm,head", start: 7.3, weight: 1, for: 3.7s, blend: 0.3s}
+    - {at: 0.15s, do: layer, on: other, clip: mx_sitting_drinking, mask: "rightArm,head", start: 7.3, weight: 1, for: 3.5s, blend: 0.3s}
+    - {at: 0.6s, do: face, on: person, blink: 1, for: 0.2s}
+    - {at: 0.8s, do: face, on: other, blink: 1, for: 0.2s}
+    - {at: 3.3s, do: face, on: person, blink: 0, smile: 0.7, jawOpen: 0.25, for: 0.25s}
+    - {at: 3.4s, do: face, on: other, blink: 0, smile: 0.7, jawOpen: 0.25, for: 0.25s}
+
+- id: tv_thumbs
+  idea: "Mmm! Tastes like a fist!" he punches the air; "A good fist." the other one, a connoisseur's fist pump and a nod
+  feel: sold
+  cast: {person: {at: stool_l, clip: mx_sitting_hands_thighs, blend: 0, look: lens_a}, other: {at: stool_r, clip: mx_sitting_hands_thighs, blend: 0, look: lens_a, args: {start: 0.6}}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 40}
+  raw:
+    - {at: 0, do: hide, on: tv_can_a}
+    - {at: 0, do: hide, on: tv_can_b}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0.1s, do: layer, on: person, clip: Cheer2, mask: rightArm, start: 2.75, once: 1, weight: 1, for: 1.6s, blend: 0.2s}
+    - {at: 2.2s, do: layer, on: other, clip: Cheer2, mask: rightArm, start: 2.75, once: 1, weight: 1, for: 1.5s, blend: 0.2s}
+    - {at: 2.5s, do: layer, on: other, clip: mx_nod, mask: head, start: 0.4, once: 1, weight: 1, for: 1.2s, blend: 0.2s}
+    - {at: 0.5s, do: face, on: person, smile: 0.9, for: 0.3s}
+    - {at: 0.6s, do: face, on: other, smile: 0.9, for: 0.3s}
+    - {at: 0.2b, gfx: lower, title: "IS IT RIGHT FOR YOU", sub: "Ask your doctor", color: "#ffd000", for: 5.6b}
+
+- id: tv_ticker
+  idea: the announcer reads the small print while a side-effects ticker scrolls too fast to read; they nod along
+  feel: legally required
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_b, on: set_aim, lens: 38, push: 0.12}
+  raw:
+    - {at: 0.5b, gfx: ticker, label: "IMPORTANT", text: "SIDE EFFECTS MAY INCLUDE SUDDEN FLIGHT, MEETING YOURSELF, THROWING PLANETS, BRIEFLY HOLDING THE EARTH, FOREHEAD CONTACT, MUSIC IN TOTAL SILENCE AND FALLING IN LOVE WITH A SPACE GHOST. NOT FOR EVERYONE. FOR EVERYONE LIKE YOU. DO NOT TAKE HAWKES PUNCH IF YOU ARE ALLERGIC TO PUNCHES. YOUR DOCTOR WILL PUNCH YOU.", speed: 520, color: "#ff2a6a", for: 14.5b}
+    - {at: 2b, do: layer, on: other, clip: mx_nod, mask: head, start: 0.4, once: 1, weight: 1, for: 1.4s, blend: 0.2s}
+    - {at: 4b, do: layer, on: person, clip: mx_nod, mask: head, start: 0.4, once: 1, weight: 1, for: 1.4s, blend: 0.2s}
+
+- id: tv_ahh
+  idea: "say ahh": he does, to the lens
+  feel: open wide
+  cast: {person: {at: stool_l, clip: mx_sit_still, blend: 0, look: lens_cu_l}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_cu_l, on: person, lens: 55}
+  raw:
+    - {at: 0.2s, do: face, on: person, jawOpen: 0.85, eyesWide: 0.25, smile: 0, for: 0.25s, ease: out}
+    - {at: 1.9s, do: face, on: person, jawOpen: 0, eyesWide: 0, smile: 0.5, for: 0.3s}
+
+- id: tv_ahh2
+  idea: "say ahh": the other, wider
+  feel: wider
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: mx_sit_still, blend: 0, look: lens_cu_r}}
+  camera: {preset: spot, from: lens_cu_r, on: other, lens: 55}
+  raw:
+    - {at: 0.2s, do: face, on: other, jawOpen: 0.95, eyesWide: 0.25, smile: 0, for: 0.25s, ease: out}
+    - {at: 1.9s, do: face, on: other, jawOpen: 0, eyesWide: 0, smile: 0.5, for: 0.3s}
+
+- id: tv_ahh3
+  idea: both, together, to the main lens
+  feel: say ahh
+  cast: {person: {at: stool_l, clip: mx_sit_still, look: lens_a}, other: {at: stool_r, clip: mx_sit_still, blend: 0, look: lens_a}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 40}
+  raw:
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0.2s, do: face, on: person, jawOpen: 0.9, eyesWide: 0.25, smile: 0, for: 0.25s, ease: out}
+    - {at: 1.9s, do: face, on: person, jawOpen: 0, eyesWide: 0, smile: 0.5, for: 0.3s}
+    - {at: 0.2s, do: face, on: other, jawOpen: 0.9, eyesWide: 0.25, smile: 0, for: 0.25s, ease: out}
+    - {at: 1.9s, do: face, on: other, jawOpen: 0, eyesWide: 0, smile: 0.5, for: 0.3s}
+
+- id: tv_sign
+  idea: the crane looks down over the sign and the giant can; the two of them hold the smile
+  feel: the end of the ad
+  mood: tv_hot
+  cast: {person: {at: stool_l, clip: mx_sitting_hands_thighs, blend: 0, look: lens_a}, other: {at: stool_r, clip: mx_sitting_hands_thighs, blend: 0, look: lens_a, args: {start: 0.6}}}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.42, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.42, for: 0}
+    - {at: 0.2s, do: face, on: person, smile: 0.9, for: 0.3s}
+    - {at: 0.35s, do: face, on: other, smile: 0.9, for: 0.3s}
+  camera: {preset: spot, from: lens_crane, on: sign, lens: 30}
+
+- id: tv_hold
+  idea: wide again, the smiles held too long, two thumbs up on the last fill
+  feel: still smiling
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_wide, on: set_aim, lens: 28}
+  raw:
+    - {at: 0, gfx: lower, title: "ASK YOUR DOCTOR", sub: "If Hawkes Punch is right for you", color: "#ffd000", for: 1b}
+    - {at: 0, do: face, on: person, smile: 0.9, for: 0.2s}
+    - {at: 0, do: face, on: other, smile: 0.9, for: 0.2s}

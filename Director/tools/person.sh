@@ -20,6 +20,7 @@ cp "$OUT/Body_OcclusionMap.png" $P/Person_Occlusion.png
 cp "$OUT/Head_BaseMap.png" $P/Person_Head.png
 cp "$OUT/Head_BumpMap.png" $P/Person_Head_Normal.png
 cp "$OUT/Head_MetallicGlossMap.png" $P/Person_Head_Gloss.png
+cp "$OUT/Head_MetallicGlossMap.png" $P/Person_Head_Gloss_hair.png   # Head.mat reads this one (the hair's sheen is in the map itself now)
 cp "$OUT/Head_OcclusionMap.png" $P/Person_Head_Occlusion.png
 node Director/mv.mjs refresh | tail -1 | cut -c1-90
 node Director/mv.mjs call humanoid '{"fbx":"Assets/MusicVideo/Person/Person.fbx","base":"Assets/MusicVideo/Person/Person_Base.png","normal":"Assets/MusicVideo/Person/Person_Normal.png","mat":"Assets/MusicVideo/Person/Person.mat","head":"Assets/MusicVideo/Person/Person_Head.png","headmat":"Assets/MusicVideo/Person/Head.mat"}' 2>&1 | tail -3 | tr -d '\n ' | cut -c1-120; echo

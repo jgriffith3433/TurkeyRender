@@ -1,0 +1,39 @@
+{
+ "id": "big_deal",
+ "f0": 1095,
+ "f1": 1147,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 36.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "df834a1322fff2b9",
+ "summary": "The cut is clean with no pops or render flicker, but he is jammed against the left edge and the blade the shot is built on isn't visible.",
+ "faults": [
+  {
+   "t": 36.56,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "He is pushed against the left edge. His back and left shoulder are cropped off and the right two-thirds of the frame is empty fence and house. This reads as bad framing rather than a deliberate quiet beat.",
+   "fix": "Pan or reframe so he sits at a third line with space in front of him, or push in on his face."
+  },
+  {
+   "t": 36.63,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The shot is meant to have the blade held up for 'it's not a big deal'. No blade is visible, and his right hand hangs low and open at his side, so the beat has no focal prop.",
+   "fix": "Raise the blade hand into frame at chest or face height, or recut the framing so the held-up blade is visible."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3576,
+  "out": 854
+ },
+ "cost": 0.0157
+}

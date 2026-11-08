@@ -1,0 +1,8 @@
+// Hawkes Punch: the space rig (library/lighting/space_sun.json, shared with the shot-check test) is too dark for his black tee on black space
+// (shot check "readable"). From the drift on, the rim and the blue fill run brighter; the cards' own light resets use the same levels.
+{
+ "cues": [
+  {"at": "34:1", "light": "space_space_sun_rim", "intensity": 1.8, "for": 0},
+  {"at": "34:1", "light": "space_space_sun_fill", "intensity": 1.4, "for": 0}
+ ]
+}

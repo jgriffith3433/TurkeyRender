@@ -1,0 +1,91 @@
+{
+ "id": "gift_pop",
+ "f0": 1507,
+ "f1": 1558,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 50.233,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 50.7,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-01521.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 51.1,
+   "why": "one patch jumps (cell 98.8, x2.2)",
+   "file": "spike-01533.jpg"
+  }
+ ],
+ "hash": "b9d171da0c18c4b4",
+ "summary": "The box goes from crouched to full height in a single frame twice (50.30 to 50.33 and 50.66 to 50.70), and the bursting-out beat is weak, with flat confetti hiding the butler and the bow ribbons poking through him.",
+ "faults": [
+  {
+   "t": 50.33,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The box goes from a squat with the lid floating off the base (50.30) to a full-height box in one frame (50.33). It also grows much larger and shifts in frame. There is no stretch or in-between pose, so it reads as a swap.",
+   "fix": "Add 2-3 in-between frames of stretch and rise, and close the lid gap before the hop."
+  },
+  {
+   "t": 50.7,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "This is the same snap again. At 50.66 the box is squat with the lid gap and the bow splayed. At 50.70 it is full height with the lid closed. The box and bow jump with no travel between, which matches the measured spike.",
+   "fix": "Blend the crouch-to-stand with a few frames of rise, or hold the crouch and cut the shake to one clean hop."
+  },
+  {
+   "t": 50.5,
+   "sev": "B",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "The hop has no clear anticipation, airtime or landing squash. The box goes squat, tall, then settles in about 0.2 s with no overshoot. At 50.80-50.90 it sits at a different height and size than at 50.50, so the landing and shiver look like pose snapping.",
+   "fix": "Add a deeper squash before the jump, a land-and-overshoot, and keep the box scale consistent through the shiver."
+  },
+  {
+   "t": 50.76,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The gold bow ribbons stick up above and behind the lid edge. They appear to poke through or sit inside the closed lid, and they wobble differently from frame to frame.",
+   "fix": "Parent the bow to the lid top, or hide it while the lid is closed."
+  },
+  {
+   "t": 51.13,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A dense burst of large, flat, unshaded confetti squares and the tilted lid cover most of the butler. At 51.10-51.13 his face is mostly hidden just as he appears. The confetti patch jumps in size between 51.10 and 51.13, which matches the measured spike.",
+   "fix": "Make the confetti smaller and shaded, spawn it over more frames, and keep it off his face."
+  },
+  {
+   "t": 51.2,
+   "sev": "B",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The butler never bursts out. Only his head and shoulders show above the box rim, and he stays low and nearly static from 51.20 to 51.30 with no arms visible. The bow ribbons stick out through his sides, so the pop reads weak and the bow clips through him.",
+   "fix": "Raise him much higher out of the box with a quick spring and overshoot, add arms, and move or hide the bow ribbons."
+  },
+  {
+   "t": 51.26,
+   "sev": "C",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The big lid is at the frame edge and sweeps across, competing with the butler and drawing the eye away from him. It rotates stiffly as one flat slab.",
+   "fix": "Throw the lid out of frame faster and add spin."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6383,
+  "out": 1982
+ },
+ "cost": 0.0326
+}

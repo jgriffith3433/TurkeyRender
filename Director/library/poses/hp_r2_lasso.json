@@ -1,0 +1,343 @@
+{
+  // Hawkes Punch, hero moment 3 (the lasso throw), SPACE-EPIC w7_lasso / w7_yank: the DOUBLE (zg_neutral_a). Throw seeded from mx_goalie_overhand_throw; the spin is keyed (no clip spins a lasso).
+
+ "name": "hp_r2_lasso",
+ "about": "The lasso throw: the ring spun overhead three times (48f), cocked (8f hold), thrown (3f, from mx_goalie_overhand_throw 1.3/1.53/1.62), the follow-through held 24f, then the yank (lean back, fists, 24f hold); the DOUBLE on zg_neutral_a.",
+ "seed": {
+  "clip": "zg_neutral_a",
+  "t": 0
+ },
+ "length": 5.83,
+ "poses": {
+  "float": {
+   "from": {
+    "clip": "zg_neutral_a",
+    "t": 0
+   }
+  },
+  "s_front": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 0.85,
+    "Right Arm Front-Back": -0.45,
+    "Right Forearm Stretch": 0.55,
+    "Right Shoulder Down-Up": 0.5,
+    "Left Arm Down-Up": 0.0,
+    "Left Arm Front-Back": -0.3,
+    "Left Forearm Stretch": 0.2,
+    "Neck Nod Down-Up": 0.12,
+    "Head Nod Down-Up": 0.08
+   },
+   "add": {
+    "Chest Twist Left-Right": 0.0675
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.5
+    },
+    "right": {
+     "curl": 0.95,
+     "spread": 0
+    }
+   }
+  },
+  "s_out": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 1.0,
+    "Right Arm Front-Back": 0.05,
+    "Right Forearm Stretch": 0.55,
+    "Right Shoulder Down-Up": 0.5,
+    "Left Arm Down-Up": 0.0,
+    "Left Arm Front-Back": -0.3,
+    "Left Forearm Stretch": 0.2,
+    "Neck Nod Down-Up": 0.12,
+    "Head Nod Down-Up": 0.08
+   },
+   "add": {
+    "Chest Twist Left-Right": -0.0075
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.5
+    },
+    "right": {
+     "curl": 0.95,
+     "spread": 0
+    }
+   }
+  },
+  "s_back": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 0.85,
+    "Right Arm Front-Back": 0.5,
+    "Right Forearm Stretch": 0.55,
+    "Right Shoulder Down-Up": 0.5,
+    "Left Arm Down-Up": 0.0,
+    "Left Arm Front-Back": -0.3,
+    "Left Forearm Stretch": 0.2,
+    "Neck Nod Down-Up": 0.12,
+    "Head Nod Down-Up": 0.08
+   },
+   "add": {
+    "Chest Twist Left-Right": -0.075
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.5
+    },
+    "right": {
+     "curl": 0.95,
+     "spread": 0
+    }
+   }
+  },
+  "s_in": {
+   "from": "float",
+   "muscles": {
+    "Right Arm Down-Up": 0.7,
+    "Right Arm Front-Back": 0.0,
+    "Right Forearm Stretch": 0.55,
+    "Right Shoulder Down-Up": 0.5,
+    "Left Arm Down-Up": 0.0,
+    "Left Arm Front-Back": -0.3,
+    "Left Forearm Stretch": 0.2,
+    "Neck Nod Down-Up": 0.12,
+    "Head Nod Down-Up": 0.08
+   },
+   "add": {
+    "Chest Twist Left-Right": -0.0
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.5
+    },
+    "right": {
+     "curl": 0.95,
+     "spread": 0
+    }
+   }
+  },
+  "cock": {
+   "from": "s_back",
+   "muscles": {
+    "Right Arm Down-Up": 0.9,
+    "Right Arm Front-Back": 0.85,
+    "Right Forearm Stretch": -0.35,
+    "Left Arm Down-Up": 0.2,
+    "Left Arm Front-Back": -0.6,
+    "Left Forearm Stretch": 0.6,
+    "Left Upper Leg Front-Back": -0.25,
+    "Right Upper Leg Front-Back": 0.1,
+    "Left Lower Leg Stretch": 0.3,
+    "Right Lower Leg Stretch": 0.5
+   },
+   "add": {
+    "Spine Twist Left-Right": 0.3,
+    "Chest Twist Left-Right": 0.25,
+    "Spine Front-Back": 0.15
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.5
+    },
+    "right": {
+     "curl": 0.95
+    }
+   },
+   "root": {
+    "rot": [
+     -10,
+     0,
+     0
+    ]
+   }
+  },
+  "release": {
+   "from": {
+    "clip": "mx_goalie_overhand_throw",
+    "t": 1.53
+   },
+   "muscles": {
+    "Left Upper Leg Front-Back": 0.3,
+    "Right Upper Leg Front-Back": 0.15,
+    "Left Lower Leg Stretch": 0.45,
+    "Right Lower Leg Stretch": 0.35,
+    "Left Upper Leg In-Out": 0.1,
+    "Right Upper Leg In-Out": 0.1,
+    "Left Foot Up-Down": 0.6,
+    "Right Foot Up-Down": 0.6,
+    "Left Toes Up-Down": 0,
+    "Right Toes Up-Down": 0,
+    "Left Upper Leg Twist In-Out": 0.2,
+    "Right Upper Leg Twist In-Out": 0.2
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.3
+    },
+    "right": {
+     "curl": 0.1,
+     "spread": 0.4
+    }
+   },
+   "root": {
+    "rot": [
+     12,
+     0,
+     0
+    ]
+   }
+  },
+  "follow": {
+   "from": "release",
+   "add": {
+    "Right Arm Down-Up": -0.08,
+    "Spine Front-Back": -0.08
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.35
+    },
+    "right": {
+     "curl": 0.2,
+     "spread": 0.3
+    }
+   },
+   "root": {
+    "rot": [
+     16,
+     0,
+     0
+    ]
+   }
+  },
+  "yank": {
+   "from": "float",
+   "muscles": {
+    "Left Arm Down-Up": -0.35,
+    "Right Arm Down-Up": -0.3,
+    "Left Arm Front-Back": -0.2,
+    "Right Arm Front-Back": -0.45,
+    "Left Forearm Stretch": -0.7,
+    "Right Forearm Stretch": -0.5,
+    "Left Upper Leg Front-Back": -0.45,
+    "Right Upper Leg Front-Back": -0.3,
+    "Left Lower Leg Stretch": 0.45,
+    "Right Lower Leg Stretch": 0.55,
+    "Left Foot Up-Down": 0.55,
+    "Right Foot Up-Down": 0.55,
+    "Spine Front-Back": 0.2,
+    "Chest Front-Back": 0.12,
+    "Neck Nod Down-Up": -0.3,
+    "Head Nod Down-Up": -0.12
+   },
+   "fingers": {
+    "both": {
+     "curl": 1.0
+    }
+   },
+   "root": {
+    "rot": [
+     -28,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "float",
+   "hold": "6f"
+  },
+  {
+   "t": "10f",
+   "pose": "s_front",
+   "interp": "out"
+  },
+  {
+   "t": "14f",
+   "pose": "s_out",
+   "interp": "linear"
+  },
+  {
+   "t": "18f",
+   "pose": "s_back",
+   "interp": "linear"
+  },
+  {
+   "t": "22f",
+   "pose": "s_in",
+   "interp": "linear"
+  },
+  {
+   "t": "26f",
+   "pose": "s_front",
+   "interp": "linear"
+  },
+  {
+   "t": "30f",
+   "pose": "s_out",
+   "interp": "linear"
+  },
+  {
+   "t": "34f",
+   "pose": "s_back",
+   "interp": "linear"
+  },
+  {
+   "t": "38f",
+   "pose": "s_in",
+   "interp": "linear"
+  },
+  {
+   "t": "42f",
+   "pose": "s_front",
+   "interp": "linear"
+  },
+  {
+   "t": "46f",
+   "pose": "s_out",
+   "interp": "linear"
+  },
+  {
+   "t": "50f",
+   "pose": "s_back",
+   "interp": "linear"
+  },
+  {
+   "t": "54f",
+   "pose": "s_in",
+   "interp": "linear"
+  },
+  {
+   "t": "60f",
+   "pose": "cock",
+   "interp": "ease",
+   "hold": "8f"
+  },
+  {
+   "t": "71f",
+   "pose": "release",
+   "interp": "linear"
+  },
+  {
+   "t": "74f",
+   "pose": "follow",
+   "interp": "overshoot",
+   "overshoot": 0.1,
+   "settle": 0.25,
+   "hold": "24f"
+  },
+  {
+   "t": "104f",
+   "pose": "yank",
+   "interp": "in",
+   "step": 2,
+   "hold": "24f"
+  }
+ ]
+}

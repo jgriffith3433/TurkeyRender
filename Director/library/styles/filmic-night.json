@@ -1,0 +1,12 @@
+{
+  // Shot on film at night: teal shadows, warm skin, highlights that bleed red, anamorphic bars, heavy grain.
+  "about": "Night exterior or a dark room on 500T. Slow, serious, expensive.",
+  "light": "moonlight",
+  "grade": {
+    "exposure": 0.85, "contrast": 26, "saturation": -20, "hue": 0, "vignette": 0.42, "grain": 0.48, "bloom": 0.45, "threshold": 0.95, "chroma": 0.06,
+    "split": 0.7, "splitA": "#1f6a78", "splitB": "#e8a860", "lift": 0.012, "halation": 0.9, "bars": 1
+  },
+  "sky": { "top": "#050913", "mid": "#101a2c", "bottom": "#02040a", "stars": 0.5, "clouds": 0.35, "cloudColor": "#27364f", "cloudShade": "#070b14", "cloudSpeed": 0.004 },
+  "lens": { "close-up": 75, "medium": 50, "wide": 28, "two-shot": 40, "apertureScale": 0.4 },
+  "type": { "color": "#e8dcc6", "style": "fade", "size": 52, "pos": [0.5, 0.11, 0], "in": 0.5, "out": 0.5 }
+}

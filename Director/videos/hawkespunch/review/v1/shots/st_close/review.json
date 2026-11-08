@@ -1,0 +1,55 @@
+{
+ "id": "st_close",
+ "f0": 4307,
+ "f1": 4458,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 143.567,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "cd2c0becbd625f8b",
+ "summary": "The strip is mostly steady with no camera or render problems, but the black-shirt man's head drops abruptly at 143.73, and the two sets of hands overlap awkwardly in a stiff, mirrored pose.",
+ "faults": [
+  {
+   "t": 143.73,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Both heads change between 143.69 and 143.73. The black-shirt man's head drops and turns down in a single step, and the red-shirt man's head shifts at the same time. Nothing leads into it, and the rest of the strip barely moves, so it reads as a snap.",
+   "fix": "Add in-between head frames, or ease the head tilt over 4-6 frames at the start of the shot."
+  },
+  {
+   "t": 143.66,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The two men's hands and forearms overlap at the centre. The fingers cross and interpenetrate with no clear contact, and the curled fingers look tangled.",
+   "fix": "Offset the hands a few cm so they either touch cleanly or stay apart, and tidy the finger curls."
+  },
+  {
+   "t": 143.59,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Both men hold near-mirrored, stiff arms-forward poses with the same crouch. This reads as a pushing or globe-holding gesture, not out-of-breath drifting in toward a forehead touch. The silhouettes are twinned and the idea is not clear.",
+   "fix": "Vary the arms. Let one hang loose or rest on the knee, and add a forward lean toward the other man."
+  },
+  {
+   "t": 143.76,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The bodies are almost frozen across all the tiles, with only tiny drift. There is no breathing or weight shift to sell 'out of breath'.",
+   "fix": "Add a small chest and shoulder breathing cycle and a slow weight sway."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3564,
+  "out": 1151
+ },
+ "cost": 0.0186
+}

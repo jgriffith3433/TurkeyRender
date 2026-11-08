@@ -1,0 +1,36 @@
+{
+ "clip": "mx_shim_sham",
+ "seconds": 10,
+ "popCount": 58,
+ "pops": [
+  "0.033s LeftLowerLeg kink 0.082 m",
+  "0.100s LeftToes kink 0.088 m",
+  "0.133s LeftToes kink 0.102 m",
+  "1.033s RightToes kink 0.098 m",
+  "1.167s RightLowerLeg kink 0.082 m",
+  "1.500s LeftToes kink 0.094 m"
+ ],
+ "feet": [
+  "left foot on floor moved 3.402 m, worst step 0.079 m at 6.17s",
+  "right foot on floor moved 3.402 m, worst step 0.080 m at 7.47s"
+ ],
+ "hipsTop": 0.930537939,
+ "hipsLow": 0.7460739,
+ "hipsTravel": "(0.24, -0.07, -0.28)",
+ "limits": {
+  "RightLowerLeg": 28.3,
+  "LeftLowerLeg": 22.2,
+  "groundHipsCm": 12.4,
+  "Head": 3.6,
+  "LeftShoulder": 0,
+  "LeftLowerArm": 0
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_shim_sham was rejected by admission: foot slide 4.98 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_shim_sham_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_shim_sham_three.mp4"
+ ]
+}

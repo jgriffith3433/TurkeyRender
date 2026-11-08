@@ -1,0 +1,97 @@
+{
+ "name": "kick_spin",
+ "about": "The kicker: RightSpinningKick once, the foot landing at `hit` (the clip hits 0.43 s in), then back to the stand over half a second, a grin. The victim spins with spin_top. Plays `base` (IdleBreathe) under it from the start, so the take has a clip of its own and nothing adds up when it is baked or played alone (base 0 leaves what plays underneath).",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "2.2s",
+ "min": "1.6s",
+ "params": {
+  "base": "IdleBreathe",
+  "baseBlend": 0.3,
+  "hit": 0.7
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "$base",
+   "blend": "$baseBlend",
+   "if": "$base"
+  },
+  {
+   "at": 0,
+   "do": "face",
+   "smile": 0.7,
+   "eyesWide": 0.3,
+   "for": "0.2s"
+  },
+  {
+   "at": "=hit-0.43",
+   "do": "anim",
+   "clip": "RightSpinningKick",
+   "once": 1,
+   "blend": "0.15s"
+  },
+  {
+   "at": "=hit-0.4",
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.15s"
+  },
+  {
+   "at": "=hit-0.3",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.9,
+   "for": "0.15s"
+  },
+  {
+   "at": "=hit-0.3",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.9,
+   "for": "0.15s"
+  },
+  {
+   "at": "=hit+0.7",
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "0.45s"
+  },
+  {
+   "at": "=hit+0.75",
+   "do": "stance",
+   "arms": 1,
+   "legs": 1,
+   "for": "0.6s"
+  },
+  {
+   "at": "=hit+0.8",
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.35,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=hit+0.8",
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.35,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": "=hit+0.3",
+   "do": "face",
+   "smile": 1,
+   "jawOpen": 0.2,
+   "for": "0.2s",
+   "ease": "out"
+  }
+ ],
+ "test": {
+  "tail": 0.4
+ }
+}

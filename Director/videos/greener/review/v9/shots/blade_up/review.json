@@ -1,0 +1,53 @@
+{
+ "id": "blade_up",
+ "f0": 2072,
+ "f1": 2124,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 69.067,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 70.633,
+   "why": "one patch jumps (cell 84.8, x3.3)",
+   "file": "spike-02119.jpg"
+  }
+ ],
+ "hash": "94ac0e85e13bc04c",
+ "summary": "The cut in is clean, with no tweening. The blade is the focus, but he looks at the camera instead of the blade, and the lowered hand with the blade drops out of the bottom of the frame before the cut to the wide shot.",
+ "faults": [
+  {
+   "t": 69.26,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The idea is that he looks at the blade and it is just grass. His head is tilted and he talks with his mouth open and eyes squinted, aimed toward the camera instead of at the blade in his raised hand. The stillness the shot needs is missing.",
+   "fix": "Aim his eyes and head at the blade tip for the hold, with the mouth closed and a slow blink."
+  },
+  {
+   "t": 70.73,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The arm drops, and the hand with the blade lies on his palm at the very bottom edge of the frame. At 70.73 the blade is cut off, and by 70.76 the hand is gone. The key prop leaves the shot just before the cut.",
+   "fix": "Stop the arm lower-lift at chest height, or reframe slightly lower, so the blade on the palm stays in frame."
+  },
+  {
+   "t": 70.66,
+   "sev": "C",
+   "rule": "weight",
+   "seen": "likely",
+   "what": "From 70.63 to 70.73 the arm swings down and the blade turns from a pinch to a flat palm in about 3 frames. It reads as a snap with no settle, and it matches the spike measured at 70.633.",
+   "fix": "Add 2-3 frames of ease-in and ease-out on the arm drop, or hold the blade up longer before the drop."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4973,
+  "out": 1539
+ },
+ "cost": 0.0253
+}

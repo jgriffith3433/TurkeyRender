@@ -1,0 +1,31 @@
+{
+ "id": "d_can",
+ "f0": 1666,
+ "f1": 1741,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 55.533,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "6b8f8127acd811e9",
+ "summary": "The first four frames are a near-static side-on stand, then she abruptly starts turning and swinging her arm at 55.70 with no anticipation, so there is one noticeable snap.",
+ "faults": [
+  {
+   "t": 55.7,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Between 55.66 and 55.70 her torso and arm change suddenly. After four near-frozen frames the shirt silhouette changes, the arm swings back and the hand moves to a new place. The torso then keeps turning toward camera through 55.80, with the shirt shading going greyer. It reads as the pose starting abruptly (a snap) with no wind-up, not as a motion that eases in.",
+   "fix": "Add 2-3 frames of anticipation (a hip and shoulder wind-up) before 55.70, or start the clip already mid-move so the cut lands on motion, not a held stand."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3580,
+  "out": 828
+ },
+ "cost": 0.0154
+}

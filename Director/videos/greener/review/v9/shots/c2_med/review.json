@@ -1,0 +1,51 @@
+{
+ "id": "c2_med",
+ "f0": 4002,
+ "f1": 4076,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 133.4,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 135.033,
+   "why": "flow spike x2.1",
+   "file": "spike-04051.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 135.433,
+   "why": "flow spike x5.1",
+   "file": "spike-04063.jpg"
+  }
+ ],
+ "hash": "3b7ee9ddc49a5f15",
+ "summary": "Mostly clean: I couldn't see a pop or flicker at either flagged spike, only a raised hand cropped at the top edge and a pink feather that doesn't move.",
+ "faults": [
+  {
+   "t": 135.43,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "likely",
+   "what": "His raised right hand is cut off by the top edge of the frame through the whole strip (135.43 to 135.66). The gesture's end point is lost and the head sits tight to the top.",
+   "fix": "Tilt the camera up or lower the framing a little for this beat so the hand stays inside the frame."
+  },
+  {
+   "t": 135.43,
+   "sev": "C",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "A large pink feather hangs in front of the right turkey's body and barely moves across the tiles, so it looks stuck to the bird. The 5x flow spike here may come from the feather or the turkey's motion, not from him.",
+   "fix": "Let the feather drift or fall, or move it away from the turkey so it doesn't look attached."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6316,
+  "out": 827
+ },
+ "cost": 0.0209
+}

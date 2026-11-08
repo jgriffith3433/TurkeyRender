@@ -1,0 +1,22 @@
+{
+ "id": "darling",
+ "f0": 4439,
+ "f1": 4516,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 147.967,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "39c6dd84eea6a492",
+ "summary": "The strip is clean: the camera is locked, the pose and remote stay steady across the cut, and I can't point to a pop, clip or render fault in any tile.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3575,
+  "out": 473
+ },
+ "cost": 0.0119
+}

@@ -1,0 +1,10 @@
+{
+ "id": "his_face",
+ "f0": 97,
+ "f1": 138,
+ "faults": [],
+ "summary": "The strip is clean: the camera is static, the shoulder and chair hold steady across all eight tiles with only slight drift, and I see no pops, flicker or clipping.",
+ "model": "claude-sonnet-5-5",
+ "carried": "proof1",
+ "strips": []
+}

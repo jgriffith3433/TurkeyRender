@@ -1,0 +1,536 @@
+{
+ "name": "mx_pull_rope",
+ "fps": 30,
+ "frames": 443,
+ "seconds": 14.73,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.11,
+  "straightFrac": 0.07,
+  "moves": 56,
+  "flatness": 0.71,
+  "abruptFrac": 0.43,
+  "deadFrac": 0,
+  "holds": 3,
+  "holdMedianS": 0.5,
+  "fastRunMedianS": null,
+  "dynRange": 1.62,
+  "handPeak": 1.49,
+  "bigMoves": 18,
+  "anticipFrac": 0.17,
+  "overshootFrac": 0.06,
+  "coherence": 0.33,
+  "lagMedianFrames": 5,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 11.12,
+  "plantedFrac": 0.32,
+  "zgSpeedChanges": null,
+  "snapsPer10": 2.71,
+  "fingerSnapsPer10": 26.47,
+  "frozenFrac": 0.11,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.82,
+  "twinnedFrac": 0,
+  "curlMedian": 45.15,
+  "spreadMedian": 25.39,
+  "fannedFrac": 0.02,
+  "bowMedian": 2.71,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 52.03,
+  "armOmegaP95": 182.46,
+  "legOmegaP95": 66.01,
+  "spineOmegaP50": 10.17,
+  "spineOmegaP95": 24.32,
+  "headOmegaP50": 16.87,
+  "headOmegaP95": 52.6,
+  "armAccP95": 938.59,
+  "spineAccP95": 323.34,
+  "handSpeedP50": 0.38,
+  "handSpeedP95": 1.06,
+  "spineToArm": 0.2,
+  "energyCV": 0.44,
+  "moveRate": 1.15
+ },
+ "principles": {
+  "arcs": {
+   "score": 7.5,
+   "note": "median bend 0.11 over 27 moves, 7% straight lines"
+  },
+  "ease": {
+   "score": 5.9,
+   "note": "speed shape 0.71 (bell 0.6, constant 1.0), 43% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "3 holds (median 0.5 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": 2.3,
+   "note": "18 big moves: 3 with anticipation, 1 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 9.7,
+   "note": "parts' speed profiles agree 0.33 (1 = everything moves as one); typical lag between parts 5 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 9.2,
+   "note": "0 centre-of-mass jerks, planted feet slide 11 cm/s"
+  },
+  "snaps": {
+   "score": 6.6,
+   "note": "4 body snaps or pops, 39 finger snaps in 14.73 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "11% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "3 key poses, readability 0.82 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 45 deg, spread 25 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": null,
+   "na": true,
+   "note": "no reference yet: node Director/tools/critic.mjs reference"
+  }
+ },
+ "events": [
+  {
+   "t": 9.93,
+   "f": 298,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.87,
+   "what": "LeftHand jumps 10 deg in one frame"
+  },
+  {
+   "t": 7.93,
+   "f": 238,
+   "kind": "snap",
+   "part": "RightHand",
+   "sev": 0.86,
+   "what": "RightHand jumps 9 deg in one frame"
+  },
+  {
+   "t": 4.57,
+   "f": 137,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.85,
+   "what": "LeftHand jumps 9 deg in one frame"
+  },
+  {
+   "t": 5.53,
+   "f": 166,
+   "kind": "snap",
+   "part": "RightHand",
+   "sev": 0.83,
+   "what": "RightHand jumps 8 deg in one frame"
+  },
+  {
+   "t": 0.97,
+   "f": 29,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 60 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 11.37,
+   "f": 341,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 69 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 3.23,
+   "f": 97,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 63 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 8.6,
+   "f": 258,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 64 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 9.93,
+   "f": 298,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 68 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 11.43,
+   "f": 343,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 70 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 11.3,
+   "f": 339,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.7,
+   "what": "Head travels 50 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 9.9,
+   "f": 297,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.68,
+   "what": "Head travels 46 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 7.2,
+   "f": 216,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.67,
+   "what": "Head travels 44 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 13.03,
+   "f": 391,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.66,
+   "what": "LeftHand travels 42 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 4.53,
+   "f": 136,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.66,
+   "what": "Head travels 42 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 5.87,
+   "f": 176,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.66,
+   "what": "Head travels 41 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 8.57,
+   "f": 257,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.66,
+   "what": "Head travels 42 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 1.33,
+   "f": 40,
+   "kind": "linear",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand moves at one speed for 0.43 s (flat 0.89): interpolation, not a move"
+  },
+  {
+   "t": 10.67,
+   "f": 320,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.45,
+   "what": "LeftHand starts at 72% of its peak speed in one frame"
+  },
+  {
+   "t": 10.87,
+   "f": 326,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.45,
+   "what": "LeftHand stops dead from 74% of its peak"
+  },
+  {
+   "t": 2.97,
+   "f": 89,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.45,
+   "what": "LeftFoot starts at 69% of its peak speed in one frame"
+  },
+  {
+   "t": 1.33,
+   "f": 40,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.44,
+   "what": "RightHand starts at 80% of its peak speed in one frame"
+  },
+  {
+   "t": 1.77,
+   "f": 53,
+   "kind": "abrupt-stop",
+   "part": "RightHand",
+   "sev": 0.44,
+   "what": "RightHand stops dead from 78% of its peak"
+  },
+  {
+   "t": 9.73,
+   "f": 292,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.44,
+   "what": "RightFoot starts at 68% of its peak speed in one frame"
+  },
+  {
+   "t": 9.9,
+   "f": 297,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.44,
+   "what": "RightFoot stops dead from 63% of its peak"
+  },
+  {
+   "t": 4.7,
+   "f": 141,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 77% of its peak speed in one frame"
+  },
+  {
+   "t": 4.83,
+   "f": 145,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 80% of its peak"
+  },
+  {
+   "t": 5.1,
+   "f": 153,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 65% of its peak speed in one frame"
+  },
+  {
+   "t": 5.5,
+   "f": 165,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 79% of its peak"
+  },
+  {
+   "t": 7.37,
+   "f": 221,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 81% of its peak speed in one frame"
+  },
+  {
+   "t": 7.67,
+   "f": 230,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 76% of its peak"
+  },
+  {
+   "t": 8.63,
+   "f": 259,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 62% of its peak speed in one frame"
+  },
+  {
+   "t": 8.97,
+   "f": 269,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 86% of its peak"
+  },
+  {
+   "t": 10.47,
+   "f": 314,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 61% of its peak"
+  },
+  {
+   "t": 13.4,
+   "f": 402,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot starts at 67% of its peak speed in one frame"
+  },
+  {
+   "t": 13.87,
+   "f": 416,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.43,
+   "what": "LeftFoot stops dead from 77% of its peak"
+  },
+  {
+   "t": 4.33,
+   "f": 130,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot starts at 67% of its peak speed in one frame"
+  },
+  {
+   "t": 4.5,
+   "f": 135,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 67% of its peak"
+  },
+  {
+   "t": 5.87,
+   "f": 176,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot starts at 71% of its peak speed in one frame"
+  },
+  {
+   "t": 6.03,
+   "f": 181,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 80% of its peak"
+  },
+  {
+   "t": 7.23,
+   "f": 217,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 61% of its peak"
+  },
+  {
+   "t": 11.63,
+   "f": 349,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 96% of its peak speed in one frame"
+  },
+  {
+   "t": 11.83,
+   "f": 355,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot stops dead from 93% of its peak"
+  },
+  {
+   "t": 12.9,
+   "f": 387,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head starts at 83% of its peak speed in one frame"
+  },
+  {
+   "t": 13.23,
+   "f": 397,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head stops dead from 82% of its peak"
+  },
+  {
+   "t": 13.37,
+   "f": 401,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head starts at 86% of its peak speed in one frame"
+  },
+  {
+   "t": 13.7,
+   "f": 411,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head stops dead from 92% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 9.93,
+   "f": 298,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.87,
+   "what": "LeftHand jumps 10 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 7.93,
+   "f": 238,
+   "kind": "snap",
+   "part": "RightHand",
+   "sev": 0.86,
+   "what": "RightHand jumps 9 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 4.57,
+   "f": 137,
+   "kind": "snap",
+   "part": "LeftHand",
+   "sev": 0.85,
+   "what": "LeftHand jumps 9 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 5.53,
+   "f": 166,
+   "kind": "snap",
+   "part": "RightHand",
+   "sev": 0.83,
+   "what": "RightHand jumps 8 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 0.97,
+   "f": 29,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 60 cm with no anticipation and no overshoot or settle",
+   "also": []
+  }
+ ],
+ "total": 8.2,
+ "verdict": "passable, weak on anticipation and ease (8.2/10)"
+}

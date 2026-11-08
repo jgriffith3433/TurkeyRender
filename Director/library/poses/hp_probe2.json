@@ -1,0 +1,137 @@
+{
+ "name": "hp_probe2",
+ "seed": {
+  "clip": "zg_neutral",
+  "t": 0
+ },
+ "length": 9,
+ "poses": {
+  "base": {},
+  "c0": {
+   "add": {
+    "Right Arm Down-Up": 0.18,
+    "Right Arm Front-Back": -0.36,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c1": {
+   "add": {
+    "Right Arm Down-Up": 0.18,
+    "Right Arm Front-Back": -0.5599999999999999,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c2": {
+   "add": {
+    "Right Arm Down-Up": 0.38,
+    "Right Arm Front-Back": -0.5599999999999999,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c3": {
+   "add": {
+    "Right Arm Down-Up": 0.58,
+    "Right Arm Front-Back": -0.45999999999999996,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c4": {
+   "add": {
+    "Right Arm Down-Up": 0.28,
+    "Right Arm Front-Back": -0.45999999999999996,
+    "Right Shoulder Front-Back": 0.5
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c5": {
+   "add": {
+    "Right Arm Down-Up": 0.48000000000000004,
+    "Right Arm Front-Back": -0.26,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c6": {
+   "add": {
+    "Right Arm Down-Up": 0.6799999999999999,
+    "Right Arm Front-Back": -0.66,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  },
+  "c7": {
+   "add": {
+    "Right Arm Down-Up": 0.08,
+    "Right Arm Front-Back": -0.15999999999999998,
+    "Right Shoulder Front-Back": 0
+   },
+   "muscles": {
+    "Right Forearm Stretch": 1.0
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "base"
+  },
+  {
+   "t": 1,
+   "pose": "c0",
+   "interp": "step"
+  },
+  {
+   "t": 2,
+   "pose": "c1",
+   "interp": "step"
+  },
+  {
+   "t": 3,
+   "pose": "c2",
+   "interp": "step"
+  },
+  {
+   "t": 4,
+   "pose": "c3",
+   "interp": "step"
+  },
+  {
+   "t": 5,
+   "pose": "c4",
+   "interp": "step"
+  },
+  {
+   "t": 6,
+   "pose": "c5",
+   "interp": "step"
+  },
+  {
+   "t": 7,
+   "pose": "c6",
+   "interp": "step"
+  },
+  {
+   "t": 8,
+   "pose": "c7",
+   "interp": "step"
+  }
+ ]
+}

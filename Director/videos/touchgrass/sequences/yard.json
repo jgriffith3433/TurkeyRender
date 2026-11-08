@@ -1,0 +1,6 @@
+{
+  // The whole video is one yard. The sprinkler head sits in the lawn from the start and only starts ticking in sprinkler_on.
+  "set": "backyard",
+  "mood": "calm",
+  "cast": { "sprinkler_head": { "at": "sprinkler" } }
+}

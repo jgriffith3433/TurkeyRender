@@ -1,0 +1,4 @@
+{
+ "when": "2026-11-08T02:19:58.132Z",
+ "error": "Not rendering: 1 A shot fault in 0.0-203.3 s:\n  56:3.03 051 w_ch2_f: person readable subject 0.07 on 0.09 (1.88 % contrast, 0.03 s of 2.52)\nvideos/hawkespunch/captures/motioncheck-report.md has them all; fix the cards, or --allow-shot renders anyway."
+}

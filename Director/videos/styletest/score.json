@@ -1,0 +1,7 @@
+{
+  // The same four shots for every style. mv style <name>, then mv cards: nothing here changes.
+  "song": "Assets/Song/Audio.mp3",
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {} }
+}

@@ -1,0 +1,121 @@
+{
+ "name": "doctor_slide_can",
+ "about": "She looks down at the can on the desk (`can`), lays her right hand on it, and slides it across to him by `dx`, `dz` metres (world axes, from where it stands), the hand riding on it, then lets go and looks up at him with a kind smile. The can really moves: the card that follows finds it there.",
+ "entry": "stand",
+ "exit": "stand",
+ "length": "3s",
+ "min": "2.4s",
+ "params": {
+  "can": "can",
+  "patient": "person",
+  "dx": 0,
+  "dz": 0.55
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "gaze",
+   "to": "$can",
+   "for": "0.4s",
+   "ease": "inout",
+   "head": 0.7
+  },
+  {
+   "at": 0.1,
+   "do": "reach",
+   "hand": "right",
+   "to": "$can",
+   "offset": [
+    0,
+    0.035,
+    0
+   ],
+   "for": "0.75s",
+   "ease": "hand"
+  },
+  {
+   "at": 0.15,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.15,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": 0.7,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.5,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.9,
+   "do": "plant",
+   "hand": "right",
+   "to": "$can",
+   "blend": "0.05s",
+   "for": "1.0s",
+   "release": "0.25s",
+   "follow": 0.6
+  },
+  {
+   "at": 1,
+   "do": "move",
+   "on": "$can",
+   "pos": [
+    "$dx",
+    0,
+    "$dz"
+   ],
+   "rel": 1,
+   "for": "0.7s",
+   "ease": "out"
+  },
+  {
+   "at": 1,
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.6s",
+   "ease": "inout",
+   "head": 0.3
+  },
+  {
+   "at": 1.95,
+   "do": "reach",
+   "hand": "right",
+   "weight": 0,
+   "for": "0.7s",
+   "ease": "inout"
+  },
+  {
+   "at": 2,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.4,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.9,
+   "do": "gaze",
+   "to": "$patient.head",
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 1.8,
+   "do": "face",
+   "smile": 0.5,
+   "for": "0.5s",
+   "ease": "inout"
+  },
+  {
+   "at": 2.3,
+   "do": "blink",
+   "for": "0.22s"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

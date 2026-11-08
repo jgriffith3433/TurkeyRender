@@ -1,0 +1,118 @@
+4643 frames, 84 cuts seen, 76 shots
+review hem              1 strips  0 A 0 B
+review yard_wide        1 strips  0 A 2 B
+review funny            2 strips  0 A 2 B
+review secret           2 strips  0 A 1 B
+review sparrow_away     1 strips  0 A 1 B
+review lips             3 strips  0 A 2 B
+review weakness         3 strips  0 A 3 B
+review happens_2        2 strips  1 A 0 B
+review happens          3 strips  1 A 2 B
+review irresponsible    1 strips  0 A 0 B
+review what_you_like    1 strips  0 A 0 B
+review tonight          4 strips  0 A 5 B
+review curtsy           1 strips  0 A 1 B
+review glide            2 strips  0 A 2 B
+review big_deal         2 strips  1 A 3 B
+review taste            3 strips  0 A 4 B
+review sparrow_pastel   1 strips  0 A 2 B
+review fence_one        1 strips  0 A 0 B
+review creep            1 strips  0 A 2 B
+review fence_two        1 strips  0 A 0 B
+review delight          2 strips  2 A 2 B
+review ch_crane         1 strips  0 A 2 B
+review ch_orbit_a       1 strips  1 A 1 B
+review gift_pop         3 strips  2 A 3 B
+review ch_cu_a          3 strips  1 A 4 B
+review doors            4 strips  0 A 3 B
+review ch_glide         2 strips  0 A 1 B
+review ch_orbit_b       2 strips  0 A 2 B
+review ch_cu_2          2 strips  0 A 2 B
+review ch_low           3 strips  2 A 3 B
+review balloon_butler   2 strips  0 A 1 B
+review look_away        3 strips  0 A 3 B
+review wobble           1 strips  0 A 0 B
+review ch_orbit_c       3 strips  1 A 4 B
+review blade_up         3 strips  1 A 3 B
+review side_eye         2 strips  1 A 1 B
+review let_go           1 strips  0 A 1 B
+review snatch           1 strips  0 A 2 B
+review hall_empty       2 strips  0 A 1 B
+review dv_wide_2        1 strips  0 A 0 B
+review dv_cu_4          4 strips  2 A 1 B
+review dv_wide          1 strips  0 A 1 B
+review dv_cu_2          1 strips  1 A 1 B
+review habits           2 strips  0 A 1 B
+review dv_low_2         5 strips  3 A 2 B
+review dv_cu            2 strips  0 A 3 B
+review dv_cu_3          2 strips  0 A 1 B
+review theory           2 strips  1 A 1 B
+review plan             2 strips  1 A 1 B
+review din_wide         2 strips  0 A 1 B
+review clever           2 strips  0 A 3 B
+review push             3 strips  2 A 2 B
+review vase_slides      2 strips  0 A 3 B
+review grey_wide        1 strips  0 A 1 B
+review he_looks         1 strips  0 A 1 B
+review holds_out        3 strips  2 A 2 B
+review takes_it         1 strips  2 A 1 B
+review goes_back        2 strips  0 A 4 B
+review descend          3 strips  1 A 4 B
+review hook_3           1 strips  0 A 0 B
+review c2_orbit_a       1 strips  0 A 1 B
+review c2_cu_a          4 strips  2 A 3 B
+review c2_point         2 strips  1 A 0 B
+review c2_low           5 strips  1 A 3 B
+review c2_sil           2 strips  1 A 3 B
+review c2_orbit_b       3 strips  0 A 1 B
+review c2_med           4 strips  0 A 0 B
+review alone_fog        2 strips  0 A 0 B
+review rise             1 strips  0 A 0 B
+review hand_opens       4 strips  3 A 3 B
+review ribbon_far       2 strips  0 A 0 B
+review tv_pull          1 strips  0 A 1 B
+review pot              1 strips  0 A 2 B
+review darling          1 strips  0 A 1 B
+review click_off        1 strips  0 A 0 B
+review better           1 strips  0 A 0 B
+review: 37 A faults (51 B, 4 C):
+  A 0:20.33 happens: Head swings from looking left (20.19-20.26) to camera (20.29), then to a hard right-facing profile with the neck stretched at 20.33, then back to camera at 20.36. The turn reverses in about 3 frames with no anticipation or settle, so it reads as a snap rather than a performance. It is the cut tweening in frames 3-5 of the shot. Fix: Start the shot on the camera-facing head pose, or delete the 20.26-20.36 head-turn keys and ease from the left look to the front in one smooth move.
+  A 0:22.89 happens_2: At 22.86 the head is still turned and tilted, as in the previous shot's 22.79 and 22.83 frames. By 22.90 and 22.93 it has swung to full frontal, and the neck and shoulders shift with it. This is a fast snap over about 3 frames, with no anticipation and no settle. It reads as the cut tweening, not as intended motion. Fix: Start the shot already on the frontal pose, trimming the first 4 frames of the turn. Or ease the turn over 10 or more frames with an overshoot.
+  A 0:36.63 big_deal: Between 36.59 and 36.63 the torso and head jump from upright, relaxed standing to a deep lean with the head tilted down and the body shifted and cropped low in frame. This is a snap with no in-between frames. By 36.66 the arm is straight overhead with the blade pointing up. Fix: Add 4-6 frames of in-between motion, or cut on the lean pose. Alternatively start the shot on the raised-blade pose.
+  A 0:47.66 delight: From 47.66 to 48.26 the top of the frame cuts him off at the mouth. The eyes and most of the face are out of frame. The lips are only slightly parted, with no visible smile, so the shot's idea of delight is not readable. Fix: Tilt the camera up or pull back so the full face and eyes are in frame, and hold on the smile.
+  A 0:48.30 delight: Between 48.26 and 48.30 the picture jumps from the chest close-up to a blurred, much smaller head against siding and fence. The head then slides down and out of frame by 48.36. This is a hard jump with no in-between frames, and a viewer would read it as a glitch. Fix: Remove the jump, or make it a deliberate cut. Start the tilt-up from the 48.26 framing with easing instead of snapping to a new position.
+  A 0:50.33 gift_pop: The box goes from a squat with the lid floating off the base (50.30) to a full-height box in one frame (50.33). It also grows much larger and shifts in frame. There is no stretch or in-between pose, so it reads as a swap. Fix: Add 2-3 in-between frames of stretch and rise, and close the lid gap before the hop.
+  A 0:50.70 gift_pop: This is the same snap again. At 50.66 the box is squat with the lid gap and the bow splayed. At 50.70 it is full height with the lid closed. The box and bow jump with no travel between, which matches the measured spike. Fix: Blend the crouch-to-stand with a few frames of rise, or hold the crouch and cut the shake to one clean hop.
+  A 0:52.10 ch_cu_a: Right after the cut the framing and body jump between 52.06 and 52.10. The head drops and re-centres, the raised arm is gone, and both hands are in new places with no in-between. This reads as the cut tweening, not a held first frame. Fix: Start the shot on the settled framing and pose, or trim the first 4 frames so the shot starts at 52.10.
+  A 0:53.80 ch_orbit_a: Between 53.76 and 53.80 the camera angle and background jump (gifts, gold post and balloon all shift sharply). His arms also snap from the collar pose to a chest-level pose. 53.66 to 53.76 are almost identical, so this reads as a late cut or a tween, not a smooth orbit start. Fix: Put the cut on 53.73, the first frame of the shot, and start the orbit from that framing. Or ease the camera over several frames instead of one jump.
+  A 1:03.23 ch_low: The ceiling and sky patch swaps between brown ceiling and bright blue/pink sky across neighbouring tiles (63.23 shows sky, 63.26 brown with a jagged edge, 63.33 and 63.36 sky again). This is a big part of the upper frame, and the edges are jagged. Fix: Fix the ceiling/sky dome so it does not z-fight or swap. Make the ceiling a single opaque layer or move the near clip plane.
+  A 1:03.63 ch_low: The ceiling/sky patch flickers again: 63.63 and 63.76 show blue sky, while 63.66 and 63.79 are brown. A striped, jagged-edged white patch appears at 63.73 and the upper right at 63.56. Fix: Same ceiling fix. Remove the overlapping sky and ceiling geometry visible from the low camera.
+  A 1:06.53 ch_orbit_c: Between 66.49 and 66.53 the turkeys on both sides change at once. At 66.49 they face the camera, with bow ties and the right-hand group visible. At 66.53 the left ones show their backs and the right group is gone. This reads as a pose or animation swap, not motion. Fix: Hold the turkey animation continuous across this frame, or hide the swap with a cut or occluder.
+  A 1:09.56 blade_up: Between 69.53 and 69.56 the arm and blade jump. At 69.53 the hand is low on the left chest with the blade lying diagonally across the torso. At 69.56 the forearm is raised across the chest with the blade vertical. The torso and head also drop in frame between the two tiles. There is no in-between motion. Fix: Add 3-4 in-between frames of the arm raising, or cut the blade raise on a clean frame. Lock the torso and camera position across the move.
+  A 1:13.49 side_eye: Between 73.46 and 73.49 the head snaps from a turned, side-looking pose to facing the camera. The head tilt, hair silhouette and face angle all change in one frame. The head and shoulders also drop slightly in frame, as if the camera or rig jumped. There is no in-between, anticipation or settle. Fix: Add 3-4 in-between frames of the head and eye return, with a small overshoot. Lock the camera or rig so the head and shoulders do not shift.
+  A 1:22.83 dv_cu_4: The ceiling, a large part of the frame, flickers between tiles. The pink/gold trim and the white sawtooth-edged panel swap with the dark brown ceiling (82.79 to 83.03). The panel edges are jagged and shift position every frame. Fix: Fix the ceiling mesh, z-fighting or overlapping ceiling layers, or hide or cull the ceiling geometry for this camera.
+  A 1:23.36 dv_cu_4: The ceiling flickers again. Jagged white and gold-striped fragments appear and vanish across the brown ceiling at 83.29, 83.36, 83.39 and 83.49, then go dark at 83.53. Fix: Same ceiling fix. Remove the overlapping ceiling planes or the coplanar surfaces.
+  A 1:25.39 dv_cu_2: The head is cut off at the nose or mouth in every tile, so his eyes are never visible. The brief is 'he means this', down the lens, and that needs his eyes. Fix: Tilt the camera up or lower it so the eyes and full face are in frame.
+  A 1:28.83 dv_low_2: The ceiling swaps between a flat dark brown fill with a jagged sawtooth edge and the lit painted ceiling with gold stripes. It alternates frame to frame (88.83 brown, 88.86 painted, 88.89 brown, 88.93 painted). The ceiling fills the top third of a low-angle shot. Fix: Fix the ceiling mesh or material, which looks like z-fighting or a duplicate overlapping layer or a shader failing. Remove the duplicate surface and keep the lit painted ceiling.
+  A 1:29.20 dv_low_2: The ceiling flicker continues with the same brown and painted swaps (89.19 painted, 89.23 brown, 89.26 and 89.29 brown, 89.33 painted, 89.39 brown). The diagonal sawtooth boundary sweeps across the frame. Fix: Same ceiling fix. Check that no two ceiling layers or lighting passes are competing.
+  A 1:29.69 dv_low_2: The ceiling flicker persists (89.63 and 89.66 painted, 89.69 to 89.83 brown, 89.86 painted). It also continues at 90.86 to 91.09, so the whole shot is affected. Fix: Apply the ceiling fix to the whole shot and re-render.
+  A 1:34.76 theory: The veil over the chart is the payoff of the shot, and it doesn't travel. At 94.72 it is a big dark-red slab beside the head. At 94.76 it has shrunk to a small red stub at the top. At 94.79 it is gone and the chart is fully revealed. There is no cloth in the air, no trailing edge and no arm pulling it. It reads as a pop-out, not a whip-off. Fix: Animate the cloth leaving: a flying, trailing sheet that travels off-frame over 4-6 frames, driven by the turkey's pull. Or hide the swap behind a clear cloth-over-lens frame.
+  A 1:38.23 plan: The magenta cloth strip is still beside the green chart at 98.16 and 98.19. It is gone at 98.23, with no pull, travel or flutter between. The whip that is the idea of the shot never reads, and the chart appears fully revealed in a single frame. Fix: Animate the cloth sliding or flying off the chart over 4 to 6 frames, with anticipation and a trailing flutter. Or hide it behind a wipe or the butler's arm.
+  A 1:45.29 push: The door/wall panel changes from a pale pink door to a dark grey flat panel over 105.29-105.36. The white wainscot also pops in at 105.32, covering where the door was. There is no swing in between, so the open reads as a texture and geometry swap. The hand also stays at the same spot in the frame and never visibly pushes. Fix: Animate the door swinging over several frames, or hide the swap with a motion blur or a cover. Match the door's back face and the wainscot so they don't pop.
+  A 1:45.89 push: The frame blows out to full white at 105.93-105.96 and fades back to a ghost image at 105.99. The white-out starts abruptly, with no ramp from 105.89 to 105.93. Fix: If it is a flash transition, ramp it up over 3-4 frames. Otherwise remove the blown-out frames.
+  A 1:50.59 holds_out: Tail fan between 110.49 and 110.59 goes from a dark, narrow grey spiked blade of feathers to a full wide white fan in a different, brighter look. The feathers change colour, shape and size with no in-between frames. This reads as a swap, not a move. Fix: Add in-between frames for the fan opening, or hold one feather state until the cut. Check that the grey blade mesh is not a different LOD or material.
+  A 1:51.09 holds_out: Image 3 is a completely different framing from image 2: a wide view with the head, plate and a green blade, where image 2 was a tight close-up of the rear. The measured x54.8 difference at 111.1 matches a hard cut or camera jump inside the shot, which breaks the one-idea shot. Fix: Make this a deliberate cut or keep one camera for the shot. Check that the cut lands on the beat and the subject is in the same place.
+  A 1:52.13 takes_it: From 112.09 to 112.13 the pose changes in one frame. At 112.09 he leans forward with the arm reaching out low toward the tray. At 112.13 the torso is turned and hunched, the head is down, and that arm is raised high above his head. The arm and torso snap with no in-between frames. Fix: Key or blend the arm path across 3-4 frames so the reach travels from the hip to the blade, and remove the one-frame jump in torso rotation.
+  A 1:52.16 takes_it: The idea is that he takes the blade from the tray. In 112.13-112.19 his hand is raised in the air behind his head, and the green blade is still upright in the tray untouched. The beat reads as a stretch or wave, not a choice to take the blade. Fix: Retarget the reaching hand to the blade hilt, with the fingers closing on it. Lift the blade out on the following frames.
+  A 2:00.49 descend: The shot ends on an empty staircase with only a small bird flying off, so he is gone from frame. The idea is him descending and looking at us. Fix: Keep him in frame, or cut this insert out of the shot unless it is meant as a choice.
+  A 2:03.92 c2_cu_a: The framing jumps from a tight close-up at 123.49 to a full-body wide low-angle with a second figure at 123.92. The brief says tight and pushing in, but this is a different shot. The ceiling takes up the top of the frame. Fix: End this shot at the close-up and make the wide its own shot, or keep the push-in continuous.
+  A 2:03.96 c2_cu_a: The ceiling at the top of the frame flickers between 123.92 and 124.16. A brown polygon appears and disappears, changing shape and tint (brown at 123.96-124.12, pale at 124.16). It covers a big part of the frame. Fix: Fix the ceiling mesh culling and near clip, and lock the ceiling material.
+  A 2:04.96 c2_sil: The second figure (the twin behind him) is in the tiles at 124.86, 124.89 and 124.93, then is gone at 124.96. The remaining figure also jumps larger and closer in frame, and the background shifts at the same moment. Fix: Keep all three dancers in the shot, or cut cleanly on the first frame so the clone doesn't vanish. Lock the camera at the cut.
+  A 2:06.59 c2_point: Giant flat, unshaded orange square fills the left half of the frame and covers his raised arm and the background. At 126.56 and 126.62 other large flat orange and blue squares cross in front of him. This is unlit confetti scaled up at the camera. Fix: Shrink or delete the near-camera confetti, or give it lighting, depth fade and a max size. Keep it from crossing the camera plane during 126.55-126.70.
+  A 2:10.56 c2_low: Ceiling/sky patch alternates between blue sky with cloud and dark brown/maroon from tile to tile (130.36 dark, 130.46 sky, 130.53 dark, 130.56 sky, 130.63 dark). Large part of the frame flickers. Fix: Fix the ceiling/sky material or lighting so it doesn't swap. Check z-fighting or a toggled layer on the ceiling mesh.
+  A 2:19.46 hand_opens: After the cut the camera and head swing fast over frames 139.39 to 139.62. It starts on a torso crop, tilts, and the face swings up into frame. This reads as the cut tweening, not a settled first frame. Fix: Start the shot already framed on the face, or lock the camera for the first 6 frames.
+  A 2:19.89 hand_opens: From 139.86 to 140.06 the green blade lies diagonally across his face and over his eye. It hides the eye and cuts the face in two. The hand holding it is off-screen, so there is no visible grip. Fix: Move the grass or the camera so the blade stays clear of the face, and keep the holding hand in frame.
+  A 2:22.79 hand_opens: At 142.79 the shot jumps to an empty garden with no character, and it stays there to the end of the strip. The shot's idea is the hand, and the subject is gone. Fix: Trim the shot to end on the hand, or keep the character in frame.
+  C:\Projects\TKShock\Director\videos\greener\review\v5cal\report.md
+{"a":37,"b":51,"c":4,"spikes":80,"cuts":75,"cost":1.486,"errors":0,"report":"C:\\Projects\\TKShock\\Director\\videos\\greener\\review\\v5cal\\report.md"}
+done

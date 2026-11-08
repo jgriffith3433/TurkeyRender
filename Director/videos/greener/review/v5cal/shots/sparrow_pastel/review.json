@@ -1,0 +1,39 @@
+{
+ "id": "sparrow_pastel",
+ "f0": 1198,
+ "f1": 1275,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 39.933,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "64ac51b006b353d8",
+ "summary": "The strip has no pops or flicker, but the sparrow is pushed into the top-left corner with its head and left side cut off while two big wooden blocks fill the frame.",
+ "faults": [
+  {
+   "t": 40,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "The sparrow, the subject of this shot, is jammed into the top-left corner. Its head is cut off by the top edge and its left side by the left edge. The shiver, puff and pale-pink turn would be hard to read.",
+   "fix": "Reframe or move the bird so the whole head and body sit inside the frame, with some headroom."
+  },
+  {
+   "t": 40.1,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "likely",
+   "what": "The two large wooden blocks and the foliage fill most of the frame and pull the eye away from the tiny bird. The bird barely changes across 39.96 to 40.20, so the opening shiver is not clear.",
+   "fix": "Move the camera in or re-place the bird so it is the clear focus. Crop or lower the blocks, and make the first shiver beat a bit larger."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 654
+ },
+ "cost": 0.0137
+}

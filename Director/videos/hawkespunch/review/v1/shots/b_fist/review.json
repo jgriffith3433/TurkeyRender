@@ -1,0 +1,22 @@
+{
+ "id": "b_fist",
+ "f0": 5930,
+ "f1": 5949,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 197.667,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "7952568ec829d85b",
+ "summary": "All eight tiles are the same flat dark frame, which matches the black-out the shot intends, so I found no faults.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3565,
+  "out": 110
+ },
+ "cost": 0.0082
+}

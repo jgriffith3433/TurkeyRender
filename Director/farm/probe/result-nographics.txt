@@ -1,0 +1,8 @@
+102:Forcing GfxDevice: Null
+106:    Renderer: Null Device
+259:[probe] batchMode=True graphicsDeviceType=Null device=Null Device shaderLevel=50
+409:0x00007FFDB5C45909 (Unity) BatchRenderer::RenderBatch
+410:0x00007FFDB5C41463 (Unity) BatchRenderer::Flush
+411:0x00007FFDB5C413FE (Unity) BatchRenderer::EndLoopFlush
+424:0x00007FFDB5B8F928 (Unity) Camera::StandaloneRender
+426:0x00007FFDB5799CA9 (Unity) Camera_CUSTOM_Render

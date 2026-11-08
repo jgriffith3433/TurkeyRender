@@ -1,0 +1,126 @@
+{
+  // Hawkes Punch clinic p_doc: the doctor after the punch (audit A11). Continuous with hp_doc_punch at 3.79 s.
+
+ "name": "hp_doc_after",
+ "about": "Her reaction after the punch (p_doc): out of the follow-through, the arm drops, one quick hand shake-out, then she settles to a calm stand.",
+ "seed": {
+  "clip": "IdleBreathe",
+  "t": 0
+ },
+ "length": 2.0,
+ "poses": {
+  "follow": {
+   "from": {
+    "clip": "hp_doc_punch",
+    "t": 3.79
+   }
+  },
+  "down": {
+   "from": {
+    "clip": "IdleBreathe",
+    "t": 0
+   },
+   "muscles": {
+    "Right Arm Down-Up": -0.35,
+    "Right Arm Front-Back": -0.2,
+    "Right Forearm Stretch": 0.55,
+    "Right Hand Down-Up": 0.0
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.3,
+     "spread": 0.4
+    }
+   }
+  },
+  "shake_a": {
+   "from": "down",
+   "muscles": {
+    "Right Hand Down-Up": 0.55,
+    "Right Hand In-Out": 0.2,
+    "Right Forearm Stretch": 0.5
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.1,
+     "spread": 0.6
+    }
+   }
+  },
+  "shake_b": {
+   "from": "down",
+   "muscles": {
+    "Right Hand Down-Up": -0.55,
+    "Right Hand In-Out": -0.2,
+    "Right Forearm Stretch": 0.6
+   },
+   "fingers": {
+    "right": {
+     "curl": 0.1,
+     "spread": 0.6
+    }
+   }
+  },
+  "settle": {
+   "from": {
+    "clip": "IdleBreathe",
+    "t": 0
+   },
+   "fingers": {
+    "both": {
+     "curl": 0.35
+    }
+   }
+  }
+ },
+ "keys": [
+  {
+   "t": 0,
+   "pose": "follow",
+   "hold": "3f"
+  },
+  {
+   "t": "9f",
+   "pose": "down",
+   "interp": "ease",
+   "step": 2
+  },
+  {
+   "t": "11f",
+   "pose": "shake_a",
+   "interp": "linear"
+  },
+  {
+   "t": "13f",
+   "pose": "shake_b",
+   "interp": "linear"
+  },
+  {
+   "t": "15f",
+   "pose": "shake_a",
+   "interp": "linear"
+  },
+  {
+   "t": "17f",
+   "pose": "shake_b",
+   "interp": "linear"
+  },
+  {
+   "t": "19f",
+   "pose": "shake_a",
+   "interp": "linear"
+  },
+  {
+   "t": "24f",
+   "pose": "down",
+   "interp": "out",
+   "step": 2
+  },
+  {
+   "t": "36f",
+   "pose": "settle",
+   "interp": "ease",
+   "step": 3
+  }
+ ]
+}

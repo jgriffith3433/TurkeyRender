@@ -1,0 +1,39 @@
+{
+ "id": "ch_cu_2",
+ "f0": 1816,
+ "f1": 1867,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 60.533,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "2c97aefd2a432a0d",
+ "summary": "No pops, flicker or camera jumps in the strip, but the gaze drifts off the lens and the arm swing reads weakly against the turkey.",
+ "faults": [
+  {
+   "t": 60.76,
+   "sev": "B",
+   "rule": "face",
+   "seen": "likely",
+   "what": "The shot is meant to be 'still down the lens', but from 60.69 the head tilts back and the eyes look up and away, past the camera. The 'caught' beat is lost.",
+   "fix": "Keep the head and eyes locked on the lens for the first ~0.5 s of the shot, or delay the upward tilt."
+  },
+  {
+   "t": 60.79,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The right arm swings out to a straight, limp-handed extension that overlaps the white turkey. The cream sleeve and hand merge with the turkey, so the silhouette is muddy and the hand has no clear gesture.",
+   "fix": "Shift the arm line away from the turkey, or give the hand a clear open or pointing shape."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3560,
+  "out": 1043
+ },
+ "cost": 0.0176
+}

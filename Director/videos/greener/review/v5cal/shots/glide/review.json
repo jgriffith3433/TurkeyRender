@@ -1,0 +1,61 @@
+{
+ "id": "glide",
+ "f0": 889,
+ "f1": 966,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 29.633,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 31.367,
+   "why": "flow spike x2",
+   "file": "spike-00941.jpg"
+  }
+ ],
+ "hash": "e0f3e29671615445",
+ "summary": "No hard pops or render faults are visible. The frame cuts off his feet, there is no skirt in his hand, and his head swings toward the camera and back around 31.4 s.",
+ "faults": [
+  {
+   "t": 29.8,
+   "sev": "B",
+   "rule": "frame",
+   "seen": "certain",
+   "what": "His legs and feet are cropped by the bottom edge in every tile, so there is no visible foot contact or ground. The catwalk glide cannot read.",
+   "fix": "Tilt or lower the camera, or pull back slightly, so his feet and the ground are in frame."
+  },
+  {
+   "t": 29.86,
+   "sev": "B",
+   "rule": "story",
+   "seen": "likely",
+   "what": "The idea is 'skirt in hand', but his hand is empty and swings loosely like a plain walk. There is no cloth and no gripping shape.",
+   "fix": "Add the skirt prop and curl the fingers around it, holding that hand in a clear pose."
+  },
+  {
+   "t": 31.43,
+   "sev": "C",
+   "rule": "face",
+   "seen": "likely",
+   "what": "His head swings from profile toward the camera (31.43 to 31.46) and back to profile by 31.50 with no clear motivation. It looks like a wobble in the mocap, not a deliberate look, and the face stays blank.",
+   "fix": "Either commit to a held look to camera with eyes leading, or keep the head locked on the walk direction."
+  },
+  {
+   "t": 31.5,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "His arm hangs straight and stiff, swinging as a single pendulum. There is no secondary bend at the elbow or wrist, so the silhouette is weak.",
+   "fix": "Add an elbow and wrist bend with a slight delay on the swing."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4935,
+  "out": 1201
+ },
+ "cost": 0.0219
+}

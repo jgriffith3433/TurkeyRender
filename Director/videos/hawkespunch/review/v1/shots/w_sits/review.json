@@ -1,0 +1,59 @@
+{
+ "id": "w_sits",
+ "f0": 81,
+ "f1": 156,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 2.7,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 4.033,
+   "why": "flow spike x4.3",
+   "file": "spike-00121.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 4.367,
+   "why": "pose jumps and comes back (1)",
+   "file": "spike-00131.jpg"
+  }
+ ],
+ "hash": "c9548b6bbd8dfe0f",
+ "summary": "The cut is clean, but the head and torso twitch sharply at 4.03-4.09 and the arms turn stiff and twinned with a near-static body for the rest of the strip.",
+ "faults": [
+  {
+   "t": 4.03,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Head snaps from facing camera to a chin-up turn to the side within 2 frames (4.00 to 4.06), and the torso and arms shift sideways at the same time. The cough has no anticipation and reads as a pose pop rather than a slumped cough.",
+   "fix": "Add 3-4 frames of ease-in (a head dip or chest draw-back) before the cough, and ease the head and torso over more frames."
+  },
+  {
+   "t": 4.36,
+   "sev": "B",
+   "rule": "pop",
+   "seen": "likely",
+   "what": "Head returns from the up-and-side turn (4.29-4.33) to facing front by 4.36, and the torso and arms jump back with it. The second cough reads as the same snap, repeated.",
+   "fix": "Smooth the return over 4-6 frames with a settle, and vary the second cough's size or direction."
+  },
+  {
+   "t": 2.8,
+   "sev": "C",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "Between coughs (2.69-2.93) both arms hang in a stiff, near-symmetrical pose with the fists on the thighs and almost no motion. The pose does not read as slumped or sick.",
+   "fix": "Add a slump in the spine and shoulders, offset the arms, and add subtle breathing."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 6325,
+  "out": 560
+ },
+ "cost": 0.0183
+}

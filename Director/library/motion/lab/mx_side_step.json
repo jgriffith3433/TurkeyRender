@@ -1,0 +1,32 @@
+{
+ "clip": "mx_side_step",
+ "seconds": 1.5670000000000002,
+ "popCount": 6,
+ "pops": [
+  "0.933s RightLowerLeg kink 0.177 m",
+  "0.967s RightLowerLeg kink 0.193 m",
+  "1.000s RightToes kink 0.150 m",
+  "1.267s RightToes kink 0.088 m",
+  "1.300s RightLowerLeg kink 0.316 m",
+  "1.333s RightLowerLeg kink 0.267 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.633 m, worst step 0.044 m at 1.53s",
+  "right foot on floor moved 0.770 m, worst step 0.046 m at 0.87s"
+ ],
+ "hipsTop": 0.9152711,
+ "hipsLow": 0.7968969,
+ "hipsTravel": "(0.96, 0.04, 0.05)",
+ "limits": {
+  "RightLowerLeg": 24.9,
+  "RightFoot": 7.5,
+  "groundHipsCm": 5.5,
+  "RightShoulder": 0.5
+ },
+ "reverse": 0,
+ "warnings": [],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_side_step_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_side_step_three.mp4"
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "name": "dress_stand",
+ "about": "Stands as if in a big party dress: skirt held out in both hands at the thigh, knees close, chin level, weight on one hip. Sets a stance that holds, so what follows inherits it.",
+ "entry": "any",
+ "exit": "stand",
+ "length": "3s",
+ "min": "0.5s",
+ "params": {
+  "blend": 0.4,
+  "settle": 0.4,
+  "side": -1
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "IdleBreathe",
+   "blend": "$blend"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 1,
+   "legs": 1,
+   "shift": "=side*0.07",
+   "narrow": 0.14,
+   "drop": 0.01,
+   "tilt": "=side*-6",
+   "sway": 0.012,
+   "period": 3.4,
+   "bones": {
+    "leftUpperArm": [
+     -2,
+     0,
+     14
+    ],
+    "rightUpperArm": [
+     -2,
+     0,
+     -14
+    ],
+    "leftLowerArm": [
+     -16,
+     0,
+     -16
+    ],
+    "rightLowerArm": [
+     -16,
+     0,
+     16
+    ],
+    "leftHand": [
+     0,
+     0,
+     8
+    ],
+    "rightHand": [
+     0,
+     0,
+     -8
+    ]
+   },
+   "for": "$settle",
+   "ease": "inout"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "set": 0.3,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "set": 0.3,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "left",
+   "finger": "index",
+   "set": 0.3,
+   "for": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "fingers",
+   "hand": "right",
+   "finger": "index",
+   "set": 0.3,
+   "for": "0.3s"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

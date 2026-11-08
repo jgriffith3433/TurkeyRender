@@ -1,0 +1,112 @@
+{
+ "name": "hide_peek",
+ "about": "Behind the moon: a crouch (CrouchIdleLookAround1Unarmed), then at `peek` he leans out to `side` (1 his right), the head popping out with overshoot, eyes wide and a grin, holds `hold` seconds, and snaps back in. The moon is the card's. Ends crouched.",
+ "entry": "any",
+ "exit": "crouch",
+ "length": "3s",
+ "min": "1.8s",
+ "params": {
+  "side": 1,
+  "peek": 0.9,
+  "hold": 0.6
+ },
+ "cues": [
+  {
+   "at": 0,
+   "do": "anim",
+   "clip": "CrouchIdleLookAround1Unarmed",
+   "blend": "0.3s"
+  },
+  {
+   "at": 0,
+   "do": "stance",
+   "arms": 0,
+   "legs": 0,
+   "for": "0.2s"
+  },
+  {
+   "at": 0.1,
+   "do": "face",
+   "smile": 0.7,
+   "eyesWide": 0.3,
+   "for": "0.4s",
+   "ease": "inout"
+  },
+  {
+   "at": "$peek",
+   "do": "keys",
+   "anticipate": 0.15,
+   "successive": 0.03,
+   "keys": [
+    {
+     "t": 0.22,
+     "ease": "out",
+     "overshoot": 0.18,
+     "settle": "0.3s",
+     "hold": "$hold",
+     "hips": [
+      "=side*0.06",
+      0.02,
+      0
+     ],
+     "bones": {
+      "spine": [
+       0,
+       0,
+       "=side*-14"
+      ],
+      "chest": [
+       0,
+       "=side*8",
+       "=side*-12"
+      ],
+      "neck": [
+       0,
+       "=side*10",
+       "=side*-6"
+      ],
+      "head": [
+       -4,
+       "=side*18",
+       "=side*4"
+      ]
+     }
+    },
+    {
+     "t": "=0.5+hold",
+     "ease": "in",
+     "overshoot": 0.05,
+     "settle": "0.2s",
+     "bones": {}
+    }
+   ],
+   "release": "0.4s"
+  },
+  {
+   "at": "=peek+0.1",
+   "do": "face",
+   "eyesWide": 0.9,
+   "smile": 0.9,
+   "jawOpen": 0.2,
+   "for": "0.12s",
+   "ease": "out"
+  },
+  {
+   "at": "=peek+0.45+hold",
+   "do": "face",
+   "eyesWide": 0.3,
+   "smile": 0.7,
+   "jawOpen": 0,
+   "for": "0.2s",
+   "ease": "inout"
+  },
+  {
+   "at": "=peek+0.7+hold",
+   "do": "blink",
+   "for": "0.18s"
+  }
+ ],
+ "test": {
+  "tail": 0.3
+ }
+}

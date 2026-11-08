@@ -1,0 +1,22 @@
+{
+ "id": "sym_write2",
+ "f0": 1166,
+ "f1": 1222,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 38.867,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "10421f4914dabdaa",
+ "summary": "The strip is clean: the cut is stable, the pose is nearly identical across tiles with only slight drift, and I see no pops, clipping or render flicker.",
+ "faults": [],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3583,
+  "out": 124
+ },
+ "cost": 0.0084
+}

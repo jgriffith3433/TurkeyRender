@@ -1,0 +1,97 @@
+{
+ "id": "takes_it",
+ "f0": 3358,
+ "f1": 3410,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 111.933,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 112.4,
+   "why": "one patch jumps (cell 40.3, x8.6)",
+   "file": "spike-03372.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 113.067,
+   "why": "one patch jumps (cell 51.1, x2.8)",
+   "file": "spike-03392.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 113.533,
+   "why": "one patch jumps (cell 61.4, x13.1)",
+   "file": "spike-03406.jpg"
+  }
+ ],
+ "hash": "5861477408356b97",
+ "summary": "The reach is clear but has pops: the torso and head jump between 111.99 and 112.09, the blade teleports at 112.49, and the shot ends with a back-view cut and a limb snap.",
+ "faults": [
+  {
+   "t": 112.09,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The cut strip is not settled. From 112.06 to 112.09 the framing jumps: the head goes from cropped at the top to showing the chin, and the torso and arms change position and lean abruptly between tiles.",
+   "fix": "Hold the first frames of the shot on a stable pose and remove the 2-frame jump after the cut."
+  },
+  {
+   "t": 112.39,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "By 112.39 he is bent hard over to the right with the left arm flung up out of frame, and the pose differs completely from 112.19. The arm goes from raised to across the body in one frame at 112.43-112.46. There is no anticipation or travel in between.",
+   "fix": "Add in-between frames or smooth the arm path from raised to reach, and add anticipation."
+  },
+  {
+   "t": 112.49,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "The blade leaves the tray and is flying in the air, tilted, near the hand. At 112.46 it was upright on the tray. At 112.53 it is held horizontally at the hand with no grasp in between. The blade teleports into the grip.",
+   "fix": "Parent the blade to the hand from the frame the fingers close, with a clean pickup."
+  },
+  {
+   "t": 112.53,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The blade is held at the wrist or forearm and not wrapped in the fingers. It sticks out of the hand at 112.53-112.63 and the hand looks clipped into the forearm.",
+   "fix": "Move the blade grip to the palm and fingers and fix the hand pose."
+  },
+  {
+   "t": 113.06,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "certain",
+   "what": "The forearm is stretched and thin where it crosses the chest. The arm reads as rubbery, long and tubular, with a shoulder or sleeve gap. The upper arm is hidden and the elbow is oddly placed.",
+   "fix": "Fix the arm rig or shoulder rotation so arm lengths stay consistent."
+  },
+  {
+   "t": 113.59,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "At 113.59 the upper arm detaches from the sleeve, leaving a hole at the shoulder, and the arm becomes a floating sausage shape. The blade is dragged down toward the plate. At 113.63 the arm and blade vanish, and the hand is empty.",
+   "fix": "Fix the shoulder deformation and keep the blade in the hand through the pull-back, or hide the blade cleanly."
+  },
+  {
+   "t": 113.66,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The shot ends with a camera angle change to a back view. The arm swings out to the side in an uncontrolled way, and the hand is empty. The story beat of taking the blade is lost.",
+   "fix": "End the shot on the held blade and cut after the beat."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 7788,
+  "out": 1111
+ },
+ "cost": 0.0267
+}

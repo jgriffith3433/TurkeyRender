@@ -1,0 +1,55 @@
+{
+ "id": "w_ch2_f",
+ "f0": 4156,
+ "f1": 4231,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 138.533,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "6ec3d862ef2c5f22",
+ "summary": "The figure is tiny and flips from upright to horizontal in about four frames right after the cut, and the shot's standoff idea (two figures, a world in each hand) is not visible.",
+ "faults": [
+  {
+   "t": 138.63,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Right after the cut the figure goes from upright (138.56) to tilted (138.63), then fully horizontal and curled (138.69). That is a fast rotation over about 4 frames, so the cut is tweening into the pose. It reads as a snap or tumble, not a held shot.",
+   "fix": "Start the shot already on the horizontal pose, or hold the upright pose and cut so no rotation shows in frames 1-6."
+  },
+  {
+   "t": 138.69,
+   "sev": "A",
+   "rule": "story",
+   "seen": "certain",
+   "what": "The shot should show two figures face to face, each with a world in hand, in a standoff. Only one tiny figure is visible, drifting alone in the starfield, with no second character and no props or worlds in its hands.",
+   "fix": "Frame both characters facing each other with the props visible, or check that the correct camera and shot are playing."
+  },
+  {
+   "t": 138.73,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The subject is only a few pixels tall and its silhouette is lost among the stars. The planet at lower left pulls the eye, and the figure stays small and unclear throughout the strip.",
+   "fix": "Move the camera in or scale the figure up so the pose reads as the main subject, and keep the planet out of the focal area."
+  },
+  {
+   "t": 138.76,
+   "sev": "B",
+   "rule": "pose",
+   "seen": "likely",
+   "what": "The body is a flat horizontal clump with no clear line of action or visible arms winding up. It does not read as a wind-up or as holding anything.",
+   "fix": "Use a clearer wind-up silhouette with open arms and the props visible."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3579,
+  "out": 1006
+ },
+ "cost": 0.0172
+}

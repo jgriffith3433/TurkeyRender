@@ -1,0 +1,39 @@
+{
+ "id": "ch_orbit_a",
+ "f0": 1610,
+ "f1": 1661,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 53.667,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "6a2062627486b2eb",
+ "summary": "The strip has one real problem: the camera and pose jump between 53.76 and 53.80, and the pink prop he held at his collar disappears.",
+ "faults": [
+  {
+   "t": 53.8,
+   "sev": "A",
+   "rule": "pop",
+   "seen": "certain",
+   "what": "Between 53.76 and 53.80 the camera angle and background jump (gifts, gold post and balloon all shift sharply). His arms also snap from the collar pose to a chest-level pose. 53.66 to 53.76 are almost identical, so this reads as a late cut or a tween, not a smooth orbit start.",
+   "fix": "Put the cut on 53.73, the first frame of the shot, and start the orbit from that framing. Or ease the camera over several frames instead of one jump."
+  },
+  {
+   "t": 53.8,
+   "sev": "B",
+   "rule": "contact",
+   "seen": "likely",
+   "what": "The pink item he holds at his collar in 53.66 to 53.76 is gone at 53.80 and after. It looks like a prop vanishing, with no hand release.",
+   "fix": "Hide the prop on the cut frame or animate a visible release. Keep it in the hand if it is meant to stay."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 3571,
+  "out": 890
+ },
+ "cost": 0.016
+}

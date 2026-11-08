@@ -1,0 +1,205 @@
+{
+ "video": "touchgrass",
+ "file": "videos/touchgrass/output/touchgrass-reuse3.mp4",
+ "when": "2026-11-07T00:24:20.603Z",
+ "size": "1280x720",
+ "fps": 30,
+ "shots": 20,
+ "reused": 18,
+ "rendered": 2,
+ "framesReused": 2001,
+ "framesRendered": 249,
+ "minutes": 3.8,
+ "join": {
+  "frames": 2250,
+  "wanted": 2250,
+  "unevenFrames": 0,
+  "worstFrameError": 0.00065,
+  "audioSeconds": 75,
+  "seconds": 75,
+  "clicks": [],
+  "clean": true
+ },
+ "list": [
+  {
+   "id": "door_opens",
+   "from": 0,
+   "frames": 120,
+   "hash": "388a1f54c8f5cf5a",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "in_doorway",
+   "from": 4,
+   "frames": 81,
+   "hash": "45f61bc4e4c318fa",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "sun_blink",
+   "from": 6.7,
+   "frames": 120,
+   "hash": "1dbb566eff0635ed",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "the_yard",
+   "from": 10.7,
+   "frames": 79,
+   "hash": "c71500d2d4b62434",
+   "action": "rendered",
+   "why": "changed: camera",
+   "seconds": 21
+  },
+  {
+   "id": "first_step",
+   "from": 13.333333333333334,
+   "frames": 80,
+   "hash": "c439425b99a4dc59",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "sparrow",
+   "from": 16,
+   "frames": 60,
+   "hash": "8918def19ddcdb23",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "flinch_bird",
+   "from": 18,
+   "frames": 60,
+   "hash": "63ef8b506d8db232",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "check_behind",
+   "from": 20,
+   "frames": 100,
+   "hash": "d6e6e2dc7eeafcb5",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "cross_wide",
+   "from": 23.333333333333332,
+   "frames": 180,
+   "hash": "dc841492f960134f",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "sprinkler_on",
+   "from": 29.333333333333332,
+   "frames": 60,
+   "hash": "f5874835946f4821",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "flinch_water",
+   "from": 31.333333333333332,
+   "frames": 60,
+   "hash": "c15d663f2ec2a491",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "go_on",
+   "from": 33.333333333333336,
+   "frames": 120,
+   "hash": "f094aef6e8364d2f",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "stop_breathe",
+   "from": 37.333333333333336,
+   "frames": 161,
+   "hash": "0d6f7ebae92ba316",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "kneels",
+   "from": 42.7,
+   "frames": 99,
+   "hash": "04050580ffe2149a",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "hand",
+   "from": 46,
+   "frames": 160,
+   "hash": "e973555b3e46ac84",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "smile",
+   "from": 51.333333333333336,
+   "frames": 221,
+   "hash": "72fd25c71fec3554",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "lies_back",
+   "from": 58.7,
+   "frames": 120,
+   "hash": "34ef179a00caebd6",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "sky",
+   "from": 62.7,
+   "frames": 79,
+   "hash": "3cf175cd8a5ec050",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "clouds_face",
+   "from": 65.33333333333333,
+   "frames": 120,
+   "hash": "fa2a78f9edb85c8d",
+   "action": "reused",
+   "why": "unchanged",
+   "seconds": 0
+  },
+  {
+   "id": "watching",
+   "from": 69.33333333333333,
+   "frames": 170,
+   "hash": "b89e5a84ac4120c6",
+   "action": "rendered",
+   "why": "changed: bird_tie, tie_bird",
+   "seconds": 38
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "clip": "mx_walk_stop",
+ "seconds": 3.1,
+ "popCount": 12,
+ "pops": [
+  "0.133s LeftLowerLeg kink 0.179 m",
+  "0.167s LeftLowerLeg kink 0.166 m",
+  "0.200s RightLowerLeg kink 0.101 m",
+  "0.233s RightLowerLeg kink 0.136 m",
+  "0.367s RightLowerLeg kink 0.100 m",
+  "0.767s RightLowerLeg kink 0.097 m"
+ ],
+ "feet": [
+  "left foot on floor moved 0.675 m, worst step 0.047 m at 1.27s",
+  "right foot on floor moved 0.526 m, worst step 0.057 m at 3.03s"
+ ],
+ "hipsTop": 0.914894462,
+ "hipsLow": 0.8731318,
+ "hipsTravel": "(-0.03, 0.00, 1.26)",
+ "limits": {
+  "LeftLowerLeg": 49.3,
+  "RightLowerLeg": 31,
+  "LeftFoot": 29.7,
+  "groundHipsCm": 10.5
+ },
+ "reverse": 0,
+ "warnings": [
+  "person: clip mx_walk_stop was rejected by admission: foot slide 4.04 cm/frame"
+ ],
+ "render": [
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_walk_stop_front.mp4",
+  "C:\\Projects\\TKShock\\Director\\library/motion/renders/mx_walk_stop_three.mp4"
+ ]
+}

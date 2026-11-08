@@ -1,0 +1,15 @@
+{
+ "name": "butler_dance",
+ "about": "The butlers' dance behind him: two bars, hop on beat 1, hop on beat 3, bow across the second bar. Their rig can't take human mocap, so this is the butler's own keyed clips in a beat pattern, one clip for a whole crowd so a row stays in unison. Repeat every 2 bars; start it on a bar line. `stagger` is seconds between members, for a wave.",
+ "entry": "any",
+ "exit": "any",
+ "length": "3.429s",
+ "min": "3.429s",
+ "params": { "stagger": 0 },
+ "cues": [
+  { "at": 0, "do": "anim", "clip": "butler_hop", "once": 1, "blend": "0.05s", "for": 0.857, "return": "0.1s", "stagger": "$stagger" },
+  { "at": 0.857, "do": "anim", "clip": "butler_hop", "once": 1, "blend": "0.05s", "for": 0.857, "return": "0.1s", "stagger": "$stagger" },
+  { "at": 1.714, "do": "anim", "clip": "butler_bow", "once": 1, "blend": "0.08s", "for": 1.714, "return": "0.15s", "stagger": "$stagger" }
+ ],
+ "test": { "model": "Assets/MusicVideo/Turkey/turkey_butler_crowd.fbx", "tail": 0.5 }
+}

@@ -1,0 +1,14 @@
+# The Greener signature hook. A phrase with `performance` compiles to its own file in library/performances, so a take repeats it with `hook: hook_gateway`.
+performance: dance_hook
+kind: hook
+len: 8b
+about: Signature move on every "I'm your gateway drug, baby": a slide step with the hip, ribs popping in the arms, ending on the left-hand point at the lens on "baby" (beat 5 of 8).
+entry: stand
+exit: stand
+cues:
+  # snake: the body drops on "gateway" (b2), rises, steps wide on "baby" (b5), right arm sweeps up after the point
+  - {at: 0, do: anim, clip: mx_snake, start: 0.27, speed: 1.32, blend: 0.12, for: $len}
+  # keeps the dip off a plain bow: the chest stays up, left shoulder leads on a diagonal, then punches into the point
+  - {at: 1.2b, do: pose, bones: {chest: [-14, -12, 6], spine: [-8, -6, 3]}, for: 0.9b, ease: inout}
+accents:
+  - {point: 2:2, off: 2:3.8}
