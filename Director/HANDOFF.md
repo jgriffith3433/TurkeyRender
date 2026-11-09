@@ -33,7 +33,7 @@ everything", "Stop asking me to do stuff. You do it": run approved steps yoursel
 - **In flight when written:** sets/props agent (poster and can legible first; the rest listed in `videos/hawkespunch/
   SETS.md`), alive-layer agent (`tools/alive.mjs`, `review/alive.md`), Unity owner (punch only). Their reports land in
   the WORKLOG and those files.
-- **Render farm: PARKED** (J, 2026-11-09: "not really interested in that at the moment and I would like to implement that in a different way anyways"). Don't resume it unasked. Left in place: the farm endpoint at max 0 workers (playtests back to 4), its 50 GB volume `rvs68wl5p9` (~$3.50/month, about 2,300 project files on it), Gen beta's `unity.render` tool and `runpod-unity` setting. What it was:
+- **Render farm: PARKED** (J, 2026-11-09: "not really interested in that at the moment and I would like to implement that in a different way anyways"). Don't resume it unasked. Left in place: the farm endpoint at max 0 workers (playtests back to 4), (its volume `rvs68wl5p9` was deleted 2026-11-09 at J's word), Gen beta's `unity.render` tool and `runpod-unity` setting. What it was:
 - **Render farm (old notes):** Gen beta has `unity.render` (hawkesgen `v1.25.0-beta.1`) and big uploads straight to the bucket
   (`v1.25.0-beta.3`); RunPod endpoint `hawkes-gen-unity-render` (`1c3f2m7br6gg3f`, max 3, volume `rvs68wl5p9` EU-RO-1,
   template `mewutuftzb`) and Gen beta's settings have `runpod-unity`. Playtest endpoint lowered to max 1 for quota.
