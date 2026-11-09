@@ -1,0 +1,11 @@
+{
+  // Him (Hawkes Punch's sick tee), and the ice boulder he punches.
+  "actors": {
+    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "boulder": { "model": "Assets/MusicVideo/Props/Punch/asteroid_a.fbx", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [0.15, 1.34, 6001.16], "scale": 0.42, "color": "#cfdde8" }
+  },
+  "cues": [
+    { "at": 0, "do": "fingers", "on": "person", "hand": "left", "set": 1, "for": 0 },
+    { "at": 0, "do": "fingers", "on": "person", "hand": "right", "set": 1, "for": 0 }
+  ]
+}

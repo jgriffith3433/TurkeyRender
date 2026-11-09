@@ -13,12 +13,12 @@ sound agent's and still carry the r2 clock: they need re-placing on these times.
 | c04 | 8.50 | 60 | MEDIUM, 50 mm | deadpan | - | - he stands late in the shot (mx_sit_to_stand_2 starts at 0: delay it 0.9 s or pick a candidate), then walks toward the door: a walk cue the camera cuts on<br>- the gobble line is the sound agent's |
 | c05 | 11.00 | 72 | WIDE, 24 mm | deadpan | - | - gloves_frame and the plaque read behind her at 24 mm (check the probe) |
 | c06 | 14.00 | 60 | MCU, 85 mm | deadpan | symptoms/doctor_ask.mp3 @ +0.30 s | nothing |
-| c07 | 16.50 | 120 | MCU, 85 mm | deadpan | symptoms/him_symptoms_v3.mp3 @ +0.30 s | - his fingers drum the bed edge (as c02)<br>- the 18.8 s symptoms take runs c07 to c12: cut it per line (sound agent) or accept where it lands |
-| c08 | 21.50 | 72 | MCU, 85 mm | deadpan | - | nothing |
-| c09 | 24.50 | 96 | MCU, 85 mm | deadpan | - | - lower, shy: a head-down layer (catalog `think` or `shrug`) |
-| c10 | 28.50 | 36 | INSERT, 100 mm | deadpan | - | - the pen stops mid-word: the freeze must land while the hand is on the paper (check 2 frames) |
+| c07 | 16.50 | 120 | MCU, 85 mm | deadpan | symptoms/him_symptoms_v3_p1.mp3 @ +0.25 s | - his fingers drum the bed edge (as c02)<br>- the 18.8 s symptoms take runs c07 to c12: cut it per line (sound agent) or accept where it lands |
+| c08 | 21.50 | 72 | MCU, 85 mm | deadpan | symptoms/him_symptoms_v3_p2.mp3 @ +0.77 s | nothing |
+| c09 | 24.50 | 96 | MCU, 85 mm | deadpan | symptoms/him_symptoms_v3_p3.mp3 @ +2.35 s | - lower, shy: a head-down layer (catalog `think` or `shrug`) |
+| c10 | 28.50 | 36 | INSERT, 100 mm | deadpan | symptoms/him_symptoms_v3_p4.mp3 @ +1.05 s | - the pen stops mid-word: the freeze must land while the hand is on the paper (check 2 frames) |
 | c11 | 30.00 | 60 | MCU, 85 mm | deadpan | - | nothing |
-| c12 | 32.50 | 108 | CLOSE, 85 mm | deadpan | - | - the pocket pull (hand to hip, then up to chest): a candidate clip, not the reach<br>- the drawing texture faces the lens (rot) |
+| c12 | 32.50 | 108 | CLOSE, 85 mm | deadpan | symptoms/him_symptoms_v3_p5.mp3 @ +0.20 s | - the pocket pull (hand to hip, then up to chest): a candidate clip, not the reach<br>- the drawing texture faces the lens (rot) |
 | c13 | 37.00 | 60 | MCU, 85 mm | deadpan | symptoms/doctor_space_ghost.mp3 @ +0.40 s | nothing |
 | c14 | 39.50 | 48 | CLOSE, 85 mm | deadpan | symptoms/him_space_ghost.mp3 @ +0.30 s | nothing |
 | c15 | 41.50 | 48 | INSERT, 85 mm | deadpan | - | - the plaque text GOLDEN GLOVES CHAMPION must read at 85 mm |
@@ -27,7 +27,7 @@ sound agent's and still carry the r2 clock: they need re-placing on these times.
 | c18 | 48.50 | 60 | MEDIUM, 50 mm | deadpan | lines3/him_drink_it.mp3 @ +0.20 s | - he turns the can over in his hands (attach stays from c17; a wrist roll on the right hand) |
 | c19 | 51.00 | 96 | MEDIUM, 50 mm | deadpan | lines3/doctor_no.mp3 @ +0.50 s | - she stands from the desk (desk_doc to doctor_stand): a sit-to-stand candidate; the skeleton has her already standing<br>- glasses off: a hand to the face, then the hide (doctor_glasses is `withHost`: check the hide takes) |
 | c20 | 55.00 | 60 | MEDIUM, 50 mm | deadpan | lines3/him_oh_no.mp3 @ +0.20 s | nothing |
-| c21 | 57.50 | 168 | MCU, LOW ANGLE, 35 mm | epic | doctor_line_a.mp3 @ +-1.00 s | - the shoulder roll (catalog `taunt` or a layer on the arms), a chin-down hold<br>- hard rim light: a rim on her from behind (light cue) while the register is epic |
+| c21 | 57.50 | 168 | MCU, LOW ANGLE, 35 mm | epic | doctor_line_a_p1.mp3 @ +-0.20 s<br>doctor_line_a_p2.mp3 @ +0.80 s<br>doctor_line_a_p3.mp3 @ +3.90 s<br>doctor_line_a_p4.mp3 @ +5.40 s | - the shoulder roll (catalog `taunt` or a layer on the arms), a chin-down hold<br>- hard rim light: a rim on her from behind (light cue) while the register is epic |
 | p01 | 64.50 | 48 | TWO-SHOT, LOW 3/4, 24 mm | epic | - | - the wind-up held with a tremble for the whole 2 s: hp_doc_punch starts 0.79 s in so contact lands on p02 frame 0; a freeze with tremble on the cocked pose<br>- he is frozen within reach: hp_him_hit holds until the hit |
 | p02 | 66.50 | 18 | CLOSE, 35 mm | epic | - | - the launch itself should come from the active-ragdoll candidate when it lands (the fly is the placeholder path)<br>- silence 4 f before contact: sound agent (the sound agent owns every silence) |
 | p03 | 67.25 | 48 | WIDE, 24 mm | epic | - | - he is through the ceiling by 0.4 s (the fly from p02): check the hole reads from this wide<br>- her arm stays extended: hp_doc_punch holds its last frame (once); if it drops, freeze her at the hit frame |
@@ -37,8 +37,8 @@ sound agent's and still carry the r2 clock: they need re-placing on these times.
 | s02 | 80.25 | 192 | MCU, 85 mm | deadpan | lines2/him_silence.mp3 @ +0.50 s<br>lines2/him_more_music.mp3 @ +2.20 s<br>lines3/him_shes_up_here.mp3 @ +4.30 s | - the push should start late (at 4 s, "a thought lands"): the dolly is linear over the shot; a two-point dolly with a hold needs the raw shot<br>- ring light on him: the set's bounce; check his face is lit, not black |
 | s03 | 88.25 | 168 | MEDIUM, locked off, 50 mm | deadpan | lines2/him_space_ghost_q.mp3 @ +1.50 s | - the ghost rises from behind a boulder screen right: a hero boulder in the field at about local [59, 0, 37] (set `hero`)<br>- he turns twice and she sinks each time: the gazes are placeholders for a turn clip<br>- the tap at 6.5 s: the double enters from off (tap_dbl mark) and taps his shoulder (reach) |
 | s04 | 95.25 | 192 | TWO-SHOT, 50 mm | deadpan | lines4/other_sheet.mp3 @ +1.00 s<br>lines4/him_vibe.mp3 @ +2.80 s | - he turns to the double at the top of the shot (the r2 card rotated him 60 deg/s over 1 s)<br>- the long deadpan hold 1.6-6.0 s must be still: zg_neutral drifts are fine, no gaze pops (blend 0.6) |
-| s05 | 103.25 | 72 | WIDE, side, 35 mm | epic | lines4/him_are_you_her2.mp3 @ +0.30 s<br>lines4/other_no.mp3 @ +1.50 s | - the ring as a wall across the middle of frame: the focus is tipped 90 deg about z so the plane is x = 0; check with a frame and move the camera back if the wall is off centre<br>- the shouts land as they pass (0.3 and 1.5 s) |
-| s06 | 106.25 | 60 | MEDIUM, LOW, 24 mm | epic | lines2/dbl_boo.mp3 @ +0.25 s<br>lines2/him_shriek.mp3 @ +1.00 s | - the flinch that throws the fist straight down: hp_s3_strike is a forward strike; the sim agent's startle candidate replaces it<br>- the horizon pop-up: the double rises from below the ground patch (check the patch does not clip him) |
+| s05 | 103.25 | 72 | WIDE, side, 35 mm | epic | lines4/him_are_you_her2.mp3 @ +1.30 s<br>lines4/other_no.mp3 @ +2.30 s | - the ring as a wall across the middle of frame: the focus is tipped 90 deg about z so the plane is x = 0; check with a frame and move the camera back if the wall is off centre<br>- the shouts land as they pass (0.3 and 1.5 s) |
+| s06 | 106.25 | 60 | MEDIUM, LOW, 24 mm | epic | lines2/dbl_boo.mp3 @ +0.25 s<br>lines2/him_shriek.mp3 @ +0.70 s | - the flinch that throws the fist straight down: hp_s3_strike is a forward strike; the sim agent's startle candidate replaces it<br>- the horizon pop-up: the double rises from below the ground patch (check the patch does not clip him) |
 | s07 | 108.75 | 72 | EXTREME WIDE, 300 mm | epic | - | - two lit specks above the moon (the set has one speck, space_epic_him_speck: a second for the double)<br>- 300 mm: the crater_wide focus was framed at fov 34; a longer lens needs the focus farther out |
 | s08 | 111.75 | 120 | TWO-SHOT, centred, 50 mm | deadpan | lines4/him_there_before.mp3 @ +1.50 s<br>lines4/other_sure.mp3 @ +3.50 s | - the fresh crater fills the bottom of frame: moon_wide at the crater's lon/lat, dust settling (a slow debris with gravity 0) |
 | s09 | 116.75 | 144 | EXTREME WIDE, 200 mm | epic | - | - the board is ONE extreme wide at 200 mm; the skeleton cuts focus inside the shot (ring edge 0-2.3, Saturn wide 2.3-4.8, Jupiter 4.8-6): a true single shot needs the double as a speck on the far layer<br>- the yank moves Jupiter: a planet_move toward the s10 catch position starting at 5.2 s |
@@ -53,8 +53,8 @@ sound agent's and still carry the r2 clock: they need re-placing on these times.
 | a02 | 163.25 | 120 | TWO-SHOT, stools, 50 mm | deadpan | lines2/him_right_for_me.mp3 @ +0.40 s<br>lines2/dbl_everyone_like_you.mp3 @ +1.90 s<br>lines2/him_thats_me.mp3 @ +4.00 s | - TV presenter life: small nods on the lines (mx_nod head layers at each line start) |
 | a03 | 168.25 | 84 | MEDIUM, 65 mm | deadpan | lines2/doc_testimonial.mp3 @ +0.30 s | - the pen scratch sfx: sound agent |
 | a04 | 171.75 | 96 | TWO-SHOT, stools, 50 mm | deadpan | lines2/him_tv_fist.mp3 @ +0.30 s<br>lines2/dbl_good_fist.mp3 @ +2.60 s | - they drink first (0-1 s): a drink clip (`mv clips drink`; mx_sitting_drinking was rejected for foot slide), then the beam and the fist pump<br>- the cans are in the right hands while the Cheer2 arm punches: hide the can during the fist or move the can to the left hand |
-| a05 | 175.75 | 240 | FULL CARD, 0 mm | deadpan | lines2/ann_side_effects.mp3 @ +0.20 s | - the two card pages split the 10 s at 5 s: match the page turn to the announcer's list (sound agent has the times) |
-| a06 | 185.75 | 48 | CARD, 0 mm | deadpan | - | nothing |
+| a05 | 175.75 | 240 | FULL CARD, 50 mm | deadpan | lines2/ann_side_effects.mp3 @ +0.20 s | - the two card pages split the 10 s at 5 s: match the page turn to the announcer's list (sound agent has the times) |
+| a06 | 185.75 | 48 | CARD, 50 mm | deadpan | - | nothing |
 | b01 | 187.75 | 72 | WIDE, 24 mm | deadpan | lines2/doc_any_symptoms.mp3 @ +1.60 s | - the same framing as c05 (it is: cam_room_wide); the ceiling hole should be patched or boarded like the window (set piece) |
 | b02 | 190.75 | 72 | MCU, 85 mm | deadpan | lines2/him_button_cut.mp3 @ +0.30 s | - her fist enters from off frame right at 2.4 s: hp_doc_punch starts 0.29 s in so contact is at 2.5 s; she must stand off frame (doctor_punch mark is in frame at 85 mm: check, else move her mark right)<br>- HARD CUT at 3.0 s, no impact frame (board) |
 | b03 | 193.75 | 60 | EXTREME WIDE, 400 mm | epic | - | - a streak LEAVES the Earth and he coasts in above it: the speck's path from the Earth's limb toward the camera (planet_move from `earth`)<br>- 400 mm: the far layer's fov for this focus |
@@ -64,6 +64,9 @@ sound agent's and still carry the r2 clock: they need re-placing on these times.
 ## Warnings from the last run
 
 - c06: line symptoms/doctor_ask.mp3 ends 0.10 s after the shot
+- c08: line symptoms/him_symptoms_v3_p2.mp3 ends 2.20 s after the shot
+- c09: line symptoms/him_symptoms_v3_p3.mp3 ends 0.89 s after the shot
+- c10: line symptoms/him_symptoms_v3_p4.mp3 ends 0.48 s after the shot
 - c18: line lines3/him_drink_it.mp3 ends 0.29 s after the shot
-- c21: line doctor_line_a.mp3 ends 1.79 s after the shot
+- c21: line doctor_line_a_p4.mp3 ends 1.44 s after the shot
 - a04: line lines2/dbl_good_fist.mp3 ends 0.20 s after the shot

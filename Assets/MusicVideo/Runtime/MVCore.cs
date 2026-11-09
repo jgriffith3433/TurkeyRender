@@ -82,8 +82,13 @@ namespace TKShock.MV
         public UnityEngine.Object[] refs;
         public int index;
         public double ws, we; // the clip in scene time
-        public double Dur => Math.Max(end - start, 1e-4);
-        public double WDur => Math.Max(Math.Abs(we - ws), 1e-4);
+        // An instant cue ("for": 0; ScoreCompiler marks it "instant") is complete ON its start: its clip keeps Timeline's 1/60 s, but its
+        // progress divides by a hair, and it starts 1e-6 s early, so on a frame sampled exactly at a cut (cards.mjs puts every cut on a
+        // frame) a focus, light, grade or set is already applied (k was 0 there: the shot's first frame showed the last shot's focus).
+        public bool instant;
+        public const double Instant = 1e-6;
+        public double Dur => instant ? Instant * .1 : Math.Max(end - start, 1e-4);
+        public double WDur => instant ? Instant * .1 : Math.Max(Math.Abs(we - ws), 1e-4);
     }
 
     public static class MVClock
@@ -120,7 +125,8 @@ namespace TKShock.MV
         public void Init(List<Op> ops, SongMap song)
         {
             Ops = ops; Song = song;
-            if (song) foreach (var o in ops) { o.ws = song.WarpRaw(o.start); o.we = song.WarpRaw(o.end); }
+            foreach (var o in ops) if (!o.instant && o.a != null && o.a.F("instant") > 0) { o.instant = true; o.start -= Op.Instant; }
+            if (song) foreach (var o in ops) { o.ws = song.WarpRaw(o.start); o.we = song.WarpRaw(o.end); if (o.instant) o.ws = song.WarpRaw(o.start + Op.Instant) - Op.Instant; }
             Start();
         }
         protected virtual void Start() { }

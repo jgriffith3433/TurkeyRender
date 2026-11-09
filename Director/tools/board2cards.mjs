@@ -73,20 +73,28 @@ function sizeCamera(size, lens, on) {
 // Lines with no offset are placed in order: the first 0.3 s in, each next 0.35 s after the one before ends.
 const LINES = {
   c06: [['symptoms/doctor_ask.mp3', 0.3]],
-  c07: [['symptoms/him_symptoms_v3.mp3', 0.3]],          // one 18.8 s take that spans c07-c12: see the checklist
+  // the 18.8 s overshare, cut at its own pauses into one piece per shot (tools/punch_split.mjs, sound agent 2026-11-08). The speech is 2 s longer than
+  // c07+c08 give it, so p1 and p2 spill past their cuts as o.s. lines and "In space." lands 1.05 s into c10, running 0.48 s into c11's hold.
+  c07: [['symptoms/him_symptoms_v3_p1.mp3', 0.25]],       // after "So. Tell me about your symptoms." ends (c07 +0.10)
+  c08: [['symptoms/him_symptoms_v3_p2.mp3', 0.77]],       // o.s. over her nod; "...more music." lands on c09 (him), mouth on
+  c09: [['symptoms/him_symptoms_v3_p3.mp3', 2.35]],
+  c10: [['symptoms/him_symptoms_v3_p4.mp3', 1.05]],       // her pen stops on "In space."
+  c12: [['symptoms/him_symptoms_v3_p5.mp3', 0.2]],
   c13: [['symptoms/doctor_space_ghost.mp3', 0.4]],
   c14: [['symptoms/him_space_ghost.mp3', 0.3]],
   c16: [['doctor_rx_a.mp3', 0.2]],                        // 4.53 s: runs 1.7 s into the can insert c17 (silent), fine
   c18: [['lines3/him_drink_it.mp3', 0.2]],
   c19: [['lines3/doctor_no.mp3', 0.5]],
   c20: [['lines3/him_oh_no.mp3', 0.2]],
-  c21: [['doctor_line_a.mp3', -1.0]],                     // 9.79 s: starts 1.0 s before c21 (over the tail of "Oh no") so it ends 0.29 s before the hit (p02); the sound agent can trim its tail
+  // her line, cut at its pauses (tools/punch_split.mjs) and set closer: the 9.79 s take started 1.0 s early over "Oh no" and ended 0.29 s before the hit.
+  // Now: "Don't worry." 0.38 s after "Oh no" ends, the last word 0.56 s before contact (p02), so the held wind-up (p01) ends in her breath and the drop-out.
+  c21: [['doctor_line_a_p1.mp3', -0.2], ['doctor_line_a_p2.mp3', 0.8], ['doctor_line_a_p3.mp3', 3.9], ['doctor_line_a_p4.mp3', 5.4]],
   p05: [['lines4/him_scream_ring_cut.mp3', 0.0]],         // 6.0 s: ends at s01 + 3.0, the ring plane; the arrival stops there
   s02: [['lines2/him_silence.mp3', 0.5], ['lines2/him_more_music.mp3', 2.2], ['lines3/him_shes_up_here.mp3', 4.3]],
   s03: [['lines2/him_space_ghost_q.mp3', 1.5]],
   s04: [['lines4/other_sheet.mp3', 1.0], ['lines4/him_vibe.mp3', 2.8]],
-  s05: [['lines4/him_are_you_her2.mp3', 0.3], ['lines4/other_no.mp3', 1.5]],
-  s06: [['lines2/dbl_boo.mp3', 0.25], ['lines2/him_shriek.mp3', 1.0]],
+  s05: [['lines4/him_are_you_her2.mp3', 1.3], ['lines4/other_no.mp3', 2.3]],   // on his entrance (he enters frame ~1.3 s; at 0.3 s the line played before he existed: reviewer #4)
+  s06: [['lines2/dbl_boo.mp3', 0.25], ['lines2/him_shriek.mp3', 0.7]],   // the shriek ends 0.03 s before the 4-frame drop-out (contact +1.5); at 1.0 the drop-out cut it
   s08: [['lines4/him_there_before.mp3', 1.5], ['lines4/other_sure.mp3', 3.5]],
   s11: [['lines4/him_okay.mp3', 1.5]],
   s12: [['lines4/him_hey.mp3', 1.0], ['lines4/other_what.mp3', 2.3]],
@@ -103,8 +111,10 @@ const LINES = {
   b04: [['lines3/other_same_time.mp3', 0.3]],
 };
 const LINE_LEN = {};  // seconds, measured once with ffprobe (2026-11-08); only used to warn when a line runs past its shot
-Object.assign(LINE_LEN, { 'symptoms/doctor_ask.mp3': 2.3, 'symptoms/him_symptoms_v3.mp3': 18.81, 'symptoms/doctor_space_ghost.mp3': 1.33, 'symptoms/him_space_ghost.mp3': 1.49, 'doctor_rx_a.mp3': 4.53, 'lines3/him_drink_it.mp3': 2.59, 'lines3/doctor_no.mp3': 0.71, 'lines3/him_oh_no.mp3': 1.72, 'doctor_line_a.mp3': 9.79, 'lines4/him_scream_ring_cut.mp3': 6.0, 'lines2/him_silence.mp3': 0.69, 'lines2/him_more_music.mp3': 1.48, 'lines3/him_shes_up_here.mp3': 3.72, 'lines2/him_space_ghost_q.mp3': 1.84, 'lines4/other_sheet.mp3': 1.27, 'lines4/him_vibe.mp3': 1.07, 'lines4/him_are_you_her2.mp3': 0.62, 'lines4/other_no.mp3': 0.41, 'lines4/him_sure.mp3': 0.71, 'lines2/dbl_boo.mp3': 0.61, 'lines2/him_shriek.mp3': 0.63, 'lines4/him_there_before.mp3': 1.63, 'lines4/other_sure.mp3': 0.68, 'lines4/him_okay.mp3': 1.47, 'lines4/him_hey.mp3': 0.59, 'lines4/other_what.mp3': 0.42, 'lines4/him_people.mp3': 1.14, 'lines4/him_anyone.mp3': 1.36, 'lines4/other_everyone.mp3': 0.99, 'lines2/him_are_you_ghost.mp3': 2.64, 'lines2/dbl_im_you.mp3': 1.59, 'lines2/him_you_have_face.mp3': 1.71, 'lines3/other_focus.mp3': 1.21, 'lines2/dbl_two_of_you.mp3': 2.15, 'lines2/him_right_for_me.mp3': 1.26, 'lines2/dbl_everyone_like_you.mp3': 1.86, 'lines2/him_thats_me.mp3': 0.72, 'lines2/doc_testimonial.mp3': 2.72, 'lines2/him_tv_fist.mp3': 2.22, 'lines2/dbl_good_fist.mp3': 1.6, 'lines2/ann_side_effects.mp3': 9.67, 'lines2/doc_any_symptoms.mp3': 0.93, 'lines2/him_button_cut.mp3': 2.15, 'lines3/other_same_time.mp3': 1.27 });
-const UNUSED_LINES = ['lines4/him_sure.mp3'];   // "Sure." after "No!" was cut by the board (s05 has only the two shouts)
+Object.assign(LINE_LEN, { 'symptoms/doctor_ask.mp3': 2.3, 'symptoms/him_symptoms_v3.mp3': 18.81, 'symptoms/doctor_space_ghost.mp3': 1.33, 'symptoms/him_space_ghost.mp3': 1.49, 'doctor_rx_a.mp3': 4.53, 'lines3/him_drink_it.mp3': 2.59, 'lines3/doctor_no.mp3': 0.71, 'lines3/him_oh_no.mp3': 1.72, 'doctor_line_a.mp3': 9.79, 'lines4/him_scream_ring_cut.mp3': 6.0, 'lines2/him_silence.mp3': 0.69, 'lines2/him_more_music.mp3': 1.48, 'lines3/him_shes_up_here.mp3': 3.72, 'lines2/him_space_ghost_q.mp3': 1.84, 'lines4/other_sheet.mp3': 1.27, 'lines4/him_vibe.mp3': 1.07, 'lines4/him_are_you_her2.mp3': 0.62, 'lines4/other_no.mp3': 0.41, 'lines4/him_sure.mp3': 0.71, 'lines2/dbl_boo.mp3': 0.61, 'lines2/him_shriek.mp3': 0.63, 'lines4/him_there_before.mp3': 1.63, 'lines4/other_sure.mp3': 0.68, 'lines4/him_okay.mp3': 1.47, 'lines4/him_hey.mp3': 0.59, 'lines4/other_what.mp3': 0.42, 'lines4/him_people.mp3': 1.14, 'lines4/him_anyone.mp3': 1.36, 'lines4/other_everyone.mp3': 0.99, 'lines2/him_are_you_ghost.mp3': 2.64, 'lines2/dbl_im_you.mp3': 1.59, 'lines2/him_you_have_face.mp3': 1.71, 'lines3/other_focus.mp3': 1.21, 'lines2/dbl_two_of_you.mp3': 2.15, 'lines2/him_right_for_me.mp3': 1.26, 'lines2/dbl_everyone_like_you.mp3': 1.86, 'lines2/him_thats_me.mp3': 0.72, 'lines2/doc_testimonial.mp3': 2.72, 'lines2/him_tv_fist.mp3': 2.22, 'lines2/dbl_good_fist.mp3': 1.6, 'lines2/ann_side_effects.mp3': 9.67, 'lines2/doc_any_symptoms.mp3': 0.93, 'lines2/him_button_cut.mp3': 2.15, 'lines3/other_same_time.mp3': 1.27,
+  'symptoms/him_symptoms_v3_p1.mp3': 5.403, 'symptoms/him_symptoms_v3_p2.mp3': 4.43, 'symptoms/him_symptoms_v3_p3.mp3': 2.539, 'symptoms/him_symptoms_v3_p4.mp3': 0.925, 'symptoms/him_symptoms_v3_p5.mp3': 4.3,
+  'doctor_line_a_p1.mp3': 0.76, 'doctor_line_a_p2.mp3': 2.868, 'doctor_line_a_p3.mp3': 1.174, 'doctor_line_a_p4.mp3': 3.039 });
+const UNUSED_LINES = ['lines4/him_sure.mp3', 'symptoms/him_symptoms_v3.mp3', 'doctor_line_a.mp3'];   // the two long takes are played as their pieces (_p1..)   // "Sure." after "No!" was cut by the board (s05 has only the two shouts)
 
 // ---------------------------------------------------------------- the staging per shot (what already worked, from LESSONS-r2.md and the r2 cards)
 // Each entry: seq (sequence file), cast, camera (the compiler's), shot (explicit override, wins), mood, tags, raw, needs (the checklist).

@@ -16,6 +16,10 @@
 //   node Director/tools/critic.mjs vision <mp4> [--report critic.json --start <song s at file 0> --budget 1 --top 6 --model claude-sonnet-5-5]
 //                                                   24 fps strips at the report's worst moments, a fixed checklist to Claude vision through Hawkes Gen (llm.json, tkshock),
 //                                                   priced first, answers merged into the report
+//   node Director/tools/critic.mjs twin <file.npz|bvh|fbx...> [--start s --end s --zerog]   headless: tools/critic/twin.py turns the file into a dump, no Unity (agrees with a
+//                                                   Unity dump within ~0.3 on mocap; no fingers). Reports in library/motion/critic/twin/
+//   node Director/tools/critic.mjs rank <beat> <src...> [--zerog]   ranks a beat's candidates (catalog names via their Unity dump, files via the twin, file@a-b trims)
+//                                                   -> library/motion/critic/beats/<beat>.md|json
 //   node Director/tools/critic.mjs test             self test on synthetic motion (a real-looking swing against a linear one)
 // Unity only through mv's queue (every dump is an `mv call`). No C#, no commits. Thresholds: CAL in measures.mjs; calibration: Director/review/motion-critic.md.
 import fs from 'node:fs';
@@ -149,6 +153,48 @@ async function cmdDump(file) {
   console.log(markdown(rep));
 }
 
+/** The headless twin: any motion file (npz, bvh, fbx) to a dump without Unity (tools/critic/twin.py), cached by source mtime. */
+function twinDump(src, o = {}) {
+  const name = o.name ?? path.basename(src).replace(/^Humanoid@/, '').replace(/\.(npz|bvh|fbx)$/i, '') + (o.start != null ? `@${o.start}-${o.end ?? ''}` : '');
+  const out = path.join(ROOT, 'gen', 'critic', 'twin', name.replace(/[^\w@.-]+/g, '_') + '.json');
+  const abs = path.isAbsolute(src) ? src : fs.existsSync(path.resolve(src)) ? path.resolve(src) : path.join(ROOT, '..', src);
+  if (!fs.existsSync(out) || (fs.existsSync(abs) && fs.statSync(abs).mtimeMs > fs.statSync(out).mtimeMs) || flags.force) {
+    const args = ['-I', path.join(ROOT, 'tools', 'critic', 'twin.py'), abs, out, '--name', name, ...(o.start != null ? ['--start', String(o.start)] : []), ...(o.end != null ? ['--end', String(o.end)] : [])];
+    const r = spawnSync('py', args, { encoding: 'utf8', maxBuffer: 1 << 26 });
+    if (r.status) throw new Error(`twin ${src}: ${(r.stderr || r.stdout).trim().split('\n').slice(-2).join(' ')}`);
+  }
+  return { name, d: read(out), file: out };
+}
+async function cmdTwin(srcs) {
+  for (const src of srcs) {
+    const { name, d } = twinDump(src, { start: flags.start, end: flags.end });
+    const rep = scoreDump(d, { zerog: !!flags.zerog, reference: reference() }, name);
+    write(path.join(LIB, 'twin', `${name}.json`), rep); write(path.join(LIB, 'twin', `${name}.md`), markdown(rep));
+    console.log(flags.quiet ? `${name}\t${rep.total}` : markdown(rep));
+  }
+}
+/** Ranks candidates for a beat: each `src` is a catalog clip name (its Unity dump), a keyed sheet, or a file (twin). `src@a-b` trims a file. */
+async function cmdRank(beat, srcs) {
+  const rows = [];
+  for (const raw of srcs) {
+    try {
+      const m = raw.match(/^(.*?)@([\d.]*)-([\d.]*)$/), src = m ? m[1] : raw;
+      let d, name;
+      if (/\.(npz|bvh|fbx)$/i.test(src)) ({ d, name } = twinDump(src, { start: m?.[2] ? +m[2] : undefined, end: m?.[3] ? +m[3] : undefined }));
+      else { name = src; d = clipDump(src, { fps: 30 }); }
+      const rep = scoreDump(d, { zerog: !!flags.zerog || /^(zg_|hp_)/.test(name), reference: reference() }, name);
+      rows.push({ name, src: raw, via: d.twin ? 'twin' : 'unity', seconds: rep.seconds, total: rep.total, verdict: rep.verdict, low: Object.entries(rep.principles).filter(([, p]) => Number.isFinite(p.score)).sort((a, b) => a[1].score - b[1].score).slice(0, 3).map(([k, p]) => `${k} ${p.score}`), principles: Object.fromEntries(Object.entries(rep.principles).map(([k, p]) => [k, p.na ? null : p.score])), worst: (rep.worst ?? []).slice(0, 3).map((w) => `${w.t}s ${w.what}`) });
+    } catch (e) { rows.push({ name: raw, error: e.message.split('\n')[0] }); }
+  }
+  rows.sort((a, b) => (b.total ?? -1) - (a.total ?? -1));
+  const out = { beat, when: new Date().toISOString(), zerog: !!flags.zerog, rows };
+  write(path.join(LIB, 'beats', `${beat}.json`), out);
+  const L = [`# Motion candidates: ${beat} (${out.when.slice(0, 16)})`, '', `Ranked by the critic (${flags.zerog ? 'zero-g' : 'grounded'}). Twin = scored headless from the source file; unity = a clipbones dump.`, '', '| # | clip | via | s | total | lowest | worst moment |', '|---|---|---|---|---|---|---|',
+    ...rows.map((r, i) => r.error ? `| ${i + 1} | ${r.name} | - | - | error | ${r.error} | |` : `| ${i + 1} | ${r.name} | ${r.via} | ${r2(r.seconds)} | **${r.total}** | ${r.low.join(', ')} | ${r.worst[0] ?? ''} |`), ''];
+  write(path.join(LIB, 'beats', `${beat}.md`), L.join('\n'));
+  console.log(L.join('\n'));
+}
+
 /** Every mocap clip the catalog knows: the human reference. */
 function mocapNames() { return Object.keys(catalogVerdicts()).filter((n) => /^mx_/.test(n)).sort(); }
 async function cmdReference() {
@@ -186,11 +232,12 @@ async function cmdCalibrate() {
   const auc = (hi, lo) => { const H = rows.filter((r) => hi.includes(r.grade)).map((r) => r.total), Lo = rows.filter((r) => lo.includes(r.grade)).map((r) => r.total); let w = 0; for (const h of H) for (const l of Lo) w += h > l ? 1 : h === l ? 0.5 : 0; return H.length && Lo.length ? w / (H.length * Lo.length) : NaN; };
   const mocap = rows.filter((r) => /^mx_/.test(r.name)), gen = rows.filter((r) => /^gm_/.test(r.name));
   const perPrinciple = {}; for (const [k] of PRINCIPLES) { const a = rows.filter((r) => r.grade === 'A' && r[k] != null).map((r) => r[k]), c = rows.filter((r) => (r.grade === 'C' || r.grade === 'ban') && r[k] != null).map((r) => r[k]); perPrinciple[k] = { A: r2(mean(a)), C: r2(mean(c)), mocap: r2(mean(mocap.filter((r) => r[k] != null).map((r) => r[k]))), gen: r2(mean(gen.filter((r) => r[k] != null).map((r) => r[k]))) }; }
-  const out = { when: new Date().toISOString(), clips: rows.length, byGrade: Object.fromEntries(Object.entries(byGrade).map(([g, a]) => [g, { n: a.length, mean: r2(mean(a)), p25: r2(pct(a, 0.25)), median: r2(pct(a, 0.5)), p75: r2(pct(a, 0.75)) }])), spearman: r2(spearman), aucAvsC: r2(auc(['A'], ['C', 'ban'])), aucABvsC: r2(auc(['A', 'B'], ['C', 'ban'])), aucMocapVsGen: r2((() => { let w = 0; for (const h of mocap) for (const l of gen) w += h.total > l.total ? 1 : h.total === l.total ? 0.5 : 0; return mocap.length && gen.length ? w / (mocap.length * gen.length) : NaN; })()), mocap: { n: mocap.length, mean: r2(mean(mocap.map((r) => r.total))), p10: r2(pct(mocap.map((r) => r.total), 0.1)), min: r2(Math.min(...mocap.map((r) => r.total))), under8: mocap.filter((r) => r.total < 8).map((r) => `${r.name} ${r.total}`) }, generated: gen.map((r) => ({ name: r.name, grade: r.grade, total: r.total })), perPrinciple, fixtures, rows: rows.map(({ features, ...r }) => r) };
+  const keyedHero = fixtures.filter((f) => /^hp_/.test(f.name)), aucMocapVsKeyed = (() => { let w = 0; for (const h of mocap) for (const l of keyedHero) w += h.total > l.total ? 1 : h.total === l.total ? 0.5 : 0; return mocap.length && keyedHero.length ? w / (mocap.length * keyedHero.length) : NaN; })();
+  const out = { when: new Date().toISOString(), clips: rows.length, aucMocapVsKeyed: r2(aucMocapVsKeyed), keyedHeroMean: r2(mean(keyedHero.map((f) => f.total))), byGrade: Object.fromEntries(Object.entries(byGrade).map(([g, a]) => [g, { n: a.length, mean: r2(mean(a)), p25: r2(pct(a, 0.25)), median: r2(pct(a, 0.5)), p75: r2(pct(a, 0.75)) }])), spearman: r2(spearman), aucAvsC: r2(auc(['A'], ['C', 'ban'])), aucABvsC: r2(auc(['A', 'B'], ['C', 'ban'])), aucMocapVsGen: r2((() => { let w = 0; for (const h of mocap) for (const l of gen) w += h.total > l.total ? 1 : h.total === l.total ? 0.5 : 0; return mocap.length && gen.length ? w / (mocap.length * gen.length) : NaN; })()), mocap: { n: mocap.length, mean: r2(mean(mocap.map((r) => r.total))), p10: r2(pct(mocap.map((r) => r.total), 0.1)), min: r2(Math.min(...mocap.map((r) => r.total))), under8: mocap.filter((r) => r.total < 8).map((r) => `${r.name} ${r.total}`) }, generated: gen.map((r) => ({ name: r.name, grade: r.grade, total: r.total })), perPrinciple, fixtures, rows: rows.map(({ features, ...r }) => r) };
   write(path.join(LIB, 'calibration.json'), out);
   const L = [`# Motion critic calibration (${out.when.slice(0, 10)})`, '', `${rows.length} catalog clips against their hand-written A/B/C grades (the grades are about usefulness on his rig, so partial agreement is the ceiling), plus the keyed hero poses.`, '',
     '| grade | n | mean | p25 | median | p75 |', '|---|---|---|---|---|---|', ...Object.entries(out.byGrade).map(([g, s]) => `| ${g} | ${s.n} | ${s.mean} | ${s.p25} | ${s.median} | ${s.p75} |`), '',
-    `Spearman grade vs total: **${out.spearman}**. AUC A over C/ban: **${out.aucAvsC}**; A+B over C/ban: ${out.aucABvsC}. Mocap over generated (gm_*): **${out.aucMocapVsGen}**.`, '',
+    `Spearman grade vs total: **${out.spearman}**. AUC A over C/ban: **${out.aucAvsC}**; A+B over C/ban: ${out.aucABvsC}. Mocap over generated (gm_*): **${out.aucMocapVsGen}**. Mocap over the hand-keyed hero clips (hp_*, mean ${out.keyedHeroMean}): **${out.aucMocapVsKeyed}** (the separation that matters: real motion against typed joint numbers).`, '',
     `Mocap (mx_*, n ${out.mocap.n}): mean ${out.mocap.mean}, p10 ${out.mocap.p10}, min ${out.mocap.min}. Under 8: ${out.mocap.under8.join(', ') || 'none'}.`, '',
     '## Generated clips (Gen motion.from-text)', '', '| clip | grade | total |', '|---|---|---|', ...out.generated.map((g) => `| ${g.name} | ${g.grade} | ${g.total} |`), '',
     '## Per principle: mean score by group', '', '| principle | A | C/ban | mocap | generated |', '|---|---|---|---|---|', ...Object.entries(perPrinciple).map(([k, p]) => `| ${k} | ${p.A} | ${p.C} | ${p.mocap} | ${p.gen} |`), '',
@@ -213,7 +260,7 @@ async function cmdVision(mp4) {
   for (const [i, w] of moments.entries()) {
     const fileT = (w.t ?? 0) - start; if (fileT < 0.2 || fileT > dur - 0.2) continue;
     const t0 = Math.max(0, fileT - 3.5 / 24), out = path.join(dir, `${String(i + 1).padStart(2, '0')}_${(w.t ?? 0).toFixed(2)}.jpg`);
-    execFileSync('ffmpeg', ['-y', '-v', 'error', '-ss', String(t0), '-i', mp4, '-frames:v', '8', '-vf', `fps=24,scale=320:-2,drawtext=text='%{pts\\:hms}':fontsize=14:fontcolor=white:box=1:boxcolor=black@0.6:x=4:y=4,tile=4x2`, '-q:v', '3', out], { stdio: 'ignore' });
+    execFileSync('ffmpeg', ['-y', '-v', 'error', '-ss', String(t0), '-i', mp4, '-vf', `fps=24,scale=320:-2,drawtext=text='%{pts\\:hms}':fontsize=14:fontcolor=white:box=1:boxcolor=black@0.6:x=4:y=4,tile=4x2`, '-frames:v', '1', '-q:v', '3', out], { stdio: 'ignore' });
     strips.push({ t: w.t, part: w.part, what: w.what, file: out });
   }
   if (!strips.length) throw new Error('no worst moment falls inside this file');
@@ -286,6 +333,8 @@ try {
   if (cmd === 'clip' || cmd === 'pose') await cmdClip(pos.slice(1));
   else if (cmd === 'cut') await cmdCut(pos[1], pos[2], pos[3]);
   else if (cmd === 'dump') await cmdDump(pos[1]);
+  else if (cmd === 'twin') await cmdTwin(pos.slice(1));
+  else if (cmd === 'rank') await cmdRank(pos[1], pos.slice(2));
   else if (cmd === 'reference') await cmdReference();
   else if (cmd === 'calibrate') await cmdCalibrate();
   else if (cmd === 'vision') await cmdVision(pos[1]);

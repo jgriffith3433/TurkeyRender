@@ -1,0 +1,502 @@
+{
+ "name": "hawkespunch 64.5-69.25 s",
+ "video": "hawkespunch",
+ "from": 64.5,
+ "to": 69.25,
+ "actors": [
+  "person",
+  "doctor"
+ ],
+ "fps": 24,
+ "frames": 114,
+ "seconds": 4.71,
+ "zerog": false,
+ "cuts": 2,
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "person: median bend 0.16 over 5 moves, 0% straight lines; doctor: median bend 0.15 over 14 moves, 7% straight lines",
+   "partial": false
+  },
+  "ease": {
+   "score": 8.5,
+   "note": "person: speed shape 0.41 (bell 0.6, constant 1.0), 20% of moves start or stop in one frame; doctor: speed shape 0.59 (bell 0.6, constant 1.0), 43% of moves start or stop in one frame",
+   "partial": false
+  },
+  "timing": {
+   "score": 8,
+   "note": "person: 1 holds (median 1.92 s), 0% of frames dead still, fast parts median 1.58 s; doctor: 2 holds (median 1.58 s), 0% of frames dead still, fast parts median 0.29 s",
+   "partial": false
+  },
+  "anticipation": {
+   "score": 3.5,
+   "note": "person: 5 big moves: 0 with anticipation, 0 with overshoot and settle; doctor: 9 big moves: 2 with anticipation, 3 with overshoot and settle",
+   "partial": false
+  },
+  "overlap": {
+   "score": 0.2,
+   "note": "person: parts' speed profiles agree 0.82 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together; doctor: parts' speed profiles agree 0.88 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together",
+   "partial": false
+  },
+  "weight": {
+   "score": 6.3,
+   "note": "person: 19 centre-of-mass jerks, planted feet slide 0 cm/s; doctor: 0 centre-of-mass jerks, planted feet slide 38 cm/s",
+   "partial": false
+  },
+  "snaps": {
+   "score": 0,
+   "note": "person: 7 body snaps or pops in 4.71 s; doctor: 5 body snaps or pops in 4.71 s",
+   "partial": false
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "person: 7% of core joints frozen while the body moves; doctor: 5% of core joints frozen while the body moves",
+   "partial": false
+  },
+  "silhouette": {
+   "score": 9.6,
+   "note": "person: 9 key poses, readability 0.73 (best of front, side, three-quarter), 56% twinned; doctor: 9 key poses, readability 0.8 (best of front, side, three-quarter), 0% twinned",
+   "partial": false
+  },
+  "hands": {
+   "score": 8.5,
+   "note": "person: fingers flat and splayed 42% of the time; doctor: fingers curl 31 deg, spread 23 deg, head level",
+   "partial": false
+  },
+  "contact": {
+   "score": 10,
+   "note": "person: hands clear of the body, 0 reaches into air; doctor: hands clear of the body, 0 reaches into air",
+   "partial": false
+  },
+  "reference": {
+   "score": 9.3,
+   "note": "person: 1.48 robust z from 174 mocap clips; furthest: spineToArm high (2.9), handSpeedP95 high (2.58), energyCV high (2.43); doctor: 1.22 robust z from 174 mocap clips; furthest: energyCV high (4.39), headOmegaP50 low (1.1), armOmegaP50 low (1.06)",
+   "partial": false
+  }
+ },
+ "total": 6.8,
+ "events": [
+  {
+   "t": 67.04,
+   "f": 61,
+   "kind": "snap",
+   "part": "doctor.LeftUpperLeg",
+   "sev": 1,
+   "what": "LeftUpperLeg jumps 22 deg in one frame"
+  },
+  {
+   "t": 67.04,
+   "f": 61,
+   "kind": "snap",
+   "part": "doctor.LeftFoot",
+   "sev": 1,
+   "what": "LeftFoot jumps 33 deg in one frame"
+  },
+  {
+   "t": 67.17,
+   "f": 64,
+   "kind": "snap",
+   "part": "doctor.LeftUpperLeg",
+   "sev": 0.92,
+   "what": "LeftUpperLeg jumps 13 deg in one frame"
+  },
+  {
+   "t": 64.63,
+   "f": 3,
+   "kind": "snap",
+   "part": "doctor.LeftFoot",
+   "sev": 0.92,
+   "what": "LeftFoot jumps 13 deg in one frame"
+  },
+  {
+   "t": 66.42,
+   "f": 46,
+   "kind": "snap",
+   "part": "doctor.RightUpperArm",
+   "sev": 0.91,
+   "what": "RightUpperArm jumps 13 deg in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 72,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 194 m/s^2"
+  },
+  {
+   "t": 67.54,
+   "f": 73,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 290 m/s^2"
+  },
+  {
+   "t": 67.67,
+   "f": 76,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 224 m/s^2"
+  },
+  {
+   "t": 67.71,
+   "f": 77,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 289 m/s^2"
+  },
+  {
+   "t": 67.92,
+   "f": 82,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 126 m/s^2"
+  },
+  {
+   "t": 68.42,
+   "f": 94,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 116 m/s^2"
+  },
+  {
+   "t": 68.46,
+   "f": 95,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 258 m/s^2"
+  },
+  {
+   "t": 68.5,
+   "f": 96,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 173 m/s^2"
+  },
+  {
+   "t": 69.08,
+   "f": 110,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.88,
+   "what": "the body's centre of mass jerks at 84 m/s^2"
+  },
+  {
+   "t": 69.13,
+   "f": 111,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.88,
+   "what": "the body's centre of mass jerks at 83 m/s^2"
+  },
+  {
+   "t": 69.17,
+   "f": 112,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.86,
+   "what": "the body's centre of mass jerks at 77 m/s^2"
+  },
+  {
+   "t": 69.21,
+   "f": 113,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.86,
+   "what": "the body's centre of mass jerks at 78 m/s^2"
+  },
+  {
+   "t": 67.42,
+   "f": 70,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.83,
+   "what": "the body's centre of mass jerks at 69 m/s^2"
+  },
+  {
+   "t": 67.58,
+   "f": 74,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.8,
+   "what": "the body's centre of mass jerks at 60 m/s^2"
+  },
+  {
+   "t": 67.83,
+   "f": 80,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.8,
+   "what": "the body's centre of mass jerks at 59 m/s^2"
+  },
+  {
+   "t": 68.63,
+   "f": 99,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.8,
+   "what": "the body's centre of mass jerks at 61 m/s^2"
+  },
+  {
+   "t": 67.5,
+   "f": 72,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 150 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 76,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 156 cm in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 113,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 42 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 76,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 146 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 95,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 96 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 76,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 126 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 95,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 89 cm in one frame"
+  },
+  {
+   "t": 67.96,
+   "f": 83,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.78,
+   "what": "the body's centre of mass jerks at 54 m/s^2"
+  },
+  {
+   "t": 67.46,
+   "f": 71,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.77,
+   "what": "the body's centre of mass jerks at 51 m/s^2"
+  },
+  {
+   "t": 67.38,
+   "f": 69,
+   "kind": "no-prep",
+   "part": "person.LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 1969 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 69,
+   "kind": "no-prep",
+   "part": "person.RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 1923 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 69,
+   "kind": "no-prep",
+   "part": "person.LeftFoot",
+   "sev": 0.75,
+   "what": "LeftFoot travels 1928 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 69,
+   "kind": "no-prep",
+   "part": "person.RightFoot",
+   "sev": 0.75,
+   "what": "RightFoot travels 1946 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 69,
+   "kind": "no-prep",
+   "part": "person.Head",
+   "sev": 0.75,
+   "what": "Head travels 1943 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.88,
+   "f": 81,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.75,
+   "what": "the body's centre of mass jerks at 46 m/s^2"
+  },
+  {
+   "t": 64.54,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftHand",
+   "sev": 0.62,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 55,
+   "kind": "no-prep",
+   "part": "doctor.RightHand",
+   "sev": 0.61,
+   "what": "RightHand travels 32 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 68.04,
+   "f": 85,
+   "kind": "linear",
+   "part": "doctor.LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand moves at one speed for 0.46 s (flat 0.9): interpolation, not a move"
+  },
+  {
+   "t": 68.46,
+   "f": 95,
+   "kind": "abrupt-start",
+   "part": "doctor.RightFoot",
+   "sev": 0.45,
+   "what": "RightFoot starts at 71% of its peak speed in one frame"
+  },
+  {
+   "t": 68.92,
+   "f": 106,
+   "kind": "abrupt-stop",
+   "part": "doctor.RightFoot",
+   "sev": 0.45,
+   "what": "RightFoot stops dead from 84% of its peak"
+  },
+  {
+   "t": 68.04,
+   "f": 85,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftHand",
+   "sev": 0.44,
+   "what": "LeftHand starts at 79% of its peak speed in one frame"
+  },
+  {
+   "t": 68.5,
+   "f": 96,
+   "kind": "abrupt-stop",
+   "part": "doctor.LeftHand",
+   "sev": 0.44,
+   "what": "LeftHand stops dead from 82% of its peak"
+  },
+  {
+   "t": 68.33,
+   "f": 92,
+   "kind": "abrupt-start",
+   "part": "doctor.Head",
+   "sev": 0.43,
+   "what": "Head starts at 60% of its peak speed in one frame"
+  },
+  {
+   "t": 69,
+   "f": 108,
+   "kind": "abrupt-stop",
+   "part": "doctor.Head",
+   "sev": 0.43,
+   "what": "Head stops dead from 61% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 67.04,
+   "f": 61,
+   "kind": "snap",
+   "part": "doctor.LeftUpperLeg",
+   "sev": 1,
+   "what": "LeftUpperLeg jumps 22 deg in one frame",
+   "also": [
+    "snap"
+   ]
+  },
+  {
+   "t": 64.63,
+   "f": 3,
+   "kind": "snap",
+   "part": "doctor.LeftFoot",
+   "sev": 0.92,
+   "what": "LeftFoot jumps 13 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 66.42,
+   "f": 46,
+   "kind": "snap",
+   "part": "doctor.RightUpperArm",
+   "sev": 0.91,
+   "what": "RightUpperArm jumps 13 deg in one frame",
+   "also": []
+  },
+  {
+   "t": 67.5,
+   "f": 72,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 194 m/s^2",
+   "also": [
+    "com-spike"
+   ]
+  },
+  {
+   "t": 67.92,
+   "f": 82,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 126 m/s^2",
+   "also": []
+  }
+ ],
+ "perActor": {
+  "person": {
+   "total": 6.1,
+   "verdict": "looks animated, not acted: anticipation and snaps give it away (6.1/10)"
+  },
+  "doctor": {
+   "total": 7.5,
+   "verdict": "passable, weak on overlap and snaps (7.5/10)"
+  }
+ },
+ "verdict": "looks animated, not acted: snaps and overlap give it away (6.8/10)"
+}

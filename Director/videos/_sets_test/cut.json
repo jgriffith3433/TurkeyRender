@@ -1,0 +1,27 @@
+{
+  // _sets_test: proof stills of the hawkespunch sets and props (set agent, 2026-11-08). 2 s per card; frames at the middle.
+  "beats": {},
+  "shots": [
+    {"id": "rec_wide", "at": "0.000s", "len": "2s", "seq": "clinic"},
+    {"id": "rec_med", "len": "2s", "seq": "clinic"},
+    {"id": "rec_poster", "len": "2s", "seq": "clinic"},
+    {"id": "nurse_cu", "len": "2s", "seq": "clinic"},
+    {"id": "exam_wide", "len": "2s", "seq": "clinic"},
+    {"id": "exam_wide_lit", "len": "2s", "seq": "clinic"},
+    {"id": "gloves", "len": "2s", "seq": "clinic"},
+    {"id": "pad", "len": "2s", "seq": "clinic"},
+    {"id": "doc_mcu", "len": "2s", "seq": "clinic"},
+    {"id": "doc_mcu_lit", "len": "2s", "seq": "clinic"},
+    {"id": "tv_two", "len": "2s", "seq": "commercial"},
+    {"id": "tv_wide", "len": "2s", "seq": "commercial"},
+    {"id": "can_end", "len": "3s", "seq": "clinic"},
+    {"id": "glove_hand", "len": "2s", "seq": "clinic"},
+    {"id": "can_end_tv", "len": "3s", "seq": "commercial"},
+    {"id": "can_hand_a", "len": "2s", "seq": "clinic"},
+    {"id": "can_hand_b", "len": "2s", "seq": "clinic"},
+    {"id": "t_tv", "len": "2s", "seq": "commercial"},
+    {"id": "a05", "len": "10s", "seq": "commercial"},
+    {"id": "a06", "len": "2s", "seq": "commercial"},
+    {"id": "b01", "len": "3s", "seq": "clinic"}
+  ]
+}

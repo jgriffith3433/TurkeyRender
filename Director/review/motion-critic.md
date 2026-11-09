@@ -41,7 +41,17 @@ Each principle maps to 0-10 through `CAL` (good .. bad, straight line). The tota
 
 See `library/motion/critic/calibration.md` (`critic.mjs calibrate`): every catalog clip scored against its hand-written grade, the generated `gm_*` clips, the keyed hero poses. Results and the thresholds they set are summarised below after each calibration pass.
 
-CALIBRATION-RESULTS
+**Pass 1 (2026-11-08, motion agent; 225 Unity dumps, reference of 174 mx_ clips).**
+- The catalog's A/B/C grades do not track the critic (Spearman 0.01, AUC A over C 0.50). Expected: those grades are about usefulness on his rig (framing, props, what a clip is for), not about whether the motion is human; every mx_ clip is real mocap. They are not a calibration target for "human-ness".
+- The separation that matters holds: **mocap over the hand-keyed hero clips (hp_*) AUC 0.97** (mocap mean 8.63, p10 7.6; hp_ mean 5.94). Mocap over Gen text-motion (gm_*) AUC 0.76 (gm_ 6.5-8.4).
+- Snaps were miscalibrated: the old detector compared a frame's step with the bone's own frames 2-6 away, so the peak of any fast real swing (a bell 4-6 frames wide) counted; real mocap averaged 2.7/10 on snaps (up to 227 "snaps" per 10 s on mx_happy_walk). Now a snap is a step over `CAL.snapRatio` (2.2) x the larger of its two neighbouring frames: mocap snaps 8.25 mean, keyed hero clips still 0 where they jump. The same rule now applies to end-effector pops (over 18 cm in a frame AND 2.2x both neighbouring frames): a real punch moves 15-20 cm a frame for several frames.
+- Reading a total: mocap sits 7.6-9.5; a candidate under 7.5 is below 90% of real human motion; the keyed hero poses sit 4.3-7.9.
+
+**The headless twin** (`tools/critic/twin.py`, `critic.mjs twin|rank`): any .npz/.bvh/.fbx scored without Unity. Against Unity dumps of the same clip: mx_body_wave 9.5/9.5, mx_flying_back_death 7.8/7.8, mx_goalie_catch_mid 8.1/8.3, mx_falling_idle 8.6/8.7, mx_boogaloo 8.9/8.6, mx_catwalk_stop 8.4/7.9, mm_cross_punch_a 8.0/7.8 (Unity on the clean copy), mm_lift_heavy_a 7.9/7.3 (clean copy), ps_punched_launch_a 6.3/6.1, ps_zg_startle_a 7.3/7.3, vm_box_hooks 7.8/8.7. Mean absolute gap 0.3, worst 0.9 (vm_box_hooks: Unity's humanoid import moves the hands and slides the feet: ease 5.3 vs 8.2, overlap 2.3 vs 7.5, foot slide 30 vs 7 cm/s). The twin skips Unity's humanoid retarget (muscle limits, foot handling) and has no fingers, so it screens candidates; the clip that goes into a shot gets a Unity dump (`critic.mjs clip`) once admitted.
+
+**Known gaps:** Unity dumps of admitted mm_/ps_/vm_ clips read 8.3 s long until 2026-11-08 (Blender export bug, fixed): their old Unity scores carry a fake 7 s hold. The vision stage is pending until Gen's Claude tools return (Nov 12).
+
+**Beat ranking** (`tools/motion_beats.mjs`, reports in `library/motion/critic/beats/<beat>.md`): score = critic total - 2 x fit - 3 when the beat's action is missing. Fit is the motion-matching distance to the approved hp_ sheet's window (upper body only for zero-g beats); the action check is a positional test per beat (a strike at 3 m/s and 30 cm ahead of the chest, both hands overhead 0.5 s, both arms out in front 0.3 s for a catch, and so on), because the critic alone ranks a calm guard stance over a punch.
 
 ## Vision, the second stage
 

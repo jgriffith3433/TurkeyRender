@@ -4,7 +4,7 @@
 //   Assets/MusicVideo/Sfx/punch/beds/<video>_<bed>.wav   each bed exactly as long as its stretch, looped with crossfades, set to its loudness
 //   videos/<video>/acts/78-beds.json                      one sfx cue per bed (generated: never edit it; tools/mv/sound.mjs ducks every file under
 //                                                         a `beds` folder 6 dB under each spoken line when the score has a `mix` block)
-//   node Director/tools/punch_beds.mjs <video> [--dry]
+//   node Director/tools/punch_beds.mjs <video> [--dry] [--lines <scratch lines.json>]   (--lines is for checks: use it with --dry)
 // No times live here. A bed's ends are anchors: a shot's start or end (cards.map.json), a spoken line's start or end (lines.json and the mp3's
 // length), or the end of the film (song.json). So after `mv cards insert/remove` (which moves the act's times) run this again: the files and the act
 // follow the new cut. Levels are integrated LUFS of the bed alone; dialogue sits at -16, so -40 to -46 is room tone you hear only in the gaps.
@@ -15,11 +15,11 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.dirname(path.dirname(path.dirname(fileURLToPath(import.meta.url))));
-const name = process.argv[2], dry = process.argv.includes('--dry');
+const name = process.argv[2], dry = process.argv.includes('--dry') || process.argv.includes('--lines');
 if (!name) { console.error('usage: punch_beds.mjs <video> [--dry]'); process.exit(2); }
-const DIR = path.join(ROOT, 'Director', 'videos', name), SFX = 'Assets/MusicVideo/Sfx/punch', OUT = path.join(ROOT, SFX, 'beds');
+const DIR = path.join(ROOT, 'Director', 'videos', name), LINES_FILE = process.argv.includes('--lines') ? path.resolve(process.argv[process.argv.indexOf('--lines') + 1]) : path.join(DIR, 'lines.json'), SFX = 'Assets/MusicVideo/Sfx/punch', OUT = path.join(ROOT, SFX, 'beds');
 const json = (f) => JSON.parse(fs.readFileSync(f, 'utf8').replace(/^\s*\/\/.*$/gm, ''));
-const map = json(path.join(DIR, 'cards.map.json')), song = json(path.join(DIR, 'song.json')), lines = json(path.join(DIR, 'lines.json')).lines;
+const map = json(path.join(DIR, 'cards.map.json')), song = json(path.join(DIR, 'song.json')), lines = json(LINES_FILE).lines;
 const stderrOf = (args) => String(spawnSync('ffmpeg', args, { encoding: 'utf8', maxBuffer: 1 << 26 }).stderr ?? '');
 const seconds = (f) => +String(spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f], { encoding: 'utf8' }).stdout).trim();
 const lufsOf = (f) => { const m = /I:\s*(-?[\d.]+) LUFS\s*\n\s*Threshold/.exec(stderrOf(['-nostats', '-i', f, '-af', 'ebur128', '-f', 'null', '-'])); return m ? +m[1] : null; };
@@ -29,27 +29,26 @@ const WAIT = [{ src: 'foley/wait_ac_hum.wav', lufs: -43 }, { src: 'foley/wait_cl
 const EXAM = [{ src: 'clinic_hum.mp3', lufs: -41 }];
 const STUDIO = [{ src: 'foley/studio_air_loop.wav', lufs: -41 }, { src: 'studio_tone.mp3', lufs: -50 }]; // steady air, the old tone's far crew under it
 const VACUUM = [{ src: 'space_epic/space_vacuum_loop.wav', lufs: -42 }];
+// Anchored on the approved board's shot ids (storyboard/shots.json, 53 shots, c01..b05; sound agent 2026-11-08). The r2 ids (s1_wide, p_glass,
+// tv_fold, b_end...) are gone; mv refs <id> lists who else names a shot.
 const BEDS = [
-  { id: 'waiting', from: { shot: 's1_wide' }, to: { shot: 's1_gobble', edge: 'end' }, layers: WAIT, note: 'reception: AC hum and the clock' },
-  // the room falls away under the build: from l_mouth (his last line) down 8 dB by the wind-up, so the silence before the hit is a choice (N8)
-  { id: 'exam', from: { shot: 'sym_ask' }, to: { shot: 'p_face', edge: 'end' }, layers: EXAM, dips: [{ from: { shot: 'l_mouth' }, to: { shot: 'p_hit' }, dB: -8 }], note: 'the exam room: fluorescent hum' },
-  { id: 'outside', optional: true, from: { shot: 'p_glass' }, to: { shot: 'p_glass', edge: 'end' }, layers: [{ src: 'sky_wind.mp3', lufs: -36 }], note: 'outside the clinic: wind' }, // optional: skipped while p_glass is out of the cut
-  // the sound cut on the picture cut is the gag (N9): reception's own tone, not the sky's
-  { id: 'reception', from: { shot: 'p_turkey' }, to: { shot: 'p_turkey', edge: 'end' }, layers: WAIT, note: 'back at reception, calm' },
-  { id: 'sky', from: { shot: 'p_travel' }, to: { shot: 'p_travel', edge: 'end' }, layers: [{ src: 'bed_sky.mp3', lufs: -33 }], fadeIn: 0.6, note: 'the climb: wind, cut dead into space' },
-  // space: a soft low vacuum bed, never silence, except the silence gag: from the instant the scream cuts dead at the ring plane to "She's up here", a faint ring only
-  { id: 'space_in', from: { shot: 'p_travel', edge: 'end' }, to: { line: 'lines4/him_scream_ring_cut.mp3', edge: 'end' }, layers: VACUUM, note: 'space: vacuum bed under the scream' },
+  { id: 'waiting', from: { shot: 'c01' }, to: { shot: 'c04', edge: 'end' }, layers: WAIT, note: 'reception: AC hum and the clock' },
+  // the room falls away under her line and the held wind-up: from c21 down 8 dB by the hit (p02), so the silence before it is a choice (N8)
+  { id: 'exam', from: { shot: 'c05' }, to: { shot: 'p03', edge: 'end' }, layers: EXAM, dips: [{ from: { shot: 'c21' }, to: { shot: 'p02' }, dB: -8 }], note: 'the exam room: fluorescent hum' },
+  // the sound cut on the picture cut is the gag (N9): reception's own tone under the rattling ceiling
+  { id: 'reception', from: { shot: 'p04' }, to: { shot: 'p04', edge: 'end' }, layers: WAIT, note: 'back at reception, calm' },
+  { id: 'sky', from: { shot: 'p05' }, to: { shot: 'p05', edge: 'end' }, layers: [{ src: 'bed_sky.mp3', lufs: -33 }], fadeIn: 0.6, note: 'the climb through the clouds: wind, cut dead into space' },
+  // space: a soft low vacuum bed, never silence, except the silence gag: from the instant the scream cuts dead at the ring plane (s01 +3.0) to "She's up here", a faint ring only
+  { id: 'space_in', from: { shot: 'p05', edge: 'end' }, to: { line: 'lines4/him_scream_ring_cut.mp3', edge: 'end' }, layers: VACUUM, note: 'space: vacuum bed under the scream' },
   { id: 'space_ring', from: { line: 'lines4/him_scream_ring_cut.mp3', edge: 'end' }, to: { line: 'lines3/him_shes_up_here.mp3', off: -0.2 }, layers: [{ src: 'still_tone.mp3', lufs: -46 }], fadeIn: 0.01, fadeOut: 0.5, note: 'the silence gag: a faint ring' },
-  { id: 'space', from: { line: 'lines3/him_shes_up_here.mp3', off: -0.2 }, to: { shot: 'tv_fold' }, layers: VACUUM, fadeIn: 0.8, note: 'space: vacuum bed to the fold' },
-  { id: 'studio', from: { shot: 'tv_fold' }, to: { shot: 'tv_doc' }, layers: STUDIO, note: 'the TV studio: air, a far crew' },
-  { id: 'testimonial', from: { shot: 'tv_doc' }, to: { shot: 'tv_doc', edge: 'end' }, layers: [{ src: 'clinic_hum.mp3', lufs: -43 }, { src: 'foley/studio_air_loop.wav', lufs: -48 }], note: 'her testimonial, in the clinic' },
-  { id: 'studio2', from: { shot: 'tv_both' }, to: { shot: 'tv_end', edge: 'end' }, layers: STUDIO, dips: [{ from: { shot: 'tv_card' }, to: { shot: 'tv_card', off: 0.4 }, dB: -4 }], note: 'the studio to the end card; under the safety read 4 dB down' },
-  // the next day: reception's tone comes in under THE NEXT DAY card (a pre-lap), so the card isn't dead air
-  { id: 'waiting2', from: { shot: 'b_next' }, to: { shot: 'b_turkey', edge: 'end' }, layers: WAIT, note: 'the next day: reception' },
-  { id: 'exam2', from: { shot: 'b_room' }, to: { shot: 'b_him', edge: 'end' }, layers: EXAM, note: 'the next day: the exam room' },
-  { id: 'space_button', from: { shot: 'b_him', edge: 'end' }, to: { shot: 'b_end' }, layers: VACUUM, note: 'the button in space' },
-  { id: 'endcard', from: { shot: 'b_end' }, to: { shot: 'b_end', edge: 'end' }, layers: [{ src: 'foley/studio_air_loop.wav', lufs: -45 }], note: 'the end card: the ad register' },
-  { id: 'last', from: { shot: 'b_end', edge: 'end' }, to: { end: true }, layers: [{ src: 'clinic_hum.mp3', lufs: -48 }], fadeOut: 0.6, note: 'the can roll on the clinic floor, into black' },
+  { id: 'space', from: { line: 'lines3/him_shes_up_here.mp3', off: -0.2 }, to: { shot: 'a01' }, layers: VACUUM, fadeIn: 0.8, note: 'space: vacuum bed to the fold' },
+  { id: 'studio', from: { shot: 'a01' }, to: { shot: 'a03' }, layers: STUDIO, note: 'the TV studio: air, a far crew' },
+  { id: 'testimonial', from: { shot: 'a03' }, to: { shot: 'a03', edge: 'end' }, layers: [{ src: 'clinic_hum.mp3', lufs: -43 }, { src: 'foley/studio_air_loop.wav', lufs: -48 }], note: 'her testimonial, in the clinic' },
+  { id: 'studio2', from: { shot: 'a04' }, to: { shot: 'a06', edge: 'end' }, layers: STUDIO, dips: [{ from: { shot: 'a05' }, to: { shot: 'a05', off: 0.4 }, dB: -4 }], note: 'the studio to the end card; under the safety read 4 dB down' },
+  // the next day: the exam room again (the card THE NEXT DAY is over b01), hard cut to space on the second punch
+  { id: 'exam2', from: { shot: 'b01' }, to: { shot: 'b02', edge: 'end' }, layers: EXAM, note: 'the next day: the exam room' },
+  { id: 'space_button', from: { shot: 'b03' }, to: { shot: 'b04', edge: 'end' }, layers: VACUUM, note: 'the button in space' },
+  { id: 'last', from: { shot: 'b05' }, to: { end: true }, layers: [{ src: 'clinic_hum.mp3', lufs: -48 }], fadeOut: 0.6, note: 'the can roll on the clinic floor, into black' },
 ];
 
 // ---- anchors ----
@@ -70,7 +69,7 @@ const shot = (id) => { const s = map.find((x) => x.id === id); if (!s) throw new
 const lineLen = {};
 function at(a) {
   let t;
-  if (a.end) t = song.duration;
+  if (a.end) t = Math.max(...map.map((x) => x.tEnd)); // the cut's end (song.json kept the r2 length, 223.46 s)
   else if (a.shot) t = a.edge === 'end' ? shot(a.shot).tEnd : shot(a.shot).t;
   else if (a.line) {
     const l = lines.find((x) => x.file === a.line); if (!l) throw new Error(`no line ${a.line} in lines.json`);
@@ -115,6 +114,13 @@ for (const b of BEDS) {
   ff(...ins, '-filter_complex', graph, '-map', '[o]', '-c:a', 'pcm_s16le', path.join(OUT, file));
   for (const p of parts) try { fs.unlinkSync(p.f); } catch {}
 }
+// never digital silence: every second of the cut under some bed (overlaps are fine)
+{
+  const spans = cues.map((c) => { const b = BEDS.find((x) => c.note.startsWith(`bed ${x.id}:`)); return [at(b.from), at(b.to), b.id]; }).sort((p, q) => p[0] - q[0]);
+  let reach = 0, prev = 'the start';
+  for (const [a, z, id] of spans) { if (a > reach + 0.02) report.push(`!! GAP ${reach.toFixed(3)}-${a.toFixed(3)} (${(a - reach).toFixed(2)} s) between ${prev} and ${id}: no bed`); if (z > reach) { reach = z; prev = id; } }
+  const end = Math.max(...map.map((x) => x.tEnd)); if (reach < end - 0.02) report.push(`!! GAP ${reach.toFixed(3)}-${end.toFixed(3)} at the end: no bed`);
+}
 const head = `// GENERATED by Director/tools/punch_beds.mjs: room-tone beds, one per place, from shot and line anchors. Change the tool, not this; run it again after a clock change.\n`;
 const act = head + '{\n "cues": [\n' + cues.map((c) => '  ' + JSON.stringify(c)).join(',\n') + '\n ]\n}\n';
 if (!dry) {
@@ -123,7 +129,7 @@ if (!dry) {
   fs.writeFileSync(path.join(DIR, 'acts', '78-beds.json'), act);
   // generated.json: the beds follow the cut (cards.map.json), the lines and their mp3s, and the sources (tools/mv/generated.mjs)
   const srcs = [...new Set(BEDS.flatMap((b) => b.layers.map((l) => `${SFX}/${l.src}`)))], lineFiles = [...new Set(BEDS.flatMap((b) => [b.from, b.to]).filter((a) => a.line).map((a) => `${SFX}/${a.line}`))];
-  register(DIR, 'acts/78-beds.json', { tool: `node Director/tools/punch_beds.mjs ${name}`, inputs: ['cards.map.json', 'lines.json', 'song.json', ...lineFiles, ...srcs] });
+  register(DIR, 'acts/78-beds.json', { tool: `node Director/tools/punch_beds.mjs ${name}`, inputs: ['cards.map.json', 'lines.json', ...lineFiles, ...srcs], gate: 'stop' });
 }
 console.log(report.join('\n'));
 console.log(dry ? '(dry: nothing written)' : `wrote ${cues.length} beds to ${SFX}/beds and acts/78-beds.json`);

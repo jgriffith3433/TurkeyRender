@@ -4,7 +4,7 @@ impulses, stiffness, damping and seeds, every candidate is measured (tools/motio
 and checked against the beat's own physics (did he reach the ceiling, did the box stop in about 1.5 s, one slow rotation...), scored,
 and the best two are kept as canonical BVH ready for motion_admit.py (FBX, Assets/MusicVideo/Motion, clip import, clean, previews).
    py Director/tools/motion_sim.py <beat|all> [--seeds 8] [--keep 2] [--only-score]
-Beats: punched_launch, zg_drift_idle, zg_startle, zg_shove_tumble, catch_slide, zg_throw_recoil.
+Beats: punched_launch, punched_launch_up (standing, uppercut, one continuous body), zg_drift_idle, zg_startle, zg_shove_tumble, catch_slide, zg_throw_recoil.
 Output: Director/gen/motion/sim/<beat>/<beat>_s<seed>.bvh|.npz|.json, candidates.json (every candidate's parameters, measures, checks and score,
 best first), keep/ (the two kept, as ps_<beat>_a / _b). Deterministic per seed. If Director/tools/critic.mjs exists it is run on each
 candidate's BVH (`node critic.mjs <bvh> --json`) and its `score` is averaged in."""
@@ -94,6 +94,51 @@ def beat_punched_launch(seed, rng, p):
               'launchSpeed': round(v_launch, 2), 'launchSpeedOk': 5.0 <= v_launch <= 12.0, 'peakHeadY': round(state['peak'], 2),
               'spinAfterLeaving': spin_rate(st, (state['left'] or 2.5), 3.5)}
     checks['pass'] = checks['reachedCeiling'] and checks['launchSpeedOk'] and state['left'] is not None and 60 <= checks['spinAfterLeaving'] <= 720
+    return st, checks, {'floor': 0.0, 'zero_g': False}
+
+
+def beat_punched_launch_up(seed, rng, p):
+    """The rebuilt punch (2026-11-08): he STANDS, her uppercut lands under the jaw and sends him nearly straight up through the ceiling in one
+    continuous body (no hand-over between a hit clip and a flight clip). The blow goes mostly into the chest (less neck snap than
+    punched_launch), the head takes a short share a frame later; his own muscles go slack after 40 ms and he flails, then tumbles with gravity
+    off once he is through. 3 s."""
+    props = [{'name': 'ceiling', 'type': 'plane', 'pos': [0, 2.45, 0], 'size': [4, 0.04, 4]}]
+    b = sim.Body(props=props, gravity=(0, -9.81, 0), floor=True)
+    pose = sim.standing(); b.target = pose
+    b.set_pose(pose, root_pos=[0, 0.97, 0.0])
+    helper = upright_helper(b, kp=600, kd=80, hold_xz=(0.0, 0.0))
+    import mujoco
+    ceil = mujoco.mj_name2id(b.m, mujoco.mjtObj.mjOBJ_GEOM, 'ceiling')
+    t_hit = 0.5; dur = p['dur']
+    J = p['impulse']; ang = math.radians(p['elevation'])
+    direction = np.array([p['side'] * 0.06, math.sin(ang), -math.cos(ang)]); direction /= np.linalg.norm(direction)
+    force = direction * J / dur
+    flail = noise_pose(b, rng, p['flailDeg'], (0.3, 0.8), 4.0)
+    state = {'hit': False, 'broke': None, 'left': None, 'peak': 0.0}
+    def step(t, bd, extra):
+        head = bd.d.xpos[bd.bid['Head']]
+        state['peak'] = max(state['peak'], float(head[1]))
+        if t < t_hit:
+            helper(t, bd, extra); return
+        state['hit'] = True
+        if t < t_hit + dur:
+            bd.push('Chest', force * (1 - p['headShare']) * (1 - p['hipShare']))   # most of the blow through the centre of mass: a rise, not a somersault
+            bd.push('Hips', force * (1 - p['headShare']) * p['hipShare'])
+            if t > t_hit + 0.012: bd.push('Head', force * p['headShare'], point=head)
+        if t > t_hit + 0.04:
+            bd.kp_scale = p['flailStiff']; bd.kd_scale = p['flailDamp']
+            bd.noise = flail(t - t_hit)
+            bd.gain = {n: (1.4 if n in ('Neck', 'Head') else 1.0) for n in sim.KP}
+        if state['broke'] is None and head[1] > 2.3 and bd.d.cvel[bd.bid['Head']][4] > 0:
+            bd.m.geom_contype[ceil] = 0; bd.m.geom_conaffinity[ceil] = 0; state['broke'] = round(t, 3)
+        if state['left'] is None and bd.d.xpos[bd.bid['Hips']][1] > 2.7:
+            set_gravity(bd, 0.0); state['left'] = round(t, 3)
+    st, _ = sim.run(b, 3.0, on_step=step)
+    v_launch = float(np.linalg.norm(st.pos[int((t_hit + 0.15) * 30), I['Hips']] - st.pos[int((t_hit + 0.05) * 30), I['Hips']]) * 10)
+    checks = {'reachedCeiling': state['peak'] > 2.3, 'ceilingBrokeAt': state['broke'], 'gravityOffAt': state['left'],
+              'launchSpeed': round(v_launch, 2), 'launchSpeedOk': 5.0 <= v_launch <= 14.0, 'peakHeadY': round(state['peak'], 2),
+              'spinAfterLeaving': spin_rate(st, (state['left'] or 2.0), 2.9)}
+    checks['pass'] = checks['reachedCeiling'] and checks['launchSpeedOk'] and state['left'] is not None and 20 <= checks['spinAfterLeaving'] <= 300
     return st, checks, {'floor': 0.0, 'zero_g': False}
 
 
@@ -292,6 +337,7 @@ def params_for(beat, seed):
     rng = np.random.default_rng(seed * 7919 + hash(beat) % 1000)
     u = rng.uniform
     if beat == 'punched_launch': return {'impulse': u(560, 820), 'elevation': u(55, 72), 'side': u(-1, 1), 'flailStiff': u(0.08, 0.25), 'flailDamp': u(0.6, 1.4), 'flailDeg': u(25, 55)}
+    if beat == 'punched_launch_up': return {'impulse': u(1000, 1500), 'elevation': u(82, 89), 'side': u(-1, 1), 'dur': u(0.06, 0.1), 'headShare': u(0.03, 0.1), 'hipShare': u(0.35, 0.6), 'flailStiff': u(0.1, 0.3), 'flailDamp': u(0.7, 1.5), 'flailDeg': u(20, 45)}
     if beat == 'zg_drift_idle': return {'variant': u(-0.6, 0.6), 'wanderDeg': u(3, 7), 'breath': u(4.0, 5.2), 'stiff': u(0.5, 1.2), 'damp': u(0.8, 1.6)}
     if beat == 'zg_startle': return {'variant': u(-0.4, 0.4), 'impulse': u(4, 9), 'flinchStiff': u(1.8, 3.2)}
     if beat == 'zg_shove_tumble': return {'variant': u(-0.4, 0.4), 'impulse': u(28, 50), 'lever': u(0.12, 0.3), 'looseStiff': u(0.3, 0.7)}
@@ -300,7 +346,7 @@ def params_for(beat, seed):
     raise SystemExit('no beat ' + beat)
 
 
-BEATS = {'punched_launch': beat_punched_launch, 'zg_drift_idle': beat_zg_drift_idle, 'zg_startle': beat_zg_startle,
+BEATS = {'punched_launch': beat_punched_launch, 'punched_launch_up': beat_punched_launch_up, 'zg_drift_idle': beat_zg_drift_idle, 'zg_startle': beat_zg_startle,
          'zg_shove_tumble': beat_zg_shove_tumble, 'catch_slide': beat_catch_slide, 'zg_throw_recoil': beat_zg_throw_recoil}
 
 

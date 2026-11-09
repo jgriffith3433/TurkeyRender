@@ -1,0 +1,792 @@
+{
+ "beat": "punch_doc",
+ "when": "2026-11-08T22:23:29.555Z",
+ "zerog": false,
+ "rows": [
+  {
+   "name": "protofactor_3HitComboAttackZombie_4p1",
+   "src": "gen/motion/beats/punch_doc/protofactor_3HitComboAttackZombie_4p1.npz",
+   "via": "twin",
+   "seconds": 1.63,
+   "total": 9.1,
+   "verdict": "reads as human (9.1/10)",
+   "low": [
+    "ease 5",
+    "anticipation 7.8",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 7.8,
+    "overlap": 9.3,
+    "weight": 8.2,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand starts at 100% of its peak speed in one frame"
+   ],
+   "fit": 0.799,
+   "action": true,
+   "actionNote": "fastest hand 3.2 m/s, 41 cm ahead of the chest",
+   "score": 7.5,
+   "source": "protofactor/3HitComboAttackZombie 4.1-5.73 s 3Hit Combo Attack Zombie (Zombie)"
+  },
+  {
+   "name": "mx_cross_punch",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_cross_punch.fbx",
+   "via": "twin",
+   "seconds": 2,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "snaps 0",
+    "overlap 6",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.8,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 6,
+    "weight": 9.2,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.97s RightHand moves 19 cm in one frame",
+    "0.47s RightHand moves at one speed for 0.2 s (flat 0.93): interpolation, not a move",
+    "0.03s the head hangs 51 deg forward of the chest"
+   ],
+   "fit": 0.855,
+   "action": true,
+   "actionNote": "fastest hand 6.2 m/s, 45 cm ahead of the chest, at head height (uppercut)",
+   "score": 6.79,
+   "source": "twin"
+  },
+  {
+   "name": "mm_cross_punch_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_cross_punch_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 7.8,
+   "verdict": "passable, weak on anticipation and overlap (7.8/10)",
+   "low": [
+    "anticipation 5",
+    "overlap 5.4",
+    "ease 5.9"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.9,
+    "timing": 6,
+    "anticipation": 5,
+    "overlap": 5.4,
+    "weight": 8.8,
+    "snaps": 8.5,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 7
+   },
+   "worst": [
+    "0.07s RightToes jumps 9 deg in one frame",
+    "1.83s LeftFoot stops dead from 65% of its peak"
+   ],
+   "fit": 0.755,
+   "action": true,
+   "actionNote": "fastest hand 3.3 m/s, 31 cm ahead of the chest, at head height (uppercut)",
+   "score": 6.29,
+   "source": "twin"
+  },
+  {
+   "name": "RightHook1",
+   "src": "gen/mocap/index/protofactor/RightHook1.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 8.4,
+   "verdict": "passable, weak on snaps and weight (8.4/10)",
+   "low": [
+    "snaps 0",
+    "weight 7.5",
+    "anticipation 7.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.1,
+    "timing": 10,
+    "anticipation": 7.8,
+    "overlap": 8.8,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.63s Head travels 32 cm in a straight line (bend 0.03)",
+    "0.37s RightHand moves 22 cm in one frame",
+    "0.03s LeftHand starts at 64% of its peak speed in one frame"
+   ],
+   "fit": 1.089,
+   "action": true,
+   "actionNote": "fastest hand 8.9 m/s, 31 cm ahead of the chest",
+   "score": 6.22,
+   "source": "twin"
+  },
+  {
+   "name": "JabRightHandCombo1",
+   "src": "gen/mocap/index/protofactor/JabRightHandCombo1.npz",
+   "via": "twin",
+   "seconds": 1.03,
+   "total": 8.1,
+   "verdict": "passable, weak on snaps and ease (8.1/10)",
+   "low": [
+    "snaps 0",
+    "ease 5.3",
+    "anticipation 6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.3,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.53s RightHand moves 18 cm in one frame",
+    "0.03s LeftFoot starts at 80% of its peak speed in one frame",
+    "1.03s Head stops dead from 76% of its peak"
+   ],
+   "fit": 0.972,
+   "action": true,
+   "actionNote": "fastest hand 5.5 m/s, 46 cm ahead of the chest, at head height (uppercut)",
+   "score": 6.16,
+   "source": "twin"
+  },
+  {
+   "name": "OverhandRight",
+   "src": "gen/mocap/index/protofactor/OverhandRight.npz",
+   "via": "twin",
+   "seconds": 1.17,
+   "total": 8.3,
+   "verdict": "passable, weak on snaps and ease (8.3/10)",
+   "low": [
+    "snaps 0",
+    "ease 5.3",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.3,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 8.4,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.2s RightHand moves 19 cm in one frame",
+    "0.47s RightHand moves 37 cm in one frame"
+   ],
+   "fit": 1.133,
+   "action": true,
+   "actionNote": "fastest hand 11.2 m/s, 39 cm ahead of the chest, at head height (uppercut)",
+   "score": 6.03,
+   "source": "twin"
+  },
+  {
+   "name": "RightUppercut",
+   "src": "gen/mocap/index/protofactor/RightUppercut.npz",
+   "via": "twin",
+   "seconds": 0.87,
+   "total": 7.9,
+   "verdict": "passable, weak on snaps and ease (7.9/10)",
+   "low": [
+    "snaps 0",
+    "ease 5.9",
+    "anticipation 6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.9,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 8,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.3s RightHand moves 28 cm in one frame",
+    "0.03s the head hangs 42 deg forward of the chest"
+   ],
+   "fit": 1.077,
+   "action": true,
+   "actionNote": "fastest hand 8.4 m/s, 39 cm ahead of the chest",
+   "score": 5.75,
+   "source": "twin"
+  },
+  {
+   "name": "RightHand1",
+   "src": "gen/mocap/index/protofactor/RightHand1.npz",
+   "via": "twin",
+   "seconds": 0.83,
+   "total": 7.6,
+   "verdict": "passable, weak on snaps and ease (7.6/10)",
+   "low": [
+    "snaps 0",
+    "ease 5",
+    "overlap 5.7"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 5.7,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.23s RightLowerArm jumps 11 deg in one frame",
+    "0.83s Head stops dead from 79% of its peak"
+   ],
+   "fit": 0.986,
+   "action": true,
+   "actionNote": "fastest hand 4.9 m/s, 45 cm ahead of the chest, at head height (uppercut)",
+   "score": 5.63,
+   "source": "twin"
+  },
+  {
+   "name": "PowerRightHand",
+   "src": "gen/mocap/index/protofactor/PowerRightHand.npz",
+   "via": "twin",
+   "seconds": 2.07,
+   "total": 8.1,
+   "verdict": "passable, weak on snaps and ease (8.1/10)",
+   "low": [
+    "snaps 0",
+    "ease 6.8",
+    "overlap 6.9"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.8,
+    "timing": 10,
+    "anticipation": 8.4,
+    "overlap": 6.9,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.87s RightUpperArm jumps 12 deg in one frame",
+    "1.47s LeftToes jumps 9 deg in one frame",
+    "0.03s RightHand moves 27 cm in one frame"
+   ],
+   "fit": 1.241,
+   "action": true,
+   "actionNote": "fastest hand 9.3 m/s, 33 cm ahead of the chest, at head height (uppercut)",
+   "score": 5.62,
+   "source": "twin"
+  },
+  {
+   "name": "mm_cross_punch_b",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_cross_punch_b.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 7.2,
+   "verdict": "passable, weak on snaps and reference (7.2/10)",
+   "low": [
+    "snaps 0",
+    "reference 4.8",
+    "overlap 5.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.2,
+    "timing": 6,
+    "anticipation": 9,
+    "overlap": 5.2,
+    "weight": 10,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 4.8
+   },
+   "worst": [
+    "1.13s RightFoot jumps 32 deg in one frame",
+    "0.73s RightFoot jumps 12 deg in one frame",
+    "0.47s RightToes jumps 13 deg in one frame"
+   ],
+   "fit": 0.839,
+   "action": true,
+   "actionNote": "fastest hand 6.2 m/s, 24 cm ahead of the chest, at head height (uppercut)",
+   "score": 5.52,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_56_06_7p5",
+   "src": "gen/motion/beats/punch_doc/cmu_56_06_7p5.npz",
+   "via": "twin",
+   "seconds": 2.5,
+   "total": 9,
+   "verdict": "reads as human (9/10)",
+   "low": [
+    "snaps 5",
+    "anticipation 6",
+    "ease 7.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 7.4,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 10,
+    "weight": 9.5,
+    "snaps": 5,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.53s LeftToes jumps 17 deg in one frame",
+    "1.13s RightHand travels 82 cm with no anticipation and no overshoot or settle",
+    "1.53s RightFoot travels 38 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.646,
+   "action": false,
+   "actionNote": "fastest hand 1.6 m/s, 26 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 4.71,
+   "source": "cmu/56_06 7.5-10.03 s vignettes - throw punches, grab, skip, yawn, stretch, leap"
+  },
+  {
+   "name": "vm_box_hooks",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@vm_box_hooks.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "snaps 0",
+    "overlap 7.5",
+    "ease 8.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.2,
+    "timing": 10,
+    "anticipation": 9.8,
+    "overlap": 7.5,
+    "weight": 9.6,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "4.5s LeftUpperArm jumps 14 deg in one frame",
+    "1.2s Hips jumps 12 deg in one frame",
+    "2.9s Hips jumps 8 deg in one frame"
+   ],
+   "fit": 0.737,
+   "action": false,
+   "actionNote": "fastest hand 6.6 m/s, -36 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 4.23,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_56_03_16p7",
+   "src": "gen/motion/beats/punch_doc/cmu_56_03_16p7.npz",
+   "via": "twin",
+   "seconds": 1.6,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "anticipation 4",
+    "overlap 4.7",
+    "ease 5.3"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.3,
+    "timing": 10,
+    "anticipation": 4,
+    "overlap": 4.7,
+    "weight": 9.8,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand starts at 73% of its peak speed in one frame",
+    "1.6s LeftHand stops dead from 100% of its peak",
+    "0.8s RightFoot starts at 92% of its peak speed in one frame"
+   ],
+   "fit": 0.644,
+   "action": false,
+   "actionNote": "fastest hand 1.4 m/s, 22 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 4.21,
+   "source": "cmu/56_03 16.7-18.33 s vignettes - fists up, wipe window, yawn, stretch, angrily"
+  },
+  {
+   "name": "cmu_56_03_3",
+   "src": "gen/motion/beats/punch_doc/cmu_56_03_3.npz",
+   "via": "twin",
+   "seconds": 2.5,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "snaps 0",
+    "ease 5",
+    "anticipation 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 8,
+    "overlap": 10,
+    "weight": 9.8,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "2.03s RightToes jumps 17 deg in one frame",
+    "0.27s LeftToes jumps 8 deg in one frame",
+    "1.53s Head travels 21 cm in a straight line (bend 0.03)"
+   ],
+   "fit": 0.662,
+   "action": false,
+   "actionNote": "fastest hand 1.4 m/s, 20 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 4.18,
+   "source": "cmu/56_03 3-5.53 s vignettes - fists up, wipe window, yawn, stretch, angrily gra"
+  },
+  {
+   "name": "cmu_56_03_0",
+   "src": "gen/motion/beats/punch_doc/cmu_56_03_0.npz",
+   "via": "twin",
+   "seconds": 2.5,
+   "total": 8.4,
+   "verdict": "passable, weak on snaps and ease (8.4/10)",
+   "low": [
+    "snaps 0",
+    "ease 4.6",
+    "anticipation 7.1"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.6,
+    "timing": 10,
+    "anticipation": 7.1,
+    "overlap": 10,
+    "weight": 9.8,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.13s RightToes jumps 16 deg in one frame",
+    "1.4s RightToes jumps 14 deg in one frame",
+    "0.03s LeftHand travels 44 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.647,
+   "action": false,
+   "actionNote": "fastest hand 1.8 m/s, 38 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 4.11,
+   "source": "cmu/56_03 0-2.53 s vignettes - fists up, wipe window, yawn, stretch, angrily gra"
+  },
+  {
+   "name": "mx_hook_punch",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_hook_punch.fbx",
+   "via": "twin",
+   "seconds": 2.17,
+   "total": 8.4,
+   "verdict": "passable, weak on snaps and ease (8.4/10)",
+   "low": [
+    "snaps 0",
+    "ease 6.8",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.8,
+    "timing": 10,
+    "anticipation": 9,
+    "overlap": 8.4,
+    "weight": 9.3,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.87s RightHand moves 18 cm in one frame",
+    "1.4s LeftHand moves at one speed for 0.17 s (flat 0.94): interpolation, not a move",
+    "0.03s the head hangs 63 deg forward of the chest"
+   ],
+   "fit": 0.752,
+   "action": false,
+   "actionNote": "fastest hand 9.3 m/s, 17 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 3.9,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_56_05_47p9",
+   "src": "gen/motion/beats/punch_doc/cmu_56_05_47p9.npz",
+   "via": "twin",
+   "seconds": 2.5,
+   "total": 8.2,
+   "verdict": "passable, weak on snaps and anticipation (8.2/10)",
+   "low": [
+    "snaps 0",
+    "anticipation 2.5",
+    "ease 8.3"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.3,
+    "timing": 10,
+    "anticipation": 2.5,
+    "overlap": 8.9,
+    "weight": 8.8,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.27s LeftToes jumps 11 deg in one frame",
+    "1.97s RightToes jumps 10 deg in one frame",
+    "2.27s Head jumps 9 deg in one frame"
+   ],
+   "fit": 0.654,
+   "action": false,
+   "actionNote": "fastest hand 1.4 m/s, 35 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 3.89,
+   "source": "cmu/56_05 47.9-50.43 s vignettes - walk, drink water, run/jog, jump, wipe window"
+  },
+  {
+   "name": "vm_box_cross",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@vm_box_cross.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 7.8,
+   "verdict": "passable, weak on snaps and overlap (7.8/10)",
+   "low": [
+    "snaps 0",
+    "overlap 2",
+    "anticipation 6.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.3,
+    "timing": 10,
+    "anticipation": 6.5,
+    "overlap": 2,
+    "weight": 8.7,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9.8,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.13s LeftUpperArm jumps 19 deg in one frame",
+    "5.9s RightLowerArm jumps 24 deg in one frame",
+    "3.4s Head jumps 11 deg in one frame"
+   ],
+   "fit": 0.684,
+   "action": false,
+   "actionNote": "fastest hand 15.0 m/s, -4 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 3.43,
+   "source": "twin"
+  },
+  {
+   "name": "RightPowerUppercut",
+   "src": "gen/mocap/index/protofactor/RightPowerUppercut.npz",
+   "via": "twin",
+   "seconds": 1.4,
+   "total": 8,
+   "verdict": "passable, weak on snaps and ease (8/10)",
+   "low": [
+    "snaps 0",
+    "ease 4.9",
+    "overlap 6.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.9,
+    "timing": 10,
+    "anticipation": 7.8,
+    "overlap": 6.4,
+    "weight": 8,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.3s RightHand moves 24 cm in one frame",
+    "0.97s RightHand travels 70 cm with no anticipation and no overshoot or settle",
+    "0.03s LeftHand travels 39 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 1.198,
+   "action": false,
+   "actionNote": "fastest hand 9.7 m/s, 28 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": 2.6,
+   "source": "twin"
+  },
+  {
+   "name": "blender-character-a_14a93edd2637f2fc-fbx_knuckle_roll_t1",
+   "src": "gen/genmotion/takes/blender-character-a_14a93edd2637f2fc-fbx_knuckle_roll_t1.fbx",
+   "via": "twin",
+   "seconds": 3.97,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "anticipation 3.6",
+    "stiffness 7.3",
+    "ease 7.9"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 7.9,
+    "timing": 8.2,
+    "anticipation": 3.6,
+    "overlap": 9.3,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 7.3,
+    "silhouette": 9.3,
+    "hands": 8,
+    "contact": 8.3,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand travels 33 cm with no anticipation and no overshoot or settle",
+    "0.43s LeftHand is inside the torso",
+    "0.77s LeftHand is inside the torso"
+   ],
+   "fit": 3.628,
+   "action": false,
+   "actionNote": "fastest hand 1.3 m/s, -6 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": -1.76,
+   "source": "twin"
+  },
+  {
+   "name": "blender-character-a_9efd9766dd126df4-fbx_knuckle_roll_t0",
+   "src": "gen/genmotion/takes/blender-character-a_9efd9766dd126df4-fbx_knuckle_roll_t0.fbx",
+   "via": "twin",
+   "seconds": 3.97,
+   "total": 7.6,
+   "verdict": "passable, weak on overlap and contact (7.6/10)",
+   "low": [
+    "overlap 3.5",
+    "contact 3.8",
+    "ease 5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 8.3,
+    "anticipation": 6,
+    "overlap": 3.5,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 8.4,
+    "silhouette": 9.6,
+    "hands": 8,
+    "contact": 3.8,
+    "reference": 8.8
+   },
+   "worst": [
+    "0.03s LeftHand travels 31 cm with no anticipation and no overshoot or settle",
+    "3.2s LeftHand is inside the torso",
+    "0.63s RightHand is inside the torso"
+   ],
+   "fit": 3.67,
+   "action": false,
+   "actionNote": "fastest hand 2.2 m/s, -4 cm ahead of the chest (a strike wants 3 m/s and 30 cm, or an uppercut to head height)",
+   "score": -2.74,
+   "source": "twin"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_punch_doc/gm_hp_punch_doc_t0.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_punch_doc/gm_hp_punch_doc_t0.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_punch_doc/gm_hp_punch_doc_t1.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_punch_doc/gm_hp_punch_doc_t1.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_punch_doc/gm_hp_punch_doc_t2.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_punch_doc/gm_hp_punch_doc_t2.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  }
+ ],
+ "fitWeight": 2,
+ "board": "p01-p02: the doctor winds up (held, tremble) and lands a straight right / uppercut on his jaw; standing"
+}

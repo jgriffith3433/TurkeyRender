@@ -8,18 +8,19 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { PROJECT, DIRECTOR, videoInfo } from './score.mjs';
-import { quickCheck, apply, stagedFiles, takeLock, releaseLock, lockHolder, LOCK, check as csharpCheck } from './csharp.mjs';
+import { quickCheck, apply, stagedFiles, takeLock, releaseLock, lockHolder, LOCK, ROOT, check as csharpCheck } from './csharp.mjs';
 import { register, check as genCheck, ensureFresh, CARD_INPUTS } from './generated.mjs';
 import { take, release, heldByOther, status as leaseStatus, sweep } from './lease.mjs';
 import { snap } from './snap.mjs';
-import { diagnose, fix } from './doctor.mjs';
+import { diagnose, fix, unityEditor } from './doctor.mjs';
 import { refProblems } from './refs.mjs';
 import { lint } from './lint.mjs';
 
 const results = [];
 const ok = (name, c, detail = '') => { results.push([name, !!c]); console.log(`${c ? 'ok  ' : 'FAIL'} ${name}${detail ? `  (${detail})` : ''}`); };
 const TMP = path.join(DIRECTOR, 'videos', '_harden_tmp'), SRC = path.join(DIRECTOR, 'videos', '_cards_test');
-const STAGE = path.join(DIRECTOR, 'staging', process.argv[2] === 'unity' ? '_harden_unity' : '_harden_test'); // two dirs: the unit run and the Unity run may overlap
+// The unit run applies into a sandbox project (MV_CSHARP_ROOT, set below), never the real Assets: Unity may refresh at any moment and compile a pretend file.
+const STAGE = process.argv[2] === 'unity' ? path.join(DIRECTOR, 'staging', '_harden_unity') : path.join(ROOT, 'staging', '_harden_test');
 const node = (args) => spawnSync(process.execPath, args, { cwd: PROJECT, encoding: 'utf8' });
 const mv = (...a) => node([path.join(DIRECTOR, 'mv.mjs'), '--video', '_harden_tmp', ...a]);
 
@@ -42,16 +43,17 @@ async function main() {
 
   // ---- 2. the apply wrapper: snapshot, copy, compile, revert ----
   fs.rmSync(STAGE, { recursive: true, force: true });
-  const probeRel = 'Assets/MusicVideo/Runtime/MVHardenProbe.cs', probe = path.join(PROJECT, probeRel);
+  if (ROOT === PROJECT) throw new Error('the unit run must apply into a sandbox (MV_CSHARP_ROOT); run it as node Director/tools/mv/harden-test.mjs');
+  const probeRel = 'Assets/MusicVideo/Runtime/MVHardenProbe.cs', probe = path.join(ROOT, probeRel);
   fs.mkdirSync(path.join(STAGE, path.dirname(probeRel)), { recursive: true });
   fs.writeFileSync(path.join(STAGE, probeRel), 'namespace TKShock.MV { static class MVHardenProbe { } }\n');
-  const worklog = path.join(DIRECTOR, 'gen', 'WORKLOG-epic.md'), logBefore = fs.readFileSync(worklog, 'utf8').length;
+  const worklog = process.env.MV_WORKLOG, logBefore = fs.readFileSync(worklog, 'utf8').length;
   let r = await apply(STAGE, { who: 'harden-test', compile: async () => [`${probeRel}:1 CS0000: a pretend error`] });
   ok('apply: a failing compile reverts the new file and reports the error', !r.ok && !fs.existsSync(probe) && !fs.existsSync(probe + '.meta') && r.errors[0].includes('pretend'));
   ok('apply: the compile lock is released after the revert', !lockHolder());
   ok('apply: a WORKLOG line was written', fs.readFileSync(worklog, 'utf8').length > logBefore && /harden-test: mv csharp apply .*REVERTED/.test(fs.readFileSync(worklog, 'utf8').slice(logBefore)));
   // an existing file: snapshot and restore of the old text
-  const victimRel = 'Assets/MusicVideo/Runtime/MVLimbScale.cs', victim = path.join(PROJECT, victimRel), old = fs.readFileSync(victim);
+  const victimRel = 'Assets/MusicVideo/Runtime/MVLimbScale.cs', victim = path.join(ROOT, victimRel), old = fs.readFileSync(victim);
   fs.mkdirSync(path.join(STAGE, path.dirname(victimRel)), { recursive: true });
   fs.writeFileSync(path.join(STAGE, victimRel), old.toString('utf8') + '\n// harden-test touched this\n');
   fs.rmSync(path.join(STAGE, probeRel));
@@ -164,7 +166,15 @@ async function main() {
   ok('doctor: a hand-edited generated file is a failing item', d.some((x) => /generated/.test(x.what) && x.sev === 'error' && /edited/.test(x.msg)));
   ok('doctor: unity, compile, queue, staging, leases, disk and memory are all reported', ['unity', 'compile', 'queue', 'staging', 'leases', 'disk', 'memory'].every((w) => d.some((x) => x.what === w)));
 
+  // closed vs hung: Unity Hub's "unity.exe serve" helper and the import workers are not the editor (2026-11-08: the editor had closed, only the helper ran)
+  const hub = { pid: 1, cmd: String.raw`"C:\Program Files\Unity Hub\resources\unity.exe" serve` };
+  const worker = { pid: 2, cmd: String.raw`"C:\U\Editor\Unity.exe" "-adb2" "-batchMode" "-name" "AssetImportWorker0" "-projectPath" "C:/Projects/TKShock"` };
+  const editor = { pid: 3, cmd: `"C:\U\Editor\Unity.exe" -projectPath "${PROJECT}" `, responding: false, cpu: 12 };
+  ok('doctor: only the Hub helper and a worker running is CLOSED (no editor)', unityEditor([hub, worker]).known && !unityEditor([hub, worker]).editor);
+  ok('doctor: the editor of this project is found, with its responding flag', unityEditor([hub, editor]).editor?.pid === 3 && unityEditor([hub, editor]).editor.responding === false);
+  ok('doctor: an editor on another project is not ours', !unityEditor([{ pid: 4, cmd: '"C:\U\Unity.exe" -projectPath C:\Projects\Other' }]).editor);
   fs.rmSync(TMP, { recursive: true, force: true });
+  try { fs.unlinkSync(path.join(DIRECTOR, 'gen', 'build-_harden_tmp.json')); } catch {} // the scratch video's build stamp
   const bad = results.filter((r) => !r[1]).length;
   console.log(`\nharden-test: ${results.length - bad} of ${results.length} passed${bad ? `, ${bad} FAILED` : ''}`);
   return bad ? 1 : 0;
@@ -189,8 +199,14 @@ async function unity() {
 // The unit run uses its own compile lock file, so a real agent's compile window is neither disturbed nor waited for; `unity` uses the real one.
 if (process.argv[2] !== 'unity' && !process.env.MV_COMPILE_LOCK) {
   const lock = path.join(DIRECTOR, 'gen', 'compile.lock.harden-test');
-  const r = spawnSync(process.execPath, process.argv.slice(1), { stdio: 'inherit', env: { ...process.env, MV_COMPILE_LOCK: lock } });
+  // A sandbox project: a copy of Assets/MusicVideo/Runtime (the files the test applies over), its own WORKLOG and apply record.
+  const box = path.join(DIRECTOR, 'gen', `harden-sandbox-${process.pid}`);
+  fs.mkdirSync(path.join(box, 'Assets', 'MusicVideo'), { recursive: true });
+  fs.cpSync(path.join(PROJECT, 'Assets', 'MusicVideo', 'Runtime'), path.join(box, 'Assets', 'MusicVideo', 'Runtime'), { recursive: true, filter: (f) => !/\.meta$/.test(f) });
+  fs.writeFileSync(path.join(box, 'WORKLOG.md'), '');
+  const r = spawnSync(process.execPath, process.argv.slice(1), { stdio: 'inherit', env: { ...process.env, MV_COMPILE_LOCK: lock, MV_CSHARP_ROOT: box, MV_WORKLOG: path.join(box, 'WORKLOG.md'), MV_CSHARP_SNAPS: path.join(box, 'csharp') } });
   try { fs.unlinkSync(lock); } catch {}
+  fs.rmSync(box, { recursive: true, force: true });
   process.exit(r.status ?? 1);
 }
 (process.argv[2] === 'unity' ? unity() : main()).then((c) => { process.exitCode = c; }, (e) => { console.error(e); process.exitCode = 1; });

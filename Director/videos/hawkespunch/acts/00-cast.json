@@ -1,8 +1,8 @@
 {
   // Who can be cast in Hawkes Punch. Where they stand and whether they show comes from the cards (cut.json, cards/). Wardrobe: tools/punch_wardrobe.py.
   "actors": {
-    // him, after Greener: the purple tee, pale and green-tinged
-    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    // him, after Greener: the purple tee, pale and green-tinged, face and body alike (tools/punch_wardrobe.py: Person_sick + Person_sick_head)
+    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/Videos/hawkespunch/Props/Person_sick_head.mat" },
     // the doctor: Person2 in a blue top under her white lab coat. The coat is a real garment on her rig (Director/tools/blender_coat.py,
     // coat_assets.py): knee length, open front, lapels, collar, pockets, a pen, the name badge on the breast pocket and the stethoscope
     // round her neck are all part of it, skinned to her bones, so they move with her, hide with her and never pop.
@@ -11,6 +11,8 @@
     "other": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_red.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
     // the turkey nurse at reception
     "nurse": { "model": "turkey_white_hero", "scale": 1.1 },
+    // her nurse's cap (W9, sets agent 2026-11-08): parented to her head bone, shows and hides with her
+    "nurse_cap": { "model": "Assets/MusicVideo/Props/Punch/nurse_cap.fbx", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "parent": "nurse.head", "withHost": true, "pos": [0, 0.05, 0], "rot": [0, 0, 0], "scale": 0.4 },
     // her glasses, on her nose: parented to her head bone (at rest Person2's Head is turned exactly as her root, measured with
     // call inspect '{"bones":["Head"]}', so the offset is plain: the bridge 9 cm over the joint and 14 cm in front). They show and hide with
     // her (withHost, cards.mjs). Taking them off: attach to doctor.leftHand (pos [0.02, -0.03, 0.06], rot [0, 0, 90]),
@@ -33,11 +35,13 @@
     "ghost_hem_3": { "model": "prim:sphere", "parent": "space_ghost", "pos": [0.08, -0.66, 0], "scale": 0.24, "color": "#f2f4ff", "emission": "#3a4060", "smooth": 0.1 },
     "ghost_hem_4": { "model": "prim:sphere", "parent": "space_ghost", "pos": [0.24, -0.72, 0], "scale": 0.24, "color": "#f2f4ff", "emission": "#3a4060", "smooth": 0.1 },
     // his drawing of her (a sheet of paper), and the boards over the window the next day
-    "glove": { "model": "prim:sphere", "pos": [699.6, 1.5, 3.5], "scale": [0.17, 0.14, 0.21], "color": "#c0141c", "smooth": 0.55 },
+    // her boxing glove for the next day (W6, sets agent 2026-11-08): the framed pair's glove, blender_punch.py boxing_glove; pivot at the wrist, fist +z
+    "glove": { "model": "Assets/MusicVideo/Props/Punch/boxing_glove.fbx", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [699.6, 1.5, 3.5] },
     "drawing": { "model": "prim:cube", "pos": [700, 1.2, 2], "scale": [0.21, 0.28, 0.004], "texture": "Assets/Videos/hawkespunch/Props/ghost_drawing.png", "color": "#ffffff", "smooth": 0.05 },
     "window_boards": { "model": "prim:cube", "pos": [700.6, 1.55, 4.47], "scale": [1.3, 1.1, 0.03], "texture": "Assets/Videos/hawkespunch/Props/window_boards.png", "color": "#ffffff", "smooth": 0.1 },
     // draft 2: her Golden Gloves frame on the exam room's north wall, behind her desk (the bomb under the table)
-    "gloves_frame": { "model": "prim:cube", "pos": [701.95, 1.7, 4.49], "scale": [0.6, 0.75, 0.02], "texture": "Assets/Videos/hawkespunch/Props/gloves_frame.png", "color": "#ffffff", "smooth": 0.15 },
+    // sets agent 2026-11-08: a real shadow box now (blender_punch.py gloves_case): two red gloves hung in a 12 cm deep frame, the brass plaque under them
+    "gloves_frame": { "model": "Assets/MusicVideo/Props/Punch/gloves_case.fbx", "material": "Assets/MusicVideo/Props/Punch/plaque.mat", "pos": [701.95, 1.7, 4.495] },
     "can_roll": { "model": "Assets/MusicVideo/Props/Punch/can.fbx", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [702.5, 0.033, 0.9], "rot": [0, 0, 90] },
     // the Earth he grabs by mistake: half a metre across in his hands, then it goes back and grows to a planet
     "earth_small": { "model": "prim:sphere", "scale": 0.5, "texture": "Assets/MusicVideo/Props/Punch/tex/earth.png", "smooth": 0.35, "rot": [0, 140, 23], "pos": [-24.5, 301.25, 1650] },

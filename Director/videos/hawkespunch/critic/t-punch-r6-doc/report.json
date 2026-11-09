@@ -1,0 +1,358 @@
+{
+ "name": "hawkespunch 64.25-69.25 s",
+ "video": "hawkespunch",
+ "from": 64.25,
+ "to": 69.25,
+ "actors": [
+  "doctor"
+ ],
+ "fps": 24,
+ "frames": 120,
+ "seconds": 4.96,
+ "zerog": false,
+ "cuts": 3,
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.23 over 9 moves, 0% straight lines",
+   "partial": false
+  },
+  "ease": {
+   "score": 4.5,
+   "note": "speed shape 0.65 (bell 0.6, constant 1.0), 94% of moves start or stop in one frame",
+   "partial": false
+  },
+  "timing": {
+   "score": 10,
+   "note": "2 holds (median 1.63 s), 0% of frames dead still, fast parts median 0.25 s",
+   "partial": false
+  },
+  "anticipation": {
+   "score": 1.5,
+   "note": "6 big moves: 1 with anticipation, 0 with overshoot and settle",
+   "partial": false
+  },
+  "overlap": {
+   "score": 0.9,
+   "note": "parts' speed profiles agree 0.77 (1 = everything moves as one); typical lag between parts 0 frames; 13% of energy peaks have every part peaking together",
+   "partial": false
+  },
+  "weight": {
+   "score": 9.5,
+   "note": "0 centre-of-mass jerks, planted feet slide 8 cm/s",
+   "partial": false
+  },
+  "snaps": {
+   "score": 5,
+   "note": "2 body snaps or pops in 4.96 s",
+   "partial": false
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "1% of core joints frozen while the body moves",
+   "partial": false
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "10 key poses, readability 0.83 (best of front, side, three-quarter), 0% twinned",
+   "partial": false
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 72 deg, spread 5 deg, head level",
+   "partial": false
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 10,
+   "note": "1.2 robust z from 174 mocap clips; furthest: energyCV high (3.67), legOmegaP95 low (1.61), headOmegaP50 low (1.12)",
+   "partial": false
+  }
+ },
+ "total": 7.4,
+ "events": [
+  {
+   "t": 64.67,
+   "f": 10,
+   "kind": "lockstep",
+   "part": "doctor.body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 66.42,
+   "f": 52,
+   "kind": "snap",
+   "part": "doctor.RightUpperArm",
+   "sev": 1,
+   "what": "RightUpperArm jumps 21 deg in one frame"
+  },
+  {
+   "t": 66.42,
+   "f": 52,
+   "kind": "pop",
+   "part": "doctor.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 25 cm in one frame"
+  },
+  {
+   "t": 68.5,
+   "f": 102,
+   "kind": "no-prep",
+   "part": "doctor.RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 61 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 68.33,
+   "f": 98,
+   "kind": "no-prep",
+   "part": "doctor.LeftHand",
+   "sev": 0.71,
+   "what": "LeftHand travels 52 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 64.63,
+   "f": 9,
+   "kind": "abrupt-start",
+   "part": "doctor.RightHand",
+   "sev": 0.7,
+   "what": "RightHand starts at 79% of its peak speed in one frame"
+  },
+  {
+   "t": 66.42,
+   "f": 52,
+   "kind": "abrupt-stop",
+   "part": "doctor.RightHand",
+   "sev": 0.7,
+   "what": "RightHand stops dead from 100% of its peak"
+  },
+  {
+   "t": 66.79,
+   "f": 61,
+   "kind": "abrupt-start",
+   "part": "doctor.RightHand",
+   "sev": 0.7,
+   "what": "RightHand starts at 79% of its peak speed in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 61,
+   "kind": "no-prep",
+   "part": "doctor.RightHand",
+   "sev": 0.67,
+   "what": "RightHand travels 44 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "abrupt-stop",
+   "part": "doctor.RightHand",
+   "sev": 0.64,
+   "what": "RightHand stops dead from 68% of its peak"
+  },
+  {
+   "t": 64.63,
+   "f": 9,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftHand",
+   "sev": 0.57,
+   "what": "LeftHand starts at 82% of its peak speed in one frame"
+  },
+  {
+   "t": 64.63,
+   "f": 9,
+   "kind": "abrupt-start",
+   "part": "doctor.Head",
+   "sev": 0.57,
+   "what": "Head starts at 70% of its peak speed in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "abrupt-stop",
+   "part": "doctor.LeftHand",
+   "sev": 0.53,
+   "what": "LeftHand stops dead from 64% of its peak"
+  },
+  {
+   "t": 66.79,
+   "f": 61,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftHand",
+   "sev": 0.52,
+   "what": "LeftHand starts at 85% of its peak speed in one frame"
+  },
+  {
+   "t": 64.63,
+   "f": 9,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftFoot",
+   "sev": 0.46,
+   "what": "LeftFoot starts at 82% of its peak speed in one frame"
+  },
+  {
+   "t": 64.75,
+   "f": 12,
+   "kind": "abrupt-stop",
+   "part": "doctor.LeftFoot",
+   "sev": 0.46,
+   "what": "LeftFoot stops dead from 66% of its peak"
+  },
+  {
+   "t": 67.38,
+   "f": 75,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftHand",
+   "sev": 0.44,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 78,
+   "kind": "abrupt-stop",
+   "part": "doctor.LeftHand",
+   "sev": 0.44,
+   "what": "LeftHand stops dead from 74% of its peak"
+  },
+  {
+   "t": 64.63,
+   "f": 9,
+   "kind": "abrupt-start",
+   "part": "doctor.RightFoot",
+   "sev": 0.44,
+   "what": "RightFoot starts at 74% of its peak speed in one frame"
+  },
+  {
+   "t": 64.75,
+   "f": 12,
+   "kind": "abrupt-stop",
+   "part": "doctor.RightFoot",
+   "sev": 0.44,
+   "what": "RightFoot stops dead from 66% of its peak"
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "abrupt-stop",
+   "part": "doctor.Head",
+   "sev": 0.44,
+   "what": "Head stops dead from 93% of its peak"
+  },
+  {
+   "t": 68.96,
+   "f": 113,
+   "kind": "abrupt-start",
+   "part": "doctor.RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot starts at 72% of its peak speed in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "abrupt-stop",
+   "part": "doctor.RightFoot",
+   "sev": 0.43,
+   "what": "RightFoot stops dead from 100% of its peak"
+  },
+  {
+   "t": 64.96,
+   "f": 17,
+   "kind": "abrupt-start",
+   "part": "doctor.Head",
+   "sev": 0.43,
+   "what": "Head starts at 97% of its peak speed in one frame"
+  },
+  {
+   "t": 65.63,
+   "f": 33,
+   "kind": "abrupt-stop",
+   "part": "doctor.Head",
+   "sev": 0.43,
+   "what": "Head stops dead from 67% of its peak"
+  },
+  {
+   "t": 68.54,
+   "f": 103,
+   "kind": "abrupt-start",
+   "part": "doctor.LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot starts at 98% of its peak speed in one frame"
+  },
+  {
+   "t": 68.67,
+   "f": 106,
+   "kind": "abrupt-stop",
+   "part": "doctor.LeftFoot",
+   "sev": 0.42,
+   "what": "LeftFoot stops dead from 98% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 64.67,
+   "f": 10,
+   "kind": "lockstep",
+   "part": "doctor.body",
+   "sev": 1,
+   "what": "5 of 5 parts peak on the same frame (everything moves as one)",
+   "also": [
+    "abrupt-start"
+   ]
+  },
+  {
+   "t": 66.42,
+   "f": 52,
+   "kind": "snap",
+   "part": "doctor.RightUpperArm",
+   "sev": 1,
+   "what": "RightUpperArm jumps 21 deg in one frame",
+   "also": [
+    "pop",
+    "abrupt-stop"
+   ]
+  },
+  {
+   "t": 68.5,
+   "f": 102,
+   "kind": "no-prep",
+   "part": "doctor.RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 61 cm with no anticipation and no overshoot or settle",
+   "also": [
+    "no-prep"
+   ]
+  },
+  {
+   "t": 66.79,
+   "f": 61,
+   "kind": "abrupt-start",
+   "part": "doctor.RightHand",
+   "sev": 0.7,
+   "what": "RightHand starts at 79% of its peak speed in one frame",
+   "also": [
+    "no-prep"
+   ]
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "abrupt-stop",
+   "part": "doctor.RightHand",
+   "sev": 0.64,
+   "what": "RightHand stops dead from 68% of its peak",
+   "also": []
+  }
+ ],
+ "perActor": {
+  "doctor": {
+   "total": 7.4,
+   "verdict": "passable, weak on overlap and anticipation (7.4/10)"
+  }
+ },
+ "verdict": "passable, weak on overlap and anticipation (7.4/10)"
+}

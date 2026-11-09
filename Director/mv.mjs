@@ -736,9 +736,16 @@ try {
     case 'hold': {
       // mv hold <command line>: runs it holding Unity, so several mv calls inside stay together. They see MV_TICKET and don't queue again.
       if (!argv[1]) throw new Error('mv hold <command...>   e.g. mv hold node Director/tools/reverse_test.mjs');
+      // Safe by construction (2026-11-08, motion agent, after a `mv hold bash -c "..."` started a bare python prompt and held Unity 10 min):
+      // shell wrappers are refused, an interpreter with no script is refused, the argv runs WITHOUT a shell (no re-splitting or quoting
+      // surprises) and stdin is closed so nothing can sit at a prompt holding Unity. For several steps, use several holds or write a script.
+      const exe = path.basename(String(argv[1])).toLowerCase().replace(/\.exe$/, '');
+      if (['bash', 'sh', 'zsh', 'cmd', 'powershell', 'pwsh', 'wsl'].includes(exe)) throw new Error(`mv hold runs one command without a shell; "${argv[1]}" is a shell wrapper. Run each step as its own mv hold, or put them in a .mjs/.py script.`);
+      if (['py', 'python', 'python3', 'node'].includes(exe) && !argv.slice(2).some((a) => !a.startsWith('-') || a === '-c' || a === '-e' || a === '-m')) throw new Error(`mv hold ${argv[1]} needs a script or -c/-e/-m: with none it would open a prompt and hold Unity`);
       await queue.enter(`hold ${argv.slice(1).join(' ').slice(0, 60)}`, (place, who) => console.error(`waiting for Unity: ${place} ahead, now "${who}"`));
       await new Promise((res, rej) => {
-        const p = spawn(argv[1], argv.slice(2), { stdio: 'inherit', env: process.env, shell: true });
+        const viaShell = process.platform === 'win32' && /\.(cmd|bat)$/i.test(String(argv[1]));   // .cmd/.bat need cmd.exe; everything else runs directly
+        const p = spawn(argv[1], argv.slice(2), { stdio: ['ignore', 'inherit', 'inherit'], env: process.env, shell: viaShell });
         p.on('error', rej); p.on('close', (c) => { process.exitCode = c ?? 1; res(); });
       });
       break;

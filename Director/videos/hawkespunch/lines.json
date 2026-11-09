@@ -1,68 +1,194 @@
 {
- "about": "Hawkes Punch lines: start in video seconds; volume brings each take to -16 LUFS. punch_lines.mjs reads this. Starts are placed by board2cards.mjs on the storyboard's shots; change LINES there, not here.",
+ "about": "Hawkes Punch lines: start in video seconds; volume brings each take to -16 LUFS. punch_lines.mjs reads this. `text` is the caption (a string, or [[seconds into the take, phrase], ...]); tools/punch_sound.mjs makes acts/75-captions.json from it. `from` names the take a piece was cut from (tools/punch_split.mjs). Starts are placed by board2cards.mjs on the storyboard's shots; change LINES there, not here.",
  "lines": [
   {
    "file": "symptoms/doctor_ask.mp3",
    "start": 14.3,
    "mouth": "doctor",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "So. Tell me about your symptoms."
   },
   {
-   "file": "symptoms/him_symptoms_v3.mp3",
-   "start": 16.8,
+   "file": "symptoms/him_symptoms_v3_p1.mp3",
+   "start": 16.75,
    "mouth": "person",
    "volume": 1.059,
-   "duck": 0.45
+   "duck": 0.45,
+   "from": "symptoms/him_symptoms_v3.mp3",
+   "text": [
+    [
+     0.03,
+     "Okay."
+    ],
+    [
+     0.68,
+     "So. I can't stop listening to music."
+    ],
+    [
+     2.66,
+     "Like, ever. In the shower."
+    ],
+    [
+     4.53,
+     "In my sleep."
+    ]
+   ]
+  },
+  {
+   "file": "symptoms/him_symptoms_v3_p2.mp3",
+   "start": 22.27,
+   "mouth": "person",
+   "volume": 1.059,
+   "duck": 0.45,
+   "from": "symptoms/him_symptoms_v3.mp3",
+   "text": [
+    [
+     0.03,
+     "I tried silence once, and it was just..."
+    ],
+    [
+     3.47,
+     "more music."
+    ]
+   ]
+  },
+  {
+   "file": "symptoms/him_symptoms_v3_p3.mp3",
+   "start": 26.85,
+   "mouth": "person",
+   "volume": 1.059,
+   "duck": 0.45,
+   "from": "symptoms/him_symptoms_v3.mp3",
+   "text": [
+    [
+     0.03,
+     "And, um."
+    ],
+    [
+     0.7,
+     "I'm in love."
+    ],
+    [
+     1.7,
+     "With a ghost."
+    ]
+   ]
+  },
+  {
+   "file": "symptoms/him_symptoms_v3_p4.mp3",
+   "start": 29.55,
+   "mouth": "person",
+   "volume": 1.059,
+   "duck": 0.45,
+   "from": "symptoms/him_symptoms_v3.mp3",
+   "text": "In space."
+  },
+  {
+   "file": "symptoms/him_symptoms_v3_p5.mp3",
+   "start": 32.7,
+   "mouth": "person",
+   "volume": 1.059,
+   "duck": 0.45,
+   "from": "symptoms/him_symptoms_v3.mp3",
+   "text": [
+    [
+     0.03,
+     "She doesn't have a face."
+    ],
+    [
+     1.68,
+     "But she has, like..."
+    ],
+    [
+     3.3,
+     "a vibe."
+    ]
+   ]
   },
   {
    "file": "symptoms/doctor_space_ghost.mp3",
    "start": 37.4,
    "mouth": "doctor",
    "volume": 1.109,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "A space ghost."
   },
   {
    "file": "symptoms/him_space_ghost.mp3",
    "start": 39.8,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "...Space ghost."
   },
   {
    "file": "doctor_rx_a.mp3",
    "start": 43.7,
    "mouth": "doctor",
    "volume": 1.109,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Hawkes Punch. Every day\nuntil the symptoms go away."
   },
   {
    "file": "lines3/him_drink_it.mp3",
    "start": 48.7,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "So I just... drink it?"
   },
   {
    "file": "lines3/doctor_no.mp3",
    "start": 51.5,
    "mouth": "doctor",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "No."
   },
   {
    "file": "lines3/him_oh_no.mp3",
    "start": 55.2,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Oh no."
   },
   {
-   "file": "doctor_line_a.mp3",
-   "start": 56.5,
+   "file": "doctor_line_a_p1.mp3",
+   "start": 57.3,
    "mouth": "doctor",
    "volume": 1.012,
-   "duck": 0.45
+   "duck": 0.45,
+   "from": "doctor_line_a.mp3",
+   "text": "Don't worry."
+  },
+  {
+   "file": "doctor_line_a_p2.mp3",
+   "start": 58.3,
+   "mouth": "doctor",
+   "volume": 1.012,
+   "duck": 0.45,
+   "from": "doctor_line_a.mp3",
+   "text": "It's only just a healthy amount\nof people in the world."
+  },
+  {
+   "file": "doctor_line_a_p3.mp3",
+   "start": 61.4,
+   "mouth": "doctor",
+   "volume": 1.012,
+   "duck": 0.45,
+   "from": "doctor_line_a.mp3",
+   "text": "You are just one of them."
+  },
+  {
+   "file": "doctor_line_a_p4.mp3",
+   "start": 62.9,
+   "mouth": "doctor",
+   "volume": 1.012,
+   "duck": 0.45,
+   "from": "doctor_line_a.mp3",
+   "text": "So shut up, and swallow\nthe damn Hawkes Punch."
   },
   {
    "file": "lines4/him_scream_ring_cut.mp3",
@@ -76,203 +202,232 @@
    "start": 80.75,
    "mouth": "person",
    "volume": 1.012,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Silence."
   },
   {
    "file": "lines2/him_more_music.mp3",
    "start": 82.45,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "...Nope. More music."
   },
   {
    "file": "lines3/him_shes_up_here.mp3",
    "start": 84.55,
    "mouth": "person",
    "volume": 1.023,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Wait. Space... She's up here."
   },
   {
    "file": "lines2/him_space_ghost_q.mp3",
    "start": 89.75,
    "mouth": "person",
    "volume": 1.012,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "...Space ghost?"
   },
   {
    "file": "lines4/other_sheet.mp3",
    "start": 96.25,
    "mouth": "other",
    "volume": 1.135,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "That's a sheet."
   },
   {
    "file": "lines4/him_vibe.mp3",
    "start": 98.05,
    "mouth": "person",
    "volume": 1.023,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "She has a vibe."
   },
   {
    "file": "lines4/him_are_you_her2.mp3",
-   "start": 103.55,
+   "start": 104.55,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Are you her?!"
   },
   {
    "file": "lines4/other_no.mp3",
-   "start": 104.75,
+   "start": 105.55,
    "mouth": "other",
    "volume": 1.202,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "No!"
   },
   {
    "file": "lines2/dbl_boo.mp3",
    "start": 106.5,
    "mouth": "other",
    "volume": 1.012,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "BOO!"
   },
   {
    "file": "lines2/him_shriek.mp3",
-   "start": 107.25,
+   "start": 106.95,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Aah!"
   },
   {
    "file": "lines4/him_there_before.mp3",
    "start": 113.25,
    "mouth": "person",
    "volume": 1.023,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "...That was there before."
   },
   {
    "file": "lines4/other_sure.mp3",
    "start": 115.25,
    "mouth": "other",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Sure."
   },
   {
    "file": "lines4/him_okay.mp3",
    "start": 128.75,
    "mouth": "person",
    "volume": 1.135,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Okay."
   },
   {
    "file": "lines4/him_hey.mp3",
    "start": 132.75,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Hey."
   },
   {
    "file": "lines4/other_what.mp3",
    "start": 134.05,
    "mouth": "other",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "What."
   },
   {
    "file": "lines4/him_people.mp3",
    "start": 135.85,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "People live there."
   },
   {
    "file": "lines4/him_anyone.mp3",
    "start": 142.25,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Did anyone see?"
   },
   {
    "file": "lines4/other_everyone.mp3",
    "start": 143.25,
    "mouth": "other",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Everyone saw."
   },
   {
    "file": "lines2/him_are_you_ghost.mp3",
    "start": 145.05,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Are you... the space ghost?"
   },
   {
    "file": "lines2/dbl_im_you.mp3",
    "start": 148.25,
    "mouth": "other",
    "volume": 0.944,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "No, man. I'm you."
   },
   {
    "file": "lines2/him_you_have_face.mp3",
    "start": 150.45,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "You do have a face."
   },
   {
    "file": "lines3/other_focus.mp3",
    "start": 155.45,
    "mouth": "other",
    "volume": 1.161,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Hey. Focus."
   },
   {
    "file": "lines2/dbl_two_of_you.mp3",
    "start": 157.75,
    "mouth": "other",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Are you feeling like\nthere's two of you?"
   },
   {
    "file": "lines2/him_right_for_me.mp3",
    "start": 163.65,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Is it right for me?"
   },
   {
    "file": "lines2/dbl_everyone_like_you.mp3",
    "start": 165.15,
    "mouth": "other",
    "volume": 1.084,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "It's right for everyone like you."
   },
   {
    "file": "lines2/him_thats_me.mp3",
    "start": 167.25,
    "mouth": "person",
    "volume": 1.012,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "That's me!"
   },
   {
    "file": "lines2/doc_testimonial.mp3",
    "start": 168.55,
    "mouth": "doctor",
    "volume": 1.109,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "I've prescribed it to a\nhealthy amount of people."
   },
   {
    "file": "lines2/him_tv_fist.mp3",
    "start": 172.05,
    "mouth": "person",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Mmm! Tastes like a fist!"
   },
   {
    "file": "lines2/dbl_good_fist.mp3",
    "start": 174.35,
    "mouth": "other",
    "volume": 1.012,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "A good fist."
   },
   {
    "file": "lines2/ann_side_effects.mp3",
@@ -286,21 +441,24 @@
    "start": 189.35,
    "mouth": "doctor",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Any symptoms?"
   },
   {
    "file": "lines2/him_button_cut.mp3",
    "start": 191.05,
    "mouth": "person",
    "volume": 0.955,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Well, I met someone, and he-"
   },
   {
    "file": "lines3/other_same_time.mp3",
    "start": 196.55,
    "mouth": "other",
    "volume": 1,
-   "duck": 0.45
+   "duck": 0.45,
+   "text": "Same time tomorrow?"
   }
  ]
 }

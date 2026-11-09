@@ -1,0 +1,116 @@
+{
+  // Hawkes Punch's space at REAL SCALE (SPACE-EPIC.md, J 2026-11-08: "make the planets actual planet size... think One Punch Man").
+  // Two layers (Runtime/MVSpace.cs, AGENTS.md "Real-scale space"):
+  //  - FAR: every "space" piece of kind body/ring/speck/crater is placed in KILOMETRES from the root (`space`), true radius, and drawn by the
+  //    far layer (MV/SpaceFar), ray-traced along the near camera's own rays, so angular sizes and parallax are exact at any lens.
+  //  - NEAR: the marks below are METRES from `origin`, as in every set: him, the double, effects, and the true-scale patches
+  //    (ring ice `ring_field`, a moon's ground `moon_ground`, Jupiter's cloud deck `jupiter_deck`). A patch only shows while the focus is on its body.
+  // The FOCUS says where the near world (the marks) is in the far one. Every card starts with one: {at: 0, do: focus, on: space_epic_space, name: <a focus below>}.
+  // Up is up in each focus: on a surface the ground is y = 0; in the ring the ring plane is y = 0; "rot" tips the near world (rot [90,0,0] makes the planet a wall ahead, +z).
+  // One hard sun from the far direction `sun`; MVSpace aims the near sun, a bounce from the brightest planet in view and a rim from behind him, per camera.
+  "origin": [0, 0, 9000],
+  "bounds": [-3000, -3000, 3000, 3000],
+  "ceiling": 3000,
+  "light": "space_epic",
+  "solids": {},
+  "marks": {
+    "center": { "pos": [0, 0, 0], "kind": "stand", "face": 0 },
+    "ahead": { "pos": [0, 0, 1000], "kind": "prop", "head": 0, "note": "an aim point straight ahead (+z) for shots of the far layer alone: a camera aimed at a point it stands on has no direction" },
+    "subject": { "pos": [0, 1, 0], "kind": "stand", "face": 0 },
+
+    // 5. ARRIVAL (focus: arrival_streak, then arrival_rings): he coasts to a stop above the ring, a dot against it
+    "arr_him": { "pos": [0, 30, 0], "kind": "stand", "face": 180 },
+    "arr_cam_speck": { "pos": [-40, 46, -150], "kind": "camera" },
+    "arr_cam_mcu": { "pos": [0.35, 31.55, -1.6], "kind": "camera" },
+
+    // 6. THE SEARCH (focus: ring_walk): hero ice boulders at the hop marks, house-sized; he lands on top of each
+    "hop_1": { "pos": [0, 7.6, 0], "kind": "stand", "face": 20, "note": "top of boulder A (r 8 m at [0,-1,0])" },
+    "hop_2": { "pos": [24, 10.4, 30], "kind": "stand", "face": 40, "note": "top of boulder B (r 10 m at [24,-0.5,30])" },
+    "hop_3": { "pos": [60, 6.6, 46], "kind": "stand", "face": 70, "note": "top of boulder C (r 7 m at [60,-1,46])" },
+    "hop_4": { "pos": [92, 12.3, 40], "kind": "stand", "face": 100, "note": "top of boulder D (r 12 m at [92,-0.5,40])" },
+    "peer": { "pos": [55, 2, 34], "kind": "stand", "face": 40, "note": "beside boulder C, peering round it" },
+    "ghost_rise": { "pos": [70, -3, 60], "kind": "prop", "head": 0, "note": "behind boulder C, where the ghost drifts up" },
+    "tap_him": { "pos": [55, 2.5, 34], "kind": "stand", "face": 40 },
+    "tap_dbl": { "pos": [54.3, 2.6, 33.1], "kind": "stand", "face": 40 },
+    "two_him": { "pos": [55, 2.5, 34], "kind": "stand", "face": 220 },
+    "two_dbl": { "pos": [54.4, 2.6, 33.2], "kind": "stand", "face": 40 },
+    "walk_cam_wide": { "pos": [-30, 22, -40], "kind": "camera" },
+
+    // 7a. THROUGH THE RINGS (focus: ring_chase)
+    "chase_dbl": { "pos": [0, 0, 0], "kind": "stand", "face": 0 },
+    "chase_him": { "pos": [0, 0, -40], "kind": "stand", "face": 0 },
+    "side_him": { "pos": [-0.9, 0, 0], "kind": "stand", "face": 0 }, "side_dbl": { "pos": [0.9, 0, 0], "kind": "stand", "face": 0 },
+
+    // 7b. THE MOON (focus: moon_ground, the grey moon's surface; moon_wide for the held wide over the fresh crater)
+    "sneak": { "pos": [0, 0, 0], "kind": "stand", "face": 0 },
+    "boo_dbl": { "pos": [0.7, 0, 1.6], "kind": "stand", "face": 180 },
+    "punch_at": { "pos": [0.4, 0, 1.1], "kind": "prop", "head": 0, "note": "where his fist meets the moon" },
+    "hover_him": { "pos": [-0.8, 40, 0], "kind": "stand", "face": 180 }, "hover_dbl": { "pos": [0.8, 40, 0], "kind": "stand", "face": 180 },
+
+    // 7c. THE WORLDS (focus: ring_edge for the grab; jupiter_catch for the wall; jupiter_low for the low angle)
+    "grab_dbl": { "pos": [0, 0, 0], "kind": "stand", "face": 0, "note": "at the ring's outer edge, hands on a boulder" },
+    "catch_him": { "pos": [0, 0, -0.85], "kind": "stand", "face": 0, "note": "jupiter_catch: the cloud deck is a wall at +z; palms flat on it" },
+    "catch_cam": { "pos": [-1.6, 0.4, -2.8], "kind": "camera" },
+    "low_him": { "pos": [0, 0, 0], "kind": "stand", "face": 180 },
+
+    // 7d. THE BREAK (focus: atlas, then earth_insert)
+    "atlas_dbl": { "pos": [0, 0, 0], "kind": "stand", "face": 180, "note": "the Earth is held overhead: its surface about 2.3 m up" },
+    "atlas_him": { "pos": [6, 1.5, -10], "kind": "stand", "face": 30 },
+
+    // 8. THE STOP (focus: sunrise)
+    "stop_him": { "pos": [-0.8, 0, 0], "kind": "stand", "face": 90 }, "stop_dbl": { "pos": [0.8, 0, 0], "kind": "stand", "face": -90 }
+  },
+  "actors": {
+    // the root: the far layer, the sun, the stars, the near lights, and the named focuses
+    "space": { "model": "none", "pos": [0, 0, 0], "space": {
+      "kind": "root",
+      "sun": [-0.82, 0.16, 0.55], "sunColor": "#fff3df", "sunIntensity": 3.0, "sunSize": 0.35, "sunDisc": 80, "glare": 1.0,
+      "stars": 1.0, "starsLit": 0.3, "exposure": 1.0, "farSun": 1.7,
+      "bounce": 2.5, "bounceMax": 1.4, "rim": 1.8, "rimColor": "#a8c0ff",
+      "focus": { "body": "earth", "lat": 20, "lon": 10, "alt": 9000 },
+      "focuses": {
+        "arrival_streak": { "body": "earth", "lat": 35, "lon": -20, "alt": 14000, "rot": [50, 0, 0], "note": "high over the Atlantic: the Earth fills the bottom of a wide, the Moon beyond" },
+        "arrival_rings": { "ring": "ring_main", "r": 112000, "lon": 205, "alt": 600, "heading": 180, "note": "600 km over the B ring, facing Saturn (+z): the rings below in bands, Saturn huge ahead; he is a dot 150 m from the lens" },
+        "ring_low": { "ring": "ring_main", "r": 112000, "lon": 205, "alt": 300, "heading": 180, "note": "300 km over the B ring" },
+        "earth_day": { "pos": [-32792, 6398, 21995], "rot": [9.2, 123.85, 0], "note": "the Earth's day side, whole, 40,000 km sunward" },
+        "jupiter_far": { "pos": [-1032107, 336334, 4187354], "rot": [15.44, 150.51, 0], "note": "Jupiter whole, 700,000 km off" },
+        "ring_walk": { "ring": "ring_main", "r": 112500, "lon": 214, "alt": 0, "note": "in the B ring's plane, among the hero boulders" },
+        "ring_chase": { "ring": "ring_main", "r": 100000, "lon": 230, "alt": 0.05 },
+        "ring_edge": { "ring": "hoop", "r": 136500, "lon": 200, "alt": 0, "note": "the outer edge of the A ring (the hoop): grab it here" },
+        "moon_ground": { "body": "greymoon", "lat": 14, "lon": 24, "alt": 0, "note": "on the grey moon, 6 km from where the crater will be (crater lat 10 lon 20 r 32 km)" },
+        "moon_wide": { "body": "greymoon", "lat": 30, "lon": -10, "alt": 420, "rot": [70, 0, 0], "note": "420 km over it, the moon ahead: the two of them small in front of a world with a fresh crater" },
+        "jupiter_bg": { "body": "jupiter", "lat": -21, "lon": -21, "heading": 180, "alt": 160000, "rot": [90, 0, 0], "note": "Jupiter ahead (+z) filling a long lens behind him, the Great Red Spot in view" },
+        "jupiter_catch": { "body": "jupiter", "lat": -14.6, "lon": -25, "alt": 0.0, "rot": [90, 0, 0], "note": "on the Great Red Spot's north collar (the storm is at -22.5, -25): the deck is a wall at +z, the deck's `vortex` spins the storm's rim beside his head (patch x east, z north)" },
+        "jupiter_low": { "body": "jupiter", "lat": -18, "lon": -20, "alt": 40000, "rot": [-60, 0, 0], "note": "low angle, Jupiter filling the sky above and coming" },
+        "atlas": { "pos": [30000, 12000, -26000], "rot": [0, 40, 0], "note": "free space between the Earth and the Moon; the Earth comes to him: {do: planet_hold, on: space_epic_earth, offset: [0, 6371.0023, 0], for: 2s} puts its surface 2.3 m over the double's head" },
+        "earth_insert": { "body": "earth", "lat": 10, "lon": 78, "alt": 1500, "rot": [90, 0, 0], "note": "India and China at night, looking down (+z); tip the camera up (rot x -35) for the limb" },
+        "sunrise": { "body": "earth", "lat": 10, "lon": -60, "alt": 800, "rot": [80, 0, 0], "note": "above the terminator: the limb glows behind them" },
+        "saturn_wide": { "pos": [781971, -12342, 3206793], "rot": [4.41, 168.99, 0], "note": "a long way off Saturn, rings open: the hoop wide" },
+        "crater_wide": { "pos": [1050343, -20352, 2500694], "rot": [-24.46, -153.72, 0], "note": "about 900 km off the grey moon" }
+      }
+    } },
+
+    // the bodies (km from the root). Saturn's and Jupiter's day is slowed to read as mass; the Earth turns once in 20 minutes of screen time
+    "earth": { "model": "none", "pos": [0, 0, 0], "rot": [0, 0, 23.4], "space": { "kind": "body", "look": "earth", "radius": 6371, "atmo": 60, "atmoStrength": 1.4, "atmoColor": "#5f93ff", "albedo": 0.3, "bounce": "#86a8ff", "day": 1200 } },
+    "moon": { "model": "none", "pos": [-180000, 30000, 330000], "rot": [0, 160, 0], "space": { "kind": "body", "look": "moon", "radius": 1737, "albedo": 0.12, "bounce": "#a9a9a6" } },
+    "saturn": { "model": "none", "pos": [900000, -60000, 2600000], "rot": [26.7, 30, 0], "space": { "kind": "body", "look": "saturn", "radius": 58232, "atmo": 500, "atmoStrength": 0.35, "atmoColor": "#ead9ae", "albedo": 0.45, "bounce": "#ead5a2" } },
+    "ring_main": { "model": "none", "pos": [900000, -60000, 2600000], "rot": [26.7, 30, 0], "space": { "kind": "ring", "body": "saturn", "inner": 74490, "outer": 120000, "opacity": 1, "nearFade": 0.4, "clumps": 0.25 } },
+    "hoop": { "model": "none", "pos": [900000, -60000, 2600000], "rot": [26.7, 30, 0], "space": { "kind": "ring", "body": "saturn", "inner": 122170, "outer": 136775, "opacity": 1, "nearFade": 0.4, "clumps": 0.6 } },
+    "greymoon": { "model": "none", "pos": [1050000, -20000, 2500000], "rot": [0, 0, 0], "space": { "kind": "body", "look": "greymoon", "radius": 198, "albedo": 0.6, "bounce": "#b8b8b4" } },
+    "crater": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "crater", "body": "greymoon", "lat": 10, "lon": 20, "radius": 32, "grow": 0.3, "glow": 1 } },
+    "jupiter": { "model": "none", "pos": [-700000, 150000, 3600000], "rot": [3, 0, 0], "space": { "kind": "body", "look": "jupiter", "radius": 69911, "atmo": 700, "atmoStrength": 0.3, "atmoColor": "#f1e2c4", "albedo": 0.5, "bounce": "#ecc99c",
+      "stormLat": -22.5, "stormLon": -25, "stormW": 0.2, "stormH": 0.12, "stormSpin": 0.35, "wind": 0.004, "haze": [0.84, 0.72, 0.56, 22], "hazeBelow": 60 } },
+    // specks: him and the double as their light in shots where they are kilometres off
+    "him_speck": { "model": "none", "pos": [0, 6500, 0], "scale": 0, "space": { "kind": "speck", "color": "#ffe2b8", "size": 5, "glow": 6 } },
+    "dbl_speck": { "model": "none", "pos": [0, 6500, 30], "scale": 0, "space": { "kind": "speck", "color": "#ffb0a0", "size": 5, "glow": 6 } },
+
+    // the near patches (metres, under the focus while the focus is on their body)
+    "ring_field": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "field", "ring": "ring_main", "radius": 2000, "count": 6000, "seed": 3, "thickness": 50, "sizeMin": 0.4, "sizeMax": 9,
+      "color": "#dfe3ea", "color2": "#a9a39a", "ice": 1, "smooth": 0.5, "detail": 0.45, "fadeFrom": 1300, "fadeTo": 1950,
+      "hero": [[0, -1, 0, 8], [24, -0.5, 30, 10], [60, -1, 46, 7], [92, -0.5, 40, 12], [38, 4, 70, 14], [-26, -6, 24, 9], [10, -8, -40, 11], [70, -10, -20, 16], [130, -4, 60, 10], [-60, 5, 80, 18]],
+      "clear": [[0, 0, 0, 14], [24, 0, 30, 14], [60, 0, 46, 12], [92, 0, 40, 16], [55, 2, 34, 6], [0, 30, 0, 25]] } },
+    "moon_ground": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "surface", "body": "greymoon", "look": "rock", "size": 3000, "planetRadius": 198000, "seed": 5, "craters": 240, "craterMax": 160,
+      "rocks": 500, "rockRadius": 300, "rockMax": 2.5, "color": "#8a8985", "color2": "#5d5c59", "clear": [[0, 0, 0, 8]] } },
+    "jupiter_deck": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "surface", "body": "jupiter", "look": "cloud", "size": 40000, "planetRadius": 69911000, "amp": 90, "scale": 900, "boil": 0.03, "bands": 120, "vortex": [3.2, 2.4, 7, 0.012], "first": 0.6, "rings": 200, "sectors": 288 } }
+  }
+}

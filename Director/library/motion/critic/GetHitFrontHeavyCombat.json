@@ -1,0 +1,158 @@
+{
+ "name": "GetHitFrontHeavyCombat",
+ "fps": 30,
+ "frames": 31,
+ "seconds": 1,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 6,
+  "flatness": 0.52,
+  "abruptFrac": 0.4,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 1.6,
+  "handPeak": 3.63,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.45,
+  "lagMedianFrames": 3,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 45.96,
+  "plantedFrac": 0.69,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.01,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.81,
+  "twinnedFrac": 0,
+  "curlMedian": 73.16,
+  "spreadMedian": 4.96,
+  "fannedFrac": 0,
+  "bowMedian": 21.32,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 120.66,
+  "armOmegaP95": 336.98,
+  "legOmegaP95": 176.88,
+  "spineOmegaP50": 42.01,
+  "spineOmegaP95": 132.48,
+  "headOmegaP50": 129.26,
+  "headOmegaP95": 250.03,
+  "armAccP95": 3054.36,
+  "spineAccP95": 1078.73,
+  "handSpeedP50": 1.07,
+  "handSpeedP95": 3.18,
+  "spineToArm": 0.35,
+  "energyCV": 0.34,
+  "moveRate": 2,
+  "refDistance": 0.76,
+  "refWorst": [
+   {
+    "k": "headOmegaP50",
+    "z": 1.4411453522774755
+   },
+   {
+    "k": "headOmegaP95",
+    "z": 1.0909074396223797
+   },
+   {
+    "k": "spineOmegaP50",
+    "z": 0.9384276600512519
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": 7.7,
+   "note": "speed shape 0.52 (bell 0.6, constant 1.0), 40% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": 8.4,
+   "note": "parts' speed profiles agree 0.45 (1 = everything moves as one); typical lag between parts 3 frames"
+  },
+  "weight": {
+   "score": 7.5,
+   "note": "0 centre-of-mass jerks, planted feet slide 46 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 1 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "1% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "2 key poses, readability 0.81 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 73 deg, spread 5 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 10,
+   "note": "0.76 robust z from 174 mocap clips; furthest: headOmegaP50 high (1.44), headOmegaP95 high (1.09), spineOmegaP50 high (0.94)"
+  }
+ },
+ "events": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.7,
+   "what": "Head starts at 93% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.65,
+   "what": "RightHand starts at 83% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.7,
+   "what": "Head starts at 93% of its peak speed in one frame",
+   "also": [
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 9.4,
+ "verdict": "reads as human (9.4/10)"
+}

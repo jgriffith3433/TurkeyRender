@@ -37,7 +37,7 @@ cutting rules, two looks, the flash limit, stepped animation). Proof: `videos/_f
 - **Hitstop that holds native bodies** (`do: hitstop`, `fx: impact`'s `hitstop`; frames at the score's fps or `"0.25s"`): a hold in the
   warp (2026-11-08: not a speed of 0, so nothing after it moves against the cuts; before, every hitstop frame put every later cast change a
   frame early). A native body holds its pose through the hold: every native clip running across a hold is cut in three (to the hold; the
-  hold at time scale 0.001; after it, at the clip time the song has reached). A hold inside a crossfade or a layer fade is left alone with
+  hold at time scale 0.001; after it, on from the contact pose: song time minus the hold, until the next cut, where it rejoins song time; a clip starting on the hold's first frame holds too). The world does the same: after a hold, scene time runs on from the held value and pays the hold back at the next cut, so nothing pops when a hold ends (2026-11-08; proof `videos/_layer_test` 13.5 s). A hold inside a crossfade or a layer fade is left alone with
   a build note: give the clip at the hit `blend: 0` (Hawkes Punch's clinic punch lands on a card cut). The toolkit's effects count only
   scene time that passed; older particle fx starting at a hold's end are pre-aged by the hold. `"victim":"boulder"` shakes it across the
   hit (`axis`, `victimShake` 0.05, `victimHz` 20); `"attacker":"person","creep":0.03`. `{"do":"hitshake","on":"x","amount":0.04,"hz":20,

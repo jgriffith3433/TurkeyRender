@@ -118,7 +118,11 @@ function readData(file) {
 
 // ---- time: everything is in beats from the song's first beat; the output is bar:beat
 
-export function Clock(song, beatNames = {}) {
+// fps (score.json "fps", e.g. Hawkes Punch's 24): every cut and card boundary is quantised to a frame (timeline) and every compiled time is
+// written in seconds, a frame time as its exact double (n / fps), so ScoreCompiler.cs reads the very number the renderer samples. Beat text
+// rounded to 4 decimals and read back through the C# SongMap's float beats put cuts up to 1e-3 frames AFTER their frame, and the frame
+// sampled at the cut still showed the previous shot (s05 frame 0, 2026-11-08). Without fps (music videos) the output stays bar:beat.
+export function Clock(song, beatNames = {}, fps = 0) {
   const b = song.beats, meter = song.meter ?? 4, phase = song.downbeatPhase ?? 0;
   const timeOf = (x) => { const i = Math.max(0, Math.min(b.length - 2, Math.floor(x))); return b[i] + (x - i) * (b[i + 1] - b[i]); };
   const beatOf = (t) => { let i = 0; while (i < b.length - 2 && b[i + 1] <= t) i++; return i + (t - b[i]) / (b[i + 1] - b[i]); };
@@ -153,7 +157,16 @@ export function Clock(song, beatNames = {}) {
       if (u === 's') return beatOf(timeOf(from) + n) - from;
       return n;
     },
-    text(x) { const k = x - phase, bar = Math.floor(k / meter + 1e-6), beat = round(k - bar * meter + 1, 4); return `${bar + 1}:${beat}`; },
+    fps,
+    // a beat place quantised to the nearest frame (fps only)
+    frame(x) { return fps > 0 ? beatOf(Math.round(timeOf(x) * fps) / fps) : x; },
+    text(x) {
+      if (fps > 0) {
+        const t = Math.max(0, timeOf(x)), f = Math.round(t * fps);
+        return Math.abs(t * fps - f) < 1e-6 ? `${f / fps}s` : `${round(t, 6)}s`;
+      }
+      const k = x - phase, bar = Math.floor(k / meter + 1e-6), beat = round(k - bar * meter + 1, 4); return `${bar + 1}:${beat}`;
+    },
   };
   return c;
 }
@@ -473,8 +486,9 @@ export function loadVideo(dir) {
   const tweaks = stackFile(dir, 'tweaks'), notes = stackFile(dir, 'notes');
   const declared = { actors: {}, models: {} };
   const score = [path.join(dir, 'score.json'), ...ls(path.join(dir, 'acts')).filter((f) => f !== OUT_ACT).map((f) => path.join(dir, 'acts', f))];
-  for (const f of score) if (fs.existsSync(f)) { const a = readData(f); Object.assign(declared.actors, a.actors); Object.assign(declared.models, a.models); }
-  return { dir, cut, song, cards, files, style, rawStyles, look, sequences, tweaks, notes, declared };
+  let fps = 0; // score.json "fps": cuts land on its frames (Clock)
+  for (const f of score) if (fs.existsSync(f)) { const a = readData(f); Object.assign(declared.actors, a.actors); Object.assign(declared.models, a.models); if (f === score[0] && a.fps > 0) fps = +a.fps; }
+  return { dir, cut, song, cards, files, style, rawStyles, look, sequences, tweaks, notes, declared, fps };
 }
 
 const FORBID_LAYER = (src, where) => { for (const k of Object.keys(src ?? {})) if (NOT_HERE.has(k)) fail(`${where}: '${k}' lives in cut.json. Order and length are held only there.`); };
@@ -550,12 +564,13 @@ function timeline(v, clock) {
     let start = cursor;
     if (e.after !== undefined) start = byId[e.after]?.end ?? fail(`cut.json: '${e.id}' is after ${known('card', e.after, Object.keys(byId))} (it has to come earlier in the list)`);
     if (e.at !== undefined) {
-      start = clock.at(e.at);
+      start = clock.frame(clock.at(e.at));
       const prev = out.at(-1);
       if (prev && start < prev.end - 1e-6) { warn.push(`'${prev.id}' runs ${round(prev.end - start, 2)} beats past the pin on '${e.id}' (${e.at}): trimmed`); prev.end = start; }
       if (prev && start > prev.end + 1e-6) { warn.push(`'${prev.id}' holds ${round(start - prev.end, 2)} beats until the pin on '${e.id}' (${e.at})`); prev.end = start; }
     }
-    const r = { ...e, start, end: start + clock.len(e.len, start) };
+    start = clock.frame(start); // fps: every cut on a frame (Clock)
+    const r = { ...e, start, end: clock.frame(start + clock.len(e.len, start)) };
     if (r.end > clock.last + 1) fail(`cut.json: '${e.id}' ends at ${clock.text(r.end)}, past the end of the song`);
     out.push(r); byId[e.id] = r; cursor = r.end;
   }
@@ -606,7 +621,7 @@ function eventCue(ev, entry, clock, id) {
 }
 
 export async function compile(v, opts = {}) {
-  const clock = Clock(v.song, v.cut.beats ?? {}), { list, warn } = timeline(v, clock);
+  const clock = Clock(v.song, v.cut.beats ?? {}, v.fps ?? 0), { list, warn } = timeline(v, clock);
   v.look ??= { grade: {}, sky: {}, lens: {} };
   const asp = v.look.aspect ?? v.look.fmt?.aspect;
   ASPECT = asp ? asp[0] / asp[1] : 16 / 9;

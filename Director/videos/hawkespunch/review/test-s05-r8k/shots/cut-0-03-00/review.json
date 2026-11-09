@@ -1,0 +1,37 @@
+{
+ "id": "cut-0-03-00",
+ "f0": 72,
+ "f1": 108,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 3,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 3.167,
+   "why": "one patch jumps (cell 134.4, x1.6)",
+   "file": "spike-00076.jpg"
+  }
+ ],
+ "hash": "7339ae422b64bb07",
+ "summary": "The shot opens on two near-black frames and a rock mass then slides into frame with speed lines. The 3.167 spike matches the rock's entrance, not a separate glitch.",
+ "faults": [
+  {
+   "t": 3.04,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The shot opens with about three frames (3.04 to 3.08, and nearly 3.12) of almost pure black. The floor disappears and then the rock pops in. A viewer sees an empty frame and a sudden entrance, not a clear first frame.",
+   "fix": "Trim the dead black frames, or fade the lighting up so the floor stays visible as the rock enters."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 5727,
+  "out": 281
+ },
+ "cost": 0.0143
+}

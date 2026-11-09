@@ -1,0 +1,1748 @@
+{
+ "name": "hawkespunch 66.5-69.25 s",
+ "video": "hawkespunch",
+ "from": 66.5,
+ "to": 69.25,
+ "actors": [
+  "person",
+  "doctor"
+ ],
+ "fps": 24,
+ "frames": 66,
+ "seconds": 2.71,
+ "zerog": false,
+ "cuts": 1,
+ "principles": {
+  "arcs": {
+   "score": 8.8,
+   "note": "person: median bend 0.11 over 5 moves, 0% straight lines; doctor: median bend 0.35 over 6 moves, 0% straight lines",
+   "partial": false
+  },
+  "ease": {
+   "score": 2.5,
+   "note": "person: speed shape 0.96 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame; doctor: speed shape 0.43 (bell 0.6, constant 1.0), 82% of moves start or stop in one frame",
+   "partial": false
+  },
+  "timing": {
+   "score": 10,
+   "note": "person: 0 holds (median 0 s), 0% of frames dead still, fast parts median null s; doctor: 1 holds (median 0.25 s), 0% of frames dead still, fast parts median 0.04 s",
+   "partial": false
+  },
+  "anticipation": {
+   "score": 3,
+   "note": "person: 5 big moves: 0 with anticipation, 0 with overshoot and settle; doctor: 5 big moves: 0 with anticipation, 2 with overshoot and settle",
+   "partial": false
+  },
+  "overlap": {
+   "score": 3.8,
+   "note": "person: parts' speed profiles agree 0.55 (1 = everything moves as one); typical lag between parts 1.25 frames; doctor: parts' speed profiles agree 0.76 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together",
+   "partial": false
+  },
+  "weight": {
+   "score": 4.7,
+   "note": "person: 5 centre-of-mass jerks, planted feet slide 52 cm/s; doctor: 2 centre-of-mass jerks, planted feet slide 9 cm/s",
+   "partial": false
+  },
+  "snaps": {
+   "score": 0,
+   "note": "person: 226 body snaps or pops in 2.71 s; doctor: 11 body snaps or pops in 2.71 s",
+   "partial": false
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "person: 1% of core joints frozen while the body moves; doctor: 5% of core joints frozen while the body moves",
+   "partial": false
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "person: 5 key poses, readability 0.8 (best of front, side, three-quarter), 0% twinned; doctor: 5 key poses, readability 0.82 (best of front, side, three-quarter), 0% twinned",
+   "partial": false
+  },
+  "hands": {
+   "score": 10,
+   "note": "person: fingers curl 67 deg, spread 37 deg, head level; doctor: fingers curl 73 deg, spread 5 deg, head level",
+   "partial": false
+  },
+  "contact": {
+   "score": 10,
+   "note": "person: hands clear of the body, 0 reaches into air; doctor: hands clear of the body, 0 reaches into air",
+   "partial": false
+  },
+  "reference": {
+   "score": 9.8,
+   "note": "person: 1.31 robust z from 174 mocap clips; furthest: handSpeedP50 high (3.2), handSpeedP95 high (3.06), headOmegaP50 high (0.95); doctor: 1.21 robust z from 174 mocap clips; furthest: energyCV high (4.66), legOmegaP95 low (1.49), headOmegaP50 low (0.95)",
+   "partial": false
+  }
+ },
+ "total": 6.8,
+ "events": [
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.LeftUpperArm",
+   "sev": 1,
+   "what": "LeftUpperArm jumps 74 deg in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.LeftLowerArm",
+   "sev": 1,
+   "what": "LeftLowerArm jumps 34 deg in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.RightUpperArm",
+   "sev": 0.95,
+   "what": "RightUpperArm jumps 15 deg in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.LeftHand",
+   "sev": 0.95,
+   "what": "LeftHand jumps 15 deg in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.LeftShoulder",
+   "sev": 0.94,
+   "what": "LeftShoulder jumps 14 deg in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.LeftLowerLeg",
+   "sev": 0.93,
+   "what": "LeftLowerLeg jumps 14 deg in one frame"
+  },
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.Head",
+   "sev": 0.91,
+   "what": "Head jumps 12 deg in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 229 m/s^2"
+  },
+  {
+   "t": 67.54,
+   "f": 25,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 204 m/s^2"
+  },
+  {
+   "t": 66.92,
+   "f": 10,
+   "kind": "snap",
+   "part": "doctor.LeftLowerArm",
+   "sev": 0.89,
+   "what": "LeftLowerArm jumps 11 deg in one frame"
+  },
+  {
+   "t": 67.42,
+   "f": 22,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.87,
+   "what": "the body's centre of mass jerks at 80 m/s^2"
+  },
+  {
+   "t": 67.58,
+   "f": 26,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.87,
+   "what": "the body's centre of mass jerks at 80 m/s^2"
+  },
+  {
+   "t": 66.92,
+   "f": 10,
+   "kind": "snap",
+   "part": "doctor.Hips",
+   "sev": 0.87,
+   "what": "Hips jumps 10 deg in one frame"
+  },
+  {
+   "t": 66.92,
+   "f": 10,
+   "kind": "snap",
+   "part": "doctor.LeftUpperLeg",
+   "sev": 0.87,
+   "what": "LeftUpperLeg jumps 10 deg in one frame"
+  },
+  {
+   "t": 67.46,
+   "f": 23,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.84,
+   "what": "the body's centre of mass jerks at 73 m/s^2"
+  },
+  {
+   "t": 66.67,
+   "f": 4,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 20 cm in one frame"
+  },
+  {
+   "t": 67.38,
+   "f": 21,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.42,
+   "f": 22,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.46,
+   "f": 23,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.54,
+   "f": 25,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.58,
+   "f": 26,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.63,
+   "f": 27,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 28,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.71,
+   "f": 29,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.75,
+   "f": 30,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.79,
+   "f": 31,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.83,
+   "f": 32,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.88,
+   "f": 33,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.92,
+   "f": 34,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.96,
+   "f": 35,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 68,
+   "f": 36,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame"
+  },
+  {
+   "t": 68.04,
+   "f": 37,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.08,
+   "f": 38,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.13,
+   "f": 39,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.17,
+   "f": 40,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.21,
+   "f": 41,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.25,
+   "f": 42,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.29,
+   "f": 43,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.33,
+   "f": 44,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.38,
+   "f": 45,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.42,
+   "f": 46,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 47,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.5,
+   "f": 48,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.54,
+   "f": 49,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.58,
+   "f": 50,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.63,
+   "f": 51,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.67,
+   "f": 52,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.71,
+   "f": 53,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.75,
+   "f": 54,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.79,
+   "f": 55,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.83,
+   "f": 56,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.88,
+   "f": 57,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.92,
+   "f": 58,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.96,
+   "f": 59,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 69,
+   "f": 60,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 69.04,
+   "f": 61,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 69.08,
+   "f": 62,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 69.13,
+   "f": 63,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 69.17,
+   "f": 64,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 65,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 108 cm in one frame"
+  },
+  {
+   "t": 67.38,
+   "f": 21,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.42,
+   "f": 22,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.46,
+   "f": 23,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 102 cm in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 102 cm in one frame"
+  },
+  {
+   "t": 67.54,
+   "f": 25,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.58,
+   "f": 26,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.63,
+   "f": 27,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 28,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 104 cm in one frame"
+  },
+  {
+   "t": 67.71,
+   "f": 29,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.75,
+   "f": 30,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.79,
+   "f": 31,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.83,
+   "f": 32,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 103 cm in one frame"
+  },
+  {
+   "t": 67.88,
+   "f": 33,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 102 cm in one frame"
+  },
+  {
+   "t": 67.92,
+   "f": 34,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 102 cm in one frame"
+  },
+  {
+   "t": 67.96,
+   "f": 35,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 101 cm in one frame"
+  },
+  {
+   "t": 68,
+   "f": 36,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 101 cm in one frame"
+  },
+  {
+   "t": 68.04,
+   "f": 37,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 103 cm in one frame"
+  },
+  {
+   "t": 68.08,
+   "f": 38,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.13,
+   "f": 39,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.17,
+   "f": 40,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.21,
+   "f": 41,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 107 cm in one frame"
+  },
+  {
+   "t": 68.25,
+   "f": 42,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 68.29,
+   "f": 43,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 104 cm in one frame"
+  },
+  {
+   "t": 68.33,
+   "f": 44,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 68.38,
+   "f": 45,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 105 cm in one frame"
+  },
+  {
+   "t": 68.42,
+   "f": 46,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 106 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 47,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.5,
+   "f": 48,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.54,
+   "f": 49,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 108 cm in one frame"
+  },
+  {
+   "t": 68.58,
+   "f": 50,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 109 cm in one frame"
+  },
+  {
+   "t": 68.63,
+   "f": 51,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 68.67,
+   "f": 52,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 68.71,
+   "f": 53,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 111 cm in one frame"
+  },
+  {
+   "t": 68.75,
+   "f": 54,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 111 cm in one frame"
+  },
+  {
+   "t": 68.79,
+   "f": 55,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 111 cm in one frame"
+  },
+  {
+   "t": 68.83,
+   "f": 56,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 111 cm in one frame"
+  },
+  {
+   "t": 68.88,
+   "f": 57,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 68.92,
+   "f": 58,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 68.96,
+   "f": 59,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 69,
+   "f": 60,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 69.04,
+   "f": 61,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 69.08,
+   "f": 62,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 111 cm in one frame"
+  },
+  {
+   "t": 69.13,
+   "f": 63,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 110 cm in one frame"
+  },
+  {
+   "t": 69.17,
+   "f": 64,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 109 cm in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 65,
+   "kind": "pop",
+   "part": "person.RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 109 cm in one frame"
+  },
+  {
+   "t": 67.38,
+   "f": 21,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 67.42,
+   "f": 22,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.46,
+   "f": 23,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 106 cm in one frame"
+  },
+  {
+   "t": 67.54,
+   "f": 25,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.58,
+   "f": 26,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.63,
+   "f": 27,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 28,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 67.71,
+   "f": 29,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.75,
+   "f": 30,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 67.79,
+   "f": 31,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.83,
+   "f": 32,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 67.88,
+   "f": 33,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 67.92,
+   "f": 34,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 67.96,
+   "f": 35,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 68,
+   "f": 36,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 68.04,
+   "f": 37,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 68.08,
+   "f": 38,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 68.13,
+   "f": 39,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 68.17,
+   "f": 40,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.21,
+   "f": 41,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 68.25,
+   "f": 42,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.29,
+   "f": 43,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 68.33,
+   "f": 44,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 105 cm in one frame"
+  },
+  {
+   "t": 68.38,
+   "f": 45,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 102 cm in one frame"
+  },
+  {
+   "t": 68.42,
+   "f": 46,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 100 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 47,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 100 cm in one frame"
+  },
+  {
+   "t": 68.5,
+   "f": 48,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 100 cm in one frame"
+  },
+  {
+   "t": 68.54,
+   "f": 49,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 101 cm in one frame"
+  },
+  {
+   "t": 68.58,
+   "f": 50,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 99 cm in one frame"
+  },
+  {
+   "t": 68.63,
+   "f": 51,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 102 cm in one frame"
+  },
+  {
+   "t": 68.67,
+   "f": 52,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 102 cm in one frame"
+  },
+  {
+   "t": 68.71,
+   "f": 53,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 102 cm in one frame"
+  },
+  {
+   "t": 68.75,
+   "f": 54,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 103 cm in one frame"
+  },
+  {
+   "t": 68.79,
+   "f": 55,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 104 cm in one frame"
+  },
+  {
+   "t": 68.83,
+   "f": 56,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 104 cm in one frame"
+  },
+  {
+   "t": 68.88,
+   "f": 57,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 104 cm in one frame"
+  },
+  {
+   "t": 68.92,
+   "f": 58,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 104 cm in one frame"
+  },
+  {
+   "t": 68.96,
+   "f": 59,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 105 cm in one frame"
+  },
+  {
+   "t": 69,
+   "f": 60,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 105 cm in one frame"
+  },
+  {
+   "t": 69.04,
+   "f": 61,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 104 cm in one frame"
+  },
+  {
+   "t": 69.08,
+   "f": 62,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 105 cm in one frame"
+  },
+  {
+   "t": 69.13,
+   "f": 63,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 105 cm in one frame"
+  },
+  {
+   "t": 69.17,
+   "f": 64,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 106 cm in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 65,
+   "kind": "pop",
+   "part": "person.LeftFoot",
+   "sev": 0.8,
+   "what": "LeftFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 67.38,
+   "f": 21,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 67.42,
+   "f": 22,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 67.46,
+   "f": 23,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 113 cm in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 113 cm in one frame"
+  },
+  {
+   "t": 67.54,
+   "f": 25,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 112 cm in one frame"
+  },
+  {
+   "t": 67.58,
+   "f": 26,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 112 cm in one frame"
+  },
+  {
+   "t": 67.63,
+   "f": 27,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 28,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.71,
+   "f": 29,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.75,
+   "f": 30,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 67.79,
+   "f": 31,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 67.83,
+   "f": 32,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.88,
+   "f": 33,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 67.92,
+   "f": 34,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 103 cm in one frame"
+  },
+  {
+   "t": 67.96,
+   "f": 35,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 98 cm in one frame"
+  },
+  {
+   "t": 68,
+   "f": 36,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 68.04,
+   "f": 37,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 115 cm in one frame"
+  },
+  {
+   "t": 68.08,
+   "f": 38,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 126 cm in one frame"
+  },
+  {
+   "t": 68.13,
+   "f": 39,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 119 cm in one frame"
+  },
+  {
+   "t": 68.17,
+   "f": 40,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 115 cm in one frame"
+  },
+  {
+   "t": 68.21,
+   "f": 41,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 68.25,
+   "f": 42,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 68.29,
+   "f": 43,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 113 cm in one frame"
+  },
+  {
+   "t": 68.33,
+   "f": 44,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 116 cm in one frame"
+  },
+  {
+   "t": 68.38,
+   "f": 45,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 114 cm in one frame"
+  },
+  {
+   "t": 68.42,
+   "f": 46,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 111 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 47,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 110 cm in one frame"
+  },
+  {
+   "t": 68.5,
+   "f": 48,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.54,
+   "f": 49,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.58,
+   "f": 50,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.63,
+   "f": 51,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 68.67,
+   "f": 52,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 68.71,
+   "f": 53,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 68.75,
+   "f": 54,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 68.79,
+   "f": 55,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.83,
+   "f": 56,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.88,
+   "f": 57,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.92,
+   "f": 58,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 68.96,
+   "f": 59,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 109 cm in one frame"
+  },
+  {
+   "t": 69,
+   "f": 60,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 108 cm in one frame"
+  },
+  {
+   "t": 69.04,
+   "f": 61,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 107 cm in one frame"
+  },
+  {
+   "t": 69.08,
+   "f": 62,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 106 cm in one frame"
+  },
+  {
+   "t": 69.13,
+   "f": 63,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 106 cm in one frame"
+  },
+  {
+   "t": 69.17,
+   "f": 64,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 106 cm in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 65,
+   "kind": "pop",
+   "part": "person.RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 106 cm in one frame"
+  },
+  {
+   "t": 67.38,
+   "f": 21,
+   "kind": "pop",
+   "part": "person.Head",
+   "sev": 0.8,
+   "what": "Head moves 104 cm in one frame"
+  },
+  {
+   "t": 67.42,
+   "f": 22,
+   "kind": "pop",
+   "part": "person.Head",
+   "sev": 0.8,
+   "what": "Head moves 103 cm in one frame"
+  },
+  {
+   "t": 67.46,
+   "f": 23,
+   "kind": "pop",
+   "part": "person.Head",
+   "sev": 0.8,
+   "what": "Head moves 103 cm in one frame"
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "pop",
+   "part": "person.Head",
+   "sev": 0.8,
+   "what": "Head moves 103 cm in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 66.79,
+   "f": 7,
+   "kind": "snap",
+   "part": "doctor.LeftUpperArm",
+   "sev": 1,
+   "what": "LeftUpperArm jumps 74 deg in one frame",
+   "also": [
+    "snap",
+    "pop"
+   ]
+  },
+  {
+   "t": 67.5,
+   "f": 24,
+   "kind": "com-spike",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 229 m/s^2",
+   "also": [
+    "com-spike",
+    "pop"
+   ]
+  },
+  {
+   "t": 67.75,
+   "f": 30,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame",
+   "also": [
+    "pop"
+   ]
+  },
+  {
+   "t": 68,
+   "f": 36,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 104 cm in one frame",
+   "also": [
+    "pop"
+   ]
+  },
+  {
+   "t": 68.25,
+   "f": 42,
+   "kind": "pop",
+   "part": "person.LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 106 cm in one frame",
+   "also": []
+  }
+ ],
+ "perActor": {
+  "person": {
+   "total": 6.5,
+   "verdict": "looks animated, not acted: ease and anticipation give it away (6.5/10)"
+  },
+  "doctor": {
+   "total": 7.1,
+   "verdict": "passable, weak on snaps and overlap (7.1/10)"
+  }
+ },
+ "verdict": "looks animated, not acted: snaps and ease give it away (6.8/10)"
+}

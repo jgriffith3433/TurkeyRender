@@ -1,0 +1,858 @@
+{
+ "beat": "s10_catch",
+ "when": "2026-11-08T22:23:46.878Z",
+ "zerog": true,
+ "rows": [
+  {
+   "name": "mx_goalie_catch_mid",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_goalie_catch_mid.fbx",
+   "via": "twin",
+   "seconds": 1.27,
+   "total": 8.3,
+   "verdict": "passable, weak on snaps and anticipation (8.3/10)",
+   "low": [
+    "snaps 0",
+    "anticipation 4.8",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.5,
+    "timing": 10,
+    "anticipation": 4.8,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.27s RightHand jumps 15 deg in one frame",
+    "0.6s in zero-g the body changes speed by 0.82 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 0.68 m/s with nothing to push on"
+   ],
+   "fit": 0.675,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.47 s",
+   "score": 6.95,
+   "source": "twin"
+  },
+  {
+   "name": "PushCubeIdle1",
+   "src": "gen/mocap/index/protofactor/PushCubeIdle1.npz",
+   "via": "twin",
+   "seconds": 2.67,
+   "total": 8,
+   "verdict": "passable, weak on reference and hands (8/10)",
+   "low": [
+    "reference 3.2",
+    "hands 8",
+    "silhouette 8.5"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 3.2
+   },
+   "worst": [
+    "0.03s the head hangs 69 deg forward of the chest"
+   ],
+   "fit": 0.793,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 2.70 s",
+   "score": 6.41,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_PullCubeBackwardsRight_1p5",
+   "src": "gen/motion/beats/s10_catch/protofactor_PullCubeBackwardsRight_1p5.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 7.7,
+   "verdict": "passable, weak on ease and anticipation (7.7/10)",
+   "low": [
+    "ease 2.6",
+    "anticipation 4",
+    "reference 5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.6,
+    "timing": 10,
+    "anticipation": 4,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 6.4,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 5
+   },
+   "worst": [
+    "0.03s LeftFoot travels 49 cm with no anticipation and no overshoot or settle",
+    "1.8s LeftFoot stops dead from 79% of its peak",
+    "1.3s RightFoot starts at 91% of its peak speed in one frame"
+   ],
+   "fit": 0.649,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 1.83 s",
+   "score": 6.4,
+   "source": "protofactor/PullCubeBackwardsRight 1.5-3.3 s Pull Cube Backwards Right (Push&Pul"
+  },
+  {
+   "name": "PushCube2",
+   "src": "gen/mocap/index/protofactor/PushCube2.npz",
+   "via": "twin",
+   "seconds": 3.33,
+   "total": 7.9,
+   "verdict": "passable, weak on ease and anticipation (7.9/10)",
+   "low": [
+    "ease 0",
+    "anticipation 3",
+    "reference 6.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 0,
+    "timing": 10,
+    "anticipation": 3,
+    "overlap": 8.7,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 8.7,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 6.7
+   },
+   "worst": [
+    "0.03s RightFoot travels 59 cm with no anticipation and no overshoot or settle",
+    "1.67s LeftFoot travels 47 cm with no anticipation and no overshoot or settle",
+    "2.63s LeftFoot moves at one speed for 0.7 s (flat 0.95): interpolation, not a move"
+   ],
+   "fit": 1.025,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.97 s",
+   "score": 5.85,
+   "source": "twin"
+  },
+  {
+   "name": "PushCube1",
+   "src": "gen/mocap/index/protofactor/PushCube1.npz",
+   "via": "twin",
+   "seconds": 3.33,
+   "total": 7.5,
+   "verdict": "passable, weak on ease and stiffness (7.5/10)",
+   "low": [
+    "ease 0.3",
+    "stiffness 5.6",
+    "anticipation 6"
+   ],
+   "principles": {
+    "arcs": 7.3,
+    "ease": 0.3,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 5.6,
+    "silhouette": 8.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 6.3
+   },
+   "worst": [
+    "1.9s LeftFoot travels 63 cm with no anticipation and no overshoot or settle",
+    "0.33s LeftFoot moves at one speed for 0.4 s (flat 0.97): interpolation, not a move",
+    "0.03s the head hangs 69 deg forward of the chest"
+   ],
+   "fit": 0.849,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 3.37 s",
+   "score": 5.8,
+   "source": "twin"
+  },
+  {
+   "name": "PushCube3",
+   "src": "gen/mocap/index/protofactor/PushCube3.npz",
+   "via": "twin",
+   "seconds": 3.33,
+   "total": 7.6,
+   "verdict": "passable, weak on arcs and ease (7.6/10)",
+   "low": [
+    "arcs 2.1",
+    "ease 2.5",
+    "reference 7.2"
+   ],
+   "principles": {
+    "arcs": 2.1,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": 7.5,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 7.5,
+    "silhouette": 8.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.2
+   },
+   "worst": [
+    "1.77s LeftFoot travels 64 cm with no anticipation and no overshoot or settle",
+    "1.13s RightFoot moves at one speed for 0.9 s (flat 0.97): interpolation, not a move",
+    "0.03s the head hangs 78 deg forward of the chest"
+   ],
+   "fit": 0.93,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 3.37 s",
+   "score": 5.74,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_PullCubeBackwardsRight_0p5",
+   "src": "gen/motion/beats/s10_catch/protofactor_PullCubeBackwardsRight_0p5.npz",
+   "via": "twin",
+   "seconds": 2.8,
+   "total": 6.8,
+   "verdict": "looks animated, not acted: stiffness and ease give it away (6.8/10)",
+   "low": [
+    "stiffness 0.3",
+    "ease 3.2",
+    "anticipation 4"
+   ],
+   "principles": {
+    "arcs": 6.2,
+    "ease": 3.2,
+    "timing": 10,
+    "anticipation": 4,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 0.3,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 5.1
+   },
+   "worst": [
+    "1.5s LeftFoot travels 39 cm in a straight line (bend 0.03)",
+    "0.03s LeftFoot travels 56 cm with no anticipation and no overshoot or settle",
+    "2.8s LeftFoot stops dead from 79% of its peak"
+   ],
+   "fit": 0.634,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 2.83 s",
+   "score": 5.53,
+   "source": "protofactor/PullCubeBackwardsRight 0.5-3.3 s Pull Cube Backwards Right (Push&Pul"
+  },
+  {
+   "name": "ps_catch_slide_b",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@ps_catch_slide_b.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 6.2,
+   "verdict": "looks animated, not acted: stiffness and anticipation give it away (6.2/10)",
+   "low": [
+    "stiffness 0",
+    "anticipation 3",
+    "reference 3.1"
+   ],
+   "principles": {
+    "arcs": 5,
+    "ease": 9.7,
+    "timing": 7.8,
+    "anticipation": 3,
+    "overlap": 5.2,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 0,
+    "silhouette": 9.9,
+    "hands": 10,
+    "contact": 10,
+    "reference": 3.1
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.71 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.52 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.54 m/s with nothing to push on"
+   ],
+   "fit": 0.613,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 5.43 s",
+   "score": 4.97,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_82_05_10p6",
+   "src": "gen/motion/beats/s10_catch/cmu_82_05_10p6.npz",
+   "via": "twin",
+   "seconds": 2.2,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "ease 4.3",
+    "reference 7.3",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 4.3,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 7.3
+   },
+   "worst": [
+    "2.2s LeftHand stops dead from 100% of its peak"
+   ],
+   "fit": 0.505,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 4.89,
+   "source": "cmu/82_05 10.6-12.83 s sitting on ground relaxing"
+  },
+  {
+   "name": "cmu_82_05_8p6",
+   "src": "gen/motion/beats/s10_catch/cmu_82_05_8p6.npz",
+   "via": "twin",
+   "seconds": 2.8,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "anticipation 0",
+    "reference 9.1",
+    "arcs 10"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 10,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 9.1
+   },
+   "worst": [
+    "0.77s RightHand travels 39 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.509,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 4.88,
+   "source": "cmu/82_05 8.6-11.4 s sitting on ground relaxing"
+  },
+  {
+   "name": "ps_catch_slide_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@ps_catch_slide_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 6.3,
+   "verdict": "looks animated, not acted: stiffness and anticipation give it away (6.3/10)",
+   "low": [
+    "stiffness 0",
+    "anticipation 1.1",
+    "arcs 4.5"
+   ],
+   "principles": {
+    "arcs": 4.5,
+    "ease": 8.9,
+    "timing": 9.7,
+    "anticipation": 1.1,
+    "overlap": 5.5,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 0,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 4.5
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.69 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 0.61 m/s with nothing to push on",
+    "2s in zero-g the body changes speed by 0.49 m/s with nothing to push on"
+   ],
+   "fit": 0.934,
+   "action": true,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.83 s",
+   "score": 4.43,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_82_05_9p6",
+   "src": "gen/motion/beats/s10_catch/cmu_82_05_9p6.npz",
+   "via": "twin",
+   "seconds": 2.8,
+   "total": 8.4,
+   "verdict": "passable, weak on anticipation and ease (8.4/10)",
+   "low": [
+    "anticipation 0",
+    "ease 4.9",
+    "reference 8.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.9,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 8.7
+   },
+   "worst": [
+    "0.03s RightHand travels 32 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.501,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 4.4,
+   "source": "cmu/82_05 9.6-12.4 s sitting on ground relaxing"
+  },
+  {
+   "name": "BlockedMedium",
+   "src": "gen/mocap/index/protofactor/BlockedMedium.npz",
+   "via": "twin",
+   "seconds": 0.43,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "ease 1.9",
+    "hands 8",
+    "overlap 8.3"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 1.9,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 8.3,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 9.1
+   },
+   "worst": [
+    "0.03s the head hangs 81 deg forward of the chest",
+    "0.4s RightHand stops dead from 62% of its peak"
+   ],
+   "fit": 0.614,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 4.27,
+   "source": "twin"
+  },
+  {
+   "name": "BlockedHigh",
+   "src": "gen/mocap/index/protofactor/BlockedHigh.npz",
+   "via": "twin",
+   "seconds": 0.4,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "ease 2.5",
+    "hands 8",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s the head hangs 67 deg forward of the chest",
+    "0.4s LeftHand stops dead from 100% of its peak"
+   ],
+   "fit": 0.823,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 4.25,
+   "source": "twin"
+  },
+  {
+   "name": "GetHitFrontHeavyCombat",
+   "src": "gen/mocap/index/protofactor/GetHitFrontHeavyCombat.npz",
+   "via": "twin",
+   "seconds": 1,
+   "total": 9,
+   "verdict": "reads as human (9/10)",
+   "low": [
+    "ease 5.9",
+    "weight 7.5",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 5.9,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 9,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.3,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.3s in zero-g the body changes speed by 0.46 m/s with nothing to push on",
+    "0.6s in zero-g the body changes speed by 0.39 m/s with nothing to push on",
+    "0.03s RightHand starts at 62% of its peak speed in one frame"
+   ],
+   "fit": 0.948,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 4.1,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_IdleBlockMedium_0p2",
+   "src": "gen/motion/beats/s10_catch/protofactor_IdleBlockMedium_0p2.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 7.9,
+   "verdict": "passable, weak on reference and hands (7.9/10)",
+   "low": [
+    "reference 2.2",
+    "hands 8",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 2.2
+   },
+   "worst": [
+    "0.03s the head hangs 74 deg forward of the chest"
+   ],
+   "fit": 0.615,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 3.67,
+   "source": "protofactor/IdleBlockMedium 0.2-2 s Idle Block Medium (Combat Bare Fists)"
+  },
+  {
+   "name": "IdleBlockHigh",
+   "src": "gen/mocap/index/protofactor/IdleBlockHigh.npz",
+   "via": "twin",
+   "seconds": 2,
+   "total": 8,
+   "verdict": "passable, weak on reference and hands (8/10)",
+   "low": [
+    "reference 2.5",
+    "hands 8",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 2.5
+   },
+   "worst": [
+    "0.03s the head hangs 72 deg forward of the chest"
+   ],
+   "fit": 0.78,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 3.44,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_hold_ball_t1",
+   "src": "gen/genmotion/takes/fbx_zg_hold_ball_t1.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 8.4,
+   "verdict": "passable, weak on ease and silhouette (8.4/10)",
+   "low": [
+    "ease 1",
+    "silhouette 7.4",
+    "reference 7.6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 1,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 8.7,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 8.5,
+    "silhouette": 7.4,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.6
+   },
+   "worst": [
+    "0.03s the head hangs 66 deg forward of the chest",
+    "3.53s LeftFoot starts at 60% of its peak speed in one frame",
+    "0.43s LeftFoot stops dead from 60% of its peak"
+   ],
+   "fit": 1.076,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 3.25,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_catch_gut_t0",
+   "src": "gen/genmotion/takes/fbx_zg_catch_gut_t0.fbx",
+   "via": "twin",
+   "seconds": 2.47,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "overlap 5.7",
+    "ease 6.8",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.8,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 5.7,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.5,
+    "silhouette": 9.1,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.46 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.7 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.86 m/s with nothing to push on"
+   ],
+   "fit": 1.565,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 2.77,
+   "source": "twin"
+  },
+  {
+   "name": "gm_zg_catch_gut",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@gm_zg_catch_gut.fbx",
+   "via": "twin",
+   "seconds": 2.47,
+   "total": 8.8,
+   "verdict": "reads as human (8.8/10)",
+   "low": [
+    "overlap 7.3",
+    "weight 7.5",
+    "timing 7.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.3,
+    "timing": 7.7,
+    "anticipation": 10,
+    "overlap": 7.3,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.3,
+    "silhouette": 9.7,
+    "hands": 8,
+    "contact": 8.8,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.68 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 1.75 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 1.35 m/s with nothing to push on"
+   ],
+   "fit": 1.693,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 2.41,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_catch_gut_t1",
+   "src": "gen/genmotion/takes/fbx_zg_catch_gut_t1.fbx",
+   "via": "twin",
+   "seconds": 2.47,
+   "total": 8.8,
+   "verdict": "reads as human (8.8/10)",
+   "low": [
+    "overlap 7.3",
+    "weight 7.5",
+    "timing 7.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.3,
+    "timing": 7.7,
+    "anticipation": 10,
+    "overlap": 7.3,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.3,
+    "silhouette": 9.7,
+    "hands": 8,
+    "contact": 8.8,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.68 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 1.75 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 1.35 m/s with nothing to push on"
+   ],
+   "fit": 1.693,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": 2.41,
+   "source": "twin"
+  },
+  {
+   "name": "gm_zg_hold_ball",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@gm_zg_hold_ball.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 6.5,
+   "verdict": "looks animated, not acted: anticipation and ease give it away (6.5/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.5",
+    "overlap 3.2"
+   ],
+   "principles": {
+    "arcs": 5,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.2,
+    "weight": 8.9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.9
+   },
+   "worst": [
+    "3.6s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "0.03s the head hangs 54 deg forward of the chest",
+    "1.4s RightFoot starts at 70% of its peak speed in one frame"
+   ],
+   "fit": 1.981,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": -0.46,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_hold_ball_t0",
+   "src": "gen/genmotion/takes/fbx_zg_hold_ball_t0.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 6.5,
+   "verdict": "looks animated, not acted: anticipation and ease give it away (6.5/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.5",
+    "overlap 3.2"
+   ],
+   "principles": {
+    "arcs": 5,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.2,
+    "weight": 8.9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.9
+   },
+   "worst": [
+    "3.6s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "0.03s the head hangs 54 deg forward of the chest",
+    "1.4s RightFoot starts at 70% of its peak speed in one frame"
+   ],
+   "fit": 1.981,
+   "action": false,
+   "actionNote": "both arms out in front at chest height or above, hands apart, for 0.00 s (a catch wants 0.3 s)",
+   "score": -0.46,
+   "source": "twin"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_catch/gm_hp_catch_t0.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_catch/gm_hp_catch_t0.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_catch/gm_hp_catch_t1.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_catch/gm_hp_catch_t1.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_catch/gm_hp_catch_t2.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_catch/gm_hp_catch_t2.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  }
+ ],
+ "fitWeight": 2,
+ "board": "s10: Jupiter coming at him; he braces arms out, CATCH, absorbs and slides back; zero-g"
+}

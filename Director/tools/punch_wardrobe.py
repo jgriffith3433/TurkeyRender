@@ -3,7 +3,8 @@
    uv run --no-project --with numpy --with pillow python Director/tools/punch_wardrobe.py
 Writes Assets/Videos/hawkespunch/Props/:
   Person2_doctor.png/.mat   the doctor: Person2 with her top a dusty scrub blue (her white lab coat is a garment over it: blender_coat.py), the jeans a dark slack grey.
-  Person_sick.png/.mat      him, after Greener: the purple tee, the skin tinged green and a shade paler.
+  Person_sick.png/.mat      him, after Greener: the purple tee, the skin pale and a little green.
+  Person_sick_head.png/.mat his head with the same tinge (cast as his material2).
   Person_red.png/.mat       the other one: the same man in a red tee (the hair goes the other way on the rig, not here).
 Cast them as {"model":"person2","material":"Assets/Videos/hawkespunch/Props/Person2_doctor.mat","material2":"Assets/MusicVideo/Person2/Head.mat"} and the same for him
 with Person's Head.mat. The glasses, the stethoscope, the clipboard and the pad are props in library/sets/clinic.json (attach the glasses to doctor.head)."""
@@ -102,10 +103,29 @@ im, rgb, v, shirt, jeans, skin, shoe = masks(SRC1, 'Person.fbx', 2048, 2048)
 shirt[shoe] = 0
 tee = (60, 42, 78)
 new = recolour(rgb, v, shirt, tee, 1.3)
-sick = new * (1 - skin[..., None]) + (new * np.array([.86, 1.0, .84])[None, None] * .96 + 14) * skin[..., None]
+# a SUBTLE, MATCHED tinge (2026-11-08, round 3): pale and a little green (SCRIPT.md: "a little green-faced"), the same transform on
+# the body's skin and on a hawkespunch-only copy of his head texture, so face and forearms read as one skin. (The first version
+# tinted only the body, multiplying blue down: khaki-yellow forearms against a pink face.) Blend 31% toward a pale grey-green (22% read as normal skin in the wides; coordinator, round 4).
+SICK = np.array([170., 194., 168.])
+def sicken(rgb, m, k=.31): return rgb * (1 - m[..., None]) + (rgb * (1 - k) + SICK[None, None] * k) * m[..., None]
+sick = sicken(new, skin)
 print('him: tee', round(float((shirt > .5).mean()) * 100, 1), '%, skin', round(float(skin.mean()) * 100, 1), '%')
 write(SRC1, 'Person_sick', sick, im, bump=1.7)
 
 # the other one: a red tee, healthy skin
 other = recolour(rgb, v, shirt, (200, 28, 36), 1.3)
 write(SRC1, 'Person_red', other, im, bump=1.7)
+
+# his head, the same tinge (a copy: TK Shock, Greener and every other video keep the plain Person/Head.mat)
+hd = np.asarray(Image.open(os.path.join(SRC1, 'Person_Head.png')).convert('RGBA')).astype(np.float32)
+hrgb = hd[..., :3]; hv = hrgb.max(-1); hs = (hv - hrgb.min(-1)) / np.maximum(hv, 1)
+hskin = ((hrgb[..., 0] > hrgb[..., 1] + 12) & (hrgb[..., 1] > hrgb[..., 2]) & (hv > 60) & (hs > .12)).astype(np.float32)
+hskin = np.asarray(Image.fromarray((hskin * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(2))).astype(np.float32) / 255
+name = 'Person_sick_head'
+Image.fromarray(np.dstack([np.clip(sicken(hrgb, hskin), 0, 255), hd[..., 3]]).astype('uint8'), 'RGBA').save(os.path.join(OUT, name + '.png'))
+meta = open(os.path.join(SRC1, 'Person_Head.png.meta'), encoding='utf8').read(); old = re.search(r'guid: (\w+)', meta).group(1)
+open(os.path.join(OUT, name + '.png.meta'), 'w', encoding='utf8', newline='\n').write(meta.replace(old, guid(name + '.png'), 1))
+mat = open(os.path.join(SRC1, 'Head.mat'), encoding='utf8').read().replace(old, guid(name + '.png')).replace('m_Name: Head', 'm_Name: ' + name)
+open(os.path.join(OUT, name + '.mat'), 'w', encoding='utf8', newline='\n').write(mat)
+open(os.path.join(OUT, name + '.mat.meta'), 'w', encoding='utf8', newline='\n').write(f"fileFormatVersion: 2\nguid: {guid(name + '.mat')}\nNativeFormatImporter:\n  externalObjects: {{}}\n  mainObjectFileID: 2100000\n  userData: \n  assetBundleName: \n  assetBundleVariant: \n")
+print('wrote', name, 'skin', round(float(hskin.mean()) * 100, 1), '%')

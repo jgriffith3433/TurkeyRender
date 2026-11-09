@@ -164,7 +164,16 @@ for a hand-made one before stopping. Never kill or restart Unity. `--lock` on `m
 - **`mv snap <image...>`** copies each image to a new timestamped file and prints the path: read THAT path. A file rewritten under the same
   name (`mv frame`, `mv sheet`, a shot's `sheet.jpg`) comes back from the Read tool's cache as the OLD picture. Files go to the scratchpad
   (`CLAUDE_SCRATCHPAD` / `MV_SNAP_DIR`) else `Director/gen/snap/`.
-- **`mv doctor [--fix --all]`** first in any session with unknown state; `mv refs <name>` lists what references a thing.
+- **`mv doctor [--fix --all]`** first in any session with unknown state; `mv refs <name>` lists what references a thing. It reads the
+  process list: **closed** (no `Unity.exe -projectPath C:\Projects\TKShock` without `-batchMode`; Unity Hub's `unity.exe serve` helper and
+  the AssetImportWorkers are not the editor) prints the command to reopen it, `start "" "C:\Program Files\Unity\Hub\Editor\6000.3.7f1\Editor\Unity.exe" -projectPath C:\Projects\TKShock`
+  (2-4 min to import); **open but not answering** (heartbeat old, Windows' Responding flag) is hung or in a modal dialog: never kill it, tell J.
+- **Hand-maintained acts** are registered with `mv generated adopt <video> <file> --tool none --note "why"`: never regenerated, and a hand
+  edit is not a warning. TK Shock's `03-the-pull`, `04b-hang`, `05-inside`, `07-cuts-d` are (their tools, `p34_build.mjs`, `p6_hang.mjs`,
+  `part7.mjs`, also rewrite other acts, so nothing may run them automatically).
+- **The proofs:** `node Director/tools/mv/harden-test.mjs` (46 checks; applies into a sandbox copy, never the real Assets or this WORKLOG)
+  and `harden-test.mjs unity` (a real compile through the queue: a type error refused, the file removed, Assets clean; proven 2026-11-08 22:02);
+  `node Director/tools/mv/make-test.mjs` (11 checks on mv make's Node gates).
 - **The WORKLOG** (`Director/gen/WORKLOG-epic.md`, or `WORKLOG-<video>.md`): write there before touching a shared file (ScoreCompiler,
   MVPunch, MVLook, cards.mjs, sound.mjs, lint) and when you release it. Read it before briefing anyone.
 - Long work (full finals, clip previews, batch bakes) goes in long turns when J is away and never blocks a slice he is waiting for.

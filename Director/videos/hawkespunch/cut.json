@@ -49,8 +49,8 @@
     {"id": "a02", "len": "5.0000s", "seq": "commercial"},   // 120f 163.250s TWO-SHOT, stools 50mm deadpan
     {"id": "a03", "len": "3.5000s", "seq": "clinic"},   // 84f 168.250s MEDIUM 65mm deadpan
     {"id": "a04", "len": "4.0000s", "seq": "commercial"},   // 96f 171.750s TWO-SHOT, stools 50mm deadpan
-    {"id": "a05", "len": "10.0000s", "seq": "commercial"},   // 240f 175.750s FULL CARD 0mm deadpan
-    {"id": "a06", "len": "2.0000s", "seq": "commercial"},   // 48f 185.750s CARD 0mm deadpan
+    {"id": "a05", "len": "10.0000s", "seq": "commercial"},   // 240f 175.750s FULL CARD 50mm deadpan
+    {"id": "a06", "len": "2.0000s", "seq": "commercial"},   // 48f 185.750s CARD 50mm deadpan
     {"id": "b01", "len": "3.0000s", "seq": "clinic"},   // 72f 187.750s WIDE 24mm deadpan
     {"id": "b02", "len": "3.0000s", "seq": "clinic"},   // 72f 190.750s MCU 85mm deadpan
     {"id": "b03", "len": "2.5000s", "seq": "space_epic"},   // 60f 193.750s EXTREME WIDE 400mm epic

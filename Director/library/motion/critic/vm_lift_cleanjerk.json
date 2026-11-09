@@ -1,0 +1,243 @@
+{
+ "name": "vm_lift_cleanjerk",
+ "fps": 30,
+ "frames": 126,
+ "seconds": 4.17,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.12,
+  "straightFrac": 0.06,
+  "moves": 17,
+  "flatness": 0.43,
+  "abruptFrac": 0.18,
+  "deadFrac": 0,
+  "holds": 2,
+  "holdMedianS": 0.3,
+  "fastRunMedianS": 0.13,
+  "dynRange": 4.75,
+  "handPeak": 3.58,
+  "bigMoves": 12,
+  "anticipFrac": 0.17,
+  "overshootFrac": 0.08,
+  "coherence": 0.65,
+  "lagMedianFrames": 4,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 20.42,
+  "plantedFrac": 0.15,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.05,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.78,
+  "twinnedFrac": 0,
+  "curlMedian": 31.51,
+  "spreadMedian": 23.57,
+  "fannedFrac": 0,
+  "bowMedian": -15.99,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 31.64,
+  "armOmegaP95": 213.48,
+  "legOmegaP95": 203.07,
+  "spineOmegaP50": 10.3,
+  "spineOmegaP95": 36.73,
+  "headOmegaP50": 24.84,
+  "headOmegaP95": 66.82,
+  "armAccP95": 1754.97,
+  "spineAccP95": 437.03,
+  "handSpeedP50": 0.37,
+  "handSpeedP95": 2.13,
+  "spineToArm": 0.33,
+  "energyCV": 0.86,
+  "moveRate": 1.92,
+  "refDistance": 0.67,
+  "refWorst": [
+   {
+    "k": "energyCV",
+    "z": 2.180381516706685
+   },
+   {
+    "k": "moveRate",
+    "z": 0.5984224620471528
+   },
+   {
+    "k": "spineOmegaP50",
+    "z": -0.4816642795499823
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 7.9,
+   "note": "median bend 0.12 over 16 moves, 6% straight lines"
+  },
+  "ease": {
+   "score": 9.8,
+   "note": "speed shape 0.43 (bell 0.6, constant 1.0), 18% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "2 holds (median 0.3 s), 0% of frames dead still, fast parts median 0.13 s"
+  },
+  "anticipation": {
+   "score": 2.7,
+   "note": "12 big moves: 2 with anticipation, 1 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 6.2,
+   "note": "parts' speed profiles agree 0.65 (1 = everything moves as one); typical lag between parts 4 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 8.4,
+   "note": "0 centre-of-mass jerks, planted feet slide 20 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 4.17 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "5% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "8 key poses, readability 0.78 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 32 deg, spread 24 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 10,
+   "note": "0.67 robust z from 174 mocap clips; furthest: energyCV high (2.18), moveRate high (0.6), spineOmegaP50 low (0.48)"
+  }
+ },
+ "events": [
+  {
+   "t": 2,
+   "f": 60,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 62 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 3.17,
+   "f": 95,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 77 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 3.17,
+   "f": 95,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 78 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.67,
+   "f": 20,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.73,
+   "what": "Head travels 56 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.77,
+   "f": 23,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.67,
+   "what": "RightHand travels 43 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 3.2,
+   "f": 96,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.63,
+   "what": "Head travels 36 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 3.2,
+   "f": 96,
+   "kind": "no-prep",
+   "part": "LeftFoot",
+   "sev": 0.61,
+   "what": "LeftFoot travels 33 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.56,
+   "what": "RightHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.55,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 2,
+   "f": 60,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 62 cm with no anticipation and no overshoot or settle",
+   "also": []
+  },
+  {
+   "t": 3.17,
+   "f": 95,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 77 cm with no anticipation and no overshoot or settle",
+   "also": [
+    "no-prep"
+   ]
+  },
+  {
+   "t": 0.67,
+   "f": 20,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.73,
+   "what": "Head travels 56 cm with no anticipation and no overshoot or settle",
+   "also": [
+    "no-prep"
+   ]
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.56,
+   "what": "RightHand starts at 100% of its peak speed in one frame",
+   "also": [
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 8.7,
+ "verdict": "reads as human (8.7/10)"
+}

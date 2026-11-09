@@ -47,31 +47,41 @@ def paper_grain(w, h, seed, amt=.05): return 1 - fbm(w, h, 4, 8, seed) * amt
 RED, RED_DARK, CREAM = '#c8161e', '#8c0e14', '#fff4e6'
 
 
+def fit(d, s, name, size, maxw, spacing=0):
+    """The largest font at or under size whose line fits in maxw pixels."""
+    while size > 10:
+        f = font(name, size)
+        if d.textlength(s, font=f) + spacing * (len(s) - 1) <= maxw: return f
+        size -= 4
+    return font(name, size)
+
+
 def can_label():
-    """Wrapped round the can body: u round, v up. A red field, a cream band with the name in a heavy face, a small 'ONE A DAY', a thin stripe of fizz."""
+    """Wrapped round the can body: u round, v up (image top = can top). Reads top to bottom as the product's name, the way a can is read:
+    HAWKES (cream, on the red) over PUNCH (huge, red on a cream band), then ONE A DAY UNTIL IT STOPS. Set twice round the can, each block inside a
+    quarter turn (512 px), so a camera on either side reads the whole name without the edge foreshortening a letter away (sets agent, 2026-11-08:
+    it said PUNCH over HAWKES and the insert at c17 read a partial word)."""
     W, H = 2048, 1024
     im = Image.new('RGB', (W, H), RED); d = ImageDraw.Draw(im)
-    # darker red band at the bottom and a highlight band near the top, painted shading on a cylinder reads as print
     for y in range(H):
         t = y / H
-        shade = 1 - .18 * max(0, t - .72) / .28 + .06 * math.exp(-((t - .2) / .08) ** 2)
-        c = tuple(int(v * shade) for v in (200, 22, 30))
-        d.line([(0, y), (W, y)], fill=c)
-    # cream band
-    d.rectangle([0, H * .36, W, H * .64], fill=CREAM)
-    d.rectangle([0, H * .36 - 10, W, H * .36], fill='#ffd9a8'); d.rectangle([0, H * .64, W, H * .64 + 10], fill='#ffd9a8')
-    f = font('impact.ttf', 230); f2 = font('arialbd.ttf', 56); f3 = font('ariblk.ttf', 80)
-    # the name twice round the can so a shot from any side reads it
+        shade = 1 - .16 * max(0, t - .78) / .22 + .07 * math.exp(-((t - .12) / .07) ** 2)
+        d.line([(0, y), (W, y)], fill=tuple(int(v * shade) for v in (200, 22, 30)))
+    band0, band1 = H * .40, H * .70
+    d.rectangle([0, band0, W, band1], fill=CREAM)
+    d.rectangle([0, band0 - 12, W, band0], fill='#ffd9a8'); d.rectangle([0, band1, W, band1 + 12], fill='#ffd9a8')
     for cx in (W * .25, W * .75):
-        text_center(d, (cx, H * .5), 'HAWKES', f, RED, spacing=2)
-        text_center(d, (cx, H * .29), 'PUNCH', f3, CREAM, spacing=10)
-        text_center(d, (cx, H * .72), 'ONE A DAY UNTIL IT STOPS', f2, CREAM, spacing=2)
-        text_center(d, (cx, H * .86), 'citrus  \u2022  330 ml  \u2022  do not shake', font('arialbd.ttf', 44), '#ffb9b9', spacing=1)
-    # fizz: bubbles climbing the red
+        f1 = fit(d, 'HAWKES', 'ariblk.ttf', 150, 500, 14); text_center(d, (cx, H * .29), 'HAWKES', f1, CREAM, spacing=14)
+        f2 = fit(d, 'PUNCH', 'impact.ttf', 300, 520, 6); text_center(d, (cx, (band0 + band1) / 2 + 4), 'PUNCH', f2, RED, spacing=6)
+        f3 = fit(d, 'ONE A DAY UNTIL IT STOPS', 'arialbd.ttf', 56, 520, 2); text_center(d, (cx, H * .79), 'ONE A DAY UNTIL IT STOPS', f3, CREAM, spacing=2)
+        text_center(d, (cx, H * .90), 'citrus  •  330 ml', font('arialbd.ttf', 40), '#ffb9b9', spacing=1)
+        # a thin cream rule under HAWKES, like a printed can
+        d.rectangle([cx - 230, H * .355, cx + 230, H * .362], fill=CREAM)
     r = np.random.default_rng(3)
-    for _ in range(260):
-        x, y = r.random() * W, r.random() * H; rad = r.random() * 9 + 2
-        if H * .34 < y < H * .66: continue
+    for _ in range(220):
+        x, y = r.random() * W, r.random() * H; rad = r.random() * 8 + 2
+        if H * .2 < y < H * .95 and min(abs(x - W * .25), abs(x - W * .75)) < 300: continue
+        if band0 - 14 < y < band1 + 14: continue
         d.ellipse([x - rad, y - rad, x + rad, y + rad], outline=(255, 150, 150), width=2)
     a = np.asarray(im).astype(np.float32) / 255
     a *= (1 - fbm(W, H, 3, 6, 5) * .04)[..., None]
@@ -79,25 +89,32 @@ def can_label():
 
 
 def poster():
-    """The clinic poster, 3:4. Red field, a tall can drawn in paint, the name and 'Ask your doctor.' Rounded white border like a pharmacy print."""
+    """The clinic poster, 3:4 (the 0.6 x 0.8 exam-room print and the 0.9 x 1.2 reception one share it). Read from across a waiting room: the name
+    fills the top half in two lines, a can drawn with its own label, 'Ask your doctor.' as big as the can is wide, and the fine print last.
+    No logo, no company line: the product's name and the script's tagline only (sets agent, 2026-11-08)."""
     W, H = 1536, 2048
     im = Image.new('RGB', (W, H), RED); d = ImageDraw.Draw(im)
-    d.rectangle([40, 40, W - 40, H - 40], outline=CREAM, width=14)
-    f = font('impact.ttf', 300); f2 = font('ariblk.ttf', 120); f3 = font('arialbd.ttf', 64)
-    text_center(d, (W / 2, 300), 'HAWKES', f, CREAM, spacing=8)
-    text_center(d, (W / 2, 560), 'PUNCH', f, CREAM, spacing=8)
-    # a can: body, rim, label band
-    cx, top, bot, rw = W / 2, 800, 1560, 190
-    d.rounded_rectangle([cx - rw, top, cx + rw, bot], radius=40, fill='#a81218', outline=CREAM, width=8)
-    d.rectangle([cx - rw, top + 230, cx + rw, top + 420], fill=CREAM)
-    text_center(d, (cx, top + 325), 'HAWKES', font('impact.ttf', 150), RED, spacing=4)
+    # a soft cream starburst behind the can
+    cx, cy = W / 2, 1180
+    for i in range(36):
+        a0 = i / 36 * 2 * math.pi; a1 = (i + .5) / 36 * 2 * math.pi
+        d.polygon([(cx, cy), (cx + math.cos(a0) * 900, cy + math.sin(a0) * 900), (cx + math.cos(a1) * 900, cy + math.sin(a1) * 900)], fill='#d42a30')
+    d.rectangle([0, 0, W, 760], fill=RED)
+    d.rectangle([36, 36, W - 36, H - 36], outline=CREAM, width=16)
+    text_center(d, (W / 2, 250), 'HAWKES', fit(d, 'HAWKES', 'impact.ttf', 400, W - 220, 10), CREAM, spacing=10)
+    text_center(d, (W / 2, 590), 'PUNCH', fit(d, 'PUNCH', 'impact.ttf', 420, W - 300, 10), CREAM, spacing=10)
+    # the can, drawn like its label: cream band with PUNCH, HAWKES above it
+    top, bot, rw = 880, 1500, 190
+    d.rounded_rectangle([cx - rw, top, cx + rw, bot], radius=34, fill='#c8161e', outline=CREAM, width=8)
+    d.rectangle([cx + rw - 62, top + 40, cx + rw - 34, bot - 40], fill='#e04048')   # a highlight down the can, under the band
+    d.rectangle([cx - rw + 8, top + 250, cx + rw - 8, top + 430], fill=CREAM)
+    text_center(d, (cx, top + 175), 'HAWKES', fit(d, 'HAWKES', 'ariblk.ttf', 80, rw * 2 - 50, 4), CREAM, spacing=4)
+    text_center(d, (cx, top + 342), 'PUNCH', fit(d, 'PUNCH', 'impact.ttf', 170, rw * 2 - 40, 3), RED, spacing=3)
     d.ellipse([cx - rw, top - 30, cx + rw, top + 30], fill='#d8d8dc', outline='#9a9aa0', width=6)
     d.ellipse([cx - rw * .55, top - 16, cx + rw * .55, top + 16], fill='#bfbfc4')
     d.rectangle([cx - 30, top - 14, cx + 30, top + 2], fill='#eeeef2')
-    # a fist, in silhouette, behind the can: the punch
-    d.ellipse([cx - 520, 980, cx - 120, 1380], fill='#9c1016'); d.rounded_rectangle([cx - 560, 1180, cx - 200, 1560], radius=80, fill='#9c1016')
-    text_center(d, (W / 2, 1720), 'Ask your doctor.', f2, CREAM, spacing=2)
-    text_center(d, (W / 2, 1880), 'Side effects may include side effects.', f3, '#ffb0b0', spacing=1)
+    text_center(d, (W / 2, 1690), 'Ask your doctor.', fit(d, 'Ask your doctor.', 'ariblk.ttf', 150, W - 200, 2), CREAM, spacing=2)
+    text_center(d, (W / 2, 1880), 'Side effects may include side effects.', fit(d, 'Side effects may include side effects.', 'arialbd.ttf', 66, W - 220, 1), '#ffc4c4', spacing=1)
     a = np.asarray(im).astype(np.float32) / 255 * paper_grain(W, H, 7, .06)[..., None]
     save('poster', a)
 
@@ -159,21 +176,19 @@ def paper_roll():
 
 
 def rx_pad():
-    """The top sheet of a prescription pad, 2:3: the clinic's header, Rx, lines, and the prescription written in a hand."""
+    """The top sheet of her pad, 2:3: the clinic's header, then her notes on him in a hand, read in c10's insert (W10): the last line stops
+    mid-word where the pen stops on 'In space.' Her name matches the coat's badge (HALLORAN)."""
     W, H = 1024, 1536
     im = Image.new('RGB', (W, H), '#fbfaf4'); d = ImageDraw.Draw(im)
     d.rectangle([0, 0, W, 150], fill='#e3efe8')
     d.text((50, 45), 'CLINIC 4', font=font('arialbd.ttf', 64), fill='#2d5c47')
-    d.text((50, 108), 'Dr. Person, M.D.   Exam 2', font=font('arial.ttf', 34), fill='#2d5c47')
-    d.text((60, 220), 'Rx', font=font('impact.ttf', 220), fill='#2d5c47')
-    for y in range(560, 1400, 110): d.line([(60, y), (W - 60, y)], fill='#c9d8cf', width=3)
-    f = font('segoeprb.ttf', 76) if os.path.exists(FONTS + 'segoeprb.ttf') else font('ariblk.ttf', 60)
-    d.text((80, 470), 'Hawkes Punch', font=f, fill='#1c3a8a')
-    d.text((80, 590), '1 can, daily', font=f, fill='#1c3a8a')
-    d.text((80, 700), 'until symptoms', font=f, fill='#1c3a8a')
-    d.text((80, 810), 'go away.', font=f, fill='#1c3a8a')
-    d.text((80, 1000), 'Refills: ∞', font=f, fill='#1c3a8a')
-    d.line([(560, 1300), (960, 1240)], fill='#1c3a8a', width=6); d.line([(600, 1330), (980, 1290)], fill='#1c3a8a', width=4)
+    d.text((50, 108), 'Dr. Halloran   Exam 2', font=font('arial.ttf', 34), fill='#2d5c47')
+    d.text((W - 230, 30), 'Rx', font=font('impact.ttf', 110), fill='#2d5c47')
+    for y in range(330, 1450, 120): d.line([(50, y), (W - 50, y)], fill='#c9d8cf', width=3)
+    f = font('segoeprb.ttf', 74) if os.path.exists(FONTS + 'segoeprb.ttf') else font('ariblk.ttf', 60)
+    ink = '#1c3a8a'
+    for i, line in enumerate(('Hears music. Always.', 'shower, sleep', 'silence = more music', 'in love w/ a ghost', 'in sp')):
+        d.text((70, 240 + i * 120), line, font=f, fill=ink)
     a = np.asarray(im).astype(np.float32) / 255 * paper_grain(W, H, 3, .04)[..., None]
     save('rx_pad', a)
 
@@ -222,6 +237,69 @@ def eye_chart():
         s = int(300 / (1 + i * .55)); text_center(d, (W / 2, y + s / 2), r, font('arialbd.ttf', s), '#111', spacing=s * .12); y += s + 40
     d.rectangle([10, 10, W - 10, H - 10], outline='#222', width=6)
     savepil('eye_chart', im)
+
+
+def monitor_screen():
+    """The reception monitor's screen, 16:10: a plain front-desk schedule, the walk-in highlighted. Lit (the material glows)."""
+    W, H = 1024, 640
+    im = Image.new('RGB', (W, H), '#eaf2f6'); d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, W, 70], fill='#2d5c47'); d.text((24, 16), 'CLINIC 4  Front desk', font=font('arialbd.ttf', 34), fill='#f4fbf6')
+    d.text((W - 190, 18), '10:28', font=font('arialbd.ttf', 34), fill='#f4fbf6')
+    rows = (('09:00', 'Exam 1', 'Follow-up'), ('09:30', 'Exam 2', 'Bloods'), ('10:00', 'Exam 1', 'Check-up'), ('10:30', 'Exam 2', 'Walk-in'), ('11:00', 'Exam 1', 'Check-up'), ('11:30', 'Exam 2', 'Follow-up'))
+    for i, (t, r, w) in enumerate(rows):
+        y = 100 + i * 84
+        if w == 'Walk-in': d.rectangle([12, y - 8, W - 12, y + 66], fill='#ffe3a6')
+        d.text((30, y), t, font=font('arialbd.ttf', 40), fill='#1e3b2f'); d.text((210, y), r, font=font('arial.ttf', 40), fill='#1e3b2f'); d.text((470, y), w, font=font('arial.ttf', 40), fill='#1e3b2f')
+        d.line([(12, y + 72), (W - 12, y + 72)], fill='#c3d3cb', width=2)
+    savepil('monitor_screen', im)
+
+
+def waiting_sign():
+    W, H = 2048, 512
+    im = Image.new('RGB', (W, H), '#4f9a74'); d = ImageDraw.Draw(im)
+    text_center(d, (W / 2, H * .38), 'PLEASE TAKE A SEAT', fit(d, 'PLEASE TAKE A SEAT', 'arialbd.ttf', 230, W - 160, 10), '#f8fbf6', spacing=10)
+    text_center(d, (W / 2, H * .78), 'You will be called', font('arial.ttf', 90), '#d8efe3', spacing=3)
+    savepil('waiting_sign', im)
+
+
+def magazines():
+    """Three magazine covers side by side (u thirds), 3:4 each, for the reception rack and the side table."""
+    W, H = 1536, 680
+    im = Image.new('RGB', (W, H), '#ffffff'); d = ImageDraw.Draw(im)
+    covers = (('HEALTH', '#2f7db8', '#ffffff', 'Sleep better', 'in 10 steps'), ('GARDEN', '#5f9a3e', '#fff6d8', 'Spring lawns', 'the easy way'), ('BOXING', '#1d1d22', '#e8c24a', 'Champions', 'who went quiet'))
+    for i, (t, bg, fg, a1, a2) in enumerate(covers):
+        x0 = i * 512; d.rectangle([x0, 0, x0 + 511, H], fill=bg)
+        text_center(d, (x0 + 256, 80), t, fit(d, t, 'impact.ttf', 140, 470, 4), fg, spacing=4)
+        d.ellipse([x0 + 120, 210, x0 + 400, 490], fill=fg if i != 2 else '#c0141c')
+        d.text((x0 + 30, 540), a1, font=font('arialbd.ttf', 44), fill=fg); d.text((x0 + 30, 600), a2, font=font('arial.ttf', 40), fill=fg)
+    savepil('magazines', im)
+
+
+def plaque():
+    """The brass plate under her gloves (c15's insert), 3:1: engraved dark text on brass."""
+    W, H = 1536, 512
+    X, Y = grid(W, H, 0, 1, 0, 1)
+    img = lerp(hex3('#d9b45a'), hex3('#a8822e'), Y[..., None]) * (1 - fbm(W, H, 4, 3, 91, ax=6)[..., None] * .12)
+    im = Image.fromarray((np.clip(img, 0, 1) * 255).astype(np.uint8)); d = ImageDraw.Draw(im)
+    d.rectangle([14, 14, W - 14, H - 14], outline='#6e5418', width=8)
+    text_center(d, (W / 2, H * .30), 'GOLDEN GLOVES', fit(d, 'GOLDEN GLOVES', 'georgiab.ttf', 170, W - 140, 6), '#2a1f08', spacing=6)
+    text_center(d, (W / 2, H * .58), 'CHAMPION', fit(d, 'CHAMPION', 'georgiab.ttf', 150, W - 300, 8), '#2a1f08', spacing=8)
+    text_center(d, (W / 2, H * .82), 'Heavyweight', font('georgiai.ttf', 80), '#3a2c0c', spacing=2)
+    savepil('plaque', im)
+
+
+def diploma():
+    """A framed degree for the exam-room wall, beside the gloves (S3): so the gloves read as 'and also'. 4:3, cream paper, a seal."""
+    W, H = 1600, 1200
+    im = Image.new('RGB', (W, H), '#f6f0de'); d = ImageDraw.Draw(im)
+    d.rectangle([40, 40, W - 40, H - 40], outline='#9a7d3c', width=10); d.rectangle([64, 64, W - 64, H - 64], outline='#9a7d3c', width=3)
+    text_center(d, (W / 2, 220), 'School of Medicine', font('georgiab.ttf', 96), '#2a2418', spacing=2)
+    text_center(d, (W / 2, 400), 'Doctor of Medicine', font('georgiai.ttf', 110), '#2a2418', spacing=2)
+    text_center(d, (W / 2, 560), 'M. HALLORAN', font('georgiab.ttf', 120), '#2a2418', spacing=8)
+    for y in (720, 780): d.line([(260, y), (W - 260, y)], fill='#b9ad92', width=3)
+    d.ellipse([W / 2 - 110, 860, W / 2 + 110, 1080], fill='#b0262c'); d.ellipse([W / 2 - 80, 890, W / 2 + 80, 1050], outline='#e7c070', width=6)
+    a = np.asarray(im).astype(np.float32) / 255 * paper_grain(W, H, 12, .05)[..., None]
+    save('diploma', a)
 
 
 # ---------------------------------------------------------------------------------------------------- space
@@ -369,32 +447,37 @@ def saturn_ring():
 
 # ---------------------------------------------------------------------------------------------------- commercial
 def backdrop():
-    """The pastel backdrop: wide soft bands of pink, yellow, blue and mint, a faint sparkle, 2000s daytime TV. u across."""
+    """The daytime-TV backdrop (S7): a clean pink-to-lilac sweep with big soft discs of pastel light and thin white arcs, the 2000s talk-show look.
+    No noise and no stripes (the old bands read as a smear at 1080). u across the curved panel."""
     W, H = 2048, 1024
-    X, Y = grid(W, H, 0, 1, 0, 1)
-    cols = [hex3('#ffc6d6'), hex3('#fff0b8'), hex3('#c2def7'), hex3('#c8f0dc'), hex3('#dfd0f4')]
-    t = (X * 2.6 + Y * .6 + (fbm(W, H, 3, 2, 71) - .5) * .25) % 1 * len(cols)
-    i = np.floor(t).astype(int) % len(cols); f = (t - np.floor(t))[..., None]
-    a = np.array(cols)[i]; b = np.array(cols)[(i + 1) % len(cols)]
-    img = lerp(a, b, np.clip((f - .6) / .4, 0, 1))
-    img = img * (1 - (Y - .5) ** 2 * .25)[..., None]
-    sp = (fbm(W, H, 1, 220, 73) > .83)[..., None]
-    img = np.where(sp, np.minimum(img * 1.15, 1), img)
+    X, Y = grid(W, H, 0, 2, 0, 1)
+    img = lerp(hex3('#f7b9cf'), hex3('#c9b4ee'), np.clip(X / 2, 0, 1)[..., None])
+    img = img * (1 - (Y - .45) ** 2 * .35)[..., None]
+    r = np.random.default_rng(81)
+    for _ in range(14):
+        cx, cy, rad = r.random() * 2, r.random(), .08 + r.random() * .16
+        c = hex3(['#fff0b8', '#c2def7', '#c8f0dc', '#ffd9ec', '#ffffff'][int(r.random() * 5)])
+        m = np.exp(-((np.hypot(X - cx, (Y - cy) * .5) / rad) ** 4))[..., None]
+        img = lerp(img, c, m * .55)
+    for k in range(3):
+        rr = .55 + k * .12; arc = np.exp(-((np.hypot(X - 1, (Y - 1.25) * .5) - rr) / .004) ** 2)[..., None]
+        img = lerp(img, hex3('#ffffff'), arc * .8)
     save('backdrop', img)
 
 
 def tv_floor():
-    """A glossy pale floor with a soft radial pool of light painted in and a thin pink ring. Tiled once over the whole stage."""
+    """The studio floor, glossy and a stop under the faces (S7: the old pale floor blew out under the key): a deep lilac-grey with a soft pool of
+    light under the stools and the thin pink ring. Tiled once over the whole stage."""
     W = H = 1024; X, Y = grid(W, H, -1, 1, -1, 1)
     r = np.hypot(X, Y)
-    img = lerp(hex3('#f6edf2'), hex3('#e6d7e8'), np.clip(r, 0, 1)[..., None])
-    img = img * (1 + np.exp(-(r / .45) ** 2) * .08)[..., None]
+    img = lerp(hex3('#8f7f97'), hex3('#4d4257'), np.clip(r, 0, 1)[..., None])
+    img = img * (1 + np.exp(-(r / .4) ** 2) * .18)[..., None]
     ring = np.exp(-((r - .78) / .012) ** 2)[..., None]
     img = lerp(img, hex3('#ff8fb4'), ring * .9)
     save('tv_floor', img)
 
 
-ALL = [can_label, poster, tv_sign, clinic_floor, ceiling_tile, paper_roll, rx_pad, clipboard_sheet, reception_sign, exam_sign, eye_chart, stars, earth, moon, mars, jupiter, saturn, saturn_ring, backdrop, tv_floor]
+ALL = [can_label, poster, monitor_screen, waiting_sign, magazines, plaque, diploma, tv_sign, clinic_floor, ceiling_tile, paper_roll, rx_pad, clipboard_sheet, reception_sign, exam_sign, eye_chart, stars, earth, moon, mars, jupiter, saturn, saturn_ring, backdrop, tv_floor]
 only = sys.argv[1:]
 for f in ALL:
     if not only or f.__name__ in only: f()

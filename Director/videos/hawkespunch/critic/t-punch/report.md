@@ -1,0 +1,26 @@
+# Motion critic: hawkespunch 64.25-69.25 s
+
+120 frames at 24 fps (4.96 s). **Total 3.3/10: wrong to an animator's eye: arcs and ease (3.3/10).**
+
+| principle | score | what the numbers say |
+|---|---|---|
+| 1 Arcs | 0 | median bend 0.03 over 5 moves, 100% straight lines |
+| 2 Slow in and out | 0 | speed shape 0.92 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame |
+| 3 Timing | 10 | 3 holds (median 1.83 s), 0% of frames dead still, fast parts median 0.04 s |
+| 4 Anticipation and follow-through | 0 | 5 big moves: 0 with anticipation, 0 with overshoot and settle |
+| 5 Overlap and drag | 1.4 | parts' speed profiles agree 0.72 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together |
+| 6 Weight | 5 | 8 centre-of-mass jerks, planted feet slide 0 cm/s |
+| 7 Snaps and pops | 0 | 240 body snaps or pops, 13 finger snaps in 4.96 s |
+| 8 Stiffness | n/a | the body hardly moves: stiffness not judged |
+| 9 Silhouette | 9 | 3 key poses, readability 0.67 (best of front, side, three-quarter), 67% twinned |
+| 10 Hands and face | 7 | fingers flat and splayed 43% of the time |
+| 11 Contact | 10 | hands clear of the body (no partner dump: hit and catch targets not judged) (partial) |
+| 12 Distance from human motion | 1.2 | 2.96 robust z from 174 mocap clips; furthest: armAccP95 low (5), spineAccP95 low (5), spineToArm high (5) |
+
+## Worst moments
+
+- **1:07.13** (67.13 s, f69) person.Hips: Hips jumps 36 deg in one frame (also snap, pop)
+- **1:06.79** (66.79 s, f61) person.Neck: Neck jumps 21 deg in one frame (also snap, com-spike, pop)
+- **1:07.50** (67.5 s, f78) person.LeftHand: LeftHand travels 4136 cm in a straight line (bend 0.03) (also straight, com-spike, pop)
+- **1:07.75** (67.75 s, f84) person.body: the body's centre of mass jerks at 222 m/s^2 (also com-spike, pop)
+- **1:08.00** (68 s, f90) person.LeftHand: LeftHand moves 111 cm in one frame

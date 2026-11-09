@@ -1,0 +1,1842 @@
+{
+ "beat": "s14_setdown",
+ "when": "2026-11-08T22:49:51.428Z",
+ "zerog": true,
+ "rows": [
+  {
+   "name": "cmu_15_04_26p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_15_04_26p5.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 9.7,
+   "verdict": "reads as human (9.7/10)",
+   "low": [
+    "ease 8.3",
+    "overlap 8.7",
+    "arcs 10"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.3,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 8.7,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand starts at 100% of its peak speed in one frame"
+   ],
+   "fit": 0.527,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 0.83 s, lowering 15 cm",
+   "score": 8.65,
+   "source": "cmu/15_04 26.5-28.03 s wash windows, paint; hand signals; dance - Egyptian walk,"
+  },
+  {
+   "name": "cmu_137_10_8p4",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_10_8p4.npz",
+   "via": "twin",
+   "seconds": 3.8,
+   "total": 8.4,
+   "verdict": "passable, weak on anticipation and ease (8.4/10)",
+   "low": [
+    "anticipation 5",
+    "ease 5.3",
+    "overlap 6"
+   ],
+   "principles": {
+    "arcs": 8.6,
+    "ease": 5.3,
+    "timing": 10,
+    "anticipation": 5,
+    "overlap": 6,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 8.9
+   },
+   "worst": [
+    "0.03s RightHand travels 80 cm with no anticipation and no overshoot or settle",
+    "3.1s RightHand starts at 61% of its peak speed in one frame",
+    "3.4s Head stops dead from 83% of its peak"
+   ],
+   "fit": 0.721,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 2.10 s, lowering 42 cm",
+   "score": 6.96,
+   "source": "cmu/137_10 8.4-12.2 s Dinosaur Pick Up"
+  },
+  {
+   "name": "Idle1CalmDown",
+   "src": "gen/mocap/index/protofactor/Idle1CalmDown.npz",
+   "via": "twin",
+   "seconds": 4.33,
+   "total": 7.7,
+   "verdict": "passable, weak on anticipation and ease (7.7/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.7",
+    "arcs 6.7"
+   ],
+   "principles": {
+    "arcs": 6.7,
+    "ease": 2.7,
+    "timing": 8.5,
+    "anticipation": 0,
+    "overlap": 6.8,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 8.9,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 9.9
+   },
+   "worst": [
+    "0.07s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "2.47s LeftHand travels 65 cm with no anticipation and no overshoot or settle",
+    "3.23s LeftHand moves at one speed for 0.27 s (flat 0.89): interpolation, not a move"
+   ],
+   "fit": 0.375,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 2.23 s, lowering 13 cm",
+   "score": 6.95,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_137_22_2p5-7p2",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_22_2p5-7p2.npz",
+   "via": "twin",
+   "seconds": 4.7,
+   "total": 7.9,
+   "verdict": "passable, weak on anticipation and ease (7.9/10)",
+   "low": [
+    "anticipation 2",
+    "ease 4.8",
+    "arcs 6.6"
+   ],
+   "principles": {
+    "arcs": 6.6,
+    "ease": 4.8,
+    "timing": 10,
+    "anticipation": 2,
+    "overlap": 7.6,
+    "weight": 7.5,
+    "snaps": 7.3,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.03s LeftLowerLeg jumps 14 deg in one frame",
+    "0.1s in zero-g the body changes speed by 0.92 m/s with nothing to push on",
+    "4.3s in zero-g the body changes speed by 0.45 m/s with nothing to push on"
+   ],
+   "fit": 0.482,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 1.00 s, lowering 24 cm",
+   "score": 6.94,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_137_36_9p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_36_9p5.npz",
+   "via": "twin",
+   "seconds": 3.8,
+   "total": 8.2,
+   "verdict": "passable, weak on ease and anticipation (8.2/10)",
+   "low": [
+    "ease 2.7",
+    "anticipation 3",
+    "overlap 4.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.7,
+    "timing": 10,
+    "anticipation": 3,
+    "overlap": 4.2,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand travels 90 cm with no anticipation and no overshoot or settle",
+    "3.8s RightHand stops dead from 100% of its peak",
+    "2.9s LeftHand starts at 100% of its peak speed in one frame"
+   ],
+   "fit": 0.697,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 1.50 s, lowering 31 cm",
+   "score": 6.81,
+   "source": "cmu/137_36 9.5-13.3 s Sexy Lady Pick Up"
+  },
+  {
+   "name": "cmu_62_20_1p7",
+   "src": "gen/motion/beats/s14_setdown/cmu_62_20_1p7.npz",
+   "via": "twin",
+   "seconds": 1,
+   "total": 7.5,
+   "verdict": "passable, weak on anticipation and snaps (7.5/10)",
+   "low": [
+    "anticipation 0",
+    "snaps 0",
+    "ease 5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 8.5,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.77 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.52 m/s with nothing to push on",
+    "0.97s LeftHand jumps 10 deg in one frame"
+   ],
+   "fit": 0.348,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 0.80 s, lowering 21 cm",
+   "score": 6.8,
+   "source": "cmu/62_20 1.7-2.7 s closing, moving and opening a box"
+  },
+  {
+   "name": "cmu_62_18_2p1",
+   "src": "gen/motion/beats/s14_setdown/cmu_62_18_2p1.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 7.4,
+   "verdict": "passable, weak on anticipation and snaps (7.4/10)",
+   "low": [
+    "anticipation 0",
+    "snaps 0",
+    "ease 5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 7,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.73s LeftHand jumps 13 deg in one frame",
+    "0.07s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "1.03s RightHand jumps 10 deg in one frame"
+   ],
+   "fit": 0.312,
+   "action": true,
+   "actionNote": "both hands out in front, apart and slow for 1.10 s, lowering 18 cm",
+   "score": 6.78,
+   "source": "cmu/62_18 2.1-3.17 s closing a box"
+  },
+  {
+   "name": "cmu_15_05_27p8",
+   "src": "gen/motion/beats/s14_setdown/cmu_15_05_27p8.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 9.6,
+   "verdict": "reads as human (9.6/10)",
+   "low": [
+    "ease 7.2",
+    "anticipation 9",
+    "silhouette 9"
+   ],
+   "principles": {
+    "arcs": 9.5,
+    "ease": 7.2,
+    "timing": 10,
+    "anticipation": 9,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand starts at 97% of its peak speed in one frame",
+    "1.33s LeftHand starts at 61% of its peak speed in one frame"
+   ],
+   "fit": 0.493,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.47 s, lowering 25 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 5.61,
+   "source": "cmu/15_05 27.8-29.33 s wash windows, paint; hand signals; dance - Egyptian walk,"
+  },
+  {
+   "name": "cmu_15_05_9p2",
+   "src": "gen/motion/beats/s14_setdown/cmu_15_05_9p2.npz",
+   "via": "twin",
+   "seconds": 1,
+   "total": 9.3,
+   "verdict": "reads as human (9.3/10)",
+   "low": [
+    "ease 3.3",
+    "silhouette 9.3",
+    "arcs 10"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.3,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.3,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand starts at 94% of its peak speed in one frame",
+    "1s LeftHand stops dead from 90% of its peak"
+   ],
+   "fit": 0.503,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.57 s, lowering 18 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 5.29,
+   "source": "cmu/15_05 9.2-10.2 s wash windows, paint; hand signals; dance - Egyptian walk, t"
+  },
+  {
+   "name": "cmu_15_05_37p2",
+   "src": "gen/motion/beats/s14_setdown/cmu_15_05_37p2.npz",
+   "via": "twin",
+   "seconds": 1,
+   "total": 9.2,
+   "verdict": "reads as human (9.2/10)",
+   "low": [
+    "anticipation 3",
+    "ease 8",
+    "silhouette 9.3"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8,
+    "timing": 10,
+    "anticipation": 3,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.3,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.2s LeftHand travels 81 cm with no anticipation and no overshoot or settle",
+    "1s RightHand stops dead from 100% of its peak"
+   ],
+   "fit": 0.66,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.07 s, lowering 3 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.88,
+   "source": "cmu/15_05 37.2-38.2 s wash windows, paint; hand signals; dance - Egyptian walk, "
+  },
+  {
+   "name": "cmu_86_13_26p4",
+   "src": "gen/motion/beats/s14_setdown/cmu_86_13_26p4.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 8.3,
+   "verdict": "passable, weak on anticipation and ease (8.3/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.3",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.3,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 9.4,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.34 m/s with nothing to push on",
+    "1.07s Head stops dead from 100% of its peak",
+    "0.53s LeftHand stops dead from 76% of its peak"
+   ],
+   "fit": 0.249,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.10 s, lowering 10 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.8,
+   "source": "cmu/86_13 26.4-27.47 s walking around, walk up ladder, step down ladder"
+  },
+  {
+   "name": "cmu_137_02_5p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_02_5p5.npz",
+   "via": "twin",
+   "seconds": 3.8,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "anticipation 2.7",
+    "weight 7.5",
+    "arcs 8.4"
+   ],
+   "principles": {
+    "arcs": 8.4,
+    "ease": 9.9,
+    "timing": 10,
+    "anticipation": 2.7,
+    "overlap": 9.7,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.8,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.5s in zero-g the body changes speed by 0.37 m/s with nothing to push on",
+    "3.4s in zero-g the body changes speed by 0.31 m/s with nothing to push on",
+    "2.8s in zero-g the body changes speed by 0.26 m/s with nothing to push on"
+   ],
+   "fit": 0.561,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 2.33 s, lowering 7 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.78,
+   "source": "cmu/137_02 5.5-9.3 s Cat Pick Up"
+  },
+  {
+   "name": "cmu_137_02_6p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_02_6p5.npz",
+   "via": "twin",
+   "seconds": 3,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "anticipation 2.7",
+    "weight 7.5",
+    "ease 8.5"
+   ],
+   "principles": {
+    "arcs": 9.3,
+    "ease": 8.5,
+    "timing": 10,
+    "anticipation": 2.7,
+    "overlap": 9.7,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.9,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.55 m/s with nothing to push on",
+    "0.5s in zero-g the body changes speed by 0.37 m/s with nothing to push on",
+    "2.4s in zero-g the body changes speed by 0.31 m/s with nothing to push on"
+   ],
+   "fit": 0.61,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 2.53 s, lowering 8 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.68,
+   "source": "cmu/137_02 6.5-9.53 s Cat Pick Up"
+  },
+  {
+   "name": "protofactor_Idle1CalmDown_0p3",
+   "src": "gen/motion/beats/s14_setdown/protofactor_Idle1CalmDown_0p3.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "anticipation 0",
+    "ease 4.5",
+    "overlap 8.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 8.5,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand starts at 100% of its peak speed in one frame",
+    "0.73s RightHand starts at 64% of its peak speed in one frame",
+    "1.03s RightHand stops dead from 63% of its peak"
+   ],
+   "fit": 0.411,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.03 s, lowering 11 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.68,
+   "source": "protofactor/Idle1CalmDown 0.3-1.37 s Idle1Calm Down (Crowd)"
+  },
+  {
+   "name": "cmu_86_13_14p2",
+   "src": "gen/motion/beats/s14_setdown/cmu_86_13_14p2.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "anticipation 0",
+    "arcs 5.9",
+    "ease 6.7"
+   ],
+   "principles": {
+    "arcs": 5.9,
+    "ease": 6.7,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 9.9,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.37s RightHand travels 34 cm with no anticipation and no overshoot or settle",
+    "0.03s RightHand starts at 100% of its peak speed in one frame"
+   ],
+   "fit": 0.409,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.07 s, lowering 9 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.68,
+   "source": "cmu/86_13 14.2-15.73 s walking around, walk up ladder, step down ladder"
+  },
+  {
+   "name": "cmu_49_15_3",
+   "src": "gen/motion/beats/s14_setdown/cmu_49_15_3.npz",
+   "via": "twin",
+   "seconds": 3.8,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "reference 5.4",
+    "hands 8",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 5.4
+   },
+   "worst": [
+    "0.03s the head hangs 35 deg forward of the chest"
+   ],
+   "fit": 0.534,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.63,
+   "source": "cmu/49_15 3-6.8 s static dance pose - folded in, head lowered, leg bent"
+  },
+  {
+   "name": "mx_goalie_catch_mid",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_goalie_catch_mid.fbx",
+   "via": "twin",
+   "seconds": 1.27,
+   "total": 8.3,
+   "verdict": "passable, weak on snaps and anticipation (8.3/10)",
+   "low": [
+    "snaps 0",
+    "anticipation 4.8",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.5,
+    "timing": 10,
+    "anticipation": 4.8,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.27s RightHand jumps 15 deg in one frame",
+    "0.6s in zero-g the body changes speed by 0.82 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 0.68 m/s with nothing to push on"
+   ],
+   "fit": 0.396,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.27 s, lowering 49 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.51,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_15_04_35p8",
+   "src": "gen/motion/beats/s14_setdown/cmu_15_04_35p8.npz",
+   "via": "twin",
+   "seconds": 1,
+   "total": 9,
+   "verdict": "reads as human (9/10)",
+   "low": [
+    "anticipation 0",
+    "silhouette 9.3",
+    "ease 9.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.4,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 9.8,
+    "silhouette": 9.3,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s LeftHand travels 82 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.768,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.46,
+   "source": "cmu/15_04 35.8-36.8 s wash windows, paint; hand signals; dance - Egyptian walk, "
+  },
+  {
+   "name": "cmu_15_04_16p7",
+   "src": "gen/motion/beats/s14_setdown/cmu_15_04_16p7.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 8.6,
+   "verdict": "reads as human (8.6/10)",
+   "low": [
+    "anticipation 0",
+    "ease 3.7",
+    "silhouette 9.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.7,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand starts at 100% of its peak speed in one frame",
+    "1.5s LeftHand stops dead from 100% of its peak"
+   ],
+   "fit": 0.57,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.40 s, lowering 5 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.46,
+   "source": "cmu/15_04 16.7-18.23 s wash windows, paint; hand signals; dance - Egyptian walk,"
+  },
+  {
+   "name": "protofactor_CalmDown2Hostage_1p4",
+   "src": "gen/motion/beats/s14_setdown/protofactor_CalmDown2Hostage_1p4.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 8.3,
+   "verdict": "passable, weak on ease and anticipation (8.3/10)",
+   "low": [
+    "ease 1.7",
+    "anticipation 4",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 1.7,
+    "timing": 10,
+    "anticipation": 4,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 9.1,
+    "silhouette": 8.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.9s in zero-g the body changes speed by 0.33 m/s with nothing to push on",
+    "0.03s LeftHand starts at 100% of its peak speed in one frame"
+   ],
+   "fit": 0.436,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.10 s, lowering 5 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.43,
+   "source": "protofactor/CalmDown2Hostage 1.4-2.47 s Calm Down2Hostage (Hostage)"
+  },
+  {
+   "name": "cmu_49_15_4",
+   "src": "gen/motion/beats/s14_setdown/cmu_49_15_4.npz",
+   "via": "twin",
+   "seconds": 3.8,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "reference 4.9",
+    "hands 8",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 4.9
+   },
+   "worst": [
+    "0.03s the head hangs 35 deg forward of the chest"
+   ],
+   "fit": 0.538,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.42,
+   "source": "cmu/49_15 4-7.8 s static dance pose - folded in, head lowered, leg bent"
+  },
+  {
+   "name": "cmu_49_15_5p4",
+   "src": "gen/motion/beats/s14_setdown/cmu_49_15_5p4.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "reference 4.9",
+    "hands 8",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 4.9
+   },
+   "worst": [
+    "0.03s the head hangs 35 deg forward of the chest"
+   ],
+   "fit": 0.538,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.42,
+   "source": "cmu/49_15 5.4-7.83 s static dance pose - folded in, head lowered, leg bent"
+  },
+  {
+   "name": "protofactor_CalmDown1Hostage_0",
+   "src": "gen/motion/beats/s14_setdown/protofactor_CalmDown1Hostage_0.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 8.3,
+   "verdict": "passable, weak on anticipation and ease (8.3/10)",
+   "low": [
+    "anticipation 0",
+    "ease 3.2",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.2,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.4s in zero-g the body changes speed by 0.25 m/s with nothing to push on",
+    "0.03s LeftHand starts at 96% of its peak speed in one frame",
+    "1.07s LeftHand stops dead from 76% of its peak"
+   ],
+   "fit": 0.446,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.10 s, lowering 5 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.41,
+   "source": "protofactor/CalmDown1Hostage 0-1.07 s Calm Down1Hostage (Hostage)"
+  },
+  {
+   "name": "cmu_137_40_11p5-16p9",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_40_11p5-16p9.npz",
+   "via": "twin",
+   "seconds": 5.37,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "anticipation 3.9",
+    "ease 5.8",
+    "stiffness 9.1"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.8,
+    "timing": 9.3,
+    "anticipation": 3.9,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 9.1,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 9.1
+   },
+   "worst": [
+    "1.7s LeftHand travels 39 cm with no anticipation and no overshoot or settle",
+    "4.93s RightHand travels 40 cm with no anticipation and no overshoot or settle",
+    "0.03s Head travels 36 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.797,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.31,
+   "source": "twin"
+  },
+  {
+   "name": "mx_putting_down",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_putting_down.fbx",
+   "via": "twin",
+   "seconds": 10.33,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "anticipation 1.5",
+    "ease 6.4",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.4,
+    "timing": 10,
+    "anticipation": 1.5,
+    "overlap": 8.5,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.63s RightHand travels 96 cm with no anticipation and no overshoot or settle",
+    "6.1s RightHand travels 88 cm with no anticipation and no overshoot or settle",
+    "2.3s Head travels 82 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.735,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.23,
+   "source": "twin"
+  },
+  {
+   "name": "mx_lift_heavy",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_lift_heavy.fbx",
+   "via": "twin",
+   "seconds": 11.5,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "anticipation 6.2",
+    "overlap 6.7",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.2,
+    "timing": 7.8,
+    "anticipation": 6.2,
+    "overlap": 6.7,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.7s in zero-g the body changes speed by 0.47 m/s with nothing to push on",
+    "1.2s in zero-g the body changes speed by 0.49 m/s with nothing to push on",
+    "1.5s in zero-g the body changes speed by 0.65 m/s with nothing to push on"
+   ],
+   "fit": 0.754,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 2.70 s, lowering 3 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.19,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_Idle1CalmDown_1p8",
+   "src": "gen/motion/beats/s14_setdown/protofactor_Idle1CalmDown_1p8.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 7.9,
+   "verdict": "passable, weak on anticipation and ease (7.9/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.8",
+    "overlap 5.9"
+   ],
+   "principles": {
+    "arcs": 8.5,
+    "ease": 2.8,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 5.9,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 9.3,
+    "silhouette": 9.3,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.6s RightHand travels 55 cm with no anticipation and no overshoot or settle",
+    "1.07s RightHand stops dead from 87% of its peak"
+   ],
+   "fit": 0.375,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.80 s, lowering 10 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 4.15,
+   "source": "protofactor/Idle1CalmDown 1.8-2.87 s Idle1Calm Down (Crowd)"
+  },
+  {
+   "name": "cmu_137_40_7p3",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_40_7p3.npz",
+   "via": "twin",
+   "seconds": 3.8,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "anticipation 1.8",
+    "ease 3.6",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.6,
+    "timing": 10,
+    "anticipation": 1.8,
+    "overlap": 8.8,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "3.37s RightHand travels 31 cm in a straight line (bend 0.01)",
+    "0.03s RightHand travels 89 cm with no anticipation and no overshoot or settle",
+    "3.8s RightHand stops dead from 99% of its peak"
+   ],
+   "fit": 0.772,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.96,
+   "source": "cmu/137_40 7.3-11.1 s Strong Man Pick Up"
+  },
+  {
+   "name": "gm_hp_setdown_t2",
+   "src": "gen/genmotion/hp/gm_hp_setdown/gm_hp_setdown_t2.bvh",
+   "via": "twin",
+   "seconds": 3.97,
+   "total": 9.4,
+   "verdict": "reads as human (9.4/10)",
+   "low": [
+    "anticipation 6.7",
+    "ease 7.4",
+    "overlap 8.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 7.4,
+    "timing": 10,
+    "anticipation": 6.7,
+    "overlap": 8.8,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.07s Head starts at 71% of its peak speed in one frame",
+    "1.43s Head stops dead from 77% of its peak"
+   ],
+   "fit": 1.27,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.86,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_hold_ball_t1",
+   "src": "gen/genmotion/takes/fbx_zg_hold_ball_t1.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 8.4,
+   "verdict": "passable, weak on ease and silhouette (8.4/10)",
+   "low": [
+    "ease 1",
+    "silhouette 7.4",
+    "reference 7.6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 1,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 8.7,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 8.5,
+    "silhouette": 7.4,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.6
+   },
+   "worst": [
+    "0.03s the head hangs 66 deg forward of the chest",
+    "3.53s LeftFoot starts at 60% of its peak speed in one frame",
+    "0.43s LeftFoot stops dead from 60% of its peak"
+   ],
+   "fit": 0.823,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.75,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_69_73_1p4",
+   "src": "gen/motion/beats/s14_setdown/cmu_69_73_1p4.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 8.2,
+   "verdict": "passable, weak on anticipation and ease (8.2/10)",
+   "low": [
+    "anticipation 3",
+    "ease 4.7",
+    "snaps 4.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.7,
+    "timing": 10,
+    "anticipation": 3,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 4.8,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.65 m/s with nothing to push on",
+    "1.93s LeftLowerLeg jumps 10 deg in one frame",
+    "1.5s in zero-g the body changes speed by 0.28 m/s with nothing to push on"
+   ],
+   "fit": 0.723,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.75,
+   "source": "cmu/69_73 1.4-3.83 s walk up to object, lean over, pick up object, set down in a"
+  },
+  {
+   "name": "protofactor_CalmDown2Hostage_0",
+   "src": "gen/motion/beats/s14_setdown/protofactor_CalmDown2Hostage_0.npz",
+   "via": "twin",
+   "seconds": 1.07,
+   "total": 7.6,
+   "verdict": "passable, weak on anticipation and arcs (7.6/10)",
+   "low": [
+    "anticipation 0",
+    "arcs 1.2",
+    "ease 4.2"
+   ],
+   "principles": {
+    "arcs": 1.2,
+    "ease": 4.2,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.9s in zero-g the body changes speed by 0.29 m/s with nothing to push on",
+    "0.6s in zero-g the body changes speed by 0.27 m/s with nothing to push on",
+    "0.03s LeftHand starts at 68% of its peak speed in one frame"
+   ],
+   "fit": 0.434,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.10 s, lowering 5 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.73,
+   "source": "protofactor/CalmDown2Hostage 0-1.07 s Calm Down2Hostage (Hostage)"
+  },
+  {
+   "name": "CalmDown1Hostage",
+   "src": "gen/mocap/index/protofactor/CalmDown1Hostage.npz",
+   "via": "twin",
+   "seconds": 1.47,
+   "total": 7.6,
+   "verdict": "passable, weak on anticipation and arcs (7.6/10)",
+   "low": [
+    "anticipation 0",
+    "arcs 1.6",
+    "ease 3.2"
+   ],
+   "principles": {
+    "arcs": 1.6,
+    "ease": 3.2,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.4s in zero-g the body changes speed by 0.25 m/s with nothing to push on",
+    "0.03s LeftHand starts at 96% of its peak speed in one frame",
+    "1.47s Head stops dead from 74% of its peak"
+   ],
+   "fit": 0.446,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.50 s, lowering 6 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.71,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_23_06_0p6",
+   "src": "gen/motion/beats/s14_setdown/cmu_23_06_0p6.npz",
+   "via": "twin",
+   "seconds": 1.67,
+   "total": 7.3,
+   "verdict": "passable, weak on anticipation and snaps (7.3/10)",
+   "low": [
+    "anticipation 0",
+    "snaps 0",
+    "ease 5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 8,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.9s RightToes jumps 13 deg in one frame",
+    "0.1s in zero-g the body changes speed by 0.55 m/s with nothing to push on",
+    "0.57s the head hangs 33 deg forward of the chest"
+   ],
+   "fit": 0.309,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.70 s, lowering 10 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.68,
+   "source": "cmu/23_06 0.6-2.27 s B comforts A, puts both hands on A's shoulders (2 subjects "
+  },
+  {
+   "name": "cmu_26_09_0p4",
+   "src": "gen/motion/beats/s14_setdown/cmu_26_09_0p4.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "ease 4.6",
+    "anticipation 6",
+    "overlap 6.6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.6,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 6.6,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "2s in zero-g the body changes speed by 0.32 m/s with nothing to push on",
+    "0.03s Head travels 87 cm with no anticipation and no overshoot or settle",
+    "2.4s RightHand stops dead from 100% of its peak"
+   ],
+   "fit": 0.92,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.66,
+   "source": "cmu/26_09 0.4-2.83 s bend, pick up"
+  },
+  {
+   "name": "cmu_137_31_11-21",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_31_11-21.npz",
+   "via": "twin",
+   "seconds": 10,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "anticipation 3.6",
+    "ease 3.7",
+    "weight 9.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.7,
+    "timing": 10,
+    "anticipation": 3.6,
+    "overlap": 10,
+    "weight": 9.2,
+    "snaps": 10,
+    "stiffness": 9.4,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 9.2
+   },
+   "worst": [
+    "0.3s in zero-g the body changes speed by 0.25 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.25 m/s with nothing to push on",
+    "1.27s RightFoot stops dead from 62% of its peak"
+   ],
+   "fit": 1.086,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.57 s, lowering 1 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.53,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_137_02_7p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_02_7p5.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 7.8,
+   "verdict": "passable, weak on anticipation and stiffness (7.8/10)",
+   "low": [
+    "anticipation 1.8",
+    "stiffness 4",
+    "arcs 6.8"
+   ],
+   "principles": {
+    "arcs": 6.8,
+    "ease": 7.5,
+    "timing": 10,
+    "anticipation": 1.8,
+    "overlap": 9,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 4,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 9
+   },
+   "worst": [
+    "1.4s in zero-g the body changes speed by 0.31 m/s with nothing to push on",
+    "0.8s in zero-g the body changes speed by 0.26 m/s with nothing to push on",
+    "2.2s LeftHand starts at 60% of its peak speed in one frame"
+   ],
+   "fit": 0.644,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 2.43 s, lowering 7 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.51,
+   "source": "cmu/137_02 7.5-9.93 s Cat Pick Up"
+  },
+  {
+   "name": "cmu_123_03_11p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_123_03_11p5.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 8,
+   "verdict": "passable, weak on anticipation and ease (8/10)",
+   "low": [
+    "anticipation 0",
+    "ease 3.3",
+    "arcs 5.3"
+   ],
+   "principles": {
+    "arcs": 5.3,
+    "ease": 3.3,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s the head hangs 52 deg forward of the chest",
+    "2.4s RightHand stops dead from 97% of its peak",
+    "0.77s LeftHand stops dead from 93% of its peak"
+   ],
+   "fit": 0.756,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.49,
+   "source": "cmu/123_03 11.5-13.93 s 19.5lb"
+  },
+  {
+   "name": "cmu_70_03_11p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_70_03_11p5.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 8,
+   "verdict": "passable, weak on anticipation and ease (8/10)",
+   "low": [
+    "anticipation 0",
+    "ease 3.3",
+    "arcs 5.3"
+   ],
+   "principles": {
+    "arcs": 5.3,
+    "ease": 3.3,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s the head hangs 52 deg forward of the chest",
+    "2.4s RightHand stops dead from 97% of its peak",
+    "0.77s LeftHand stops dead from 93% of its peak"
+   ],
+   "fit": 0.756,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.49,
+   "source": "cmu/70_03 11.5-13.93 s carry 19.5lb suitcase"
+  },
+  {
+   "name": "fbx_place_gently_t0",
+   "src": "gen/genmotion/takes/fbx_place_gently_t0.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 8.4,
+   "verdict": "passable, weak on anticipation and arcs (8.4/10)",
+   "low": [
+    "anticipation 5",
+    "arcs 5.3",
+    "ease 7.1"
+   ],
+   "principles": {
+    "arcs": 5.3,
+    "ease": 7.1,
+    "timing": 10,
+    "anticipation": 5,
+    "overlap": 9.1,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 7.8,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 9.3
+   },
+   "worst": [
+    "2.43s RightHand travels 52 cm with no anticipation and no overshoot or settle",
+    "0.07s LeftHand travels 50 cm with no anticipation and no overshoot or settle",
+    "2.13s RightHand starts at 88% of its peak speed in one frame"
+   ],
+   "fit": 0.978,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 1.00 s, lowering 9 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.44,
+   "source": "twin"
+  },
+  {
+   "name": "CalmDown2Hostage",
+   "src": "gen/mocap/index/protofactor/CalmDown2Hostage.npz",
+   "via": "twin",
+   "seconds": 2.5,
+   "total": 7.2,
+   "verdict": "passable, weak on anticipation and arcs (7.2/10)",
+   "low": [
+    "anticipation 0",
+    "arcs 0.7",
+    "ease 5.1"
+   ],
+   "principles": {
+    "arcs": 0.7,
+    "ease": 5.1,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 6,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.7,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "2.3s in zero-g the body changes speed by 0.33 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 0.29 m/s with nothing to push on",
+    "0.6s in zero-g the body changes speed by 0.27 m/s with nothing to push on"
+   ],
+   "fit": 0.434,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 2.53 s, lowering 6 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.33,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_137_14_6p1",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_14_6p1.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "anticipation 3.3",
+    "snaps 4.8",
+    "overlap 7.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.3,
+    "timing": 10,
+    "anticipation": 3.3,
+    "overlap": 7.4,
+    "weight": 7.5,
+    "snaps": 4.8,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.75 m/s with nothing to push on",
+    "0.5s in zero-g the body changes speed by 0.49 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 0.7 m/s with nothing to push on"
+   ],
+   "fit": 1.108,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.28,
+   "source": "cmu/137_14 6.1-8.53 s Drunk Pick Up"
+  },
+  {
+   "name": "PushCubeIdle2",
+   "src": "gen/mocap/index/protofactor/PushCubeIdle2.npz",
+   "via": "twin",
+   "seconds": 2.67,
+   "total": 8.3,
+   "verdict": "passable, weak on reference and timing (8.3/10)",
+   "low": [
+    "reference 3",
+    "timing 10",
+    "weight 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 3
+   },
+   "worst": [],
+   "fit": 1.023,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 2.70 s, lowering 1 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.25,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_place_gently_t1",
+   "src": "gen/genmotion/takes/fbx_place_gently_t1.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 8.1,
+   "verdict": "passable, weak on ease and arcs (8.1/10)",
+   "low": [
+    "ease 3.5",
+    "arcs 6",
+    "stiffness 6.5"
+   ],
+   "principles": {
+    "arcs": 6,
+    "ease": 3.5,
+    "timing": 10,
+    "anticipation": 8.2,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 6.5,
+    "silhouette": 7.3,
+    "hands": 8,
+    "contact": 10,
+    "reference": 8.1
+   },
+   "worst": [
+    "0.03s the head hangs 67 deg forward of the chest",
+    "0.97s RightHand starts at 66% of its peak speed in one frame",
+    "1.47s RightHand stops dead from 68% of its peak"
+   ],
+   "fit": 0.935,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.60 s, lowering 2 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.23,
+   "source": "twin"
+  },
+  {
+   "name": "mm_lift_heavy_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_lift_heavy_a.fbx",
+   "via": "twin",
+   "seconds": 2.43,
+   "total": 7.9,
+   "verdict": "passable, weak on snaps and anticipation (7.9/10)",
+   "low": [
+    "snaps 0",
+    "anticipation 2.5",
+    "ease 6.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.2,
+    "timing": 10,
+    "anticipation": 2.5,
+    "overlap": 8.7,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.07s RightToes jumps 14 deg in one frame",
+    "0.7s in zero-g the body changes speed by 0.53 m/s with nothing to push on",
+    "1.3s in zero-g the body changes speed by 0.6 m/s with nothing to push on"
+   ],
+   "fit": 0.907,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 3.09,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_137_40_8p3",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_40_8p3.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 7.9,
+   "verdict": "passable, weak on anticipation and ease (7.9/10)",
+   "low": [
+    "anticipation 0",
+    "ease 3.5",
+    "overlap 4.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 4.5,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand travels 85 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 1.032,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 2.84,
+   "source": "cmu/137_40 8.3-10.73 s Strong Man Pick Up"
+  },
+  {
+   "name": "cmu_137_31_11p5-18",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_31_11p5-18.npz",
+   "via": "twin",
+   "seconds": 6.5,
+   "total": 8,
+   "verdict": "passable, weak on anticipation and ease (8/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.7",
+    "reference 8.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.7,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 9.7,
+    "weight": 9.4,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 8.4
+   },
+   "worst": [
+    "0.2s in zero-g the body changes speed by 0.25 m/s with nothing to push on",
+    "0.77s RightFoot stops dead from 62% of its peak",
+    "1.23s LeftHand stops dead from 62% of its peak"
+   ],
+   "fit": 1.174,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 2.65,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_137_36_10p5",
+   "src": "gen/motion/beats/s14_setdown/cmu_137_36_10p5.npz",
+   "via": "twin",
+   "seconds": 2.4,
+   "total": 7.9,
+   "verdict": "passable, weak on anticipation and ease (7.9/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.2",
+    "overlap 6.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.2,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 6.7,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand travels 71 cm with no anticipation and no overshoot or settle",
+    "1.9s LeftHand starts at 100% of its peak speed in one frame"
+   ],
+   "fit": 1.145,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.50 s, lowering 13 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 2.61,
+   "source": "cmu/137_36 10.5-12.93 s Sexy Lady Pick Up"
+  },
+  {
+   "name": "gm_zg_hold_ball",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@gm_zg_hold_ball.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 6.5,
+   "verdict": "looks animated, not acted: anticipation and ease give it away (6.5/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.5",
+    "overlap 3.2"
+   ],
+   "principles": {
+    "arcs": 5,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.2,
+    "weight": 8.9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.9
+   },
+   "worst": [
+    "3.6s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "0.03s the head hangs 54 deg forward of the chest",
+    "1.4s RightFoot starts at 70% of its peak speed in one frame"
+   ],
+   "fit": 1.703,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 0.09,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_hold_ball_t0",
+   "src": "gen/genmotion/takes/fbx_zg_hold_ball_t0.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 6.5,
+   "verdict": "looks animated, not acted: anticipation and ease give it away (6.5/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.5",
+    "overlap 3.2"
+   ],
+   "principles": {
+    "arcs": 5,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.2,
+    "weight": 8.9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.9
+   },
+   "worst": [
+    "3.6s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "0.03s the head hangs 54 deg forward of the chest",
+    "1.4s RightFoot starts at 70% of its peak speed in one frame"
+   ],
+   "fit": 1.703,
+   "action": false,
+   "actionNote": "both hands out in front, apart and slow for 0.00 s, lowering 0 cm (a careful set-down wants 0.6 s and a 12 cm lowering)",
+   "score": 0.09,
+   "source": "twin"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_setdown/gm_hp_setdown_t0.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_setdown/gm_hp_setdown_t0.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_setdown/gm_hp_setdown_t1.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_setdown/gm_hp_setdown_t1.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  }
+ ],
+ "fitWeight": 2,
+ "board": "s14: very carefully he flies the Earth back and sets it into orbit like a full glass; a small pat; zero-g"
+}

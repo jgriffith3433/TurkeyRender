@@ -1,0 +1,31 @@
+shotbones person 103.3-123.3 s
+shotbones person 123.3-143.3 s
+shotbones person 143.3-144.3 s
+# Motion critic: hawkespunch 103.25-144.25 s
+
+984 frames at 24 fps (40.96 s), judged as zero-g. **Total 6.5/10: looks animated, not acted: snaps and anticipation give it away (6.5/10).**
+
+| principle | score | what the numbers say |
+|---|---|---|
+| 1 Arcs | 3.6 | median bend 0.07 over 28 moves, 43% straight lines |
+| 2 Slow in and out | 5 | speed shape 0.29 (bell 0.6, constant 1.0), 82% of moves start or stop in one frame |
+| 3 Timing | 10 | 16 holds (median 2.38 s), 0% of frames dead still, fast parts median 0.04 s |
+| 4 Anticipation and follow-through | 3.1 | 23 big moves: 8 with anticipation, 0 with overshoot and settle |
+| 5 Overlap and drag | 9.2 | parts' speed profiles agree 0.31 (1 = everything moves as one); typical lag between parts 1.25 frames; 0% of energy peaks have every part peaking together |
+| 6 Weight | 6 | 5 centre-of-mass jerks, 31 speed changes with no push (zero-g) |
+| 7 Snaps and pops | 0 | 201 body snaps or pops, 116 finger snaps in 40.96 s |
+| 8 Stiffness | 10 | 5% of core joints frozen while the body moves |
+| 9 Silhouette | 9.6 | 16 key poses, readability 0.75 (best of front, side, three-quarter), 25% twinned |
+| 10 Hands and face | 10 | fingers curl 18 deg, spread 24 deg, head level |
+| 11 Contact | 10 | hands clear of the body (no partner dump: hit and catch targets not judged) (partial) |
+| 12 Distance from human motion | 4.2 | 2.37 robust z from 174 mocap clips; furthest: energyCV high (5), handSpeedP50 low (3.64), legOmegaP95 low (3.21) |
+
+## Worst moments
+
+- **1:47.17** (107.17 s, f94) person.Hips: Hips jumps 29 deg in one frame (also snap)
+- **1:48.13** (108.13 s, f117) person.LeftUpperLeg: LeftUpperLeg jumps 25 deg in one frame (also snap)
+- **1:47.67** (107.67 s, f106) person.LeftLowerLeg: LeftLowerLeg jumps 32 deg in one frame (also snap)
+- **2:03.50** (123.5 s, f486) person.LeftLowerArm: LeftLowerArm jumps 20 deg in one frame
+- **2:05.71** (125.71 s, f539) person.LeftLowerArm: LeftLowerArm jumps 22 deg in one frame
+
+report: C:\Projects\TKShock\Director\videos\hawkespunch\critic\t-space\report.md

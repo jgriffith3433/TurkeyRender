@@ -252,7 +252,7 @@
   idea: "3 The prescription. Pause. She stands, takes off her glasses, and her eyes go to the gloves on the wall."
   feel: "Turn begins (-): the cure is her fist."
   look: plain
-  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}, can: {at: can_desk}}
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}}
   camera: {preset: spot, from: cam_bed_cu, on: doctor.head, lens: 50}
   shot: {pos: [701.15, 1.58, 3.62], look: doctor.head, rot: null, fov: 34, screen: [0, 0], deadzone: false}
   raw:
@@ -268,7 +268,7 @@
   idea: "3 The prescription. He follows her look to the gloves. Back to her."
   feel: "He finally sees the bomb."
   look: plain
-  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}, can: {at: can_desk}}
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}}
   camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 50}
   shot: {pos: [701.3, 1.45, 3.05], look: person.head, rot: null, fov: 34, screen: [0, 0], deadzone: false}
   raw:
@@ -285,7 +285,7 @@
   feel: "Turn (-): hope to doom. The long build begins."
   look: epic
   mood: clinic_still
-  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}, can: {at: can_desk}}
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_stand, clip: IdleBreathe, blend: 0, look: person}}
   camera: {preset: spot, from: cam_punch, on: doctor.head, lens: 35}
   shot: {pos: [701.3, 0.8, 2.05], look: doctor.head, rot: null, fov: 46, screen: [0, 0.1], deadzone: false}
   raw:
@@ -301,66 +301,76 @@
   feel: "Anticipation. Both in one frame so the geography reads."
   look: epic
   mood: clinic_still
-  cast: {person: {at: bed, clip: hp_him_hit, blend: 0, args: {start: 0.79, once: 1}}, doctor: {at: doctor_punch, clip: hp_doc_punch, blend: 0, args: {start: 0.79, once: 1}}, can: {at: can_desk}}
+  tags: [offmark]
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 0.2, once: 1, rate: 0.6085}, face: 0}}
   camera: {preset: spot, from: cam_punch, on: doctor.head, lens: 24}
-  shot: {pos: [701.25, 1.25, 4], look: doctor.head, rot: null, fov: 48, screen: [-0.12, 0.04], deadzone: false}
+  shot: {pos: [698.4, 1, 3.2], rot: [0, 90, 0], fov: 50, deadzone: false}
   raw:
-    - {at: 0s, do: fly, on: person, fromHere: 1, to: [700.6, 1.14, 3.72], arc: 0, for: 0.02s, ease: linear, face: 0}
-    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [700.6, 1.14, 3.72], arc: 0, for: 0.04s, ease: linear, face: 0}
+    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
+    - {at: 0, do: layer, on: doctor, clip: mx_breathing_idle, mask: "spine,head,leftArm", weight: 1, for: 4.75s, blend: 0}
     - {at: 0, grade: {catch: 0}, for: 0}
     - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
-    - {at: 1.91s, do: limbscale, on: doctor, bones: {rightHand: 1.3}, for: 0.3s, in: 0.04, out: 0.12}
+    - {at: 0s, do: face, on: person, eyesWide: 0.5, fear: 0.4, for: 0.2s}
+    - {at: 0s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0s}
+    - {at: 1.857s, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.33, rate: 1, blend: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+    - {at: 0.4s, do: hitshake, on: doctor, amount: 0.003, hz: 9, for: 1.4s}
+    - {at: 0.9s, do: face, on: doctor, eyesNarrow: 0.75, browDown: 0.75, mouthPress: 0.6, for: 0.8s}
+    - {at: 1.0s, do: face, on: person, eyesWide: 0.85, fear: 0.6, for: 0.25s}
+    - {at: 1.15s, do: gaze, on: person, to: doctor.rightHand, limit: 40, for: 0.15s}
+    - {at: 1.6s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0.12s}
+    - {at: 1.9s, do: limbscale, on: doctor, bones: {rightHand: 1.2}, for: 0.1s, in: 0.02, out: 0.06}
     - {at: 1.94s, do: smear, on: doctor.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
-    - {at: 0, do: fingers, on: person, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: fingers, on: person, hand: right, set: 0.35, for: 0}
     - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.35, for: 0}
+    - {at: 0, do: detach, on: clinic_pen}
+    - {at: 0, do: hide, on: clinic_pen}
 
 - id: p02
   idea: "4 The punch. The hit. Her fist meets his jaw: IMPACT FRAME, black on white, radial lines. Hitstop. The loudest sound in the film."
   feel: "Resolution in 2 frames."
   look: epic
   mood: punch_whoa
-  cast: {person: {at: bed, clip: hp_him_hit, blend: 0, args: {start: 0.79, once: 1}}, doctor: {at: doctor_punch, clip: hp_doc_punch, blend: 0, args: {start: 0.79, once: 1}}, can: {at: can_desk}}
+  tags: [offmark]
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 1.473, once: 1}, face: 0}}
   camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 35}
-  shot: {pos: [700.2, 1.6, 2.75], look: person.head, rot: null, fov: 40, screen: [0, 0.1], deadzone: false}
+  shot: {pos: [699.25, 1.45, 3.25], rot: [2, 90, 0], fov: 38, deadzone: false}
   raw:
-    - {at: 0s, do: fly, on: person, fromHere: 1, to: [700.6, 1.14, 3.72], arc: 0, for: 0.02s, ease: linear, face: 0}
-    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [700.6, 1.14, 3.72], arc: 0, for: 0.04s, ease: linear, face: 0}
+    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
     - {at: 0, do: impactframe, on: person.head, style: flip, flash: 0, frames: 2, accent: "#ff3a2a", lines: 1}
     - {at: 0, do: hitstop, on: person, frames: 7, victim: person, victimShake: 0.05, attacker: doctor, creep: 0.02}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+    - {at: 0, do: layer, on: person, clip: mm_him_snapback, mask: "spine,head", start: 0.2, rate: 1.8, once: 1, weight: 1, for: 0.75s, blend: 0}
+    - {at: 0, do: face, on: person, jawOpen: 0.5, squint: 0.8, browDown: 0.4, for: 0s}
     - {at: 0, do: speedlines, style: radial, on: person.head, amount: 0.8, for: 0.4s, hz: 12}
     - {at: 0, fx: shock, on: person.head, size: 0.3, for: 0.4s, width: 0.015, glow: 0.04, fill: 0, color: "#ffffff"}
-    - {at: 0, fx: debris, on: person.head, size: 0.05, count: 40, speed: 3, normal: [0, 1, 0], spread: 70, gravity: 1, color: "#ffffff", color2: "#e8e8e8", for: 0.8s}
+    - {at: 0, fx: debris, on: person.head, size: 0.02, count: 20, speed: 3, normal: [0, 1, 0], spread: 70, gravity: 1, color: "#ffffff", color2: "#e8e8e8", for: 0.8s}
     - {at: 0, do: shake, trauma: 1, punch: 0.06, for: 0.6s}
-    - {at: 0.5s, do: fly, on: person, fromHere: 1, arc: 0, for: 0.65s, ease: in, face: 0, points: [[700.6, 1.6, 3.8], [700.6, 2.6, 3.88], [700.6, 3.6, 3.9]]}
-    - {at: 1.15s, do: fly, on: person, fromHere: 1, points: [[700.6, 3.2, 6.9], [700.6, 7.5, 12], [700.6, 17, 25], [700.6, 33, 45], [700.6, 58, 74], [700.6, 95, 115], [700.6, 140, 165]], for: 8.0s, ease: linear, face: 0, trail: {lines: 16, width: 0.35}}
-    - {at: 0.5s, do: jump, on: clinic_roof_plug, pos: [702.4, 3, 6.2], height: 5, for: 1.5s}
-    - {at: 0.5s, do: rotate, on: clinic_roof_plug, rot: [110, 30, 50], for: 1.5s, ease: linear}
-    - {at: 0.5s, do: jump, on: clinic_ceiling_plug, pos: [701.4, 2.7, 5.4], height: 3.2, for: 1.3s}
-    - {at: 0.5s, do: rotate, on: clinic_ceiling_plug, rot: [120, 0, 20], for: 1.3s, ease: linear}
-    - {at: 0, do: fingers, on: person, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: fingers, on: person, hand: right, set: 0.35, for: 0}
     - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.35, for: 0}
 
 - id: p03
   idea: "4 The punch. He rockets straight up through the ceiling. Tiles rain. She stands below, cold face, arm still extended."
   feel: "The cure administered. Her reaction (she owns the action)."
   look: epic
   mood: punch_whoa
-  cast: {person: {at: bed, clip: hp_him_hit, blend: 0, args: {start: 0.79, once: 1}}, doctor: {at: doctor_punch, clip: hp_doc_punch, blend: 0, args: {start: 0.79, once: 1}}, can: {at: can_desk}}
+  tags: [offmark]
+  cast: {person: {at: bed, clip: mx_falling_air, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 1.75, once: 1, rate: 0.2}, face: 0}}
   camera: {preset: spot, from: cam_punch, on: cam_punch_aim, lens: 24}
-  shot: {pos: [698.3, 1, 2.6], look: null, rot: [-24.01, 68.63, 0], fov: 62, screen: null, deadzone: false}
+  shot: {pos: [698.5, 1.3, 3.25], rot: [-12, 90, 0], fov: 62, deadzone: false}
   raw:
+    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
+    - {at: 0, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.75, rate: 0.2, blend: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
     - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
     - {at: 0, grade: {catch: 0}, for: 0}
-    - {at: 0, fx: debris, pos: [700.6, 2.7, 3.9], size: 0.16, count: 70, speed: 3, normal: [0, -1, 0], spread: 60, gravity: 1, color: "#e9e6df", color2: "#cfcac0", smooth: 0.1, dust: 50, dustColor: "#ddd8cf", for: 1.6s}
     - {at: 0, do: shake, trauma: 0.5, for: 0.6s}
-    - {at: 0, do: fingers, on: person, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: fingers, on: person, hand: right, set: 0.35, for: 0}
+    - {at: 0, do: fly, on: person, points: [[700.6, 1.6, 3.6], [700.6, 3.8, 3.8], [700.6, 8, 4.4], [700.6, 17, 14], [700.6, 33, 45], [700.6, 58, 74]], for: 8.4s, ease: linear, face: yaw, tilt: [-90, 0, 0], turn: 0, trail: {lines: 16, width: 0.35, alpha: 0.35}}
+    - {at: 0.1s, fx: debris, pos: [700.6, 2.55, 4.1], size: 0.32, count: 400, speed: 3, normal: [0, -1, 0.3], spread: 50, gravity: 1, color: "#a9a49a", color2: "#7f7a70", smooth: 0.1, dust: 120, dustColor: "#cfc9be", for: 2.0s}
+    - {at: 0, do: jump, on: clinic_roof_plug, pos: [702.4, 3, 6.2], height: 5, for: 1.5s}
+    - {at: 0, do: rotate, on: clinic_roof_plug, rot: [110, 30, 50], for: 1.5s, ease: linear}
+    - {at: 0, do: jump, on: clinic_ceiling_plug, pos: [701.4, 2.7, 5.4], height: 3.2, for: 1.3s}
+    - {at: 0, do: rotate, on: clinic_ceiling_plug, rot: [120, 0, 20], for: 1.3s, ease: linear}
+    - {at: 0.4s, do: hide, on: can}
     - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.35, for: 0}
 
 - id: p04
   idea: "4 The punch. Reception. The TURKEY looks up at the rattling ceiling as dust falls. Looks back at its screen. Types."
@@ -510,23 +520,23 @@
   idea: "7a The chase. Left to right: the DOUBLE blasts straight through Saturn's ring, ice exploding behind him in a long wake. HIM follows through the same hole; his wake is twice as big."
   feel: "His goal: catch him for an answer. He is as strong as the double."
   look: epic
+  mood: hp_space_huge
   tags: [offmark]
-  cast: {person: {at: chase_him, clip: hp_f2_ram, blend: 0}, other: {at: chase_dbl, clip: hp_f2_ram, blend: 0}}
+  cast: {person: {at: chase_him, clip: mx_falling_air, blend: 0}, other: {at: chase_dbl, clip: zg_neutral_a, blend: 0}}
   camera: {preset: spot, from: catch_cam, on: ahead, lens: 35}
-  shot: {pos: [0, 0.4, 8983], look: null, rot: [0.67, 0, 0], fov: 50, screen: null, deadzone: false}
+  shot: {pos: [40, 44.2, 9026], rot: [2, 180, 0], fov: 30, deadzone: false, move: [-81.95, 44.2, 9026], ease: linear}
   raw:
     - {at: 0, light: key, intensity: 0, for: 0}
-    - {at: 0, do: focus, on: space_epic_space, name: ring_edge, for: 0, rot: [0, 0, 90]}
-    - {at: 0s, do: fly, on: other, fromHere: 1, to: [-9, 0.6, 9000], arc: 0, for: 0.02s, ease: linear, face: 0}
-    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [-9, 0.6, 9000], arc: 0, for: 0.04s, ease: linear, face: 0}
-    - {at: 0s, do: fly, on: person, fromHere: 1, to: [-13, -0.4, 9000], arc: 0, for: 0.02s, ease: linear, face: 0}
-    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [-13, -0.4, 9000], arc: 0, for: 0.04s, ease: linear, face: 0}
-    - {at: 0.05s, do: fly, on: other, fromHere: 1, to: [7.5, 0.6, 9000], arc: 0, for: 1.1s, ease: linear, face: yaw, trail: {lines: 16, width: 0.35}}
-    - {at: 1.4s, do: fly, on: person, fromHere: 1, to: [7, -0.4, 9000], arc: 0, for: 1s, ease: linear, face: yaw, trail: {lines: 20, width: 0.5}}
-    - {at: 0.3s, fx: icewake, on: other, for: 2.7s, emitFor: 0.7s, count: 400, size: 2, spread: 9}
-    - {at: 1.75s, fx: icewake, on: person, for: 1.25s, emitFor: 0.6s, count: 800, size: 4, spread: 18}
-    - {at: 0.5s, do: shake, trauma: 0.6, for: 0.7s}
-    - {at: 1.9s, do: shake, trauma: 0.9, for: 0.8s}
+    - {at: 0, do: focus, on: space_epic_space, name: ring_chase, alt: 0, heading: 40, for: 0}
+    - {at: 0, do: reach, on: person, hand: right, weight: 0, for: 0}
+    - {at: 0, do: fly, on: other, points: [[42.5, 43, 9012], [-130.1, 43, 9012]], for: 4s, ease: linear, face: yaw, tilt: [80, 0, 0], turn: 0, trail: {lines: 16, width: 0.5}}
+    - {at: 0, do: fly, on: person, points: [[45.5, 42.5, 9012], [-124.4, 42.5, 9012]], for: 4s, ease: linear, face: yaw, turn: 0, trail: {lines: 20, width: 0.8}}
+    - {at: 0, do: layer, on: other, clip: mm_ring_glide_a, mask: "arms,spine", start: 0.5, rate: 0.15, once: 1, weight: 1, for: 3s, blend: 0}
+    - {at: 0, fx: icewake, on: other, offset: [2, 0, 0], for: 3s, fadeFrom: 1, emitFor: 3.4, count: 900, size: 0.6, spread: 4, along: 0.4, color: "#c9d6ea", color2: "#9fb0c8", emit: 0.1, smooth: 0.7}
+    - {at: 0, fx: icewake, on: person, offset: [3, 0, 0], for: 3s, fadeFrom: 1, emitFor: 3.4, count: 1600, size: 1.2, spread: 5, along: 0.15, color: "#c9d6ea", color2: "#9fb0c8", emit: 0.1, smooth: 0.7}
+    - {at: 1.4s, do: shake, trauma: 0.5, for: 0.7s}
+    - {at: 0, do: gaze, on: other, to: [-700, 43.5, 9012], limit: 55, for: 0}
+    - {at: 0, do: gaze, on: person, to: other.head, limit: 55, for: 0}
     - {at: 0, do: fingers, on: person, hand: left, set: 0.35, for: 0}
     - {at: 0, do: fingers, on: person, hand: right, set: 0.35, for: 0}
     - {at: 0, do: fingers, on: other, hand: left, set: 0.35, for: 0}
@@ -537,33 +547,30 @@
   feel: "Power by accident: his flinch cracks a moon."
   look: epic
   tags: [offmark]
-  cast: {person: {at: sneak, clip: hp_p2_sneak, blend: 0, face: 90}, other: {at: boo_dbl, clip: hp_s3_strike, blend: 0, face: 200, args: {start: 0.58, once: 1}}}
-  camera: {preset: spot, from: catch_cam, on: other.head, lens: 24}
-  shot: {pos: [1.9, 1.7, 8998.3], look: null, rot: [6.85, -30.96, 0], fov: 60, screen: null, deadzone: false}
+  cast: {person: {at: sneak, clip: mx_terrified, blend: 0, face: 107, args: {start: 1.15, once: 1}}, other: {at: boo_dbl, clip: Idle1Yell, blend: 0, face: 172, args: {start: 0.3, once: 1}}}
+  camera: {preset: spot, from: catch_cam, on: ahead, lens: 24}
+  shot: {pos: [2.6, 1.25, 8999.2], rot: [4, -49.5, 0], fov: 45, deadzone: false}
   raw:
     - {at: 0, light: key, intensity: 0, for: 0}
     - {at: 0, do: focus, on: space_epic_space, name: moon_ground, for: 0}
-    - {at: 0, do: fingers, on: person, hand: left, curl: 0.4, for: 0}
-    - {at: 0, do: fingers, on: person, hand: right, curl: 0.4, for: 0}
-    - {at: 0, do: fingers, on: other, hand: left, curl: 0.4, for: 0}
-    - {at: 0, do: fingers, on: other, hand: right, curl: 0.4, for: 0}
-    - {at: 0s, do: fly, on: person, fromHere: 1, to: [0, 1.4, 9000], arc: 0, for: 0.02s, ease: linear, face: 0}
-    - {at: 0.03s, do: fly, on: person, fromHere: 1, to: [0, 1.4, 9000], arc: 0, for: 0.04s, ease: linear, face: 0}
-    - {at: 0s, do: fly, on: other, fromHere: 1, to: [0.7, -1.4, 9001.6], arc: 0, for: 0.02s, ease: linear, face: 0}
-    - {at: 0.03s, do: fly, on: other, fromHere: 1, to: [0.7, -1.4, 9001.6], arc: 0, for: 0.04s, ease: linear, face: 0}
-    - {at: 0.1s, do: fly, on: other, fromHere: 1, to: [0.7, 0.9, 9001.6], arc: 0, for: 0.14s, ease: out, face: 0}
-    - {at: 0s, do: gaze, on: other, to: person.head, limit: 40, for: 0s}
-    - {at: 0.1s, do: face, on: other, jawOpen: 0.6, eyesWide: 0.9, for: 0.3s}
-    - {at: 0.15s, do: speedlines, style: radial, on: other.head, amount: 0.8, for: 0.3s, hz: 12}
-    - {at: 0.9s, do: anim, on: person, clip: hp_s3_strike, start: 0, once: 1, blend: 0}
-    - {at: 0.9s, do: face, on: person, fear: 0.6, eyesWide: 1, jawOpen: 0.4, for: 0.3s}
+    - {at: 0, do: fly, on: other, points: [[-0.5, -1.6, 9003.6], [-0.5, 0, 9003.6]], for: 0.16s, ease: out, face: 0}
+    - {at: 0, do: gaze, on: other, to: person.head, limit: 50, for: 0s}
+    - {at: 0.1s, do: face, on: other, jawOpen: 0.7, eyesWide: 0.9, for: 0.2s}
+    - {at: 0.15s, do: speedlines, style: radial, on: other.head, amount: 0.6, for: 0.3s, hz: 12}
+    - {at: 0.35s, do: face, on: person, fear: 0.8, eyesWide: 1, jawOpen: 0.5, for: 0.1s}
+    - {at: 0.9s, do: anim, on: person, clip: mm_boo_smash, start: 0, once: 1, blend: 0.1}
     - {at: 1.45s, do: smear, on: person.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
-    - {at: 1.45s, do: limbscale, on: person, bones: {rightHand: 1.3}, for: 0.4s, in: 0.04, out: 0.12}
-    - {at: 1.5s, do: impactframe, on: person.rightHand, style: flip, flash: 1, frames: 2, lines: 1}
+    - {at: 1.5s, do: impactframe, on: person.rightHand, style: flip, flash: 0, frames: 2, lines: 1}
     - {at: 1.5s, do: hitstop, on: person, frames: 8, victim: person, victimShake: 0.03}
-    - {at: 1.5s, fx: shock, on: person.rightHand, size: 3, for: 0.5s, normal: [0, 1, 0], width: 0.05, distort: 0.5, glow: 0.12, fill: 0.05, color: "#e8e4dc"}
-    - {at: 1.5s, fx: debris, pos: [0.4, 0, 9001.1], size: 0.5, count: 120, speed: 6, normal: [0, 1, 0], spread: 70, color: "#8a8780", color2: "#6e6b66", smooth: 0.1, gravity: 0, dust: 40, dustColor: "#9a968e", for: 1.0s}
+    - {at: 1.5s, fx: shock, pos: [0.75, 0.02, 8999.77], size: 3, for: 0.5s, normal: [0, 1, 0], width: 0.05, distort: 0.5, glow: 0.12, fill: 0.05, color: "#e8e4dc"}
+    - {at: 1.5s, fx: debris, pos: [0.75, 0, 8999.77], size: 0.5, count: 120, speed: 6, normal: [0, 1, 0], spread: 70, color: "#8a8780", color2: "#6e6b66", smooth: 0.1, gravity: 0, dust: 40, dustColor: "#9a968e", for: 1.0s}
     - {at: 1.5s, do: shake, trauma: 1, punch: 0.06, for: 0.7s}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.4, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.4, for: 0}
+    - {at: 0.9s, do: fingers, on: person, hand: left, set: 1, for: 0.1s}
+    - {at: 0.9s, do: fingers, on: person, hand: right, set: 1, for: 0.1s}
+    - {at: 0, do: fingers, on: other, hand: left, set: 0.6, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, set: 0.6, for: 0}
 
 - id: s07
   idea: "7b The moon. From high orbit: two lit specks above the grey moon. A city-sized crater blooms under them, a slow shock ring, a dust plume. Then near silence."

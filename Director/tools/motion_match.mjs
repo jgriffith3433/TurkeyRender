@@ -5,6 +5,7 @@
 //   node Director/tools/motion_match.mjs --tags punch,hit [--sources cmu,protofactor] [--seconds 1.5] [--top 12]
 //   node Director/tools/motion_match.mjs --query Assets/MusicVideo/Motion/Humanoid@mx_cross_punch.fbx --start 0.6 --end 1.4 --tags punch
 //   node Director/tools/motion_match.mjs --pose "hipFlex=40 knee=45 shAbd=40 shFlex=40 elbow=75" --seconds 1 --tags idle
+//   ... --upper          zero-g: match the upper body only (hands, elbows, head, chest), heights from the hips
 //   ... --json           machine output;  --cut <n>  writes candidate n as Director/gen/motion/match/<source>_<clip>_<start>.npz for motion_admit.py
 // How it matches: features per frame (tools/motion/features.py: body-frame positions of hands, feet, head, elbows, knees; their velocities; hips
 // velocity, yaw rate, height; chest up), z-scored with the library's mean and std and weighted; the query window slides over every clip whose
@@ -53,12 +54,16 @@ if (Qf) qFrames = Qf.length / DIM;
 const hits = [];
 for (const src of sources) {
   const idx = loadIndex(src); if (!idx) continue;
-  const mean = idx.mean, std = idx.std, w = idx.weights;
+  const mean = idx.mean, std = idx.std, w = [...idx.weights];
+  // --upper (zero-g beats): hands, elbows, head and chest only, heights from the hips; feet, knees, hips motion and height ignored
+  const UP = !!flag.upper, YS = [1, 4, 13, 16, 19];
+  if (UP) for (const d of [6, 7, 8, 9, 10, 11, 21, 22, 23, 24, 25, 26, 33, 34, 35, 36, 37, 38, 42, 43, 44, 45, 46]) w[d] = 0;
+  const raw = (A, f, d) => UP && YS.includes(d) ? A[f * DIM + d] - A[f * DIM + 46] : A[f * DIM + d];
   // query normalised with this library's statistics
   let qn = null, qVariants = [];
   if (Qf) {
     qn = new Float32Array(Qf.length);
-    for (let f = 0; f < qFrames; f++) for (let d = 0; d < DIM; d++) qn[f * DIM + d] = (Qf[f * DIM + d] - mean[d]) / std[d] * w[d];
+    for (let f = 0; f < qFrames; f++) for (let d = 0; d < DIM; d++) qn[f * DIM + d] = (raw(Qf, f, d) - mean[d]) / std[d] * w[d];
     // time-warp variants: resample the query to 0.8x, 1x, 1.25x length
     for (const k of [0.8, 1, 1.25]) {
       const n = Math.max(4, Math.round(qFrames * k)); const v = new Float32Array(n * DIM);
@@ -69,7 +74,7 @@ for (const src of sources) {
     }
   }
   for (const clip of idx.clips) {
-    const text = `${clip.id} ${clip.description ?? ''} ${(clip.tags ?? []).join(' ')} ${clip.animset ?? ''}`.toLowerCase().replace(/([a-z])([A-Z])/g, '$1 $2');
+    const text = `${clip.id} ${clip.description ?? ''} ${(clip.tags ?? []).join(' ')} ${clip.animset ?? ''}`.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();   // split camelCase ids (PROTOFACTOR) before lowercasing
     const tagHit = tags.length ? tags.filter((t) => text.includes(t)).length : 0;
     if (tags.length && !tagHit && !Qf) continue;
     if (tags.length && !tagHit && flag.strict) continue;
@@ -77,7 +82,7 @@ for (const src of sources) {
     const file = path.join(INDEX, src, clip.id + '.f32'); if (!fs.existsSync(file)) continue;
     const L = f32(file); const F = L.length / DIM;
     const ln = new Float32Array(L.length);
-    for (let f = 0; f < F; f++) for (let d = 0; d < DIM; d++) ln[f * DIM + d] = (L[f * DIM + d] - mean[d]) / std[d] * w[d];
+    for (let f = 0; f < F; f++) for (let d = 0; d < DIM; d++) ln[f * DIM + d] = (raw(L, f, d) - mean[d]) / std[d] * w[d];
     const best = [];
     for (const { k, n, v } of qVariants) {
       if (F < n) continue;

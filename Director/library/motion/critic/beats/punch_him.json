@@ -1,0 +1,669 @@
+{
+ "beat": "punch_him",
+ "when": "2026-11-08T22:23:32.870Z",
+ "zerog": false,
+ "rows": [
+  {
+   "name": "DeathBackCombat",
+   "src": "gen/mocap/index/protofactor/DeathBackCombat.npz",
+   "via": "twin",
+   "seconds": 3.17,
+   "total": 9.1,
+   "verdict": "reads as human (9.1/10)",
+   "low": [
+    "anticipation 6",
+    "overlap 7.3",
+    "ease 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 7.3,
+    "weight": 9,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.8,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand travels 237 cm with no anticipation and no overshoot or settle",
+    "1.97s RightHand moves at one speed for 0.13 s (flat 0.91): interpolation, not a move",
+    "2.3s LeftHand stops dead from 81% of its peak"
+   ],
+   "fit": 2.021,
+   "action": true,
+   "actionNote": "head peak 3.9 m/s, hips peak 2.5 m/s",
+   "score": 5.06,
+   "source": "twin"
+  },
+  {
+   "name": "GetHitFront1",
+   "src": "gen/mocap/index/protofactor/GetHitFront1.npz",
+   "via": "twin",
+   "seconds": 1.17,
+   "total": 8.8,
+   "verdict": "reads as human (8.8/10)",
+   "low": [
+    "anticipation 3.8",
+    "ease 4.1",
+    "weight 7.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.1,
+    "timing": 10,
+    "anticipation": 3.8,
+    "overlap": 10,
+    "weight": 7.7,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.63s Head travels 50 cm with no anticipation and no overshoot or settle",
+    "0.03s RightHand starts at 77% of its peak speed in one frame",
+    "1.17s Head stops dead from 62% of its peak"
+   ],
+   "fit": 2.803,
+   "action": true,
+   "actionNote": "head peak 2.3 m/s, hips peak 0.7 m/s",
+   "score": 3.19,
+   "source": "twin"
+  },
+  {
+   "name": "GetHitFrontHostage",
+   "src": "gen/mocap/index/protofactor/GetHitFrontHostage.npz",
+   "via": "twin",
+   "seconds": 1.17,
+   "total": 7.8,
+   "verdict": "passable, weak on snaps and overlap (7.8/10)",
+   "low": [
+    "snaps 0",
+    "overlap 0.5",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.5,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 0.5,
+    "weight": 9.7,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.2s RightHand jumps 22 deg in one frame"
+   ],
+   "fit": 2.717,
+   "action": true,
+   "actionNote": "head peak 2.0 m/s, hips peak 1.3 m/s",
+   "score": 2.37,
+   "source": "twin"
+  },
+  {
+   "name": "mx_flying_back_death",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_flying_back_death.fbx",
+   "via": "twin",
+   "seconds": 3.03,
+   "total": 7.8,
+   "verdict": "passable, weak on snaps and weight (7.8/10)",
+   "low": [
+    "snaps 0",
+    "weight 3.1",
+    "overlap 6.1"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.2,
+    "timing": 10,
+    "anticipation": 8.5,
+    "overlap": 6.1,
+    "weight": 3.1,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.87s LeftUpperLeg jumps 25 deg in one frame",
+    "0.17s RightLowerLeg jumps 24 deg in one frame",
+    "1.17s RightHand starts at 60% of its peak speed in one frame"
+   ],
+   "fit": 2.738,
+   "action": true,
+   "actionNote": "head peak 6.9 m/s, hips peak 4.2 m/s",
+   "score": 2.32,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_3HitComboAttackZombie_4p7",
+   "src": "gen/motion/beats/punch_him/protofactor_3HitComboAttackZombie_4p7.npz",
+   "via": "twin",
+   "seconds": 1.67,
+   "total": 9,
+   "verdict": "reads as human (9/10)",
+   "low": [
+    "ease 4.8",
+    "anticipation 6",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.8,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 9.3,
+    "weight": 9.2,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand travels 71 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 2.646,
+   "action": false,
+   "actionNote": "head peak 0.6 m/s, hips peak 0.4 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": 0.71,
+   "source": "protofactor/3HitComboAttackZombie 4.7-6.37 s 3Hit Combo Attack Zombie (Zombie)"
+  },
+  {
+   "name": "GetHitFrontLightCombat",
+   "src": "gen/mocap/index/protofactor/GetHitFrontLightCombat.npz",
+   "via": "twin",
+   "seconds": 0.53,
+   "total": 9.3,
+   "verdict": "reads as human (9.3/10)",
+   "low": [
+    "ease 5",
+    "overlap 8.6",
+    "weight 9.3"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 8.6,
+    "weight": 9.3,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s RightHand starts at 63% of its peak speed in one frame",
+    "0.53s RightHand stops dead from 88% of its peak"
+   ],
+   "fit": 2.821,
+   "action": false,
+   "actionNote": "head peak 1.3 m/s, hips peak 0.6 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": 0.66,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_GetHitHeavyFrontZombie_0p5",
+   "src": "gen/motion/beats/punch_him/protofactor_GetHitHeavyFrontZombie_0p5.npz",
+   "via": "twin",
+   "seconds": 1.3,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "ease 3",
+    "anticipation 3.8",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3,
+    "timing": 10,
+    "anticipation": 3.8,
+    "overlap": 10,
+    "weight": 9.4,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand travels 46 cm with no anticipation and no overshoot or settle",
+    "1.3s LeftHand stops dead from 76% of its peak",
+    "0.87s LeftFoot starts at 72% of its peak speed in one frame"
+   ],
+   "fit": 2.648,
+   "action": false,
+   "actionNote": "head peak 0.8 m/s, hips peak 0.2 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": 0.4,
+   "source": "protofactor/GetHitHeavyFrontZombie 0.5-1.83 s Get Hit Heavy Front Zombie (Zombie"
+  },
+  {
+   "name": "protofactor_GetHitFrontHeavyWizard_0",
+   "src": "gen/motion/beats/punch_him/protofactor_GetHitFrontHeavyWizard_0.npz",
+   "via": "twin",
+   "seconds": 1.67,
+   "total": 8.8,
+   "verdict": "reads as human (8.8/10)",
+   "low": [
+    "snaps 0",
+    "weight 7.5",
+    "ease 9.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.5,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.7s RightToes jumps 22 deg in one frame"
+   ],
+   "fit": 2.719,
+   "action": false,
+   "actionNote": "head peak 1.7 m/s, hips peak 0.8 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": 0.36,
+   "source": "protofactor/GetHitFrontHeavyWizard 0-1.67 s Get Hit Front Heavy Wizard (Wizard)"
+  },
+  {
+   "name": "GetHitFrontHeavyCombat",
+   "src": "gen/mocap/index/protofactor/GetHitFrontHeavyCombat.npz",
+   "via": "twin",
+   "seconds": 1,
+   "total": 9,
+   "verdict": "reads as human (9/10)",
+   "low": [
+    "ease 5.9",
+    "weight 7.5",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 5.9,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 9,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.3,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.37s LeftFoot starts at 82% of its peak speed in one frame",
+    "0.03s RightHand starts at 62% of its peak speed in one frame"
+   ],
+   "fit": 2.831,
+   "action": false,
+   "actionNote": "head peak 1.7 m/s, hips peak 0.4 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": 0.34,
+   "source": "twin"
+  },
+  {
+   "name": "Stunned",
+   "src": "gen/mocap/index/protofactor/Stunned.npz",
+   "via": "twin",
+   "seconds": 2,
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)",
+   "low": [
+    "ease 2.3",
+    "anticipation 6",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.3,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 9.6,
+    "hands": 8,
+    "contact": 10,
+    "reference": 8.7
+   },
+   "worst": [
+    "0.03s the head hangs 45 deg forward of the chest",
+    "2s LeftHand stops dead from 96% of its peak",
+    "0.57s LeftHand starts at 67% of its peak speed in one frame"
+   ],
+   "fit": 2.607,
+   "action": false,
+   "actionNote": "head peak 0.3 m/s, hips peak 0.1 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": 0.29,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_GetHitLightFrontZombie_0",
+   "src": "gen/motion/beats/punch_him/protofactor_GetHitLightFrontZombie_0.npz",
+   "via": "twin",
+   "seconds": 1.3,
+   "total": 8.2,
+   "verdict": "passable, weak on anticipation and ease (8.2/10)",
+   "low": [
+    "anticipation 0",
+    "ease 1.9",
+    "overlap 7.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 1.9,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 7.8,
+    "weight": 9.7,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.3s LeftHand stops dead from 84% of its peak",
+    "0.2s LeftFoot starts at 71% of its peak speed in one frame"
+   ],
+   "fit": 2.652,
+   "action": false,
+   "actionNote": "head peak 1.0 m/s, hips peak 0.7 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": -0.1,
+   "source": "protofactor/GetHitLightFrontZombie 0-1.33 s Get Hit Light Front Zombie (Zombie)"
+  },
+  {
+   "name": "mm_flinch_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_flinch_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 8.2,
+   "verdict": "passable, weak on ease and reference (8.2/10)",
+   "low": [
+    "ease 3.2",
+    "reference 5.4",
+    "overlap 5.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.2,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 5.5,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.8,
+    "hands": 10,
+    "contact": 10,
+    "reference": 5.4
+   },
+   "worst": [
+    "0.23s LeftHand stops dead from 62% of its peak"
+   ],
+   "fit": 2.829,
+   "action": false,
+   "actionNote": "head peak 0.3 m/s, hips peak 0.5 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": -0.46,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_GetHitLeftLightWizard_0",
+   "src": "gen/motion/beats/punch_him/protofactor_GetHitLeftLightWizard_0.npz",
+   "via": "twin",
+   "seconds": 1.67,
+   "total": 7.8,
+   "verdict": "passable, weak on anticipation and overlap (7.8/10)",
+   "low": [
+    "anticipation 0",
+    "overlap 3.8",
+    "ease 3.9"
+   ],
+   "principles": {
+    "arcs": 8,
+    "ease": 3.9,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.8,
+    "weight": 9.9,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s Head starts at 61% of its peak speed in one frame"
+   ],
+   "fit": 2.745,
+   "action": false,
+   "actionNote": "head peak 1.0 m/s, hips peak 0.5 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": -0.69,
+   "source": "protofactor/GetHitLeftLightWizard 0-1.67 s Get Hit Left Light Wizard (Wizard)"
+  },
+  {
+   "name": "protofactor_GetHitRightLightWizard_0",
+   "src": "gen/motion/beats/punch_him/protofactor_GetHitRightLightWizard_0.npz",
+   "via": "twin",
+   "seconds": 1.67,
+   "total": 7.8,
+   "verdict": "passable, weak on anticipation and overlap (7.8/10)",
+   "low": [
+    "anticipation 0",
+    "overlap 3.8",
+    "ease 3.9"
+   ],
+   "principles": {
+    "arcs": 8,
+    "ease": 3.9,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.8,
+    "weight": 9.9,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s Head starts at 61% of its peak speed in one frame"
+   ],
+   "fit": 2.745,
+   "action": false,
+   "actionNote": "head peak 1.0 m/s, hips peak 0.5 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": -0.69,
+   "source": "protofactor/GetHitRightLightWizard 0-1.67 s Get Hit Right Light Wizard (Wizard)"
+  },
+  {
+   "name": "mx_hit_reaction",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_hit_reaction.fbx",
+   "via": "twin",
+   "seconds": 0.43,
+   "total": 7.7,
+   "verdict": "passable, weak on snaps and ease (7.7/10)",
+   "low": [
+    "snaps 0",
+    "ease 5",
+    "overlap 5.1"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 5.1,
+    "weight": 9.9,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.07s LeftLowerArm jumps 10 deg in one frame"
+   ],
+   "fit": 2.949,
+   "action": false,
+   "actionNote": "head peak 1.5 m/s, hips peak 0.5 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": -1.2,
+   "source": "twin"
+  },
+  {
+   "name": "ps_punched_launch_b",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@ps_punched_launch_b.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 6.3,
+   "verdict": "looks animated, not acted: snaps and overlap give it away (6.3/10)",
+   "low": [
+    "snaps 0",
+    "overlap 3.3",
+    "reference 4.1"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8,
+    "timing": 6,
+    "anticipation": 10,
+    "overlap": 3.3,
+    "weight": 5,
+    "snaps": 0,
+    "stiffness": 5.3,
+    "silhouette": 9.7,
+    "hands": 10,
+    "contact": 10,
+    "reference": 4.1
+   },
+   "worst": [
+    "0.9s Neck jumps 83 deg in one frame",
+    "0.1s Head jumps 22 deg in one frame",
+    "1.23s RightUpperArm jumps 20 deg in one frame"
+   ],
+   "fit": 3.796,
+   "action": true,
+   "actionNote": "head peak 12.2 m/s, hips peak 9.6 m/s",
+   "score": -1.29,
+   "source": "twin"
+  },
+  {
+   "name": "ps_punched_launch_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@ps_punched_launch_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 6.1,
+   "verdict": "looks animated, not acted: snaps and overlap give it away (6.1/10)",
+   "low": [
+    "snaps 0",
+    "overlap 3",
+    "reference 4.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.3,
+    "timing": 6,
+    "anticipation": 6.5,
+    "overlap": 3,
+    "weight": 5,
+    "snaps": 0,
+    "stiffness": 5.4,
+    "silhouette": 9.7,
+    "hands": 10,
+    "contact": 10,
+    "reference": 4.8
+   },
+   "worst": [
+    "0.9s Neck jumps 82 deg in one frame",
+    "0.1s Head jumps 22 deg in one frame",
+    "3.63s the body's centre of mass jerks at 113 m/s^2"
+   ],
+   "fit": 4.777,
+   "action": true,
+   "actionNote": "head peak 11.8 m/s, hips peak 10.9 m/s",
+   "score": -3.45,
+   "source": "twin"
+  },
+  {
+   "name": "mm_flinch_b",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_flinch_b.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 5.4,
+   "verdict": "looks animated, not acted: anticipation and overlap give it away (5.4/10)",
+   "low": [
+    "anticipation 0",
+    "overlap 1.2",
+    "arcs 1.5"
+   ],
+   "principles": {
+    "arcs": 1.5,
+    "ease": 1.8,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 1.2,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 2.7
+   },
+   "worst": [
+    "0.07s Head travels 31 cm in a straight line (bend 0.02)",
+    "0.93s LeftHand starts at 78% of its peak speed in one frame"
+   ],
+   "fit": 2.945,
+   "action": false,
+   "actionNote": "head peak 0.6 m/s, hips peak 0.3 m/s (a hit wants the head at 2 m/s or the body thrown)",
+   "score": -3.49,
+   "source": "twin"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_punch_him/gm_hp_punch_him_t0.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_punch_him/gm_hp_punch_him_t0.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_punch_him/gm_hp_punch_him_t1.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_punch_him/gm_hp_punch_him_t1.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_punch_him/gm_hp_punch_him_t2.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_punch_him/gm_hp_punch_him_t2.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  }
+ ],
+ "fitWeight": 2,
+ "board": "p02-p03: his head snaps on contact, then he is launched straight up through the ceiling"
+}

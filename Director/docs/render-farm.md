@@ -242,3 +242,32 @@ Nothing else. The build order below is agents' work.
    (section 1). `farm.mjs` gets `render`/`previs` wired to the tool, the resubmit of missing shots, and
    `final/farm-pace.json` written from each run's `worker.json` so the price model learns.
 4. Then a 5-worker final of Hawkes Punch, timed, and the numbers in section 2 replaced with measured ones.
+
+## 7. Status of the pilot (2026-11-08, farm agent)
+
+**Built (no money spent: $0.00 of the $20).**
+- hawkesgen branch `farm/unity-render` (commits `fd8f516`, `eedb16e`, from `dev`; not merged): the `unity.render` tool
+  (`src/tools/unityrender.ts`: `render`, `sync`, `check`), `image: 'unity-render'` routing (never the fleet, never a
+  ComfyUI endpoint), `server/unity-render/` (this Dockerfile, `worker.sh`, `Farm.cs`, Gen's `worker.py`),
+  `.github/workflows/farm-image.yml` (tag `farm-image-*`), `tools/gpu-providers/runpod.mjs --kind unity-render`,
+  `docs/unity-render.md`, `test/unityrender.test.ts`. Typecheck clean; the suite's 8 failures are flaky under load or
+  already failing on `dev` (`phone-touch`), and pass alone.
+- The image: tag `farm-image-2026-11-08a` builds `ghcr.io/jgriffith3433/hawkes-gen-gpu:unity-render-*` on GitHub.
+- The RunPod endpoint `hawkes-gen-unity-render` (`1c3f2m7br6gg3f`, template `mewutuftzb`): exact RTX A4000 / A4500 /
+  4000 Ada, idle 300 s, 50 GB disk, the Unity build account and worker token in its env. **Max workers 0** (below).
+- `tools/farm.mjs`: `sync` (blobs the volume lacks in 1 GB tars, then the manifest), `render`/`previs` (one job per
+  group at once, files into `final/<w>x<h>-<fps>[@previs]/`, missing shots resubmitted once, `farm-pace.json` from each
+  run's `worker.json`). The tree now adds the gitignored render inputs (Motion/Clean clips, AtmosphericHouse textures,
+  the video scenes): **9,628 files, 7.97 GB** (`1e9f6b40b06d2841` today). Note Hawkes Punch is 24 fps: pass `--fps 24`.
+
+**Blocked, needs J (in this order):**
+1. **RunPod balance $4.29** (spend $5.25/h from other endpoints when read): RunPod refuses a network volume under $5,
+   so the $20 has to be added to the RunPod account first.
+2. **RunPod's worker quota is 10 and all 10 are taken** (gen-3d 1, play-native 2, playtest-gfx 4, gen-gpu 3): the farm
+   endpoint is at max 0. Either RunPod raises the quota or another endpoint gives some up.
+3. **Gen**: a RunPod worker reaches files through Gen's broker (`HAWKESGEN_PUBLIC_URL`), so a Gen on this PC can't
+   drive it. The tool must be on beta Gen: J's lane push of `farm/unity-render` (into `dev`, then `beta`), plus beta
+   Gen's settings entry `runpod-unity` (`familyOrder: { "unity-render": ["runpod-unity"] }`).
+Then: `node tools/gpu-providers/runpod.mjs --kind unity-render --apply --dc EU-RO-1 --max 5` (volume in EU-RO-1,
+where the A4500 workers land), `FARM_GEN_URL=https://beta.hawkesgen.ai FARM_OK=1 mv farm sync`, the one-shot warm-up
+and the comparison. Section 2's numbers are still estimates.

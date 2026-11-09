@@ -1,0 +1,183 @@
+{
+ "name": "mm_cross_punch_a",
+ "fps": 30,
+ "frames": 251,
+ "seconds": 8.33,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.9,
+  "straightFrac": 0,
+  "moves": 5,
+  "flatness": 0.31,
+  "abruptFrac": 0.6,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 6.5,
+  "fastRunMedianS": 1.8,
+  "dynRange": 21.16,
+  "handPeak": 3.28,
+  "bigMoves": 3,
+  "anticipFrac": 0,
+  "overshootFrac": 0.33,
+  "coherence": 0.72,
+  "lagMedianFrames": 2,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 16.24,
+  "plantedFrac": 0.07,
+  "zgSpeedChanges": null,
+  "snapsPer10": 1.2,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.02,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.72,
+  "twinnedFrac": 0,
+  "curlMedian": null,
+  "spreadMedian": null,
+  "fannedFrac": 0,
+  "bowMedian": 14.13,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 10.46,
+  "armOmegaP95": 161.3,
+  "legOmegaP95": 93.3,
+  "spineOmegaP50": 6.58,
+  "spineOmegaP95": 44.35,
+  "headOmegaP50": 10.27,
+  "headOmegaP95": 83.24,
+  "armAccP95": 1883.91,
+  "spineAccP95": 612.81,
+  "handSpeedP50": 0,
+  "handSpeedP95": 1.47,
+  "spineToArm": 0.63,
+  "energyCV": 1.62,
+  "moveRate": 0.24,
+  "refDistance": 1.8,
+  "refWorst": [
+   {
+    "k": "handSpeedP50",
+    "z": -5
+   },
+   {
+    "k": "energyCV",
+    "z": 5
+   },
+   {
+    "k": "moveRate",
+    "z": -2.5046975988956914
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.9 over 5 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 5.9,
+   "note": "speed shape 0.31 (bell 0.6, constant 1.0), 60% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 6,
+   "note": "1 holds (median 6.5 s), 0% of frames dead still, fast parts median 1.8 s"
+  },
+  "anticipation": {
+   "score": 5,
+   "note": "3 big moves: 0 with anticipation, 1 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 5.4,
+   "note": "parts' speed profiles agree 0.72 (1 = everything moves as one); typical lag between parts 2 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 8.8,
+   "note": "0 centre-of-mass jerks, planted feet slide 16 cm/s"
+  },
+  "snaps": {
+   "score": 8.5,
+   "note": "1 body snaps or pops in 8.33 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "2% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "16 key poses, readability 0.72 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl NaN deg, spread NaN deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 7,
+   "note": "1.8 robust z from 174 mocap clips; furthest: handSpeedP50 low (5), energyCV high (5), moveRate low (2.5)"
+  }
+ },
+ "events": [
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "snap",
+   "part": "RightToes",
+   "sev": 0.84,
+   "what": "RightToes jumps 9 deg in one frame"
+  },
+  {
+   "t": 1.83,
+   "f": 55,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.56,
+   "what": "LeftFoot stops dead from 65% of its peak"
+  },
+  {
+   "t": 1.83,
+   "f": 55,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.54,
+   "what": "RightFoot stops dead from 86% of its peak"
+  },
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.54,
+   "what": "Head starts at 69% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.07,
+   "f": 2,
+   "kind": "snap",
+   "part": "RightToes",
+   "sev": 0.84,
+   "what": "RightToes jumps 9 deg in one frame",
+   "also": [
+    "abrupt-start"
+   ]
+  },
+  {
+   "t": 1.83,
+   "f": 55,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.56,
+   "what": "LeftFoot stops dead from 65% of its peak",
+   "also": [
+    "abrupt-stop"
+   ]
+  }
+ ],
+ "total": 7.8,
+ "verdict": "passable, weak on anticipation and overlap (7.8/10)"
+}

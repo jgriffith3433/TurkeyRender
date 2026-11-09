@@ -1,8 +1,50 @@
 # HANDOFF: Hawkes Punch and the director system (state at 2026-11-08, evening)
 
+## LATEST (2026-11-08 night, second Claude account; read this block first, it supersedes the rest where they differ)
+
+The first account hit its weekly limit (resets Nov 12, 9am PT) and every agent stopped mid-work. The work was committed and
+pushed (TurkeyRender `362a646`; `Motion/Clean` anims, AtmosphericHouse 4K textures, renders, review strips, bone dumps and
+backup wavs are gitignored as too big or rebuilt by tools) and picked back up on a second account. J (2026-11-08): "Just do
+everything", "Stop asking me to do stuff. You do it": run approved steps yourself, retry a blocked one after his go-ahead.
+
+**Where each piece stands** (details in the files named):
+- **Story:** approved, unchanged. Animatic `videos/hawkespunch/animatic.mp4` (204.25 s, `tools/animatic.mjs`, no Unity).
+  Cold view `COLD-VIEW-4.md`: 34 of 53 beats missed. Main gaps: the product's name never reads (blank poster/can in
+  panels), space cause-and-effect (expected in stills), the double's reveal (s04: stage the turn as a mirror, same face,
+  a held "that's me" before "That's a sheet."; no board change, J agreed).
+- **Sound:** generated from the board (`tools/punch_sound.mjs`, `punch_beds.mjs`, `punch_lines.mjs`, `punch_split.mjs`,
+  all registered in `generated.json`). Long takes split per line.
+- **Hero tests: 0 of 6 passed.** State, verdicts and exact next steps: `videos/hawkespunch/tests/REVIEW.md` (rounds 1-9).
+  - punch: 4 rounds failed on two engine faults, now FIXED (hitstop resume in `MVEpicScore.HoldNative` + `ScoreCompiler
+    .BakeWarp`; Person2 layers do work). New strike `mm_doc_rise_b` (off-hand low, fist-overhead hold). Round 9 in flight.
+  - s05 ring: 14 rebuilds failed ("a flat tan slab"). Next: a rebuild from 0.5-2 km above the ring plane looking down,
+    them punching through it; the wake in the ice-field rock material.
+  - s06 boo: bodies sink into a dark hole on `moon_ground` (set/engine fault to fix first).
+  - s10, s12, s14: motion picks ready (WORKLOG "motion candidates" rounds 1-3), not built.
+  - Board stays approved; the uppercut replaces "fist cocked behind her ear" (head heights make a hook impossible; J told).
+- **Motion:** candidates for every hero beat (`library/motion/critic/beats/<beat>.md`), critic calibrated (mocap 8.6 vs
+  keyed 5.9), headless twin `tools/critic/twin.py` (within ~0.3 of Unity), `tools/motion_scan.py`, `motion_splice.py`.
+- **Engine and tools fixed today:** cuts land exactly on frames (`cards.mjs`, when score.json has `fps`); a `for: 0` cue
+  on a cut's frame (`MVCore.cs`); hitstop; `mv coldview` on Windows (drawtext escaping) and judging each beat once;
+  `mv hold` without a shell; `mv doctor` closed vs hung Unity; `mv make` gates (11/11 tests); Blender BVH padding.
+- **His skin:** hawkespunch-only green tinge on body and head (`tools/punch_wardrobe.py`, `Props/Person_sick*.png`); not
+  yet matched under clinic light (sample face and forearm in one frame, solve each separately).
+- **In flight when written:** sets/props agent (poster and can legible first; the rest listed in `videos/hawkespunch/
+  SETS.md`), alive-layer agent (`tools/alive.mjs`, `review/alive.md`), Unity owner (punch only). Their reports land in
+  the WORKLOG and those files.
+- **Render farm:** Gen beta has `unity.render` (hawkesgen `v1.25.0-beta.1`) and big uploads straight to the bucket
+  (`v1.25.0-beta.3`); RunPod endpoint `hawkes-gen-unity-render` (`1c3f2m7br6gg3f`, max 3, volume `rvs68wl5p9` EU-RO-1,
+  template `mewutuftzb`) and Gen beta's settings have `runpod-unity`. Playtest endpoint lowered to max 1 for quota.
+  Upload: `HAWKESGEN_URL=<genBetaUrl> HAWKESGEN_KEY=<genBetaKey> FARM_OK=1 node Director/tools/farm.mjs hawkespunch
+  sync --gen <genBetaUrl>` (log `Director/gen/farm-sync.log`). Then warm-up, PSNR vs `mv frame`, 1 -> 2 -> 3 workers,
+  a timed previs with `--fps 24`. $20 cap approved by J; ~$0 spent on renders so far.
+- **Gen:** its Claude runs on J's second account (dashboard AI tab). GPU fallback fixed on beta (a family's own list is
+  followed by every endpoint that names the family). The Modal 3D worker needs `ops-modal-deploy.yml kind=3d` from main,
+  i.e. after J's `DEPLOY hawkesgen`. RunPod is funded (~$47 at 16:40).
+
 For the next session (Claude Opus). Read `Director/HANDOFF-NOW.md` (the agent roster, the research list, written minutes before the model switch) and `.claude/skills/direct-video/SKILL.md` (the procedure and the rules) first. This file is only what exists, what is in flight, what comes next, and what is broken. No history: `videos/hawkespunch/PIPELINE-LOG.md` and `LESSONS-r2.md` have that.
 
-Nothing in TKShock is committed. Before touching Unity: `mv doctor` (once the hardening agent lands it), `node Director/mv.mjs queue` (a `cards hawkespunch` ticket was live at 19:06: the video agent rebuilding from the board) and `ls Director/gen/compile.lock`.
+Nothing in TKShock is committed. Before touching Unity: `mv doctor` (closed vs hung Unity, locks, drift, generated files), `node Director/mv.mjs queue` (a `cards hawkespunch` ticket was live at 19:06: the video agent rebuilding from the board) and `ls Director/gen/compile.lock`.
 
 ## The video
 
@@ -17,7 +59,9 @@ Nothing in TKShock is committed. Before touching Unity: `mv doctor` (once the ha
 ## What exists
 
 ### Tools (all in `Director/`, Node unless said; the skill lists the commands)
-- `mv.mjs`: cards, build, lint, shot, previs, final, review, freeze, shotcheck, motioncheck, queue/hold, cards insert/remove (clock shift with backup), clips, choreo, call. `mv make` (board, cards, build, motion, shot, test, previs, final) was being built by the pipeline agent on 2026-11-08: check `mv make` exists before relying on it, else run the stages by hand.
+- `mv.mjs`: cards, build, lint, shot, previs, final, review, freeze, shotcheck, motioncheck, queue/hold, cards insert/remove (clock shift with backup), clips, choreo, call.
+- **`mv make <video> [stage] [shot]`** (`tools/mv/make.mjs`): the eight gates, each failure printed with file and field; `mv make <v> status`, `mv make <v> plan` (Unity stages as a dry run), `mv approve <v> <shot> --note "J's words"` (into `tests/approved.json`; refused without his words). Hawkes Punch passes board and cards (53 shots, 6 hero: p02 s05 s06 s10 s12 s14); its hero tests are 1280x720, 24 fps, 5 s centred on the shot. Proof: `node Director/tools/mv/make-test.mjs` (11/11). Not yet run with Unity under `mv make`: shot, test, previs (with its automatic cold view, about $0.17 for Hawkes Punch), final.
+- **Working beside other agents** (toolchain.md): `mv csharp apply` (proven on the real editor 2026-11-08 22:02: a type error refused and reverted), `mv doctor [--fix]` (tells a CLOSED Unity, with the command to reopen it, from a hung one), `generated.json` per video (TK Shock's four legacy acts registered hand-maintained), leases, `mv snap`, lint on keys and references. Proof: `node Director/tools/mv/harden-test.mjs` (46/46, in a sandbox: never the real Assets).
 - Review: `tools/review.mjs` (24/30 fps reviewer, Claude vision, verdicts carry by shot hash), `tools/review_strips.mjs` (consecutive-frame strips at pops and cuts), `tools/qa.mjs` (per-shot measurements + vision, `--strict` gate), `tools/flashcheck.mjs` (Ofcom rule), `review/STANDARD.md`.
 - Motion: `tools/critic.mjs` + `tools/critic/measures.mjs` (the motion critic: twelve principles from bone dumps; `clip`, `pose`, `cut`, `dump`, `reference`, `calibrate`, `vision`, `test`; writes `library/motion/critic/`), the clip catalog (`tools/clip_catalog.mjs`, 181 clips previewed on the native path, `library/motion/catalog.md|html`, `mv clips <use>`), `tools/clip_admit.mjs`, `tools/motion_lib.mjs`, `tools/bake.mjs` (legacy path only), `mv choreo` (dance takes; not used on Hawkes Punch), keyed poses (`mv call posederive|posecheck|posemuscles`, `library/poses/`), `call clipderive`, `call clipimport`, `call cleanclips`, `call fidelity`.
 - Mocap on disk (never in Assets): `gen/mocap/cmu/` (CMU BVH, 2,548 clips, manifest.json) and `gen/mocap/protofactor/` (the 2,957-clip Asset Store collection), fetched by `tools/mocap_fetch.py`; `tools/motion_rig.py` writes `library/motion/rig.json` (his 22-joint rig in BVH space). `tools/motion/` has `bvh.py`, `sim.py`, `measure.py`, `blender_bridge.py` for the sim/match pipeline.
@@ -30,7 +74,7 @@ Nothing in TKShock is committed. Before touching Unity: `mv doctor` (once the ha
 
 ### Assets
 - **Him** (`Assets/MusicVideo/Person/`): rebuilt 2026-11-07 (sneakers, hands with knuckles, skin pores, hair sheen) plus 12 acting shape keys 2026-11-08 (`eyesNarrow squint browDown browUp browRaiseL browRaiseR mouthPress mouthClose smirk frown cheekRaise sneer`). Backups in `Director/gen/rigged/backup-2026-11-0[78]/`.
-- **Her** (`Person2/`): same shape keys; the white lab coat (`Person2/Coat/Coat.fbx`, worn by `wear` in `acts/00-cast.json`, badge and stethoscope on it), glasses `Props/Punch/glasses_lens.fbx` on `doctor.head` with `withHost`, her top blue under the coat. Known: any `layer` on her throws both arms out (open), so she gets no `g_*` layers.
+- **Her** (`Person2/`): same shape keys; the white lab coat (`Person2/Coat/Coat.fbx`, worn by `wear` in `acts/00-cast.json`, badge and stethoscope on it), glasses `Props/Punch/glasses_lens.fbx` on `doctor.head` with `withHost`, her top blue under the coat. Layers work on her (retested 2026-11-08 in `videos/_layer_test`).
 - **Props:** cans (video actors `tv_can_a/b`), the crayon drawing, pad, pen, the Golden Gloves frame (`Assets/Videos/hawkespunch/Props/gloves_frame.png`), cards `next_day.png`, `side_effects_1/2.png`, `end_card.png`. Still bare prims: the second punch's glove (W6), the turkey's cap, screen and keyboard (W9).
 - **Sets:** `clinic.json` (origin x 700; marks `doctor_punch` [0.85,0.03,3.0] face -45, `bed` [0.6,0.40,3.72], `desk_doc`, `stool`, `rx_pad`, `pen`), `commercial.json` (origin x 900), `space_epic.json`, `space.json` (the old playground, `pg_*` marks), `fx_void.json`. Moods `hp_space_*` in `library/moods.json`.
 - **Pose sheets** (`library/poses/`, derived `.anim` in `Assets/MusicVideo/Motion/Keyed/`, checks in `library/poses/check/<name>.png|mp4|json`): `zg_neutral` (+ `_a`..`_d`, the base float, proven), `hp_f1_superman`, `hp_f2_ram`, `hp_f3_lean` (flight), `hp_h1_hop`, `hp_p1_peer`, `hp_p2_sneak`, `hp_p3_deadpan`, `hp_b1_boop`, `hp_s3_strike`, `hp_r1_pull`, `hp_r2_lasso`, `hp_c1_catch`, `hp_c4_shove`, `hp_a1_atlas`, `hp_a2_setdown`, `hp_d2_letgo`, `hp_doc_punch`, `hp_doc_after`, `hp_him_hit`. J approved the 18 `hp_*` sheets as poses from the check sheets, and `hp_doc_punch` + `hp_him_hit` for the punch. They are approved poses, not yet approved motion: before one goes into a shot, run `critic.mjs pose <sheet>`, watch the check mp4 at 24 fps, and bring a real-source candidate beside it; the 5-second hero tests are where J approves the motion. Missing from SPACE-EPIC's plan: S1 (starfish brake), S2 (scare lunge), C2 (slide), C3 (storm hold), D1 (drawing up), R3 (yank).
@@ -44,11 +88,10 @@ The agent ids are in `HANDOFF-NOW.md`; their reports arrive as messages and ever
 1. **The video agent** (owns Hawkes Punch cards and Unity): `board2cards.mjs` (cut and card skeletons from `storyboard/shots.json`, staging in `cards/overrides.yaml`), the rebuild from the board, then the 5-second hero tests first. Lands in `videos/hawkespunch/cut.json`, `cards/`, `shots/`.
 2. **The motion critic** (`tools/critic.mjs`, `tools/critic/measures.mjs`; the reference `library/motion/critic/reference.json` and `calibration.md`).
 3. **Motion outside Unity**: physics sim (MuJoCo active ragdoll, `tools/motion/sim.py`), motion matching over CMU and Protofactor (`gen/mocap/`), Gen `motion.from-video` on public-domain footage; candidates land as catalog clips `gm_`/`vm_`/`sim` in `Assets/MusicVideo/Motion/`.
-4. **`mv make`** (the pipeline agent): stages board, cards, build, motion, shot, test, previs, final with gates. Lands in `Director/mv.mjs`, `Director/tools/mv/`. Until it exists, the stage commands in the skill are the pipeline.
-5. **Hardening**: `mv doctor` (environment check), `mv csharp apply` (C# into Assets from staging with rollback), a generated-file manifest, leases, lint integrity, `mv snap`.
-6. **Space set** (last WORKLOG entry 11:10): the close Jupiter cloud wall with a storm vortex, the night-side Earth check for the Atlas hold; proof card `p_atlas_night` in `videos/_space_epic`.
-7. **Cloud render farm design** + a free dry run (`Director/docs/render-farm.md`): design only; any cost needs J's OK.
-8. **This handoff**: the skill, this file, the memory notes (done).
+4. **`mv make` and hardening: landed** (see What exists). Next for it: the first Unity run of the shot, test, previs and final gates on Hawkes Punch, by the agent that owns its Unity (`mv make hawkespunch test p02`).
+5. **Space set** (last WORKLOG entry 11:10): the close Jupiter cloud wall with a storm vortex, the night-side Earth check for the Atlas hold; proof card `p_atlas_night` in `videos/_space_epic`.
+6. **Cloud render farm design** + a free dry run (`Director/docs/render-farm.md`): design only; any cost needs J's OK.
+7. **This handoff**: the skill, this file, the memory notes (done).
 
 Done pieces of the clinic and ad audit: the coat, glasses, face shapes (W1, W2, W5), legible captions (T1), the mix and beds (N1 partly, N3, N9), `b_can` back in the cut (E1), hard-cut cards (T4), the gloves frame (T6). The rest of `CLINIC-AD-AUDIT.md` is open.
 
@@ -57,7 +100,7 @@ Done pieces of the clinic and ad audit: the coat, glasses, face shapes (W1, W2, 
 1. **Collect the agents' reports.** `mv doctor`, then fix anything that broke the compile before any other work; read the WORKLOG.
 2. **When board2cards lands:** `mv cards check`, `mv lint --strict`, `mv shotcheck` to 0 A, `mv cards sheet` for staging; keep each section's total so the sound stays placed; regenerate `acts/56-space-fx.json`; then `punch_lines.mjs`, `punch_beds.mjs hawkespunch`, captions from lines.json.
 3. **Motion for the six hero moments** (the punch, the moon crater, the lasso throw, the Jupiter catch, setting Earth back, the stop): candidates from the motion agent beside the approved sheets, the critic picks, posecheck mp4 at 24 fps; the zero-g checklist on every floating shot.
-4. **The 5-second tests**, one hero moment at a time, full quality with sound, strips and critic vision clean, then J's yes or no on each clip; record the approvals in `videos/hawkespunch/notes/` or the WORKLOG.
+4. **The 5-second tests** (`mv make hawkespunch test <shot>`, then `mv approve` with J's words), one hero moment at a time, full quality with sound, strips and critic vision clean, then J's yes or no on each clip; record the approvals in `videos/hawkespunch/notes/` or the WORKLOG.
 5. **The rest of the clinic and ad audit** ("the ten that matter most"): the punch as a punch (P1-P13: within reach, low 3/4, held wind-up, 2-4 frame strike, front CU on contact, impact frame, hitstop with victim, her reaction hold A11), her coverage (C1 heads in frame, C2 eyelines, A1 writing with the pen, A2 the look up, A4 the line), the plant (A6 drumming and hum, N8), sets and light (S1 waiting room, S2 exam light, S7 studio), the ad in mediums (C10-C12, A15 cans in the drinking hands), the second punch (P13), text (T2, T5).
 6. **Previs** of the whole cut at 24 fps, strips, a cold view by an agent that never read the script (`COLD-VIEW-3.md`), fixes in the board or the overrides.
 7. **Freeze, `mv final`, review, flash check, cold view of the file, then J:** `output/hawkespunch-vN.mp4` plus a copy under 30 MB.
@@ -68,7 +111,7 @@ Engine and tools:
 - The Atlas hold (Earth overhead with the night side and city lights) is unsolved: a ceiling at 2.3 m, a blue sky at 100 km, a dark face at 300 km. Needs city lights readable at range or the limb from much farther off.
 - `speed` on a native `anim`/`layer` never reaches the clip (it is the score's slow-motion key); use `rate`. Older cards that use `speed` play at 1.
 - A hitstop inside a crossfade or a layer fade is skipped with a build note: give the clip at the hit `blend: 0`.
-- Any `layer` on Person2 throws both arms straight out.
+- (Retired 2026-11-08, engine agent) "Any `layer` on Person2 throws both arms out" does not reproduce on the native path or the legacy path: `videos/_layer_test` 0-12 s runs the same layers (upper, rightArm, spine,head, g_point, and her uppercut with its guard masked off by a leftArm layer) on her and him with the same result. The 2026-11-07 report came from her legacy bakes (PIPELINE-LOG 12/19). She can take `g_*` and masked layers.
 - Native roughness: a `walk` plays at the clip's own pace (feet skate), a blend tree plays its heaviest clip, `steps` and `speed` don't reach native bodies, a layer under weight 1 plays at 1.
 - `mv previs` ignores the style's fps: pass `--fps 24`.
 - `mv shot`'s preview mixes only sfx that start inside its window: beds that began earlier are missing (a final is right).

@@ -1,0 +1,759 @@
+{
+ "beat": "s12_atlas",
+ "when": "2026-11-08T22:23:50.331Z",
+ "zerog": true,
+ "rows": [
+  {
+   "name": "Cheer5",
+   "src": "gen/mocap/index/protofactor/Cheer5.npz",
+   "via": "twin",
+   "seconds": 3,
+   "total": 9.2,
+   "verdict": "reads as human (9.2/10)",
+   "low": [
+    "overlap 5.8",
+    "weight 7.5",
+    "ease 8.6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.6,
+    "timing": 10,
+    "anticipation": 9.6,
+    "overlap": 5.8,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 8.8,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.43s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "2s in zero-g the body changes speed by 0.48 m/s with nothing to push on",
+    "0.5s in zero-g the body changes speed by 0.35 m/s with nothing to push on"
+   ],
+   "fit": 0.839,
+   "action": true,
+   "actionNote": "both hands over the head for 1.50 s",
+   "score": 7.52,
+   "source": "twin"
+  },
+  {
+   "name": "vm_lift_cleanjerk",
+   "src": "gen/refvideo/gen/vm_lift_cleanjerk/vm_lift_cleanjerk.bvh",
+   "via": "twin",
+   "seconds": 4.17,
+   "total": 8.4,
+   "verdict": "passable, weak on anticipation and snaps (8.4/10)",
+   "low": [
+    "anticipation 3.5",
+    "snaps 4",
+    "overlap 7.3"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.5,
+    "timing": 10,
+    "anticipation": 3.5,
+    "overlap": 7.3,
+    "weight": 7.5,
+    "snaps": 4,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "3.53s LeftLowerLeg jumps 20 deg in one frame",
+    "0.6s in zero-g the body changes speed by 0.44 m/s with nothing to push on",
+    "1s in zero-g the body changes speed by 0.46 m/s with nothing to push on"
+   ],
+   "fit": 0.81,
+   "action": true,
+   "actionNote": "both hands over the head for 0.87 s",
+   "score": 6.78,
+   "source": "twin"
+  },
+  {
+   "name": "GoToKneelHandsUp",
+   "src": "gen/mocap/index/protofactor/GoToKneelHandsUp.npz",
+   "via": "twin",
+   "seconds": 5.5,
+   "total": 8.6,
+   "verdict": "reads as human (8.6/10)",
+   "low": [
+    "anticipation 2.5",
+    "weight 7.5",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.3,
+    "timing": 10,
+    "anticipation": 2.5,
+    "overlap": 8.2,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 8.8,
+    "hands": 8,
+    "contact": 10,
+    "reference": 8.6
+   },
+   "worst": [
+    "1.1s in zero-g the body changes speed by 0.43 m/s with nothing to push on",
+    "1.8s in zero-g the body changes speed by 0.5 m/s with nothing to push on",
+    "2.07s LeftFoot travels 49 cm with no anticipation and no overshoot or settle"
+   ],
+   "fit": 0.931,
+   "action": true,
+   "actionNote": "both hands over the head for 4.03 s",
+   "score": 6.74,
+   "source": "twin"
+  },
+  {
+   "name": "vm_lift_kettlebell",
+   "src": "gen/refvideo/gen/vm_lift_kettlebell/vm_lift_kettlebell.bvh",
+   "via": "twin",
+   "seconds": 7.97,
+   "total": 8,
+   "verdict": "passable, weak on snaps and overlap (8/10)",
+   "low": [
+    "snaps 0",
+    "overlap 3.7",
+    "anticipation 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.1,
+    "timing": 10,
+    "anticipation": 7.5,
+    "overlap": 3.7,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9.9,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.57s LeftLowerArm jumps 28 deg in one frame",
+    "1.93s RightLowerArm jumps 22 deg in one frame",
+    "7.83s RightLowerArm jumps 34 deg in one frame"
+   ],
+   "fit": 0.82,
+   "action": true,
+   "actionNote": "both hands over the head for 2.03 s",
+   "score": 6.36,
+   "source": "twin"
+  },
+  {
+   "name": "IdleBreatheHandsUp",
+   "src": "gen/mocap/index/protofactor/IdleBreatheHandsUp.npz",
+   "via": "twin",
+   "seconds": 2.67,
+   "total": 7.6,
+   "verdict": "passable, weak on reference and hands (7.6/10)",
+   "low": [
+    "reference 1.7",
+    "hands 8",
+    "silhouette 8.5"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 1.7
+   },
+   "worst": [
+    "0.03s the head hangs 36 deg forward of the chest"
+   ],
+   "fit": 1.006,
+   "action": true,
+   "actionNote": "both hands over the head for 2.70 s",
+   "score": 5.59,
+   "source": "twin"
+  },
+  {
+   "name": "IdleWallClimb",
+   "src": "gen/mocap/index/protofactor/IdleWallClimb.npz",
+   "via": "twin",
+   "seconds": 2,
+   "total": 7,
+   "verdict": "passable, weak on ease and reference (7/10)",
+   "low": [
+    "ease 0",
+    "reference 3.9",
+    "overlap 7.1"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 0,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 7.1,
+    "weight": 7.9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 3.9
+   },
+   "worst": [
+    "1.8s in zero-g the body changes speed by 0.29 m/s with nothing to push on",
+    "1.53s Head starts at 67% of its peak speed in one frame",
+    "0.2s Head starts at 89% of its peak speed in one frame"
+   ],
+   "fit": 0.915,
+   "action": true,
+   "actionNote": "both hands over the head for 2.03 s",
+   "score": 5.17,
+   "source": "twin"
+  },
+  {
+   "name": "mx_hanging_idle",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_hanging_idle.fbx",
+   "via": "twin",
+   "seconds": 4.7,
+   "total": 7.4,
+   "verdict": "passable, weak on ease and reference (7.4/10)",
+   "low": [
+    "ease 0",
+    "reference 3.8",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": 0,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 3.8
+   },
+   "worst": [
+    "0.03s the head hangs 35 deg forward of the chest",
+    "1.4s LeftFoot starts at 95% of its peak speed in one frame",
+    "2.5s LeftFoot starts at 77% of its peak speed in one frame"
+   ],
+   "fit": 1.268,
+   "action": true,
+   "actionNote": "both hands over the head for 4.73 s",
+   "score": 4.86,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_56_08_17p2",
+   "src": "gen/motion/beats/s12_atlas/cmu_56_08_17p2.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 8.6,
+   "verdict": "reads as human (8.6/10)",
+   "low": [
+    "ease 4",
+    "overlap 4.5",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4,
+    "timing": 10,
+    "anticipation": 8,
+    "overlap": 4.5,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.3s in zero-g the body changes speed by 0.28 m/s with nothing to push on",
+    "0.03s RightHand starts at 100% of its peak speed in one frame",
+    "1.5s LeftHand stops dead from 70% of its peak"
+   ],
+   "fit": 0.705,
+   "action": false,
+   "actionNote": "both hands over the head for 0.10 s (an overhead hold wants 0.5 s)",
+   "score": 4.19,
+   "source": "cmu/56_08 17.2-18.73 s vignettes - lift open window, smash against wall, hop, wa"
+  },
+  {
+   "name": "Cheer1",
+   "src": "gen/mocap/index/protofactor/Cheer1.npz",
+   "via": "twin",
+   "seconds": 5.33,
+   "total": 9,
+   "verdict": "reads as human (9/10)",
+   "low": [
+    "overlap 6",
+    "ease 7.2",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 7.2,
+    "timing": 10,
+    "anticipation": 8.1,
+    "overlap": 6,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.77s 5 of 5 parts peak on the same frame (everything moves as one)",
+    "2.27s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "2.77s 4 of 5 parts peak on the same frame (everything moves as one)"
+   ],
+   "fit": 0.98,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 4.04,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_56_06_26",
+   "src": "gen/motion/beats/s12_atlas/cmu_56_06_26.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 8.1,
+   "verdict": "passable, weak on snaps and ease (8.1/10)",
+   "low": [
+    "snaps 0",
+    "ease 5",
+    "overlap 6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 6,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.33s RightToes jumps 31 deg in one frame",
+    "1.13s RightToes jumps 23 deg in one frame",
+    "0.83s RightToes jumps 12 deg in one frame"
+   ],
+   "fit": 0.692,
+   "action": false,
+   "actionNote": "both hands over the head for 0.27 s (an overhead hold wants 0.5 s)",
+   "score": 3.72,
+   "source": "cmu/56_06 26-27.53 s vignettes - throw punches, grab, skip, yawn, stretch, leap,"
+  },
+  {
+   "name": "cmu_17_08_13p4",
+   "src": "gen/motion/beats/s12_atlas/cmu_17_08_13p4.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 8,
+   "verdict": "passable, weak on anticipation and snaps (8/10)",
+   "low": [
+    "anticipation 0",
+    "snaps 1.7",
+    "ease 4.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 1.7,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.8s LeftHand jumps 12 deg in one frame",
+    "0.47s LeftHand travels 57 cm with no anticipation and no overshoot or settle",
+    "0.03s LeftHand starts at 94% of its peak speed in one frame"
+   ],
+   "fit": 0.671,
+   "action": false,
+   "actionNote": "both hands over the head for 0.23 s (an overhead hold wants 0.5 s)",
+   "score": 3.66,
+   "source": "cmu/17_08 13.4-14.93 s muscular, heavyset person's walk"
+  },
+  {
+   "name": "mx_lift_heavy",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_lift_heavy.fbx",
+   "via": "twin",
+   "seconds": 11.5,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "anticipation 6.2",
+    "overlap 6.7",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.2,
+    "timing": 7.8,
+    "anticipation": 6.2,
+    "overlap": 6.7,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.7s in zero-g the body changes speed by 0.47 m/s with nothing to push on",
+    "1.2s in zero-g the body changes speed by 0.49 m/s with nothing to push on",
+    "1.5s in zero-g the body changes speed by 0.65 m/s with nothing to push on"
+   ],
+   "fit": 1.025,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 3.65,
+   "source": "twin"
+  },
+  {
+   "name": "gm_zg_throw",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@gm_zg_throw.fbx",
+   "via": "twin",
+   "seconds": 2.47,
+   "total": 8.9,
+   "verdict": "reads as human (8.9/10)",
+   "low": [
+    "ease 5.3",
+    "weight 7.5",
+    "overlap 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5.3,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 8,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.5,
+    "silhouette": 9.7,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.3s in zero-g the body changes speed by 0.68 m/s with nothing to push on",
+    "0.6s in zero-g the body changes speed by 0.91 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 0.46 m/s with nothing to push on"
+   ],
+   "fit": 1.138,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 3.62,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_56_04_45p1",
+   "src": "gen/motion/beats/s12_atlas/cmu_56_04_45p1.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 8,
+   "verdict": "passable, weak on snaps and ease (8/10)",
+   "low": [
+    "snaps 1.7",
+    "ease 3.5",
+    "anticipation 3.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.5,
+    "timing": 10,
+    "anticipation": 3.8,
+    "overlap": 9.7,
+    "weight": 7.5,
+    "snaps": 1.7,
+    "stiffness": 10,
+    "silhouette": 9.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.73s RightToes jumps 12 deg in one frame",
+    "0.1s in zero-g the body changes speed by 0.41 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.28 m/s with nothing to push on"
+   ],
+   "fit": 0.695,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 3.61,
+   "source": "cmu/56_04 45.1-46.63 s vignettes - fists up, wipe window, grab, lift open window"
+  },
+  {
+   "name": "cmu_56_05_32p9",
+   "src": "gen/motion/beats/s12_atlas/cmu_56_05_32p9.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 7.8,
+   "verdict": "passable, weak on snaps and anticipation (7.8/10)",
+   "low": [
+    "snaps 1.7",
+    "anticipation 2.2",
+    "ease 4.7"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 4.7,
+    "timing": 10,
+    "anticipation": 2.2,
+    "overlap": 8.4,
+    "weight": 7.5,
+    "snaps": 1.7,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.87s Head jumps 11 deg in one frame",
+    "0.1s in zero-g the body changes speed by 0.34 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.29 m/s with nothing to push on"
+   ],
+   "fit": 0.659,
+   "action": false,
+   "actionNote": "both hands over the head for 0.43 s (an overhead hold wants 0.5 s)",
+   "score": 3.48,
+   "source": "cmu/56_05 32.9-34.43 s vignettes - walk, drink water, run/jog, jump, wipe window"
+  },
+  {
+   "name": "cmu_56_05_48p9",
+   "src": "gen/motion/beats/s12_atlas/cmu_56_05_48p9.npz",
+   "via": "twin",
+   "seconds": 1.5,
+   "total": 7.7,
+   "verdict": "passable, weak on snaps and ease (7.7/10)",
+   "low": [
+    "snaps 0",
+    "ease 5",
+    "overlap 5.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 5,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 5.4,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.27s LeftToes jumps 11 deg in one frame",
+    "0.97s RightToes jumps 10 deg in one frame",
+    "1.27s Head jumps 9 deg in one frame"
+   ],
+   "fit": 0.696,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 3.31,
+   "source": "cmu/56_05 48.9-50.43 s vignettes - walk, drink water, run/jog, jump, wipe window"
+  },
+  {
+   "name": "Cheer9",
+   "src": "gen/mocap/index/protofactor/Cheer9.npz",
+   "via": "twin",
+   "seconds": 2.83,
+   "total": 8.1,
+   "verdict": "passable, weak on snaps and anticipation (8.1/10)",
+   "low": [
+    "snaps 0",
+    "anticipation 5",
+    "overlap 6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 10,
+    "timing": 10,
+    "anticipation": 5,
+    "overlap": 6,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "2.1s 5 of 5 parts peak on the same frame (everything moves as one)",
+    "1.1s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "1.77s 4 of 5 parts peak on the same frame (everything moves as one)"
+   ],
+   "fit": 0.951,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 3.2,
+   "source": "twin"
+  },
+  {
+   "name": "CrushingFists",
+   "src": "gen/mocap/index/protofactor/CrushingFists.npz",
+   "via": "twin",
+   "seconds": 1.33,
+   "total": 8.3,
+   "verdict": "passable, weak on snaps and ease (8.3/10)",
+   "low": [
+    "snaps 0",
+    "ease 6.8",
+    "overlap 7.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.8,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 7.2,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.49 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.76 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.69 m/s with nothing to push on"
+   ],
+   "fit": 1.167,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 2.97,
+   "source": "twin"
+  },
+  {
+   "name": "mm_lift_heavy_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_lift_heavy_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 7.1,
+   "verdict": "passable, weak on snaps and anticipation (7.1/10)",
+   "low": [
+    "snaps 1",
+    "anticipation 2.5",
+    "timing 6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.8,
+    "timing": 6,
+    "anticipation": 2.5,
+    "overlap": 7.9,
+    "weight": 7.5,
+    "snaps": 1,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 6.5
+   },
+   "worst": [
+    "0.07s RightToes jumps 14 deg in one frame",
+    "0.7s in zero-g the body changes speed by 0.53 m/s with nothing to push on",
+    "1.3s in zero-g the body changes speed by 0.6 m/s with nothing to push on"
+   ],
+   "fit": 0.955,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 2.19,
+   "source": "twin"
+  },
+  {
+   "name": "gm_zg_hold_ball",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@gm_zg_hold_ball.fbx",
+   "via": "twin",
+   "seconds": 3.7,
+   "total": 6.5,
+   "verdict": "looks animated, not acted: anticipation and ease give it away (6.5/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.5",
+    "overlap 3.2"
+   ],
+   "principles": {
+    "arcs": 5,
+    "ease": 2.5,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 3.2,
+    "weight": 8.9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 7.9
+   },
+   "worst": [
+    "3.6s 4 of 5 parts peak on the same frame (everything moves as one)",
+    "0.03s the head hangs 54 deg forward of the chest",
+    "1.4s RightFoot starts at 70% of its peak speed in one frame"
+   ],
+   "fit": 1.749,
+   "action": false,
+   "actionNote": "both hands over the head for 0.00 s (an overhead hold wants 0.5 s)",
+   "score": 0,
+   "source": "twin"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_atlas/gm_hp_atlas_t0.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_atlas/gm_hp_atlas_t0.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_atlas/gm_hp_atlas_t1.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_atlas/gm_hp_atlas_t1.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_atlas/gm_hp_atlas_t2.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_atlas/gm_hp_atlas_t2.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  }
+ ],
+ "fitWeight": 2,
+ "board": "s12: the double gathers and winds the Earth up overhead, Atlas style, a tremble; zero-g"
+}

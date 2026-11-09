@@ -56,8 +56,8 @@ export function check(dir) {
   for (const [f, e] of Object.entries(m.files)) {
     const now = outputHash(dir, f), gate = e.gate ?? 'stop';
     if (now === null) { out.push({ file: f, state: 'missing', tool: e.tool, gate }); continue; }
+    if (!e.tool) { out.push({ file: f, state: 'ok', tool: null, note: e.note ?? 'no tool: hand-maintained', gate }); continue; } // edits are the point of a hand-maintained file
     if (e.outputHash && now !== e.outputHash) { out.push({ file: f, state: 'edited', tool: e.tool, gate }); continue; }
-    if (!e.tool) { out.push({ file: f, state: 'ok', tool: null, note: 'no tool: hand-maintained', gate }); continue; }
     if (!e.inputHashes) { out.push({ file: f, state: 'unverified', tool: e.tool, gate }); continue; }
     const cur = inputHashes(dir, e.inputs ?? []), changed = [...new Set([...Object.keys(cur), ...Object.keys(e.inputHashes)])].filter((k) => cur[k] !== e.inputHashes[k]);
     out.push(changed.length ? { file: f, state: 'stale', tool: e.tool, changed, gate } : { file: f, state: 'ok', tool: e.tool, gate });

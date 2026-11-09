@@ -33,7 +33,7 @@ Read first, every session: `Director/HANDOFF-NOW.md` (the agent roster and the r
 
 ## 2. The procedure
 
-`mv make` is the one-command pipeline (built 2026-11-08 by the pipeline agent; if `mv make` is missing or a stage is not there yet, run that stage's commands by hand as listed). Its stages, in order: **board, cards, build, motion, shot, test, previs, final**. Each stage has a gate. Nothing moves on until its gate passes, and J looks at each gate once.
+`mv make <video> [<stage>] [<shot>]` is the one-command pipeline (`tools/mv/make.mjs`). Its stages, in order: **board, cards, build, motion, shot, test, previs, final**. It runs up to the stage named, stops at the first failed gate and prints each problem with `where:` (the file) and `field:`; fix exactly that and run it again (passed stages are cached by their inputs' hash). Start every session with `mv doctor`, then `mv make <video> status` (the table) and `mv make <video> plan` (board and cards for real, the Unity stages as a dry run: what would run, the cold view's price, each hero test's window and whether J has said yes). Exit 2 is a failed gate, 3 is waiting for J. The commands under each stage below are what the gate runs, for debugging one step; the judgement in them (stepping strips, candidates, cold view) is still yours. Proven without Unity on Hawkes Punch (board and cards pass, `node Director/tools/mv/make-test.mjs` breaks each Node gate on a copy); on `_cards_test` build passed and the motion gate stopped it (critic 6.7 < 7); shot, test, previs and final have not yet run under `mv make` with Unity: watch the first run of each.
 
 ### Stage 0: script and storyboard (`mv make board`)
 
@@ -85,15 +85,15 @@ The shot gate refuses an A shot fault; the bake gate refuses a failing bake repo
 
 ### Stage 5: test (`mv make test <moment>`): the 5-second hero tests
 
-For each hero moment in the board's table (Hawkes Punch: the punch, the moon crater, the lasso throw, the Jupiter catch, setting Earth back, the stop), render its shots as one 3-6 s clip at full quality with sound (`mv shot` of each, or `mv render --from --to` on the range, remuxed through `tools/remix.mjs`), run strips and the critic's vision pass (`node Director/tools/critic.mjs vision <mp4> --start <s>`), fix, repeat until clean, then **show J the 5 s clip and ask yes or no**. One moment at a time, with what to look for. J approves hero moments before any full render; never show him "a 100-second chunk with ten unreviewed changes" (memory feedback-you-are-the-interface).
+Hero shots are `"hero": true` on the board (Hawkes Punch: p02, s05, s06, s10, s12, s14). `mv make <video> test <shot>` renders each as `tests/<shot>.mp4`: 1280x720, 24 fps, with the mix and review strips, 5 s centred on the shot (a 0.8 s punch shows its wind-up and hold), and with `--shot` the motion and shot gates check that whole window first. Run the critic's vision pass on it (`node Director/tools/critic.mjs vision <mp4> --start <s>`), step the strips, fix, repeat until clean, then **show J the 5 s clip and ask yes or no**. On his yes: `mv approve <video> <shot> --note "his exact words"` (refused without his words; stored in `tests/approved.json`). The approval is keyed by every shot in the window: change any of them and the test renders again and needs a new yes. One moment at a time, with what to look for. J approves hero moments before any full render; never show him "a 100-second chunk with ten unreviewed changes" (memory feedback-you-are-the-interface).
 
 ### Stage 6: previs (`mv make previs`)
 
 ```
-mv previs --fps 24        # whole cut at 426x240, baked takes, no post; pass --fps 24, it defaults to 12
+mv previs --fps 24        # whole cut at 426x240, baked takes, no post; pass --fps 24, it defaults to 12 (mv make passes the video's fps)
 node Director/tools/review_strips.mjs --video videos/<v>/previs.mp4 --start 0 --cuts
 ```
-Gate: a **cold-viewer pass** by an agent that never read the script (the shape of `COLD-VIEW.md`: what happened, timeline with clear/unclear/lost/bored, confusions, grammar faults, top 10). Every gap between the retelling and the script gets a fix in the cards, not in the next render. Then J watches the previs.
+`mv make` runs an automatic cold view after the previs (Gen vision per 20 s chunk, about $0.015 each; `COLD-VIEW-<n>.md`) and fails on any board "change" beat the retelling misses. Gate: that, plus a **cold-viewer pass** by an agent that never read the script (the shape of `COLD-VIEW.md`: what happened, timeline with clear/unclear/lost/bored, confusions, grammar faults, top 10). Every gap between the retelling and the script gets a fix in the cards, not in the next render. Then J watches the previs.
 
 ### Stage 7: final (`mv make final`)
 

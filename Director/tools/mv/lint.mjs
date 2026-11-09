@@ -78,7 +78,7 @@ export function lint(v, opts = {}) {
 
   // Reading it at all: a syntax error stops here, with its line.
   let loaded, clock, ex;
-  try { loaded = loadScore(v); clock = loadClock(v, loaded.score); ex = expand(loaded.score, clock); }
+  try { loaded = loadScore(v, { acts: opts.acts }); clock = loadClock(v, loaded.score); ex = expand(loaded.score, clock); }
   catch (e) { add('error', 'read', { file: e.file, line: e.line }, e.plain ?? e.message, 'Fix the JSON at that line.'); return finish(v, out, opts); }
   const { score, dupes, origin } = loaded, { fires, problems, shots } = ex;
   for (const p of problems) add('error', p.code, p.at, p.msg, p.fix);

@@ -146,17 +146,28 @@ namespace TKShock.MV.EditorTools
                 if (_actors.ContainsKey(at) && c["creep"] != null) Op(Track(at), "hitshake", t, d, new JObject { ["creep"] = c["creep"], ["dir"] = c["creepDir"] ?? new JArray(0, 0, 1), ["amount"] = 0 });
         }
 
+        /// <summary>The first cut (a shot's start) at or after t, else the song's end: where a hitstop's owed time is paid back (BakeWarp, HoldNative).</summary>
+        double NextCut(double t)
+        {
+            foreach (var sh in _shots) if (sh.t >= t - 1e-4) return sh.t;
+            return _song ? Math.Max(_song.duration, t) : t + 1e6;
+        }
+
         /// <summary>
         /// Holds on a native body's Animation track. Unity's Animator plays it on song time, so the world's hitstop (a hold in the warp) never reached
-        /// it. Every clip that runs across a hitstop or a freeze of this actor is cut in three: up to the hold, the hold (clip time stands still: time
-        /// scale 0.001), and after it: after a hitstop at the clip time the song has reached (so every frame after the hold is what it was), after a
-        /// freeze from where it stopped. Pure functions of time, so it scrubs. Put holds on a clip playing alone (blend 0): see the fade guard below.
+        /// it by itself. Every clip playing when a hitstop or a freeze of this actor starts (one that starts on the hold's first frame too: a hit on a
+        /// cut) is cut in pieces: up to the hold; the hold (clip time stands still at the contact pose: time scale 0.001); after it, on from the
+        /// contact pose's clip time (song time minus the hold), so nothing pops. After a hitstop that lasts until the next cut, where the clip
+        /// rejoins song time (the jump is hidden in the cut, as the world's warp does: BakeWarp); after a freeze, to the clip's end. Pure functions
+        /// of time, so it scrubs and reverses. Put holds on a clip playing alone (blend 0): see the fade guard below.
+        /// (2026-11-08, engine agent: before, the clip resumed at song time when the hold ended, a pop of the hold's length of motion: 65 deg in one
+        /// frame on _layer_test, 74 deg on the doctor's arm in the punch; and a clip starting on the hold's first frame was not held at all.)
         /// </summary>
         void HoldNative(AnimationTrack track, string actor)
         {
-            // The world's hitstops (jump: after the hold the clip is where the song is, exactly as before the cut) and this actor's freezes (shift).
+            // The world's hitstops (owed until the next cut) and this actor's freezes (owed to the clip's end).
             // A hitstop that falls in a crossfade or a layer's fade is left alone, with a note: cutting there would restart the fade after the hold.
-            var holds = new List<(double t, double d, bool shift)>();
+            var holds = new List<(double t, double d, bool freeze)>();
             var clips = track.GetClips().ToList();
             foreach (var h in _holds)
             {
@@ -172,31 +183,45 @@ namespace TKShock.MV.EditorTools
             }
             if (_freezes.TryGetValue(actor, out var fz)) holds.AddRange(fz.Select(h => (h.t, h.d, true)));
             if (holds.Count == 0) return;
-            foreach (var (h0, hd, shift) in holds.OrderBy(x => x.t))
+            foreach (var (h0, hd, freeze) in holds.OrderBy(x => x.t))
             {
-                double h1 = h0 + hd;
+                double h1 = h0 + hd, back = freeze ? double.MaxValue : NextCut(h1);
                 foreach (var tc in track.GetClips().ToList())
                 {
-                    if (!(tc.start < h0 - 1e-6 && tc.end > h0 + 1e-6)) continue;   // only clips running when the hold starts
+                    if (!(tc.start < h0 + 1e-6 && tc.end > h0 + 1e-6)) continue;   // clips playing when the hold starts, or starting on its first frame
+                    if (tc.start > h0 - 1e-6 && tc.easeInDuration > 1e-6) continue;   // one fading in on the hold (a freeze's clip; hitstops are guarded above): left as it was
                     var src = (AnimationPlayableAsset)tc.asset;
                     double start = tc.start, end = tc.end, ci = tc.clipIn, k = tc.timeScale, easeOut = tc.easeOutDuration;
+                    string name = tc.displayName;
                     double At(double T) => ci + (T - start) * k;
-                    var post = tc.postExtrapolationMode;
-                    tc.duration = h0 - start; tc.easeOutDuration = 0;
-                    if (tc.easeInDuration > tc.duration) tc.easeInDuration = tc.duration;
-                    SetExtrapolation(tc, tc.preExtrapolationMode, TimelineClip.ClipExtrapolation.None);
-                    TimelineClip last;
-                    var b = track.CreateClip(src.clip);
-                    b.start = h0; b.duration = Math.Max(Math.Min(h1, end) - h0, 1e-4); b.clipIn = Math.Max(0, At(h0)); b.timeScale = .001; b.displayName = tc.displayName + " (hold)";
-                    Copy(src, b); last = b;
+                    var pre = tc.preExtrapolationMode; var post = tc.postExtrapolationMode;
+                    TimelineClip hold;
+                    if (h0 - start > 1e-6)
+                    {
+                        tc.duration = h0 - start; tc.easeOutDuration = 0;
+                        if (tc.easeInDuration > tc.duration) tc.easeInDuration = tc.duration;
+                        SetExtrapolation(tc, pre, TimelineClip.ClipExtrapolation.None);
+                        hold = track.CreateClip(src.clip); Copy(src, hold); pre = TimelineClip.ClipExtrapolation.None;
+                    }
+                    else { hold = tc; hold.easeInDuration = 0; }   // it starts on the hold: it becomes the hold
+                    hold.start = h0; hold.duration = Math.Max(Math.Min(h1, end) - h0, 1e-4); hold.clipIn = Math.Max(0, At(h0)); hold.timeScale = .001;
+                    hold.easeOutDuration = 0; hold.displayName = name + " (hold)";
+                    var pieces = new List<TimelineClip> { hold };
+                    void Piece(double from, double to, double clipIn)
+                    {
+                        if (to - from < 1e-4) return;
+                        var c = track.CreateClip(src.clip); Copy(src, c);
+                        c.start = from; c.duration = to - from; c.clipIn = Math.Max(0, clipIn); c.timeScale = k; c.displayName = name;
+                        pieces.Add(c);
+                    }
                     if (end > h1 + 1e-4)
                     {
-                        var c = track.CreateClip(src.clip);
-                        c.start = h1; c.duration = end - h1; c.clipIn = Math.Max(0, shift ? At(h0) : At(h1)); c.timeScale = k; c.displayName = tc.displayName;
-                        Copy(src, c); last = c;
+                        Piece(h1, Math.Min(end, back), At(h0));                 // on from the contact pose: song time minus the hold
+                        if (end > back + 1e-4) Piece(back, end, At(back));      // after the cut: back on song time
                     }
-                    SetExtrapolation(b, TimelineClip.ClipExtrapolation.None, last == b ? post : TimelineClip.ClipExtrapolation.None);
-                    if (last != b) SetExtrapolation(last, TimelineClip.ClipExtrapolation.None, post);
+                    for (int i = 0; i < pieces.Count; i++)
+                        SetExtrapolation(pieces[i], i == 0 ? pre : TimelineClip.ClipExtrapolation.None, i == pieces.Count - 1 ? post : TimelineClip.ClipExtrapolation.None);
+                    var last = pieces[pieces.Count - 1];
                     last.easeOutDuration = Math.Min(easeOut, last.duration * .5);
                 }
             }

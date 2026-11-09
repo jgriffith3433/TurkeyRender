@@ -1,0 +1,208 @@
+{
+ "name": "cmu_125_04_glide",
+ "fps": 30,
+ "frames": 97,
+ "seconds": 3.2,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.38,
+  "straightFrac": 0,
+  "moves": 13,
+  "flatness": 0.68,
+  "abruptFrac": 0.45,
+  "deadFrac": 0,
+  "holds": 2,
+  "holdMedianS": 0.33,
+  "fastRunMedianS": 0.13,
+  "dynRange": 2.42,
+  "handPeak": 0.6,
+  "bigMoves": 3,
+  "anticipFrac": 0.33,
+  "overshootFrac": 0,
+  "coherence": 0.5,
+  "lagMedianFrames": 4,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 15.16,
+  "plantedFrac": 0.04,
+  "zgSpeedChanges": 3.13,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.13,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.73,
+  "twinnedFrac": 0,
+  "curlMedian": null,
+  "spreadMedian": null,
+  "fannedFrac": 0,
+  "bowMedian": 43.15,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 17.56,
+  "armOmegaP95": 73.31,
+  "legOmegaP95": 78.86,
+  "spineOmegaP50": 8.14,
+  "spineOmegaP95": 26.72,
+  "headOmegaP50": 17.12,
+  "headOmegaP95": 80.9,
+  "armAccP95": 539.65,
+  "spineAccP95": 471.16,
+  "handSpeedP50": 0.18,
+  "handSpeedP95": 0.43,
+  "spineToArm": 0.46,
+  "energyCV": 0.56,
+  "moveRate": 2.19,
+  "refDistance": 0.79,
+  "refWorst": [
+   {
+    "k": "handSpeedP95",
+    "z": -1.2293097561150566
+   },
+   {
+    "k": "legOmegaP95",
+    "z": -0.9614669690251076
+   },
+   {
+    "k": "armOmegaP95",
+    "z": -0.9355820935315029
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.38 over 6 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 6.2,
+   "note": "speed shape 0.68 (bell 0.6, constant 1.0), 45% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "2 holds (median 0.33 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": 3,
+   "note": "3 big moves: 1 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 7.9,
+   "note": "parts' speed profiles agree 0.5 (1 = everything moves as one); typical lag between parts 4 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 8.7,
+   "note": "0 centre-of-mass jerks, 1 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 3.2 s"
+  },
+  "stiffness": {
+   "score": 9.9,
+   "note": "13% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "6 key poses, readability 0.73 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 8,
+   "note": "head bowed 100% of the time"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 10,
+   "note": "0.79 robust z from 174 mocap clips; furthest: handSpeedP95 low (1.23), legOmegaP95 low (0.96), armOmegaP95 low (0.94)"
+  }
+ },
+ "events": [
+  {
+   "t": 2.5,
+   "f": 75,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.75,
+   "what": "in zero-g the body changes speed by 0.25 m/s with nothing to push on"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "the head hangs 43 deg forward of the chest"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.44,
+   "what": "LeftHand starts at 99% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.43,
+   "what": "RightHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.37,
+   "f": 11,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head starts at 85% of its peak speed in one frame"
+  },
+  {
+   "t": 0.57,
+   "f": 17,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head stops dead from 85% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 2.5,
+   "f": 75,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.75,
+   "what": "in zero-g the body changes speed by 0.25 m/s with nothing to push on",
+   "also": []
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "the head hangs 43 deg forward of the chest",
+   "also": [
+    "abrupt-start"
+   ]
+  },
+  {
+   "t": 0.37,
+   "f": 11,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.42,
+   "what": "Head starts at 85% of its peak speed in one frame",
+   "also": [
+    "abrupt-stop"
+   ]
+  }
+ ],
+ "total": 8.6,
+ "verdict": "reads as human (8.6/10)"
+}

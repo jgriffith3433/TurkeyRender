@@ -105,10 +105,11 @@
     "dbl_speck": { "model": "none", "pos": [0, 6500, 30], "scale": 0, "space": { "kind": "speck", "color": "#ffb0a0", "size": 5, "glow": 6 } },
 
     // the near patches (metres, under the focus while the focus is on their body)
-    "ring_field": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "field", "ring": "ring_main", "radius": 2000, "count": 6000, "seed": 3, "thickness": 50, "sizeMin": 0.4, "sizeMax": 9,
+    "ring_field": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "field", "ring": "ring_main", "radius": 2000, "count": 16000, "seed": 3, "thickness": 50, "sizeMin": 0.4, "sizeMax": 9,
       "color": "#dfe3ea", "color2": "#a9a39a", "ice": 1, "smooth": 0.5, "detail": 0.45, "fadeFrom": 1300, "fadeTo": 1950,
       "hero": [[0, -1, 0, 8], [24, -0.5, 30, 10], [60, -1, 46, 7], [92, -0.5, 40, 12], [38, 4, 70, 14], [-26, -6, 24, 9], [10, -8, -40, 11], [70, -10, -20, 16], [130, -4, 60, 10], [-60, 5, 80, 18]],
-      "clear": [[0, 0, 0, 14], [24, 0, 30, 14], [60, 0, 46, 12], [92, 0, 40, 16], [55, 2, 34, 6], [0, 30, 0, 25]] } },
+      "clear": [[0, 0, 0, 14], [24, 0, 30, 14], [60, 0, 46, 12], [92, 0, 40, 16], [55, 2, 34, 6], [0, 30, 0, 25],
+        [-140, 43, 19, 8], [-128, 43, 19, 8], [-116, 43, 19, 8], [-104, 43, 19, 8], [-92, 43, 19, 8], [-80, 43, 19, 8], [-68, 43, 19, 8], [-56, 43, 19, 8], [-44, 43, 19, 8], [-32, 43, 19, 8], [-20, 43, 19, 8], [-8, 43, 19, 8], [4, 43, 19, 8], [16, 43, 19, 8], [28, 43, 19, 8], [40, 43, 19, 8], [52, 43, 19, 8]] } },   // 2026-11-08 Unity owner: count 6000 -> 16000 (s05: at 6000 the near field was too sparse to read as a ring of ice, fresh reviewer "a flat beige slab"); the [x, 43, 19, 8] row keeps s05's lens-to-flight corridor (camera z 26, flight z 12, y 43) clear
     "moon_ground": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "surface", "body": "greymoon", "look": "rock", "size": 3000, "planetRadius": 198000, "seed": 5, "craters": 240, "craterMax": 160,
       "rocks": 500, "rockRadius": 300, "rockMax": 2.5, "color": "#8a8985", "color2": "#5d5c59", "clear": [[0, 0, 0, 8]] } },
     "jupiter_deck": { "model": "none", "pos": [0, 0, 0], "space": { "kind": "surface", "body": "jupiter", "look": "cloud", "size": 40000, "planetRadius": 69911000, "amp": 90, "scale": 900, "boil": 0.03, "bands": 120, "vortex": [3.2, 2.4, 7, 0.012], "first": 0.6, "rings": 200, "sectors": 288 } }

@@ -1,0 +1,285 @@
+{
+ "name": "cmu_126_03_glide",
+ "fps": 30,
+ "frames": 49,
+ "seconds": 1.6,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.31,
+  "straightFrac": 0,
+  "moves": 9,
+  "flatness": 0.6,
+  "abruptFrac": 1,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": 0.03,
+  "dynRange": 2.22,
+  "handPeak": 1.19,
+  "bigMoves": 9,
+  "anticipFrac": 0.22,
+  "overshootFrac": 0.11,
+  "coherence": 0.59,
+  "lagMedianFrames": 2,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 30.17,
+  "plantedFrac": 0.1,
+  "zgSpeedChanges": 12.5,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.08,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.73,
+  "twinnedFrac": 0,
+  "curlMedian": null,
+  "spreadMedian": null,
+  "fannedFrac": 0,
+  "bowMedian": 15.37,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 72.67,
+  "armOmegaP95": 242.12,
+  "legOmegaP95": 301.15,
+  "spineOmegaP50": 14.88,
+  "spineOmegaP95": 66.51,
+  "headOmegaP50": 71.56,
+  "headOmegaP95": 150.09,
+  "armAccP95": 1196.55,
+  "spineAccP95": 666.6,
+  "handSpeedP50": 0.6,
+  "handSpeedP95": 1.06,
+  "spineToArm": 0.2,
+  "energyCV": 0.55,
+  "moveRate": 2.5,
+  "refDistance": 0.52,
+  "refWorst": [
+   {
+    "k": "moveRate",
+    "z": 0.9923343678442009
+   },
+   {
+    "k": "headOmegaP50",
+    "z": 0.8529065861750156
+   },
+   {
+    "k": "energyCV",
+    "z": 0.7800847904048287
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.31 over 9 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 5,
+   "note": "speed shape 0.6 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median 0.03 s"
+  },
+  "anticipation": {
+   "score": 3.6,
+   "note": "9 big moves: 2 with anticipation, 1 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 6.8,
+   "note": "parts' speed profiles agree 0.59 (1 = everything moves as one); typical lag between parts 2 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 7.5,
+   "note": "0 centre-of-mass jerks, 2 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 1.6 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "8% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "3 key poses, readability 0.73 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl NaN deg, spread NaN deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 10,
+   "note": "0.52 robust z from 174 mocap clips; furthest: moveRate high (0.99), headOmegaP50 high (0.85), energyCV high (0.78)"
+  }
+ },
+ "events": [
+  {
+   "t": 1.5,
+   "f": 45,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.82,
+   "what": "in zero-g the body changes speed by 0.32 m/s with nothing to push on"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "LeftFoot",
+   "sev": 0.75,
+   "what": "LeftFoot travels 76 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 1.4,
+   "f": 42,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.75,
+   "what": "in zero-g the body changes speed by 0.25 m/s with nothing to push on"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.69,
+   "what": "LeftFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.68,
+   "what": "RightFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.64,
+   "what": "RightHand travels 39 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.62,
+   "what": "LeftHand travels 35 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 0.83,
+   "f": 25,
+   "kind": "no-prep",
+   "part": "RightFoot",
+   "sev": 0.62,
+   "what": "RightFoot travels 34 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "linear",
+   "part": "LeftFoot",
+   "sev": 0.6,
+   "what": "LeftFoot moves at one speed for 0.6 s (flat 0.91): interpolation, not a move"
+  },
+  {
+   "t": 1.6,
+   "f": 48,
+   "kind": "abrupt-stop",
+   "part": "RightHand",
+   "sev": 0.58,
+   "what": "RightHand stops dead from 100% of its peak"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.56,
+   "what": "RightHand starts at 82% of its peak speed in one frame"
+  },
+  {
+   "t": 1.6,
+   "f": 48,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.55,
+   "what": "LeftHand stops dead from 79% of its peak"
+  },
+  {
+   "t": 1.6,
+   "f": 48,
+   "kind": "abrupt-stop",
+   "part": "RightFoot",
+   "sev": 0.51,
+   "what": "RightFoot stops dead from 100% of its peak"
+  },
+  {
+   "t": 1,
+   "f": 30,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.48,
+   "what": "LeftFoot starts at 71% of its peak speed in one frame"
+  },
+  {
+   "t": 1.6,
+   "f": 48,
+   "kind": "abrupt-stop",
+   "part": "LeftFoot",
+   "sev": 0.48,
+   "what": "LeftFoot stops dead from 94% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 1.5,
+   "f": 45,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.82,
+   "what": "in zero-g the body changes speed by 0.32 m/s with nothing to push on",
+   "also": [
+    "speed-change",
+    "abrupt-stop"
+   ]
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "LeftFoot",
+   "sev": 0.75,
+   "what": "LeftFoot travels 76 cm with no anticipation and no overshoot or settle",
+   "also": [
+    "abrupt-start",
+    "no-prep"
+   ]
+  },
+  {
+   "t": 0.83,
+   "f": 25,
+   "kind": "no-prep",
+   "part": "RightFoot",
+   "sev": 0.62,
+   "what": "RightFoot travels 34 cm with no anticipation and no overshoot or settle",
+   "also": [
+    "linear",
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 8.5,
+ "verdict": "reads as human (8.5/10)"
+}

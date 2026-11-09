@@ -1,0 +1,961 @@
+{
+ "beat": "s06_boo",
+ "when": "2026-11-08T22:23:42.067Z",
+ "zerog": true,
+ "rows": [
+  {
+   "name": "mx_terrified",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mx_terrified.fbx",
+   "via": "twin",
+   "seconds": 20,
+   "total": 8.6,
+   "verdict": "reads as human (8.6/10)",
+   "low": [
+    "overlap 4.4",
+    "ease 6",
+    "anticipation 7.6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6,
+    "timing": 10,
+    "anticipation": 7.6,
+    "overlap": 4.4,
+    "weight": 9,
+    "snaps": 9.4,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 9.9
+   },
+   "worst": [
+    "0.9s in zero-g the body changes speed by 0.69 m/s with nothing to push on",
+    "18.83s LeftToes jumps 8 deg in one frame",
+    "7.8s in zero-g the body changes speed by 0.26 m/s with nothing to push on"
+   ],
+   "fit": 0.856,
+   "action": true,
+   "actionNote": "startle: fastest hand 3.5 m/s; downward strike 0.6 m/s",
+   "score": 6.89,
+   "source": "twin"
+  },
+  {
+   "name": "cmu_86_05_59p2",
+   "src": "gen/motion/beats/s06_boo/cmu_86_05_59p2.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 8.3,
+   "verdict": "passable, weak on snaps and overlap (8.3/10)",
+   "low": [
+    "snaps 0",
+    "overlap 7.2",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 7.7,
+    "timing": 9.7,
+    "anticipation": 8,
+    "overlap": 7.2,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1s in zero-g the body changes speed by 0.45 m/s with nothing to push on",
+    "1.53s LeftHand starts at 74% of its peak speed in one frame",
+    "1.8s LeftHand stops dead from 100% of its peak"
+   ],
+   "fit": 0.708,
+   "action": true,
+   "actionNote": "startle: fastest hand 6.0 m/s; downward strike 0.0 m/s",
+   "score": 6.88,
+   "source": "cmu/86_05 59.2-61 s walking, jumping, jumping jacks,  jumping on one foot, punch"
+  },
+  {
+   "name": "Idle1SurprisedA",
+   "src": "gen/mocap/index/protofactor/Idle1SurprisedA.npz",
+   "via": "twin",
+   "seconds": 3.17,
+   "total": 8.4,
+   "verdict": "passable, weak on anticipation and stiffness (8.4/10)",
+   "low": [
+    "anticipation 0",
+    "stiffness 7",
+    "timing 8.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.1,
+    "timing": 8.5,
+    "anticipation": 0,
+    "overlap": 8.8,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 7,
+    "silhouette": 9,
+    "hands": 10,
+    "contact": 10,
+    "reference": 9.2
+   },
+   "worst": [
+    "0.03s RightHand travels 59 cm with no anticipation and no overshoot or settle",
+    "2.57s RightHand travels 57 cm with no anticipation and no overshoot or settle",
+    "3.17s RightHand stops dead from 72% of its peak"
+   ],
+   "fit": 0.836,
+   "action": true,
+   "actionNote": "startle: fastest hand 2.8 m/s; downward strike 0.7 m/s",
+   "score": 6.73,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_startle_t0",
+   "src": "gen/genmotion/takes/fbx_zg_startle_t0.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "ease 3.9",
+    "weight 7.5",
+    "anticipation 7.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.9,
+    "timing": 10,
+    "anticipation": 7.8,
+    "overlap": 8,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.5,
+    "silhouette": 9.8,
+    "hands": 10,
+    "contact": 9.1,
+    "reference": 10
+   },
+   "worst": [
+    "0.7s in zero-g the body changes speed by 0.34 m/s with nothing to push on",
+    "1.83s Head travels 29 cm in a straight line (bend 0.03)",
+    "0.1s in zero-g the body changes speed by 0.29 m/s with nothing to push on"
+   ],
+   "fit": 1.011,
+   "action": true,
+   "actionNote": "startle: fastest hand 4.1 m/s; downward strike 1.0 m/s",
+   "score": 6.68,
+   "source": "twin"
+  },
+  {
+   "name": "zg_startle_try1",
+   "src": "gen/genmotion/takes/zg_startle_try1.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 8.7,
+   "verdict": "reads as human (8.7/10)",
+   "low": [
+    "ease 3.9",
+    "weight 7.5",
+    "anticipation 7.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.9,
+    "timing": 10,
+    "anticipation": 7.8,
+    "overlap": 8,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 8.5,
+    "silhouette": 9.8,
+    "hands": 10,
+    "contact": 9.1,
+    "reference": 10
+   },
+   "worst": [
+    "0.7s in zero-g the body changes speed by 0.34 m/s with nothing to push on",
+    "1.83s Head travels 29 cm in a straight line (bend 0.03)",
+    "0.1s in zero-g the body changes speed by 0.29 m/s with nothing to push on"
+   ],
+   "fit": 1.011,
+   "action": true,
+   "actionNote": "startle: fastest hand 4.1 m/s; downward strike 1.0 m/s",
+   "score": 6.68,
+   "source": "twin"
+  },
+  {
+   "name": "AttackLungeBiteCreature",
+   "src": "gen/mocap/index/protofactor/AttackLungeBiteCreature.npz",
+   "via": "twin",
+   "seconds": 4.5,
+   "total": 8.8,
+   "verdict": "reads as human (8.8/10)",
+   "low": [
+    "snaps 0",
+    "weight 7.5",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.7,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 10,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9.8,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "4s RightToes jumps 14 deg in one frame",
+    "0.8s in zero-g the body changes speed by 0.52 m/s with nothing to push on",
+    "1.2s in zero-g the body changes speed by 0.49 m/s with nothing to push on"
+   ],
+   "fit": 1.215,
+   "action": true,
+   "actionNote": "startle: fastest hand 3.2 m/s; downward strike 1.2 m/s",
+   "score": 6.37,
+   "source": "twin"
+  },
+  {
+   "name": "gm_zg_startle",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@gm_zg_startle.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 8.4,
+   "verdict": "passable, weak on weight and overlap (8.4/10)",
+   "low": [
+    "weight 2.5",
+    "overlap 6",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 10,
+    "timing": 9.3,
+    "anticipation": 10,
+    "overlap": 6,
+    "weight": 2.5,
+    "snaps": 10,
+    "stiffness": 8.3,
+    "silhouette": 9.5,
+    "hands": 8,
+    "contact": 9.7,
+    "reference": 8.3
+   },
+   "worst": [
+    "0.5s in zero-g the body changes speed by 0.64 m/s with nothing to push on",
+    "0.8s in zero-g the body changes speed by 1.64 m/s with nothing to push on",
+    "1.1s in zero-g the body changes speed by 0.48 m/s with nothing to push on"
+   ],
+   "fit": 1.092,
+   "action": true,
+   "actionNote": "startle: fastest hand 3.8 m/s; downward strike 3.5 m/s, has the strike down",
+   "score": 6.22,
+   "source": "twin"
+  },
+  {
+   "name": "zg_startle3_t1",
+   "src": "gen/genmotion/takes/zg_startle3_t1.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 8.4,
+   "verdict": "passable, weak on weight and overlap (8.4/10)",
+   "low": [
+    "weight 2.5",
+    "overlap 6",
+    "hands 8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 10,
+    "timing": 9.3,
+    "anticipation": 10,
+    "overlap": 6,
+    "weight": 2.5,
+    "snaps": 10,
+    "stiffness": 8.3,
+    "silhouette": 9.5,
+    "hands": 8,
+    "contact": 9.7,
+    "reference": 8.3
+   },
+   "worst": [
+    "0.5s in zero-g the body changes speed by 0.64 m/s with nothing to push on",
+    "0.8s in zero-g the body changes speed by 1.64 m/s with nothing to push on",
+    "1.1s in zero-g the body changes speed by 0.48 m/s with nothing to push on"
+   ],
+   "fit": 1.092,
+   "action": true,
+   "actionNote": "startle: fastest hand 3.8 m/s; downward strike 3.5 m/s, has the strike down",
+   "score": 6.22,
+   "source": "twin"
+  },
+  {
+   "name": "ps_zg_startle_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@ps_zg_startle_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 7.3,
+   "verdict": "passable, weak on stiffness and anticipation (7.3/10)",
+   "low": [
+    "stiffness 3.4",
+    "anticipation 4",
+    "overlap 5.3"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.5,
+    "timing": 6,
+    "anticipation": 4,
+    "overlap": 5.3,
+    "weight": 9,
+    "snaps": 10,
+    "stiffness": 3.4,
+    "silhouette": 9.9,
+    "hands": 10,
+    "contact": 10,
+    "reference": 5.4
+   },
+   "worst": [
+    "1.1s in zero-g the body changes speed by 0.53 m/s with nothing to push on"
+   ],
+   "fit": 0.776,
+   "action": true,
+   "actionNote": "startle: fastest hand 3.9 m/s; downward strike 0.1 m/s",
+   "score": 5.75,
+   "source": "twin"
+  },
+  {
+   "name": "Roar1Creature",
+   "src": "gen/mocap/index/protofactor/Roar1Creature.npz",
+   "via": "twin",
+   "seconds": 2.67,
+   "total": 7.7,
+   "verdict": "passable, weak on snaps and overlap (7.7/10)",
+   "low": [
+    "snaps 0.6",
+    "overlap 4.4",
+    "anticipation 6"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 7,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 4.4,
+    "weight": 7.5,
+    "snaps": 0.6,
+    "stiffness": 10,
+    "silhouette": 9.4,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.7s in zero-g the body changes speed by 0.55 m/s with nothing to push on",
+    "1.1s in zero-g the body changes speed by 0.42 m/s with nothing to push on",
+    "2s in zero-g the body changes speed by 0.31 m/s with nothing to push on"
+   ],
+   "fit": 1.004,
+   "action": true,
+   "actionNote": "startle: fastest hand 2.9 m/s; downward strike 0.8 m/s",
+   "score": 5.69,
+   "source": "twin"
+  },
+  {
+   "name": "CrushingFists",
+   "src": "gen/mocap/index/protofactor/CrushingFists.npz",
+   "via": "twin",
+   "seconds": 1.33,
+   "total": 8.3,
+   "verdict": "passable, weak on snaps and ease (8.3/10)",
+   "low": [
+    "snaps 0",
+    "ease 6.8",
+    "overlap 7.2"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 6.8,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 7.2,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9.5,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.49 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.76 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.69 m/s with nothing to push on"
+   ],
+   "fit": 1.334,
+   "action": true,
+   "actionNote": "startle: fastest hand 9.9 m/s; downward strike 1.5 m/s",
+   "score": 5.63,
+   "source": "twin"
+  },
+  {
+   "name": "ps_zg_startle_b",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@ps_zg_startle_b.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 7.1,
+   "verdict": "passable, weak on overlap and anticipation (7.1/10)",
+   "low": [
+    "overlap 3.8",
+    "anticipation 4",
+    "arcs 6"
+   ],
+   "principles": {
+    "arcs": 6,
+    "ease": 6.7,
+    "timing": 6,
+    "anticipation": 4,
+    "overlap": 3.8,
+    "weight": 9,
+    "snaps": 10,
+    "stiffness": 7,
+    "silhouette": 9.9,
+    "hands": 10,
+    "contact": 10,
+    "reference": 6.8
+   },
+   "worst": [
+    "1.1s in zero-g the body changes speed by 0.46 m/s with nothing to push on",
+    "3.1s RightHand moves at one speed for 1.47 s (flat 0.93): interpolation, not a move",
+    "1.87s LeftFoot starts at 64% of its peak speed in one frame"
+   ],
+   "fit": 0.77,
+   "action": true,
+   "actionNote": "startle: fastest hand 3.9 m/s; downward strike 0.1 m/s",
+   "score": 5.56,
+   "source": "twin"
+  },
+  {
+   "name": "zg_startle3_t0",
+   "src": "gen/genmotion/takes/zg_startle3_t0.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 7.9,
+   "verdict": "passable, weak on snaps and overlap (7.9/10)",
+   "low": [
+    "snaps 0",
+    "overlap 5.3",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.8,
+    "timing": 9.2,
+    "anticipation": 10,
+    "overlap": 5.3,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 8.2,
+    "silhouette": 9,
+    "hands": 8,
+    "contact": 10,
+    "reference": 8.7
+   },
+   "worst": [
+    "0.3s in zero-g the body changes speed by 0.5 m/s with nothing to push on",
+    "0.6s in zero-g the body changes speed by 2.65 m/s with nothing to push on",
+    "0.9s in zero-g the body changes speed by 1.96 m/s with nothing to push on"
+   ],
+   "fit": 1.184,
+   "action": true,
+   "actionNote": "startle: fastest hand 6.6 m/s; downward strike 5.0 m/s, has the strike down",
+   "score": 5.53,
+   "source": "twin"
+  },
+  {
+   "name": "SmashingFists",
+   "src": "gen/mocap/index/protofactor/SmashingFists.npz",
+   "via": "twin",
+   "seconds": 1.33,
+   "total": 8.1,
+   "verdict": "passable, weak on snaps and overlap (8.1/10)",
+   "low": [
+    "snaps 0",
+    "overlap 4.6",
+    "weight 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 8.8,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 4.6,
+    "weight": 7.5,
+    "snaps": 0,
+    "stiffness": 10,
+    "silhouette": 9,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.61 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.91 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.85 m/s with nothing to push on"
+   ],
+   "fit": 1.342,
+   "action": true,
+   "actionNote": "startle: fastest hand 9.4 m/s; downward strike 4.5 m/s, has the strike down",
+   "score": 5.42,
+   "source": "twin"
+  },
+  {
+   "name": "zg_startle3_t2",
+   "src": "gen/genmotion/takes/zg_startle3_t2.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 7.2,
+   "verdict": "passable, weak on snaps and weight (7.2/10)",
+   "low": [
+    "snaps 0",
+    "weight 2.5",
+    "overlap 2.8"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 9.8,
+    "timing": 10,
+    "anticipation": 6,
+    "overlap": 2.8,
+    "weight": 2.5,
+    "snaps": 0,
+    "stiffness": 8.5,
+    "silhouette": 9.5,
+    "hands": 8,
+    "contact": 9.7,
+    "reference": 10
+   },
+   "worst": [
+    "1.53s 5 of 5 parts peak on the same frame (everything moves as one)",
+    "0.8s LeftFoot travels 114 cm in a straight line (bend 0.02)",
+    "0.5s in zero-g the body changes speed by 0.43 m/s with nothing to push on"
+   ],
+   "fit": 1.143,
+   "action": true,
+   "actionNote": "startle: fastest hand 7.1 m/s; downward strike 5.4 m/s, has the strike down",
+   "score": 4.91,
+   "source": "twin"
+  },
+  {
+   "name": "fbx_zg_startle_t1",
+   "src": "gen/genmotion/takes/fbx_zg_startle_t1.fbx",
+   "via": "twin",
+   "seconds": 2.97,
+   "total": 6.8,
+   "verdict": "looks animated, not acted: snaps and overlap give it away (6.8/10)",
+   "low": [
+    "snaps 0",
+    "overlap 2.5",
+    "weight 2.5"
+   ],
+   "principles": {
+    "arcs": 5.6,
+    "ease": 7.2,
+    "timing": 10,
+    "anticipation": 10,
+    "overlap": 2.5,
+    "weight": 2.5,
+    "snaps": 0,
+    "stiffness": 8.5,
+    "silhouette": 9.5,
+    "hands": 8,
+    "contact": 8,
+    "reference": 10
+   },
+   "worst": [
+    "0.17s 5 of 5 parts peak on the same frame (everything moves as one)",
+    "0.5s in zero-g the body changes speed by 1.36 m/s with nothing to push on",
+    "0.8s in zero-g the body changes speed by 2.6 m/s with nothing to push on"
+   ],
+   "fit": 1.329,
+   "action": true,
+   "actionNote": "startle: fastest hand 12.6 m/s; downward strike 5.0 m/s, has the strike down",
+   "score": 4.14,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_IdleLookAroundSitOntheGroundHostage_1p7",
+   "src": "gen/motion/beats/s06_boo/protofactor_IdleLookAroundSitOntheGroundHostage_1p7.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 8.2,
+   "verdict": "passable, weak on reference and silhouette (8.2/10)",
+   "low": [
+    "reference 2.9",
+    "silhouette 8.5",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 2.9
+   },
+   "worst": [],
+   "fit": 0.799,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.0 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.6,
+   "source": "protofactor/IdleLookAroundSitOntheGroundHostage 1.7-3.5 s Idle Look Around Sit O"
+  },
+  {
+   "name": "protofactor_IdleLookAroundSitOntheGroundHostage_2p8",
+   "src": "gen/motion/beats/s06_boo/protofactor_IdleLookAroundSitOntheGroundHostage_2p8.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 8.2,
+   "verdict": "passable, weak on reference and silhouette (8.2/10)",
+   "low": [
+    "reference 3",
+    "silhouette 8.5",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 3
+   },
+   "worst": [],
+   "fit": 0.8,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.0 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.6,
+   "source": "protofactor/IdleLookAroundSitOntheGroundHostage 2.8-4.6 s Idle Look Around Sit O"
+  },
+  {
+   "name": "protofactor_IdleLookAroundSitOntheGroundHostage_0p7",
+   "src": "gen/motion/beats/s06_boo/protofactor_IdleLookAroundSitOntheGroundHostage_0p7.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 8.1,
+   "verdict": "passable, weak on reference and silhouette (8.1/10)",
+   "low": [
+    "reference 2.6",
+    "silhouette 8.5",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 2.6
+   },
+   "worst": [],
+   "fit": 0.802,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.0 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.5,
+   "source": "protofactor/IdleLookAroundSitOntheGroundHostage 0.7-2.5 s Idle Look Around Sit O"
+  },
+  {
+   "name": "Idle1SurprisedB",
+   "src": "gen/mocap/index/protofactor/Idle1SurprisedB.npz",
+   "via": "twin",
+   "seconds": 2.5,
+   "total": 8.2,
+   "verdict": "passable, weak on anticipation and ease (8.2/10)",
+   "low": [
+    "anticipation 2.2",
+    "ease 2.6",
+    "overlap 7.4"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.6,
+    "timing": 9.8,
+    "anticipation": 2.2,
+    "overlap": 7.4,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 7.6,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "0.03s LeftHand travels 51 cm with no anticipation and no overshoot or settle",
+    "1.93s LeftHand travels 53 cm with no anticipation and no overshoot or settle",
+    "0.43s RightHand starts at 64% of its peak speed in one frame"
+   ],
+   "fit": 0.888,
+   "action": false,
+   "actionNote": "startle: fastest hand 2.1 m/s; downward strike 0.5 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.42,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_IdleLookUpSitOnTheGroundHostage_0p7",
+   "src": "gen/motion/beats/s06_boo/protofactor_IdleLookUpSitOnTheGroundHostage_0p7.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 7.9,
+   "verdict": "passable, weak on reference and silhouette (7.9/10)",
+   "low": [
+    "reference 1.7",
+    "silhouette 8.5",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 1.7
+   },
+   "worst": [],
+   "fit": 0.805,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.0 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.29,
+   "source": "protofactor/IdleLookUpSitOnTheGroundHostage 0.7-2.5 s Idle Look Up Sit On The Gr"
+  },
+  {
+   "name": "mm_flinch_a",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_flinch_a.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 8,
+   "verdict": "passable, weak on ease and reference (8/10)",
+   "low": [
+    "ease 3.2",
+    "reference 5.4",
+    "overlap 5.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 3.2,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": 5.5,
+    "weight": 7.5,
+    "snaps": 10,
+    "stiffness": 10,
+    "silhouette": 9.8,
+    "hands": 10,
+    "contact": 10,
+    "reference": 5.4
+   },
+   "worst": [
+    "1.4s in zero-g the body changes speed by 0.44 m/s with nothing to push on",
+    "1.7s in zero-g the body changes speed by 0.55 m/s with nothing to push on",
+    "0.4s in zero-g the body changes speed by 0.33 m/s with nothing to push on"
+   ],
+   "fit": 0.926,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.6 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.15,
+   "source": "twin"
+  },
+  {
+   "name": "protofactor_IdleSitOntheGroundHostage_0p7",
+   "src": "gen/motion/beats/s06_boo/protofactor_IdleSitOntheGroundHostage_0p7.npz",
+   "via": "twin",
+   "seconds": 1.8,
+   "total": 7.7,
+   "verdict": "passable, weak on reference and silhouette (7.7/10)",
+   "low": [
+    "reference 1.1",
+    "silhouette 8.5",
+    "timing 10"
+   ],
+   "principles": {
+    "arcs": null,
+    "ease": null,
+    "timing": 10,
+    "anticipation": null,
+    "overlap": null,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 8.5,
+    "hands": 10,
+    "contact": 10,
+    "reference": 1.1
+   },
+   "worst": [],
+   "fit": 0.803,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.0 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.09,
+   "source": "protofactor/IdleSitOntheGroundHostage 0.7-2.5 s Idle Sit Onthe Ground Hostage (H"
+  },
+  {
+   "name": "Taunt1",
+   "src": "gen/mocap/index/protofactor/Taunt1.npz",
+   "via": "twin",
+   "seconds": 3.33,
+   "total": 8.1,
+   "verdict": "passable, weak on anticipation and ease (8.1/10)",
+   "low": [
+    "anticipation 0",
+    "ease 2.1",
+    "stiffness 7.5"
+   ],
+   "principles": {
+    "arcs": 10,
+    "ease": 2.1,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 10,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": 7.5,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 10
+   },
+   "worst": [
+    "1.07s LeftHand travels 42 cm with no anticipation and no overshoot or settle",
+    "0.17s LeftHand travels 39 cm with no anticipation and no overshoot or settle",
+    "3s Head stops dead from 69% of its peak"
+   ],
+   "fit": 1.011,
+   "action": false,
+   "actionNote": "startle: fastest hand 2.2 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 3.08,
+   "source": "twin"
+  },
+  {
+   "name": "ScaredHostage",
+   "src": "gen/mocap/index/protofactor/ScaredHostage.npz",
+   "via": "twin",
+   "seconds": 4.33,
+   "total": 7,
+   "verdict": "passable, weak on anticipation and arcs (7/10)",
+   "low": [
+    "anticipation 0",
+    "arcs 1.9",
+    "ease 2"
+   ],
+   "principles": {
+    "arcs": 1.9,
+    "ease": 2,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 7.1,
+    "weight": 10,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 8,
+    "contact": 10,
+    "reference": 9.7
+   },
+   "worst": [
+    "0.03s the head hangs 69 deg forward of the chest",
+    "3.83s RightHand stops dead from 64% of its peak",
+    "4.33s RightHand stops dead from 93% of its peak"
+   ],
+   "fit": 0.963,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.5 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": 2.07,
+   "source": "twin"
+  },
+  {
+   "name": "mm_flinch_b",
+   "src": "C:\\Projects\\TKShock\\Assets\\MusicVideo\\Motion\\Humanoid@mm_flinch_b.fbx",
+   "via": "twin",
+   "seconds": 8.33,
+   "total": 5.3,
+   "verdict": "looks animated, not acted: anticipation and overlap give it away (5.3/10)",
+   "low": [
+    "anticipation 0",
+    "overlap 1.2",
+    "arcs 1.5"
+   ],
+   "principles": {
+    "arcs": 1.5,
+    "ease": 1.8,
+    "timing": 10,
+    "anticipation": 0,
+    "overlap": 1.2,
+    "weight": 9,
+    "snaps": 10,
+    "stiffness": null,
+    "silhouette": 10,
+    "hands": 10,
+    "contact": 10,
+    "reference": 2.7
+   },
+   "worst": [
+    "0.1s in zero-g the body changes speed by 0.33 m/s with nothing to push on",
+    "0.7s in zero-g the body changes speed by 0.26 m/s with nothing to push on",
+    "1.13s LeftHand stops dead from 79% of its peak"
+   ],
+   "fit": 1.357,
+   "action": false,
+   "actionNote": "startle: fastest hand 0.6 m/s; downward strike 0.0 m/s (a startle wants a 2.5 m/s jolt)",
+   "score": -0.41,
+   "source": "twin"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_boo/gm_hp_boo_t0.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_boo/gm_hp_boo_t0.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_boo/gm_hp_boo_t1.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_boo/gm_hp_boo_t1.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  },
+  {
+   "name": "gen/genmotion/hp/gm_hp_boo/gm_hp_boo_t2.bvh",
+   "error": "twin gen/genmotion/hp/gm_hp_boo/gm_hp_boo_t2.bvh: SMPL BVH (HY-Motion) import is not solved: arms cross under FK; see GEN-BUGS.md 7"
+  }
+ ],
+ "fitWeight": 2,
+ "board": "s06: the double pops up BOO; his startle flings his fist straight down into the moon; zero-g"
+}

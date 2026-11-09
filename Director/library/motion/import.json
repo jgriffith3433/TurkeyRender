@@ -11081,13 +11081,13 @@
     },
     "mm_cross_punch_a": {
       "path": "Assets/MusicVideo/Motion/Humanoid@mm_cross_punch_a.fbx",
-      "length": 8.3,
+      "length": 1.833,
       "loop": false,
-      "loopErrMaxDeg": 30.9,
+      "loopErrMaxDeg": 30.7,
       "loopErrMeanDeg": 14.7,
       "travelling": false,
       "travelM": 0.138,
-      "farthestM": 0.138,
+      "farthestM": 0.139,
       "choice": {
         "loopTime": false,
         "bakeRotation": false,
@@ -11100,8 +11100,8 @@
         "legChangeMaxDeg": 21.3,
         "kneeChangeMaxDeg": 21.3,
         "kneeFlip": false,
-        "slideOffCmPerS": 13.4,
-        "slideOnCmPerS": 11.2,
+        "slideOffCmPerS": 60.7,
+        "slideOnCmPerS": 83.1,
         "verdict": false
       },
       "before": {
@@ -11121,17 +11121,17 @@
         "footIK": false,
         "why": "held feet made it worse; cleaned without them",
         "source": {
-          "jitterP99": 1.484,
+          "jitterP99": 3.464,
           "jitterMax": 10.72,
           "snaps": 25,
-          "footSlideCmPerS": 14.2,
+          "footSlideCmPerS": 63.7,
           "peakEndSpeed": 3.39
         },
         "clean": {
-          "jitterP99": 1.179,
+          "jitterP99": 2.472,
           "jitterMax": 7.32,
           "snaps": 23,
-          "footSlideCmPerS": 14.2,
+          "footSlideCmPerS": 63.7,
           "peakEndSpeed": 3.37
         },
         "peakKept": 0.994
@@ -11139,12 +11139,12 @@
     },
     "mm_cross_punch_b": {
       "path": "Assets/MusicVideo/Motion/Humanoid@mm_cross_punch_b.fbx",
-      "length": 8.3,
+      "length": 1.4,
       "loop": false,
-      "loopErrMaxDeg": 35.6,
-      "loopErrMeanDeg": 14.5,
+      "loopErrMaxDeg": 29.8,
+      "loopErrMeanDeg": 14.1,
       "travelling": false,
-      "travelM": 0.069,
+      "travelM": 0.07,
       "farthestM": 0.134,
       "choice": {
         "loopTime": false,
@@ -11155,11 +11155,11 @@
         "footIK": false
       },
       "footIKTest": {
-        "legChangeMaxDeg": 26.8,
-        "kneeChangeMaxDeg": 26.8,
+        "legChangeMaxDeg": 26.7,
+        "kneeChangeMaxDeg": 26.7,
         "kneeFlip": false,
-        "slideOffCmPerS": 15.3,
-        "slideOnCmPerS": 12.1,
+        "slideOffCmPerS": 102.2,
+        "slideOnCmPerS": 152.9,
         "verdict": false
       },
       "before": {
@@ -11174,22 +11174,22 @@
         "clip": "mm_cross_punch_b",
         "file": "Assets/MusicVideo/Motion/Clean/mm_cross_punch_b__clean.anim",
         "use": true,
-        "spikesRemoved": 3,
+        "spikesRemoved": 1,
         "footLocks": 0,
         "footIK": false,
         "why": "held feet made it worse; cleaned without them",
         "source": {
-          "jitterP99": 2.161,
+          "jitterP99": 5.611,
           "jitterMax": 29.34,
           "snaps": 33,
-          "footSlideCmPerS": 19.9,
+          "footSlideCmPerS": 116.9,
           "peakEndSpeed": 5.71
         },
         "clean": {
-          "jitterP99": 1.733,
+          "jitterP99": 4.365,
           "jitterMax": 12.3,
           "snaps": 21,
-          "footSlideCmPerS": 19.6,
+          "footSlideCmPerS": 114.8,
           "peakEndSpeed": 5.95
         },
         "peakKept": 1.042
@@ -11197,10 +11197,10 @@
     },
     "mm_flinch_a": {
       "path": "Assets/MusicVideo/Motion/Humanoid@mm_flinch_a.fbx",
-      "length": 8.3,
+      "length": 2.1,
       "loop": false,
-      "loopErrMaxDeg": 77.7,
-      "loopErrMeanDeg": 21.8,
+      "loopErrMaxDeg": 77.6,
+      "loopErrMeanDeg": 21.9,
       "travelling": false,
       "travelM": 0.028,
       "farthestM": 0.088,
@@ -11216,8 +11216,8 @@
         "legChangeMaxDeg": 17.7,
         "kneeChangeMaxDeg": 17.7,
         "kneeFlip": false,
-        "slideOffCmPerS": 16.1,
-        "slideOnCmPerS": 14.3,
+        "slideOffCmPerS": 62.6,
+        "slideOnCmPerS": 56.0,
         "verdict": false
       },
       "before": {
@@ -11237,17 +11237,17 @@
         "footIK": false,
         "why": "held feet made it worse; cleaned without them",
         "source": {
-          "jitterP99": 0.545,
+          "jitterP99": 1.031,
           "jitterMax": 3.7,
           "snaps": 3,
-          "footSlideCmPerS": 16.1,
+          "footSlideCmPerS": 62.4,
           "peakEndSpeed": 0.81
         },
         "clean": {
-          "jitterP99": 0.373,
+          "jitterP99": 0.88,
           "jitterMax": 2.88,
           "snaps": 3,
-          "footSlideCmPerS": 16.0,
+          "footSlideCmPerS": 62.3,
           "peakEndSpeed": 0.75
         },
         "peakKept": 0.926
@@ -11255,7 +11255,7 @@
     },
     "mm_flinch_b": {
       "path": "Assets/MusicVideo/Motion/Humanoid@mm_flinch_b.fbx",
-      "length": 8.3,
+      "length": 1.533,
       "loop": false,
       "loopErrMaxDeg": 28.4,
       "loopErrMeanDeg": 11.5,
@@ -11274,8 +11274,8 @@
         "legChangeMaxDeg": 27.9,
         "kneeChangeMaxDeg": 27.9,
         "kneeFlip": false,
-        "slideOffCmPerS": 11.0,
-        "slideOnCmPerS": 8.9,
+        "slideOffCmPerS": 58.5,
+        "slideOnCmPerS": 47.9,
         "verdict": false
       },
       "before": {
@@ -11295,17 +11295,17 @@
         "footIK": false,
         "why": "held feet made it worse; cleaned without them",
         "source": {
-          "jitterP99": 0.0,
+          "jitterP99": 0.375,
           "jitterMax": 2.1,
           "snaps": 0,
-          "footSlideCmPerS": 11.0,
+          "footSlideCmPerS": 58.0,
           "peakEndSpeed": 1.0
         },
         "clean": {
-          "jitterP99": 0.0,
+          "jitterP99": 0.373,
           "jitterMax": 1.1,
           "snaps": 0,
-          "footSlideCmPerS": 11.0,
+          "footSlideCmPerS": 58.0,
           "peakEndSpeed": 1.0
         },
         "peakKept": 1.0
@@ -11313,12 +11313,12 @@
     },
     "mm_lift_heavy_a": {
       "path": "Assets/MusicVideo/Motion/Humanoid@mm_lift_heavy_a.fbx",
-      "length": 8.3,
+      "length": 2.4,
       "loop": false,
-      "loopErrMaxDeg": 60.2,
-      "loopErrMeanDeg": 18.1,
+      "loopErrMaxDeg": 60.3,
+      "loopErrMeanDeg": 18.0,
       "travelling": false,
-      "travelM": 0.387,
+      "travelM": 0.384,
       "farthestM": 0.387,
       "choice": {
         "loopTime": false,
@@ -11332,8 +11332,8 @@
         "legChangeMaxDeg": 31.6,
         "kneeChangeMaxDeg": 31.6,
         "kneeFlip": false,
-        "slideOffCmPerS": 11.7,
-        "slideOnCmPerS": 6.6,
+        "slideOffCmPerS": 14.1,
+        "slideOnCmPerS": 17.6,
         "verdict": false
       },
       "before": {
@@ -11353,17 +11353,17 @@
         "footIK": false,
         "why": "held feet made it worse; cleaned without them",
         "source": {
-          "jitterP99": 1.218,
+          "jitterP99": 2.499,
           "jitterMax": 7.46,
           "snaps": 0,
-          "footSlideCmPerS": 4.3,
+          "footSlideCmPerS": 14.7,
           "peakEndSpeed": 1.68
         },
         "clean": {
-          "jitterP99": 0.911,
+          "jitterP99": 1.591,
           "jitterMax": 3.97,
           "snaps": 0,
-          "footSlideCmPerS": 3.7,
+          "footSlideCmPerS": 12.6,
           "peakEndSpeed": 1.67
         },
         "peakKept": 0.994
@@ -11541,6 +11541,1456 @@
           "peakEndSpeed": 1.86
         },
         "peakKept": 0.782
+      }
+    },
+    "mm_boo_smash": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_boo_smash.fbx",
+      "length": 1.333,
+      "loop": true,
+      "loopErrMaxDeg": 2.1,
+      "loopErrMeanDeg": 1.0,
+      "travelling": false,
+      "travelM": 0.006,
+      "farthestM": 0.173,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 31.3,
+        "kneeChangeMaxDeg": 31.3,
+        "kneeFlip": false,
+        "slideOffCmPerS": 38.0,
+        "slideOnCmPerS": 9.0,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_boo_smash",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_boo_smash__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 4,
+        "footIK": true,
+        "why": "feet held in the world through contacts, played with Foot IK",
+        "source": {
+          "jitterP99": 4.111,
+          "jitterMax": 10.23,
+          "snaps": 43,
+          "footSlideCmPerS": 48.2,
+          "peakEndSpeed": 10.18
+        },
+        "clean": {
+          "jitterP99": 3.685,
+          "jitterMax": 6.5,
+          "snaps": 37,
+          "footSlideCmPerS": 6.6,
+          "peakEndSpeed": 10.56
+        },
+        "peakKept": 1.037
+      }
+    },
+    "mm_boo_surprised": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_boo_surprised.fbx",
+      "length": 3.167,
+      "loop": true,
+      "loopErrMaxDeg": 3.7,
+      "loopErrMeanDeg": 0.7,
+      "travelling": false,
+      "travelM": 0.0,
+      "farthestM": 0.009,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": true
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 18.9,
+        "kneeChangeMaxDeg": 18.9,
+        "kneeFlip": false,
+        "slideOffCmPerS": 4.2,
+        "slideOnCmPerS": 0.8,
+        "verdict": true
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_boo_surprised",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_boo_surprised__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 2,
+        "footIK": true,
+        "why": "feet held in the world through contacts, played with Foot IK",
+        "source": {
+          "jitterP99": 0.595,
+          "jitterMax": 3.68,
+          "snaps": 3,
+          "footSlideCmPerS": 1.0,
+          "peakEndSpeed": 2.81
+        },
+        "clean": {
+          "jitterP99": 0.541,
+          "jitterMax": 3.68,
+          "snaps": 3,
+          "footSlideCmPerS": 0.6,
+          "peakEndSpeed": 2.81
+        },
+        "peakKept": 1.0
+      }
+    },
+    "mm_catch_brace": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_catch_brace.fbx",
+      "length": 3.333,
+      "loop": true,
+      "loopErrMaxDeg": 0.7,
+      "loopErrMeanDeg": 0.2,
+      "travelling": false,
+      "travelM": 0.003,
+      "farthestM": 0.072,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 40.2,
+        "kneeChangeMaxDeg": 40.2,
+        "kneeFlip": false,
+        "slideOffCmPerS": 14.1,
+        "slideOnCmPerS": 20.7,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_catch_brace",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_catch_brace__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 0.403,
+          "jitterMax": 1.69,
+          "snaps": 0,
+          "footSlideCmPerS": 14.2,
+          "peakEndSpeed": 1.87
+        },
+        "clean": {
+          "jitterP99": 0.388,
+          "jitterMax": 2.27,
+          "snaps": 0,
+          "footSlideCmPerS": 14.3,
+          "peakEndSpeed": 1.86
+        },
+        "peakKept": 0.995
+      }
+    },
+    "mm_doc_hook": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_doc_hook.fbx",
+      "length": 1.067,
+      "loop": true,
+      "loopErrMaxDeg": 1.7,
+      "loopErrMeanDeg": 1.0,
+      "travelling": false,
+      "travelM": 0.003,
+      "farthestM": 0.068,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 33.6,
+        "kneeChangeMaxDeg": 33.6,
+        "kneeFlip": false,
+        "slideOffCmPerS": 70.2,
+        "slideOnCmPerS": 77.3,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_doc_hook",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_doc_hook__clean.anim",
+        "use": false,
+        "spikesRemoved": 1,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them; not better than the source on every measure, so the source plays",
+        "source": {
+          "jitterP99": 3.671,
+          "jitterMax": 10.87,
+          "snaps": 35,
+          "footSlideCmPerS": 69.4,
+          "peakEndSpeed": 9.31
+        },
+        "clean": {
+          "jitterP99": 3.253,
+          "jitterMax": 7.53,
+          "snaps": 28,
+          "footSlideCmPerS": 72.9,
+          "peakEndSpeed": 9.0
+        },
+        "peakKept": 0.967
+      }
+    },
+    "mm_doc_uppercut": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_doc_uppercut.fbx",
+      "length": 0.867,
+      "loop": true,
+      "loopErrMaxDeg": 2.2,
+      "loopErrMeanDeg": 1.3,
+      "travelling": false,
+      "travelM": 0.004,
+      "farthestM": 0.145,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 34.5,
+        "kneeChangeMaxDeg": 34.5,
+        "kneeFlip": false,
+        "slideOffCmPerS": 84.7,
+        "slideOnCmPerS": 95.2,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_doc_uppercut",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_doc_uppercut__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 5.709,
+          "jitterMax": 23.0,
+          "snaps": 31,
+          "footSlideCmPerS": 87.1,
+          "peakEndSpeed": 8.92
+        },
+        "clean": {
+          "jitterP99": 5.565,
+          "jitterMax": 15.14,
+          "snaps": 23,
+          "footSlideCmPerS": 75.0,
+          "peakEndSpeed": 8.89
+        },
+        "peakKept": 0.997
+      }
+    },
+    "mm_him_snapback": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_him_snapback.fbx",
+      "length": 1.033,
+      "loop": false,
+      "loopErrMaxDeg": 77.2,
+      "loopErrMeanDeg": 37.5,
+      "travelling": true,
+      "travelM": 0.492,
+      "farthestM": 0.489,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 32.7,
+        "kneeChangeMaxDeg": 31.0,
+        "kneeFlip": false,
+        "slideOffCmPerS": 21.7,
+        "slideOnCmPerS": 64.4,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_him_snapback",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_him_snapback__clean.anim",
+        "use": false,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them; not better than the source on every measure, so the source plays",
+        "source": {
+          "jitterP99": 2.241,
+          "jitterMax": 7.31,
+          "snaps": 10,
+          "footSlideCmPerS": 27.9,
+          "peakEndSpeed": 5.72
+        },
+        "clean": {
+          "jitterP99": 2.25,
+          "jitterMax": 7.54,
+          "snaps": 8,
+          "footSlideCmPerS": 38.2,
+          "peakEndSpeed": 5.95
+        },
+        "peakKept": 1.04
+      }
+    },
+    "mm_set_pat": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_set_pat.fbx",
+      "length": 4.333,
+      "loop": true,
+      "loopErrMaxDeg": 0.4,
+      "loopErrMeanDeg": 0.1,
+      "travelling": false,
+      "travelM": 0.0,
+      "farthestM": 0.051,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": true
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 20.3,
+        "kneeChangeMaxDeg": 20.1,
+        "kneeFlip": false,
+        "slideOffCmPerS": 4.0,
+        "slideOnCmPerS": 1.3,
+        "verdict": true
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_set_pat",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_set_pat__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 2,
+        "footIK": true,
+        "why": "feet held in the world through contacts, played with Foot IK",
+        "source": {
+          "jitterP99": 0.504,
+          "jitterMax": 1.88,
+          "snaps": 0,
+          "footSlideCmPerS": 1.4,
+          "peakEndSpeed": 2.2
+        },
+        "clean": {
+          "jitterP99": 0.46,
+          "jitterMax": 1.31,
+          "snaps": 0,
+          "footSlideCmPerS": 0.7,
+          "peakEndSpeed": 2.22
+        },
+        "peakKept": 1.009
+      }
+    },
+    "vm_lift_cleanjerk": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@vm_lift_cleanjerk.fbx",
+      "length": 4.167,
+      "loop": false,
+      "loopErrMaxDeg": 104.0,
+      "loopErrMeanDeg": 35.3,
+      "travelling": false,
+      "travelM": 0.1,
+      "farthestM": 0.294,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 20.9,
+        "kneeChangeMaxDeg": 19.2,
+        "kneeFlip": false,
+        "slideOffCmPerS": 22.8,
+        "slideOnCmPerS": 33.9,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "vm_lift_cleanjerk",
+        "file": "Assets/MusicVideo/Motion/Clean/vm_lift_cleanjerk__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.896,
+          "jitterMax": 8.43,
+          "snaps": 6,
+          "footSlideCmPerS": 23.7,
+          "peakEndSpeed": 4.13
+        },
+        "clean": {
+          "jitterP99": 0.949,
+          "jitterMax": 4.13,
+          "snaps": 5,
+          "footSlideCmPerS": 23.5,
+          "peakEndSpeed": 3.6
+        },
+        "peakKept": 0.872
+      }
+    },
+    "ps_catch_slide_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_catch_slide_a.fbx",
+      "length": 3.467,
+      "loop": false,
+      "loopErrMaxDeg": 34.9,
+      "loopErrMeanDeg": 17.3,
+      "travelling": true,
+      "travelM": 0.713,
+      "farthestM": 0.876,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 179.7,
+        "kneeChangeMaxDeg": 176.8,
+        "kneeFlip": true,
+        "slideOffCmPerS": 13.1,
+        "slideOnCmPerS": 12.9,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_catch_slide_a",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_catch_slide_a__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "Foot IK flips a knee: feet not held",
+        "source": {
+          "jitterP99": 1.504,
+          "jitterMax": 179.98,
+          "snaps": 16,
+          "footSlideCmPerS": 11.1,
+          "peakEndSpeed": 1.58
+        },
+        "clean": {
+          "jitterP99": 1.013,
+          "jitterMax": 4.35,
+          "snaps": 4,
+          "footSlideCmPerS": 8.1,
+          "peakEndSpeed": 1.46
+        },
+        "peakKept": 0.924
+      }
+    },
+    "ps_catch_slide_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_catch_slide_b.fbx",
+      "length": 3.467,
+      "loop": false,
+      "loopErrMaxDeg": 36.2,
+      "loopErrMeanDeg": 8.3,
+      "travelling": false,
+      "travelM": 0.124,
+      "farthestM": 0.793,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 35.5,
+        "kneeChangeMaxDeg": 34.9,
+        "kneeFlip": false,
+        "slideOffCmPerS": 16.7,
+        "slideOnCmPerS": 19.6,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_catch_slide_b",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_catch_slide_b__clean.anim",
+        "use": false,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them; not better than the source on every measure, so the source plays",
+        "source": {
+          "jitterP99": 1.754,
+          "jitterMax": 179.97,
+          "snaps": 20,
+          "footSlideCmPerS": 37.2,
+          "peakEndSpeed": 2.98
+        },
+        "clean": {
+          "jitterP99": 1.306,
+          "jitterMax": 13.83,
+          "snaps": 7,
+          "footSlideCmPerS": 6.5,
+          "peakEndSpeed": 2.43
+        },
+        "peakKept": 0.815
+      }
+    },
+    "ps_punched_launch_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_punched_launch_a.fbx",
+      "length": 3.567,
+      "loop": false,
+      "loopErrMaxDeg": 24.0,
+      "loopErrMeanDeg": 12.4,
+      "travelling": true,
+      "travelM": 4.063,
+      "farthestM": 4.105,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 31.6,
+        "kneeChangeMaxDeg": 31.6,
+        "kneeFlip": false,
+        "slideOffCmPerS": 32.3,
+        "slideOnCmPerS": 17.0,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_punched_launch_a",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_punched_launch_a__clean.anim",
+        "use": true,
+        "spikesRemoved": 1,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "no contact long enough to hold",
+        "source": {
+          "jitterP99": 6.338,
+          "jitterMax": 116.64,
+          "snaps": 125,
+          "footSlideCmPerS": 10.1,
+          "peakEndSpeed": 64.03
+        },
+        "clean": {
+          "jitterP99": 4.827,
+          "jitterMax": 116.66,
+          "snaps": 103,
+          "footSlideCmPerS": 10.0,
+          "peakEndSpeed": 64.02
+        },
+        "peakKept": 1.0
+      }
+    },
+    "ps_punched_launch_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_punched_launch_b.fbx",
+      "length": 3.567,
+      "loop": false,
+      "loopErrMaxDeg": 44.9,
+      "loopErrMeanDeg": 25.5,
+      "travelling": false,
+      "travelM": 0.498,
+      "farthestM": 2.127,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 31.3,
+        "kneeChangeMaxDeg": 31.3,
+        "kneeFlip": false,
+        "slideOffCmPerS": 0.0,
+        "slideOnCmPerS": 21.0,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_punched_launch_b",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_punched_launch_b__clean.anim",
+        "use": false,
+        "spikesRemoved": 3,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "no contact long enough to hold; not better than the source on every measure, so the source plays",
+        "source": {
+          "jitterP99": 6.421,
+          "jitterMax": 32.69,
+          "snaps": 156,
+          "footSlideCmPerS": 12.5,
+          "peakEndSpeed": 14.51
+        },
+        "clean": {
+          "jitterP99": 4.875,
+          "jitterMax": 28.23,
+          "snaps": 124,
+          "footSlideCmPerS": 14.3,
+          "peakEndSpeed": 14.51
+        },
+        "peakKept": 1.0
+      }
+    },
+    "ps_zg_shove_tumble_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_zg_shove_tumble_a.fbx",
+      "length": 7.967,
+      "loop": false,
+      "loopErrMaxDeg": 3.2,
+      "loopErrMeanDeg": 1.5,
+      "travelling": true,
+      "travelM": 4.693,
+      "farthestM": 4.706,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 18.2,
+        "kneeChangeMaxDeg": 18.2,
+        "kneeFlip": false,
+        "slideOffCmPerS": 26.1,
+        "slideOnCmPerS": 18.9,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_zg_shove_tumble_a",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_zg_shove_tumble_a__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "no contact long enough to hold",
+        "source": {
+          "jitterP99": 0.217,
+          "jitterMax": 36.65,
+          "snaps": 29,
+          "footSlideCmPerS": 3.0,
+          "peakEndSpeed": 34.15
+        },
+        "clean": {
+          "jitterP99": 0.224,
+          "jitterMax": 36.8,
+          "snaps": 29,
+          "footSlideCmPerS": 2.9,
+          "peakEndSpeed": 34.15
+        },
+        "peakKept": 1.0
+      }
+    },
+    "ps_zg_shove_tumble_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_zg_shove_tumble_b.fbx",
+      "length": 7.967,
+      "loop": false,
+      "loopErrMaxDeg": 3.2,
+      "loopErrMeanDeg": 1.6,
+      "travelling": true,
+      "travelM": 4.157,
+      "farthestM": 4.168,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 19.9,
+        "kneeChangeMaxDeg": 19.9,
+        "kneeFlip": false,
+        "slideOffCmPerS": 20.0,
+        "slideOnCmPerS": 18.8,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_zg_shove_tumble_b",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_zg_shove_tumble_b__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 0.186,
+          "jitterMax": 37.91,
+          "snaps": 22,
+          "footSlideCmPerS": 1.6,
+          "peakEndSpeed": 39.01
+        },
+        "clean": {
+          "jitterP99": 0.186,
+          "jitterMax": 37.91,
+          "snaps": 22,
+          "footSlideCmPerS": 1.6,
+          "peakEndSpeed": 39.01
+        },
+        "peakKept": 1.0
+      }
+    },
+    "ps_zg_startle_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_zg_startle_a.fbx",
+      "length": 5.967,
+      "loop": false,
+      "loopErrMaxDeg": 1.8,
+      "loopErrMeanDeg": 1.0,
+      "travelling": false,
+      "travelM": 0.489,
+      "farthestM": 0.49,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 42.6,
+        "kneeChangeMaxDeg": 42.6,
+        "kneeFlip": false,
+        "slideOffCmPerS": 13.5,
+        "slideOnCmPerS": 11.0,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_zg_startle_a",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_zg_startle_a__clean.anim",
+        "use": false,
+        "spikesRemoved": 0,
+        "footLocks": 2,
+        "footIK": true,
+        "why": "feet held in the world through contacts, played with Foot IK; not better than the source on every measure, so the source plays",
+        "source": {
+          "jitterP99": 1.066,
+          "jitterMax": 4.03,
+          "snaps": 17,
+          "footSlideCmPerS": 19.4,
+          "peakEndSpeed": 4.32
+        },
+        "clean": {
+          "jitterP99": 1.19,
+          "jitterMax": 6.43,
+          "snaps": 17,
+          "footSlideCmPerS": 7.2,
+          "peakEndSpeed": 6.53
+        },
+        "peakKept": 1.512
+      }
+    },
+    "ps_zg_startle_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_zg_startle_b.fbx",
+      "length": 5.967,
+      "loop": false,
+      "loopErrMaxDeg": 1.5,
+      "loopErrMeanDeg": 0.8,
+      "travelling": false,
+      "travelM": 0.324,
+      "farthestM": 0.325,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 43.1,
+        "kneeChangeMaxDeg": 43.1,
+        "kneeFlip": false,
+        "slideOffCmPerS": 16.3,
+        "slideOnCmPerS": 12.6,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_zg_startle_b",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_zg_startle_b__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.043,
+          "jitterMax": 3.89,
+          "snaps": 16,
+          "footSlideCmPerS": 26.7,
+          "peakEndSpeed": 4.25
+        },
+        "clean": {
+          "jitterP99": 0.982,
+          "jitterMax": 5.81,
+          "snaps": 16,
+          "footSlideCmPerS": 23.7,
+          "peakEndSpeed": 4.18
+        },
+        "peakKept": 0.984
+      }
+    },
+    "ps_zg_throw_recoil_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_zg_throw_recoil_a.fbx",
+      "length": 4.967,
+      "loop": false,
+      "loopErrMaxDeg": 50.0,
+      "loopErrMeanDeg": 11.0,
+      "travelling": false,
+      "travelM": 0.06,
+      "farthestM": 0.06,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 19.7,
+        "kneeChangeMaxDeg": 16.2,
+        "kneeFlip": false,
+        "slideOffCmPerS": 8.9,
+        "slideOnCmPerS": 14.4,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_zg_throw_recoil_a",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_zg_throw_recoil_a__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 0.661,
+          "jitterMax": 5.27,
+          "snaps": 4,
+          "footSlideCmPerS": 12.0,
+          "peakEndSpeed": 1.63
+        },
+        "clean": {
+          "jitterP99": 0.629,
+          "jitterMax": 4.78,
+          "snaps": 3,
+          "footSlideCmPerS": 11.1,
+          "peakEndSpeed": 1.57
+        },
+        "peakKept": 0.963
+      }
+    },
+    "ps_zg_throw_recoil_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@ps_zg_throw_recoil_b.fbx",
+      "length": 4.967,
+      "loop": false,
+      "loopErrMaxDeg": 50.0,
+      "loopErrMeanDeg": 11.0,
+      "travelling": false,
+      "travelM": 0.17,
+      "farthestM": 0.17,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 20.9,
+        "kneeChangeMaxDeg": 20.9,
+        "kneeFlip": false,
+        "slideOffCmPerS": 14.8,
+        "slideOnCmPerS": 21.6,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "ps_zg_throw_recoil_b",
+        "file": "Assets/MusicVideo/Motion/Clean/ps_zg_throw_recoil_b__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.02,
+          "jitterMax": 5.32,
+          "snaps": 14,
+          "footSlideCmPerS": 17.3,
+          "peakEndSpeed": 2.39
+        },
+        "clean": {
+          "jitterP99": 0.85,
+          "jitterMax": 4.71,
+          "snaps": 13,
+          "footSlideCmPerS": 16.6,
+          "peakEndSpeed": 2.11
+        },
+        "peakKept": 0.883
+      }
+    },
+    "mm_ring_glide_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_ring_glide_a.fbx",
+      "length": 1.6,
+      "loop": false,
+      "loopErrMaxDeg": 72.9,
+      "loopErrMeanDeg": 33.2,
+      "travelling": false,
+      "travelM": 0.181,
+      "farthestM": 0.213,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 26.8,
+        "kneeChangeMaxDeg": 26.8,
+        "kneeFlip": false,
+        "slideOffCmPerS": 16.8,
+        "slideOnCmPerS": 22.3,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_ring_glide_a",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_ring_glide_a__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.609,
+          "jitterMax": 7.44,
+          "snaps": 4,
+          "footSlideCmPerS": 22.1,
+          "peakEndSpeed": 2.23
+        },
+        "clean": {
+          "jitterP99": 1.477,
+          "jitterMax": 8.22,
+          "snaps": 2,
+          "footSlideCmPerS": 21.0,
+          "peakEndSpeed": 2.38
+        },
+        "peakKept": 1.067
+      }
+    },
+    "mm_ring_glide_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_ring_glide_b.fbx",
+      "length": 3.2,
+      "loop": false,
+      "loopErrMaxDeg": 44.9,
+      "loopErrMeanDeg": 12.2,
+      "travelling": false,
+      "travelM": 0.052,
+      "farthestM": 0.059,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 21.2,
+        "kneeChangeMaxDeg": 21.2,
+        "kneeFlip": false,
+        "slideOffCmPerS": 8.9,
+        "slideOnCmPerS": 9.1,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_ring_glide_b",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_ring_glide_b__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 0.655,
+          "jitterMax": 4.55,
+          "snaps": 0,
+          "footSlideCmPerS": 47.7,
+          "peakEndSpeed": 1.33
+        },
+        "clean": {
+          "jitterP99": 0.58,
+          "jitterMax": 2.19,
+          "snaps": 0,
+          "footSlideCmPerS": 36.1,
+          "peakEndSpeed": 1.41
+        },
+        "peakKept": 1.06
+      }
+    },
+    "mm_set_lower_a": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_set_lower_a.fbx",
+      "length": 4.7,
+      "loop": false,
+      "loopErrMaxDeg": 76.1,
+      "loopErrMeanDeg": 33.6,
+      "travelling": true,
+      "travelM": 2.438,
+      "farthestM": 2.488,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 35.5,
+        "kneeChangeMaxDeg": 35.5,
+        "kneeFlip": false,
+        "slideOffCmPerS": 116.2,
+        "slideOnCmPerS": 102.8,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_set_lower_a",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_set_lower_a__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.291,
+          "jitterMax": 9.53,
+          "snaps": 4,
+          "footSlideCmPerS": 27.5,
+          "peakEndSpeed": 2.88
+        },
+        "clean": {
+          "jitterP99": 1.209,
+          "jitterMax": 4.98,
+          "snaps": 4,
+          "footSlideCmPerS": 12.3,
+          "peakEndSpeed": 2.88
+        },
+        "peakKept": 1.0
+      }
+    },
+    "mm_set_lower_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_set_lower_b.fbx",
+      "length": 10.0,
+      "loop": false,
+      "loopErrMaxDeg": 29.1,
+      "loopErrMeanDeg": 10.2,
+      "travelling": false,
+      "travelM": 0.172,
+      "farthestM": 0.277,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 42.9,
+        "kneeChangeMaxDeg": 42.9,
+        "kneeFlip": false,
+        "slideOffCmPerS": 8.5,
+        "slideOnCmPerS": 10.4,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_set_lower_b",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_set_lower_b__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 0.34,
+          "jitterMax": 2.13,
+          "snaps": 0,
+          "footSlideCmPerS": 5.1,
+          "peakEndSpeed": 0.92
+        },
+        "clean": {
+          "jitterP99": 0.283,
+          "jitterMax": 1.46,
+          "snaps": 0,
+          "footSlideCmPerS": 5.0,
+          "peakEndSpeed": 0.94
+        },
+        "peakKept": 1.022
+      }
+    },
+    "mm_doc_fisthold": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_doc_fisthold.fbx",
+      "length": 5.333,
+      "loop": true,
+      "loopErrMaxDeg": 1.6,
+      "loopErrMeanDeg": 0.7,
+      "travelling": false,
+      "travelM": 0.004,
+      "farthestM": 0.127,
+      "choice": {
+        "loopTime": true,
+        "bakeRotation": true,
+        "bakeY": true,
+        "yFromFeet": true,
+        "bakeXZ": true,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 22.0,
+        "kneeChangeMaxDeg": 22.0,
+        "kneeFlip": false,
+        "slideOffCmPerS": 30.5,
+        "slideOnCmPerS": 29.4,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_doc_fisthold",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_doc_fisthold__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.566,
+          "jitterMax": 4.53,
+          "snaps": 39,
+          "footSlideCmPerS": 14.9,
+          "peakEndSpeed": 3.53
+        },
+        "clean": {
+          "jitterP99": 1.58,
+          "jitterMax": 3.4,
+          "snaps": 38,
+          "footSlideCmPerS": 15.7,
+          "peakEndSpeed": 3.57
+        },
+        "peakKept": 1.011
+      }
+    },
+    "mm_doc_rise": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_doc_rise.fbx",
+      "length": 5.833,
+      "loop": false,
+      "loopErrMaxDeg": 66.5,
+      "loopErrMeanDeg": 35.4,
+      "travelling": false,
+      "travelM": 0.174,
+      "farthestM": 0.242,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 39.8,
+        "kneeChangeMaxDeg": 39.8,
+        "kneeFlip": false,
+        "slideOffCmPerS": 26.9,
+        "slideOnCmPerS": 39.4,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_doc_rise",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_doc_rise__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.856,
+          "jitterMax": 5.96,
+          "snaps": 35,
+          "footSlideCmPerS": 24.0,
+          "peakEndSpeed": 4.1
+        },
+        "clean": {
+          "jitterP99": 1.876,
+          "jitterMax": 5.99,
+          "snaps": 35,
+          "footSlideCmPerS": 23.0,
+          "peakEndSpeed": 4.08
+        },
+        "peakKept": 0.995
+      }
+    },
+    "mm_doc_rise_b": {
+      "path": "Assets/MusicVideo/Motion/Humanoid@mm_doc_rise_b.fbx",
+      "length": 2.4,
+      "loop": false,
+      "loopErrMaxDeg": 17.0,
+      "loopErrMeanDeg": 8.1,
+      "travelling": false,
+      "travelM": 0.012,
+      "farthestM": 0.131,
+      "choice": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": true,
+        "bakeXZ": false,
+        "footIK": false
+      },
+      "footIKTest": {
+        "legChangeMaxDeg": 18.0,
+        "kneeChangeMaxDeg": 18.0,
+        "kneeFlip": false,
+        "slideOffCmPerS": 18.2,
+        "slideOnCmPerS": 16.2,
+        "verdict": false
+      },
+      "before": {
+        "loopTime": false,
+        "bakeRotation": false,
+        "bakeY": false,
+        "yFromFeet": false,
+        "yOriginal": true,
+        "bakeXZ": false
+      },
+      "clean": {
+        "clip": "mm_doc_rise_b",
+        "file": "Assets/MusicVideo/Motion/Clean/mm_doc_rise_b__clean.anim",
+        "use": true,
+        "spikesRemoved": 0,
+        "footLocks": 0,
+        "footIK": false,
+        "why": "held feet made it worse; cleaned without them",
+        "source": {
+          "jitterP99": 1.414,
+          "jitterMax": 3.44,
+          "snaps": 0,
+          "footSlideCmPerS": 58.1,
+          "peakEndSpeed": 4.1
+        },
+        "clean": {
+          "jitterP99": 0.947,
+          "jitterMax": 3.45,
+          "snaps": 0,
+          "footSlideCmPerS": 55.6,
+          "peakEndSpeed": 4.08
+        },
+        "peakKept": 0.995
       }
     }
   }

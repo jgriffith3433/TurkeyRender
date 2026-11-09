@@ -1,0 +1,165 @@
+{
+ "video": "hawkespunch",
+ "label": "test-s05-r8k",
+ "render": "C:\\Projects\\TKShock\\Director\\videos\\hawkespunch\\tests\\s05_ring\\r8\\s05-r8k-720-mix.mp4",
+ "when": "2026-11-09T00:25:10.492Z",
+ "frames": 120,
+ "fps": 24,
+ "a": [],
+ "b": [
+  {
+   "t": 3.04,
+   "sev": "B",
+   "rule": "staging",
+   "seen": "certain",
+   "what": "The shot opens with about three frames (3.04 to 3.08, and nearly 3.12) of almost pure black. The floor disappears and then the rock pops in. A viewer sees an empty frame and a sudden entrance, not a clear first frame.",
+   "fix": "Trim the dead black frames, or fade the lighting up so the floor stays visible as the rock enters.",
+   "shot": "cut-0-03-00"
+  },
+  {
+   "t": 4.54,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Two frames (4.54, 4.58) show a harsh black/white inverted threshold look of the scene before the real shot appears at 4.62. The flash reads as a glitch and not as a designed transition, and the white frame at 4.50 makes it a three-frame stutter.",
+   "fix": "Cut straight to the 4.62 frame, or make the flash a single clean white frame that fades into the shot.",
+   "shot": "cut-0-04-50"
+  },
+  {
+   "t": 4.87,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A bright white elliptical streak and a vertical grey band appear for one frame across the rock and the character's arm. They pop in with no build-up, and by 4.91 they have shrunk to a thin line. The effect reads as an unmotivated flash that crosses in front of the pointing hand.",
+   "fix": "Add 2-3 frames of build-up or fade for the ring. Keep it off the character's hand, or place it deliberately behind him.",
+   "shot": "cut-0-04-58"
+  }
+ ],
+ "c": [],
+ "likely": [
+  {
+   "t": 4.7,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The character is frozen in the same pointing pose from 4.62 to 4.95, with no breathing, no head movement and no arm settle. He looks like a static cutout, and the second figure in the water is also still.",
+   "fix": "Add a small arm and head drift, or an overshoot and settle on the point.",
+   "shot": "cut-0-04-58"
+  }
+ ],
+ "cost": 0.042,
+ "carried": 0,
+ "spikes": 2,
+ "cuts": 3,
+ "shots": [
+  {
+   "id": "cut-0-00-00",
+   "from": 0,
+   "to": 3,
+   "strips": [],
+   "summary": "too short to read",
+   "faults": [],
+   "reused": false,
+   "carried": null,
+   "cost": 0
+  },
+  {
+   "id": "cut-0-03-00",
+   "from": 3,
+   "to": 4.5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 3,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 3.167,
+     "why": "one patch jumps (cell 134.4, x1.6)",
+     "file": "spike-00076.jpg"
+    }
+   ],
+   "summary": "The shot opens on two near-black frames and a rock mass then slides into frame with speed lines. The 3.167 spike matches the rock's entrance, not a separate glitch.",
+   "faults": [
+    {
+     "t": 3.04,
+     "sev": "B",
+     "rule": "staging",
+     "seen": "certain",
+     "what": "The shot opens with about three frames (3.04 to 3.08, and nearly 3.12) of almost pure black. The floor disappears and then the rock pops in. A viewer sees an empty frame and a sudden entrance, not a clear first frame.",
+     "fix": "Trim the dead black frames, or fade the lighting up so the floor stays visible as the rock enters."
+    }
+   ],
+   "reused": false,
+   "carried": null,
+   "cost": 0.0143
+  },
+  {
+   "id": "cut-0-04-50",
+   "from": 4.5,
+   "to": 4.583333333333333,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 4.5,
+     "file": "cut.jpg"
+    }
+   ],
+   "summary": "The cut opens on a bright white frame (4.50), then two inverted high-contrast threshold frames (4.54, 4.58), before the real shot appears at 4.62 and stays steady; this looks like a deliberate flash, but the inverted frames are rough.",
+   "faults": [
+    {
+     "t": 4.54,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "Two frames (4.54, 4.58) show a harsh black/white inverted threshold look of the scene before the real shot appears at 4.62. The flash reads as a glitch and not as a designed transition, and the white frame at 4.50 makes it a three-frame stutter.",
+     "fix": "Cut straight to the 4.62 frame, or make the flash a single clean white frame that fades into the shot."
+    }
+   ],
+   "reused": false,
+   "carried": null,
+   "cost": 0.0118
+  },
+  {
+   "id": "cut-0-04-58",
+   "from": 4.583333333333333,
+   "to": 5,
+   "strips": [
+    {
+     "kind": "cut",
+     "t": 4.583,
+     "file": "cut.jpg"
+    },
+    {
+     "kind": "spike",
+     "t": 4.917,
+     "why": "pose jumps and comes back (0.87)",
+     "file": "spike-00118.jpg"
+    }
+   ],
+   "summary": "Static shot with a held pointing pose, but a white ring/streak effect flashes at 4.87 and fades by 4.95, and the figure sits nearly still and stiff.",
+   "faults": [
+    {
+     "t": 4.87,
+     "sev": "B",
+     "rule": "render",
+     "seen": "certain",
+     "what": "A bright white elliptical streak and a vertical grey band appear for one frame across the rock and the character's arm. They pop in with no build-up, and by 4.91 they have shrunk to a thin line. The effect reads as an unmotivated flash that crosses in front of the pointing hand.",
+     "fix": "Add 2-3 frames of build-up or fade for the ring. Keep it off the character's hand, or place it deliberately behind him."
+    },
+    {
+     "t": 4.7,
+     "sev": "C",
+     "rule": "hold",
+     "seen": "likely",
+     "what": "The character is frozen in the same pointing pose from 4.62 to 4.95, with no breathing, no head movement and no arm settle. He looks like a static cutout, and the second figure in the water is also still.",
+     "fix": "Add a small arm and head drift, or an overshoot and settle on the point."
+    }
+   ],
+   "reused": false,
+   "carried": null,
+   "cost": 0.0157
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  // The exam room with a motivated rig (sets agent, 2026-11-08, CLINIC-AD-AUDIT S2: the flat rig blew the walls out and left faces one tone).
+  // Still a fluorescent clinic, but the light now has a source: a pool from the panels over the desk and bed (a wide spot, so the faces sit in it
+  // and the walls fall off about a stop), the window behind the bed as a cool soft source that rims him and lifts her from the side, and the
+  // ambient pulled down so walls read pale green, not white. Faces get their fill from the grade (faceFill, catch), not from a flat sky.
+  "sky": { "top": "#c7d2ca", "mid": "#d5ddd6", "bottom": "#bcc6be", "ambient": "#8c968f", "ambientTop": "#9ea89f", "ambientBottom": "#717b74", "fog": "#d5ddd6", "density": 0 },
+  "lights": {
+    "key": { "type": "spot", "pos": [-0.9, 2.55, 2.5], "aim": "subject", "color": "#f4fbf4", "intensity": 14, "range": 6, "angle": 75, "shadows": true },
+    "fill": { "type": "spot", "pos": [0.6, 1.9, 4.35], "aim": "subject", "color": "#dceaf6", "intensity": 7, "range": 6, "angle": 90 },
+    "practical": { "type": "point", "pos": [-0.6, 2.55, 0.8], "color": "#f6fff8", "intensity": 0.7, "range": 4 },
+    "rim": { "type": "point", "pos": [1.2, 2.55, 3.0], "color": "#f6fff8", "intensity": 0.8, "range": 3.5 }
+  }
+}

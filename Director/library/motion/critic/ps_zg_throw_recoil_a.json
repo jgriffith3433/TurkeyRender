@@ -1,0 +1,186 @@
+{
+ "name": "ps_zg_throw_recoil_a",
+ "fps": 30,
+ "frames": 150,
+ "seconds": 4.97,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.54,
+  "straightFrac": 0,
+  "moves": 6,
+  "flatness": 0.6,
+  "abruptFrac": 0.67,
+  "deadFrac": 0,
+  "holds": 2,
+  "holdMedianS": 2.8,
+  "fastRunMedianS": 0.17,
+  "dynRange": 8.11,
+  "handPeak": 1.47,
+  "bigMoves": 1,
+  "anticipFrac": 0,
+  "overshootFrac": 0,
+  "coherence": 0.83,
+  "lagMedianFrames": 1,
+  "lockstepFrac": 0.2,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 12.71,
+  "plantedFrac": 0.3,
+  "zgSpeedChanges": 0,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.26,
+  "deadJoints": 3,
+  "deadJointNames": [
+   "LeftShoulder",
+   "RightShoulder",
+   "LeftUpperArm"
+  ],
+  "readability": 0.84,
+  "twinnedFrac": 0,
+  "curlMedian": 31.51,
+  "spreadMedian": 23.6,
+  "fannedFrac": 0,
+  "bowMedian": -6.29,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 7.65,
+  "armOmegaP95": 71.33,
+  "legOmegaP95": 13.26,
+  "spineOmegaP50": 4.52,
+  "spineOmegaP95": 20.95,
+  "headOmegaP50": 1.49,
+  "headOmegaP95": 14.86,
+  "armAccP95": 564.39,
+  "spineAccP95": 335.93,
+  "handSpeedP50": 0.08,
+  "handSpeedP95": 0.5,
+  "spineToArm": 0.59,
+  "energyCV": 1.25,
+  "moveRate": 0.6,
+  "refDistance": 1.93,
+  "refWorst": [
+   {
+    "k": "energyCV",
+    "z": 3.965862990464327
+   },
+   {
+    "k": "legOmegaP95",
+    "z": -3.0869554030131034
+   },
+   {
+    "k": "headOmegaP50",
+    "z": -2.9988724912554003
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.54 over 4 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 5.3,
+   "note": "speed shape 0.6 (bell 0.6, constant 1.0), 67% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "2 holds (median 2.8 s), 0% of frames dead still, fast parts median 0.17 s"
+  },
+  "anticipation": {
+   "score": 0,
+   "note": "1 big moves: 0 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 2.9,
+   "note": "parts' speed profiles agree 0.83 (1 = everything moves as one); typical lag between parts 1 frames; 20% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, 0 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 4.97 s"
+  },
+  "stiffness": {
+   "score": 2.6,
+   "note": "26% of core joints frozen while the body moves; never moves: LeftShoulder, RightShoulder, LeftUpperArm"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "10 key poses, readability 0.84 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 32 deg, spread 24 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 6.4,
+   "note": "1.93 robust z from 174 mocap clips; furthest: energyCV high (3.97), legOmegaP95 low (3.09), headOmegaP50 low (3)"
+  }
+ },
+ "events": [
+  {
+   "t": 0.93,
+   "f": 28,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 0.87,
+   "f": 26,
+   "kind": "abrupt-start",
+   "part": "LeftFoot",
+   "sev": 0.47,
+   "what": "LeftFoot starts at 74% of its peak speed in one frame"
+  },
+  {
+   "t": 1.1,
+   "f": 33,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.44,
+   "what": "Head stops dead from 61% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 0.93,
+   "f": 28,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": [
+    "abrupt-start",
+    "abrupt-stop"
+   ]
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand starts at 100% of its peak speed in one frame",
+   "also": []
+  }
+ ],
+ "total": 6.8,
+ "verdict": "looks animated, not acted: anticipation and stiffness give it away (6.8/10)"
+}

@@ -1,0 +1,270 @@
+{
+ "name": "mm_doc_fisthold",
+ "fps": 30,
+ "frames": 161,
+ "seconds": 5.33,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.3,
+  "straightFrac": 0.1,
+  "moves": 21,
+  "flatness": 0.54,
+  "abruptFrac": 0.5,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 2.05,
+  "handPeak": 3.53,
+  "bigMoves": 5,
+  "anticipFrac": 0.4,
+  "overshootFrac": 0,
+  "coherence": 0.22,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0.43,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 11.11,
+  "plantedFrac": 0.66,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.1,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.83,
+  "twinnedFrac": 0,
+  "curlMedian": 31.51,
+  "spreadMedian": 23.71,
+  "fannedFrac": 0,
+  "bowMedian": 1.56,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 75.39,
+  "armOmegaP95": 394.99,
+  "legOmegaP95": 117.04,
+  "spineOmegaP50": 11.04,
+  "spineOmegaP95": 24.61,
+  "headOmegaP50": 17.81,
+  "headOmegaP95": 43.23,
+  "armAccP95": 5255.11,
+  "spineAccP95": 395.16,
+  "handSpeedP50": 0.52,
+  "handSpeedP95": 2.04,
+  "spineToArm": 0.15,
+  "energyCV": 0.45,
+  "moveRate": 1.5,
+  "refDistance": 0.58,
+  "refWorst": [
+   {
+    "k": "spineToArm",
+    "z": -0.94407112370958
+   },
+   {
+    "k": "armAccP95",
+    "z": 0.9212863052005165
+   },
+   {
+    "k": "headOmegaP95",
+    "z": -0.8139455739478926
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.3 over 10 moves, 10% straight lines"
+  },
+  "ease": {
+   "score": 6.8,
+   "note": "speed shape 0.54 (bell 0.6, constant 1.0), 50% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, fast parts median null s"
+  },
+  "anticipation": {
+   "score": 3.6,
+   "note": "5 big moves: 2 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 6,
+   "note": "parts' speed profiles agree 0.22 (1 = everything moves as one); typical lag between parts 0 frames; 43% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 9.2,
+   "note": "0 centre-of-mass jerks, planted feet slide 11 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 5.33 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "10% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "11 key poses, readability 0.83 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 32 deg, spread 24 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 10,
+   "note": "0.58 robust z from 174 mocap clips; furthest: spineToArm low (0.94), armAccP95 high (0.92), headOmegaP95 low (0.81)"
+  }
+ },
+ "events": [
+  {
+   "t": 1.77,
+   "f": 53,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 2.27,
+   "f": 68,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 2.93,
+   "f": 88,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 87 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 5.2,
+   "f": 156,
+   "kind": "linear",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand moves at one speed for 0.13 s (flat 0.93): interpolation, not a move"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "LeftHand",
+   "sev": 0.52,
+   "what": "LeftHand starts at 62% of its peak speed in one frame"
+  },
+  {
+   "t": 5.2,
+   "f": 156,
+   "kind": "abrupt-start",
+   "part": "RightHand",
+   "sev": 0.5,
+   "what": "RightHand starts at 78% of its peak speed in one frame"
+  },
+  {
+   "t": 5.33,
+   "f": 160,
+   "kind": "abrupt-stop",
+   "part": "RightHand",
+   "sev": 0.5,
+   "what": "RightHand stops dead from 99% of its peak"
+  },
+  {
+   "t": 5.33,
+   "f": 160,
+   "kind": "abrupt-stop",
+   "part": "LeftHand",
+   "sev": 0.48,
+   "what": "LeftHand stops dead from 99% of its peak"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.48,
+   "what": "Head starts at 94% of its peak speed in one frame"
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "RightFoot",
+   "sev": 0.44,
+   "what": "RightFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 5.33,
+   "f": 160,
+   "kind": "abrupt-stop",
+   "part": "Head",
+   "sev": 0.44,
+   "what": "Head stops dead from 100% of its peak"
+  }
+ ],
+ "worst": [
+  {
+   "t": 1.77,
+   "f": 53,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": []
+  },
+  {
+   "t": 2.27,
+   "f": 68,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": []
+  },
+  {
+   "t": 2.93,
+   "f": 88,
+   "kind": "lockstep",
+   "part": "body",
+   "sev": 0.9,
+   "what": "4 of 5 parts peak on the same frame (everything moves as one)",
+   "also": []
+  },
+  {
+   "t": 0.03,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 87 cm with no anticipation and no overshoot or settle",
+   "also": []
+  },
+  {
+   "t": 5.2,
+   "f": 156,
+   "kind": "linear",
+   "part": "RightHand",
+   "sev": 0.6,
+   "what": "RightHand moves at one speed for 0.13 s (flat 0.93): interpolation, not a move",
+   "also": []
+  }
+ ],
+ "total": 8.7,
+ "verdict": "reads as human (8.7/10)"
+}

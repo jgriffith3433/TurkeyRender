@@ -51,7 +51,8 @@ export const CAL = {
   overshoot: { good: 0.4, bad: 0.0 },    // share of big moves that go past and settle back
   coherence: { good: 0.3, bad: 0.85 },   // mean correlation between the parts' speed profiles: each on its own timing .. everything moving as one
   lag: { good: 1.5, bad: 0.0 },          // frames (30 fps): median |best lag| between parts' speed profiles
-  snaps: { good: 0.0, bad: 8 },          // per 10 s, body bones, one-frame steps over 8 deg that stand out
+  snaps: { good: 0.0, bad: 8 },
+  snapRatio: 2.2,         // a snap's step over the larger of its two neighbouring frames' steps          // per 10 s, body bones, one-frame steps over 8 deg that stand out
   comSpikes: { good: 0, bad: 4 },        // per 10 s, |COM acceleration| over 40 m/s^2
   slide: { good: 3, bad: 30 },           // cm/s of planted-foot travel (skipped on travelling clips, which play in place)
   frozen: { good: 0.12, bad: 0.6 },      // share of core joints under 1 deg/s while the body moves
@@ -211,11 +212,13 @@ export function measure(d, opts = {}) {
       const s = M.step[i], fing = isFinger(M.bones[i]);
       for (let f = 2; f < n - 1; f++) {
         if (!(s[f] > thr) || s[f] < s[f - 1] || s[f] < s[f + 1]) continue;
-        const near = []; for (let k = -6; k <= 6; k++) if (Math.abs(k) >= 2 && Number.isFinite(s[f + k])) near.push(s[f + k]);
-        if (s[f] > Math.max(1.9 * (median(near) || 0), thr)) { if (fing) fsnaps++; else { snaps++; ev(f, 'snap', M.bones[i], 0.7 + Math.min(0.3, s[f] / 60), `${M.bones[i]} jumps ${Math.round(s[f])} deg in one frame`); } }
+        // a snap is a spike in the bone's own speed: the frame steps far more than BOTH its neighbours (a fast mocap swing is a bell 4-6 frames wide,
+        // its peak about 1.2-1.5x the frames beside it; a pose jump or a flip is one frame standing alone). Calibrated 2026-11-08 on 174 mocap clips.
+        const nb = Math.max(Number.isFinite(s[f - 1]) ? s[f - 1] : 0, Number.isFinite(s[f + 1]) ? s[f + 1] : 0);
+        if (s[f] > Math.max(CAL.snapRatio * nb, thr)) { if (fing) fsnaps++; else { snaps++; ev(f, 'snap', M.bones[i], 0.7 + Math.min(0.3, s[f] / 60), `${M.bones[i]} jumps ${Math.round(s[f])} deg in one frame`); } }
       }
     }
-    for (const p of ENDS.filter(M.has)) { const pos = posOf(M, p); for (let f = 1; f < n; f++) { if (M.cut[f] || M.cut[f - 1]) continue; const dd = v.len(v.sub(pos[f], pos[f - 1])); if (dd > 0.18) { snaps++; ev(f, 'pop', p, 0.8, `${p} moves ${Math.round(dd * 100)} cm in one frame`); } } }
+    for (const p of ENDS.filter(M.has)) { const pos = posOf(M, p), stepAt = (f) => f >= 1 && f < n && !M.cut[f] && !M.cut[f - 1] ? v.len(v.sub(pos[f], pos[f - 1])) : 0; for (let f = 1; f < n; f++) { if (M.cut[f] || M.cut[f - 1]) continue; const dd = stepAt(f); if (dd > 0.18 && dd > CAL.snapRatio * Math.max(stepAt(f - 1), stepAt(f + 1))) { /* a real punch moves 15-20 cm a frame for several frames; a pop is one frame alone */ snaps++; ev(f, 'pop', p, 0.8, `${p} moves ${Math.round(dd * 100)} cm in one frame`); } } }
     F.snapsPer10 = per10(snaps); F.fingerSnapsPer10 = per10(fsnaps);
     P.snaps = { score: lin(F.snapsPer10, CAL.snaps.good, CAL.snaps.bad), note: `${snaps} body snaps or pops${fsnaps ? `, ${fsnaps} finger snaps` : ''} in ${r2(dur)} s` }; }
 

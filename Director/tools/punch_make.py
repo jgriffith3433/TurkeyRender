@@ -30,6 +30,10 @@ P = {
     'pastel_pink': ('#ffc6d6', 0, .5), 'pastel_blue': ('#c2def7', 0, .5), 'pastel_yellow': ('#fff0b8', 0, .5), 'pastel_mint': ('#c8f0dc', 0, .5),
     'lilac': ('#dfd0f4', 0, .5), 'cream': ('#fff6e8', 0, .5), 'seat_pink': ('#ff7fa3', 0, .6), 'studio_black': ('#1c1c20', .2, .4),
     'lamp_glow': ('#fff0d0', 0, .2), 'barn_door': ('#2a2a2e', .4, .4), 'logo_red': ('#e0182a', 0, .6),
+    # sets agent 2026-11-08: reception dressing, the boxing glove, the gloves' case, the studio's drapes and table (appended: older cells keep their place)
+    'water_blue': ('#7dbde6', 0, .9), 'leather_red': ('#b3121b', 0, .72), 'leather_dark': ('#7e0c12', 0, .6), 'cork': ('#b98b58', 0, .12),
+    'brass': ('#c9a24a', 1, .7), 'drape_black': ('#151318', 0, .06), 'note_yellow': ('#f6e27a', 0, .1), 'note_pink': ('#f7a8c4', 0, .1),
+    'note_blue': ('#a8d0f7', 0, .1), 'glass_top': ('#e4f1f6', 0, .96), 'felt_cream': ('#eee3cc', 0, .1), 'key_grey': ('#c9cbce', 0, .35),
 }
 GLOW = {'glow_white': (1, 1, 1), 'comet_glow': (.55, .75, 1), 'comet_core': (1, 1, 1), 'sun_glow': (1, .9, .7), 'lamp_glow': (1, .92, .8)}
 base = Image.new('RGBA', (CELL * GRID, CELL * GRID)); ms = Image.new('RGBA', base.size); em = Image.new('RGB', base.size, (0, 0, 0)); cells = {}
@@ -91,7 +95,7 @@ def palette_mat():
 palette_mat()
 
 
-ATLAS = {'can_label', 'paper_roll', 'exam_sign', 'poster', 'eye_chart', 'rx_pad', 'clipboard_sheet', 'reception_sign', 'backdrop', 'tv_sign'}   # textures worn by pieces that also have palette faces
+ATLAS = {'monitor_screen', 'waiting_sign', 'magazines', 'plaque', 'diploma', 'can_label', 'paper_roll', 'exam_sign', 'poster', 'eye_chart', 'rx_pad', 'clipboard_sheet', 'reception_sign', 'backdrop', 'tv_sign'}   # textures worn by pieces that also have palette faces
 
 
 def atlas(name):
@@ -138,6 +142,7 @@ for n, sm, gl, ti in (
         ('can_label', .62, 0, 1), ('poster', .25, 0, 1), ('rx_pad', .1, 0, 1), ('clipboard_sheet', .1, 0, 1), ('paper_roll', .08, 0, 1),
         ('reception_sign', .3, 0, 1), ('exam_sign', .3, 0, 1), ('clinic_floor', .55, 0, 1), ('ceiling_tile', .1, 0, 1),
         ('stars', .0, 1.0, 1), ('moon', .06, 0, 1), ('saturn_ring', .3, 0, 1), ('earth', .3, 0, 1), ('mars', .12, 0, 1), ('jupiter', .2, 0, 1), ('saturn', .2, 0, 1),
+        ('monitor_screen', .6, 0.9, 1), ('waiting_sign', .3, 0, 1), ('magazines', .35, 0, 1), ('plaque', .5, 0, 1), ('diploma', .2, 0, 1),
         ('backdrop', .35, 0, 1), ('tv_floor', .9, 0, 1), ('tv_sign', .3, 1.6, 1), ('eye_chart', .15, 0, 1)):
     texmat(n, sm, gl, ti)
 print('palette', len(P), 'cells, materials written to', OUT)

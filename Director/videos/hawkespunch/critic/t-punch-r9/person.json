@@ -1,0 +1,425 @@
+{
+ "name": "hawkespunch person 64.25-69.25 s",
+ "fps": 24,
+ "frames": 120,
+ "seconds": 4.96,
+ "zerog": false,
+ "features": {
+  "arcBend": 0.16,
+  "straightFrac": 0,
+  "moves": 5,
+  "flatness": 0.41,
+  "abruptFrac": 0.2,
+  "deadFrac": 0,
+  "holds": 1,
+  "holdMedianS": 1.83,
+  "fastRunMedianS": 1.63,
+  "dynRange": 4.18,
+  "handPeak": 37.49,
+  "bigMoves": 5,
+  "anticipFrac": 0,
+  "overshootFrac": 0,
+  "coherence": 0.83,
+  "lagMedianFrames": 0,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 38.32,
+  "slideCmPerS": 0.07,
+  "plantedFrac": 0.25,
+  "zgSpeedChanges": null,
+  "snapsPer10": 14.12,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.07,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.72,
+  "twinnedFrac": 0.6,
+  "curlMedian": 3.85,
+  "spreadMedian": 6.78,
+  "fannedFrac": 0.4,
+  "bowMedian": 1.92,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 7.87,
+  "armOmegaP95": 123.89,
+  "legOmegaP95": 128.39,
+  "spineOmegaP50": 6.88,
+  "spineOmegaP95": 31.95,
+  "headOmegaP50": 9.52,
+  "headOmegaP95": 90.76,
+  "armAccP95": 696.12,
+  "spineAccP95": 268.36,
+  "handSpeedP50": 0.1,
+  "handSpeedP95": 15.53,
+  "spineToArm": 0.87,
+  "energyCV": 0.93,
+  "moveRate": 0.4,
+  "refDistance": 1.51,
+  "refWorst": [
+   {
+    "k": "spineToArm",
+    "z": 2.8218299930956863
+   },
+   {
+    "k": "energyCV",
+    "z": 2.5077422922434374
+   },
+   {
+    "k": "handSpeedP95",
+    "z": 2.5027565372601517
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.16 over 5 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 9.5,
+   "note": "speed shape 0.41 (bell 0.6, constant 1.0), 20% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 6,
+   "note": "1 holds (median 1.83 s), 0% of frames dead still, fast parts median 1.63 s"
+  },
+  "anticipation": {
+   "score": 0,
+   "note": "5 big moves: 0 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 0.3,
+   "note": "parts' speed profiles agree 0.83 (1 = everything moves as one); typical lag between parts 0 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 5,
+   "note": "19 centre-of-mass jerks, planted feet slide 0 cm/s"
+  },
+  "snaps": {
+   "score": 0,
+   "note": "7 body snaps or pops in 4.96 s"
+  },
+  "stiffness": {
+   "score": 10,
+   "note": "7% of core joints frozen while the body moves"
+  },
+  "silhouette": {
+   "score": 9.1,
+   "note": "10 key poses, readability 0.72 (best of front, side, three-quarter), 60% twinned"
+  },
+  "hands": {
+   "score": 7,
+   "note": "fingers flat and splayed 40% of the time"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 8.5,
+   "note": "1.51 robust z from 174 mocap clips; furthest: spineToArm high (2.82), energyCV high (2.51), handSpeedP95 high (2.5)"
+  }
+ },
+ "events": [
+  {
+   "t": 67.5,
+   "f": 78,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 194 m/s^2"
+  },
+  {
+   "t": 67.54,
+   "f": 79,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 290 m/s^2"
+  },
+  {
+   "t": 67.67,
+   "f": 82,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 224 m/s^2"
+  },
+  {
+   "t": 67.71,
+   "f": 83,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 289 m/s^2"
+  },
+  {
+   "t": 67.92,
+   "f": 88,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 126 m/s^2"
+  },
+  {
+   "t": 68.42,
+   "f": 100,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 116 m/s^2"
+  },
+  {
+   "t": 68.46,
+   "f": 101,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 258 m/s^2"
+  },
+  {
+   "t": 68.5,
+   "f": 102,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 173 m/s^2"
+  },
+  {
+   "t": 69.08,
+   "f": 116,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.88,
+   "what": "the body's centre of mass jerks at 84 m/s^2"
+  },
+  {
+   "t": 69.13,
+   "f": 117,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.88,
+   "what": "the body's centre of mass jerks at 83 m/s^2"
+  },
+  {
+   "t": 69.17,
+   "f": 118,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.86,
+   "what": "the body's centre of mass jerks at 77 m/s^2"
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.86,
+   "what": "the body's centre of mass jerks at 78 m/s^2"
+  },
+  {
+   "t": 67.42,
+   "f": 76,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.83,
+   "what": "the body's centre of mass jerks at 69 m/s^2"
+  },
+  {
+   "t": 67.58,
+   "f": 80,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.8,
+   "what": "the body's centre of mass jerks at 60 m/s^2"
+  },
+  {
+   "t": 67.83,
+   "f": 86,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.8,
+   "what": "the body's centre of mass jerks at 59 m/s^2"
+  },
+  {
+   "t": 68.63,
+   "f": 105,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.8,
+   "what": "the body's centre of mass jerks at 61 m/s^2"
+  },
+  {
+   "t": 67.5,
+   "f": 78,
+   "kind": "pop",
+   "part": "LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 150 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 82,
+   "kind": "pop",
+   "part": "LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 156 cm in one frame"
+  },
+  {
+   "t": 69.21,
+   "f": 119,
+   "kind": "pop",
+   "part": "LeftHand",
+   "sev": 0.8,
+   "what": "LeftHand moves 42 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 82,
+   "kind": "pop",
+   "part": "RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 146 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 101,
+   "kind": "pop",
+   "part": "RightHand",
+   "sev": 0.8,
+   "what": "RightHand moves 96 cm in one frame"
+  },
+  {
+   "t": 67.67,
+   "f": 82,
+   "kind": "pop",
+   "part": "RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 126 cm in one frame"
+  },
+  {
+   "t": 68.46,
+   "f": 101,
+   "kind": "pop",
+   "part": "RightFoot",
+   "sev": 0.8,
+   "what": "RightFoot moves 89 cm in one frame"
+  },
+  {
+   "t": 67.96,
+   "f": 89,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.78,
+   "what": "the body's centre of mass jerks at 54 m/s^2"
+  },
+  {
+   "t": 67.46,
+   "f": 77,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.77,
+   "what": "the body's centre of mass jerks at 51 m/s^2"
+  },
+  {
+   "t": 67.38,
+   "f": 75,
+   "kind": "no-prep",
+   "part": "LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 1969 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 75,
+   "kind": "no-prep",
+   "part": "RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 1923 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 75,
+   "kind": "no-prep",
+   "part": "LeftFoot",
+   "sev": 0.75,
+   "what": "LeftFoot travels 1928 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 75,
+   "kind": "no-prep",
+   "part": "RightFoot",
+   "sev": 0.75,
+   "what": "RightFoot travels 1946 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.38,
+   "f": 75,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.75,
+   "what": "Head travels 1943 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 67.88,
+   "f": 87,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.75,
+   "what": "the body's centre of mass jerks at 46 m/s^2"
+  }
+ ],
+ "worst": [
+  {
+   "t": 67.5,
+   "f": 78,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 194 m/s^2",
+   "also": [
+    "com-spike",
+    "pop",
+    "no-prep"
+   ]
+  },
+  {
+   "t": 67.92,
+   "f": 88,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 126 m/s^2",
+   "also": [
+    "com-spike"
+   ]
+  },
+  {
+   "t": 68.42,
+   "f": 100,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.9,
+   "what": "the body's centre of mass jerks at 116 m/s^2",
+   "also": [
+    "com-spike",
+    "pop"
+   ]
+  },
+  {
+   "t": 69.08,
+   "f": 116,
+   "kind": "com-spike",
+   "part": "body",
+   "sev": 0.88,
+   "what": "the body's centre of mass jerks at 84 m/s^2",
+   "also": [
+    "com-spike",
+    "pop"
+   ]
+  }
+ ],
+ "total": 6.1,
+ "verdict": "looks animated, not acted: anticipation and snaps give it away (6.1/10)"
+}

@@ -2,7 +2,7 @@
   // The shot-check proof's cast: Hawkes Punch's him and the doctor, her glasses on her root as Hawkes Punch had them (fault 5/16), a marker attached
   // to her head bone (an attach that works: propat should stay quiet on it), and the can.
   "actors": {
-    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/Videos/hawkespunch/Props/Person_sick_head.mat" },
     "doctor": { "model": "person2", "material": "Assets/Videos/hawkespunch/Props/Person2_doctor.mat", "material2": "Assets/MusicVideo/Person2/Head.mat", "lint": "always" },
     "doctor_glasses": { "model": "Assets/MusicVideo/Props/Punch/glasses.fbx", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "parent": "doctor", "pos": [0, 1.6, 0.11], "rot": [0, 0, 0] },
     "head_tag": { "model": "prim:cube", "scale": 0.03, "color": "#ff2020", "parent": "doctor.head", "pos": [0, 0.14, 0] },

@@ -42,6 +42,12 @@ MAPS = {
              'RightShoulder': 'RightShoulder', 'RightArm': 'RightUpperArm', 'RightForeArm': 'RightLowerArm', 'RightHand': 'RightHand',
              'LeftLeg': 'LeftUpperLeg', 'LeftShin': 'LeftLowerLeg', 'LeftFoot': 'LeftFoot', 'LeftToeBase': 'LeftToes',
              'RightLeg': 'RightUpperLeg', 'RightShin': 'RightLowerLeg', 'RightFoot': 'RightFoot', 'RightToeBase': 'RightToes'},
+    # SMPL (22 joints, snake_case: HY-Motion BVH out of Hawkes Gen motion.from-text when no character is given): T-pose rest, metres
+    'smpl': {'pelvis': 'Hips', 'spine1': 'Spine', 'spine2': None, 'spine3': 'Chest', 'neck': 'Neck', 'head': 'Head',
+             'left_collar': 'LeftShoulder', 'left_shoulder': 'LeftUpperArm', 'left_elbow': 'LeftLowerArm', 'left_wrist': 'LeftHand',
+             'right_collar': 'RightShoulder', 'right_shoulder': 'RightUpperArm', 'right_elbow': 'RightLowerArm', 'right_wrist': 'RightHand',
+             'left_hip': 'LeftUpperLeg', 'left_knee': 'LeftLowerLeg', 'left_ankle': 'LeftFoot', 'left_foot': 'LeftToes',
+             'right_hip': 'RightUpperLeg', 'right_knee': 'RightLowerLeg', 'right_ankle': 'RightFoot', 'right_foot': 'RightToes'},
     # his own rig (Unity names)
     'unity': {n: n for n in CANON},
 }

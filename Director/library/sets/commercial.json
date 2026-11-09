@@ -7,11 +7,12 @@
   "bounds": [-7, -5, 7, 6],
   "ceiling": 12,
   "light": "daytime_tv",
-  "solids": { "can_big": [1.9, 2.5, 3.3, 3.9, 2.5] },
+  "solids": { "can_big": [-0.7, 3.0, 0.7, 4.4, 2.5] },
   "models": {
     "backdrop_panel": "Assets/MusicVideo/Props/Punch/backdrop_panel.fbx", "panel_pink": "Assets/MusicVideo/Props/Punch/panel_pink.fbx", "panel_blue": "Assets/MusicVideo/Props/Punch/panel_blue.fbx", "panel_yellow": "Assets/MusicVideo/Props/Punch/panel_yellow.fbx",
     "stool_tall": "Assets/MusicVideo/Props/Punch/stool_tall.fbx", "studio_light": "Assets/MusicVideo/Props/Punch/studio_light.fbx", "tv_sign": "Assets/MusicVideo/Props/Punch/tv_sign.fbx",
-    "mic_boom": "Assets/MusicVideo/Props/Punch/mic_boom.fbx", "can": "Assets/MusicVideo/Props/Punch/can.fbx"
+    "mic_boom": "Assets/MusicVideo/Props/Punch/mic_boom.fbx", "can": "Assets/MusicVideo/Props/Punch/can.fbx",
+    "tv_table": "Assets/MusicVideo/Props/Punch/tv_table.fbx", "drape": "Assets/MusicVideo/Props/Punch/drape.fbx", "light_grid": "Assets/MusicVideo/Props/Punch/light_grid.fbx"
   },
   "marks": {
     "center": { "pos": [0, 0, 1.5], "kind": "stand", "face": 180 },
@@ -21,7 +22,7 @@
     "stand_l": { "pos": [-0.9, 0, 0.9], "kind": "stand", "face": 180 },
     "stand_r": { "pos": [0.9, 0, 0.9], "kind": "stand", "face": 180 },
     "between": { "pos": [0, 1.2, 1.5], "kind": "prop", "head": 0 },
-    "can_big": { "pos": [2.6, 0, 3.2], "kind": "prop", "head": 1.25 },
+    "can_big": { "pos": [2.6, 0, 3.2], "kind": "prop", "head": 1.25 }, "can_big_c": { "pos": [0, 0, 3.7], "kind": "prop", "head": 1.25 },
     "can_big_top": { "pos": [2.6, 2.5, 3.2], "kind": "prop", "head": 0 },
     "can_table": { "pos": [0, 0.75, 1.2], "kind": "prop", "head": 0.06 },
     "sign": { "pos": [0, 3.3, 4.2], "kind": "prop", "head": 0.5 },
@@ -50,7 +51,8 @@
     "sign": { "model": "tv_sign", "material": "Assets/MusicVideo/Props/Punch/tv_sign.mat", "pos": [0, 3.3, 4.3], "rot": [8, 0, 0] },
     "stool_l": { "model": "stool_tall", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-0.75, 0, 1.5], "rot": [0, 15, 0], "shadows": true },
     "stool_r": { "model": "stool_tall", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [0.75, 0, 1.5], "rot": [0, -15, 0], "shadows": true },
-    "can_big": { "model": "can", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [2.6, 0, 3.2], "rot": [0, -20, 0], "scale": 20, "shadows": true },
+    // sets agent 2026-11-08 (C10, S7): the giant can stands centre-back between the hosts, so every two-shot on lens_a has the name whole over their shoulders
+    "can_big": { "model": "can", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [0, 0, 3.7], "rot": [0, 0, 0], "scale": 20, "shadows": true },
     "light_fl": { "model": "studio_light", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-4, 0, -1.5], "rot": [0, -125, 0] },
     "light_fr": { "model": "studio_light", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [4, 0, -1.5], "rot": [0, 125, 0] },
     "light_bl": { "model": "studio_light", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-3.2, 0, 5.4], "rot": [0, -35, 0] },
@@ -58,7 +60,14 @@
     "boom": { "model": "mic_boom", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-2.6, 0, 2.4], "rot": [0, -60, 0] },
     "tv_cam_a": { "model": "camera", "pos": [0, 0, -3.4], "rot": [0, 180, 0] },
     "tv_cam_b": { "model": "camera", "pos": [-2.0, 0, -2.8], "rot": [0, 150, 0] },
-    "can_table": { "model": "prim:cylinder", "pos": [0, 0.37, 1.2], "scale": [0.5, 0.37, 0.5], "color": "#f4e3ee", "smooth": 0.8 },
+    "can_table": { "model": "tv_table", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [0, 0, 1.2], "shadows": true },
+    // S8: the studio past the backdrop: black drapes left, right and behind, a lighting grid overhead (they belong in the a01 fold list so they arrive with the set)
+    "drape_l": { "model": "drape", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-6.6, 0, 2.2], "rot": [0, -80, 0] },
+    "drape_r": { "model": "drape", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [6.6, 0, 2.2], "rot": [0, 80, 0] },
+    "drape_bl": { "model": "drape", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [-4.2, 0, 6.9] },
+    "drape_bc": { "model": "drape", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [0, 0, 7.0] },
+    "drape_br": { "model": "drape", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [4.2, 0, 6.9] },
+    "light_grid": { "model": "light_grid", "material": "Assets/MusicVideo/Props/Punch/punch.mat", "pos": [0, 5.4, 1.6] },
     "can_a": { "model": "can", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [-0.1, 0.74, 1.15], "rot": [0, 40, 0] },
     "can_b": { "model": "can", "material": "Assets/MusicVideo/Props/Punch/can_label.mat", "pos": [0.1, 0.74, 1.25], "rot": [0, -30, 0] }
   }

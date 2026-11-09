@@ -1,0 +1,45 @@
+{
+ "id": "cut-0-04-58",
+ "f0": 110,
+ "f1": 120,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 4.583,
+   "file": "cut.jpg"
+  },
+  {
+   "kind": "spike",
+   "t": 4.917,
+   "why": "pose jumps and comes back (0.87)",
+   "file": "spike-00118.jpg"
+  }
+ ],
+ "hash": "9835140db61d22bc",
+ "summary": "Static shot with a held pointing pose, but a white ring/streak effect flashes at 4.87 and fades by 4.95, and the figure sits nearly still and stiff.",
+ "faults": [
+  {
+   "t": 4.87,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "A bright white elliptical streak and a vertical grey band appear for one frame across the rock and the character's arm. They pop in with no build-up, and by 4.91 they have shrunk to a thin line. The effect reads as an unmotivated flash that crosses in front of the pointing hand.",
+   "fix": "Add 2-3 frames of build-up or fade for the ring. Keep it off the character's hand, or place it deliberately behind him."
+  },
+  {
+   "t": 4.7,
+   "sev": "C",
+   "rule": "hold",
+   "seen": "likely",
+   "what": "The character is frozen in the same pointing pose from 4.62 to 4.95, with no breathing, no head movement and no arm settle. He looks like a static cutout, and the second figure in the water is also still.",
+   "fix": "Add a small arm and head drift, or an overshoot and settle on the point."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 5717,
+  "out": 430
+ },
+ "cost": 0.0157
+}

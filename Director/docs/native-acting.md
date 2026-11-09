@@ -28,8 +28,7 @@ videos made after 2026-11-07, and `tkshock greener touchgrass demo _cards_test s
   rest curl, overlap, inertial transitions, bakes (a take plays from source), `steps`, `speed`. Acting comes from clips: the catalog,
   `call clipderive`, a keyed pose sheet ([keyed-poses.md](keyed-poses.md)), or a generated clip.
 - **Rough:** a `walk` plays its clip at the clip's own pace, not tied to the distance (feet skate: derive a clip at the walk's speed or cut
-  around it); a blend tree plays its heaviest clip; a layer at weight under 1 plays at full weight; any `layer` on Person2 throws both
-  arms out. A hitstop or freeze inside a crossfade is skipped with a build note: give the clip at the hit `blend: 0`
+  around it); a blend tree plays its heaviest clip; a layer at weight under 1 plays at full weight. (Layers on Person2 work: `videos/_layer_test`, 2026-11-08.) A hitstop or freeze inside a crossfade is skipped with a build note: give the clip at the hit `blend: 0`
   ([epic-fx.md](epic-fx.md)).
 - `call clipderive '{"src":"IdleSit13","out":"sit_knee_kick_r","len":3,"add":{"Right Lower Leg Stretch":[[0,0],[0.17,0.75],
   [0.32,-0.12],[0.75,0]]}}'`: a clip plus keyed muscle offsets (muscle names as Unity's `HumanTrait.MuscleName`).

@@ -4,22 +4,22 @@
   "clean": true,
   "footIK": false,
   "loop": false,
-  "length": 8.3,
+  "length": 1.833,
   "humanMotion": true,
   "hipsY": {
-    "mean": 0.891,
+    "mean": 0.899,
     "min": 0.87,
     "max": 0.92
   },
   "stance": "standing",
   "airborneFrac": 0.0,
   "feetLowestM": 0.057,
-  "rootDriftM": 0.056,
+  "rootDriftM": 0.055,
   "rootFarthestM": 0.108,
   "handLeft": {
     "curlMean": 74.8,
     "curlMin": 74.7,
-    "curlP10": 74.8,
+    "curlP10": 74.7,
     "spreadMean": 23.1,
     "spreadMax": 23.3,
     "openFrac": 0.0,
@@ -28,7 +28,7 @@
   "handRight": {
     "curlMean": 75.8,
     "curlMin": 75.7,
-    "curlP10": 75.8,
+    "curlP10": 75.7,
     "spreadMean": 23.9,
     "spreadMax": 24.1,
     "openFrac": 0.0,
@@ -53,7 +53,7 @@
     13.6
   ],
   "leanFwdMaxDeg": 9.0,
-  "leanMeanDeg": -4.2,
+  "leanMeanDeg": -5.0,
   "kneeBackwardMaxDeg": 0.0,
   "kneeBackwardFrames": 0,
   "peakHand": {
@@ -68,8 +68,8 @@
     "t": 0.83,
     "mps": 2.14
   },
-  "frames": 250,
-  "previewSeconds": 8.0,
+  "frames": 56,
+  "previewSeconds": 2.33,
   "previewFrom": 0.0,
-  "secondsToMake": 11.7
+  "secondsToMake": 1.2
 }

@@ -218,8 +218,12 @@ namespace TKShock.MV
                     {
                         var m = new Material(Shader.Find("MV/Lit") ?? Shader.Find("Universal Render Pipeline/Lit")) { hideFlags = HideFlags.DontSave };
                         bool ice = op.kind == "icewake" || a.S("kind") == "ice";
-                        m.SetColor("_BaseColor", a.C("color", ice ? new Color(.86f, .92f, .97f) : new Color(.42f, .38f, .35f)));
+                        var baseCol = a.C("color", ice ? new Color(.86f, .92f, .97f) : new Color(.42f, .38f, .35f));
+                        m.SetColor("_BaseColor", baseCol);
                         m.SetFloat("_Smoothness", a.F("smooth", ice ? .62f : .15f));
+                        // "emit": self-lit share of the colour, so a white-blue wake stays white-blue under a warm sun (s05, 2026-11-08); "emitColor" overrides the hue
+                        float emit = a.F("emit", 0);
+                        if (emit > 0) { m.EnableKeyword("_EMISSION"); m.SetColor("_EmissionColor", a.C("emitColor", baseCol) * emit); m.globalIlluminationFlags = MaterialGlobalIlluminationFlags.None; }
                         l.r.sharedMaterial = m;
                         l.r.shadowCastingMode = a.F("shadows") > 0 ? ShadowCastingMode.On : ShadowCastingMode.Off;
                         if (a.F("dust", ice ? 60 : 40) > 0) { l.go2 = Go(op.kind + "_dust", out l.mesh2, out l.r2); l.r2.sharedMaterial = FxLibrary.Mat("puff", false); }
@@ -476,7 +480,7 @@ namespace TKShock.MV
             float smin = a.F("min", .012f), smax = a.F("max", .16f);
             Vector3 normal = a.V("normal", Vector3.zero); float cone = a.F("spread", normal == Vector3.zero ? 180 : 75);
             Color col = Color.white, col2 = a.C("color2", new Color(.8f, .78f, .76f));
-            float end = Mathf.Clamp01((age - life * .85f) / Mathf.Max(life * .15f, 1e-3f));
+            float fadeFrom = Mathf.Clamp01(a.F("fadeFrom", .85f)), end = Mathf.Clamp01((age - life * fadeFrom) / Mathf.Max(life * (1 - fadeFrom), 1e-3f)); // fadeFrom 1: whole to the end of its life, then gone (a wake that must end on a cut, s05)
             Begin();
             for (int i = 0; i < n; i++)
             {
@@ -545,7 +549,7 @@ namespace TKShock.MV
             float size = a.F("size", 2.2f), spread = a.F("spread", 9), drag = a.F("drag", .35f), along = a.F("along", .12f), rad = a.F("radius", .6f), spin = a.F("spin", 120);
             float smin = a.F("min", .04f), smax = 1;
             Color c1 = Color.white, c2 = a.C("color2", new Color(.78f, .86f, .95f));
-            float end = Mathf.Clamp01((age - life * .85f) / Mathf.Max(life * .15f, 1e-3f));
+            float fadeFrom = Mathf.Clamp01(a.F("fadeFrom", .85f)), end = Mathf.Clamp01((age - life * fadeFrom) / Mathf.Max(life * (1 - fadeFrom), 1e-3f)); // fadeFrom 1: whole to the end of its life, then gone (a wake that must end on a cut, s05)
             float pathLen = 0; for (int k = 1; k < path.Length; k++) pathLen += Vector3.Distance(path[k - 1], path[k]);
             float flyerSpeed = pathLen / Mathf.Max(emit, .01f);
             Begin();

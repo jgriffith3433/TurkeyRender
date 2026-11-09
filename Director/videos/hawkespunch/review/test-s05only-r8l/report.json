@@ -1,0 +1,29 @@
+{
+ "video": "hawkespunch",
+ "label": "test-s05only-r8l",
+ "render": "C:\\Projects\\TKShock\\Director\\videos\\hawkespunch\\tests\\s05_ring\\r8\\s05-only-r8l-720-mix.mp4",
+ "when": "2026-11-09T00:43:55.313Z",
+ "frames": 72,
+ "fps": 24,
+ "a": [],
+ "b": [],
+ "c": [],
+ "likely": [],
+ "cost": 0,
+ "carried": 0,
+ "spikes": 0,
+ "cuts": 0,
+ "shots": [
+  {
+   "id": "cut-0-00-00",
+   "from": 0,
+   "to": 3,
+   "strips": [],
+   "summary": "too short to read",
+   "faults": [],
+   "reused": false,
+   "carried": null,
+   "cost": 0
+  }
+ ]
+}

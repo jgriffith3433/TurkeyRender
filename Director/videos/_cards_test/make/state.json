@@ -2,16 +2,10 @@
  "version": 1,
  "stages": {
   "board": {
-   "status": "fail",
-   "key": "eced04b1986a6579",
+   "status": "pass",
+   "key": "4ff69f52670475b0",
    "took": 0.01,
-   "problems": [
-    {
-     "what": "the board has not been turned into cards yet (no cards/board.yaml)",
-     "fix": "Run: node tools/board2cards.mjs   (it writes cut.json, cards/board.yaml and lines.json from the board), then mv cards check",
-     "file": "C:\\Projects\\TKShock\\Director\\videos\\_cards_test\\cards\\board.yaml"
-    }
-   ],
+   "summary": "12 shots, 27.6 s, average 2.3 s, 2 bursts, 80% calm, 3 hero",
    "stats": {
     "shots": 12,
     "seconds": 27.6,
@@ -19,7 +13,15 @@
     "bursts": 2,
     "calmShare": 0.8
    },
-   "at": "2026-11-08T19:47:23.773Z"
+   "heroes": [
+    "alone",
+    "she_comes",
+    "hero"
+   ],
+   "notes": [
+    "no board2cards for this video: ids and order checked by hand"
+   ],
+   "at": "2026-11-08T22:07:07.469Z"
   },
   "cards": {
    "status": "pass",

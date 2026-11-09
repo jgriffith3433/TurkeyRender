@@ -13,6 +13,7 @@ namespace TKShock.MV
     {
         void NativeActing(MVActor actor)
         {
+            ApplyAlive(actor);   // breath, sway, weight shift, head micro-motion under everything else (MVAlive.cs; only drivers with an alive cue)
             if (_gaze != null && _gaze.w > .001f) GazeNative(actor);
             if (_eyeYaw != 0 || _eyePitch != 0) ApplyEyes(actor);
             foreach (var kv in _reach) if (kv.Value.w > .001f) ReachNative(actor, kv.Key, kv.Value);

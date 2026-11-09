@@ -2,7 +2,7 @@
 """Builds the motion-matching index motion_match.mjs searches: every clip of a fetched library (Director/gen/mocap/<source>/manifest.json)
 retargeted onto his rig (tools/motion/stream.py) and turned into per-frame features at 30 fps (tools/motion/features.py).
    py Director/tools/motion_index.py cmu [--workers 6] [--limit N]
-   py Director/tools/motion_index.py protofactor [--workers 4]          (FBX: Blender bakes the bones first, 40 clips a Blender start)
+   py Director/tools/motion_index.py protofactor [--workers 4] [--animsets Combat_Bare_Fists,Crowd --no-rm]          (FBX: Blender bakes the bones first, 40 clips a Blender start)
    py Director/tools/motion_index.py mixamo                              (his own Assets/MusicVideo/Motion clips, so a clip can be the query)
    py Director/tools/motion_index.py stats
 Writes Director/gen/mocap/index/<source>/<clip>.f32 (float32 [frames, 50]), <clip>.npz (the canonical stream, so a match can be cut and admitted
@@ -80,10 +80,12 @@ def bake_fbx(files, out_dir, workers=4, per=40):
     return bad
 
 
-def build(src, workers=6, limit=None):
+def build(src, workers=6, limit=None, animsets=None, no_rm=False):
     mf = json.load(open(os.path.join(MOCAP, src, 'manifest.json'), encoding='utf8')) if src != 'mixamo' else mixamo_manifest()
     out_dir = os.path.join(INDEX, src); os.makedirs(out_dir, exist_ok=True)
     clips = mf['clips'][:limit] if limit else mf['clips']
+    if animsets: clips = [c for c in clips if c.get('animset') in animsets]
+    if no_rm: clips = [c for c in clips if not c['id'].endswith('_RM')]
     todo = [c for c in clips if not os.path.exists(os.path.join(out_dir, c['id'] + '.f32'))]
     print(f'{src}: {len(clips)} clips, {len(todo)} to do', flush=True)
     results = []
@@ -142,7 +144,7 @@ def stats():
 
 
 if __name__ == '__main__':
-    ap = argparse.ArgumentParser(); ap.add_argument('source'); ap.add_argument('--workers', type=int, default=6); ap.add_argument('--limit', type=int)
+    ap = argparse.ArgumentParser(); ap.add_argument('source'); ap.add_argument('--workers', type=int, default=6); ap.add_argument('--limit', type=int); ap.add_argument('--animsets', help='comma list (protofactor): index only these sets'); ap.add_argument('--no-rm', action='store_true', help='skip _RM root-motion twins')
     a = ap.parse_args()
     if a.source == 'stats': stats()
-    else: build(a.source, a.workers, a.limit)
+    else: build(a.source, a.workers, a.limit, a.animsets.split(',') if a.animsets else None, a.no_rm)

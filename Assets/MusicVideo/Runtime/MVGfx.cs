@@ -119,7 +119,10 @@ namespace TKShock.MV
                                 var ri = g.images[i]; ri.gameObject.SetActive(true); ri.texture = op.refs[0] as Texture;
                                 var r = ri.rectTransform; var p = a.V("pos", new Vector3(.5f, .5f)); r.anchorMin = r.anchorMax = new Vector2(p.x, p.y);
                                 r.anchoredPosition = Vector2.zero; var sz = a.V("size", new Vector3(400, 225)); r.sizeDelta = new Vector2(sz.x, sz.y);
-                                var c = a.C("color", Color.white); c.a *= Mathf.Clamp01(tl / a.F("in", .15f)) * Mathf.Clamp01(left / a.F("out", .15f)); ri.color = c;
+                                // an "in" under a frame is a hard cut (set agent 2026-11-08, CLINIC-AD-AUDIT T4): tl is 0 on the shot's first frame, so in: 0.001 left
+                                // that frame transparent and the set leaked through at every full-frame card's cut. "out" keeps its fade: the frame at op.end is the next shot's.
+                                float fin = a.F("in", .15f);
+                                var c = a.C("color", Color.white); c.a *= (fin < .02f ? 1f : Mathf.Clamp01(tl / fin)) * Mathf.Clamp01(left / a.F("out", .15f)); ri.color = c;
                             }
                             break;
                         }

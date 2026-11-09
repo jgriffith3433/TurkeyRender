@@ -2,23 +2,10 @@
  "version": 1,
  "stages": {
   "board": {
-   "status": "fail",
-   "key": "1a52dbaea674fd1d",
-   "took": 0.04,
-   "problems": [
-    {
-     "what": "shots[46] (a05): \"lens\" is 0",
-     "fix": "A focal length in mm (24 wide, 35, 50, 85 close, 100+ ecu)",
-     "file": "videos/hawkespunch/storyboard/shots.json",
-     "field": "shots[46] (a05).lens"
-    },
-    {
-     "what": "shots[47] (a06): \"lens\" is 0",
-     "fix": "A focal length in mm (24 wide, 35, 50, 85 close, 100+ ecu)",
-     "file": "videos/hawkespunch/storyboard/shots.json",
-     "field": "shots[47] (a06).lens"
-    }
-   ],
+   "status": "pass",
+   "key": "0fae017020028d31",
+   "took": 0.01,
+   "summary": "53 shots, 204.25 s, average 3.85 s, 0 bursts, 82% calm, 6 hero",
    "stats": {
     "shots": 53,
     "seconds": 204.25,
@@ -26,7 +13,24 @@
     "bursts": 0,
     "calmShare": 0.82
    },
-   "at": "2026-11-08T19:24:05.391Z"
+   "heroes": [
+    "p02",
+    "s05",
+    "s06",
+    "s10",
+    "s12",
+    "s14"
+   ],
+   "notes": [],
+   "at": "2026-11-08T22:07:08.010Z"
+  },
+  "cards": {
+   "status": "pass",
+   "key": "ee90225dab19fb70",
+   "took": 2.47,
+   "summary": "cards check ok, lint 0 errors, 37 warnings (no clip-banned); generated: 9 of 9 fresh",
+   "notes": [],
+   "at": "2026-11-08T22:03:55.424Z"
   }
  }
 }

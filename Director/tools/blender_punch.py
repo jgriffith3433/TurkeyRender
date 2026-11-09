@@ -426,11 +426,6 @@ def clipboard():
 
 
 @piece
-def pen():
-    k = K(); k.bar((-.07, .005, 0), (.07, .005, 0), .005, "black"); k.bar((.07, .005, 0), (.078, .005, 0), .003, "chrome"); k.box((-.04, .011, 0), (.05, .003, .004), "chrome"); k.save("pen")
-
-
-@piece
 def stethoscope():
     """Draped round a neck: pivot at the back of the neck's centre, ear tubes up at the back, the rubber tube down the front (-z is the front) to the chest piece."""
     k = K()
@@ -465,7 +460,7 @@ def reception_desk():
     k.box((0, 1.16, -.26), (2.5, .14, .26), "mint_wall", .006); k.box((0, 1.24, -.26), (2.54, .03, .3), "laminate", .004)
     k.box((0, .2, -.3), (2.4, .08, .02), "green_trim")
     k.quad((-.6, .62, -.306), (.6, .62, -.306), (.6, .92, -.306), (-.6, .92, -.306), (0, 0, -1))
-    k.box((.7, 1.09, .2), (.4, .02, .3), "off_white"); k.box((.7, 1.2, .3), (.4, .2, .02), "dark_grey")   # a monitor
+    # (the flat slab that stood here for a monitor is gone: monitor and keyboard are pieces of their own, W9, sets agent 2026-11-08)
     k.save("reception_desk")
 
 
@@ -490,6 +485,222 @@ def wall_clock():
     k.lathe((0, 0, 0), [(.15, 0), (.16, 0), (.16, .035), (.15, .035)], "dark_grey", 32); k.at(); k.turn(-90, 0, 0)
     k.box((0, .05, -.032), (.006, .1, .002), "black"); k.box((.035, 0, -.032), (.07, .006, .002), "black")
     k.save("wall_clock")
+
+
+# -- clinic dressing (sets agent, 2026-11-08: CLINIC-AD-AUDIT S1, S3, S4, W6, W9)
+@piece
+def monitor():
+    """A 22-inch flat monitor on a foot: screen 0.48 by 0.30 (textured monitor_screen, it glows), a thin black bezel, the neck and a foot.
+    Pivot under the foot's centre on the desk top. The screen faces -z."""
+    k = K()
+    k.box((0, .012, .02), (.22, .016, .17), "black", .004)
+    k.box((0, .14, .05), (.05, .25, .025), "dark_grey", .004)
+    k.at(); k.box((0, .3, 0), (.52, .34, .03), "black", .006); k.turn(-6, 0, 0, about=(0, .3, 0))
+    k.at(); k.quad((-.24, .15, -.0155), (.24, .15, -.0155), (.24, .45, -.0155), (-.24, .45, -.0155), (0, 0, -1)); k.turn(-6, 0, 0, about=(0, .3, 0))
+    k.save("monitor")
+
+
+@piece
+def keyboard():
+    """A plain office keyboard, 0.44 by 0.14, keys as raised caps in five rows and a space bar. Flat, pivot at its centre underneath, near edge at -z."""
+    k = K()
+    k.box((0, .01, 0), (.44, .02, .145), "dark_grey", .004)
+    rows = [(15, 0), (14, .006), (13, .012), (12, .018), (12, .024)]
+    for j, (n, off) in enumerate(rows):
+        z = .05 - j * .022; w = (.41 - off * 2) / n
+        for i in range(n): k.box((-.205 + off + w * (i + .5), .024, z), (w * .82, .01, .017), "key_grey", .0015)
+    k.box((0, .024, -.062), (.2, .01, .017), "key_grey", .0015)
+    k.save("keyboard")
+
+
+@piece
+def nurse_cap():
+    """A folded paper nurse's cap with a green band (no red cross: a protected emblem). Real size for a human head (17 cm across); scale it
+    to the head that wears it. Pivot at the band's bottom centre, the front at -z: a short white band, a soft crown behind it, and the starched
+    front fold standing up and leaning back, the shape that reads as 'nurse' in silhouette."""
+    k = K()
+    k.lathe((0, 0, 0), [(.085, 0), (.087, .03), (.08, .05), (.0, .05)], "white", 32)
+    k.lathe((0, 0, 0), [(.0872, .012), (.0884, .016), (.0884, .03), (.0872, .034)], "sign_green", 32)
+    k.lathe((0, 0, .02), [(.075, .045), (.072, .075), (.05, .095), (0, .1)], "white", 32)
+    rows = [[(math.sin(a) * .088, h, -math.cos(a) * .088 - h * .35) for a in [math.radians(t) for t in range(-75, 76, 10)]] for h in (.02, .095)]
+    k.sheet(rows, (0, 0, -1), col="white")
+    rows2 = [[(x * 1.003, y, z - .002) for x, y, z in r] for r in rows]
+    k.sheet(rows2, (0, 0, 1), col="white")
+    k.save("nurse_cap")
+
+
+@piece
+def water_cooler():
+    """A water cooler: a white cabinet 1.0 tall with two taps and a drip tray, a blue bottle upside down on top, a sleeve of cups. Pivot on the floor, front -z."""
+    k = K()
+    k.box((0, .5, 0), (.32, 1.0, .32), "white", .01)
+    k.box((0, .62, -.163), (.22, .12, .01), "grey", .003)
+    for x, c in ((-.05, "sign_green"), (.05, "red")): k.box((x, .69, -.175), (.03, .03, .03), c, .004)
+    k.box((0, .5, -.17), (.2, .02, .06), "steel", .003)
+    k.lathe((0, 1.0, 0), [(.0, .0), (.04, 0), (.04, .05), (.13, .12), (.135, .2), (.135, .36), (.12, .43), (0, .44)], "water_blue", 28)
+    k.lathe((0, 1.0, 0), [(.137, .22), (.14, .23), (.14, .25), (.137, .26)], "water_blue", 28)
+    k.bar((.175, .72, 0), (.175, .92, 0), .035, "white")
+    k.save("water_cooler")
+
+
+@piece
+def magazine_rack():
+    """A wall rack with three slanted shelves of magazines (textured magazines: a cover per third). Pivot at the bottom centre on the wall,
+    front toward -z. 0.6 wide, 0.75 tall."""
+    k = K()
+    k.box((0, .375, .01), (.6, .75, .02), "laminate_edge", .004)
+    for j in range(3):
+        y = .05 + j * .24
+        k.box((0, y + .06, -.035), (.58, .12, .012), "chrome", .002)
+        k.box((0, y, -.02), (.58, .012, .04), "chrome", .002)
+    w = .17
+    for j in range(3):
+        y = .07 + j * .24
+        for i, x in enumerate((-.19, 0, .19)):
+            u0 = ((i + j) % 3) / 3
+            k.quad((x - w / 2, y, -.045), (x + w / 2, y, -.045), (x + w / 2, y + .22, -.005), (x - w / 2, y + .22, -.005), (0, .2, -1), rect=(u0 + .004, 0, u0 + 1 / 3 - .004, 1))
+    k.save("magazine_rack")
+
+
+@piece
+def poster_big():
+    """The reception poster, 0.9 by 1.2 (the same picture as `poster`), a black frame, its bottom edge at the pivot, facing -z."""
+    k = K()
+    k.box((0, .6, .014), (.95, 1.25, .028), "frame_dark", .004)
+    k.quad((-.45, .0, -.001), (.45, .0, -.001), (.45, 1.2, -.001), (-.45, 1.2, -.001), (0, 0, -1))
+    k.save("poster_big")
+
+
+@piece
+def waiting_sign():
+    """PLEASE TAKE A SEAT, 1.2 by 0.3 on a green panel; pivot at its bottom centre, facing -z."""
+    k = K()
+    k.box((0, .15, .012), (1.24, .34, .024), "green_trim", .004)
+    k.quad((-.6, .0, -.001), (.6, .0, -.001), (.6, .3, -.001), (-.6, .3, -.001), (0, 0, -1))
+    k.save("waiting_sign")
+
+
+@piece
+def pinboard():
+    """A cork board behind reception (S4), 0.9 by 0.6, a pine frame, notes pinned on it. Pivot at its bottom centre, facing -z."""
+    k = K()
+    k.box((0, .3, .012), (.94, .64, .024), "laminate", .004); k.box((0, .3, .0), (.88, .58, .006), "cork")
+    r = random.Random(7)
+    for i in range(9):
+        x = -.3 + (i % 3) * .3 + r.uniform(-.04, .04); y = .08 + (i // 3) * .17 + r.uniform(-.02, .02)
+        k.at(); k.box((x, y + .07, -.006), (.13, .14, .002), ["note_yellow", "note_pink", "note_blue", "paper"][i % 4]); k.turn(0, 0, r.uniform(-8, 8), about=(x, y + .07, 0))
+        k.ball((x, y + .125, -.01), .006, ["red", "sign_green", "pad_blue"][i % 3], sub=1)
+    k.save("pinboard")
+
+
+def glove_into(k, c, s, side=1, hang=False):
+    """A red boxing glove into piece k: the fist pad, the knuckle roll, the thumb on the -x side for a right hand (side 1; -1 mirrors it),
+    the cuff and its laces. At scale 1 it is about 30 cm long; c is the wrist's centre, the fist toward +z (or hanging toward -y when hang)."""
+    def P(x, y, z):
+        if hang: y, z = -z, y
+        return (c[0] + x * s * side, c[1] + y * s, c[2] + z * s)
+    def S(a, b, d): return (a, d, b) if hang else (a, b, d)
+    k.ball(P(0, .01, .17), .085 * s, "leather_red", scale=S(1.0, .85, 1.25))
+    k.ball(P(0, .045, .2), .06 * s, "leather_red", scale=S(1.25, .8, 1.0))
+    k.ball(P(-.075, -.015, .14), .032 * s, "leather_red", scale=S(.9, .9, 1.6))
+    k.bar(P(-.06, -.01, .09), P(-.08, -.02, .17), .028 * s, "leather_red")
+    k.bar(P(0, 0, -.01), P(0, 0, .075), .062 * s, "leather_red", 20)
+    k.bar(P(0, 0, -.015), P(0, 0, .0), .064 * s, "white", 20)
+    for i in range(4):
+        z = .005 + i * .018; k.bar(P(-.03, .062, z), P(.03, .062, z + .006), .004 * s, "white", 6)
+
+
+@piece
+def gloves_case():
+    """Her Golden Gloves in a shadow box (c05, c15, c19): a 0.6 by 0.75 frame 12 cm deep, cream felt inside, a pair of red gloves hung by their
+    laces from a brass peg, the brass plaque (textured) below them. Pivot at the case's centre on the wall, facing -z."""
+    k = K(); W, H, D = .6, .75, .12
+    k.box((0, 0, .0), (W, H, .01), "felt_cream")
+    for x in (-W / 2, W / 2): k.box((x, 0, -D / 2), (.04, H + .04, D), "frame_dark", .004)
+    for y in (-H / 2, H / 2): k.box((0, y, -D / 2), (W + .04, .04, D), "frame_dark", .004)
+    k.bar((0, .27, 0), (0, .27, -.05), .008, "brass")
+    for side in (-1, 1):
+        glove_into(k, (side * .12, .1, -.055), 0.62, side, hang=True)
+        k.tube([(0, .27, -.05), (side * .06, .2, -.055), (side * .12, .12, -.055)], .003, "white", 6)
+    k.box((0, -.28, -.004), (.44, .14, .008), "brass", .002)
+    k.quad((-.2, -.34, -.009), (.2, -.34, -.009), (.2, -.22, -.009), (-.2, -.22, -.009), (0, 0, -1))
+    k.save("gloves_case")
+
+
+@piece
+def boxing_glove():
+    """Her glove for the next day's punch (W6, b02): the framed pair's glove, about 30 cm long. Pivot at the wrist's centre, the fist toward
+    +z (the punch's way), the thumb on -x (a right hand), the laces on top (+y). Attach to doctor.rightHand and turn it into the fist."""
+    k = K(); glove_into(k, (0, 0, 0), 1.0, 1); k.save("boxing_glove")
+
+
+@piece
+def diploma_frame():
+    """A framed degree, 0.42 by 0.32, a thin dark frame; pivot at its centre on the wall, facing -z."""
+    k = K()
+    k.box((0, 0, .008), (.42, .32, .016), "frame_dark", .003)
+    k.quad((-.18, -.135, -.001), (.18, -.135, -.001), (.18, .135, -.001), (-.18, .135, -.001), (0, 0, -1))
+    k.save("diploma_frame")
+
+
+@piece
+def sanitizer():
+    """A pump bottle of hand gel and a box of exam gloves beside it, for the exam-room counter. Pivot on the counter, front -z."""
+    k = K()
+    k.lathe((-.08, 0, 0), [(0, 0), (.035, 0), (.037, .12), (.02, .14), (.01, .15), (.0, .15)], "water_blue", 20)
+    k.bar((-.08, .15, 0), (-.08, .18, 0), .006, "white"); k.bar((-.08, .18, 0), (-.08, .18, -.03), .005, "white")
+    k.box((.1, .045, 0), (.24, .09, .12), "pad_blue", .004); k.box((.1, .09, 0), (.12, .004, .05), "white")
+    k.save("sanitizer")
+
+
+# -- the commercial's set dressing (S7, S8)
+@piece
+def tv_table():
+    """A round coffee table for the cans between the stools: a white top at 0.74 on a chrome column and a weighted foot. Pivot on the floor."""
+    k = K()
+    k.lathe((0, 0, 0), [(0, 0), (.22, 0), (.22, .03), (.05, .05), (.035, .06), (.035, .7), (0, .7)], "chrome", 28)
+    k.lathe((0, 0, 0), [(0, .7), (.3, .7), (.31, .72), (.3, .74), (0, .74)], "white", 36)
+    k.save("tv_table")
+
+
+@piece
+def drape():
+    """A black stage drape, 4 m wide and 4.5 m tall, pleated, on its top bar; pivot on the floor at its centre, the room side at -z."""
+    k = K(); W, H = 4.0, 4.5
+    rows = []
+    for j in range(2):
+        rows.append([(x, j * H, .06 * math.sin(i * math.pi / 2)) for i, x in enumerate([i / 40 * W - W / 2 for i in range(41)])])
+    k.sheet(rows, (0, 0, -1), col="drape_black")
+    k.bar((-W / 2 - .05, H + .03, 0), (W / 2 + .05, H + .03, 0), .025, "studio_black")
+    k.save("drape")
+
+
+@piece
+def light_grid():
+    """A lighting truss 8 by 5 m with six cans hanging from it, aimed down and in. Pivot at its centre; place it 5 m up over the stage."""
+    k = K(); X, Z = 4.0, 2.5
+    for z in (-Z, Z):
+        k.bar((-X, 0, z), (X, 0, z), .04, "studio_black"); k.bar((-X, -.3, z), (X, -.3, z), .04, "studio_black")
+        for i in range(16): x = -X + i * .5; k.bar((x, 0, z), (x + .25, -.3, z), .015, "studio_black")
+    for x in (-X, X):
+        k.bar((x, 0, -Z), (x, 0, Z), .04, "studio_black"); k.bar((x, -.3, -Z), (x, -.3, Z), .04, "studio_black")
+    for x in (-2.5, 0, 2.5):
+        for z in (-Z, Z):
+            k.bar((x, -.3, z), (x, -.45, z), .015, "chrome")
+            k.at(); k.lathe((x, -.75, z), [(.0, 0), (.1, 0), (.12, .3), (0, .3)], "studio_black", 16); k.turn(35 if z < 0 else -35, 0, 0, about=(x, -.45, z))
+    k.save("light_grid")
+
+
+@piece
+def pen():
+    """A click pen, 14 cm along x, lying flat (y up): a barrel, a rubber grip, the chrome nib cone at +x, the clip and the plunger at -x."""
+    k = K(); y = .0055
+    k.bar((-.06, y, 0), (.045, y, 0), .0055, "black", 14)
+    k.bar((.03, y, 0), (.058, y, 0), .006, "rubber", 14)
+    k.bar((.058, y, 0), (.066, y, 0), .0042, "chrome", 14); k.bar((.066, y, 0), (.073, y, 0), .0022, "chrome", 12); k.ball((.0735, y, 0), .0009, "black", sub=1)
+    k.bar((-.072, y, 0), (-.06, y, 0), .004, "chrome", 12)
+    k.box((-.04, y + .0068, 0), (.045, .0016, .003), "chrome", .0005); k.ball((-.018, y + .0062, 0), .0022, "chrome", sub=1)
+    k.save("pen")
 
 
 # ---------------------------------------------------------------------------------------------------- space

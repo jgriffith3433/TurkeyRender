@@ -35,6 +35,10 @@ def bvh2fbx(job):
     arm.name = job.get('name') or os.path.splitext(os.path.basename(job['out']))[0].replace('Humanoid@', '')
     if arm.animation_data and arm.animation_data.action:
         arm.animation_data.action.name = arm.name
+        # update_scene_duration only ever extends the scene (default 250 frames), so a 1 s clip was exported as 8.3 s with a held last
+        # frame: set the range to the action's own (found 2026-11-08 by the motion critic: every short mm_/vm_/ps_ clip read as a long hold)
+        a0, a1 = arm.animation_data.action.frame_range
+        bpy.context.scene.frame_start = int(round(a0)); bpy.context.scene.frame_end = int(round(a1))
     bpy.ops.export_scene.fbx(filepath=job['out'], object_types={'ARMATURE'}, add_leaf_bones=False, bake_anim=True,
                              bake_anim_use_all_actions=False, bake_anim_use_nla_strips=False, bake_anim_simplify_factor=0.0,
                              bake_anim_step=1.0, apply_scale_options='FBX_SCALE_ALL', axis_forward='-Z', axis_up='Y')

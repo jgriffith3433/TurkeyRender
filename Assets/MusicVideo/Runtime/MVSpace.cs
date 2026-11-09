@@ -680,6 +680,9 @@ namespace TKShock.MV
                     return h;
                 };
             }
+            { // the ground at the near origin is y = 0 (space.md "ground is y = 0"): the fractal floor's own height there (about 10 m on moon_ground)
+              // left the marks 10 m under the surface, in a cone to the centre vertex at y 0 (s06's "sunk to the waist in a hole", 2026-11-08)
+                var raw = height; float h0 = raw(0, 0); height = (x, z) => raw(x, z) - h0; }
             for (int ri = 0; ri < rings; ri++)
             {
                 float r = first * Mathf.Exp(k * ri);

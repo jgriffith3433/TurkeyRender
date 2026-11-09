@@ -17,8 +17,10 @@ import { warnIfLeased } from './lease.mjs';
 
 export const LOCK = process.env.MV_COMPILE_LOCK || path.join(DIRECTOR, 'gen', 'compile.lock'); // the env override is for harden-test.mjs only
 const STAGING = path.join(DIRECTOR, 'staging');
-const SNAPS = path.join(DIRECTOR, 'gen', 'csharp');
-const WORKLOG = path.join(DIRECTOR, 'gen', 'WORKLOG-epic.md');
+const SNAPS = process.env.MV_CSHARP_SNAPS || path.join(DIRECTOR, 'gen', 'csharp'); // env overrides: harden-test.mjs only, so its pretend applies never touch the real Assets, record or WORKLOG
+const WORKLOG = process.env.MV_WORKLOG || path.join(DIRECTOR, 'gen', 'WORKLOG-epic.md');
+export const ROOT = process.env.MV_CSHARP_ROOT || PROJECT; // the project whose Assets receive the files (a sandbox in harden-test.mjs)
+const relA = (f) => path.relative(ROOT, f).split(path.sep).join('/');
 const CODE = /\.(cs|shader|hlsl|cginc|compute|asmdef|uss|uxml)$/i;
 const LOCK_OLD_MS = 30 * 60e3;
 const rel = (f) => path.relative(PROJECT, f).replace(/\\/g, '/');
@@ -90,7 +92,7 @@ function assetsRoot(stagingDir) {
 /** Every staged code file: {staged, target (abs in Assets), rel, same, newFile}. */
 export function stagedFiles(stagingDir) {
   const root = assetsRoot(stagingDir), out = [];
-  const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (!/^(_backup|orig|current)$/i.test(e.name)) walk(p); continue; } if (!CODE.test(e.name) && !e.name.endsWith('.meta')) continue; const target = path.join(PROJECT, 'Assets', path.relative(root, p)); const exists = fs.existsSync(target); out.push({ staged: p, target, rel: rel(target), newFile: !exists, same: exists && fs.readFileSync(p).equals(fs.readFileSync(target)), stagedNewer: !exists || fs.statSync(p).mtimeMs > fs.statSync(target).mtimeMs }); } };
+  const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (!/^(_backup|orig|current)$/i.test(e.name)) walk(p); continue; } if (!CODE.test(e.name) && !e.name.endsWith('.meta')) continue; const target = path.join(ROOT, 'Assets', path.relative(root, p)); const exists = fs.existsSync(target); out.push({ staged: p, target, rel: relA(target), newFile: !exists, same: exists && fs.readFileSync(p).equals(fs.readFileSync(target)), stagedNewer: !exists || fs.statSync(p).mtimeMs > fs.statSync(target).mtimeMs }); } };
   walk(root);
   return out;
 }
@@ -153,7 +155,7 @@ export async function apply(stagingDir, ctx) {
 
 function restore(snap, manifest) {
   for (const f of manifest.files) {
-    const target = path.join(PROJECT, f.rel);
+    const target = path.join(ROOT, f.rel);
     if (f.newFile) { for (const p of [target, target + '.meta']) try { fs.unlinkSync(p); } catch {} continue; }
     const from = path.join(snap, f.rel);
     fs.copyFileSync(from, target);
@@ -178,7 +180,7 @@ export function check(only) {
     }
   }
   if (!only) for (const [r, a] of Object.entries(applied())) {
-    const abs = path.join(PROJECT, r); let now = null; try { now = hashOf(fs.readFileSync(abs)); } catch {}
+    const abs = path.join(ROOT, r); let now = null; try { now = hashOf(fs.readFileSync(abs)); } catch {}
     if (now !== a.hash) out.push({ role: 'applied', rel: r, state: 'drift', staged: a.from, who: a.who, at: a.at, gone: now === null });
   }
   return out;

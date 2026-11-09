@@ -1,0 +1,116 @@
+# Hand staging over the board's card skeletons (merged by tools/board2cards.mjs on every run: maps merge, lists replace, null removes).
+# Keyed by board shot id. Write the reason beside every change.
+
+# --- The punch (hero test 1), round 3 (2026-11-08 15:30 PST) from real sources; history in tests/REVIEW.md ---
+# Why an uppercut: he sits on a high exam bed (his head 1.58 m, hers 1.46 m: bone dump), so a hook or a cross lands on his chest
+# and only an upward blow sends a man straight up through a ceiling (J is being told about the board phrase this changes).
+# Her (round 4): mm_doc_uppercut (motion agent, 7.9), guard at the chin, from mark doctor_uppercut_m. Before it, Protofactor RightPowerUppercut (critic 8.0), RIGHT hand because its coil turns her chest to her LEFT, toward a front-left
+# camera on c05's side of the line, so her face and the low coil read (round 2's left uppercut coiled her back to every legal camera).
+# Clip: guard 0-0.15 s, the coil sinks to 0.27 s, the strike 0.27-0.40 s (9.8 m/s), fist at his chin ~0.395 s, overhead 0.47-0.9 s.
+# Her mark doctor_uppercut_r puts the fist on his chin at contact (clip dump: fist at local (-0.05, 1.45, 0.79)).
+# Him: mx_sit_still on the bed; at contact GetHitFrontHeavyCombat on 'spine,head' (no arms: its guard covered his face) at 1.6x for a
+# sharper snap; then ONE flight path from the bed to the sky on the p02/p03 cut, constant ~11 m/s (5-6 frames from seat to hole).
+# The can stays in his hand from c17 (it was cast on the desk while still attached: 188 cm off, motioncheck) and hides once he is
+# through the roof.
+c19:
+  cast: {can: null}
+c20:
+  cast: {can: null}
+c21:
+  cast: {can: null}
+
+p01:
+  cast:
+    person: {at: bed, clip: mx_sit_still, blend: 0, args: null}
+    doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, face: -45, args: {start: 0.0, once: 1}}
+    can: null
+  shot: {pos: [699.37, 1.1, 3.44], look: null, rot: [-8.25, 89.58, 0], fov: 48, screen: null}   # front-left 3/4 of her at hip height (c05's side): her face and the coil to the lens, him screen left
+  raw:
+    - {at: 0, grade: {catch: 0}, for: 0}
+    - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
+    - {at: 0s, do: face, on: person, eyesWide: 0.5, fear: 0.4, for: 0.2s}
+    - {at: 0s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0s}
+    - {at: 0.2s, do: anim, on: doctor, clip: mm_doc_uppercut__clean, start: 0.2, rate: 0.041, blend: 0.1}   # round 4: mm_doc_uppercut (motion agent, 7.9): its guard stays at her chin (RightPowerUppercut's left guard crossed her eyes); the dip (clip 0.20-0.27) played over 1.7 s
+    - {at: 1.9s, do: anim, on: doctor, clip: mm_doc_uppercut__clean, start: 0.27, rate: 1, blend: 0}   # the release: contact (clip 0.37, fist 4 cm short of his chin) on the cut
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}   # her right hand a fist from the coil on (the clip's hand opens)
+    - {at: 0.4s, do: hitshake, on: doctor, amount: 0.003, hz: 9, for: 1.45s}
+    - {at: 0.9s, do: face, on: doctor, eyesNarrow: 0.75, browDown: 0.75, mouthPress: 0.6, for: 0.8s}
+    - {at: 1.0s, do: face, on: person, eyesWide: 0.85, fear: 0.6, for: 0.25s}
+    - {at: 1.15s, do: gaze, on: person, to: doctor.rightHand, limit: 40, for: 0.15s}
+    - {at: 1.6s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0.12s}
+    - {at: 1.89s, do: limbscale, on: doctor, bones: {rightHand: 1.25}, for: 0.15s, in: 0.03, out: 0.08}
+    - {at: 1.95s, do: smear, on: doctor.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
+    - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
+    - {at: 0, do: detach, on: clinic_pen}   # the pen was still in her (now punching) right hand from c06-c13: 9 cm into his chest at contact
+    - {at: 0, do: hide, on: clinic_pen}
+
+p02:
+  cast:
+    person: {at: bed, clip: mx_sit_still, blend: 0, args: null}
+    doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, face: -45, args: {start: 0.0, once: 1}}
+    can: null
+  shot: {pos: [700.15, 1.4, 3.1], look: null, rot: [-11.83, 41.04, 0], fov: 45, screen: null}   # front-right of him at jaw height; she stands at his left knee, so her fist comes in from frame right, not between the lens and his face
+  raw:
+    - {at: 0, do: impactframe, on: person.head, style: flip, flash: 0, frames: 2, accent: "#ff3a2a", lines: 1}
+    - {at: 0, do: hitstop, on: person, frames: 7, victim: person, victimShake: 0.05, attacker: doctor, creep: 0.02}
+    - {at: 0.27s, do: anim, on: doctor, clip: mm_doc_uppercut__clean, start: 0.37, rate: 1, blend: 0}   # the hitstop resumes a held clip at song time (a pop): take over just inside the hold, from contact
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+    - {at: 0, do: layer, on: person, clip: mm_him_snapback, mask: 'spine,head', start: 0.2, rate: 1.8, once: 1, weight: 1, for: 0.75s, blend: 0}   # round 4: the motion agent's snapback (Unity 8.6), its head-back window 0.2-0.75 s at 1.8x, torso and head only over the seated body
+    - {at: 0, do: face, on: person, jawOpen: 0.5, squint: 0.8, browDown: 0.4, for: 0s}
+    - {at: 0, do: speedlines, style: radial, on: person.head, amount: 0.8, for: 0.4s, hz: 12}
+    - {at: 0, fx: shock, on: person.head, size: 0.3, for: 0.4s, width: 0.015, glow: 0.04, fill: 0, color: "#ffffff"}
+    - {at: 0, fx: debris, on: person.head, size: 0.02, count: 20, speed: 3, normal: [0, 1, 0], spread: 70, gravity: 1, color: "#ffffff", color2: "#e8e8e8", for: 0.8s}
+    - {at: 0, do: shake, trauma: 1, punch: 0.06, for: 0.6s}
+    - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
+
+p03:
+  cast:
+    person: {at: bed, clip: mx_falling_air, blend: 0, args: null}
+    doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, face: -45, args: {start: 0.0, once: 1}}
+    can: null
+  shot: {pos: [700.0, 1.0, 4.38], look: null, rot: [-42.05, 143.03, 0], fov: 78, screen: null}   # from the bone dump: her head (700.77, 1.44, 3.2) and fist overhead (700.78, 1.66, 3.38) face front-left (+z, -x) and up; low in the gap between the bed and the window wall, tilted up so the hole (700.6, 2.7, 3.85) is in frame
+  raw:
+    - {at: 0, do: anim, on: doctor, clip: mm_doc_uppercut__clean, start: 0.4, rate: 0.15, blend: 0}   # opens on the fist at its peak (clip 0.40), held slowly, then back to guard
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+    - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
+    - {at: 0, grade: {catch: 0}, for: 0}
+    - {at: 0, do: shake, trauma: 0.5, for: 0.6s}
+    - {at: 0, do: fly, on: person, points: [[700.6, 1.6, 3.6], [700.6, 3.8, 3.8], [700.6, 8, 4.4], [700.6, 17, 14], [700.6, 33, 45], [700.6, 58, 74]], for: 8.4s, ease: linear, face: yaw, tilt: [-90, 0, 0], turn: 0, trail: {lines: 16, width: 0.35, alpha: 0.35}}   # upright, head first: yaw keeps a stable heading on the near-vertical path and the tilt stands mx_falling_air's belly-down body up (face 1 flipped his hips 180 deg/frame: LookRotation of a vertical path; face 0 left him diagonal; the path starts 12 cm back so z rises monotonically and the yaw never flips); ONE flight, one impulse on the cut, constant ~11 m/s
+    - {at: 0.1s, fx: debris, pos: [700.6, 2.55, 4.1], size: 0.32, count: 400, speed: 3, normal: [0, -1, 0.3], spread: 50, gravity: 1, color: "#a9a49a", color2: "#7f7a70", smooth: 0.1, dust: 120, dustColor: "#cfc9be", for: 2.0s}   # the tiles, from the hole's far (window) side and thrown away from her (round 3's passed through her body)
+    - {at: 0, do: jump, on: clinic_roof_plug, pos: [702.4, 3, 6.2], height: 5, for: 1.5s}      # the plugs go when he breaks through (in p02 they opened the hole before the cut)
+    - {at: 0, do: rotate, on: clinic_roof_plug, rot: [110, 30, 50], for: 1.5s, ease: linear}
+    - {at: 0, do: jump, on: clinic_ceiling_plug, pos: [701.4, 2.7, 5.4], height: 3.2, for: 1.3s}
+    - {at: 0, do: rotate, on: clinic_ceiling_plug, rot: [120, 0, 20], for: 1.3s, ease: linear}
+    - {at: 0.4s, do: hide, on: can}
+    - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
+
+# --- s05 the ring blast (hero test 2), round 7 (2026-11-08 18:35 PST) ---
+# Far and long so the ring reads as a band with planet scale: camera 150 m off, 8 m above the plane, fov 22; both fly INSIDE
+# ring_field (focus ring_chase, alt 0) on a line 12 m behind the near origin, off the 8 m hero boulder (round 6: it filled 70% of the
+# frame) and at the edge of the set's 14 m clear zone, so they cut through boulders. Constant speeds, in and out of frame: the double
+# 40 m/s from 0, him 60 m/s from 1.0 s (enters ~1.3 s, his line there). mm_ring_glide_a on arms+spine only: zg_neutral keeps the head
+# level (with 'upper' the ram pose threw the double's head 60 deg back). Ice wakes in the ring's ice white-blue, trailing; his bigger.
+# Mood hp_space_huge (sun rim and face fill) so the dark tee reads against the ice.
+s05:
+  mood: hp_space_huge
+  cast:
+    person: {at: chase_him, clip: zg_neutral_b, blend: 0}
+    other: {at: chase_dbl, clip: zg_neutral_a, blend: 0}
+  shot: {pos: [0, 8, 8862], look: null, rot: [3, 0, 0], fov: 22, screen: null}   # 150 m off the flight line, a little above the ring plane, looking along it
+  raw:
+    - {at: 0, light: key, intensity: 0, for: 0}
+    - {at: 0, do: focus, on: space_epic_space, name: ring_chase, alt: 0, for: 0}
+    - {at: 0, do: reach, on: person, hand: right, weight: 0, for: 0}   # s02's point at the sky is never released (his arm pointed 34 m off)
+    - {at: 0, do: fly, on: other, points: [[-60, 1, 9012], [70, 1, 9012]], for: 3.25s, ease: linear, face: yaw, trail: {lines: 16, width: 0.5}}
+    - {at: 0, do: fly, on: person, points: [[-70, -1, 9012], [-70, -1, 9012]], for: 1.0s, ease: linear, face: 0}
+    - {at: 1.0s, do: fly, on: person, points: [[-70, -1, 9012], [70, -1, 9012]], for: 2.33s, ease: linear, face: yaw, trail: {lines: 20, width: 0.8}}
+    - {at: 0, do: layer, on: other, clip: mm_ring_glide_a, mask: 'arms,spine', start: 0, once: 1, weight: 1, for: 3s, blend: 0}
+    - {at: 0, do: layer, on: person, clip: mm_ring_glide_a, mask: 'arms,spine', start: 0.15, once: 1, weight: 1, for: 3s, blend: 0}
+    - {at: 0.3s, fx: icewake, on: other, for: 2.7s, emitFor: 2.3s, count: 500, size: 1.2, spread: 5, along: 0.12, color: "#e6eef8", smooth: 0.7}
+    - {at: 1.3s, fx: icewake, on: person, for: 1.7s, emitFor: 1.6s, count: 1000, size: 2.4, spread: 10, along: 0.12, color: "#e6eef8", smooth: 0.7}
+    - {at: 0.5s, do: shake, trauma: 0.4, for: 0.7s}
+    - {at: 1.4s, do: shake, trauma: 0.7, for: 0.8s}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.35, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.35, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, set: 0.35, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, set: 0.35, for: 0}

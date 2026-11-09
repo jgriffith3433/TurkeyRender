@@ -1,0 +1,331 @@
+{
+ "name": "hawkespunch 103.25-106.25 s",
+ "video": "hawkespunch",
+ "from": 103.25,
+ "to": 106.25,
+ "actors": [
+  "person"
+ ],
+ "fps": 30,
+ "frames": 90,
+ "seconds": 2.97,
+ "zerog": true,
+ "cuts": 0,
+ "principles": {
+  "arcs": {
+   "score": 0,
+   "note": "median bend 0 over 5 moves, 100% straight lines",
+   "partial": false
+  },
+  "ease": {
+   "score": 0,
+   "note": "speed shape 1 (bell 0.6, constant 1.0), 100% of moves start or stop in one frame",
+   "partial": false
+  },
+  "timing": {
+   "score": 10,
+   "note": "1 holds (median 2.97 s), 0% of frames dead still, fast parts median null s",
+   "partial": false
+  },
+  "anticipation": {
+   "score": 0,
+   "note": "5 big moves: 0 with anticipation, 0 with overshoot and settle",
+   "partial": false
+  },
+  "overlap": {
+   "score": 8.7,
+   "note": "parts' speed profiles agree 0.22 (1 = everything moves as one); typical lag between parts 1 frames",
+   "partial": false
+  },
+  "weight": {
+   "score": 8.6,
+   "note": "0 centre-of-mass jerks, 1 speed changes with no push (zero-g)",
+   "partial": false
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 2.97 s",
+   "partial": false
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "6 key poses, readability 0.73 (best of front, side, three-quarter), 0% twinned",
+   "partial": false
+  },
+  "hands": {
+   "score": 8,
+   "note": "head bowed 100% of the time",
+   "partial": false
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 3.7,
+   "note": "2.45 robust z from 174 mocap clips; furthest: spineToArm high (5), handSpeedP50 high (3.7), handSpeedP95 high (3.63)",
+   "partial": false
+  }
+ },
+ "total": 5.8,
+ "events": [
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.LeftHand",
+   "sev": 0.9,
+   "what": "LeftHand travels 13647 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.RightHand",
+   "sev": 0.9,
+   "what": "RightHand travels 13648 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.LeftFoot",
+   "sev": 0.9,
+   "what": "LeftFoot travels 13648 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.RightFoot",
+   "sev": 0.9,
+   "what": "RightFoot travels 13648 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.Head",
+   "sev": 0.9,
+   "what": "Head travels 13646 cm in a straight line (bend 0)"
+  },
+  {
+   "t": 103.35,
+   "f": 3,
+   "kind": "speed-change",
+   "part": "person.body",
+   "sev": 0.9,
+   "what": "in zero-g the body changes speed by 46 m/s with nothing to push on"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.LeftHand",
+   "sev": 0.75,
+   "what": "LeftHand travels 13647 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.RightHand",
+   "sev": 0.75,
+   "what": "RightHand travels 13648 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.LeftFoot",
+   "sev": 0.75,
+   "what": "LeftFoot travels 13648 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.RightFoot",
+   "sev": 0.75,
+   "what": "RightFoot travels 13648 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "no-prep",
+   "part": "person.Head",
+   "sev": 0.75,
+   "what": "Head travels 13646 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.LeftHand",
+   "sev": 0.7,
+   "what": "LeftHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 106.22,
+   "f": 89,
+   "kind": "abrupt-stop",
+   "part": "person.LeftHand",
+   "sev": 0.7,
+   "what": "LeftHand stops dead from 100% of its peak"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.RightHand",
+   "sev": 0.7,
+   "what": "RightHand starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 106.22,
+   "f": 89,
+   "kind": "abrupt-stop",
+   "part": "person.RightHand",
+   "sev": 0.7,
+   "what": "RightHand stops dead from 100% of its peak"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.LeftFoot",
+   "sev": 0.7,
+   "what": "LeftFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 106.22,
+   "f": 89,
+   "kind": "abrupt-stop",
+   "part": "person.LeftFoot",
+   "sev": 0.7,
+   "what": "LeftFoot stops dead from 100% of its peak"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.RightFoot",
+   "sev": 0.7,
+   "what": "RightFoot starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 106.22,
+   "f": 89,
+   "kind": "abrupt-stop",
+   "part": "person.RightFoot",
+   "sev": 0.7,
+   "what": "RightFoot stops dead from 100% of its peak"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "abrupt-start",
+   "part": "person.Head",
+   "sev": 0.7,
+   "what": "Head starts at 100% of its peak speed in one frame"
+  },
+  {
+   "t": 106.22,
+   "f": 89,
+   "kind": "abrupt-stop",
+   "part": "person.Head",
+   "sev": 0.7,
+   "what": "Head stops dead from 100% of its peak"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "linear",
+   "part": "person.LeftHand",
+   "sev": 0.6,
+   "what": "LeftHand moves at one speed for 2.93 s (flat 1): interpolation, not a move"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "linear",
+   "part": "person.RightHand",
+   "sev": 0.6,
+   "what": "RightHand moves at one speed for 2.93 s (flat 1): interpolation, not a move"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "linear",
+   "part": "person.LeftFoot",
+   "sev": 0.6,
+   "what": "LeftFoot moves at one speed for 2.93 s (flat 1): interpolation, not a move"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "linear",
+   "part": "person.RightFoot",
+   "sev": 0.6,
+   "what": "RightFoot moves at one speed for 2.93 s (flat 1): interpolation, not a move"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "linear",
+   "part": "person.Head",
+   "sev": 0.6,
+   "what": "Head moves at one speed for 2.93 s (flat 1): interpolation, not a move"
+  },
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "person.Head",
+   "sev": 0.5,
+   "what": "the head hangs 35 deg forward of the chest"
+  }
+ ],
+ "worst": [
+  {
+   "t": 103.28,
+   "f": 1,
+   "kind": "straight",
+   "part": "person.LeftHand",
+   "sev": 0.9,
+   "what": "LeftHand travels 13647 cm in a straight line (bend 0)",
+   "also": [
+    "straight",
+    "speed-change",
+    "no-prep",
+    "abrupt-start",
+    "linear",
+    "bowed-head"
+   ]
+  },
+  {
+   "t": 106.22,
+   "f": 89,
+   "kind": "abrupt-stop",
+   "part": "person.LeftHand",
+   "sev": 0.7,
+   "what": "LeftHand stops dead from 100% of its peak",
+   "also": [
+    "abrupt-stop"
+   ]
+  }
+ ],
+ "perActor": {
+  "person": {
+   "total": 5.8,
+   "verdict": "looks animated, not acted: arcs and ease give it away (5.8/10)"
+  }
+ },
+ "verdict": "looks animated, not acted: arcs and ease give it away (5.8/10)"
+}

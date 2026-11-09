@@ -1,0 +1,31 @@
+{
+ "id": "cut-0-04-50",
+ "f0": 108,
+ "f1": 110,
+ "crop": "55% crop on the motion",
+ "strips": [
+  {
+   "kind": "cut",
+   "t": 4.5,
+   "file": "cut.jpg"
+  }
+ ],
+ "hash": "87ea9b8445e6acbd",
+ "summary": "The cut opens on a bright white frame (4.50), then two inverted high-contrast threshold frames (4.54, 4.58), before the real shot appears at 4.62 and stays steady; this looks like a deliberate flash, but the inverted frames are rough.",
+ "faults": [
+  {
+   "t": 4.54,
+   "sev": "B",
+   "rule": "render",
+   "seen": "certain",
+   "what": "Two frames (4.54, 4.58) show a harsh black/white inverted threshold look of the scene before the real shot appears at 4.62. The flash reads as a glitch and not as a designed transition, and the white frame at 4.50 makes it a three-frame stutter.",
+   "fix": "Cut straight to the 4.62 frame, or make the flash a single clean white frame that fades into the shot."
+  }
+ ],
+ "model": "claude-sonnet-5-5",
+ "tokens": {
+  "in": 4312,
+  "out": 318
+ },
+ "cost": 0.0118
+}

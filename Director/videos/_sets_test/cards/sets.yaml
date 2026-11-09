@@ -1,0 +1,217 @@
+# _sets_test: proof stills of the hawkespunch sets and props (set agent, 2026-11-08). Staging only, never a motion judgement.
+
+- id: rec_wide
+  idea: "c01 proposal: the reception wide from the south-west corner: turkey on her counter, the door, him under the poster"
+  feel: "the place and the product in one frame"
+  look: plain
+  cast: {nurse: "reception_counter clip:idle", person: {at: waiting_seat, clip: mx_sitting_hands_thighs, blend: 0}}
+  camera: {preset: spot, from: cam_reception_wide, on: cam_reception_wide_aim, lens: 24}
+
+- id: rec_med
+  idea: "c02 as built: him in the waiting chair, the poster at his left"
+  feel: "plant"
+  look: plain
+  cast: {person: {at: waiting_seat, clip: mx_sitting_hands_thighs, blend: 0}, nurse: "reception_counter clip:idle"}
+  camera: {preset: spot, from: cam_waiting, on: person, lens: 50}
+  shot: {look: null, lookOffset: null, screen: null, rot: [1.2, 75.6, 0], fov: 30, deadzone: false}
+
+- id: rec_poster
+  idea: "c03 proposal: the reception poster square on"
+  feel: "the name"
+  look: plain
+  tags: [insert]
+  cast: {}
+  camera: {preset: spot, from: cam_rec_poster, on: poster_rec, lens: 85}
+  shot: {pos: [701.3, 1.42, -1.0], look: null, rot: [0, 90, 0], fov: 32, screen: null, deadzone: false}
+
+- id: nurse_cu
+  idea: "p04 view: the turkey with her cap, monitor, keyboard and the pinboard behind"
+  feel: "reception"
+  look: plain
+  cast: {nurse: "reception_counter clip:idle"}
+  camera: {preset: spot, from: cam_nurse_cu, on: nurse, lens: 50}
+
+- id: exam_wide
+  idea: "c05 as built, the old flat rig"
+  feel: "geography"
+  look: plain
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+
+- id: exam_wide_lit
+  idea: "c05 with the clinic_exam rig"
+  feel: "geography"
+  look: plain
+  light: clinic_exam
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+
+- id: gloves
+  idea: "c15 proposal: the gloves case square on"
+  feel: "the bomb under the table"
+  look: plain
+  tags: [insert]
+  cast: {}
+  camera: {preset: spot, from: cam_gloves, on: gloves, lens: 85}
+  shot: {pos: [701.95, 1.66, 1.25], look: null, rot: [0.7, 0, 0], fov: 16, screen: null, deadzone: false}
+
+- id: pad
+  idea: "c10 as built: the pad insert"
+  feel: "the pen stops"
+  look: plain
+  tags: [insert]
+  cast: {doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_desk_top, on: doctor.rightHand, lens: 100}
+  shot: {pos: [701.55, 1.3, 1.95], look: clinic_rx_pad, rot: null, fov: 20, screen: null, deadzone: false}
+  raw:
+    - {at: 0, do: attach, on: clinic_pen, to: doctor.rightHand, pos: [0, 0.03, 0.04], rot: [0, 0, 90], blend: 0}
+
+- id: doc_mcu
+  idea: "c06 as built, flat rig"
+  feel: "light on her face"
+  look: plain
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 85}
+  shot: {pos: [700.62, 1.45, 2.85], look: person.head, rot: null, fov: 28, screen: [0, 0.02], deadzone: false}
+
+- id: doc_mcu_lit
+  idea: "c06 with the clinic_exam rig"
+  feel: "light on her face"
+  look: plain
+  light: clinic_exam
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_bed_front, on: person.head, lens: 85}
+  shot: {pos: [700.62, 1.45, 2.85], look: person.head, rot: null, fov: 28, screen: [0, 0.02], deadzone: false}
+
+- id: tv_two
+  idea: "a02 framing: the giant can centre-back"
+  feel: "the product over their shoulders"
+  look: plain
+  cast: {person: {at: stool_l, clip: mx_sit_still, blend: 0, look: lens_a}, other: {at: stool_r, clip: mx_sit_still, blend: 0, look: lens_a}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 50}
+  shot: {pos: [900, 1.35, -1.6], look: null, rot: [1, 0, 0], fov: 34, screen: null, deadzone: false}
+
+- id: tv_wide
+  idea: "a01's last frame: the whole studio"
+  feel: "a real studio"
+  look: plain
+  cast: {person: {at: stool_l, clip: mx_sit_still, blend: 0, look: lens_a}, other: {at: stool_r, clip: mx_sit_still, blend: 0, look: lens_a}}
+  camera: {preset: spot, from: fold_cam, on: fold_aim, lens: 24}
+
+- id: can_end
+  idea: "b05 proposal: top-down on the dark floor, the can rolls in from frame left and stops with the name up"
+  feel: "the last image is the product"
+  look: plain
+  mood: button_dark
+  tags: [dark]
+  cast: {can_roll: {at: door_out}}
+  camera: {preset: spot, from: cam_door, on: can_roll, lens: 50}
+  shot: {pos: [701.6, 0.36, -2.3], look: null, rot: [90, -90, 0], fov: 30, aperture: 4}
+  raw:
+    - {at: 0, light: key, intensity: 1.2, for: 0}
+    - {at: 0, grade: {exposure: -1.1}, for: 0}
+    - {at: 0, do: set, on: can_roll, pos: [701.6, 0.034, -1.6], rot: [0, 0, 90]}
+    - {at: 0.05s, do: move, on: can_roll, pos: [701.6, 0.034, -2.3], for: 1.7s, ease: out}
+    - {at: 0.05s, do: rotate, on: can_roll, rot: [1185, 0, 90], for: 1.7s, ease: out}
+    - {at: 2.9s, light: key, intensity: 0, for: 0}
+
+- id: glove_hand
+  idea: "W6: the glove on her right hand"
+  feel: "the payoff ties back to the frame"
+  look: plain
+  cast: {doctor: {at: doctor_punch, clip: IdleBreathe, blend: 0}}
+  camera: {preset: medium, on: doctor.rightHand, lens: 50}
+  raw:
+    - {at: 0, do: show, on: glove}
+    - {at: 0, do: attach, on: glove, to: doctor.rightHand, pos: [0, -0.02, 0], rot: [-90, 0, 0], blend: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+
+- id: can_end_tv
+  idea: "b05 proposal B: top-down on the studio's dark floor, away from the light pool; the can rolls in and stops with the name up"
+  feel: "the last image is the product"
+  look: plain
+  mood: button_dark
+  tags: [dark]
+  cast: {can_roll: {at: center}}
+  camera: {preset: spot, from: lens_a, on: can_roll, lens: 50}
+  shot: {pos: [903.5, 0.36, -2.0], look: null, rot: [90, -90, 0], fov: 30, aperture: 4}
+  raw:
+    - {at: 0, do: set, on: can_roll, pos: [903.5, 0.034, -1.3], rot: [0, 0, 90]}
+    - {at: 0.05s, do: move, on: can_roll, pos: [903.5, 0.034, -2.0], for: 1.7s, ease: out}
+    - {at: 0.05s, do: rotate, on: can_roll, rot: [1175, 0, 90], for: 1.7s, ease: out}
+
+- id: can_hand_a
+  idea: "c17: the can in his hand, upright to the lens, rot [90, 0, 0]"
+  feel: "the name"
+  look: plain
+  tags: [insert]
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: desk_doc}, can: {at: can_slide_to}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.rightHand, lens: 85}
+  shot: {pos: [700.85, 1.15, 2.85], look: can, rot: null, fov: 22, screen: null, deadzone: false}
+  raw:
+    - {at: 0, do: attach, on: can, to: person.rightHand, pos: [0, 0.05, 0.08], rot: [90, 0, 0], blend: 0}
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.7, for: 0}
+
+- id: can_hand_b
+  idea: "c17: the can in his hand, upright to the lens, rot [0, 0, 90]"
+  feel: "the name"
+  look: plain
+  tags: [insert]
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0, look: desk_doc}, can: {at: can_slide_to}}
+  camera: {preset: spot, from: cam_bed_cu, on: person.rightHand, lens: 85}
+  shot: {pos: [700.85, 1.15, 2.85], look: can, rot: null, fov: 22, screen: null, deadzone: false}
+  raw:
+    - {at: 0, do: attach, on: can, to: person.rightHand, pos: [0, 0.05, 0.08], rot: [0, 0, 90], blend: 0}
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.7, for: 0}
+
+- id: t_tv
+  idea: "the studio before the safety card (a04's frame, so a leak of the set between pages would show)"
+  feel: "studio"
+  look: plain
+  cast: {person: {at: stool_l, clip: mx_sit_still, blend: 0, look: lens_a}, other: {at: stool_r, clip: mx_sit_still, blend: 0, look: lens_a}}
+  camera: {preset: spot, from: lens_a, on: set_aim, lens: 50}
+  shot: {pos: [900, 1.35, -1.6], look: null, rot: [1, 0, 0], fov: 34, screen: null, deadzone: false}
+
+- id: a05
+  idea: "9 The commercial. Important Safety Information card, held so it can be read. The ANNOUNCER reads the side effects fast and flat: sudden flight, meeting yourself, throwing planets, briefly holding the Earth, music in total silence, falling in love with a space ghost..."
+  feel: "The list is everything we just saw."
+  look: plain
+  tags: [dark]
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, blend: 0, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, blend: 0, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_crane, on: sign, lens: 30}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.4, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.4, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.4, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.4, for: 0}
+    - {at: 0, gfx: image, path: "Assets/Videos/hawkespunch/Props/side_effects_1.png", pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 5.02s}
+    - {at: 5.0s, gfx: image, path: "Assets/Videos/hawkespunch/Props/side_effects_2.png", pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 5.0s}
+
+- id: a06
+  idea: "9 The commercial. End card: HAWKES PUNCH. Ask your doctor."
+  feel: "Payoff of the poster."
+  look: plain
+  tags: [dark]
+  cast: {person: {at: stool_l, clip: IdleSit13Explain, blend: 0, look: lens_a}, other: {at: stool_r, clip: IdleSit13Explain, blend: 0, look: lens_a, args: {start: 1.4}}}
+  camera: {preset: spot, from: lens_crane, on: sign, lens: 30}
+  raw:
+    - {at: 0, do: fingers, on: person, hand: left, curl: 0.4, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, curl: 0.4, for: 0}
+    - {at: 0, do: fingers, on: other, hand: left, curl: 0.4, for: 0}
+    - {at: 0, do: fingers, on: other, hand: right, curl: 0.4, for: 0}
+    - {at: 0, gfx: image, path: "Assets/Videos/hawkespunch/Props/end_card.png", pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 2.0s}
+
+- id: b01
+  idea: "10 The next day. The same exam room, the same framing as c05. Card: THE NEXT DAY. He sits on the bed. She writes, not looking up."
+  feel: "Payoff: 'every day'."
+  look: plain
+  cast: {person: {at: bed, clip: mx_sitting_hands_thighs, blend: 0, look: doctor}, doctor: {at: desk_doc, clip: mx_writing_seated, blend: 0, look: rx_spot}}
+  camera: {preset: spot, from: cam_room_wide, on: cam_room_aim, lens: 24}
+  raw:
+    - {at: 0, do: attach, on: clinic_pen, to: doctor.rightHand, pos: [0, 0.03, 0.04], rot: [0, 0, 90], blend: 0}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.6, for: 0}
+    - {at: 0, do: show, on: window_boards}
+    - {at: 0, do: show, on: doctor_glasses}
+    - {at: 0, gfx: image, path: "Assets/Videos/hawkespunch/Props/next_day.png", pos: [0.5, 0.5, 0], size: [1920, 1080, 0], in: 0.001, out: 0.001, for: 1.4s}
+    - {at: 0, do: fingers, on: person, hand: left, set: 0.35, for: 0}
+    - {at: 0, do: fingers, on: person, hand: right, set: 0.35, for: 0}

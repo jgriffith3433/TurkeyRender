@@ -1000,6 +1000,8 @@ namespace TKShock.MV.EditorTools
 
         void Op(Lane track, string kind, double start, double dur, JObject args, params UnityEngine.Object[] refs)
         {
+            // "for": 0 is an instant: complete on its start frame (Runtime/MVCore.cs Op.instant), though its clip keeps 1/60 s on the timeline
+            if (dur <= 1e-9 && args["instant"] == null) { args = (JObject)args.DeepClone(); args["instant"] = 1; }
             if (_labOps != null) { _labOps.Add(new Op { start = Math.Max(0, start), end = Math.Max(0, start) + Math.Max(dur, 1.0 / 60), kind = kind, a = Args.Parse(args.ToString(Newtonsoft.Json.Formatting.None)), refs = refs }); return; }
             track.ops.Add(new LaneOp { kind = kind, start = Math.Max(0, start), dur = Math.Max(dur, 1.0 / 60), args = args.ToString(Newtonsoft.Json.Formatting.None), refs = refs });
             _ops++;
@@ -1389,16 +1391,20 @@ namespace TKShock.MV.EditorTools
                 }
                 scene += sp * dt;
             }
-            // Holds freeze the picture without moving the clock: inside one, scene time stays where it was at its start; after it, scene time is where
-            // it would have been without it. A slowdown (`speed`) still shifts what follows, by design; a hitstop never does (Hawkes Punch: 9 frames of
-            // freezes put every later cast change 0.3 s before its cut).
-            foreach (var (ht, hd) in _holds)
+            // Holds freeze the picture without moving the clock: inside one, scene time stays where it was at its start. After it, scene time goes on
+            // from there (the held time is owed) until the next cut, where it rejoins the clock: the jump back onto the song is hidden in the cut, so
+            // nothing pops when a hold ends (2026-11-08, engine agent: it used to rejoin at the hold's end, a 7-frame jump of every moving thing, 74 deg
+            // on the doctor's arm in the punch). A slowdown (`speed`) still shifts what follows, by design; a hitstop never shifts past its shot
+            // (Hawkes Punch: 9 frames of freezes put every later cast change 0.3 s before its cut). Native clips do the same (MVEpicScore.cs HoldNative).
+            foreach (var (ht, hd) in _holds.OrderBy(h => h.t))
             {
                 int a = Mathf.Max(0, Mathf.CeilToInt((float)(ht * SongMap.WarpHz))), b = Mathf.Min(n - 1, Mathf.CeilToInt((float)((ht + hd) * SongMap.WarpHz)) - 1);
                 if (a > b) continue;
-                double f = ht * SongMap.WarpHz; int i0 = Mathf.Clamp((int)Math.Floor(f), 0, n - 2);
-                float at = (float)(w[i0] + (w[i0 + 1] - w[i0]) * (f - i0));
+                double WarpAt(double t) { double f = t * SongMap.WarpHz; int i0 = Mathf.Clamp((int)Math.Floor(f), 0, n - 2); return w[i0] + (w[i0 + 1] - w[i0]) * (f - i0); }
+                float at = (float)WarpAt(ht), owed = (float)(WarpAt(ht + hd) - at);
                 for (int i = a; i <= b; i++) w[i] = at;
+                int c = Mathf.Min(n - 1, Mathf.CeilToInt((float)(NextCut(ht + hd) * SongMap.WarpHz)) - 1);
+                for (int i = b + 1; i <= c; i++) w[i] -= owed;
             }
             _song.warp = w;
             var st = new float[n];

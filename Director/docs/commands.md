@@ -11,11 +11,13 @@ Commands marked **free** never touch Unity. Every other command takes a ticket i
 
 | Command | What it does |
 |---|---|
-| `mv make [--to <stage>] [--shot <id>] [--force --w --h --fps]` | THE way to make a video: stages board, cards, build, motion, shot, test, previs, final, each a gate; stops at the first failed gate. Exit 0 pass, 2 a gate failed, 3 waiting for J (hero tests), 1 error. State in `videos/<v>/make/state.json`. `tools/mv/make.mjs` |
-| `mv status [<video>]` | the stage table: pass / fail / stale / waiting, and what to do |
-| `mv approve <shot> [--note "J's words"]` | record J's yes on a hero test, keyed by the shot's hash (a changed shot needs a new yes) |
+| `mv make <video> [<stage>] [--shot <id>] [--force --w --h --fps]` | THE way to make a video: stages board, cards, build, motion, shot, test, previs, final, each a gate; runs up to `<stage>` (same as `--to`), stops at the first failed gate and prints each problem with `where:` (file) and `field:`. Passed stages are cached by a hash of their inputs. Exit 0 pass, 2 a gate failed, 3 waiting for J (hero tests), 1 error. State in `videos/<v>/make/state.json`. `tools/mv/make.mjs` |
+| `mv make <video> plan` (or `--plan`) | the dry run: board and cards run for real (Node only), every Unity stage says what it would run, what is cached, the cold view's price, each hero test's window and approval. Touches no Unity, queue or Gen |
+| `mv make <video> status` (or `mv status <video>`) | the stage table: pass / fail / STALE / waiting, and the next command |
+| `mv approve <video> <shot> --note "J's own words"` | record J's yes on a hero test in `tests/approved.json` with his words. Refused without `--note`, without a rendered test, for a shot that is not a hero, or when the test is older than the shot. Keyed by the hash of every shot in the 5 s window: a change to any of them needs a new yes |
+| `node Director/tools/mv/make-test.mjs [<video>]` | the proof of the Node gates: each broken on purpose on a copy (`videos/_make_tmp`, removed after) and seen to stop with its file and field |
 | `mv coldview [previs.mp4]` | the cold view alone (Gen vision, about $0.015 a 20 s chunk) |
-| `mv doctor [--fix --all]` | the shared machine in one screen: Unity heartbeat, compile errors, stale `compile.lock`, hand-made `unity.lock`, dead tickets, Assets vs staging drift, stale or hand-edited generated files, dead leases, disk, memory. `--fix` does only the safe fixes; never touches Assets, cards or acts |
+| `mv doctor [--fix --all]` | the shared machine in one screen: Unity CLOSED (no editor process: prints the command to reopen it) vs open-but-not-answering (hung, a modal dialog: never kill it, tell J), compile errors, stale `compile.lock`, hand-made `unity.lock`, dead tickets, Assets vs staging drift, stale or hand-edited generated files, dead leases, disk, memory. `--fix` does only the safe fixes; never touches Assets, cards or acts |
 
 ## Videos, cards, score (free)
 

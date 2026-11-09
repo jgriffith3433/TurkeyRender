@@ -1,0 +1,11 @@
+{
+  // Hawkes Punch's two men (the same wardrobe as videos/hawkespunch/acts/00-cast.json).
+  "actors": {
+    "person": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_sick.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "other": { "model": "person", "material": "Assets/Videos/hawkespunch/Props/Person_red.mat", "material2": "Assets/MusicVideo/Person/Head.mat" }
+  },
+  "cues": [
+    { "at": 0, "do": "fingers", "on": "person", "hand": "left", "curl": 0.42, "for": 0 }, { "at": 0, "do": "fingers", "on": "person", "hand": "right", "curl": 0.42, "for": 0 },
+    { "at": 0, "do": "fingers", "on": "other", "hand": "left", "curl": 0.42, "for": 0 }, { "at": 0, "do": "fingers", "on": "other", "hand": "right", "curl": 0.42, "for": 0 }
+  ]
+}

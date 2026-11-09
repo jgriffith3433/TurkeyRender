@@ -1,0 +1,185 @@
+{
+ "name": "ps_zg_startle_a",
+ "fps": 30,
+ "frames": 251,
+ "seconds": 8.33,
+ "zerog": true,
+ "features": {
+  "arcBend": 0.26,
+  "straightFrac": 0,
+  "moves": 5,
+  "flatness": 0.19,
+  "abruptFrac": 0.2,
+  "deadFrac": 0,
+  "holds": 2,
+  "holdMedianS": 5.4,
+  "fastRunMedianS": 1.87,
+  "dynRange": 6.06,
+  "handPeak": 3.94,
+  "bigMoves": 5,
+  "anticipFrac": 0.6,
+  "overshootFrac": 0,
+  "coherence": 0.61,
+  "lagMedianFrames": 1,
+  "lockstepFrac": 0,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 23.5,
+  "plantedFrac": 0.07,
+  "zgSpeedChanges": 2.4,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.29,
+  "deadJoints": 2,
+  "deadJointNames": [
+   "LeftShoulder",
+   "RightShoulder"
+  ],
+  "readability": 0.85,
+  "twinnedFrac": 0.06,
+  "curlMedian": null,
+  "spreadMedian": null,
+  "fannedFrac": 0,
+  "bowMedian": 19.93,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 10.3,
+  "armOmegaP95": 66.34,
+  "legOmegaP95": 26.94,
+  "spineOmegaP50": 8.72,
+  "spineOmegaP95": 14.13,
+  "headOmegaP50": 0,
+  "headOmegaP95": 19.93,
+  "armAccP95": 373.92,
+  "spineAccP95": 338.59,
+  "handSpeedP50": 0.11,
+  "handSpeedP95": 0.55,
+  "spineToArm": 0.85,
+  "energyCV": 1.91,
+  "moveRate": 0.24,
+  "refDistance": 2.12,
+  "refWorst": [
+   {
+    "k": "headOmegaP50",
+    "z": -5
+   },
+   {
+    "k": "energyCV",
+    "z": 5
+   },
+   {
+    "k": "spineToArm",
+    "z": 2.6770758501924155
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": 10,
+   "note": "median bend 0.26 over 5 moves, 0% straight lines"
+  },
+  "ease": {
+   "score": 9.5,
+   "note": "speed shape 0.19 (bell 0.6, constant 1.0), 20% of moves start or stop in one frame"
+  },
+  "timing": {
+   "score": 6,
+   "note": "2 holds (median 5.4 s), 0% of frames dead still, fast parts median 1.87 s"
+  },
+  "anticipation": {
+   "score": 4,
+   "note": "5 big moves: 3 with anticipation, 0 with overshoot and settle"
+  },
+  "overlap": {
+   "score": 5.3,
+   "note": "parts' speed profiles agree 0.61 (1 = everything moves as one); typical lag between parts 1 frames; 0% of energy peaks have every part peaking together"
+  },
+  "weight": {
+   "score": 9,
+   "note": "0 centre-of-mass jerks, 2 speed changes with no push (zero-g)"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 8.33 s"
+  },
+  "stiffness": {
+   "score": 3.4,
+   "note": "29% of core joints frozen while the body moves; never moves: LeftShoulder, RightShoulder"
+  },
+  "silhouette": {
+   "score": 9.9,
+   "note": "16 key poses, readability 0.85 (best of front, side, three-quarter), 6% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl NaN deg, spread NaN deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body (no partner dump: hit and catch targets not judged)",
+   "partial": true
+  },
+  "reference": {
+   "score": 5.4,
+   "note": "2.12 robust z from 174 mocap clips; furthest: headOmegaP50 low (5), energyCV high (5), spineToArm high (2.68)"
+  }
+ },
+ "events": [
+  {
+   "t": 1.1,
+   "f": 33,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.9,
+   "what": "in zero-g the body changes speed by 0.53 m/s with nothing to push on"
+  },
+  {
+   "t": 1.3,
+   "f": 39,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.9,
+   "what": "in zero-g the body changes speed by 0.55 m/s with nothing to push on"
+  },
+  {
+   "t": 1.07,
+   "f": 32,
+   "kind": "no-prep",
+   "part": "LeftFoot",
+   "sev": 0.75,
+   "what": "LeftFoot travels 114 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 1.1,
+   "f": 33,
+   "kind": "no-prep",
+   "part": "Head",
+   "sev": 0.75,
+   "what": "Head travels 116 cm with no anticipation and no overshoot or settle"
+  },
+  {
+   "t": 1.1,
+   "f": 33,
+   "kind": "abrupt-start",
+   "part": "Head",
+   "sev": 0.45,
+   "what": "Head starts at 73% of its peak speed in one frame"
+  }
+ ],
+ "worst": [
+  {
+   "t": 1.1,
+   "f": 33,
+   "kind": "speed-change",
+   "part": "body",
+   "sev": 0.9,
+   "what": "in zero-g the body changes speed by 0.53 m/s with nothing to push on",
+   "also": [
+    "speed-change",
+    "no-prep",
+    "abrupt-start"
+   ]
+  }
+ ],
+ "total": 7.3,
+ "verdict": "passable, weak on stiffness and anticipation (7.3/10)"
+}

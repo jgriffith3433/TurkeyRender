@@ -1873,6 +1873,71 @@
     "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/1Handed Melee Weapon Animset/FBX Motions/Humanoid@DeadBack.fbx"
    }
   },
+  "DeathBackCombat": {
+   "status": "admitted",
+   "tags": [
+    "death",
+    "in-place",
+    "on-floor",
+    "loop",
+    "quiet"
+   ],
+   "length": 3.167,
+   "loop": true,
+   "loopGap": 0,
+   "rootTravel": [
+    0,
+    0,
+    0
+   ],
+   "rootYaw": 0,
+   "hipsTravel": 0,
+   "hips": [
+    0.094,
+    0.094
+   ],
+   "energy": 0,
+   "motionBeats": [],
+   "beatStrength": [],
+   "tempoBeat": null,
+   "issues": [],
+   "notes": [],
+   "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@DeathBackCombat.fbx",
+   "measured": {
+    "length": 3.167,
+    "frames": 96,
+    "loopFlag": false,
+    "loopGap": 0,
+    "rootTravel": [
+     0,
+     0,
+     0
+    ],
+    "rootYaw": 0,
+    "hipsTravel": 0,
+    "hipsLow": 0.094,
+    "hipsTop": 0.094,
+    "feetLow": 0.077,
+    "limitsWorst": 0,
+    "limitsBone": "",
+    "popKink": 0,
+    "popMedian": 0,
+    "popBone": "",
+    "popAt": 0,
+    "slideWorstCm": 0,
+    "slideTotalCm": 0,
+    "stanceFrames": 190,
+    "beltMs": 0,
+    "selfCm": 0,
+    "selfPair": "",
+    "selfAt": 0,
+    "selfFrames": 0,
+    "energy": 0,
+    "beats": [],
+    "beatStrength": [],
+    "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@DeathBackCombat.fbx"
+   }
+  },
   "DodgeBackwardsCombat": {
    "status": "admitted",
    "tags": [
@@ -2586,8 +2651,9 @@
    "status": "admitted",
    "tags": [
     "hit",
-    "treadmill",
-    "loop"
+    "in-place",
+    "loop",
+    "quiet"
    ],
    "length": 1,
    "loop": true,
@@ -2600,16 +2666,12 @@
    "rootYaw": 0,
    "hipsTravel": 0,
    "hips": [
-    0.843,
-    0.887
+    0.854,
+    0.854
    ],
-   "energy": 4.45,
-   "motionBeats": [
-    0.267
-   ],
-   "beatStrength": [
-    0.63
-   ],
+   "energy": 0,
+   "motionBeats": [],
+   "beatStrength": [],
    "tempoBeat": null,
    "issues": [],
    "notes": [],
@@ -2626,30 +2688,26 @@
     ],
     "rootYaw": 0,
     "hipsTravel": 0,
-    "hipsLow": 0.843,
-    "hipsTop": 0.887,
-    "feetLow": 0.085,
-    "limitsWorst": 3.1,
-    "limitsBone": "LeftLowerArm",
-    "popKink": 0.152,
-    "popMedian": 0.037,
-    "popBone": "RightToes",
-    "popAt": 0.6,
-    "slideWorstCm": 3.01,
-    "slideTotalCm": 56.4,
-    "stanceFrames": 47,
-    "beltMs": 0.421,
+    "hipsLow": 0.854,
+    "hipsTop": 0.854,
+    "feetLow": 0.099,
+    "limitsWorst": 0,
+    "limitsBone": "",
+    "popKink": 0,
+    "popMedian": 0,
+    "popBone": "",
+    "popAt": 0,
+    "slideWorstCm": 0,
+    "slideTotalCm": 0,
+    "stanceFrames": 60,
+    "beltMs": 0,
     "selfCm": 0,
     "selfPair": "",
     "selfAt": 0,
     "selfFrames": 0,
-    "energy": 4.45,
-    "beats": [
-     0.267
-    ],
-    "beatStrength": [
-     0.63
-    ],
+    "energy": 0,
+    "beats": [],
+    "beatStrength": [],
     "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@GetHitFrontHeavyCombat.fbx"
    }
   },
@@ -2731,7 +2789,8 @@
    "tags": [
     "hit",
     "in-place",
-    "loop"
+    "loop",
+    "quiet"
    ],
    "length": 0.533,
    "loop": true,
@@ -2744,23 +2803,15 @@
    "rootYaw": 0,
    "hipsTravel": 0,
    "hips": [
-    0.853,
-    0.867
+    0.854,
+    0.854
    ],
-   "energy": 3.29,
-   "motionBeats": [
-    0.233,
-    0.4
-   ],
-   "beatStrength": [
-    0.72,
-    0.56
-   ],
+   "energy": 0,
+   "motionBeats": [],
+   "beatStrength": [],
    "tempoBeat": null,
    "issues": [],
-   "notes": [
-    "foot slide 3.15 cm/frame"
-   ],
+   "notes": [],
    "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@GetHitFrontLightCombat.fbx",
    "measured": {
     "length": 0.533,
@@ -2774,32 +2825,26 @@
     ],
     "rootYaw": 0,
     "hipsTravel": 0,
-    "hipsLow": 0.853,
-    "hipsTop": 0.867,
-    "feetLow": 0.087,
+    "hipsLow": 0.854,
+    "hipsTop": 0.854,
+    "feetLow": 0.099,
     "limitsWorst": 0,
     "limitsBone": "",
-    "popKink": 0.047,
-    "popMedian": 0.023,
-    "popBone": "LeftEye",
-    "popAt": 0.07,
-    "slideWorstCm": 3.15,
-    "slideTotalCm": 30.7,
+    "popKink": 0,
+    "popMedian": 0,
+    "popBone": "",
+    "popAt": 0,
+    "slideWorstCm": 0,
+    "slideTotalCm": 0,
     "stanceFrames": 32,
-    "beltMs": 0.192,
+    "beltMs": 0,
     "selfCm": 0,
     "selfPair": "",
     "selfAt": 0,
     "selfFrames": 0,
-    "energy": 3.29,
-    "beats": [
-     0.233,
-     0.4
-    ],
-    "beatStrength": [
-     0.72,
-     0.56
-    ],
+    "energy": 0,
+    "beats": [],
+    "beatStrength": [],
     "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@GetHitFrontLightCombat.fbx"
    }
   },
@@ -12644,6 +12689,69 @@
     "beats": [],
     "beatStrength": [],
     "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Basic Locomotion Animset/FBX Motions/Humanoid@LandingMediumUnarmed.fbx"
+   }
+  },
+  "LeftPowerUppercut": {
+   "status": "admitted",
+   "tags": [
+    "in-place",
+    "loop",
+    "quiet"
+   ],
+   "length": 1.267,
+   "loop": true,
+   "loopGap": 0,
+   "rootTravel": [
+    0,
+    0,
+    0
+   ],
+   "rootYaw": 0,
+   "hipsTravel": 0,
+   "hips": [
+    1.172,
+    1.172
+   ],
+   "energy": 0,
+   "motionBeats": [],
+   "beatStrength": [],
+   "tempoBeat": null,
+   "issues": [],
+   "notes": [],
+   "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@LeftPowerUppercut.fbx",
+   "measured": {
+    "length": 1.267,
+    "frames": 40,
+    "loopFlag": true,
+    "loopGap": 0,
+    "rootTravel": [
+     0,
+     0,
+     0
+    ],
+    "rootYaw": 0,
+    "hipsTravel": 0,
+    "hipsLow": 1.172,
+    "hipsTop": 1.172,
+    "feetLow": 0.418,
+    "limitsWorst": 0,
+    "limitsBone": "",
+    "popKink": 0,
+    "popMedian": 0,
+    "popBone": "",
+    "popAt": 0,
+    "slideWorstCm": 0,
+    "slideTotalCm": 0,
+    "stanceFrames": 78,
+    "beltMs": 0,
+    "selfCm": 0,
+    "selfPair": "",
+    "selfAt": 0,
+    "selfFrames": 0,
+    "energy": 0,
+    "beats": [],
+    "beatStrength": [],
+    "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@LeftPowerUppercut.fbx"
    }
   },
   "MatchesLightCampfire": {
@@ -30929,6 +31037,69 @@
     "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@RightHook1.fbx"
    }
   },
+  "RightPowerUppercut": {
+   "status": "admitted",
+   "tags": [
+    "in-place",
+    "loop",
+    "quiet"
+   ],
+   "length": 1.4,
+   "loop": true,
+   "loopGap": 0,
+   "rootTravel": [
+    0,
+    0,
+    0
+   ],
+   "rootYaw": 0,
+   "hipsTravel": 0,
+   "hips": [
+    0.854,
+    0.854
+   ],
+   "energy": 0,
+   "motionBeats": [],
+   "beatStrength": [],
+   "tempoBeat": null,
+   "issues": [],
+   "notes": [],
+   "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@RightPowerUppercut.fbx",
+   "measured": {
+    "length": 1.4,
+    "frames": 44,
+    "loopFlag": true,
+    "loopGap": 0,
+    "rootTravel": [
+     0,
+     0,
+     0
+    ],
+    "rootYaw": 0,
+    "hipsTravel": 0,
+    "hipsLow": 0.854,
+    "hipsTop": 0.854,
+    "feetLow": 0.099,
+    "limitsWorst": 0,
+    "limitsBone": "",
+    "popKink": 0,
+    "popMedian": 0,
+    "popBone": "",
+    "popAt": 0,
+    "slideWorstCm": 0,
+    "slideTotalCm": 0,
+    "stanceFrames": 86,
+    "beltMs": 0,
+    "selfCm": 0,
+    "selfPair": "",
+    "selfAt": 0,
+    "selfFrames": 0,
+    "energy": 0,
+    "beats": [],
+    "beatStrength": [],
+    "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@RightPowerUppercut.fbx"
+   }
+  },
   "RightSpinningKick": {
    "status": "admitted",
    "tags": [
@@ -30999,6 +31170,69 @@
      0.52
     ],
     "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@RightSpinningKick.fbx"
+   }
+  },
+  "RightUppercut": {
+   "status": "admitted",
+   "tags": [
+    "in-place",
+    "loop",
+    "quiet"
+   ],
+   "length": 0.867,
+   "loop": true,
+   "loopGap": 0,
+   "rootTravel": [
+    0,
+    0,
+    0
+   ],
+   "rootYaw": 0,
+   "hipsTravel": 0,
+   "hips": [
+    0.854,
+    0.854
+   ],
+   "energy": 0,
+   "motionBeats": [],
+   "beatStrength": [],
+   "tempoBeat": null,
+   "issues": [],
+   "notes": [],
+   "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@RightUppercut.fbx",
+   "measured": {
+    "length": 0.867,
+    "frames": 28,
+    "loopFlag": true,
+    "loopGap": 0,
+    "rootTravel": [
+     0,
+     0,
+     0
+    ],
+    "rootYaw": 0,
+    "hipsTravel": 0,
+    "hipsLow": 0.854,
+    "hipsTop": 0.854,
+    "feetLow": 0.099,
+    "limitsWorst": 0,
+    "limitsBone": "",
+    "popKink": 0,
+    "popMedian": 0,
+    "popBone": "",
+    "popAt": 0,
+    "slideWorstCm": 0,
+    "slideTotalCm": 0,
+    "stanceFrames": 54,
+    "beltMs": 0,
+    "selfCm": 0,
+    "selfPair": "",
+    "selfAt": 0,
+    "selfFrames": 0,
+    "energy": 0,
+    "beats": [],
+    "beatStrength": [],
+    "path": "Assets/PROTOFACTOR/Ultimate Animation Collection/Animations/Combat Bare Fists Animset/FBX Motions/Humanoid@RightUppercut.fbx"
    }
   },
   "RunBackwardsUnarmed": {
@@ -34438,7 +34672,7 @@
  },
  "catalog": {
   "about": "The clip catalog (library/motion/catalog.md), written by tools/clip_catalog.mjs build from library/motion/verdicts.json (watched by hand) and the native previews' measures. grade: A build on it, B usable with care, C avoid, ban never. uses: what it is good for; weak: uses it fails at; needs: what a card must add (relaxed grip: a fingers set). tags: the best clips per use, best first. scope: the clips the catalog covers (Assets/MusicVideo/Motion).",
-  "built": "2026-11-08T19:41:50.992Z",
+  "built": "2026-11-08T23:24:00.362Z",
   "tags": {
    "clap": [
     "Cheer2"
@@ -34880,11 +35114,25 @@
    "hanging_idle",
    "injured_stumble",
    "jumping_jacks",
+   "mm_boo_smash",
+   "mm_boo_surprised",
+   "mm_catch_brace",
    "mm_cross_punch_a",
    "mm_cross_punch_b",
+   "mm_doc_fisthold",
+   "mm_doc_hook",
+   "mm_doc_rise",
+   "mm_doc_rise_b",
+   "mm_doc_uppercut",
    "mm_flinch_a",
    "mm_flinch_b",
+   "mm_him_snapback",
    "mm_lift_heavy_a",
+   "mm_ring_glide_a",
+   "mm_ring_glide_b",
+   "mm_set_lower_a",
+   "mm_set_lower_b",
+   "mm_set_pat",
    "mx_african_rainbow",
    "mx_baseball_pitching",
    "mx_bboy_pose_to_idle",
@@ -35059,12 +35307,23 @@
    "mx_waving",
    "mx_weight_shift",
    "mx_writing_seated",
+   "ps_catch_slide_a",
+   "ps_catch_slide_b",
+   "ps_punched_launch_a",
+   "ps_punched_launch_b",
+   "ps_zg_shove_tumble_a",
+   "ps_zg_shove_tumble_b",
+   "ps_zg_startle_a",
+   "ps_zg_startle_b",
+   "ps_zg_throw_recoil_a",
+   "ps_zg_throw_recoil_b",
    "sit_cough",
    "sit_hit_snap",
    "sit_knee_kick_r",
    "stumble_backwards",
    "vm_box_cross",
    "vm_box_hooks",
+   "vm_lift_cleanjerk",
    "vm_zg_float_turn"
   ],
   "clips": {
@@ -36840,6 +37099,225 @@
     },
     "library": null
    },
+   "mm_boo_smash": {
+    "clip": "mm_boo_smash",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_boo_smash.mp4",
+    "length": 1.333,
+    "loop": true,
+    "stance": "standing",
+    "footIK": true,
+    "clean": true,
+    "cleanWhy": "feet held in the world through contacts, played with Foot IK",
+    "jitterP99": 3.685,
+    "snaps": 37,
+    "slideCmPerS": 6.6,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.203,
+     "right": 0.144
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     0,
+     51.1
+    ],
+    "headPitchDeg": [
+     -27.6,
+     5.1
+    ],
+    "leanFwdMaxDeg": 38.3,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.006,
+    "rootFarthestM": 0.176,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.5,
+     "mps": 9.94,
+     "farthestReachT": 0.53,
+     "reachM": 0.435
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 0.23,
+     "mps": 0.87
+    },
+    "library": null
+   },
+   "mm_boo_surprised": {
+    "clip": "mm_boo_surprised",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_boo_surprised.mp4",
+    "length": 3.167,
+    "loop": true,
+    "stance": "standing",
+    "footIK": true,
+    "clean": true,
+    "cleanWhy": "feet held in the world through contacts, played with Foot IK",
+    "jitterP99": 0.541,
+    "snaps": 3,
+    "slideCmPerS": 0.6,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.199,
+     "right": 0.183
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     0,
+     9.3
+    ],
+    "headPitchDeg": [
+     -4.4,
+     1.7
+    ],
+    "leanFwdMaxDeg": -4.3,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0,
+    "rootFarthestM": 0.008,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.27,
+     "mps": 2.79,
+     "farthestReachT": 0.17,
+     "reachM": 0.426
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.1,
+     "mps": 0.05
+    },
+    "library": null
+   },
+   "mm_catch_brace": {
+    "clip": "mm_catch_brace",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_catch_brace.mp4",
+    "length": 3.333,
+    "loop": true,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.388,
+    "snaps": 0,
+    "slideCmPerS": 14.3,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.375,
+     "right": 0.36
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -0.5,
+     3.2
+    ],
+    "headPitchDeg": [
+     -53.9,
+     -49.4
+    ],
+    "leanFwdMaxDeg": 47.8,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.003,
+    "rootFarthestM": 0.072,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.43,
+     "mps": 0.17,
+     "farthestReachT": 0.7,
+     "reachM": 0.322
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.77,
+     "mps": 1.85
+    },
+    "library": null
+   },
    "mm_cross_punch_a": {
     "clip": "mm_cross_punch_a",
     "grade": "?",
@@ -36849,21 +37327,21 @@
     "line": "",
     "watched": null,
     "preview": "library/motion/previews/mm_cross_punch_a.mp4",
-    "length": 8.3,
+    "length": 1.833,
     "loop": false,
     "stance": "standing",
     "footIK": false,
     "clean": true,
     "cleanWhy": "held feet made it worse; cleaned without them",
-    "jitterP99": 1.179,
+    "jitterP99": 2.472,
     "snaps": 23,
-    "slideCmPerS": 14.2,
+    "slideCmPerS": 63.7,
     "kneeFlipWithFootIK": false,
     "hands": {
      "left": {
       "curlMean": 74.8,
       "curlMin": 74.7,
-      "curlP10": 74.8,
+      "curlP10": 74.7,
       "spreadMean": 23.1,
       "spreadMax": 23.3,
       "openFrac": 0,
@@ -36872,7 +37350,7 @@
      "right": {
       "curlMean": 75.8,
       "curlMin": 75.7,
-      "curlP10": 75.8,
+      "curlP10": 75.7,
       "spreadMean": 23.9,
       "spreadMax": 24.1,
       "openFrac": 0,
@@ -36896,7 +37374,7 @@
     ],
     "leanFwdMaxDeg": 9,
     "kneeBackwardMaxDeg": 0,
-    "rootDriftM": 0.056,
+    "rootDriftM": 0.055,
     "rootFarthestM": 0.108,
     "hitT": null,
     "peakHand": {
@@ -36922,37 +37400,37 @@
     "line": "",
     "watched": null,
     "preview": "library/motion/previews/mm_cross_punch_b.mp4",
-    "length": 8.3,
+    "length": 1.4,
     "loop": false,
     "stance": "standing",
     "footIK": false,
     "clean": true,
     "cleanWhy": "held feet made it worse; cleaned without them",
-    "jitterP99": 1.733,
+    "jitterP99": 4.365,
     "snaps": 21,
-    "slideCmPerS": 19.6,
+    "slideCmPerS": 114.8,
     "kneeFlipWithFootIK": false,
     "hands": {
      "left": {
-      "curlMean": 74.7,
+      "curlMean": 74.8,
       "curlMin": 74.7,
       "curlP10": 74.7,
       "spreadMean": 23.1,
-      "spreadMax": 23.3,
+      "spreadMax": 23.2,
       "openFrac": 0,
       "fannedFrac": 0
      },
      "right": {
       "curlMean": 75.8,
       "curlMin": 75.7,
-      "curlP10": 75.8,
+      "curlP10": 75.7,
       "spreadMean": 23.9,
       "spreadMax": 24.1,
       "openFrac": 0,
       "fannedFrac": 0
      }
     },
-    "handNote": "left hand curl 74.7 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
     "handToFaceMinM": {
      "left": 0.246,
      "right": 0.2
@@ -36969,7 +37447,7 @@
     ],
     "leanFwdMaxDeg": 21.5,
     "kneeBackwardMaxDeg": 0,
-    "rootDriftM": 0.077,
+    "rootDriftM": 0.072,
     "rootFarthestM": 0.422,
     "hitT": null,
     "peakHand": {
@@ -36986,28 +37464,174 @@
     },
     "library": null
    },
-   "mm_flinch_a": {
-    "clip": "mm_flinch_a",
+   "mm_doc_fisthold": {
+    "clip": "mm_doc_fisthold",
     "grade": "?",
     "uses": [],
     "weak": [],
     "needs": [],
     "line": "",
     "watched": null,
-    "preview": "library/motion/previews/mm_flinch_a.mp4",
-    "length": 8.3,
+    "preview": "library/motion/previews/mm_doc_fisthold.mp4",
+    "length": 5.333,
+    "loop": true,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 1.58,
+    "snaps": 38,
+    "slideCmPerS": 15.7,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.709,
+     "right": 0.241
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -10.6,
+     14.3
+    ],
+    "headPitchDeg": [
+     -9.4,
+     5
+    ],
+    "leanFwdMaxDeg": 5.7,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.004,
+    "rootFarthestM": 0.127,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.23,
+     "mps": 3.56,
+     "farthestReachT": 0.5,
+     "reachM": 0.458
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.97,
+     "mps": 0.61
+    },
+    "library": null
+   },
+   "mm_doc_hook": {
+    "clip": "mm_doc_hook",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_doc_hook.mp4",
+    "length": 1.067,
+    "loop": true,
+    "stance": "standing",
+    "footIK": false,
+    "clean": false,
+    "cleanWhy": "held feet made it worse; cleaned without them; not better than the source on every measure, so the source plays",
+    "jitterP99": 3.671,
+    "snaps": 35,
+    "slideCmPerS": 69.4,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.138,
+     "right": 0.19
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -10.7,
+     29.8
+    ],
+    "headPitchDeg": [
+     -18.7,
+     -0.4
+    ],
+    "leanFwdMaxDeg": 16.6,
+    "kneeBackwardMaxDeg": 29.7,
+    "rootDriftM": 0.003,
+    "rootFarthestM": 0.067,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.43,
+     "mps": 9.11,
+     "farthestReachT": 0.4,
+     "reachM": 0.462
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 0.8,
+     "mps": 3.08
+    },
+    "library": null
+   },
+   "mm_doc_rise": {
+    "clip": "mm_doc_rise",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_doc_rise.mp4",
+    "length": 5.833,
     "loop": false,
     "stance": "standing",
     "footIK": false,
     "clean": true,
     "cleanWhy": "held feet made it worse; cleaned without them",
-    "jitterP99": 0.373,
-    "snaps": 3,
-    "slideCmPerS": 16,
+    "jitterP99": 1.876,
+    "snaps": 35,
+    "slideCmPerS": 23,
     "kneeFlipWithFootIK": false,
     "hands": {
      "left": {
-      "curlMean": 74.7,
+      "curlMean": 74.8,
       "curlMin": 74.7,
       "curlP10": 74.7,
       "spreadMean": 23.1,
@@ -37025,24 +37649,243 @@
       "fannedFrac": 0
      }
     },
-    "handNote": "left hand curl 74.7 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
     "handToFaceMinM": {
-     "left": 0.252,
-     "right": 0.235
+     "left": 0.533,
+     "right": 0.203
     },
     "handToFaceFrames": 0,
     "handInBodyFrames": 0,
     "headYawDeg": [
-     -61.4,
+     -59.9,
+     100.9
+    ],
+    "headPitchDeg": [
+     -85.6,
+     39.3
+    ],
+    "leanFwdMaxDeg": 65.5,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.152,
+    "rootFarthestM": 0.21,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 1.5,
+     "mps": 4.02,
+     "farthestReachT": 1.57,
+     "reachM": 0.415
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 1.97,
+     "mps": 1.75
+    },
+    "library": null
+   },
+   "mm_doc_rise_b": {
+    "clip": "mm_doc_rise_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_doc_rise_b.mp4",
+    "length": 2.4,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.947,
+    "snaps": 0,
+    "slideCmPerS": 55.6,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.533,
+     "right": 0.31
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -1.8,
+     100.9
+    ],
+    "headPitchDeg": [
+     -85.6,
+     41.7
+    ],
+    "leanFwdMaxDeg": 65.5,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.03,
+    "rootFarthestM": 0.21,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 1.5,
+     "mps": 4.02,
+     "farthestReachT": 1.57,
+     "reachM": 0.415
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.83,
+     "mps": 1.59
+    },
+    "library": null
+   },
+   "mm_doc_uppercut": {
+    "clip": "mm_doc_uppercut",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_doc_uppercut.mp4",
+    "length": 0.867,
+    "loop": true,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 5.565,
+    "snaps": 23,
+    "slideCmPerS": 75,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.142,
+     "right": 0.224
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -2.7,
+     27.3
+    ],
+    "headPitchDeg": [
+     -20.9,
+     13.9
+    ],
+    "leanFwdMaxDeg": 3,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.004,
+    "rootFarthestM": 0.146,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.33,
+     "mps": 8.2,
+     "farthestReachT": 0.23,
+     "reachM": 0.385
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.63,
+     "mps": 2.51
+    },
+    "library": null
+   },
+   "mm_flinch_a": {
+    "clip": "mm_flinch_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_flinch_a.mp4",
+    "length": 2.1,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.88,
+    "snaps": 3,
+    "slideCmPerS": 62.3,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.253,
+     "right": 0.236
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -61.3,
      35.5
     ],
     "headPitchDeg": [
      -19.9,
-     -6.2
+     -6.3
     ],
-    "leanFwdMaxDeg": 15.1,
+    "leanFwdMaxDeg": 15.2,
     "kneeBackwardMaxDeg": 0,
-    "rootDriftM": 0.066,
+    "rootDriftM": 0.068,
     "rootFarthestM": 0.32,
     "hitT": null,
     "peakHand": {
@@ -37068,21 +37911,21 @@
     "line": "",
     "watched": null,
     "preview": "library/motion/previews/mm_flinch_b.mp4",
-    "length": 8.3,
+    "length": 1.533,
     "loop": false,
     "stance": "standing",
     "footIK": false,
     "clean": true,
     "cleanWhy": "held feet made it worse; cleaned without them",
-    "jitterP99": 0,
+    "jitterP99": 0.373,
     "snaps": 0,
-    "slideCmPerS": 11,
+    "slideCmPerS": 58,
     "kneeFlipWithFootIK": false,
     "hands": {
      "left": {
       "curlMean": 74.8,
       "curlMin": 74.7,
-      "curlP10": 74.8,
+      "curlP10": 74.7,
       "spreadMean": 23.1,
       "spreadMax": 23.2,
       "openFrac": 0,
@@ -37091,7 +37934,7 @@
      "right": {
       "curlMean": 75.8,
       "curlMin": 75.7,
-      "curlP10": 75.8,
+      "curlP10": 75.7,
       "spreadMean": 23.9,
       "spreadMax": 24,
       "openFrac": 0,
@@ -37100,7 +37943,7 @@
     },
     "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
     "handToFaceMinM": {
-     "left": 0.502,
+     "left": 0.503,
      "right": 0.551
     },
     "handToFaceFrames": 0,
@@ -37116,7 +37959,7 @@
     "leanFwdMaxDeg": 7.1,
     "kneeBackwardMaxDeg": 0,
     "rootDriftM": 0.384,
-    "rootFarthestM": 0.388,
+    "rootFarthestM": 0.384,
     "hitT": null,
     "peakHand": {
      "side": "left",
@@ -37132,24 +37975,24 @@
     },
     "library": null
    },
-   "mm_lift_heavy_a": {
-    "clip": "mm_lift_heavy_a",
+   "mm_him_snapback": {
+    "clip": "mm_him_snapback",
     "grade": "?",
     "uses": [],
     "weak": [],
     "needs": [],
     "line": "",
     "watched": null,
-    "preview": "library/motion/previews/mm_lift_heavy_a.mp4",
-    "length": 8.3,
+    "preview": "library/motion/previews/mm_him_snapback.mp4",
+    "length": 1.033,
     "loop": false,
-    "stance": "feet off the floor",
+    "stance": "travelling",
     "footIK": false,
-    "clean": true,
-    "cleanWhy": "held feet made it worse; cleaned without them",
-    "jitterP99": 0.911,
-    "snaps": 0,
-    "slideCmPerS": 3.7,
+    "clean": false,
+    "cleanWhy": "held feet made it worse; cleaned without them; not better than the source on every measure, so the source plays",
+    "jitterP99": 2.241,
+    "snaps": 10,
+    "slideCmPerS": 27.9,
     "kneeFlipWithFootIK": false,
     "hands": {
      "left": {
@@ -37164,7 +38007,80 @@
      "right": {
       "curlMean": 75.8,
       "curlMin": 75.7,
-      "curlP10": 75.8,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.351,
+     "right": 0.273
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     0,
+     66
+    ],
+    "headPitchDeg": [
+     -0.4,
+     47.2
+    ],
+    "leanFwdMaxDeg": -5,
+    "kneeBackwardMaxDeg": 16.8,
+    "rootDriftM": 0.033,
+    "rootFarthestM": 0.108,
+    "hitT": null,
+    "peakHand": {
+     "side": "left",
+     "t": 0.07,
+     "mps": 2.37,
+     "farthestReachT": 0.33,
+     "reachM": 0.47
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 1,
+     "mps": 5.02
+    },
+    "library": null
+   },
+   "mm_lift_heavy_a": {
+    "clip": "mm_lift_heavy_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_lift_heavy_a.mp4",
+    "length": 2.4,
+    "loop": false,
+    "stance": "low (seated or kneeling)",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 1.591,
+    "snaps": 0,
+    "slideCmPerS": 12.6,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
       "spreadMean": 23.9,
       "spreadMax": 24.1,
       "openFrac": 0,
@@ -37188,7 +38104,7 @@
     ],
     "leanFwdMaxDeg": 29.7,
     "kneeBackwardMaxDeg": 0,
-    "rootDriftM": 0.155,
+    "rootDriftM": 0.15,
     "rootFarthestM": 0.161,
     "hitT": null,
     "peakHand": {
@@ -37202,6 +38118,371 @@
      "side": "right",
      "t": 0.23,
      "mps": 1.65
+    },
+    "library": null
+   },
+   "mm_ring_glide_a": {
+    "clip": "mm_ring_glide_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_ring_glide_a.mp4",
+    "length": 1.6,
+    "loop": false,
+    "stance": "low (seated or kneeling)",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 1.477,
+    "snaps": 2,
+    "slideCmPerS": 21,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.106,
+     "right": 0.171
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -80.1,
+     7.1
+    ],
+    "headPitchDeg": [
+     -85.4,
+     -44.3
+    ],
+    "leanFwdMaxDeg": 97,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.065,
+    "rootFarthestM": 0.065,
+    "hitT": null,
+    "peakHand": {
+     "side": "left",
+     "t": 1.53,
+     "mps": 1.48,
+     "farthestReachT": 1.43,
+     "reachM": 0.451
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 0.4,
+     "mps": 2.34
+    },
+    "library": null
+   },
+   "mm_ring_glide_b": {
+    "clip": "mm_ring_glide_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_ring_glide_b.mp4",
+    "length": 3.2,
+    "loop": false,
+    "stance": "lying",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.58,
+    "snaps": 0,
+    "slideCmPerS": 36.1,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.358,
+     "right": 0.459
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     1.1,
+     61.8
+    ],
+    "headPitchDeg": [
+     -69.8,
+     -54.8
+    ],
+    "leanFwdMaxDeg": -84.7,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.143,
+    "rootFarthestM": 0.168,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 3.13,
+     "mps": 0.48,
+     "farthestReachT": 3.2,
+     "reachM": 0.419
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 2.67,
+     "mps": 1.39
+    },
+    "library": null
+   },
+   "mm_set_lower_a": {
+    "clip": "mm_set_lower_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_set_lower_a.mp4",
+    "length": 4.7,
+    "loop": false,
+    "stance": "travelling",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 1.209,
+    "snaps": 4,
+    "slideCmPerS": 12.3,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.258,
+     "right": 0.483
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -14.9,
+     92
+    ],
+    "headPitchDeg": [
+     -72.9,
+     2.6
+    ],
+    "leanFwdMaxDeg": 74.5,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 1.738,
+    "rootFarthestM": 2.023,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 3.1,
+     "mps": 1.11,
+     "farthestReachT": 3.43,
+     "reachM": 0.414
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 1.23,
+     "mps": 2.82
+    },
+    "library": null
+   },
+   "mm_set_lower_b": {
+    "clip": "mm_set_lower_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_set_lower_b.mp4",
+    "length": 10,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.283,
+    "snaps": 0,
+    "slideCmPerS": 5,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.504,
+     "right": 0.512
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -19.3,
+     85.8
+    ],
+    "headPitchDeg": [
+     -88,
+     -65.2
+    ],
+    "leanFwdMaxDeg": 79.1,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.139,
+    "rootFarthestM": 0.306,
+    "hitT": null,
+    "peakHand": {
+     "side": "left",
+     "t": 8.53,
+     "mps": 0.32,
+     "farthestReachT": 8.43,
+     "reachM": 0.429
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 0.77,
+     "mps": 0.92
+    },
+    "library": null
+   },
+   "mm_set_pat": {
+    "clip": "mm_set_pat",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/mm_set_pat.mp4",
+    "length": 4.333,
+    "loop": true,
+    "stance": "standing",
+    "footIK": true,
+    "clean": true,
+    "cleanWhy": "feet held in the world through contacts, played with Foot IK",
+    "jitterP99": 0.46,
+    "snaps": 0,
+    "slideCmPerS": 0.7,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.399,
+     "right": 0.39
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -4.2,
+     11.7
+    ],
+    "headPitchDeg": [
+     -7.7,
+     4.1
+    ],
+    "leanFwdMaxDeg": 4.4,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0,
+    "rootFarthestM": 0.051,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.27,
+     "mps": 2.2,
+     "farthestReachT": 0.5,
+     "reachM": 0.438
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.43,
+     "mps": 0.12
     },
     "library": null
    },
@@ -51807,6 +53088,736 @@
     },
     "library": null
    },
+   "ps_catch_slide_a": {
+    "clip": "ps_catch_slide_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_catch_slide_a.mp4",
+    "length": 3.467,
+    "loop": false,
+    "stance": "travelling",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "Foot IK flips a knee: feet not held",
+    "jitterP99": 1.013,
+    "snaps": 4,
+    "slideCmPerS": 8.1,
+    "kneeFlipWithFootIK": true,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.589,
+     "right": 0.524
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -178.4,
+     4.3
+    ],
+    "headPitchDeg": [
+     -18.5,
+     89.5
+    ],
+    "leanFwdMaxDeg": -3.4,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.039,
+    "rootFarthestM": 0.076,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.63,
+     "mps": 1.45,
+     "farthestReachT": 0.7,
+     "reachM": 0.461
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 1.47,
+     "mps": 1.05
+    },
+    "library": null
+   },
+   "ps_catch_slide_b": {
+    "clip": "ps_catch_slide_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_catch_slide_b.mp4",
+    "length": 3.467,
+    "loop": false,
+    "stance": "feet off the floor",
+    "footIK": false,
+    "clean": false,
+    "cleanWhy": "held feet made it worse; cleaned without them; not better than the source on every measure, so the source plays",
+    "jitterP99": 1.754,
+    "snaps": 20,
+    "slideCmPerS": 37.2,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.591,
+     "right": 0.524
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -1,
+     7.1
+    ],
+    "headPitchDeg": [
+     -24.7,
+     89.4
+    ],
+    "leanFwdMaxDeg": -3.6,
+    "kneeBackwardMaxDeg": 25.2,
+    "rootDriftM": 0.002,
+    "rootFarthestM": 0.06,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.4,
+     "mps": 2.85,
+     "farthestReachT": 0.47,
+     "reachM": 0.467
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 1,
+     "mps": 2.34
+    },
+    "library": null
+   },
+   "ps_punched_launch_a": {
+    "clip": "ps_punched_launch_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_punched_launch_a.mp4",
+    "length": 3.567,
+    "loop": false,
+    "stance": "travelling",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "no contact long enough to hold",
+    "jitterP99": 4.827,
+    "snaps": 103,
+    "slideCmPerS": 10,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.511,
+     "right": 0.53
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -179.7,
+     167.9
+    ],
+    "headPitchDeg": [
+     -87.5,
+     86
+    ],
+    "leanFwdMaxDeg": 153.8,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.178,
+    "rootFarthestM": 0.241,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 1.77,
+     "mps": 24.19,
+     "farthestReachT": 1.67,
+     "reachM": 0.44
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 1.77,
+     "mps": 29.59
+    },
+    "library": null
+   },
+   "ps_punched_launch_b": {
+    "clip": "ps_punched_launch_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_punched_launch_b.mp4",
+    "length": 3.567,
+    "loop": false,
+    "stance": "lying",
+    "footIK": false,
+    "clean": false,
+    "cleanWhy": "no contact long enough to hold; not better than the source on every measure, so the source plays",
+    "jitterP99": 6.421,
+    "snaps": 156,
+    "slideCmPerS": 12.5,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.252,
+     "right": 0.195
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -179.7,
+     9.7
+    ],
+    "headPitchDeg": [
+     -88.3,
+     87.5
+    ],
+    "leanFwdMaxDeg": 104.1,
+    "kneeBackwardMaxDeg": 70,
+    "rootDriftM": 0.192,
+    "rootFarthestM": 0.225,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 1,
+     "mps": 8.96,
+     "farthestReachT": 0.9,
+     "reachM": 0.472
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.03,
+     "mps": 13.65
+    },
+    "library": null
+   },
+   "ps_zg_shove_tumble_a": {
+    "clip": "ps_zg_shove_tumble_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_zg_shove_tumble_a.mp4",
+    "length": 7.967,
+    "loop": false,
+    "stance": "travelling",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "no contact long enough to hold",
+    "jitterP99": 0.224,
+    "snaps": 29,
+    "slideCmPerS": 2.9,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.426,
+     "right": 0.493
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -12.1,
+     6.6
+    ],
+    "headPitchDeg": [
+     -81.5,
+     64.7
+    ],
+    "leanFwdMaxDeg": 178.7,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.063,
+    "rootFarthestM": 0.139,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 5.13,
+     "mps": 25.65,
+     "farthestReachT": 5.43,
+     "reachM": 0.347
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 5.13,
+     "mps": 16.79
+    },
+    "library": null
+   },
+   "ps_zg_shove_tumble_b": {
+    "clip": "ps_zg_shove_tumble_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_zg_shove_tumble_b.mp4",
+    "length": 7.967,
+    "loop": false,
+    "stance": "travelling",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.186,
+    "snaps": 22,
+    "slideCmPerS": 1.6,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.424,
+     "right": 0.482
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -10.1,
+     14
+    ],
+    "headPitchDeg": [
+     -89,
+     73.5
+    ],
+    "leanFwdMaxDeg": 177.6,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.028,
+    "rootFarthestM": 0.172,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 2.1,
+     "mps": 30.57,
+     "farthestReachT": 2.13,
+     "reachM": 0.346
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 2.1,
+     "mps": 21.71
+    },
+    "library": null
+   },
+   "ps_zg_startle_a": {
+    "clip": "ps_zg_startle_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_zg_startle_a.mp4",
+    "length": 5.967,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": false,
+    "cleanWhy": "feet held in the world through contacts, played with Foot IK; not better than the source on every measure, so the source plays",
+    "jitterP99": 1.066,
+    "snaps": 17,
+    "slideCmPerS": 19.4,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.43,
+     "right": 0.537
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -2.3,
+     5.2
+    ],
+    "headPitchDeg": [
+     -2.1,
+     49.9
+    ],
+    "leanFwdMaxDeg": -5.3,
+    "kneeBackwardMaxDeg": 38.4,
+    "rootDriftM": 0.033,
+    "rootFarthestM": 0.114,
+    "hitT": null,
+    "peakHand": {
+     "side": "left",
+     "t": 1.17,
+     "mps": 4.25,
+     "farthestReachT": 1.3,
+     "reachM": 0.466
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 1.2,
+     "mps": 3.58
+    },
+    "library": null
+   },
+   "ps_zg_startle_b": {
+    "clip": "ps_zg_startle_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_zg_startle_b.mp4",
+    "length": 5.967,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.982,
+    "snaps": 16,
+    "slideCmPerS": 23.7,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.459,
+     "right": 0.546
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -1,
+     2.9
+    ],
+    "headPitchDeg": [
+     -2.7,
+     45.4
+    ],
+    "leanFwdMaxDeg": -4.8,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.03,
+    "rootFarthestM": 0.095,
+    "hitT": null,
+    "peakHand": {
+     "side": "left",
+     "t": 1.17,
+     "mps": 4.14,
+     "farthestReachT": 1.3,
+     "reachM": 0.466
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 1.13,
+     "mps": 3.21
+    },
+    "library": null
+   },
+   "ps_zg_throw_recoil_a": {
+    "clip": "ps_zg_throw_recoil_a",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_zg_throw_recoil_a.mp4",
+    "length": 4.967,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.629,
+    "snaps": 3,
+    "slideCmPerS": 11.1,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.518,
+     "right": 0.416
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -3.9,
+     1.2
+    ],
+    "headPitchDeg": [
+     2.8,
+     11.2
+    ],
+    "leanFwdMaxDeg": -10.4,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.046,
+    "rootFarthestM": 0.046,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 1.07,
+     "mps": 1.51,
+     "farthestReachT": 1.17,
+     "reachM": 0.458
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 1.07,
+     "mps": 1.3
+    },
+    "library": null
+   },
+   "ps_zg_throw_recoil_b": {
+    "clip": "ps_zg_throw_recoil_b",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/ps_zg_throw_recoil_b.mp4",
+    "length": 4.967,
+    "loop": false,
+    "stance": "standing",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.85,
+    "snaps": 13,
+    "slideCmPerS": 16.6,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.3,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.531,
+     "right": 0.413
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -1.5,
+     1.4
+    ],
+    "headPitchDeg": [
+     -22.9,
+     11
+    ],
+    "leanFwdMaxDeg": 7.8,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.045,
+    "rootFarthestM": 0.045,
+    "hitT": null,
+    "peakHand": {
+     "side": "right",
+     "t": 0.97,
+     "mps": 1.99,
+     "farthestReachT": 1.1,
+     "reachM": 0.459
+    },
+    "peakFoot": {
+     "side": "right",
+     "t": 0.97,
+     "mps": 1.94
+    },
+    "library": null
+   },
    "sit_cough": {
     "clip": "sit_cough",
     "grade": "B",
@@ -52272,6 +54283,79 @@
      "side": "right",
      "t": 2.77,
      "mps": 3.54
+    },
+    "library": null
+   },
+   "vm_lift_cleanjerk": {
+    "clip": "vm_lift_cleanjerk",
+    "grade": "?",
+    "uses": [],
+    "weak": [],
+    "needs": [],
+    "line": "",
+    "watched": null,
+    "preview": "library/motion/previews/vm_lift_cleanjerk.mp4",
+    "length": 4.167,
+    "loop": false,
+    "stance": "low (seated or kneeling)",
+    "footIK": false,
+    "clean": true,
+    "cleanWhy": "held feet made it worse; cleaned without them",
+    "jitterP99": 0.949,
+    "snaps": 5,
+    "slideCmPerS": 23.5,
+    "kneeFlipWithFootIK": false,
+    "hands": {
+     "left": {
+      "curlMean": 74.8,
+      "curlMin": 74.7,
+      "curlP10": 74.7,
+      "spreadMean": 23.1,
+      "spreadMax": 23.2,
+      "openFrac": 0,
+      "fannedFrac": 0
+     },
+     "right": {
+      "curlMean": 75.8,
+      "curlMin": 75.7,
+      "curlP10": 75.7,
+      "spreadMean": 23.9,
+      "spreadMax": 24.1,
+      "openFrac": 0,
+      "fannedFrac": 0
+     }
+    },
+    "handNote": "left hand curl 74.8 deg mean, 74.7 at its most open, straight and spread 0% of frames; about 15 is flat, 70 relaxed, 160 a fist",
+    "handToFaceMinM": {
+     "left": 0.353,
+     "right": 0.294
+    },
+    "handToFaceFrames": 0,
+    "handInBodyFrames": 0,
+    "headYawDeg": [
+     -7.4,
+     11.4
+    ],
+    "headPitchDeg": [
+     -22.4,
+     7.8
+    ],
+    "leanFwdMaxDeg": 30.8,
+    "kneeBackwardMaxDeg": 0,
+    "rootDriftM": 0.109,
+    "rootFarthestM": 0.232,
+    "hitT": null,
+    "peakHand": {
+     "side": "left",
+     "t": 2.33,
+     "mps": 3.42,
+     "farthestReachT": 2.23,
+     "reachM": 0.456
+    },
+    "peakFoot": {
+     "side": "left",
+     "t": 3.5,
+     "mps": 2.02
     },
     "library": null
    },

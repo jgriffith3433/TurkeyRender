@@ -1,0 +1,41 @@
+{
+ "about": "Generated files of this video: the tool that makes each and the inputs it read (tools/mv/generated.mjs). mv build and mv cards regenerate what is stale.",
+ "files": {
+  "acts/03-the-pull.json": {
+   "tool": null,
+   "inputs": [],
+   "inputHashes": {},
+   "outputHash": "2be80e2af02d943c",
+   "at": "2026-11-08T21:57:10.884Z",
+   "by": "adopt",
+   "note": "hand-maintained since 2026-11-06: made once by Director/tools/p34_build.mjs (it also empties acts/07-cuts-b.json); TK Shock is finished, never auto-run the tool (side effects on other acts). Edit by hand or rerun the tool deliberately."
+  },
+  "acts/04b-hang.json": {
+   "tool": null,
+   "inputs": [],
+   "inputHashes": {},
+   "outputHash": "1593187281d3fee5",
+   "at": "2026-11-08T21:57:11.023Z",
+   "by": "adopt",
+   "note": "hand-maintained since 2026-11-06: made once by Director/tools/p6_hang.mjs (it also strips lines from acts/04-lifted.json); TK Shock is finished, never auto-run the tool (side effects on other acts). Edit by hand or rerun the tool deliberately."
+  },
+  "acts/05-inside.json": {
+   "tool": null,
+   "inputs": [],
+   "inputHashes": {},
+   "outputHash": "30a68bb73bc8ea05",
+   "at": "2026-11-08T21:57:11.150Z",
+   "by": "adopt",
+   "note": "hand-maintained since 2026-11-06: made once by Director/tools/part7.mjs (it also writes acts/07-cuts-d.json); TK Shock is finished, never auto-run the tool (side effects on other acts). Edit by hand or rerun the tool deliberately."
+  },
+  "acts/07-cuts-d.json": {
+   "tool": null,
+   "inputs": [],
+   "inputHashes": {},
+   "outputHash": "9bec607283b15a13",
+   "at": "2026-11-08T21:57:11.290Z",
+   "by": "adopt",
+   "note": "hand-maintained since 2026-11-06: made once by Director/tools/part7.mjs (it also writes acts/05-inside.json); TK Shock is finished, never auto-run the tool (side effects on other acts). Edit by hand or rerun the tool deliberately."
+  }
+ }
+}

@@ -1,0 +1,65 @@
+# Hand staging over the board's card skeletons (merged by tools/board2cards.mjs on every run: maps merge, lists replace, null removes).
+# Keyed by board shot id. Write the reason beside every change.
+
+# --- The punch (hero test 1), rebuilt 2026-11-08 15:05 from real sources (tests/REVIEW.md "punch") ---
+# Why an uppercut: he sits on a high exam bed, so his jaw is at her head height; a hook or a cross lands on his chest (seen in the
+# 14:40 build: mx_hook_punch's fist crossed under his chin), and only an upward blow sends a man straight up through a ceiling.
+# Her: Protofactor LeftPowerUppercut (mocap, critic 7.8). LEFT hand because the 180 line puts the camera on her left side (c05: him
+# screen left, her right; the 15:20 render with the right uppercut showed only her back for the whole held coil). Guard 0-0.2 s, the
+# coil drops the fist to her hip by 0.38 s, the strike rises 0.40-0.50 s (9.2 m/s), fist at his jaw at ~0.495 s, overhead 0.57-0.9 s.
+#   p01: from 0.0; a freeze holds the coil 36 frames with a tremble, so contact (clip 0.495) lands on the p01/p02 cut.
+#   p02: the hitstop holds her at contact; a freeze holds the fist overhead into p03 (her follow-through while he goes through).
+# Only her RIGHT hand gets the relaxed set: her left hand keeps the clip's fist (the board default 0.35 on both hands made it a fan).
+# Him: mx_sit_still on the bed (no keyed hit sheet, no hip lift: hp_him_hit sat his hips 0.74 m low and put his head through the
+# mattress). On contact his upper body takes Protofactor GetHitFrontHeavyCombat (critic 9.4: head back 0.37 m in 0.23 s) as a layer,
+# then mx_flying_back_death (catalog B, good 0.07-0.6 s) carries the launch, flown straight up through the ceiling hole, linear (an
+# impulse: full speed at once), cut on the rise into p03.
+p01:
+  cast:
+    person: {at: bed, clip: mx_sit_still, blend: 0, args: null}
+    doctor: {at: doctor_uppercut, clip: LeftPowerUppercut, blend: 0, face: -20, args: {start: 0.0, once: 1}}
+  shot: {pos: [700.6, 1.0, 2.05], look: null, rot: [-13.24, 11.31, 0], fov: 48, screen: null}   # low behind her left shoulder (c05's side of the line): the coil turns her back to us with the fist cocked at her hip, him beyond facing the lens, frozen (from his side the coil showed only her back and hid him) (c05's side of the line): him in profile screen left, her 3/4 front screen right, the coiled left fist toward the lens (positions from the 15:40 bone dump)
+  raw:
+    - {at: 0, grade: {catch: 0}, for: 0}
+    - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
+    - {at: 0s, do: face, on: person, eyesWide: 0.5, fear: 0.4, for: 0.2s}
+    - {at: 0s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0s}
+    - {at: 0.38s, do: freeze, on: doctor, frames: 36, tremble: 0.004}
+    - {at: 1.89s, do: limbscale, on: doctor, bones: {leftHand: 1.25}, for: 0.15s, in: 0.03, out: 0.08}
+    - {at: 1.94s, do: smear, on: doctor.leftHand, frames: 1, style: both, length: 0.4, copies: 3}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.35, for: 0}
+
+p02:
+  cast:
+    person: {at: bed, clip: mx_sit_still, blend: 0, args: null}
+    doctor: {at: doctor_uppercut, clip: LeftPowerUppercut, blend: 0, face: -20, args: {start: 0.0, once: 1}}
+  shot: {pos: [700.25, 1.25, 3.05], look: person.head, fov: 40, screen: [0, 0.1]}   # low front-right CU of him; she stands beside the lens out of frame, her forearm rises into frame to his chin
+  raw:
+    - {at: 0, do: impactframe, on: person.head, style: flip, flash: 0, frames: 2, accent: "#ff3a2a", lines: 1}
+    - {at: 0, do: hitstop, on: person, frames: 7, victim: person, victimShake: 0.05, attacker: doctor, creep: 0.02}
+    - {at: 0, do: layer, on: person, clip: GetHitFrontHeavyCombat, mask: upper, start: 0, once: 1, weight: 1, for: 0.6s, blend: 0}
+    - {at: 0, do: face, on: person, jawOpen: 0.5, squint: 0.8, browDown: 0.4, for: 0s}
+    - {at: 0, do: speedlines, style: radial, on: person.head, amount: 0.8, for: 0.4s, hz: 12}
+    - {at: 0, fx: shock, on: person.head, size: 0.3, for: 0.4s, width: 0.015, glow: 0.04, fill: 0, color: "#ffffff"}
+    - {at: 0, fx: debris, on: person.head, size: 0.02, count: 20, speed: 3, normal: [0, 1, 0], spread: 70, gravity: 1, color: "#ffffff", color2: "#e8e8e8", for: 0.8s}
+    - {at: 0, do: shake, trauma: 1, punch: 0.06, for: 0.6s}
+    - {at: 0.4s, do: freeze, on: doctor, frames: 24, tremble: 0.002}
+    - {at: 0.6s, do: anim, on: person, clip: mx_flying_back_death, start: 0.12, rate: 0.5, blend: 0.12}   # 3 frames into the launch (blend 0 snapped his hips 44 deg in one frame at 67.13)
+    - {at: 0.6s, do: fly, on: person, fromHere: 1, to: [700.6, 3.8, 3.8], arc: 0, for: 0.7s, ease: linear, face: 0}
+    - {at: 0.5s, do: jump, on: clinic_roof_plug, pos: [702.4, 3, 6.2], height: 5, for: 1.5s}
+    - {at: 0.5s, do: rotate, on: clinic_roof_plug, rot: [110, 30, 50], for: 1.5s, ease: linear}
+    - {at: 0.5s, do: jump, on: clinic_ceiling_plug, pos: [701.4, 2.7, 5.4], height: 3.2, for: 1.3s}
+    - {at: 0.5s, do: rotate, on: clinic_ceiling_plug, rot: [120, 0, 20], for: 1.3s, ease: linear}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.35, for: 0}
+
+p03:
+  cast:
+    person: {at: bed, clip: mx_flying_back_death, blend: 0, args: {start: 0.195, rate: 0.5, once: 1}}
+    doctor: {at: doctor_uppercut, clip: LeftPowerUppercut, blend: 0, face: -20, args: {start: 0.0, once: 1}}
+  raw:
+    - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
+    - {at: 0, grade: {catch: 0}, for: 0}
+    - {at: 0, do: shake, trauma: 0.5, for: 0.6s}
+    - {at: 0.05s, fx: debris, pos: [700.6, 2.55, 3.85], size: 0.22, count: 120, speed: 3, normal: [0, -1, 0], spread: 60, gravity: 1, color: "#a9a49a", color2: "#7f7a70", smooth: 0.1, dust: 60, dustColor: "#cfc9be", for: 1.8s}   # the tiles fall into the room under the hole (at the ceiling plane they hid inside it)
+    - {at: 0.55s, do: fly, on: person, fromHere: 1, points: [[700.6, 8, 4.4], [700.6, 17, 14], [700.6, 33, 45], [700.6, 58, 74], [700.6, 95, 115], [700.6, 140, 165]], for: 7.85s, ease: linear, face: 0, trail: {lines: 16, width: 0.35}}
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 0.35, for: 0}

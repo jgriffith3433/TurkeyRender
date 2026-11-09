@@ -25,7 +25,7 @@
    "inputHashes": {
     "cut.json": "a2fc5cfb7dcaa5ac",
     "cards/shots.yaml": "ed7a57aad02a338f",
-    "style.json": "c9d62e600ce2044f",
+    "style.json": "b807a969f8b02862",
     "sequences/room.json": "adfb4ed50d20af6b",
     "sequences/street.json": "8e0f1c7d32d3a293",
     "tweaks/agent.json": "74c0ce6caffa5432",
@@ -39,7 +39,7 @@
     "Director/library/sets/backyard_frames/touch_sheet.png": "4a44133247e85c05",
     "Director/library/sets/backyard_frames/wide.png": "06510b3d25e9914f",
     "Director/library/sets/backyard.json": "13edd33f86c3a8d8",
-    "Director/library/sets/clinic.json": "415d71b078f73271",
+    "Director/library/sets/clinic.json": "ea72aec2517ff30d",
     "Director/library/sets/commercial.json": "98f1f4c7275ee68e",
     "Director/library/sets/estate.json": "198adae56958be6f",
     "Director/library/sets/flats.json": "8dc126baf9645d60",
@@ -793,10 +793,10 @@
     "Director/library/templates/reaction_cut.mjs": "6c67d6e47899364a",
     "Director/library/moods.json": "42df91ccf7ff4e63",
     "Director/tools/cards.mjs": "9816780f810ea561",
-    "Director/mv.mjs": "a575d573b5aff14a"
+    "Director/mv.mjs": "99f81d3ad406b5bb"
    },
    "outputHash": "e380af5be6f03f26",
-   "at": "2026-11-08T19:24:29.524Z"
+   "at": "2026-11-08T23:22:31.011Z"
   },
   "cards.map.json": {
    "tool": "node Director/mv.mjs --video _cards_test cards compile",
@@ -822,7 +822,7 @@
    "inputHashes": {
     "cut.json": "a2fc5cfb7dcaa5ac",
     "cards/shots.yaml": "ed7a57aad02a338f",
-    "style.json": "c9d62e600ce2044f",
+    "style.json": "b807a969f8b02862",
     "sequences/room.json": "adfb4ed50d20af6b",
     "sequences/street.json": "8e0f1c7d32d3a293",
     "tweaks/agent.json": "74c0ce6caffa5432",
@@ -836,7 +836,7 @@
     "Director/library/sets/backyard_frames/touch_sheet.png": "4a44133247e85c05",
     "Director/library/sets/backyard_frames/wide.png": "06510b3d25e9914f",
     "Director/library/sets/backyard.json": "13edd33f86c3a8d8",
-    "Director/library/sets/clinic.json": "415d71b078f73271",
+    "Director/library/sets/clinic.json": "ea72aec2517ff30d",
     "Director/library/sets/commercial.json": "98f1f4c7275ee68e",
     "Director/library/sets/estate.json": "198adae56958be6f",
     "Director/library/sets/flats.json": "8dc126baf9645d60",
@@ -1590,10 +1590,10 @@
     "Director/library/templates/reaction_cut.mjs": "6c67d6e47899364a",
     "Director/library/moods.json": "42df91ccf7ff4e63",
     "Director/tools/cards.mjs": "9816780f810ea561",
-    "Director/mv.mjs": "a575d573b5aff14a"
+    "Director/mv.mjs": "99f81d3ad406b5bb"
    },
    "outputHash": "8e5b679682d953ba",
-   "at": "2026-11-08T19:24:30.826Z"
+   "at": "2026-11-08T23:22:31.599Z"
   }
  }
 }

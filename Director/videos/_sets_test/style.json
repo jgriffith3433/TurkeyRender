@@ -1,0 +1,9 @@
+{
+  // The clinic is the base look; the space and commercial sections move it with their moods (library/moods.json space_*, tv_*).
+  "inherit": "clinic-fluorescent",
+  "format": "music-video",
+  // Every caption (any text cue that doesn't say otherwise), sound pass 2026-11-08, CLINIC-AD-AUDIT T1: white on white walls and bright planets
+  // vanished. A dark outline (TMP SDF units, 0.32 is about 3-4 px at 1080) and a soft drop shadow under it, cut on and cut off (no half-transparent
+  // first frames), on a 45% black box sized to the line. Runtime/MVLook.cs TextDriver reads outline*, shadow*, box*.
+  "type": { "outline": 0.38, "outlineColor": "#000000f0", "shadow": 1, "shadowColor": "#000000c8", "shadowX": 0.6, "shadowY": -0.8, "shadowSoft": 0.55, "shadowDilate": 0.55, "box": 0.45, "boxColor": "#000000", "boxPad": 14, "in": 0.01, "out": 0.01 }
+}

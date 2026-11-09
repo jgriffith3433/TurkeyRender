@@ -74,6 +74,19 @@ Status words: **done**, **in flight** (agent id), **not started**, **needs J**. 
 - **Status:** not started.
 - **Verify:** `critic.mjs cut` stiffness and timing principles rise on an unchanged cut; a 10 s hold of the deadpan face reads alive in
   24 fps strips; Audio2Face lip closes land on m/b/p within a frame on the symptoms take.
+- 2026-11-08, alive agent: **body and eyes landed, faces from audio and secondary motion not.** `tools/alive.mjs <video>` writes the GENERATED
+  `acts/62-alive.json` (registered in `generated.json`) from the board, the cut, the compiled cards and the voice files: an `alive` cue per
+  steady stretch (new `Runtime/MVAlive.cs`, first in the MVLate pass: breath at the register's rate, held 0.6 s before a hitstop, off in a
+  freeze; seated/standing sway, head micro-motion, standing weight shift with the feet held by IK; zero-g: breath and head yaw only), seeded
+  blinks (2-6 s, after a cut to a close shot, on big gaze turns, never on a stressed syllable), saccades, a speaker's look-away, listeners'
+  eyes to the next speaker 0.3 s early, and mouthPress on m/b/p placed on the voice envelope's dips. It backs off where the cards hold the
+  channel (eyes, gaze, head layers, mouthPress, "frozen" in the idea). Proof: `Director/review/alive.md`. Left: (a) **Audio2Face-3D** as
+  Gen `face.from-audio` (ARKit 52 on both heads) replaces the m/b/p heuristic; (b) **secondary motion**: the engine has no spring bone on a
+  native body and the coat, hair and stethoscope have no bones of their own (the coat is skinned to the body's bones; `MVOverlap.cs` is a
+  closed-form, pure-in-time spring but legacy-only and on body chains). Design: add 3-bone chains in `blender_coat.py` (hem front/back,
+  each lapel), `blender_head.py` (two hair clumps) and the stethoscope; run MVOverlap's convolution on those chains in the MVLate pass,
+  driven by the parent bone's world motion sampled at earlier scene times through MVLate stand-ins (pure in time, so scrub and reverse hold);
+  budget it at 1.5 ms a body. Not started: it is Blender rig work plus C#, not "a small addition".
 
 ### 4. Hand the loop to Hawkes Studio and the phone
 - **What:** TKShock as a Studio project: `mv make` is its build, critic + cold view + shot check its review, failures become backlog items

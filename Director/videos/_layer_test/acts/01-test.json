@@ -1,0 +1,35 @@
+{
+  "actors": {
+    "floor": { "model": "prim:plane", "pos": [0, 0, 0], "scale": [4, 1, 4], "color": "#555555", "lint": "always" },
+    "him": { "model": "person", "pos": [-0.7, 0, 0], "material": "Assets/MusicVideo/Person/Person.mat", "material2": "Assets/MusicVideo/Person/Head.mat" },
+    "her": { "model": "person2", "pos": [0.7, 0, 0], "material": "Assets/Videos/hawkespunch/Props/Person2_doctor.mat", "material2": "Assets/MusicVideo/Person2/Head.mat",
+             "wear": [{ "model": "Assets/MusicVideo/Person2/Coat/Coat.fbx", "materials": { "Coat_Cloth": "Assets/MusicVideo/Person2/Coat/Coat_Cloth.mat", "Coat_Badge": "Assets/MusicVideo/Person2/Coat/Coat_Badge.mat", "Coat_Dark": "Assets/MusicVideo/Person2/Coat/Coat_Dark.mat", "Coat_Metal": "Assets/MusicVideo/Person2/Coat/Coat_Metal.mat", "Coat_Pen": "Assets/MusicVideo/Person2/Coat/Coat_Pen.mat" } }] }
+  },
+  "cues": [
+    { "at": 0, "do": "face", "on": "her", "smile": 0, "fear": 0, "eyesWide": 0, "blink": 0, "jawOpen": 0, "for": 0.01 },
+    { "at": 0, "do": "fingers", "on": "him", "set": 0.35, "for": 0 },
+    { "at": 0, "do": "fingers", "on": "her", "set": 0.35, "for": 0 },
+    // Fault 1: both on the same base clip; the same upper-body layer 2-4 s on both
+    { "at": 0, "do": "anim", "on": "him", "clip": "mx_idle_weight_shift", "blend": 0 },
+    { "at": 0, "do": "anim", "on": "her", "clip": "mx_idle_weight_shift", "blend": 0 },
+    { "at": 2, "do": "layer", "on": "him", "clip": "mx_cross_punch", "mask": "upper", "for": 2, "blend": 0.3, "once": 1 },
+    { "at": 2, "do": "layer", "on": "her", "clip": "mx_cross_punch", "mask": "upper", "for": 2, "blend": 0.3, "once": 1 },
+    { "at": 4.5, "do": "layer", "on": "him", "clip": "mx_point_bent", "mask": "rightArm", "start": 0.4, "for": 1.5, "blend": 0.15, "once": 1 },
+    { "at": 4.5, "do": "layer", "on": "her", "clip": "mx_point_bent", "mask": "rightArm", "start": 0.4, "for": 1.5, "blend": 0.15, "once": 1 },
+    { "at": 6.5, "do": "layer", "on": "him", "clip": "mm_him_snapback", "mask": "spine,head", "start": 0.2, "rate": 1.8, "for": 0.75, "blend": 0, "once": 1 },
+    { "at": 6.5, "do": "layer", "on": "her", "clip": "mm_him_snapback", "mask": "spine,head", "start": 0.2, "rate": 1.8, "for": 0.75, "blend": 0, "once": 1 },
+    { "at": 8, "do": "perform", "on": "him", "name": "g_point", "for": "1.9s" },
+    { "at": 8, "do": "perform", "on": "her", "name": "g_point", "for": "1.9s" },
+    { "at": 10, "do": "anim", "on": "him", "clip": "mm_doc_uppercut__clean", "start": 0.2, "rate": 0.12, "blend": 0, "once": 1 },
+    { "at": 10, "do": "anim", "on": "her", "clip": "mm_doc_uppercut__clean", "start": 0.2, "rate": 0.12, "blend": 0, "once": 1 },
+    { "at": 10, "do": "layer", "on": "her", "clip": "mx_idle_weight_shift", "mask": "leftArm", "for": 1.9, "blend": 0, "hold": 0 },
+    { "at": 0, "shot": { "name": "layers", "pos": [0, 1.2, 4.2], "rot": [5, 180, 0], "fov": 40 } },
+
+    // Fault 2: both punch (blend 0, no crossfade near the hit), hitstop 8 frames at 7.5 s; cut at 9.5 s
+    { "at": 12, "do": "anim", "on": "him", "clip": "mx_cross_punch", "rate": 0.5, "blend": 0, "once": 1 },
+    { "at": 12, "do": "anim", "on": "her", "clip": "mx_cross_punch", "rate": 0.5, "blend": 0, "once": 1 },
+    { "at": 12, "shot": { "name": "hold", "pos": [0, 1.2, 4.2], "rot": [5, 180, 0], "fov": 40 } },
+    { "at": 13.5, "do": "hitstop", "on": "him", "frames": 8, "victim": "him", "victimShake": 0.0, "attacker": "her" },
+    { "at": 15.5, "shot": { "name": "after cut", "pos": [0, 1.4, 3.6], "rot": [8, 180, 0], "fov": 45 } }
+  ]
+}

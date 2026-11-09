@@ -1,0 +1,13 @@
+{
+  // 2000s daytime TV: over-lit pastel. A warm key spot high from camera left, a strong fill from camera right so there is no shadow side to speak of, a hot white rim
+  // from behind on hair and shoulders, two practicals in the backdrop (the studio lights are props; these are the lights), and a soft directional lifting the whole floor.
+  "sky": { "top": "#ffd9ec", "mid": "#fff2f7", "bottom": "#e9d6ff", "ambient": "#b9a7b6", "ambientTop": "#d5c6d4", "ambientBottom": "#b09aa8", "fog": "#fff2f7", "density": 0 },
+  "lights": {
+    "sun": { "type": "directional", "pos": [0, 10, -6], "aim": "subject", "color": "#fff4ea", "intensity": 0.7 },
+    "key": { "type": "spot", "at": "key", "pos": [-2.5, 4.5, -3], "aim": "subject", "color": "#fff0dc", "intensity": 26, "range": 14, "angle": 72, "shadows": true },
+    "fill": { "type": "spot", "at": "fill", "pos": [2.8, 3.2, -3], "aim": "subject", "color": "#ffe4ee", "intensity": 14, "range": 12, "angle": 85 },
+    "rim": { "type": "spot", "at": "rim", "pos": [0, 4.2, 4.6], "aim": "subject", "color": "#ffffff", "intensity": 18, "range": 10, "angle": 70 },
+    "practical": { "type": "point", "pos": [-3, 2.4, 3.6], "color": "#ffc8e0", "intensity": 2.2, "range": 7 },
+    "practical2": { "type": "point", "pos": [3, 2.4, 3.6], "color": "#c8e0ff", "intensity": 2.2, "range": 7 }
+  }
+}

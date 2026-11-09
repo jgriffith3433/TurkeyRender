@@ -51,7 +51,7 @@ work: `mv doctor`, `mv queue`, `ls Director/gen/compile.lock`, `Director/gen/WOR
 
 ## Commands at a glance (`Director/docs/commands.md` has every one)
 
-`mv make | status | approve | coldview | doctor` the pipeline and the machine · `mv new | song | use | videos` videos · `mv cards [check|
+`mv make <v> [stage] | make <v> plan | make <v> status | approve <v> <shot> --note | coldview | doctor` the pipeline and the machine · `mv new | song | use | videos` videos · `mv cards [check|
 compile|sheet|note|insert|remove] | why | lint` cards and the score · `mv build [--fast] | refresh | shotcheck | motioncheck | critic |
 motion | lab | test` building and checking · `mv shots | shot | frame | sheet | previs | render | final [--plan] | freeze | thaw | review`
 rendering · `mv bake | clips | choreo | style | format | find | pull` libraries · `mv queue | hold | csharp | generated | lease | snap |

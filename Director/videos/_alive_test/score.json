@@ -1,0 +1,21 @@
+{
+  // _alive_test: a copy of hawkespunch (2026-11-08, alive agent) for the alive-layer proof renders (acts/62-alive.json on/off). Not a video for J.
+  "song": "Assets/Videos/hawkespunch/Song/audio.mp3",
+  // The models are shared with every video: this link reads the "models" list of TK Shock's score. Add your own below; yours win.
+  // J, 2026-11-07: no music. The song keeps the clock (song.json), the mix leaves it out; the three spoken lines and the sfx are the sound.
+  "music": 0,
+  // 2026-11-08 sound pass: the finished mix (tools/mv/sound.mjs). Every spoken line to -16 LUFS, every bed (Sfx/**/beds/, acts/78-beds.json) 6 dB
+  // down under each line, the master through a true-peak limiter at -1 dBTP. The film lands near -16 LUFS integrated.
+  "mix": { "dialogue": -16, "bedDuck": -6, "bedFade": 0.25, "truePeak": -1, "master": 1 },
+  // 2026-11-07: the hybrid native path (Director/review/engine-fidelity.md): Unity's Animator plays every human from clips; reach, gaze, eyes, fingers and the face go on top.
+  "native": true,
+  // 2026-11-08: frames (hitstop, impact frames) count at 24 fps
+  "fps": 24,
+  "sharedModels": "../../score.json",
+  "models": {},
+  "stage": { "lights": {
+    "key": { "type": "directional", "rot": [50, -30, 0], "intensity": 1.2, "color": "#ffffff", "lint": "always" }
+  } },
+  // Cuts per bar by section name or kind (DROP, BREAK, section, intro). Going over is a lint error.
+  "targets": { "cutsPerBar": { "s1": 1.5 } }
+}
