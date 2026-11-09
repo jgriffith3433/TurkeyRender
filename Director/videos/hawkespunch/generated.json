@@ -400,7 +400,7 @@
    ],
    "inputHashes": {
     "cut.json": "0273b31800a124e9",
-    "cards/board.yaml": "bc0b17142cdd2066",
+    "cards/board.yaml": "f938dbcdaa177a45",
     "style.json": "34a5112aaac8f97a",
     "sequences/clinic.json": "a2763f92c5a410f8",
     "sequences/commercial.json": "a426e6feb3034d5e",
@@ -1173,8 +1173,8 @@
     "Director/tools/cards.mjs": "368f529cee1d1132",
     "Director/mv.mjs": "99f81d3ad406b5bb"
    },
-   "outputHash": "90fd09f57acbd5ae",
-   "at": "2026-11-09T01:29:51.279Z"
+   "outputHash": "122762e237e97771",
+   "at": "2026-11-09T01:45:10.563Z"
   },
   "cards.map.json": {
    "tool": "node Director/mv.mjs --video hawkespunch cards compile",
@@ -1199,7 +1199,7 @@
    ],
    "inputHashes": {
     "cut.json": "0273b31800a124e9",
-    "cards/board.yaml": "bc0b17142cdd2066",
+    "cards/board.yaml": "f938dbcdaa177a45",
     "style.json": "34a5112aaac8f97a",
     "sequences/clinic.json": "a2763f92c5a410f8",
     "sequences/commercial.json": "a426e6feb3034d5e",
@@ -1973,7 +1973,7 @@
     "Director/mv.mjs": "99f81d3ad406b5bb"
    },
    "outputHash": "d160e116b093af6c",
-   "at": "2026-11-09T01:29:51.999Z"
+   "at": "2026-11-09T01:45:10.961Z"
   },
   "acts/80-sfx.json": {
    "tool": "node Director/tools/punch_sound.mjs hawkespunch",

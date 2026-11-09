@@ -1,0 +1,110 @@
+{
+ "name": "hawkespunch 66.4-66.6 s",
+ "video": "hawkespunch",
+ "from": 66.4,
+ "to": 66.6,
+ "actors": [
+  "person",
+  "doctor"
+ ],
+ "fps": 30,
+ "frames": 6,
+ "seconds": 0.17,
+ "zerog": false,
+ "cuts": 1,
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "person: 0 holds (median 0 s), 0% of frames dead still, no fast action to time; doctor: 0 holds (median 0 s), 0% of frames dead still, no fast action to time",
+   "partial": false
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 9.7,
+   "note": "person: 0 centre-of-mass jerks, planted feet slide 0 cm/s; doctor: 0 centre-of-mass jerks, planted feet slide 9 cm/s",
+   "partial": false
+  },
+  "snaps": {
+   "score": 10,
+   "note": "person: 0 body snaps or pops in 0.17 s; doctor: 0 body snaps or pops in 0.17 s",
+   "partial": false
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "person: 1 key poses, readability 0.77 (best of front, side, three-quarter), 0% twinned; doctor: 1 key poses, readability 0.8 (best of front, side, three-quarter), 0% twinned",
+   "partial": false
+  },
+  "hands": {
+   "score": 9,
+   "note": "person: fingers curl 4 deg, spread 7 deg, head level; doctor: head bowed 100% of the time",
+   "partial": false
+  },
+  "contact": {
+   "score": 10,
+   "note": "person: hands clear of the body, 0 reaches into air; doctor: hands clear of the body, 0 reaches into air",
+   "partial": false
+  },
+  "reference": {
+   "score": 2.5,
+   "note": "person: 3.48 robust z from 174 mocap clips; furthest: armOmegaP50 low (5), spineOmegaP50 low (5), headOmegaP50 low (5); doctor: 2.21 robust z from 174 mocap clips; furthest: headOmegaP50 low (5), headOmegaP95 low (5), moveRate low (5)",
+   "partial": false
+  }
+ },
+ "total": 8,
+ "events": [
+  {
+   "t": 66.43,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "doctor.Head",
+   "sev": 0.5,
+   "what": "the head hangs 36 deg forward of the chest"
+  }
+ ],
+ "worst": [
+  {
+   "t": 66.43,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "doctor.Head",
+   "sev": 0.5,
+   "what": "the head hangs 36 deg forward of the chest",
+   "also": []
+  }
+ ],
+ "perActor": {
+  "person": {
+   "total": 7.6,
+   "verdict": "passable, weak on reference and timing (7.6/10)"
+  },
+  "doctor": {
+   "total": 8.5,
+   "verdict": "reads as human (8.5/10)"
+  }
+ },
+ "verdict": "passable, weak on reference and hands (8/10)"
+}

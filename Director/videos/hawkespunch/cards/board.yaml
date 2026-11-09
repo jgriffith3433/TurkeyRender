@@ -301,26 +301,24 @@
   feel: "Anticipation. Both in one frame so the geography reads."
   look: epic
   mood: clinic_still
-  tags: [offmark]
-  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 0.2, once: 1, rate: 0.6085}, face: 0}}
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, args: {start: 0, once: 1, rate: 0.135}, face: -45}}
   camera: {preset: spot, from: cam_punch, on: doctor.head, lens: 24}
-  shot: {pos: [698.4, 1, 3.2], rot: [0, 90, 0], fov: 50, deadzone: false}
+  shot: {pos: [699.37, 1.1, 3.44], rot: [-8.25, 89.58, 0], fov: 48, deadzone: false, move: [699.72, 1.15, 3.36], ease: linear}
   raw:
-    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
-    - {at: 0, do: layer, on: doctor, clip: mx_breathing_idle, mask: "spine,head,leftArm", weight: 1, for: 4.75s, blend: 0}
+    - {at: 0, do: layer, on: doctor, clip: mx_breathing_idle, mask: leftArm, weight: 1, for: 4.75s, blend: 0}
     - {at: 0, grade: {catch: 0}, for: 0}
     - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
     - {at: 0s, do: face, on: person, eyesWide: 0.5, fear: 0.4, for: 0.2s}
     - {at: 0s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0s}
-    - {at: 1.857s, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.33, rate: 1, blend: 0}
+    - {at: 1.9s, do: anim, on: doctor, clip: mm_doc_uppercut__clean, start: 0.25, rate: 1, blend: 0}
     - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
-    - {at: 0.4s, do: hitshake, on: doctor, amount: 0.003, hz: 9, for: 1.4s}
+    - {at: 0.3s, do: hitshake, on: doctor, amount: 0.004, hz: 9, for: 1.55s}
     - {at: 0.9s, do: face, on: doctor, eyesNarrow: 0.75, browDown: 0.75, mouthPress: 0.6, for: 0.8s}
     - {at: 1.0s, do: face, on: person, eyesWide: 0.85, fear: 0.6, for: 0.25s}
     - {at: 1.15s, do: gaze, on: person, to: doctor.rightHand, limit: 40, for: 0.15s}
     - {at: 1.6s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0.12s}
-    - {at: 1.9s, do: limbscale, on: doctor, bones: {rightHand: 1.2}, for: 0.1s, in: 0.02, out: 0.06}
-    - {at: 1.94s, do: smear, on: doctor.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
+    - {at: 1.92s, do: limbscale, on: doctor, bones: {rightHand: 1.2}, for: 0.08s, in: 0.02, out: 0.05}
+    - {at: 1.96s, do: smear, on: doctor.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
     - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
     - {at: 0, do: detach, on: clinic_pen}
     - {at: 0, do: hide, on: clinic_pen}
@@ -330,15 +328,14 @@
   feel: "Resolution in 2 frames."
   look: epic
   mood: punch_whoa
-  tags: [offmark]
-  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 1.473, once: 1}, face: 0}}
+  cast: {person: {at: bed, clip: mx_sit_still, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, args: {start: 0.35, once: 1}, face: -45}}
   camera: {preset: spot, from: cam_bed_cu, on: person.head, lens: 35}
-  shot: {pos: [699.25, 1.45, 3.25], rot: [2, 90, 0], fov: 38, deadzone: false}
+  shot: {pos: [700.15, 1.4, 3.1], rot: [-11.83, 41.04, 0], fov: 45, deadzone: false}
   raw:
-    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
     - {at: 0, do: impactframe, on: person.head, style: flip, flash: 0, frames: 2, accent: "#ff3a2a", lines: 1}
     - {at: 0, do: hitstop, on: person, frames: 7, victim: person, victimShake: 0.05, attacker: doctor, creep: 0.02}
     - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+    - {at: 0.3s, do: fingers, on: doctor, hand: right, set: 1, for: 0}
     - {at: 0, do: layer, on: person, clip: mm_him_snapback, mask: "spine,head", start: 0.2, rate: 1.8, once: 1, weight: 1, for: 0.75s, blend: 0}
     - {at: 0, do: face, on: person, jawOpen: 0.5, squint: 0.8, browDown: 0.4, for: 0s}
     - {at: 0, do: speedlines, style: radial, on: person.head, amount: 0.8, for: 0.4s, hz: 12}
@@ -352,12 +349,10 @@
   feel: "The cure administered. Her reaction (she owns the action)."
   look: epic
   mood: punch_whoa
-  tags: [offmark]
-  cast: {person: {at: bed, clip: mx_falling_air, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 1.75, once: 1, rate: 0.2}, face: 0}}
+  cast: {person: {at: bed, clip: mx_falling_air, blend: 0}, doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, args: {start: 1.75, once: 1, rate: 0.2}, face: -45}}
   camera: {preset: spot, from: cam_punch, on: cam_punch_aim, lens: 24}
-  shot: {pos: [698.5, 1.3, 3.25], rot: [-12, 90, 0], fov: 62, deadzone: false}
+  shot: {pos: [700, 1, 4.38], rot: [-42.05, 143.03, 0], fov: 78, deadzone: false}
   raw:
-    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
     - {at: 0, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.75, rate: 0.2, blend: 0}
     - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
     - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}

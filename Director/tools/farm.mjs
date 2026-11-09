@@ -143,7 +143,13 @@ function remember(job, outDir) {
 async function runJob(g, params, inputs, label) {
   const job = await g.submit('unity.render', { params, inputs, labels: { farm: label } });
   say(`  ${label}: job ${job.id}`);
-  const done = await g.wait(job.id, { throwOnFail: false, timeoutMs: 3 * 3600_000 });
+  // A dropped connection while waiting (Cloud Run instance roll, "fetch failed") is not the job failing: wait again,
+  // up to 20 times a minute apart (2026-11-08: sync 1/9 finished on the farm while the wait above it had died).
+  let done;
+  for (let tries = 0; ; tries++) {
+    try { done = await g.wait(job.id, { throwOnFail: false, timeoutMs: 3 * 3600_000 }); break; }
+    catch (e) { if (tries >= 20 || !/fetch failed|reach|ECONN|socket|network|timeout|50[234]/i.test(String(e?.message ?? e))) throw e; say(`  ${label}: lost Gen while waiting (${String(e?.message ?? e).slice(0, 80)}); waiting again`); await new Promise((r) => setTimeout(r, 60_000)); }
+  }
   const out = path.join(STATE, 'jobs', job.id); fs.mkdirSync(out, { recursive: true });
   for (const o of done.outputs ?? []) await g.download(o.asset, path.join(out, path.basename(String(o.title ?? o.asset))));
   say(`  ${label}: ${done.state}${done.error ? ` (${done.error})` : ''}, ${(done.outputs ?? []).length} files in ${path.relative(DIRECTOR, out)}`);

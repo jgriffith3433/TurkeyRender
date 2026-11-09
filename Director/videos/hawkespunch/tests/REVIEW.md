@@ -322,3 +322,58 @@ mm_boo_smash beat.
 
 ### Not started this round: skin lit-match, the punch (engine agent has reported both fixes in the WORKLOG).
 Nothing in READY.md.
+
+## Round 9 (2026-11-08, Unity owner): punch first; moon hole fixed in the engine
+
+### Engine: the s06 moon "hole" (FIXED)
+`Runtime/MVSpace.cs` BuildSurface: the rock surface was built at its own fractal height (~10.3 m at the near origin on moon_ground)
+with the patch's centre vertex at y 0, so every moon_ground mark sat ~10 m under the surface inside a cone to that vertex (the
+"sunk to the waist in a hole"; raising a body's y moved it further into the cone). Now the floor is shifted so the ground at the near
+origin is y 0 (space.md "ground is y = 0"); rocks follow. Before/after: `tests/s06_boo/r9/before_106.500_probe.png` (both sunk in the
+pit) and `after_106.500.png`, `after_107.500.png` (both standing on the ground, the horizon, the rock, the double above it).
+
+### Punch (see the verdict line below)
+- r9a: mm_doc_rise_b square in front of him: its coil is a 45-degree lunge with her head 0.8 m forward, so her head was in his lap in
+  the coil and 0.33 m from his face at contact (a "kiss" read in the CU). Measured: `critic/66-67/doctor.bones.json`. Also: a cast clip
+  that runs on from the previous card is NOT restarted by new cast args (p03 must restart it with an explicit `anim` cue).
+- r9b: an upright calm layer over rise_b (`lower,spine,head,leftArm`): the arm, posed for a bent torso, then pointed straight at him.
+  Verdict: rise_b fits only a standing target, or a shot where she is beside him with her head clear; not this seated close-up.
+- r9c: round 4's measured geometry (mm_doc_uppercut from doctor_uppercut_m) + a leftArm calm layer (guard down) + the engine hitstop
+  + contact on the cut + p03 on rise_b's overhead hold. Requested from the set agent: mark doctor_rise (WORKLOG), now unused.
+
+### Next steps (for whoever continues; no re-deriving needed)
+**s06 BOO** (`storyboard/overrides.yaml` s06, round 9 block, staged but not yet stepped at 24 fps): the old hop flies are gone, both
+stand on marks now that the ground is real. Rock to hide the double: centre (-0.38, 0.34, 2.07), 1.3 m (MVSpace rock, computed). Seen in
+the after stills: (1) him in near-profile; turn him to face the lens more (cast face ~140) so the flinch reads; (2) the double stands
+~4 m back and is already fully up at frame 2; place him just behind the rock's far side (-0.4, 0, 3.4) and start the pop at 0.08 s;
+(3) Idle1Yell's claws read; keep. Then render 106.25-108.75, step, check the mm_boo_smash hit lands on 1.5 s (its hammer stops at clip
+0.6), the shock ring on the ground under his fists, then critic --zerog off (he is on a moon), qa vision, fresh reviewer.
+**s05**: the rebuild plan: a focus 0.5-2 km above the ring plane looking down (like `arrival_rings` at 600 km, but lower), the ring as
+a banded floor; the two as lit figures with trails punching DOWN through the plane (fly points crossing y 0) with ice spray; the
+icewake should use the field's rock material (MVSpace.RockMat, textured ice) instead of flat MV/Lit (engine change in MVEpicFx
+BuildWake's material); give him a flight source with life (motion agent: wind-tunnel or skydive video via Gen motion.from-video when
+RunPod has funds). Keep: cuts on frames, wakes `fadeFrom: 1`, `emitFor` as plain seconds.
+**Skin lit-match** (one pass): render one clinic frame where his face and forearm are both lit (c02 at ~4.5 s, waiting room); sample a
+10x10 patch on his cheek and one on his forearm; in `tools/punch_wardrobe.py` give the head its own blend `sicken(hrgb, hskin, k=KH)`
+and solve KH so the cheek's chromaticity (r/g, b/g) matches the forearm's at the body's k=0.31 (the head texture is darker and greyer,
+so KH will be higher); regenerate (only Person_sick_head.png changes), rebuild, show the frame pair before/after.
+
+### Punch verdict, round 9: FAIL on my own 24 fps stepping after 4 rebuilds (no reviewer spent)
+Latest `tests/punch/r9/punch-r9d-720-mix.mp4` (and r9a-c beside it); flash PASS on all; shotcheck 0 A.
+Stepped every frame (sheets in the session scratch; re-make with `ffmpeg -ss <s> -t 1 -i <mp4> -vf scale=427:240,tile=6x4`):
+- p01 64.5-66.5: still nothing building. mm_doc_uppercut's "dip" (clip 0-0.25) held over 1.86 s is her standing with both arms down;
+  the guard is gone (leftArm layer works) but there is no visible cocked fist, so the push-in adds nothing.
+- p02 66.5-67.25: GOOD part: the impact frame (2 frames) then her closed fist at his jaw line, held ~7 frames by the new hitstop, his
+  head going back (contact clip 0.35; at 0.37 in r9c it sat on his mouth with the forearm across his face). BAD: after the hold the clip
+  resumes, the fist rises across his face, then her hand lands on his shoulder (f60-62: reads as a touch), then a loose fist at his chest.
+- p03 67.25-69.25: GOOD: the low camera looking up, him flying straight up through the hole, her fist held overhead (rise_b 1.75 at
+  0.2x), the cold face. The tiles are visible but small.
+Next for the punch (in order):
+1. p01 needs a coil source that reads as a cocked fist with her body clear of his: candidates the motion agent already admitted:
+   RightPowerUppercut (coil 0.15-0.27, fist low, chest turned to her left: round 2), or mm_doc_rise_b layered on `rightArm` ONLY over an
+   upright base IF its coil arm is first re-posed: r9b showed it points straight at him (the arm's rotations assume a 45-degree torso
+   lean). Better: ask the motion agent for a standing coil with the fist drawn back at the hip and an upright torso (scan
+   `motion_scan.py` with "hand behind the hip, head over the hips").
+2. p02 after the hold: cut it at 66.5 + 7 frames + ~5 frames (the head snap), or end her clip there by a `layer` of a calm clip on
+   `rightArm` from +0.35 s, so the fist never travels across his face or lands on his shoulder.
+3. Keep p03 as it is. Then the fresh reviewer on the 5 s test.

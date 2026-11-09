@@ -1,0 +1,151 @@
+{
+ "name": "hawkespunch doctor 66.4-66.6 s",
+ "fps": 30,
+ "frames": 6,
+ "seconds": 0.17,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 0,
+  "flatness": null,
+  "abruptFrac": null,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 1,
+  "handPeak": null,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.74,
+  "lagMedianFrames": 0,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 9,
+  "plantedFrac": 0.17,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": 0.18,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.8,
+  "twinnedFrac": 0,
+  "curlMedian": 31.11,
+  "spreadMedian": 28.07,
+  "fannedFrac": 0,
+  "bowMedian": 36.43,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 90.55,
+  "armOmegaP95": 142.51,
+  "legOmegaP95": 242.19,
+  "spineOmegaP50": 6.94,
+  "spineOmegaP95": 9.37,
+  "headOmegaP50": 0,
+  "headOmegaP95": 0,
+  "armAccP95": null,
+  "spineAccP95": null,
+  "handSpeedP50": 2.39,
+  "handSpeedP95": 2.39,
+  "spineToArm": 0.08,
+  "energyCV": 0,
+  "moveRate": 0,
+  "refDistance": 2.21,
+  "refWorst": [
+   {
+    "k": "headOmegaP50",
+    "z": -5
+   },
+   {
+    "k": "headOmegaP95",
+    "z": -5
+   },
+   {
+    "k": "moveRate",
+    "z": -5
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 9.4,
+   "note": "0 centre-of-mass jerks, planted feet slide 9 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 0.17 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "1 key poses, readability 0.8 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 8,
+   "note": "head bowed 100% of the time"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body, 0 reaches into air",
+   "partial": false
+  },
+  "reference": {
+   "score": 4.9,
+   "note": "2.21 robust z from 174 mocap clips; furthest: headOmegaP50 low (5), headOmegaP95 low (5), moveRate low (5)"
+  }
+ },
+ "events": [
+  {
+   "t": 66.43,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "the head hangs 36 deg forward of the chest"
+  }
+ ],
+ "worst": [
+  {
+   "t": 66.43,
+   "f": 1,
+   "kind": "bowed-head",
+   "part": "Head",
+   "sev": 0.5,
+   "what": "the head hangs 36 deg forward of the chest",
+   "also": []
+  }
+ ],
+ "total": 8.5,
+ "verdict": "reads as human (8.5/10)"
+}

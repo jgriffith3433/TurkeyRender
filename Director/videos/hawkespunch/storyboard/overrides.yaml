@@ -19,55 +19,50 @@ c20:
 c21:
   cast: {can: null}
 
-# Round 9 (2026-11-08, Unity owner): her strike is mm_doc_rise_b (CMU 79_48, motion agent round 3: critic 8.9, twin 9.0, 0 snaps), a live
-# coil with the off-hand at her hip, a 6-frame rising swing hip to overhead, a 0.9 s fist-overhead hold. From its bone dump
-# (gen/critic/clips/mm_doc_rise_b__clean.json, her root at 0 facing +z): coil 0.2-1.33 s (fist ~0.87 m, swaying), swing 1.33-1.6,
-# fist overhead 1.67-2.07. Contact = clip 1.473 s, fist at local (-0.087, 1.37, 0.95): its top ~4 cm under his chin (0.60, 1.48, 3.66,
-# from round 3's dump). So she stands square in front of him at (700.687, 0.03, 2.71) facing +z (a `set` on each card: the set agent
-# holds clinic.json), 0.5 m clear of his knees. The camera is on her LEFT (-x) so he is screen left and she screen right (c05's side).
-# p01 plays the coil at 0.61x (1.86 s of a live coil), the swing at 1x from 66.357 so contact lands ON the p01/p02 cut. p02 continues
-# the same clip from contact (blend 0): the engine's hitstop now holds both bodies on the contact pose and resumes from it (engine agent),
-# so round 4's restart cue is gone. p03 opens on her held fist (clip 1.75) at 0.2x.
+# Round 9 (2026-11-08, Unity owner), rebuild 3. mm_doc_rise_b could not be staged against a seated man: its coil is a 45-degree lunge with
+# her head 0.8 m forward (the fist's own reach), so with the fist at his chin her head was in his lap in the coil and 0.33 m from his
+# face at contact (r9a: a "kiss" read in the CU, measured from the bone dump critic/66-67); an upright layer over it left the arm pointing
+# straight at him (r9b). Back to round 4's measured geometry: mm_doc_uppercut from mark doctor_uppercut_m (fist 4 cm short of his chin at
+# clip 0.37), with what round 4 lacked: her left guard taken off by a calm leftArm layer (Person2 layers work now), the hitstop holding both
+# bodies on the contact pose (engine agent; round 4's restart cue is gone), contact exactly on the p01/p02 cut (cuts are on frames now),
+# and p03 on mm_doc_rise_b's fist-overhead hold.
 p01:
-  tags: [offmark]   # she stands at (700.687, 0.03, 2.71) by a `set` until the set agent (holding clinic.json) adds mark doctor_rise there (WORKLOG request)
   cast:
     person: {at: bed, clip: mx_sit_still, blend: 0, args: null}
-    doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, face: 0, args: {start: 0.2, once: 1, rate: 0.6085}}
+    doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, face: -45, args: {start: 0.0, once: 1, rate: 0.135}}   # guard to the dip (clip 0-0.25) over 1.86 s: the held wind-up
     can: null
-  shot: {pos: [698.4, 1.0, 3.2], look: null, rot: [0, 90, 0], fov: 50, screen: null}   # her left side (-x), level at hip height: the low coil, her face in profile and him beyond her fist, him screen left, her screen right
+  shot: {pos: [699.37, 1.1, 3.44], move: [699.72, 1.15, 3.36], ease: linear, look: null, rot: [-8.25, 89.58, 0], fov: 48, screen: null}   # round 3/4's front-left 3/4 at hip height, a slow push-in through the held wind-up (r9c: a locked 2 s of a still dip read as nothing building)
   raw:
-    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}   # square in front of him (see the round 9 note)
-    - {at: 0, do: layer, on: doctor, clip: mx_breathing_idle, mask: 'spine,head,leftArm', weight: 1, for: 4.75s, blend: 0}   # r9b: rise_b's coil bends her 45 deg at the waist, which put her head in his lap (r9a, a 'kiss' read in the CU); an upright calm torso and off-arm (Person2 layers work now), rise_b keeps the legs and the striking arm
+    - {at: 0, do: layer, on: doctor, clip: mx_breathing_idle, mask: leftArm, weight: 1, for: 4.75s, blend: 0}   # her left guard down (round 4: "her hand at her mouth the whole hold")
     - {at: 0, grade: {catch: 0}, for: 0}
     - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
     - {at: 0s, do: face, on: person, eyesWide: 0.5, fear: 0.4, for: 0.2s}
     - {at: 0s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0s}
-    - {at: 1.857s, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.33, rate: 1, blend: 0}   # the release at full speed: clip 1.473 (contact) lands on 66.500, the cut
-    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}   # her striking hand a fist from the coil on
-    - {at: 0.4s, do: hitshake, on: doctor, amount: 0.003, hz: 9, for: 1.4s}
+    - {at: 1.9s, do: anim, on: doctor, clip: mm_doc_uppercut__clean, start: 0.25, rate: 1, blend: 0}   # the release at full speed: clip 0.35 lands on 66.500, the cut (r9c at 0.37: the fist was at his mouth, the forearm across his face)
+    - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
+    - {at: 0.3s, do: hitshake, on: doctor, amount: 0.004, hz: 9, for: 1.55s}   # the held coil trembles
     - {at: 0.9s, do: face, on: doctor, eyesNarrow: 0.75, browDown: 0.75, mouthPress: 0.6, for: 0.8s}
     - {at: 1.0s, do: face, on: person, eyesWide: 0.85, fear: 0.6, for: 0.25s}
     - {at: 1.15s, do: gaze, on: person, to: doctor.rightHand, limit: 40, for: 0.15s}
     - {at: 1.6s, do: gaze, on: person, to: doctor.head, limit: 40, for: 0.12s}
-    - {at: 1.9s, do: limbscale, on: doctor, bones: {rightHand: 1.2}, for: 0.1s, in: 0.02, out: 0.06}
-    - {at: 1.94s, do: smear, on: doctor.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
+    - {at: 1.92s, do: limbscale, on: doctor, bones: {rightHand: 1.2}, for: 0.08s, in: 0.02, out: 0.05}
+    - {at: 1.96s, do: smear, on: doctor.rightHand, frames: 1, style: both, length: 0.4, copies: 3}
     - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
-    - {at: 0, do: detach, on: clinic_pen}   # the pen was still in her (now punching) right hand from c06-c13
+    - {at: 0, do: detach, on: clinic_pen}
     - {at: 0, do: hide, on: clinic_pen}
 
 p02:
-  tags: [offmark]   # she stands at (700.687, 0.03, 2.71) by a `set` until the set agent (holding clinic.json) adds mark doctor_rise there (WORKLOG request)
   cast:
     person: {at: bed, clip: mx_sit_still, blend: 0, args: null}
-    doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, face: 0, args: {start: 1.473, once: 1}}   # from contact, blend 0: the hitstop holds it
+    doctor: {at: doctor_uppercut_m, clip: mm_doc_uppercut__clean, blend: 0, face: -45, args: {start: 0.35, once: 1}}
     can: null
-  shot: {pos: [699.25, 1.45, 3.25], look: null, rot: [2, 90, 0], fov: 38, screen: null}   # the same side, tight on fist and jaw: the gap between them closes in frame
+  shot: {pos: [700.15, 1.4, 3.1], look: null, rot: [-11.83, 41.04, 0], fov: 45, screen: null}   # round 4's front-right at jaw height: her fist comes in from frame right
   raw:
-    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
     - {at: 0, do: impactframe, on: person.head, style: flip, flash: 0, frames: 2, accent: "#ff3a2a", lines: 1}
-    - {at: 0, do: hitstop, on: person, frames: 7, victim: person, victimShake: 0.05, attacker: doctor, creep: 0.02}
+    - {at: 0, do: hitstop, on: person, frames: 7, victim: person, victimShake: 0.05, attacker: doctor, creep: 0.02}   # holds both on the contact pose, resumes from it (engine, 2026-11-08)
     - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
-    - {at: 0, do: layer, on: person, clip: mm_him_snapback, mask: 'spine,head', start: 0.2, rate: 1.8, once: 1, weight: 1, for: 0.75s, blend: 0}   # his head snaps back (motion agent, Unity 8.6), torso and head over the seated body
+    - {at: 0.3s, do: fingers, on: doctor, hand: right, set: 1, for: 0}   # r9c: her hand opened into a claw as the clip resumed after the hold
+    - {at: 0, do: layer, on: person, clip: mm_him_snapback, mask: 'spine,head', start: 0.2, rate: 1.8, once: 1, weight: 1, for: 0.75s, blend: 0}
     - {at: 0, do: face, on: person, jawOpen: 0.5, squint: 0.8, browDown: 0.4, for: 0s}
     - {at: 0, do: speedlines, style: radial, on: person.head, amount: 0.8, for: 0.4s, hz: 12}
     - {at: 0, fx: shock, on: person.head, size: 0.3, for: 0.4s, width: 0.015, glow: 0.04, fill: 0, color: "#ffffff"}
@@ -76,21 +71,19 @@ p02:
     - {at: 0, do: fingers, on: doctor, hand: left, set: 0.35, for: 0}
 
 p03:
-  tags: [offmark]   # she stands at (700.687, 0.03, 2.71) by a `set` until the set agent (holding clinic.json) adds mark doctor_rise there (WORKLOG request)
   cast:
     person: {at: bed, clip: mx_falling_air, blend: 0, args: null}
-    doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, face: 0, args: {start: 1.75, once: 1, rate: 0.2}}   # opens on her fist held overhead, barely moving: cold
+    doctor: {at: doctor_uppercut_m, clip: mm_doc_rise_b__clean, blend: 0, face: -45, args: {start: 1.75, once: 1, rate: 0.2}}   # opens on rise_b's fist held overhead, barely moving: cold
     can: null
-  shot: {pos: [698.5, 1.3, 3.25], look: null, rot: [-12, 90, 0], fov: 62, screen: null}   # the same side, wide and tilted up: the bed and the hole above it screen left, her profile with the fist up screen right
+  shot: {pos: [700.0, 1.0, 4.38], look: null, rot: [-42.05, 143.03, 0], fov: 78, screen: null}   # round 3/4's low front-left of her, tilted up: her face, the fist overhead, the hole
   raw:
-    - {at: 0, do: set, on: doctor, pos: [700.687, 0.03, 2.71], rot: [0, 0, 0]}
-    - {at: 0, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.75, rate: 0.2, blend: 0}   # the cast args don't restart a clip that runs on from p02 (r9a: she was bent over by p03): restart it on the fist overhead
+    - {at: 0, do: anim, on: doctor, clip: mm_doc_rise_b__clean, start: 1.75, rate: 0.2, blend: 0}   # explicit: a cast clip that ran on would not restart
     - {at: 0, do: fingers, on: doctor, hand: right, set: 1, for: 0}
     - {at: 0s, do: face, on: doctor, browDown: 0.6, eyesNarrow: 0.5, mouthPress: 0.4, for: 0.3s}
     - {at: 0, grade: {catch: 0}, for: 0}
     - {at: 0, do: shake, trauma: 0.5, for: 0.6s}
-    - {at: 0, do: fly, on: person, points: [[700.6, 1.6, 3.6], [700.6, 3.8, 3.8], [700.6, 8, 4.4], [700.6, 17, 14], [700.6, 33, 45], [700.6, 58, 74]], for: 8.4s, ease: linear, face: yaw, tilt: [-90, 0, 0], turn: 0, trail: {lines: 16, width: 0.35, alpha: 0.35}}   # one flight, one impulse on the cut, constant ~11 m/s (round 3)
-    - {at: 0.1s, fx: debris, pos: [700.6, 2.55, 4.1], size: 0.32, count: 400, speed: 3, normal: [0, -1, 0.3], spread: 50, gravity: 1, color: "#a9a49a", color2: "#7f7a70", smooth: 0.1, dust: 120, dustColor: "#cfc9be", for: 2.0s}   # the tiles, from the hole's far side, thrown away from her
+    - {at: 0, do: fly, on: person, points: [[700.6, 1.6, 3.6], [700.6, 3.8, 3.8], [700.6, 8, 4.4], [700.6, 17, 14], [700.6, 33, 45], [700.6, 58, 74]], for: 8.4s, ease: linear, face: yaw, tilt: [-90, 0, 0], turn: 0, trail: {lines: 16, width: 0.35, alpha: 0.35}}
+    - {at: 0.1s, fx: debris, pos: [700.6, 2.55, 4.1], size: 0.32, count: 400, speed: 3, normal: [0, -1, 0.3], spread: 50, gravity: 1, color: "#a9a49a", color2: "#7f7a70", smooth: 0.1, dust: 120, dustColor: "#cfc9be", for: 2.0s}   # tiles from the hole's far side, away from her
     - {at: 0, do: jump, on: clinic_roof_plug, pos: [702.4, 3, 6.2], height: 5, for: 1.5s}
     - {at: 0, do: rotate, on: clinic_roof_plug, rot: [110, 30, 50], for: 1.5s, ease: linear}
     - {at: 0, do: jump, on: clinic_ceiling_plug, pos: [701.4, 2.7, 5.4], height: 3.2, for: 1.3s}

@@ -1,0 +1,132 @@
+{
+ "name": "hawkespunch person 66.4-66.6 s",
+ "fps": 30,
+ "frames": 6,
+ "seconds": 0.17,
+ "zerog": false,
+ "features": {
+  "arcBend": null,
+  "straightFrac": null,
+  "moves": 0,
+  "flatness": null,
+  "abruptFrac": null,
+  "deadFrac": 0,
+  "holds": 0,
+  "holdMedianS": null,
+  "fastRunMedianS": null,
+  "dynRange": 1,
+  "handPeak": null,
+  "bigMoves": 0,
+  "anticipFrac": null,
+  "overshootFrac": null,
+  "coherence": 0.3,
+  "lagMedianFrames": 0,
+  "lockstepFrac": null,
+  "comSpikesPer10": 0,
+  "slideCmPerS": 0.3,
+  "plantedFrac": 0.17,
+  "zgSpeedChanges": null,
+  "snapsPer10": 0,
+  "fingerSnapsPer10": 0,
+  "frozenFrac": null,
+  "deadJoints": 0,
+  "deadJointNames": [],
+  "readability": 0.77,
+  "twinnedFrac": 0,
+  "curlMedian": 3.85,
+  "spreadMedian": 6.8,
+  "fannedFrac": 0,
+  "bowMedian": 21.07,
+  "selfPenFrac": 0,
+  "airReaches": 0,
+  "armOmegaP50": 0,
+  "armOmegaP95": 6.56,
+  "legOmegaP95": 3.13,
+  "spineOmegaP50": 0,
+  "spineOmegaP95": 11.12,
+  "headOmegaP50": 0,
+  "headOmegaP95": 0,
+  "armAccP95": null,
+  "spineAccP95": null,
+  "handSpeedP50": 0.01,
+  "handSpeedP95": 0.01,
+  "spineToArm": 0,
+  "energyCV": 0,
+  "moveRate": 0,
+  "refDistance": 3.48,
+  "refWorst": [
+   {
+    "k": "armOmegaP50",
+    "z": -5
+   },
+   {
+    "k": "spineOmegaP50",
+    "z": -5
+   },
+   {
+    "k": "headOmegaP50",
+    "z": -5
+   }
+  ]
+ },
+ "principles": {
+  "arcs": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge arcs"
+  },
+  "ease": {
+   "score": null,
+   "na": true,
+   "note": "too few moves to judge ease"
+  },
+  "timing": {
+   "score": 10,
+   "note": "0 holds (median 0 s), 0% of frames dead still, no fast action to time"
+  },
+  "anticipation": {
+   "score": null,
+   "na": true,
+   "note": "only 0 big moves: nothing to prepare or follow through"
+  },
+  "overlap": {
+   "score": null,
+   "na": true,
+   "note": "too little motion to see overlap"
+  },
+  "weight": {
+   "score": 10,
+   "note": "0 centre-of-mass jerks, planted feet slide 0 cm/s"
+  },
+  "snaps": {
+   "score": 10,
+   "note": "0 body snaps or pops in 0.17 s"
+  },
+  "stiffness": {
+   "score": null,
+   "na": true,
+   "note": "the body hardly moves: stiffness not judged"
+  },
+  "silhouette": {
+   "score": 10,
+   "note": "1 key poses, readability 0.77 (best of front, side, three-quarter), 0% twinned"
+  },
+  "hands": {
+   "score": 10,
+   "note": "fingers curl 4 deg, spread 7 deg, head level"
+  },
+  "contact": {
+   "score": 10,
+   "note": "hands clear of the body, 0 reaches into air",
+   "partial": false
+  },
+  "reference": {
+   "score": 0,
+   "note": "3.48 robust z from 174 mocap clips; furthest: armOmegaP50 low (5), spineOmegaP50 low (5), headOmegaP50 low (5)"
+  }
+ },
+ "events": [],
+ "worst": [],
+ "total": 7.6,
+ "verdict": "passable, weak on reference and timing (7.6/10)"
+}
