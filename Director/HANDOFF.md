@@ -12,6 +12,7 @@ everything", "Stop asking me to do stuff. You do it": run approved steps yoursel
   Cold view `COLD-VIEW-4.md`: 34 of 53 beats missed. Main gaps: the product's name never reads (blank poster/can in
   panels), space cause-and-effect (expected in stills), the double's reveal (s04: stage the turn as a mirror, same face,
   a held "that's me" before "That's a sheet."; no board change, J agreed).
+- **No captions** (J, 2026-11-08 night: "remove the subtitles"; `score.json` `"captions": false`). **No music**: `mv previs` now mixes through `tools/remix.mjs` (Unity's own mix played the old song).
 - **Sound:** generated from the board (`tools/punch_sound.mjs`, `punch_beds.mjs`, `punch_lines.mjs`, `punch_split.mjs`,
   all registered in `generated.json`). Long takes split per line.
 - **Hero tests: 0 of 6 passed.** State, verdicts and exact next steps: `videos/hawkespunch/tests/REVIEW.md` (rounds 1-9).

@@ -525,7 +525,13 @@ try {
     case 'previs': {
       const out = path.join(ROOT, 'videos', V.name, 'previs.mp4'), t0 = Date.now();
       fs.mkdirSync(path.dirname(out), { recursive: true });
-      await renderAndWait({ ...frameSize(426, 240), fps: +(flags.fps ?? 12), quality: 'previs', out, ...endOf(), ...(flags.from ? { from: seconds(flags.from) } : {}), ...(flags.to ? { to: seconds(flags.to) } : {}) });
+      // Unity's own mix doesn't know `"music": 0` (J, 2026-11-08: the draft played the old song), so the picture goes through
+      // the Node mix (tools/remix.mjs, the same sound as mv shot and mv final) before it lands at previs.mp4.
+      const raw = out.replace(/\.mp4$/, '.unity.mp4');
+      await renderAndWait({ ...frameSize(426, 240), fps: +(flags.fps ?? 12), quality: 'previs', out: raw, ...endOf(), ...(flags.from ? { from: seconds(flags.from) } : {}), ...(flags.to ? { to: seconds(flags.to) } : {}) });
+      const mixed = spawnSync(process.execPath, [path.join(ROOT, 'tools', 'remix.mjs'), V.name, raw, '--from', String(flags.from ? seconds(flags.from) : 0), '--out', out], { stdio: 'inherit' });
+      if (mixed.status !== 0) { fs.copyFileSync(raw, out); console.error('warning: the Node mix failed, so previs.mp4 has Unity\'s own mix (it may carry the song)'); }
+      fs.rmSync(raw, { force: true });
       // Previs plays the baked takes: the build picks a bake by key when it exists (MVBake.cs), whatever the quality. Say so, and name any take that played from source.
       let takes = null;
       try { const uses = takeUses(V); takes = { baked: uses.filter((u) => u.baked).length, source: uses.filter((u) => !u.baked).map((u) => `${u.name} at ${u.at}`) }; } catch {}

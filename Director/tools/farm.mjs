@@ -152,7 +152,7 @@ async function runJob(g, params, inputs, label) {
   }
   const out = path.join(STATE, 'jobs', job.id); fs.mkdirSync(out, { recursive: true });
   for (const o of done.outputs ?? []) await g.download(o.asset, path.join(out, path.basename(String(o.title ?? o.asset))));
-  say(`  ${label}: ${done.state}${done.error ? ` (${done.error})` : ''}, ${(done.outputs ?? []).length} files in ${path.relative(DIRECTOR, out)}`);
+  say(`  ${label}: ${done.status}${done.error ? ` (${done.error})` : ''}, ${(done.outputs ?? []).length} files in ${path.relative(DIRECTOR, out)}`);
   return { done, out };
 }
 
@@ -185,7 +185,7 @@ async function syncToFarm(m) {
     const last = i === packs.length - 1;
     const r = await runJob(g, { mode: 'sync' }, { pack: tar, ...(last ? { manifest: man } : {}) }, `sync ${i + 1}/${packs.length}`);
     remember(r.done.id, r.out); fs.rmSync(tar, { force: true });
-    if (r.done.state !== 'done') throw new Error(`sync pack ${i + 1} failed: ${r.done.error ?? r.done.state}`);
+    if (r.done.status !== 'done') throw new Error(`sync pack ${i + 1} failed: ${r.done.error ?? r.done.status}`);
   }
   if (!packs.length) { const r = await runJob(g, { mode: 'sync' }, { manifest: man }, 'manifest'); remember(r.done.id, r.out); }
   const ok = ((read(SYNCED) ?? {}).manifests ?? []).includes(m.hash);

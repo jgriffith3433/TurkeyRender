@@ -173,6 +173,8 @@ const SPACE_CUES = [
 const CAPTION_Y = { a03: 0.37, a04: 0.37 };   // the ad's lower thirds: these captions sit above them
 const shotAt = (t) => map.find((x) => t >= x.t - 1e-6 && t < x.tEnd - 1e-6)?.id;
 function captions() {
+  // `"captions": false` in the video's score.json: no burned-in captions (J, 2026-11-08: "remove the subtitles").
+  if (json(path.join(DIR, 'score.json')).captions === false) return [];
   const caps = [];
   for (const l of lines) {
     if (!l.text) continue;

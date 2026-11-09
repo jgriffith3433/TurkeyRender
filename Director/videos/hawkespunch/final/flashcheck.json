@@ -1,0 +1,333 @@
+{
+ "file": "C:\\Projects\\TKShock\\Director\\videos\\hawkespunch\\output\\hawkespunch-v2-draft.mp4",
+ "ok": true,
+ "fps": 24,
+ "frames": 4902,
+ "max": 3,
+ "transitions": [
+  {
+   "t": 0.042,
+   "sign": -1,
+   "area": 0.4,
+   "red": false
+  },
+  {
+   "t": 3,
+   "sign": -1,
+   "area": 0.37,
+   "red": false
+  },
+  {
+   "t": 6.5,
+   "sign": 1,
+   "area": 0.41,
+   "red": false
+  },
+  {
+   "t": 8.5,
+   "sign": -1,
+   "area": 0.44,
+   "red": false
+  },
+  {
+   "t": 11,
+   "sign": 1,
+   "area": 0.35,
+   "red": false
+  },
+  {
+   "t": 14,
+   "sign": -1,
+   "area": 0.44,
+   "red": false
+  },
+  {
+   "t": 16.5,
+   "sign": -1,
+   "area": 0.5,
+   "red": false
+  },
+  {
+   "t": 21.5,
+   "sign": 1,
+   "area": 0.49,
+   "red": false
+  },
+  {
+   "t": 24.5,
+   "sign": -1,
+   "area": 0.52,
+   "red": false
+  },
+  {
+   "t": 28.5,
+   "sign": 1,
+   "area": 0.63,
+   "red": false
+  },
+  {
+   "t": 30,
+   "sign": 1,
+   "area": 0.36,
+   "red": false
+  },
+  {
+   "t": 32.5,
+   "sign": -1,
+   "area": 0.63,
+   "red": false
+  },
+  {
+   "t": 37,
+   "sign": 1,
+   "area": 0.59,
+   "red": false
+  },
+  {
+   "t": 39.5,
+   "sign": -1,
+   "area": 0.6,
+   "red": false
+  },
+  {
+   "t": 41.5,
+   "sign": 1,
+   "area": 0.42,
+   "red": false
+  },
+  {
+   "t": 43.5,
+   "sign": 1,
+   "area": 0.6,
+   "red": false
+  },
+  {
+   "t": 46.5,
+   "sign": -1,
+   "area": 0.52,
+   "red": false
+  },
+  {
+   "t": 48.5,
+   "sign": 1,
+   "area": 0.41,
+   "red": false
+  },
+  {
+   "t": 51,
+   "sign": 1,
+   "area": 0.51,
+   "red": false
+  },
+  {
+   "t": 55,
+   "sign": -1,
+   "area": 0.52,
+   "red": false
+  },
+  {
+   "t": 57.5,
+   "sign": 1,
+   "area": 0.51,
+   "red": false
+  },
+  {
+   "t": 64.5,
+   "sign": 1,
+   "area": 0.43,
+   "red": false
+  },
+  {
+   "t": 66.5,
+   "sign": 1,
+   "area": 0.25,
+   "red": false
+  },
+  {
+   "t": 67.25,
+   "sign": 1,
+   "area": 0.69,
+   "red": false
+  },
+  {
+   "t": 69.25,
+   "sign": 1,
+   "area": 0.34,
+   "red": false
+  },
+  {
+   "t": 72.25,
+   "sign": 1,
+   "area": 0.36,
+   "red": false
+  },
+  {
+   "t": 75.25,
+   "sign": 1,
+   "area": 0.67,
+   "red": false
+  },
+  {
+   "t": 80.25,
+   "sign": 1,
+   "area": 0.29,
+   "red": false
+  },
+  {
+   "t": 88.25,
+   "sign": 1,
+   "area": 0.25,
+   "red": false
+  },
+  {
+   "t": 95.25,
+   "sign": -1,
+   "area": 0.27,
+   "red": false
+  },
+  {
+   "t": 103.25,
+   "sign": 1,
+   "area": 0.39,
+   "red": false
+  },
+  {
+   "t": 106.25,
+   "sign": -1,
+   "area": 0.5,
+   "red": false
+  },
+  {
+   "t": 107.75,
+   "sign": 1,
+   "area": 0.91,
+   "red": false
+  },
+  {
+   "t": 107.792,
+   "sign": -1,
+   "area": 0.88,
+   "red": false
+  },
+  {
+   "t": 124.958,
+   "sign": 1,
+   "area": 1,
+   "red": false
+  },
+  {
+   "t": 125.042,
+   "sign": -1,
+   "area": 0.93,
+   "red": false
+  },
+  {
+   "t": 131.75,
+   "sign": -1,
+   "area": 0.6,
+   "red": false
+  },
+  {
+   "t": 133.042,
+   "sign": 1,
+   "area": 0.49,
+   "red": false
+  },
+  {
+   "t": 135.25,
+   "sign": -1,
+   "area": 0.3,
+   "red": false
+  },
+  {
+   "t": 144.25,
+   "sign": -1,
+   "area": 0.42,
+   "red": false
+  },
+  {
+   "t": 160.25,
+   "sign": 1,
+   "area": 0.83,
+   "red": false
+  },
+  {
+   "t": 160.292,
+   "sign": -1,
+   "area": 0.26,
+   "red": false
+  },
+  {
+   "t": 163.25,
+   "sign": 1,
+   "area": 0.51,
+   "red": false
+  },
+  {
+   "t": 168.25,
+   "sign": 1,
+   "area": 0.32,
+   "red": false
+  },
+  {
+   "t": 171.75,
+   "sign": 1,
+   "area": 0.28,
+   "red": false
+  },
+  {
+   "t": 175.75,
+   "sign": -1,
+   "area": 0.89,
+   "red": false
+  },
+  {
+   "t": 185.75,
+   "sign": 1,
+   "area": 0.4,
+   "red": false
+  },
+  {
+   "t": 187.75,
+   "sign": -1,
+   "area": 0.5,
+   "red": true
+  },
+  {
+   "t": 189.167,
+   "sign": 1,
+   "area": 0.96,
+   "red": false
+  },
+  {
+   "t": 193.25,
+   "sign": -1,
+   "area": 0.29,
+   "red": false
+  },
+  {
+   "t": 193.458,
+   "sign": 1,
+   "area": 0.3,
+   "red": false
+  },
+  {
+   "t": 193.75,
+   "sign": -1,
+   "area": 0.89,
+   "red": false
+  },
+  {
+   "t": 201.25,
+   "sign": 1,
+   "area": 0.96,
+   "red": false
+  }
+ ],
+ "worst": {
+  "t": 66.5,
+  "flashes": 1
+ },
+ "over": [],
+ "red": []
+}

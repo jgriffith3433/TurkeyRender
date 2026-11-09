@@ -372,10 +372,10 @@
     "Assets/MusicVideo/Sfx/punch/lines2/doc_any_symptoms.mp3": "64d61beb9b60e909",
     "Assets/MusicVideo/Sfx/punch/lines2/him_button_cut.mp3": "0441f0625dc2f173",
     "Assets/MusicVideo/Sfx/punch/lines3/other_same_time.mp3": "33872b04b34fda1e",
-    "Director/tools/punch_sound.mjs": "42f5f371ea14484c"
+    "Director/tools/punch_sound.mjs": "90c80ab2fdd6e80a"
    },
-   "outputHash": "5de7c08b17ee6bf8",
-   "at": "2026-11-08T23:38:45.760Z"
+   "outputHash": "12506fd9a5724f6a",
+   "at": "2026-11-09T02:05:34.839Z"
   },
   "acts/50-cards.json": {
    "tool": "node Director/mv.mjs --video hawkespunch cards compile",
@@ -407,7 +407,7 @@
     "sequences/space_epic.json": "733f417b893648a5",
     "sequences/space.json": "14fa79fca3492da7",
     "song.json": "36531ba84d86523c",
-    "score.json": "afd7680f21b3b534",
+    "score.json": "fc2dcddcb8abebb6",
     "Director/library/sets/_backup/space_epic.pre-s05r8-2026-11-08.json": "064bcd5441f102d6",
     "Director/library/sets/backyard_frames/mid.png": "c8a7b0b2e3b4eae7",
     "Director/library/sets/backyard_frames/touch_1.png": "755e855c7be00e7f",
@@ -1171,10 +1171,10 @@
     "Director/library/templates/reaction_cut.mjs": "6c67d6e47899364a",
     "Director/library/moods.json": "42df91ccf7ff4e63",
     "Director/tools/cards.mjs": "368f529cee1d1132",
-    "Director/mv.mjs": "99f81d3ad406b5bb"
+    "Director/mv.mjs": "551571bdaa03e76e"
    },
    "outputHash": "122762e237e97771",
-   "at": "2026-11-09T01:45:10.563Z"
+   "at": "2026-11-09T02:17:16.825Z"
   },
   "cards.map.json": {
    "tool": "node Director/mv.mjs --video hawkespunch cards compile",
@@ -1206,7 +1206,7 @@
     "sequences/space_epic.json": "733f417b893648a5",
     "sequences/space.json": "14fa79fca3492da7",
     "song.json": "36531ba84d86523c",
-    "score.json": "afd7680f21b3b534",
+    "score.json": "fc2dcddcb8abebb6",
     "Director/library/sets/_backup/space_epic.pre-s05r8-2026-11-08.json": "064bcd5441f102d6",
     "Director/library/sets/backyard_frames/mid.png": "c8a7b0b2e3b4eae7",
     "Director/library/sets/backyard_frames/touch_1.png": "755e855c7be00e7f",
@@ -1970,10 +1970,10 @@
     "Director/library/templates/reaction_cut.mjs": "6c67d6e47899364a",
     "Director/library/moods.json": "42df91ccf7ff4e63",
     "Director/tools/cards.mjs": "368f529cee1d1132",
-    "Director/mv.mjs": "99f81d3ad406b5bb"
+    "Director/mv.mjs": "551571bdaa03e76e"
    },
    "outputHash": "d160e116b093af6c",
-   "at": "2026-11-09T01:45:10.961Z"
+   "at": "2026-11-09T02:17:17.231Z"
   },
   "acts/80-sfx.json": {
    "tool": "node Director/tools/punch_sound.mjs hawkespunch",
@@ -2113,10 +2113,10 @@
     "Assets/MusicVideo/Sfx/punch/rope_snap_a.mp3": "2a311784ca369c74",
     "Assets/MusicVideo/Sfx/punch/space_epic/space_jupiter_catch.wav": "3f8addb2afe3be1c",
     "Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3": "b85edd4ae38608fb",
-    "Director/tools/punch_sound.mjs": "42f5f371ea14484c"
+    "Director/tools/punch_sound.mjs": "90c80ab2fdd6e80a"
    },
    "outputHash": "9bbc0bd2fc489fd1",
-   "at": "2026-11-08T23:38:45.790Z"
+   "at": "2026-11-09T02:05:34.883Z"
   },
   "acts/82-foley.json": {
    "tool": "node Director/tools/punch_sound.mjs hawkespunch",
@@ -2256,10 +2256,10 @@
     "Assets/MusicVideo/Sfx/punch/rope_snap_a.mp3": "2a311784ca369c74",
     "Assets/MusicVideo/Sfx/punch/space_epic/space_jupiter_catch.wav": "3f8addb2afe3be1c",
     "Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3": "b85edd4ae38608fb",
-    "Director/tools/punch_sound.mjs": "42f5f371ea14484c"
+    "Director/tools/punch_sound.mjs": "90c80ab2fdd6e80a"
    },
    "outputHash": "25785303e425fa4b",
-   "at": "2026-11-08T23:38:45.818Z"
+   "at": "2026-11-09T02:05:34.910Z"
   },
   "acts/84-space-sfx.json": {
    "tool": "node Director/tools/punch_sound.mjs hawkespunch",
@@ -2399,10 +2399,10 @@
     "Assets/MusicVideo/Sfx/punch/rope_snap_a.mp3": "2a311784ca369c74",
     "Assets/MusicVideo/Sfx/punch/space_epic/space_jupiter_catch.wav": "3f8addb2afe3be1c",
     "Assets/MusicVideo/Sfx/punch/heavy_breathing.mp3": "b85edd4ae38608fb",
-    "Director/tools/punch_sound.mjs": "42f5f371ea14484c"
+    "Director/tools/punch_sound.mjs": "90c80ab2fdd6e80a"
    },
    "outputHash": "42faeb9835f65eeb",
-   "at": "2026-11-08T23:38:45.847Z"
+   "at": "2026-11-09T02:05:34.940Z"
   }
  }
 }

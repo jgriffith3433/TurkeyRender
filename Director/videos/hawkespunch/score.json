@@ -4,6 +4,8 @@
   // The models are shared with every video: this link reads the "models" list of TK Shock's score. Add your own below; yours win.
   // J, 2026-11-07: no music. The song keeps the clock (song.json), the mix leaves it out; the three spoken lines and the sfx are the sound.
   "music": 0,
+  // J, 2026-11-08: "remove the subtitles". punch_sound.mjs writes acts/75-captions.json empty while this is false; true brings them back.
+  "captions": false,
   // 2026-11-08 sound pass: the finished mix (tools/mv/sound.mjs). Every spoken line to -16 LUFS, every bed (Sfx/**/beds/, acts/78-beds.json) 6 dB
   // down under each line, the master through a true-peak limiter at -1 dBTP. The film lands near -16 LUFS integrated.
   "mix": { "dialogue": -16, "bedDuck": -6, "bedFade": 0.25, "truePeak": -1, "master": 1 },
